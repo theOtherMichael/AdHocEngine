@@ -10,14 +10,10 @@
 #define EP_API __declspec(dllimport)
 #endif // EP_BUILD_ENGINE
 
-#else
-
+#else // !EP_EDITOR
 #define EP_API
-
 #endif // EP_EDITOR
 
-#else
-
+#else // !_WIN32
 #define EP_API
-
 #endif // _WIN32
