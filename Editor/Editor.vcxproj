@@ -95,10 +95,10 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\x64-windows\debug\lib\fmtd.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /E /I /Y "$(SolutionDir)Engine\vcpkg_installed\x64-windows\debug\bin" "$(SolutionDir)build\Editor\$(Configuration)"
+      <Command>xcopy /E /I /Y "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" "$(SolutionDir)build\Editor\$(Configuration)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -118,10 +118,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /E /I /Y "$(SolutionDir)Engine\vcpkg_installed\x64-windows\bin" "$(SolutionDir)build\Editor\$(Configuration)"
+      <Command>xcopy /E /I /Y "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" "$(SolutionDir)build\Editor\$(Configuration)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -141,10 +141,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy /E /I /Y "$(SolutionDir)Engine\vcpkg_installed\x64-windows\bin" "$(SolutionDir)build\Editor\$(Configuration)"
+      <Command>xcopy /E /I /Y "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" "$(SolutionDir)build\Editor\$(Configuration)"
 </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>

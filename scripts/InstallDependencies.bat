@@ -10,8 +10,10 @@ IF NOT EXIST "..\vcpkg\vcpkg.exe" (
     CALL "..\vcpkg\bootstrap-vcpkg.bat"
 )
 
-ECHO Running vcpkg install...
-CALL "..\vcpkg\vcpkg.exe" install --no-print-usage
+ECHO Running vcpkg install for dynamic triplet...
+CALL "..\vcpkg\vcpkg.exe" install --no-print-usage --triplet=x64-windows --x-install-root=vcpkg_installed\dynamic
+ECHO Running vcpkg install for static triplet...
+CALL "..\vcpkg\vcpkg.exe" install --no-print-usage --triplet=x64-windows-static-md --x-install-root=vcpkg_installed\static
 
 SET "exists_file=vcpkg_installed\empty.txt"
 IF EXIST %exists_file% (
