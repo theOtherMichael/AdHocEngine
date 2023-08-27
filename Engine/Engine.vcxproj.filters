@@ -28,6 +28,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="vcpkg.json" />
+    <CustomBuild Include="vcpkg.json" />
   </ItemGroup>
 </Project>

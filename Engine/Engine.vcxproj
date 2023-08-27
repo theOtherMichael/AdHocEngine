@@ -149,7 +149,8 @@
       <AdditionalDependencies>$(ProjectDir)vcpkg_installed\x64-windows\debug\lib\fmtd.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -170,7 +171,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -196,7 +198,8 @@
       <AdditionalDependencies>$(ProjectDir)vcpkg_installed\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -221,7 +224,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -247,7 +251,8 @@
       <AdditionalDependencies>$(ProjectDir)vcpkg_installed\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -272,7 +277,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PreBuildEvent>
-      <Command>$(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command>
+      </Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>
@@ -287,7 +293,33 @@
     <ClCompile Include="src\Add.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="vcpkg.json" />
+    <CustomBuild Include="vcpkg.json">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">Installing vcpkg dependencies</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">Installing vcpkg dependencies</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">Installing vcpkg dependencies</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">Installing vcpkg dependencies</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">Installing vcpkg dependencies</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">Installing vcpkg dependencies</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

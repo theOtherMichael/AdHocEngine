@@ -1,31 +1,23 @@
 SETLOCAL
 
-IF NOT EXIST ..\vcpkg\bootstrap-vcpkg.bat (
+IF NOT EXIST "..\vcpkg\bootstrap-vcpkg.bat" (
     ECHO Initializing Git submodules...
     CALL git submodule update --init --recursive
 )
 
-IF NOT EXIST ..\vcpkg\vcpkg.exe (
+IF NOT EXIST "..\vcpkg\vcpkg.exe" (
     ECHO Bootstrapping vcpkg...
-    CALL ..\vcpkg\bootstrap-vcpkg.bat
+    CALL "..\vcpkg\bootstrap-vcpkg.bat"
 )
 
-set "timestamp_file=vcpkg_installed\\manifest_last_modified.txt"
+ECHO Running vcpkg install...
+CALL "..\vcpkg\vcpkg.exe" install --no-print-usage
 
-if not exist %timestamp_file% (
-    mkdir "vcpkg_installed"
-    echo 0 > %timestamp_file%
+SET "exists_file=vcpkg_installed\empty.txt"
+IF EXIST %exists_file% (
+    DEL %exists_file%
 )
-
-set /p prev_timestamp=<%timestamp_file%
-
-for %%A in ("vcpkg.json") do set "current_timestamp=%%~tA"
-
-if "%current_timestamp%" neq "%prev_timestamp%" (
-    echo %current_timestamp%>%timestamp_file%
-    echo Running vcpkg install...
-    ..\vcpkg\vcpkg.exe install
-)
+ECHO. > %exists_file%
 
 ENDLOCAL
 
