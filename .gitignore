@@ -1,5 +1,9 @@
 /build/
 /build-int/
 
+vcpkg_installed/
+
 /.vs
 *.user
+
+*.vscode
