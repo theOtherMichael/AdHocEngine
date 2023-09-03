@@ -295,30 +295,30 @@
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">Installing vcpkg dependencies</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">Installing vcpkg dependencies</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">Installing vcpkg dependencies</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">Installing vcpkg dependencies</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">Installing vcpkg dependencies</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">CALL $(SolutionDir)scripts\InstallDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">Installing vcpkg dependencies</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">$(SolutionDir)scripts\InstallDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Dev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Debug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Dev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Debug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dyn_Release|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Lib_Release|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

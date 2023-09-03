@@ -15,11 +15,11 @@ CALL "..\vcpkg\vcpkg.exe" install --no-print-usage --triplet=x64-windows --x-ins
 ECHO Running vcpkg install for static triplet...
 CALL "..\vcpkg\vcpkg.exe" install --no-print-usage --triplet=x64-windows-static-md --x-install-root=vcpkg_installed\static
 
-SET "exists_file=vcpkg_installed\empty.txt"
-IF EXIST %exists_file% (
-    DEL %exists_file%
+SET "output_file=vcpkg_installed\empty.txt"
+IF EXIST %output_file% (
+    DEL %output_file%
 )
-ECHO. > %exists_file%
+ECHO. > %output_file%
 
 ENDLOCAL
 
