@@ -1,0 +1,8 @@
+{
+    "material-icon-theme.folders.associations": {
+        "build-int": "Other",
+        "Enterprise.xcworkspace": "Project",
+        "Engine.xcodeproj": "Project",
+        "Editor.xcodeproj": "Project"
+    }
+}
