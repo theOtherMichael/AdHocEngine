@@ -2,7 +2,7 @@
 /build-int/
 vcpkg_installed/
 
-# Visual Studio
+# Visual Studio =================================
 
 ## User-specific files
 *.rsuser
@@ -11,7 +11,47 @@ vcpkg_installed/
 *.userosscache
 *.sln.docstates
 
-# Xcode
+## Visual Studio 2015/2017 cache/options directory
+.vs/
+
+## Visual Studio 2017 auto generated files
+Generated\ Files/
+
+## Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+## Visual Studio Trace Files
+*.e2e
+
+## Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+## Visual Studio cache files
+## files ending in .cache can be ignored
+*.[Cc]ache
+## but keep track of directories ending in .cache
+!?*.[Cc]ache/
+
+## MSBuild Binary and Structured Log
+*.binlog
+
+## NVidia Nsight GPU debugger configuration file
+*.nvuser
+
+## Local History for Visual Studio
+.localhistory/
+
+## Visual Studio History (VSHistory) files
+.vshistory/
+
+## Local History for Visual Studio Code
+.history/
+
+# Xcode =========================================
 
 ## User settings
 xcuserdata/
@@ -20,7 +60,7 @@ xcuserdata/
 *.xcscmblueprint
 *.xccheckout
 
-# Visual Studio Code
+# Visual Studio Code ============================
 
 .vscode/*
 !.vscode/settings.json
@@ -28,6 +68,7 @@ xcuserdata/
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+*.code-workspace
 
 ## Local History for Visual Studio Code
 .history/
@@ -35,7 +76,7 @@ xcuserdata/
 ## Built Visual Studio Code Extensions
 *.vsix
 
-# Windows ===
+# Windows =======================================
 
 ## Windows thumbnail cache files
 Thumbs.db
@@ -62,7 +103,7 @@ $RECYCLE.BIN/
 ## Windows shortcuts
 *.lnk
 
-# macOS ===
+# macOS =========================================
 
 ## General
 .DS_Store
