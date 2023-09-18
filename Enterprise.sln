@@ -5,10 +5,13 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor", "Editor\Editor.vcxproj", "{7758661D-CF55-4662-BCA4-5B5808F9A6BC}"
 	ProjectSection(ProjectDependencies) = postProject
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9} = {232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}
 		{43AD99F9-F2D2-48C6-821C-408187E088BD} = {43AD99F9-F2D2-48C6-821C-408187E088BD}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{43AD99F9-F2D2-48C6-821C-408187E088BD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Launcher", "Launcher\Launcher.vcxproj", "{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,18 +32,27 @@ Global
 		{7758661D-CF55-4662-BCA4-5B5808F9A6BC}.Library_Debug|x64.ActiveCfg = Debug|x64
 		{7758661D-CF55-4662-BCA4-5B5808F9A6BC}.Library_Dev|x64.ActiveCfg = Dev|x64
 		{7758661D-CF55-4662-BCA4-5B5808F9A6BC}.Library_Release|x64.ActiveCfg = Release|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Debug|x64.ActiveCfg = Dyn_Debug|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Debug|x64.Build.0 = Dyn_Debug|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Dev|x64.ActiveCfg = Dyn_Dev|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Dev|x64.Build.0 = Dyn_Dev|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Release|x64.ActiveCfg = Dyn_Release|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Release|x64.Build.0 = Dyn_Release|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Debug|x64.ActiveCfg = Lib_Debug|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Debug|x64.Build.0 = Lib_Debug|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Dev|x64.ActiveCfg = Lib_Dev|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Dev|x64.Build.0 = Lib_Dev|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Release|x64.ActiveCfg = Lib_Release|x64
-		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Release|x64.Build.0 = Lib_Release|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Debug|x64.ActiveCfg = Debug|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Debug|x64.Build.0 = Debug|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Dev|x64.ActiveCfg = Dev|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Dev|x64.Build.0 = Dev|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Release|x64.ActiveCfg = Release|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Editor_Release|x64.Build.0 = Release|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Debug|x64.ActiveCfg = Debug_Static|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Debug|x64.Build.0 = Debug_Static|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Dev|x64.ActiveCfg = Dev_Static|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Dev|x64.Build.0 = Dev_Static|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Release|x64.ActiveCfg = Release_Static|x64
+		{43AD99F9-F2D2-48C6-821C-408187E088BD}.Library_Release|x64.Build.0 = Release_Static|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Editor_Debug|x64.ActiveCfg = Debug|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Editor_Debug|x64.Build.0 = Debug|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Editor_Dev|x64.ActiveCfg = Dev|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Editor_Dev|x64.Build.0 = Dev|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Editor_Release|x64.ActiveCfg = Release|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Editor_Release|x64.Build.0 = Release|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Library_Debug|x64.ActiveCfg = Debug|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Library_Dev|x64.ActiveCfg = Dev|x64
+		{232BA11C-C59F-4227-A2F3-EEE4C39E1DC9}.Library_Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

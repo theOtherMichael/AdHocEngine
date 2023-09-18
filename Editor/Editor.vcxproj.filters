@@ -18,6 +18,9 @@
     <ClCompile Include="src\EntryPoint_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\ReloadSentinel_Win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources\EmbedAppIcon.rc">
@@ -28,5 +31,13 @@
     <Image Include="resources\Enterprise.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ReloadSentinel_Win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="vcpkg.json" />
   </ItemGroup>
 </Project>

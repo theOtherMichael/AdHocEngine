@@ -1,0 +1,34 @@
+---
+BasedOnStyle:  Microsoft
+AccessModifierOffset: -4
+AlignConsecutiveAssignments: Consecutive
+AllowShortEnumsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Always
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: InlineOnly
+AlwaysBreakBeforeMultilineStrings: true
+AlwaysBreakTemplateDeclarations: Yes
+BinPackArguments: false
+BinPackParameters: false
+BraceWrapping:
+  AfterCaseLabel:  true
+  AfterObjCDeclaration: true
+  AfterUnion:      true
+  BeforeLambdaBody: true
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+ColumnLimit:     90
+EmptyLineBeforeAccessModifier: Always
+PackConstructorInitializers: NextLine
+IncludeBlocks:   Merge
+IndentPPDirectives: BeforeHash
+KeepEmptyLinesAtTheStartOfBlocks: false
+ObjCBinPackProtocolList: Never
+PenaltyBreakBeforeFirstCallParameter: 0
+PenaltyExcessCharacter: 200
+PenaltyReturnTypeOnItsOwnLine: 1000000
+PointerAlignment: Left
+SortIncludes:    Never
+SortUsingDeclarations: false
+Standard:        c++17
+...

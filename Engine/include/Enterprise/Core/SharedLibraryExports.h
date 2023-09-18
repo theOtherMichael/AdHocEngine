@@ -1,19 +1,17 @@
 #pragma once
 
 #ifdef _WIN32
+    #ifdef ENTERPRISE_EDITOR
+        #ifdef ENTERPRISE_ENGINE
+            #define ENTERPRISE_API __declspec(dllexport)
+        #else
+            #define ENTERPRISE_API __declspec(dllimport)
+        #endif // ENTERPRISE_ENGINE
 
-#ifdef EP_EDITOR
-
-#ifdef EP_BUILD_ENGINE
-#define EP_API __declspec(dllexport)
-#else
-#define EP_API __declspec(dllimport)
-#endif // EP_BUILD_ENGINE
-
-#else // !EP_EDITOR
-#define EP_API
-#endif // EP_EDITOR
+    #else // !ENTERPRISE_EDITOR
+        #define ENTERPRISE_API
+    #endif // ENTERPRISE_EDITOR
 
 #else // !_WIN32
-#define EP_API
+    #define ENTERPRISE_API
 #endif // _WIN32
