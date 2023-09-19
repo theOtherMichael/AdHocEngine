@@ -100,7 +100,13 @@ void AttachDebugger()
     DWORD targetPID          = GetCurrentProcessId();
     EnvDTE::Process* process = FindVSProcess(targetPID);
     if (process)
+    {
         process->Attach();
+    }
+    else
+    {
+        std::cout << "Could not find visual studio for attach!" << std::endl;
+    }
 }
 
 void DetachDebugger(bool waitForBreakOrEnd)
@@ -108,5 +114,12 @@ void DetachDebugger(bool waitForBreakOrEnd)
     DWORD targetPID          = GetCurrentProcessId();
     EnvDTE::Process* process = FindVSProcess(targetPID);
     if (process)
+    {
         process->Detach(variant_t(waitForBreakOrEnd));
+    }
+
+    else
+    {
+        std::cout << "Could not find visual studio for detach!" << std::endl;
+    }
 }

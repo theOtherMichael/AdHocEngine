@@ -3,8 +3,9 @@
 #include <array>
 #include <atomic>
 #include <cassert>
-#include <iostream>
 #include <string_view>
+
+#include <fmt/format.h>
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
@@ -112,7 +113,7 @@ void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
 
         if (*reloadFlagsOut != ReloadFlag_None)
         {
-            std::cout << "Reloading Editor..." << std::endl;
+            fmt::print("Reloading Editor...\n");
             break;
         }
     }

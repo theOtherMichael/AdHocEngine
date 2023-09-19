@@ -1,7 +1,8 @@
 #include <atomic>
 #include <chrono>
-#include <iostream>
 #include <thread>
+
+#include <fmt/format.h>
 
 #include "ReloadSentinel_Win.h"
 
@@ -10,11 +11,11 @@ static const int lengthOfLoopInMilliseconds = 1000.0f;
 static void Update()
 {
 #ifdef ENTERPRISE_DEBUG
-    std::cout << "Debug..." << std::endl;
+    fmt::print("Debug...\n");
 #elif defined(ENTERPRISE_DEV)
-    std::cout << "Dev..." << std::endl;
+    fmt::print("Dev...\n");
 #elif defined(ENTERPRISE_RELEASE)
-    std::cout << "Release..." << std::endl;
+    fmt::print("Release...\n");
 #endif
 
     std::this_thread::sleep_for(std::chrono::milliseconds(lengthOfLoopInMilliseconds));
@@ -47,12 +48,9 @@ extern "C" __declspec(dllexport) int EditorMain(int argc,
 
         if (currentReloadFlags != ReloadFlag_None)
         {
-            // 1. Dump Editor state (optionally with a prompt for the user)
+            // Dump editor state here
 
-            // 2. Tell the launcher to reload
             *reloadFlagsOut = currentReloadFlags;
-
-            // 3. Return control to the launcher
             break;
         }
     }

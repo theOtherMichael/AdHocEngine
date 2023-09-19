@@ -1,3 +1,5 @@
+@ECHO OFF
+
 IF "%1"=="" (
     ECHO No configuration specified!
     ECHO Usage: %~n0.bat ^(Debug^|Dev^|Release^)

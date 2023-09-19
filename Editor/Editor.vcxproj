@@ -83,7 +83,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ENTERPRISE_EDITOR;NOMINMAX;ENTERPRISE_DEBUG;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -104,7 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ENTERPRISE_EDITOR;NOMINMAX;ENTERPRISE_RELEASE;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -127,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ENTERPRISE_EDITOR;NOMINMAX;ENTERPRISE_DEV;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -163,9 +163,9 @@
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Dynamic</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Dynamic</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Dynamic</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Installing vcpkg dependencies</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Installing vcpkg dependencies</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Installing vcpkg dependencies</Message>
