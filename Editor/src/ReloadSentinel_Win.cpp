@@ -7,12 +7,13 @@
 
 #include <fmt/format.h>
 
+#include <Enterprise/Core/Assertions.h>
+#include <Enterprise/Core/PlatformHelpers_Win.h>
+
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
-
-#include <Enterprise/Core/PlatformHelpers_Win.h>
 
 static const std::array<std::string_view, 6> pathsToBuildProducts = {
     "Debug\\Editor\\EditorD.dll",
@@ -90,7 +91,7 @@ void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
                 }
                 else
                 {
-                    assert(false); // TODO: Replace with Enterprise assert
+                    ASSERT_NOENTRY();
                 }
 
                 if (modifiedFile.compare(configNameLength + 1, 6, "Engine") == 0)
@@ -103,7 +104,7 @@ void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
                 }
                 else
                 {
-                    assert(false); // TODO: Replace with Enterprise assert
+                    ASSERT_NOENTRY();
                 }
 
                 reloadFlagsOut->store(reloadFlags);

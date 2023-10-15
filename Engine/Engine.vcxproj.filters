@@ -24,12 +24,33 @@
     <ClInclude Include="include\Enterprise\Core\PlatformHelpers_Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\Misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\Assertions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\PlatformData_Win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Misc_Win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Add.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\PlatformHelpers_Win.cpp">
+    <ClCompile Include="src\Core\PlatformHelpers_Win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Misc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\PlatformData_Win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Misc_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
