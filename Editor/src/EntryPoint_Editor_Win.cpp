@@ -13,6 +13,7 @@ static_assert(false);
 #include <Enterprise/Core/PlatformHelpers_Win.h>
 #include <Enterprise/Core/PlatformData_Win.h>
 
+#include <Editor/EditorReloadFlags.h>
 #include "ReloadSentinel_Win.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
@@ -58,7 +59,7 @@ extern "C" __declspec(dllexport) int EditorMain(int argc,
 
     if (isDevelopmentMode)
     {
-        std::thread watcherThread(Editor::WaitForDirChange, &currentReloadFlags);
+        std::thread watcherThread(WaitForEditorOrEngineRecompile, &currentReloadFlags);
         watcherThread.detach();
     }
 
@@ -108,7 +109,7 @@ extern "C" __declspec(dllexport) int EditorMain(int argc,
     {
         Update();
 
-        if (currentReloadFlags != ReloadFlag_None)
+        if (currentReloadFlags != EditorReloadFlag_None)
         {
             // Dump editor state here
 

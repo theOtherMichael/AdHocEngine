@@ -15,24 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\EntryPoint_Win.cpp">
+    <ClCompile Include="src\EntryPoint_Launcher_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\PlatformHelpers_Win.cpp">
+    <ClCompile Include="src\PlatformHelpers_Launcher_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Debugger_Win.cpp">
+    <ClCompile Include="src\DebuggerControls_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\PlatformHelpers_Win.h">
+    <ClInclude Include="src\PlatformHelpers_Launcher_Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Assertions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Debugger_Win.h">
+    <ClInclude Include="src\DebuggerControls_Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

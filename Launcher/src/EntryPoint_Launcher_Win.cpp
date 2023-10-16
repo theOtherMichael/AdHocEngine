@@ -9,14 +9,16 @@ static_assert(false);
 #include <string>
 #include <thread>
 
+#include <Editor/EditorReloadFlags.h>
+
+#include "PlatformHelpers_Launcher_Win.h"
+#include "DebuggerControls_Win.h"
+
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <objbase.h>
-
-#include "PlatformHelpers_Win.h"
-#include "Debugger_Win.h"
 
 namespace fs = std::filesystem;
 using namespace std::chrono_literals;
@@ -24,18 +26,6 @@ using std::chrono::steady_clock;
 
 const char* developmentModeOptionString = "--development";
 const char* debugModeOptionString       = "--debug";
-
-// IMPORTANT: ReloadSentinel_Win.h in Editor must use these exact constants!
-// 0000PPCC
-// C = Config
-constexpr unsigned char ReloadFlag_None       = 0x0;
-constexpr unsigned char ReloadFlag_Debug      = 0x1;
-constexpr unsigned char ReloadFlag_Dev        = 0x2;
-constexpr unsigned char ReloadFlag_Release    = 0x3;
-constexpr unsigned char ReloadFlag_ConfigMask = 0x3;
-// P = Project
-constexpr unsigned char ReloadFlag_Engine = 0x4;
-constexpr unsigned char ReloadFlag_Editor = 0x8;
 
 static HMODULE editorModuleHandle                                 = NULL;
 static int (*editorMainFunctionPtr)(int, char*[], unsigned char*) = nullptr;
@@ -45,17 +35,17 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
     std::string configName;
     std::string configSuffix;
 
-    switch (reloadFlags & ReloadFlag_ConfigMask)
+    switch (reloadFlags & EditorReloadFlag_ConfigMask)
     {
-    case ReloadFlag_Debug:
+    case EditorReloadFlag_Debug:
         configName   = "Debug";
         configSuffix = "D";
         break;
-    case ReloadFlag_Dev:
+    case EditorReloadFlag_Dev:
         configName   = "Dev";
         configSuffix = "";
         break;
-    case ReloadFlag_Release:
+    case EditorReloadFlag_Release:
         configName   = "Release";
         configSuffix = "";
         break;
@@ -80,11 +70,11 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
         "build/" + configName + "/Editor" + configSuffix + ".pdb";
 
     if (!fs::exists(copiedEngineDllPath))
-        reloadFlags |= ReloadFlag_Engine;
+        reloadFlags |= EditorReloadFlag_Engine;
 
     std::error_code ec;
 
-    if ((reloadFlags & ReloadFlag_Engine) != 0)
+    if ((reloadFlags & EditorReloadFlag_Engine) != 0)
     {
         fs::copy_file(builtEngineDllPath,
                       copiedEngineDllPath,
@@ -115,10 +105,10 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
                 break;
         }
 
-        reloadFlags |= ReloadFlag_Editor;
+        reloadFlags |= EditorReloadFlag_Editor;
     }
 
-    if ((reloadFlags & ReloadFlag_Editor) != 0)
+    if ((reloadFlags & EditorReloadFlag_Editor) != 0)
     {
         fs::copy_file(builtEditorDllPath,
                       copiedEditorDllPath,
@@ -164,20 +154,18 @@ int main(int argc, char* argv[])
     std::cout << "Development Mode: " << isDevelopmentMode << "\n";
     std::cout << "Debug Mode: " << isDebugMode << std::endl;
 
-    unsigned char reloadFlags =
-        isDebugMode ? ReloadFlag_Engine | ReloadFlag_Editor | ReloadFlag_Debug
-                    : ReloadFlag_Engine | ReloadFlag_Editor | ReloadFlag_Dev;
-
-    bool isComInitialized = false;
+    unsigned char reloadFlags = EditorReloadFlag_None;
+    bool isComInitialized     = false;
 
     if (isDevelopmentMode)
     {
+        reloadFlags = EditorReloadFlag_Engine | EditorReloadFlag_Editor;
 #ifdef ENTERPRISE_DEBUG
-        reloadFlags = ReloadFlag_Engine | ReloadFlag_Editor | ReloadFlag_Debug;
+        reloadFlags |= EditorReloadFlag_Debug;
 #elif defined(ENTERPRISE_DEV)
-        reloadFlags = ReloadFlag_Engine | ReloadFlag_Editor | ReloadFlag_Dev;
+        reloadFlags |= EditorReloadFlag_Dev;
 #elif defined(ENTERPRISE_RELEASE)
-        reloadFlags = ReloadFlag_Engine | ReloadFlag_Editor | ReloadFlag_Release;
+        reloadFlags |= EditorReloadFlag_Release;
 #endif // ENTERPRISE_DEBUG
 
         isComInitialized = CoInitialize(NULL) == S_OK;
@@ -228,7 +216,7 @@ int main(int argc, char* argv[])
             return EXIT_FAILURE;
         }
 
-        reloadFlags = ReloadFlag_None;
+        reloadFlags = EditorReloadFlag_None;
 
         if (isDebuggerAttached && isComInitialized)
             AttachDebugger();
@@ -243,7 +231,7 @@ int main(int argc, char* argv[])
         FreeLibrary(editorModuleHandle);
         editorModuleHandle = NULL;
 
-    } while (reloadFlags != ReloadFlag_None);
+    } while (reloadFlags != EditorReloadFlag_None);
 
     if (isComInitialized)
         CoUninitialize();

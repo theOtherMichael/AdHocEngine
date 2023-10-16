@@ -10,6 +10,8 @@
 #include <Enterprise/Core/Assertions.h>
 #include <Enterprise/Core/PlatformHelpers_Win.h>
 
+#include <Editor/EditorReloadFlags.h>
+
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
 #endif // WIN32_LEAN_AND_MEAN
@@ -23,10 +25,7 @@ static const std::array<std::string_view, 6> pathsToBuildProducts = {
     "Release\\Editor\\Editor.dll",
     "Release\\Engine\\Engine.dll"};
 
-namespace Editor
-{
-
-void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
+void WaitForEditorOrEngineRecompile(std::atomic_uchar* reloadFlagsOut)
 {
     HANDLE buildDirectoryHandle =
         CreateFile(L"build",
@@ -70,24 +69,24 @@ void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
                 if (modifiedFile != watchedFile)
                     continue;
 
-                unsigned char reloadFlags = ReloadFlag_None;
+                unsigned char reloadFlags = EditorReloadFlag_None;
 
                 size_t configNameLength = 0;
 
                 if (modifiedFile.compare(0, 3, "Dev") == 0)
                 {
-                    configNameLength = 3;
-                    reloadFlags      = ReloadFlag_Dev;
+                    configNameLength = std::char_traits<char>::length("Dev");
+                    reloadFlags      = EditorReloadFlag_Dev;
                 }
                 else if (modifiedFile.compare(0, 5, "Debug") == 0)
                 {
-                    configNameLength = 5;
-                    reloadFlags      = ReloadFlag_Debug;
+                    configNameLength = std::char_traits<char>::length("Debug");
+                    reloadFlags      = EditorReloadFlag_Debug;
                 }
                 else if (modifiedFile.compare(0, 7, "Release") == 0)
                 {
-                    configNameLength = 7;
-                    reloadFlags      = ReloadFlag_Release;
+                    configNameLength = std::char_traits<char>::length("Release");
+                    reloadFlags      = EditorReloadFlag_Release;
                 }
                 else
                 {
@@ -96,11 +95,11 @@ void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
 
                 if (modifiedFile.compare(configNameLength + 1, 6, "Engine") == 0)
                 {
-                    reloadFlags |= ReloadFlag_Engine;
+                    reloadFlags |= EditorReloadFlag_Engine;
                 }
                 else if (modifiedFile.compare(configNameLength + 1, 6, "Editor") == 0)
                 {
-                    reloadFlags |= ReloadFlag_Editor;
+                    reloadFlags |= EditorReloadFlag_Editor;
                 }
                 else
                 {
@@ -112,12 +111,10 @@ void WaitForDirChange(std::atomic_uchar* reloadFlagsOut)
             }
         } while (notifyInfo->NextEntryOffset != 0);
 
-        if (*reloadFlagsOut != ReloadFlag_None)
+        if (*reloadFlagsOut != EditorReloadFlag_None)
         {
             fmt::print("Reloading Editor...\n");
             break;
         }
     }
 }
-
-} // namespace Editor

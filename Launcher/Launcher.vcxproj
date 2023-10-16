@@ -84,6 +84,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_DEBUG;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -98,6 +99,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_RELEASE;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -114,6 +116,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_DEV;_UNICODE;UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -122,14 +125,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Debugger_Win.cpp" />
-    <ClCompile Include="src\EntryPoint_Win.cpp" />
-    <ClCompile Include="src\PlatformHelpers_Win.cpp" />
+    <ClCompile Include="src\DebuggerControls_Win.cpp" />
+    <ClCompile Include="src\EntryPoint_Launcher_Win.cpp" />
+    <ClCompile Include="src\PlatformHelpers_Launcher_Win.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Assertions.h" />
-    <ClInclude Include="src\Debugger_Win.h" />
-    <ClInclude Include="src\PlatformHelpers_Win.h" />
+    <ClInclude Include="src\DebuggerControls_Win.h" />
+    <ClInclude Include="src\PlatformHelpers_Launcher_Win.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\EntryPoint_Win.cpp">
+    <ClCompile Include="src\EntryPoint_Editor_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\ReloadSentinel_Win.cpp">
@@ -34,6 +34,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ReloadSentinel_Win.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Editor\EditorReloadFlags.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

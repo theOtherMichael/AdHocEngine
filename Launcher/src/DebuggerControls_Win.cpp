@@ -1,6 +1,8 @@
-#include "Debugger_Win.h"
+#include "DebuggerControls_Win.h"
 
 #include <iostream>
+
+#include "PlatformHelpers_Launcher_Win.h"
 
 // https://msdn.microsoft.com/en-us/library/yf86a8ts.aspx
 #pragma warning(disable : 4278)
@@ -13,8 +15,6 @@
     #define WIN32_LEAN_AND_MEAN
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
-
-#include "PlatformHelpers_Win.h"
 
 // https://handmade.network/forums/wip/t/1479-sample_code_to_programmatically_attach_visual_studio_to_a_process
 static EnvDTE::Process* FindVSProcess(DWORD targetPID)
@@ -99,27 +99,26 @@ void AttachDebugger()
 {
     DWORD targetPID          = GetCurrentProcessId();
     EnvDTE::Process* process = FindVSProcess(targetPID);
-    if (process)
-    {
-        process->Attach();
-    }
-    else
+
+    if (!process)
     {
         std::cout << "Could not find visual studio for attach!" << std::endl;
+        return;
     }
+
+    process->Attach();
 }
 
 void DetachDebugger(bool waitForBreakOrEnd)
 {
     DWORD targetPID          = GetCurrentProcessId();
     EnvDTE::Process* process = FindVSProcess(targetPID);
-    if (process)
-    {
-        process->Detach(variant_t(waitForBreakOrEnd));
-    }
 
-    else
+    if (!process)
     {
         std::cout << "Could not find visual studio for detach!" << std::endl;
+        return;
     }
+
+    process->Detach(variant_t(waitForBreakOrEnd));
 }
