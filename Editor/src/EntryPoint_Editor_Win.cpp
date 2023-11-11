@@ -9,6 +9,7 @@ static_assert(false);
 #include <thread>
 
 #include <fmt/format.h>
+#include <GLFW/glfw3.h>
 
 #include <Enterprise/Core/PlatformHelpers_Win.h>
 #include <Enterprise/Core/PlatformData_Win.h>
@@ -24,46 +25,15 @@ static_assert(false);
 
 namespace fs = std::filesystem;
 
-static const int lengthOfLoopInMilliseconds = 1000.0f;
-
-static void Update()
+static void OnGlfwError(int error, const char* description)
 {
-#ifdef ENTERPRISE_DEBUG
-    fmt::print("Debug...\n");
-#elif defined(ENTERPRISE_DEV)
-    fmt::print("Dev...\n");
-#elif defined(ENTERPRISE_RELEASE)
-    fmt::print("Release...\n");
-#endif
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(lengthOfLoopInMilliseconds));
+    fmt::print(stderr, "GLFW error {}: {}", error, description);
 }
 
-extern "C" __declspec(dllexport) int EditorMain(int argc,
-                                                char* argv[],
-                                                unsigned char* reloadFlagsOut)
+bool InitSymbolHandler(bool isDevelopmentMode)
 {
-    const char* editorReloadableFlag = "--development";
-    bool isDevelopmentMode           = false;
-
-    for (int i = 1; i < argc; i++)
-    {
-        if (strcmp(argv[i], editorReloadableFlag) == 0)
-        {
-            isDevelopmentMode = true;
-            break;
-        }
-    }
-
-    static std::atomic_uchar currentReloadFlags = 0;
-
-    if (isDevelopmentMode)
-    {
-        std::thread watcherThread(WaitForEditorOrEngineRecompile, &currentReloadFlags);
-        watcherThread.detach();
-    }
-
     auto platformData = Enterprise::GetMutablePlatformData_Win();
+
     if (!DuplicateHandle(GetCurrentProcess(),
                          GetCurrentProcess(),
                          GetCurrentProcess(),
@@ -75,7 +45,7 @@ extern "C" __declspec(dllexport) int EditorMain(int argc,
         fmt::print(stderr, "Could not obtain process handle! {}", GetLastErrorAsString());
     }
 
-    BOOL isSymbolHandlerInitialized = FALSE;
+    bool isSymbolHandlerInitialized = false;
     if (isDevelopmentMode)
     {
 #ifdef ENTERPRISE_DEBUG
@@ -105,18 +75,12 @@ extern "C" __declspec(dllexport) int EditorMain(int argc,
             GetLastErrorAsString());
     }
 
-    while (true)
-    {
-        Update();
+    return isSymbolHandlerInitialized;
+}
 
-        if (currentReloadFlags != EditorReloadFlag_None)
-        {
-            // Dump editor state here
-
-            *reloadFlagsOut = currentReloadFlags;
-            break;
-        }
-    }
+void CleanUpSymbolHandler(const bool isSymbolHandlerInitialized)
+{
+    auto platformData = Enterprise::GetMutablePlatformData_Win();
 
     if (isSymbolHandlerInitialized && !SymCleanup(platformData->processHandle))
         fmt::print(stderr, "SymCleanup() failed! {}", GetLastErrorAsString());
@@ -125,6 +89,59 @@ extern "C" __declspec(dllexport) int EditorMain(int argc,
         fmt::print(stderr, "Could not close process handle! {}", GetLastErrorAsString());
 
     platformData->processHandle = NULL;
+}
 
-    return EXIT_SUCCESS;
+extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[])
+{
+    const char* editorReloadableFlag = "--development";
+    bool isDevelopmentMode           = false;
+    for (int i = 1; i < argc; i++)
+    {
+        if (strcmp(argv[i], editorReloadableFlag) == 0)
+        {
+            isDevelopmentMode = true;
+            break;
+        }
+    }
+
+    bool isSymbolHandlerInitialized = InitSymbolHandler(isDevelopmentMode);
+
+    static std::atomic_uchar reloadFlags = 0;
+    if (isDevelopmentMode)
+    {
+        std::thread reloadWatchThread(WaitForEditorOrEngineRecompile, &reloadFlags);
+        reloadWatchThread.detach();
+    }
+
+    glfwSetErrorCallback(OnGlfwError);
+
+    if (!glfwInit())
+    {
+        CleanUpSymbolHandler(isSymbolHandlerInitialized);
+        return EditorReloadFlag_None;
+    }
+
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+    GLFWwindow* window = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
+    if (!window)
+    {
+        glfwTerminate();
+        CleanUpSymbolHandler(isSymbolHandlerInitialized);
+        return EditorReloadFlag_None;
+    }
+
+    while (!glfwWindowShouldClose(window))
+    {
+        glfwPollEvents();
+
+        if (reloadFlags != EditorReloadFlag_None)
+        {
+            // Dump editor state here
+            break;
+        }
+    }
+
+    glfwTerminate();
+    CleanUpSymbolHandler(isSymbolHandlerInitialized);
+    return reloadFlags;
 }

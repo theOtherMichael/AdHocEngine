@@ -26,7 +26,7 @@ static EnvDTE::Process* FindVSProcess(DWORD targetPID)
     CLSID visualStudioClsid;
     if (CLSIDFromProgID(visualStudioProgID, &visualStudioClsid) != S_OK)
     {
-        std::cout << "Error: did not find CLSID for Visual Studio!" << std::endl;
+        std::cout << "Error: did not find CLSID for Visual Studio!\n";
         return nullptr;
     }
 
@@ -102,7 +102,7 @@ void AttachDebugger()
 
     if (!process)
     {
-        std::cout << "Could not find visual studio for attach!" << std::endl;
+        std::cout << "Could not find Visual Studio for attach!\n";
         return;
     }
 
@@ -116,7 +116,7 @@ void DetachDebugger(bool waitForBreakOrEnd)
 
     if (!process)
     {
-        std::cout << "Could not find visual studio for detach!" << std::endl;
+        std::cout << "Could not find Visual Studio for detach!\n";
         return;
     }
 

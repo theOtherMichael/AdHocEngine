@@ -24,13 +24,7 @@ namespace fs = std::filesystem;
 using namespace std::chrono_literals;
 using std::chrono::steady_clock;
 
-const char* developmentModeOptionString = "--development";
-const char* debugModeOptionString       = "--debug";
-
-static HMODULE editorModuleHandle                                 = NULL;
-static int (*editorMainFunctionPtr)(int, char*[], unsigned char*) = nullptr;
-
-static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
+static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
 {
     std::string configName;
     std::string configSuffix;
@@ -72,17 +66,16 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
     if (!fs::exists(copiedEngineDllPath))
         reloadFlags |= EditorReloadFlag_Engine;
 
-    std::error_code ec;
-
     if ((reloadFlags & EditorReloadFlag_Engine) != 0)
     {
+        std::error_code ec;
         fs::copy_file(builtEngineDllPath,
                       copiedEngineDllPath,
                       fs::copy_options::overwrite_existing,
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Engine DLL! " << ec.message() << std::endl;
+            std::cout << "Could not copy Engine DLL! " << ec.message() << "\n";
 
         fs::copy_file(builtEnginePdbPath,
                       copiedEnginePdbPath,
@@ -90,17 +83,16 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Engine PDB! " << ec.message() << std::endl;
+            std::cout << "Could not copy Engine PDB! " << ec.message() << "\n";
     }
 
     if (!fs::exists(builtEditorDllPath))
     {
-        std::cout << "Editor DLL not found. Waiting for build to finish..." << std::endl;
+        std::cout << "Editor DLL not found. Waiting for build to finish...\n";
 
         for (auto endTime = steady_clock::now() + 15s; steady_clock::now() < endTime;)
         {
             std::this_thread::sleep_for(300ms);
-
             if (fs::exists(builtEditorDllPath))
                 break;
         }
@@ -110,13 +102,14 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
 
     if ((reloadFlags & EditorReloadFlag_Editor) != 0)
     {
+        std::error_code ec;
         fs::copy_file(builtEditorDllPath,
                       copiedEditorDllPath,
                       fs::copy_options::overwrite_existing,
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Editor DLL! " << ec.message() << std::endl;
+            std::cout << "Could not copy Editor DLL! " << ec.message() << "\n";
 
         fs::copy_file(builtEditorPdbPath,
                       copiedEditorPdbPath,
@@ -124,38 +117,35 @@ static void CopyAndLoadDllsForDevelopmentMode(unsigned char reloadFlags)
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Editor PDB! " << ec.message() << std::endl;
+            std::cout << "Could not copy Editor PDB! " << ec.message() << "\n";
     }
 
     if (!SetDllDirectory(fs::canonical("build\\" + configName + "\\").wstring().c_str()))
     {
-        std::cout << "SetDllDirectory() error: " << GetLastErrorAsString() << std::endl;
+        std::cout << "SetDllDirectory() error: " << GetLastErrorAsString() << "\n";
     }
 
-    editorModuleHandle =
-        LoadLibraryEx(UTF8toWCHAR("Editor" + configSuffix + ".dll").c_str(),
-                      NULL,
-                      LOAD_LIBRARY_SEARCH_USER_DIRS | LOAD_LIBRARY_SEARCH_SYSTEM32);
+    return LoadLibraryEx(UTF8toWCHAR("Editor" + configSuffix + ".dll").c_str(),
+                         NULL,
+                         LOAD_LIBRARY_SEARCH_USER_DIRS | LOAD_LIBRARY_SEARCH_SYSTEM32);
 }
 
 int main(int argc, char* argv[])
 {
     bool isDevelopmentMode = false;
     bool isDebugMode       = false;
-
     for (int i = 1; i < argc; i++)
     {
-        if (strcmp(argv[i], developmentModeOptionString) == 0)
+        if (strcmp(argv[i], "--development") == 0)
             isDevelopmentMode = true;
-        else if (strcmp(argv[i], debugModeOptionString) == 0)
+        else if (strcmp(argv[i], "--debug") == 0)
             isDebugMode = true;
     }
-
     std::cout << "Development Mode: " << isDevelopmentMode << "\n";
-    std::cout << "Debug Mode: " << isDebugMode << std::endl;
+    std::cout << "Debug Mode: " << isDebugMode << "\n";
 
-    unsigned char reloadFlags = EditorReloadFlag_None;
     bool isComInitialized     = false;
+    unsigned char reloadFlags = EditorReloadFlag_None;
 
     if (isDevelopmentMode)
     {
@@ -169,27 +159,28 @@ int main(int argc, char* argv[])
 #endif // ENTERPRISE_DEBUG
 
         isComInitialized = CoInitialize(NULL) == S_OK;
-
         if (!isComInitialized)
         {
             std::cout
-                << "CoInitialize() failed! Debugger will not automatically reattach."
-                << std::endl;
+                << "CoInitialize() failed! Debugger will not automatically reattach.\n";
         }
     }
 
     bool isDebuggerAttached = IsDebuggerPresent();
     if (isDebuggerAttached && isComInitialized)
     {
-        std::cout << "Debugger detected!" << std::endl;
+        std::cout << "Debugger detected!\n";
         DetachDebugger(true);
     }
+
+    HMODULE editorModuleHandle                           = NULL;
+    unsigned char (*editorMainFunctionPtr)(int, char*[]) = nullptr;
 
     do
     {
         if (isDevelopmentMode)
         {
-            CopyAndLoadDllsForDevelopmentMode(reloadFlags);
+            editorModuleHandle = CopyAndLoadEditorModule(reloadFlags);
         }
         else
         {
@@ -201,27 +192,24 @@ int main(int argc, char* argv[])
 
         if (editorModuleHandle == NULL)
         {
-            std::cout << "Editor DLL load failure! " << GetLastErrorAsString()
-                      << std::endl;
+            std::cout << "Editor DLL load failure! " << GetLastErrorAsString() << "\n";
             return EXIT_FAILURE;
         }
 
-        editorMainFunctionPtr = (int (*)(int, char*[], unsigned char*))GetProcAddress(
+        editorMainFunctionPtr = (unsigned char (*)(int, char*[]))GetProcAddress(
             editorModuleHandle, "EditorMain");
 
         if (editorMainFunctionPtr == nullptr)
         {
             std::cout << "Editor GetProcAddress failure! " << GetLastErrorAsString()
-                      << std::endl;
+                      << "\n";
             return EXIT_FAILURE;
         }
-
-        reloadFlags = EditorReloadFlag_None;
 
         if (isDebuggerAttached && isComInitialized)
             AttachDebugger();
 
-        editorMainFunctionPtr(argc, argv, &reloadFlags);
+        reloadFlags = editorMainFunctionPtr(argc, argv);
 
         isDebuggerAttached = IsDebuggerPresent();
         if (isDebuggerAttached && isComInitialized)

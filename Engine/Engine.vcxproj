@@ -145,7 +145,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PreBuildEvent>
@@ -193,7 +193,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PreBuildEvent>
@@ -245,7 +245,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PreBuildEvent>
