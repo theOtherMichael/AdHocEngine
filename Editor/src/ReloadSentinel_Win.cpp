@@ -25,8 +25,11 @@ static const std::array<std::string_view, 6> pathsToBuildProducts = {
     "Release\\Editor\\Editor.dll",
     "Release\\Engine\\Engine.dll"};
 
-void WaitForEditorOrEngineRecompile(std::atomic_uchar* reloadFlagsOut)
+DWORD WINAPI WaitForEditorOrEngineRecompile(LPVOID reloadFlagsOutPtr)
 {
+    std::atomic_uchar& reloadFlagsOutRef =
+        *reinterpret_cast<std::atomic_uchar*>(reloadFlagsOutPtr);
+
     HANDLE buildDirectoryHandle =
         CreateFile(L"build",
                    FILE_LIST_DIRECTORY,
@@ -35,6 +38,14 @@ void WaitForEditorOrEngineRecompile(std::atomic_uchar* reloadFlagsOut)
                    OPEN_ALWAYS,
                    FILE_FLAG_BACKUP_SEMANTICS,
                    NULL);
+
+    if (buildDirectoryHandle == INVALID_HANDLE_VALUE)
+    {
+        fmt::print(stderr,
+                   "Watcher thread could not open handle to build directory! Error: {}",
+                   GetLastErrorAsString());
+        return EXIT_FAILURE;
+    }
 
     char buffer[1024];
     DWORD bytesReturned;
@@ -72,7 +83,6 @@ void WaitForEditorOrEngineRecompile(std::atomic_uchar* reloadFlagsOut)
                 unsigned char reloadFlags = EditorReloadFlag_None;
 
                 size_t configNameLength = 0;
-
                 if (modifiedFile.compare(0, 3, "Dev") == 0)
                 {
                     configNameLength = std::char_traits<char>::length("Dev");
@@ -106,15 +116,25 @@ void WaitForEditorOrEngineRecompile(std::atomic_uchar* reloadFlagsOut)
                     ASSERT_NOENTRY();
                 }
 
-                reloadFlagsOut->store(reloadFlags);
+                reloadFlagsOutRef = reloadFlags;
                 break;
             }
         } while (notifyInfo->NextEntryOffset != 0);
 
-        if (*reloadFlagsOut != EditorReloadFlag_None)
+        if (reloadFlagsOutRef != EditorReloadFlag_None)
         {
             fmt::print("Reloading Editor...\n");
+            SetLastError(ERROR_OPERATION_ABORTED);
             break;
         }
     }
+
+    if (GetLastError() != ERROR_OPERATION_ABORTED)
+    {
+        fmt::print(stderr,
+                   "Watcher thread ReadDirectoryChangesW() failure! Error: {}\n",
+                   GetLastErrorAsString());
+    }
+
+    return EXIT_SUCCESS;
 }

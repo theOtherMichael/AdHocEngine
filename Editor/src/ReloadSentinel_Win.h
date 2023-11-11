@@ -4,6 +4,9 @@
 static_assert(false);
 #endif
 
-#include <atomic>
+#ifndef WIN32_LEAN_AND_MEAN
+    #define WIN32_LEAN_AND_MEAN
+#endif // WIN32_LEAN_AND_MEAN
+#include <windows.h>
 
-void WaitForEditorOrEngineRecompile(std::atomic_uchar* reloadFlagsOut);
+DWORD WINAPI WaitForEditorOrEngineRecompile(LPVOID reloadFlagsOutPtr);

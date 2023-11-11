@@ -75,7 +75,7 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Engine DLL! " << ec.message() << "\n";
+            std::cerr << "Could not copy Engine DLL! " << ec.message() << "\n";
 
         fs::copy_file(builtEnginePdbPath,
                       copiedEnginePdbPath,
@@ -83,7 +83,7 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Engine PDB! " << ec.message() << "\n";
+            std::cerr << "Could not copy Engine PDB! " << ec.message() << "\n";
     }
 
     if (!fs::exists(builtEditorDllPath))
@@ -109,7 +109,7 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Editor DLL! " << ec.message() << "\n";
+            std::cerr << "Could not copy Editor DLL! " << ec.message() << "\n";
 
         fs::copy_file(builtEditorPdbPath,
                       copiedEditorPdbPath,
@@ -117,12 +117,12 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
                       ec);
 
         if (ec)
-            std::cout << "Could not copy Editor PDB! " << ec.message() << "\n";
+            std::cerr << "Could not copy Editor PDB! " << ec.message() << "\n";
     }
 
     if (!SetDllDirectory(fs::canonical("build\\" + configName + "\\").wstring().c_str()))
     {
-        std::cout << "SetDllDirectory() error: " << GetLastErrorAsString() << "\n";
+        std::cerr << "SetDllDirectory() error: " << GetLastErrorAsString() << "\n";
     }
 
     return LoadLibraryEx(UTF8toWCHAR("Editor" + configSuffix + ".dll").c_str(),
@@ -161,8 +161,8 @@ int main(int argc, char* argv[])
         isComInitialized = CoInitialize(NULL) == S_OK;
         if (!isComInitialized)
         {
-            std::cout
-                << "CoInitialize() failed! Debugger will not automatically reattach.\n";
+            std::cerr << "COM initialization failed! "
+                         "Debuggers will not automatically reattach.\n";
         }
     }
 
@@ -192,7 +192,7 @@ int main(int argc, char* argv[])
 
         if (editorModuleHandle == NULL)
         {
-            std::cout << "Editor DLL load failure! " << GetLastErrorAsString() << "\n";
+            std::cerr << "Error loading editor DLL! " << GetLastErrorAsString() << "\n";
             return EXIT_FAILURE;
         }
 
@@ -201,8 +201,8 @@ int main(int argc, char* argv[])
 
         if (editorMainFunctionPtr == nullptr)
         {
-            std::cout << "Editor GetProcAddress failure! " << GetLastErrorAsString()
-                      << "\n";
+            std::cerr << "Error retrieving address of EditorMain()! "
+                      << GetLastErrorAsString() << "\n";
             return EXIT_FAILURE;
         }
 
@@ -210,6 +210,20 @@ int main(int argc, char* argv[])
             AttachDebugger();
 
         reloadFlags = editorMainFunctionPtr(argc, argv);
+
+        switch (reloadFlags & EditorReloadFlag_ConfigMask)
+        {
+        case EditorReloadFlag_None: break;
+        case EditorReloadFlag_Debug: isDebugMode = true; break;
+        case EditorReloadFlag_Release: isDebugMode = false; break;
+        case EditorReloadFlag_Dev:
+            std::cerr << "Dev configuration was requested in Editor reload! "
+                         "Dev configuration is only available in Development Mode. "
+                         "Release will be used instead.\n";
+            isDebugMode = false;
+            break;
+        default: assert(false); break;
+        }
 
         isDebuggerAttached = IsDebuggerPresent();
         if (isDebuggerAttached && isComInitialized)

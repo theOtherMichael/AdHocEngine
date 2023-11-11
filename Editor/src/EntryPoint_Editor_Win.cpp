@@ -11,6 +11,7 @@ static_assert(false);
 #include <fmt/format.h>
 #include <GLFW/glfw3.h>
 
+#include <Enterprise/Core/Assertions.h>
 #include <Enterprise/Core/PlatformHelpers_Win.h>
 #include <Enterprise/Core/PlatformData_Win.h>
 
@@ -27,10 +28,10 @@ namespace fs = std::filesystem;
 
 static void OnGlfwError(int error, const char* description)
 {
-    fmt::print(stderr, "GLFW error {}: {}", error, description);
+    fmt::print(stderr, "GLFW error {}: {}\n", error, description);
 }
 
-bool InitSymbolHandler(bool isDevelopmentMode)
+static bool InitSymbolHandler(bool isDevelopmentMode)
 {
     auto platformData = Enterprise::GetMutablePlatformData_Win();
 
@@ -42,7 +43,9 @@ bool InitSymbolHandler(bool isDevelopmentMode)
                          FALSE,
                          DUPLICATE_SAME_ACCESS))
     {
-        fmt::print(stderr, "Could not obtain process handle! {}", GetLastErrorAsString());
+        fmt::print(stderr,
+                   "Could not obtain editor process handle! {}\n",
+                   GetLastErrorAsString());
     }
 
     bool isSymbolHandlerInitialized = false;
@@ -71,24 +74,76 @@ bool InitSymbolHandler(bool isDevelopmentMode)
     {
         fmt::print(
             stderr,
-            "SymInitialize() failed! {}\nBacktraces will be unavailable this session",
+            "SymInitialize() failed! {}\nBacktraces will be unavailable this session\n",
             GetLastErrorAsString());
     }
 
     return isSymbolHandlerInitialized;
 }
 
-void CleanUpSymbolHandler(const bool isSymbolHandlerInitialized)
+static void CleanUpSymbolHandler(const bool isSymbolHandlerInitialized)
 {
     auto platformData = Enterprise::GetMutablePlatformData_Win();
 
     if (isSymbolHandlerInitialized && !SymCleanup(platformData->processHandle))
-        fmt::print(stderr, "SymCleanup() failed! {}", GetLastErrorAsString());
+        fmt::print(stderr, "SymCleanup() failed! {}\n", GetLastErrorAsString());
 
     if (platformData->processHandle && !CloseHandle(platformData->processHandle))
-        fmt::print(stderr, "Could not close process handle! {}", GetLastErrorAsString());
+        fmt::print(stderr,
+                   "Could not close editor process handle! {}\n",
+                   GetLastErrorAsString());
 
     platformData->processHandle = NULL;
+}
+
+static HANDLE StartReloadWatchThread(std::atomic_uchar* reloadFlagsOutPtr)
+{
+    HANDLE reloadWatchThread = CreateThread(
+        NULL, 0, &WaitForEditorOrEngineRecompile, reloadFlagsOutPtr, 0, NULL);
+
+    if (reloadWatchThread == NULL)
+    {
+        fmt::print(stderr,
+                   "Error creating editor reload watch thread! {}\n",
+                   GetLastErrorAsString());
+    }
+
+    return reloadWatchThread;
+}
+
+static void JoinReloadWatchThread(HANDLE reloadWatchThread)
+{
+    if (reloadWatchThread == NULL)
+        return;
+
+    if (WaitForSingleObject(reloadWatchThread, 0) != WAIT_OBJECT_0 &&
+        CancelSynchronousIo(reloadWatchThread) == 0)
+    {
+        fmt::print(stderr,
+                   "Error cancelling editor reload watch thread! {}\n",
+                   GetLastErrorAsString());
+    }
+
+    switch (WaitForSingleObject(reloadWatchThread, 5000))
+    {
+    case WAIT_OBJECT_0: break;
+    case WAIT_TIMEOUT:
+        fmt::print(stderr, "Editor reload watch thread timed out during join!\n");
+        break;
+    case WAIT_FAILED:
+        fmt::print(stderr,
+                   "Error joining editor reload watch thread! {}\n",
+                   GetLastErrorAsString());
+        break;
+    default: ASSERT_NOENTRY(); break;
+    }
+
+    if (CloseHandle(reloadWatchThread) == 0)
+    {
+        fmt::print(stderr,
+                   "Error closing editor reload watch thread handle! {}\n",
+                   GetLastErrorAsString());
+    }
 }
 
 extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[])
@@ -106,33 +161,34 @@ extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[]
 
     bool isSymbolHandlerInitialized = InitSymbolHandler(isDevelopmentMode);
 
-    static std::atomic_uchar reloadFlags = 0;
+    HANDLE reloadWatchThread      = NULL;
+    std::atomic_uchar reloadFlags = EditorReloadFlag_None;
     if (isDevelopmentMode)
-    {
-        std::thread reloadWatchThread(WaitForEditorOrEngineRecompile, &reloadFlags);
-        reloadWatchThread.detach();
-    }
+        reloadWatchThread = StartReloadWatchThread(&reloadFlags);
 
     glfwSetErrorCallback(OnGlfwError);
 
     if (!glfwInit())
     {
+        JoinReloadWatchThread(reloadWatchThread);
         CleanUpSymbolHandler(isSymbolHandlerInitialized);
         return EditorReloadFlag_None;
     }
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    GLFWwindow* window = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
-    if (!window)
+    GLFWwindow* mainWindowPtr =
+        glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
+    if (!mainWindowPtr)
     {
         glfwTerminate();
+        JoinReloadWatchThread(reloadWatchThread);
         CleanUpSymbolHandler(isSymbolHandlerInitialized);
         return EditorReloadFlag_None;
     }
 
-    while (!glfwWindowShouldClose(window))
+    while (!glfwWindowShouldClose(mainWindowPtr))
     {
-        glfwPollEvents();
+        glfwWaitEvents();
 
         if (reloadFlags != EditorReloadFlag_None)
         {
@@ -142,6 +198,7 @@ extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[]
     }
 
     glfwTerminate();
+    JoinReloadWatchThread(reloadWatchThread);
     CleanUpSymbolHandler(isSymbolHandlerInitialized);
     return reloadFlags;
 }
