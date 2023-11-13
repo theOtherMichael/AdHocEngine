@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE4C6EC62B0196A60015E51A /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
+		CE4C6EC72B0196A60015E51A /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
+		CE4C6EC82B0196A60015E51A /* PlatformData_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */; };
+		CE4C6EC92B0196A60015E51A /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
+		CE4C6ECA2B0196A60015E51A /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
+		CE4C6ECB2B0196A60015E51A /* Add.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBC2B0196A60015E51A /* Add.h */; };
+		CE4C6ECC2B0196A60015E51A /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EBF2B0196A60015E51A /* Misc.cpp */; };
+		CE4C6ECE2B0196A60015E51A /* Misc_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EC12B0196A60015E51A /* Misc_Win.h */; };
+		CE4C6ED02B0196A60015E51A /* Misc_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */; };
+		CE4C6ED12B0196A60015E51A /* Add.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC42B0196A60015E51A /* Add.cpp */; };
+		CE4C6ED22B0198490015E51A /* PlatformData_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */; };
+		CE4C6ED32B01984D0015E51A /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */; };
+		CE4C6ED52B019D450015E51A /* Misc_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6ED42B019D450015E51A /* Misc_Mac.h */; };
+		CE4C6ED72B019EAD0015E51A /* Misc_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */; };
+		CE4C6EF52B01B4CD0015E51A /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6EDD2B01A9870015E51A /* libfmt.10.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE2B9A452B018B8100DE24E0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4C6EB72B0196A60015E51A /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assertions.h; sourceTree = "<group>"; };
+		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
+		CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformData_Win.h; sourceTree = "<group>"; };
+		CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformHelpers_Win.h; sourceTree = "<group>"; };
+		CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedLibraryExports.h; sourceTree = "<group>"; };
+		CE4C6EBC2B0196A60015E51A /* Add.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Add.h; sourceTree = "<group>"; };
+		CE4C6EBF2B0196A60015E51A /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Misc.cpp; sourceTree = "<group>"; };
+		CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformHelpers_Win.cpp; sourceTree = "<group>"; };
+		CE4C6EC12B0196A60015E51A /* Misc_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc_Win.h; sourceTree = "<group>"; };
+		CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformData_Win.cpp; sourceTree = "<group>"; };
+		CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Misc_Win.cpp; sourceTree = "<group>"; };
+		CE4C6EC42B0196A60015E51A /* Add.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Add.cpp; sourceTree = "<group>"; };
+		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = "<group>"; };
+		CE4C6ED42B019D450015E51A /* Misc_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Misc_Mac.h; sourceTree = "<group>"; };
+		CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Misc_Mac.cpp; sourceTree = "<group>"; };
+		CE4C6EDD2B01A9870015E51A /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE2B9A432B018B8100DE24E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4C6EF52B01B4CD0015E51A /* libfmt.10.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE2B9A3C2B018B8100DE24E0 = {
+			isa = PBXGroup;
+			children = (
+				CE4C6EB42B0196A60015E51A /* include */,
+				CE4C6EBD2B0196A60015E51A /* src */,
+				CE4C6EC52B0196A60015E51A /* vcpkg.json */,
+				CE2B9A462B018B8100DE24E0 /* Products */,
+				CE4C6EDC2B01A9870015E51A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE2B9A462B018B8100DE24E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B9A452B018B8100DE24E0 /* libEngine.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE4C6EB42B0196A60015E51A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6EB52B0196A60015E51A /* Enterprise */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CE4C6EB52B0196A60015E51A /* Enterprise */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6EB62B0196A60015E51A /* Core */,
+				CE4C6EBC2B0196A60015E51A /* Add.h */,
+			);
+			path = Enterprise;
+			sourceTree = "<group>";
+		};
+		CE4C6EB62B0196A60015E51A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6EB72B0196A60015E51A /* Assertions.h */,
+				CE4C6EB82B0196A60015E51A /* Misc.h */,
+				CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */,
+				CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */,
+				CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CE4C6EBD2B0196A60015E51A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6EBE2B0196A60015E51A /* Core */,
+				CE4C6EC42B0196A60015E51A /* Add.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		CE4C6EBE2B0196A60015E51A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */,
+				CE4C6ED42B019D450015E51A /* Misc_Mac.h */,
+				CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */,
+				CE4C6EC12B0196A60015E51A /* Misc_Win.h */,
+				CE4C6EBF2B0196A60015E51A /* Misc.cpp */,
+				CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */,
+				CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		CE4C6EDC2B01A9870015E51A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE4C6EDD2B01A9870015E51A /* libfmt.10.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CE2B9A412B018B8100DE24E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4C6ECE2B0196A60015E51A /* Misc_Win.h in Headers */,
+				CE4C6ECB2B0196A60015E51A /* Add.h in Headers */,
+				CE4C6ECA2B0196A60015E51A /* SharedLibraryExports.h in Headers */,
+				CE4C6EC92B0196A60015E51A /* PlatformHelpers_Win.h in Headers */,
+				CE4C6ED52B019D450015E51A /* Misc_Mac.h in Headers */,
+				CE4C6EC82B0196A60015E51A /* PlatformData_Win.h in Headers */,
+				CE4C6EC72B0196A60015E51A /* Misc.h in Headers */,
+				CE4C6EC62B0196A60015E51A /* Assertions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CE2B9A442B018B8100DE24E0 /* Engine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2B9A492B018B8100DE24E0 /* Build configuration list for PBXNativeTarget "Engine" */;
+			buildPhases = (
+				CE4C6ED82B01A01D0015E51A /* Run vcpkg */,
+				CE2B9A412B018B8100DE24E0 /* Headers */,
+				CE2B9A422B018B8100DE24E0 /* Sources */,
+				CE2B9A432B018B8100DE24E0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Engine;
+			productName = Engine;
+			productReference = CE2B9A452B018B8100DE24E0 /* libEngine.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE2B9A3D2B018B8100DE24E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE2B9A442B018B8100DE24E0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = CE2B9A402B018B8100DE24E0 /* Build configuration list for PBXProject "Engine" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CE2B9A3C2B018B8100DE24E0;
+			productRefGroup = CE2B9A462B018B8100DE24E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE2B9A442B018B8100DE24E0 /* Engine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE4C6ED82B01A01D0015E51A /* Run vcpkg */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/vcpkg.json",
+			);
+			name = "Run vcpkg";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/vcpkg_installed/empty.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh ../scripts/install_macos_dependencies.sh\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE2B9A422B018B8100DE24E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4C6ED12B0196A60015E51A /* Add.cpp in Sources */,
+				CE4C6ED22B0198490015E51A /* PlatformData_Win.cpp in Sources */,
+				CE4C6ED32B01984D0015E51A /* PlatformHelpers_Win.cpp in Sources */,
+				CE4C6ED72B019EAD0015E51A /* Misc_Mac.cpp in Sources */,
+				CE4C6ECC2B0196A60015E51A /* Misc.cpp in Sources */,
+				CE4C6ED02B0196A60015E51A /* Misc_Win.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CE2B9A472B018B8100DE24E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Engine;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE2B9A482B018B8100DE24E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = Engine;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CE2B9A4A2B018B8100DE24E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CE2B9A4B2B018B8100DE24E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE2B9A402B018B8100DE24E0 /* Build configuration list for PBXProject "Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2B9A472B018B8100DE24E0 /* Debug */,
+				CE2B9A482B018B8100DE24E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE2B9A492B018B8100DE24E0 /* Build configuration list for PBXNativeTarget "Engine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2B9A4A2B018B8100DE24E0 /* Debug */,
+				CE2B9A4B2B018B8100DE24E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE2B9A3D2B018B8100DE24E0 /* Project object */;
+}

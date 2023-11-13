@@ -47,18 +47,18 @@ lipo_directory_recursive() {
 echo "Installing $cwd_folder_name dependencies..."
 vcpkg="../vcpkg/vcpkg"
 
-echo "Installing static libraries..."
+echo "Running vcpkg install for static triplets..."
 "$vcpkg" install --no-print-usage --triplet=x64-osx --x-install-root=vcpkg_installed/x64-static
 "$vcpkg" install --no-print-usage --triplet=arm64-osx --x-install-root=vcpkg_installed/arm64-static
 
-echo "Merging into universal static libraries..."
+echo "Merging into universal binaries..."
 lipo_directory_recursive vcpkg_installed/x64-static/x64-osx  vcpkg_installed/arm64-static/arm64-osx  vcpkg_installed/uni-static
 
-echo "Installing dynamic libraries..."
+echo "Running vcpkg install for dynamic triplets..."
 "$vcpkg" install --no-print-usage --triplet=x64-osx-dynamic   --x-install-root=vcpkg_installed/x64-dynamic
 "$vcpkg" install --no-print-usage --triplet=arm64-osx-dynamic --x-install-root=vcpkg_installed/arm64-dynamic
 
-echo "Merging into universal dynamic libraries..."
+echo "Merging into universal binaries..."
 lipo_directory_recursive vcpkg_installed/x64-dynamic/x64-osx-dynamic vcpkg_installed/arm64-dynamic/arm64-osx-dynamic vcpkg_installed/uni-dynamic
 
 touch ./vcpkg_installed/empty.txt

@@ -1,5 +1,6 @@
 /build/
 /build-int/
+/build-int.noindex/
 vcpkg_installed/
 
 # Visual Studio =================================
