@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		CE4C6EAD2B0196810015E51A /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
-		CE4C6EAE2B0196810015E51A /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA62B0196810015E51A /* AppDelegate.h */; };
 		CE4C6EAF2B0196810015E51A /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
 		CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
 		CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
-		CE4C6EB22B0196810015E51A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EAA2B0196810015E51A /* AppDelegate.m */; };
-		CE4C6EB32B0196810015E51A /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EAB2B0196810015E51A /* EntryPoint_Editor_Mac.mm */; };
 		CE4C6EE32B01AA500015E51A /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6EE22B01AA500015E51A /* libEngine.dylib */; };
+		CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
+		CE8BF0FD2B0C890200ED57FD /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF0FC2B0C890100ED57FD /* libglfw.3.dylib */; };
+		CE8BF0FF2B0C896100ED57FD /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF0FE2B0C896100ED57FD /* libfmt.10.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorReloadFlags.h; sourceTree = "<group>"; };
-		CE4C6EA62B0196810015E51A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReloadSentinel_Win.h; sourceTree = "<group>"; };
 		CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Editor_Win.cpp; sourceTree = "<group>"; };
 		CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReloadSentinel_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EAA2B0196810015E51A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CE4C6EAB2B0196810015E51A /* EntryPoint_Editor_Mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EntryPoint_Editor_Mac.mm; sourceTree = "<group>"; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = "<group>"; };
 		CE4C6EE22B01AA500015E51A /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Editor_Mac.cpp; sourceTree = "<group>"; };
+		CE8BF0FC2B0C890100ED57FD /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
+		CE8BF0FE2B0C896100ED57FD /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +36,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C6EE32B01AA500015E51A /* libEngine.dylib in Frameworks */,
+				CE8BF0FD2B0C890200ED57FD /* libglfw.3.dylib in Frameworks */,
+				CE8BF0FF2B0C896100ED57FD /* libfmt.10.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,11 +47,11 @@
 		CE2B9A2C2B01853C00DE24E0 = {
 			isa = PBXGroup;
 			children = (
+				CE4C6EAC2B0196810015E51A /* vcpkg.json */,
+				CE4C6EE12B01AA500015E51A /* Frameworks */,
 				CE4C6EA22B0196810015E51A /* include */,
 				CE4C6EA52B0196810015E51A /* src */,
-				CE4C6EAC2B0196810015E51A /* vcpkg.json */,
 				CE2B9A362B01853C00DE24E0 /* Products */,
-				CE4C6EE12B01AA500015E51A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +82,10 @@
 		CE4C6EA52B0196810015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6EA62B0196810015E51A /* AppDelegate.h */,
-				CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */,
+				CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */,
 				CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */,
 				CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */,
-				CE4C6EAA2B0196810015E51A /* AppDelegate.m */,
-				CE4C6EAB2B0196810015E51A /* EntryPoint_Editor_Mac.mm */,
+				CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -94,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				CE4C6EE22B01AA500015E51A /* libEngine.dylib */,
+				CE8BF0FE2B0C896100ED57FD /* libfmt.10.dylib */,
+				CE8BF0FC2B0C890100ED57FD /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,7 +108,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C6EAD2B0196810015E51A /* EditorReloadFlags.h in Headers */,
-				CE4C6EAE2B0196810015E51A /* AppDelegate.h in Headers */,
 				CE4C6EAF2B0196810015E51A /* ReloadSentinel_Win.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,10 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */,
 				CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */,
 				CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */,
-				CE4C6EB32B0196810015E51A /* EntryPoint_Editor_Mac.mm in Sources */,
-				CE4C6EB22B0196810015E51A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

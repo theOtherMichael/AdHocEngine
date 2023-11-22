@@ -13,6 +13,8 @@
 		CE4C6EEF2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
 		CE4C6EF32B01B0200015E51A /* libEditor.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE4C6EE72B01AE310015E51A /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE4C6EF42B01B0240015E51A /* libEngine.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE4C6EEB2B01AE430015E51A /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE8BF0FA2B0C88B000ED57FD /* libfmt.10.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE8BF0F92B0C889B00ED57FD /* libfmt.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE8BF0FB2B0C88B800ED57FD /* libglfw.3.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE8BF0F82B0C889A00ED57FD /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +26,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				CE4C6EF42B01B0240015E51A /* libEngine.dylib in Copy Libraries */,
+				CE8BF0FB2B0C88B800ED57FD /* libglfw.3.dylib in Copy Libraries */,
 				CE4C6EF32B01B0200015E51A /* libEditor.dylib in Copy Libraries */,
+				CE8BF0FA2B0C88B000ED57FD /* libfmt.10.dylib in Copy Libraries */,
 			);
 			name = "Copy Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,20 +44,12 @@
 		CE4C6EE72B01AE310015E51A /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EEB2B01AE430015E51A /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Mac.cpp; sourceTree = "<group>"; };
+		CE8BF0F82B0C889A00ED57FD /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
+		CE8BF0F92B0C889B00ED57FD /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enterprise.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		CEA1AE0B2B016708005AC6CE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CE2B9A2B2B01681C00DE24E0 /* resources */ = {
@@ -81,8 +77,10 @@
 		CE4C6EE62B01AE310015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6EEB2B01AE430015E51A /* libEngine.dylib */,
 				CE4C6EE72B01AE310015E51A /* libEditor.dylib */,
+				CE4C6EEB2B01AE430015E51A /* libEngine.dylib */,
+				CE8BF0F92B0C889B00ED57FD /* libfmt.10.dylib */,
+				CE8BF0F82B0C889A00ED57FD /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,10 +88,10 @@
 		CEA1AE052B016708005AC6CE = {
 			isa = PBXGroup;
 			children = (
+				CE4C6EE62B01AE310015E51A /* Frameworks */,
 				CE4C6E992B01963D0015E51A /* src */,
 				CE2B9A2B2B01681C00DE24E0 /* resources */,
 				CEA1AE0F2B016708005AC6CE /* Products */,
-				CE4C6EE62B01AE310015E51A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +111,6 @@
 			buildConfigurationList = CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Enterprise" */;
 			buildPhases = (
 				CEA1AE0A2B016708005AC6CE /* Sources */,
-				CEA1AE0B2B016708005AC6CE /* Frameworks */,
 				CE4C6EF22B01AFF30015E51A /* Copy Libraries */,
 				CEA1AE0C2B016708005AC6CE /* Resources */,
 			);
