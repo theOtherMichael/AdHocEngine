@@ -16,6 +16,7 @@
 		CE8BF0FA2B0C88B000ED57FD /* libfmt.10.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE8BF0F92B0C889B00ED57FD /* libfmt.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE8BF0FB2B0C88B800ED57FD /* libglfw.3.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE8BF0F82B0C889A00ED57FD /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
+		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,7 +50,19 @@
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enterprise.entitlements; sourceTree = "<group>"; };
+		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CECE76412B110A8A0098AAEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CE2B9A2B2B01681C00DE24E0 /* resources */ = {
@@ -77,6 +90,7 @@
 		CE4C6EE62B01AE310015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CECE76422B110ACD0098AAEB /* AppKit.framework */,
 				CE4C6EE72B01AE310015E51A /* libEditor.dylib */,
 				CE4C6EEB2B01AE430015E51A /* libEngine.dylib */,
 				CE8BF0F92B0C889B00ED57FD /* libfmt.10.dylib */,
@@ -111,6 +125,7 @@
 			buildConfigurationList = CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Enterprise" */;
 			buildPhases = (
 				CEA1AE0A2B016708005AC6CE /* Sources */,
+				CECE76412B110A8A0098AAEB /* Frameworks */,
 				CE4C6EF22B01AFF30015E51A /* Copy Libraries */,
 				CEA1AE0C2B016708005AC6CE /* Resources */,
 			);
