@@ -15,6 +15,14 @@
 		CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
 		CE8BF0FD2B0C890200ED57FD /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF0FC2B0C890100ED57FD /* libglfw.3.dylib */; };
 		CE8BF0FF2B0C896100ED57FD /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF0FE2B0C896100ED57FD /* libfmt.10.dylib */; };
+		CED3D68A2B12D3D700C5FB04 /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
+		CED3D68B2B12D3D700C5FB04 /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
+		CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
+		CED3D68E2B12D3D700C5FB04 /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
+		CED3D68F2B12D3D700C5FB04 /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
+		CED3D6912B12D3D700C5FB04 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4C6EE22B01AA500015E51A /* libEngine.dylib */; };
+		CED3D6922B12D3D700C5FB04 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF0FC2B0C890100ED57FD /* libglfw.3.dylib */; };
+		CED3D6932B12D3D700C5FB04 /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8BF0FE2B0C896100ED57FD /* libfmt.10.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,7 @@
 		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Editor_Mac.cpp; sourceTree = "<group>"; };
 		CE8BF0FC2B0C890100ED57FD /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
 		CE8BF0FE2B0C896100ED57FD /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
+		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +47,16 @@
 				CE4C6EE32B01AA500015E51A /* libEngine.dylib in Frameworks */,
 				CE8BF0FD2B0C890200ED57FD /* libglfw.3.dylib in Frameworks */,
 				CE8BF0FF2B0C896100ED57FD /* libfmt.10.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED3D6902B12D3D700C5FB04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3D6912B12D3D700C5FB04 /* libEngine.dylib in Frameworks */,
+				CED3D6922B12D3D700C5FB04 /* libglfw.3.dylib in Frameworks */,
+				CED3D6932B12D3D700C5FB04 /* libfmt.10.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				CE2B9A352B01853C00DE24E0 /* libEditor.dylib */,
+				CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +132,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CED3D6892B12D3D700C5FB04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3D68A2B12D3D700C5FB04 /* EditorReloadFlags.h in Headers */,
+				CED3D68B2B12D3D700C5FB04 /* ReloadSentinel_Win.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +160,24 @@
 			name = Editor;
 			productName = Editor;
 			productReference = CE2B9A352B01853C00DE24E0 /* libEditor.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+		CED3D6872B12D3D700C5FB04 /* EditorD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED3D6942B12D3D700C5FB04 /* Build configuration list for PBXNativeTarget "EditorD" */;
+			buildPhases = (
+				CED3D6882B12D3D700C5FB04 /* Run vcpkg */,
+				CED3D6892B12D3D700C5FB04 /* Headers */,
+				CED3D68C2B12D3D700C5FB04 /* Sources */,
+				CED3D6902B12D3D700C5FB04 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EditorD;
+			productName = Editor;
+			productReference = CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -160,12 +207,33 @@
 			projectRoot = "";
 			targets = (
 				CE2B9A342B01853C00DE24E0 /* Editor */,
+				CED3D6872B12D3D700C5FB04 /* EditorD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		CE4C6ED92B01A7870015E51A /* Run vcpkg */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/vcpkg.json",
+			);
+			name = "Run vcpkg";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/vcpkg_installed/empty.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh ../scripts/install_macos_dependencies.sh\n";
+		};
+		CED3D6882B12D3D700C5FB04 /* Run vcpkg */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,6 +263,16 @@
 				CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */,
 				CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */,
 				CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED3D68C2B12D3D700C5FB04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.cpp in Sources */,
+				CED3D68E2B12D3D700C5FB04 /* EntryPoint_Editor_Win.cpp in Sources */,
+				CED3D68F2B12D3D700C5FB04 /* ReloadSentinel_Win.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +435,133 @@
 			};
 			name = Release;
 		};
+		CED3D66C2B12D3B500C5FB04 /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = Editor;
+				SDKROOT = macosx;
+			};
+			name = Dev;
+		};
+		CED3D66D2B12D3B500C5FB04 /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				EXECUTABLE_PREFIX = lib;
+				SKIP_INSTALL = YES;
+			};
+			name = Dev;
+		};
+		CED3D6952B12D3D700C5FB04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CED3D6962B12D3D700C5FB04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CED3D6972B12D3D700C5FB04 /* Dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_TESTABILITY = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Dev;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -365,6 +570,7 @@
 			buildConfigurations = (
 				CE2B9A372B01853C00DE24E0 /* Debug */,
 				CE2B9A382B01853C00DE24E0 /* Release */,
+				CED3D66C2B12D3B500C5FB04 /* Dev */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -374,6 +580,17 @@
 			buildConfigurations = (
 				CE2B9A3A2B01853C00DE24E0 /* Debug */,
 				CE2B9A3B2B01853C00DE24E0 /* Release */,
+				CED3D66D2B12D3B500C5FB04 /* Dev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED3D6942B12D3D700C5FB04 /* Build configuration list for PBXNativeTarget "EditorD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED3D6952B12D3D700C5FB04 /* Debug */,
+				CED3D6962B12D3D700C5FB04 /* Release */,
+				CED3D6972B12D3D700C5FB04 /* Dev */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
