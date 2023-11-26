@@ -77,12 +77,12 @@
 		CE4C6E992B01963D0015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */,
-				CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */,
-				CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */,
 				CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */,
-				CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */,
+				CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */,
 				CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */,
+				CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */,
+				CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */,
+				CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
