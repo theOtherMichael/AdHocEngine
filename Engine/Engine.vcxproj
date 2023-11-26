@@ -283,7 +283,6 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\Enterprise\Add.h" />
     <ClInclude Include="include\Enterprise\Core\Assertions.h" />
     <ClInclude Include="include\Enterprise\Core\Misc.h" />
     <ClInclude Include="src\Core\Misc_Win.h" />
@@ -296,7 +295,6 @@
     <ClCompile Include="src\Core\Misc.cpp" />
     <ClCompile Include="src\Core\PlatformData_Win.cpp" />
     <ClCompile Include="src\Core\PlatformHelpers_Win.cpp" />
-    <ClCompile Include="src\Add.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">

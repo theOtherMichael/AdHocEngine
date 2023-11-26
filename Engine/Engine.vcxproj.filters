@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Enterprise\Add.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Enterprise\Core\SharedLibraryExports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -38,9 +35,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Add.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Core\PlatformHelpers_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
