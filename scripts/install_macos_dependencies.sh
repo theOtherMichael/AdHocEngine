@@ -1,6 +1,17 @@
 #!/bin/bash
 
-cwd_folder_name=$(basename $PWD)
+if [ "$#" -ne 1 ]; then
+    echo "Invalid number of arguments."
+    echo "Usage: $0 (dynamic|static)"
+    exit 1
+fi
+
+linkage_flag=$1
+if [[ "$linkage_flag" != "dynamic" && "$linkage_flag" != "static" ]]; then
+    echo "Invalid link type."
+    echo "Usage: $0 (dynamic|static)"
+    exit 1
+fi
 
 if [ ! -f ../vcpkg/bootstrap-vcpkg.sh ]; then
     echo "Initializing Git submodules..."
@@ -44,23 +55,25 @@ lipo_directory_recursive() {
     done
 }
 
-echo "Installing $cwd_folder_name dependencies..."
+cwd_folder_name=$(basename $PWD)
+
+echo "Installing $cwd_folder_name $linkage_flag dependencies..."
+
 vcpkg="../vcpkg/vcpkg"
+"$vcpkg" install \
+    --no-print-usage \
+    --overlay-triplets=../triplets \
+    --triplet=x64-osx-11_5-$linkage_flag \
+    --x-install-root=vcpkg_installed/x64-$linkage_flag
+"$vcpkg" install \
+    --no-print-usage \
+    --overlay-triplets=../triplets \
+    --triplet=arm64-osx-11_5-$linkage_flag \
+    --x-install-root=vcpkg_installed/arm64-$linkage_flag
 
-echo "Running vcpkg install for static triplets..."
-"$vcpkg" install --no-print-usage --triplet=x64-osx --x-install-root=vcpkg_installed/x64-static
-"$vcpkg" install --no-print-usage --triplet=arm64-osx --x-install-root=vcpkg_installed/arm64-static
+lipo_directory_recursive \
+    vcpkg_installed/x64-$linkage_flag/x64-osx-11_5-$linkage_flag \
+    vcpkg_installed/arm64-$linkage_flag/arm64-osx-11_5-$linkage_flag \
+    vcpkg_installed/uni-$linkage_flag
 
-echo "Merging into universal binaries..."
-lipo_directory_recursive vcpkg_installed/x64-static/x64-osx  vcpkg_installed/arm64-static/arm64-osx  vcpkg_installed/uni-static
-
-echo "Running vcpkg install for dynamic triplets..."
-"$vcpkg" install --no-print-usage --triplet=x64-osx-dynamic   --x-install-root=vcpkg_installed/x64-dynamic
-"$vcpkg" install --no-print-usage --triplet=arm64-osx-dynamic --x-install-root=vcpkg_installed/arm64-dynamic
-
-echo "Merging into universal binaries..."
-lipo_directory_recursive vcpkg_installed/x64-dynamic/x64-osx-dynamic vcpkg_installed/arm64-dynamic/arm64-osx-dynamic vcpkg_installed/uni-dynamic
-
-touch ./vcpkg_installed/empty.txt
-
-echo "$cwd_folder_name dependencies installed!"
+touch ./vcpkg_installed/uni-$linkage_flag/empty.txt
