@@ -3,7 +3,11 @@ static_assert(false);
 #endif // !(defined(__APPLE__) && defined(__MACH))
 
 #include <fmt/format.h>
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
 #include <GLFW/glfw3.h>
+#pragma clang diagnostic pop
 
 #include <Editor/EditorReloadFlags.h>
 
