@@ -1,14 +1,12 @@
 #pragma once
 
-// IMPORTANT: Do NOT edit these while running the editor in development mode!
+#ifdef ENTERPRISE_INTERNAL
 
-// 0000PPCC
-constexpr unsigned char EditorReloadFlag_None = 0x0;
-// C = Config, two-bit number
-constexpr unsigned char EditorReloadFlag_Debug      = 0x1;
-constexpr unsigned char EditorReloadFlag_Dev        = 0x2;
-constexpr unsigned char EditorReloadFlag_Release    = 0x3;
-constexpr unsigned char EditorReloadFlag_ConfigMask = 0x3;
-// P = Project, two-bit bit field
-constexpr unsigned char EditorReloadFlag_Engine = 0x4;
-constexpr unsigned char EditorReloadFlag_Editor = 0x8;
+// IMPORTANT: Do NOT edit these while running the editor in developer mode!
+
+constexpr unsigned char EditorReloadFlag_None    = 0x0;
+constexpr unsigned char EditorReloadFlag_Debug   = 0x1;
+constexpr unsigned char EditorReloadFlag_Dev     = 0x2;
+constexpr unsigned char EditorReloadFlag_Release = 0x3;
+
+#endif // ENTERPRISE_INTERNAL

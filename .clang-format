@@ -1,5 +1,5 @@
 ---
-BasedOnStyle:  Microsoft
+BasedOnStyle: Microsoft
 AccessModifierOffset: -4
 AlignConsecutiveAssignments: Consecutive
 AllowShortEnumsOnASingleLine: true
@@ -11,24 +11,24 @@ AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
 BinPackParameters: false
 BraceWrapping:
-  AfterCaseLabel:  true
+  AfterCaseLabel: true
   AfterObjCDeclaration: true
-  AfterUnion:      true
+  AfterUnion: true
   BeforeLambdaBody: true
   SplitEmptyFunction: false
   SplitEmptyRecord: false
-ColumnLimit:     90
+ColumnLimit: 120
 EmptyLineBeforeAccessModifier: Always
 PackConstructorInitializers: NextLine
-IncludeBlocks:   Merge
+IncludeBlocks: Merge
 IndentPPDirectives: BeforeHash
 KeepEmptyLinesAtTheStartOfBlocks: false
+ObjCBlockIndentWidth: 4
 ObjCBinPackProtocolList: Never
 PenaltyBreakBeforeFirstCallParameter: 0
 PenaltyExcessCharacter: 200
 PenaltyReturnTypeOnItsOwnLine: 1000000
 PointerAlignment: Left
-SortIncludes:    Never
+SortIncludes: Never
 SortUsingDeclarations: false
-Standard:        c++17
-...
+Standard: c++17

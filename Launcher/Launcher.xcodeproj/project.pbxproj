@@ -7,34 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE06849F2CEF1D0200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
+		CE0684A02CEF1D0200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
+		CE0684A12CEF1D0200031F0A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
+		CE0684A22CEF1D0200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
+		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
+		CE0684B12CF064F200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
+		CE0684B22CF064F200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
+		CE0684B32CF064F200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
+		CE0684B42CF064F200031F0A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
+		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
+		CE46BD0B2CFC33DC002F900C /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
+		CE46BD0C2CFC33DC002F900C /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
+		CE46BD0D2CFC33DC002F900C /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
+		CE46BD0E2CFC33DC002F900C /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
+		CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
+		CE46BD1D2CFC4260002F900C /* libEngine.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD1C2CFC4260002F900C /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD1F2CFC42BB002F900C /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD222CFC4354002F900C /* libEngineD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD212CFC4354002F900C /* libEngineD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD272CFC4418002F900C /* libEditorD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD262CFC4418002F900C /* libEditorD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD292CFC4443002F900C /* libEngineStatic.a in Copy Developer Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD282CFC4443002F900C /* libEngineStatic.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD2B2CFC4471002F900C /* libEngineStaticD.a in Copy Developer Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD2E2CFC4523002F900C /* libfmt.10.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD2F2CFC4523002F900C /* libglfw.3.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD322CFC454B002F900C /* libfmtd.10.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD332CFC454B002F900C /* libglfw.3.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE4C6E9F2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
 		CE4C6EA02B01963D0015E51A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
 		CE4C6EA12B01963D0015E51A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
 		CE4C6EEF2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
-		CE4FE06B2B14353B004BCD17 /* libEditor.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0662B14353B004BCD17 /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE4FE06F2B14353B004BCD17 /* libEngine.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0682B14353B004BCD17 /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE4FE0732B143545004BCD17 /* libEditor.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0662B14353B004BCD17 /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE4FE0772B143545004BCD17 /* libEngine.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0682B14353B004BCD17 /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE76ABEC2B14357D00786682 /* libEditorD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0672B14353B004BCD17 /* libEditorD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE76ABED2B14357D00786682 /* libEngineD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0692B14353B004BCD17 /* libEngineD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE76ABEE2B1435A200786682 /* libEditorD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0672B14353B004BCD17 /* libEditorD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE76ABEF2B1435A200786682 /* libEngineD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE4FE0692B14353B004BCD17 /* libEngineD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CED3D69B2B12D3E200C5FB04 /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
-		CED3D69C2B12D3E200C5FB04 /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
-		CED3D69D2B12D3E200C5FB04 /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
-		CED3D69E2B12D3E200C5FB04 /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
-		CED3D6A02B12D3E200C5FB04 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CED3D6A72B12D3E200C5FB04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
-		CED617572B14300C003CEF1E /* libfmt.10.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CED617542B142FF6003CEF1E /* libfmt.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED617582B14300C003CEF1E /* libglfw.3.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CED617532B142FF6003CEF1E /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED617592B14301D003CEF1E /* libfmt.10.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CED617542B142FF6003CEF1E /* libfmt.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED6175A2B14301D003CEF1E /* libglfw.3.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CED617532B142FF6003CEF1E /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED617C02B1430A5003CEF1E /* libfmtd.10.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CED617BD2B14309C003CEF1E /* libfmtd.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED617C12B1430A5003CEF1E /* libglfw.3.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CED617BC2B14309C003CEF1E /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED617C22B1430AD003CEF1E /* libfmtd.10.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CED617BD2B14309C003CEF1E /* libfmtd.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CED617C32B1430AE003CEF1E /* libglfw.3.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CED617BC2B14309C003CEF1E /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,10 +47,10 @@
 			dstPath = debug;
 			dstSubfolderSpec = 10;
 			files = (
-				CE76ABEE2B1435A200786682 /* libEditorD.dylib in Copy Debug Libraries */,
-				CE76ABEF2B1435A200786682 /* libEngineD.dylib in Copy Debug Libraries */,
-				CED617C22B1430AD003CEF1E /* libfmtd.10.dylib in Copy Debug Libraries */,
-				CED617C32B1430AE003CEF1E /* libglfw.3.dylib in Copy Debug Libraries */,
+				CE46BD322CFC454B002F900C /* libfmtd.10.dylib in Copy Debug Libraries */,
+				CE46BD332CFC454B002F900C /* libglfw.3.dylib in Copy Debug Libraries */,
+				CE46BD222CFC4354002F900C /* libEngineD.dylib in Copy Debug Libraries */,
+				CE46BD272CFC4418002F900C /* libEditorD.dylib in Copy Debug Libraries */,
 			);
 			name = "Copy Debug Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,80 +61,84 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE4FE06B2B14353B004BCD17 /* libEditor.dylib in Copy Libraries */,
-				CE4FE06F2B14353B004BCD17 /* libEngine.dylib in Copy Libraries */,
-				CED617572B14300C003CEF1E /* libfmt.10.dylib in Copy Libraries */,
-				CED617582B14300C003CEF1E /* libglfw.3.dylib in Copy Libraries */,
+				CE46BD2E2CFC4523002F900C /* libfmt.10.dylib in Copy Libraries */,
+				CE46BD2F2CFC4523002F900C /* libglfw.3.dylib in Copy Libraries */,
+				CE46BD1D2CFC4260002F900C /* libEngine.dylib in Copy Libraries */,
+				CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */,
 			);
 			name = "Copy Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CED3D6A12B12D3E200C5FB04 /* Copy Libraries */ = {
+		CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstPath = developer/engine/lib;
+			dstSubfolderSpec = 7;
 			files = (
-				CE4FE0732B143545004BCD17 /* libEditor.dylib in Copy Libraries */,
-				CE4FE0772B143545004BCD17 /* libEngine.dylib in Copy Libraries */,
-				CED617592B14301D003CEF1E /* libfmt.10.dylib in Copy Libraries */,
-				CED6175A2B14301D003CEF1E /* libglfw.3.dylib in Copy Libraries */,
+				CE46BD292CFC4443002F900C /* libEngineStatic.a in Copy Developer Libraries */,
+				CE46BD2B2CFC4471002F900C /* libEngineStaticD.a in Copy Developer Libraries */,
 			);
-			name = "Copy Libraries";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CED617082B142035003CEF1E /* Copy Debug Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = debug;
-			dstSubfolderSpec = 10;
-			files = (
-				CE76ABEC2B14357D00786682 /* libEditorD.dylib in Copy Debug Libraries */,
-				CE76ABED2B14357D00786682 /* libEngineD.dylib in Copy Debug Libraries */,
-				CED617C02B1430A5003CEF1E /* libfmtd.10.dylib in Copy Debug Libraries */,
-				CED617C12B1430A5003CEF1E /* libglfw.3.dylib in Copy Debug Libraries */,
-			);
-			name = "Copy Debug Libraries";
+			name = "Copy Developer Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD152CFC33DC002F900C /* LauncherDev */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherDev; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD1C2CFC4260002F900C /* libEngine.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../Engine/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD1F2CFC42BB002F900C /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../Editor/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD212CFC4354002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../Engine/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD262CFC4418002F900C /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../Editor/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD282CFC4443002F900C /* libEngineStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStatic.a; path = ../Engine/libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticD.a; path = ../Engine/libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
+		CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
+		CE46BD302CFC454A002F900C /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = "<group>"; };
+		CE46BD312CFC454A002F900C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
 		CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformHelpers_Launcher_Win.cpp; sourceTree = "<group>"; };
 		CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebuggerControls_Win.h; sourceTree = "<group>"; };
 		CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformHelpers_Launcher_Win.h; sourceTree = "<group>"; };
 		CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebuggerControls_Win.cpp; sourceTree = "<group>"; };
 		CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Win.cpp; sourceTree = "<group>"; };
 		CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Mac.cpp; sourceTree = "<group>"; };
-		CE4FE0662B14353B004BCD17 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4FE0672B14353B004BCD17 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4FE0682B14353B004BCD17 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4FE0692B14353B004BCD17 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enterprise.entitlements; sourceTree = "<group>"; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		CED3D6AC2B12D3E200C5FB04 /* EnterpriseD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnterpriseD.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED617532B142FF6003CEF1E /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
-		CED617542B142FF6003CEF1E /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
-		CED617BC2B14309C003CEF1E /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
-		CED617BD2B14309C003CEF1E /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CE0684952CEF1CB800031F0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0684B52CF064F200031F0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE46BD0F2CFC33DC002F900C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CECE76412B110A8A0098AAEB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CED3D69F2B12D3E200C5FB04 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED3D6A02B12D3E200C5FB04 /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,14 +171,16 @@
 			isa = PBXGroup;
 			children = (
 				CECE76422B110ACD0098AAEB /* AppKit.framework */,
-				CE4FE0662B14353B004BCD17 /* libEditor.dylib */,
-				CE4FE0672B14353B004BCD17 /* libEditorD.dylib */,
-				CE4FE0682B14353B004BCD17 /* libEngine.dylib */,
-				CE4FE0692B14353B004BCD17 /* libEngineD.dylib */,
-				CED617542B142FF6003CEF1E /* libfmt.10.dylib */,
-				CED617BD2B14309C003CEF1E /* libfmtd.10.dylib */,
-				CED617BC2B14309C003CEF1E /* libglfw.3.dylib */,
-				CED617532B142FF6003CEF1E /* libglfw.3.dylib */,
+				CE46BD1F2CFC42BB002F900C /* libEditor.dylib */,
+				CE46BD262CFC4418002F900C /* libEditorD.dylib */,
+				CE46BD1C2CFC4260002F900C /* libEngine.dylib */,
+				CE46BD212CFC4354002F900C /* libEngineD.dylib */,
+				CE46BD282CFC4443002F900C /* libEngineStatic.a */,
+				CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */,
+				CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */,
+				CE46BD302CFC454A002F900C /* libfmtd.10.dylib */,
+				CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */,
+				CE46BD312CFC454A002F900C /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				CEA1AE0E2B016708005AC6CE /* Enterprise.app */,
-				CED3D6AC2B12D3E200C5FB04 /* EnterpriseD.app */,
+				CE0684982CEF1CB800031F0A /* Launcher */,
+				CE0684C02CF064F200031F0A /* LauncherD */,
+				CE46BD152CFC33DC002F900C /* LauncherDev */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -198,6 +209,54 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE0684972CEF1CB800031F0A /* Launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE06849E2CEF1CB800031F0A /* Build configuration list for PBXNativeTarget "Launcher" */;
+			buildPhases = (
+				CE0684942CEF1CB800031F0A /* Sources */,
+				CE0684952CEF1CB800031F0A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Launcher;
+			productName = EnterpriseDevelopment;
+			productReference = CE0684982CEF1CB800031F0A /* Launcher */;
+			productType = "com.apple.product-type.tool";
+		};
+		CE0684AF2CF064F200031F0A /* LauncherD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0684BC2CF064F200031F0A /* Build configuration list for PBXNativeTarget "LauncherD" */;
+			buildPhases = (
+				CE0684B02CF064F200031F0A /* Sources */,
+				CE0684B52CF064F200031F0A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LauncherD;
+			productName = EnterpriseDevelopment;
+			productReference = CE0684C02CF064F200031F0A /* LauncherD */;
+			productType = "com.apple.product-type.tool";
+		};
+		CE46BD092CFC33DC002F900C /* LauncherDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE46BD122CFC33DC002F900C /* Build configuration list for PBXNativeTarget "LauncherDev" */;
+			buildPhases = (
+				CE46BD0A2CFC33DC002F900C /* Sources */,
+				CE46BD0F2CFC33DC002F900C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LauncherDev;
+			productName = EnterpriseDevelopment;
+			productReference = CE46BD152CFC33DC002F900C /* LauncherDev */;
+			productType = "com.apple.product-type.tool";
+		};
 		CEA1AE0D2B016708005AC6CE /* Enterprise */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Enterprise" */;
@@ -206,6 +265,7 @@
 				CECE76412B110A8A0098AAEB /* Frameworks */,
 				CE4C6EF22B01AFF30015E51A /* Copy Libraries */,
 				CE3370252B131E170020E817 /* Copy Debug Libraries */,
+				CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Libraries */,
 				CEA1AE0C2B016708005AC6CE /* Resources */,
 			);
 			buildRules = (
@@ -217,25 +277,6 @@
 			productReference = CEA1AE0E2B016708005AC6CE /* Enterprise.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CED3D6992B12D3E200C5FB04 /* EnterpriseD */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CED3D6A82B12D3E200C5FB04 /* Build configuration list for PBXNativeTarget "EnterpriseD" */;
-			buildPhases = (
-				CED3D69A2B12D3E200C5FB04 /* Sources */,
-				CED3D69F2B12D3E200C5FB04 /* Frameworks */,
-				CED3D6A12B12D3E200C5FB04 /* Copy Libraries */,
-				CED617082B142035003CEF1E /* Copy Debug Libraries */,
-				CED3D6A62B12D3E200C5FB04 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EnterpriseD;
-			productName = Enterprise;
-			productReference = CED3D6AC2B12D3E200C5FB04 /* EnterpriseD.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -245,6 +286,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					CE0684972CEF1CB800031F0A = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					CEA1AE0D2B016708005AC6CE = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -263,7 +307,9 @@
 			projectRoot = "";
 			targets = (
 				CEA1AE0D2B016708005AC6CE /* Enterprise */,
-				CED3D6992B12D3E200C5FB04 /* EnterpriseD */,
+				CE0684972CEF1CB800031F0A /* Launcher */,
+				CE46BD092CFC33DC002F900C /* LauncherDev */,
+				CE0684AF2CF064F200031F0A /* LauncherD */,
 			);
 		};
 /* End PBXProject section */
@@ -277,17 +323,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CED3D6A62B12D3E200C5FB04 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED3D6A72B12D3E200C5FB04 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE0684942CEF1CB800031F0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0684A02CEF1D0200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */,
+				CE06849F2CEF1D0200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */,
+				CE0684A22CEF1D0200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */,
+				CE0684A12CEF1D0200031F0A /* DebuggerControls_Win.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0684B02CF064F200031F0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0684B12CF064F200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */,
+				CE0684B22CF064F200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */,
+				CE0684B32CF064F200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */,
+				CE0684B42CF064F200031F0A /* DebuggerControls_Win.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE46BD0A2CFC33DC002F900C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE46BD0B2CFC33DC002F900C /* EntryPoint_Launcher_Win.cpp in Sources */,
+				CE46BD0C2CFC33DC002F900C /* EntryPoint_Launcher_Mac.cpp in Sources */,
+				CE46BD0D2CFC33DC002F900C /* PlatformHelpers_Launcher_Win.cpp in Sources */,
+				CE46BD0E2CFC33DC002F900C /* DebuggerControls_Win.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEA1AE0A2B016708005AC6CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,25 +370,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CED3D69A2B12D3E200C5FB04 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED3D69B2B12D3E200C5FB04 /* PlatformHelpers_Launcher_Win.cpp in Sources */,
-				CED3D69C2B12D3E200C5FB04 /* EntryPoint_Launcher_Mac.cpp in Sources */,
-				CED3D69D2B12D3E200C5FB04 /* EntryPoint_Launcher_Win.cpp in Sources */,
-				CED3D69E2B12D3E200C5FB04 /* DebuggerControls_Win.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CEA1AE1D2B01670A005AC6CE /* Release */ = {
+		CE06849C2CEF1CB800031F0A /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_RELEASE,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Universal;
+		};
+		CE06849D2CEF1CB800031F0A /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_RELEASE,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ActiveArch;
+		};
+		CE0684BD2CF064F200031F0A /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					ENTERPRISE_DEBUG,
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Universal;
+		};
+		CE0684BE2CF064F200031F0A /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					ENTERPRISE_DEBUG,
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ActiveArch;
+		};
+		CE46BD132CFC33DC002F900C /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_DEV,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Universal;
+		};
+		CE46BD142CFC33DC002F900C /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = "";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_DEV,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = ActiveArch;
+		};
+		CEA1AE1D2B01670A005AC6CE /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -347,6 +486,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = resources/Enterprise.entitlements;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -356,6 +496,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = ENTERPRISE_INTERNAL;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -370,30 +511,38 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
 				SDKROOT = macosx;
 			};
-			name = Release;
+			name = Universal;
 		};
-		CEA1AE202B01670A005AC6CE /* Release */ = {
+		CEA1AE202B01670A005AC6CE /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Bundle";
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_RELEASE,
+				);
+				INFOPLIST_FILE = "Enterprise-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
-			name = Release;
+			name = Universal;
 		};
-		CED3D66A2B12D39C00C5FB04 /* Dev */ = {
+		CED3D66A2B12D39C00C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
@@ -423,6 +572,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = resources/Enterprise.entitlements;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -432,6 +582,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = ENTERPRISE_INTERNAL;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -445,101 +596,82 @@
 				MARKETING_VERSION = 0.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
 				SDKROOT = macosx;
 			};
-			name = Dev;
+			name = ActiveArch;
 		};
-		CED3D66B2B12D39C00C5FB04 /* Dev */ = {
+		CED3D66B2B12D39C00C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-			};
-			name = Dev;
-		};
-		CED3D6AA2B12D3E200C5FB04 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_NS_ASSERTIONS = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Bundle";
+				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					ENTERPRISE_RELEASE,
 				);
+				INFOPLIST_FILE = "Enterprise-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
-			name = Release;
-		};
-		CED3D6AB2B12D3E200C5FB04 /* Dev */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_NS_ASSERTIONS = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = YES;
-			};
-			name = Dev;
+			name = ActiveArch;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE06849E2CEF1CB800031F0A /* Build configuration list for PBXNativeTarget "Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE06849C2CEF1CB800031F0A /* Universal */,
+				CE06849D2CEF1CB800031F0A /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CE0684BC2CF064F200031F0A /* Build configuration list for PBXNativeTarget "LauncherD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0684BD2CF064F200031F0A /* Universal */,
+				CE0684BE2CF064F200031F0A /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CE46BD122CFC33DC002F900C /* Build configuration list for PBXNativeTarget "LauncherDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE46BD132CFC33DC002F900C /* Universal */,
+				CE46BD142CFC33DC002F900C /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
 		CEA1AE092B016708005AC6CE /* Build configuration list for PBXProject "Launcher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEA1AE1D2B01670A005AC6CE /* Release */,
-				CED3D66A2B12D39C00C5FB04 /* Dev */,
+				CEA1AE1D2B01670A005AC6CE /* Universal */,
+				CED3D66A2B12D39C00C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Universal;
 		};
 		CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Enterprise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEA1AE202B01670A005AC6CE /* Release */,
-				CED3D66B2B12D39C00C5FB04 /* Dev */,
+				CEA1AE202B01670A005AC6CE /* Universal */,
+				CED3D66B2B12D39C00C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CED3D6A82B12D3E200C5FB04 /* Build configuration list for PBXNativeTarget "EnterpriseD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CED3D6AA2B12D3E200C5FB04 /* Release */,
-				CED3D6AB2B12D3E200C5FB04 /* Dev */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Universal;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,49 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
+		CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
+		CE46BCFA2CFC33CD002F900C /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
+		CE46BCFB2CFC33CD002F900C /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
+		CE46BCFD2CFC33CD002F900C /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */; };
+		CE46BCFE2CFC33CD002F900C /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
+		CE46BCFF2CFC33CD002F900C /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
+		CE46BD022CFC33CD002F900C /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */; };
+		CE46BD032CFC33CD002F900C /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */; };
+		CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
+		CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD162CFC3F45002F900C /* libEngine.dylib */; };
+		CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD182CFC3F53002F900C /* libEngineDev.dylib */; };
+		CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */; };
 		CE4C6EAD2B0196810015E51A /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
 		CE4C6EAF2B0196810015E51A /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
 		CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
 		CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
-		CE4FE05F2B1434D7004BCD17 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4FE05E2B1434D7004BCD17 /* libEngine.dylib */; };
-		CE4FE0632B1434E1004BCD17 /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4FE0622B1434E1004BCD17 /* libEngineD.dylib */; };
-		CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
+		CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */; };
 		CED3D68A2B12D3D700C5FB04 /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
 		CED3D68B2B12D3D700C5FB04 /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
-		CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
+		CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */; };
 		CED3D68E2B12D3D700C5FB04 /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
 		CED3D68F2B12D3D700C5FB04 /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
-		CED617212B142BFA003CEF1E /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CED6171F2B142BF9003CEF1E /* libfmt.10.dylib */; };
-		CED617222B142BFA003CEF1E /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CED617202B142BF9003CEF1E /* libglfw.3.dylib */; };
-		CED617252B142C12003CEF1E /* libfmtd.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CED617232B142C12003CEF1E /* libfmtd.10.dylib */; };
-		CED617262B142C12003CEF1E /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CED617242B142C12003CEF1E /* libglfw.3.dylib */; };
+		CEDB37A62CFC1B3B00FC593F /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */; };
+		CEDB397C2CFC1B6F00FC593F /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397A2CFC1B6F00FC593F /* libglfw.3.dylib */; };
+		CEDB397D2CFC1B6F00FC593F /* libfmtd.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397B2CFC1B6F00FC593F /* libfmtd.10.dylib */; };
+		CEE1D7D92CFC1FCF00373186 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CEE12A362B1437C200934154 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CE2B9A2D2B01853C00DE24E0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CED3D6872B12D3D700C5FB04;
-			remoteInfo = EditorD;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE327B0E2B1593400067EF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE46BD082CFC33CD002F900C /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD162CFC3F45002F900C /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../Engine/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Engine/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../Engine/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorReloadFlags.h; sourceTree = "<group>"; };
 		CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReloadSentinel_Win.h; sourceTree = "<group>"; };
 		CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Editor_Win.cpp; sourceTree = "<group>"; };
 		CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReloadSentinel_Win.cpp; sourceTree = "<group>"; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = "<group>"; };
-		CE4FE05E2B1434D7004BCD17 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4FE0622B1434E1004BCD17 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Editor_Mac.cpp; sourceTree = "<group>"; };
+		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EntryPoint_Editor_Mac.mm; sourceTree = "<group>"; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED6171F2B142BF9003CEF1E /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
-		CED617202B142BF9003CEF1E /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
-		CED617232B142C12003CEF1E /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = "<group>"; };
-		CED617242B142C12003CEF1E /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
+		CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
+		CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
+		CEDB397A2CFC1B6F00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
+		CEDB397B2CFC1B6F00FC593F /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +61,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED617212B142BFA003CEF1E /* libfmt.10.dylib in Frameworks */,
-				CED617222B142BFA003CEF1E /* libglfw.3.dylib in Frameworks */,
-				CE4FE05F2B1434D7004BCD17 /* libEngine.dylib in Frameworks */,
+				CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */,
+				CEE1D7D92CFC1FCF00373186 /* libglfw.3.dylib in Frameworks */,
+				CEDB37A62CFC1B3B00FC593F /* libfmt.10.dylib in Frameworks */,
+				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE46BD002CFC33CD002F900C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */,
+				CE46BD022CFC33CD002F900C /* libglfw.3.dylib in Frameworks */,
+				CE46BD032CFC33CD002F900C /* libfmt.10.dylib in Frameworks */,
+				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,9 +83,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED617252B142C12003CEF1E /* libfmtd.10.dylib in Frameworks */,
-				CED617262B142C12003CEF1E /* libglfw.3.dylib in Frameworks */,
-				CE4FE0632B1434E1004BCD17 /* libEngineD.dylib in Frameworks */,
+				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
+				CEDB397C2CFC1B6F00FC593F /* libglfw.3.dylib in Frameworks */,
+				CEDB397D2CFC1B6F00FC593F /* libfmtd.10.dylib in Frameworks */,
+				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +109,7 @@
 			children = (
 				CE2B9A352B01853C00DE24E0 /* libEditor.dylib */,
 				CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */,
+				CE46BD082CFC33CD002F900C /* libEditorDev.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,7 +133,7 @@
 		CE4C6EA52B0196810015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */,
+				CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */,
 				CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */,
 				CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */,
 				CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */,
@@ -126,12 +144,14 @@
 		CE4C6EE12B01AA500015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE4FE05E2B1434D7004BCD17 /* libEngine.dylib */,
-				CE4FE0622B1434E1004BCD17 /* libEngineD.dylib */,
-				CED6171F2B142BF9003CEF1E /* libfmt.10.dylib */,
-				CED617232B142C12003CEF1E /* libfmtd.10.dylib */,
-				CED617242B142C12003CEF1E /* libglfw.3.dylib */,
-				CED617202B142BF9003CEF1E /* libglfw.3.dylib */,
+				CE327B0E2B1593400067EF26 /* Foundation.framework */,
+				CE46BD162CFC3F45002F900C /* libEngine.dylib */,
+				CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */,
+				CE46BD182CFC3F53002F900C /* libEngineDev.dylib */,
+				CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */,
+				CEDB397B2CFC1B6F00FC593F /* libfmtd.10.dylib */,
+				CEDB397A2CFC1B6F00FC593F /* libglfw.3.dylib */,
+				CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +165,15 @@
 			files = (
 				CE4C6EAD2B0196810015E51A /* EditorReloadFlags.h in Headers */,
 				CE4C6EAF2B0196810015E51A /* ReloadSentinel_Win.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE46BCF92CFC33CD002F900C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE46BCFA2CFC33CD002F900C /* EditorReloadFlags.h in Headers */,
+				CE46BCFB2CFC33CD002F900C /* ReloadSentinel_Win.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,18 +200,33 @@
 			buildRules = (
 			);
 			dependencies = (
-				CEE12A372B1437C200934154 /* PBXTargetDependency */,
 			);
 			name = Editor;
 			productName = Editor;
 			productReference = CE2B9A352B01853C00DE24E0 /* libEditor.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		CE46BCF82CFC33CD002F900C /* EditorDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE46BD052CFC33CD002F900C /* Build configuration list for PBXNativeTarget "EditorDev" */;
+			buildPhases = (
+				CE46BCF92CFC33CD002F900C /* Headers */,
+				CE46BCFC2CFC33CD002F900C /* Sources */,
+				CE46BD002CFC33CD002F900C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EditorDev;
+			productName = Editor;
+			productReference = CE46BD082CFC33CD002F900C /* libEditorDev.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		CED3D6872B12D3D700C5FB04 /* EditorD */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED3D6942B12D3D700C5FB04 /* Build configuration list for PBXNativeTarget "EditorD" */;
 			buildPhases = (
-				CED3D6882B12D3D700C5FB04 /* Run vcpkg */,
 				CED3D6892B12D3D700C5FB04 /* Headers */,
 				CED3D68C2B12D3D700C5FB04 /* Sources */,
 				CED3D6902B12D3D700C5FB04 /* Frameworks */,
@@ -224,41 +268,29 @@
 			targets = (
 				CE2B9A342B01853C00DE24E0 /* Editor */,
 				CED3D6872B12D3D700C5FB04 /* EditorD */,
+				CE46BCF82CFC33CD002F900C /* EditorDev */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CED3D6882B12D3D700C5FB04 /* Run vcpkg */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/vcpkg.json",
-			);
-			name = "Run vcpkg";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(SRCROOT)/vcpkg_installed/uni-dynamic/empty.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sh ../scripts/install_macos_dependencies.sh dynamic\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE2B9A322B01853C00DE24E0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */,
+				CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm in Sources */,
 				CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */,
 				CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE46BCFC2CFC33CD002F900C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE46BCFD2CFC33CD002F900C /* EntryPoint_Editor_Mac.mm in Sources */,
+				CE46BCFE2CFC33CD002F900C /* EntryPoint_Editor_Win.cpp in Sources */,
+				CE46BCFF2CFC33CD002F900C /* ReloadSentinel_Win.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.cpp in Sources */,
+				CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.mm in Sources */,
 				CED3D68E2B12D3D700C5FB04 /* EntryPoint_Editor_Win.cpp in Sources */,
 				CED3D68F2B12D3D700C5FB04 /* ReloadSentinel_Win.cpp in Sources */,
 			);
@@ -274,16 +306,8 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		CEE12A372B1437C200934154 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CED3D6872B12D3D700C5FB04 /* EditorD */;
-			targetProxy = CEE12A362B1437C200934154 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		CE2B9A382B01853C00DE24E0 /* Release */ = {
+		CE2B9A382B01853C00DE24E0 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,15 +339,21 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Editor";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ENTERPRISE_EDITOR,
+					ENTERPRISE_INTERNAL,
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -340,6 +370,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(BUILD_DIR)/Engine",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -347,18 +378,47 @@
 				PRODUCT_NAME = Editor;
 				SDKROOT = macosx;
 			};
-			name = Release;
+			name = Universal;
 		};
-		CE2B9A3B2B01853C00DE24E0 /* Release */ = {
+		CE2B9A3B2B01853C00DE24E0 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_RELEASE,
+				);
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Universal;
 		};
-		CED3D66C2B12D3B500C5FB04 /* Dev */ = {
+		CE46BD062CFC33CD002F900C /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_DEV,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Universal;
+		};
+		CE46BD072CFC33CD002F900C /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_DEV,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = ActiveArch;
+		};
+		CED3D66C2B12D3B500C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -390,15 +450,21 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Editor";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ENTERPRISE_EDITOR,
+					ENTERPRISE_INTERNAL,
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -415,69 +481,74 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(BUILD_DIR)/Engine",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Editor;
 				SDKROOT = macosx;
 			};
-			name = Dev;
+			name = ActiveArch;
 		};
-		CED3D66D2B12D3B500C5FB04 /* Dev */ = {
+		CED3D66D2B12D3B500C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ENTERPRISE_RELEASE,
+				);
 				SKIP_INSTALL = YES;
 			};
-			name = Dev;
+			name = ActiveArch;
 		};
-		CED3D6962B12D3D700C5FB04 /* Release */ = {
+		CED3D6962B12D3D700C5FB04 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
 				EXECUTABLE_PREFIX = lib;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
+					ENTERPRISE_DEBUG,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(BUILD_DIR)/Engine",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Universal;
 		};
-		CED3D6972B12D3D700C5FB04 /* Dev */ = {
+		CED3D6972B12D3D700C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_TESTABILITY = YES;
-				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
 				EXECUTABLE_PREFIX = lib;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
+					ENTERPRISE_DEBUG,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(BUILD_DIR)/Engine",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
-			name = Dev;
+			name = ActiveArch;
 		};
 /* End XCBuildConfiguration section */
 
@@ -485,29 +556,38 @@
 		CE2B9A302B01853C00DE24E0 /* Build configuration list for PBXProject "Editor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE2B9A382B01853C00DE24E0 /* Release */,
-				CED3D66C2B12D3B500C5FB04 /* Dev */,
+				CE2B9A382B01853C00DE24E0 /* Universal */,
+				CED3D66C2B12D3B500C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Universal;
 		};
 		CE2B9A392B01853C00DE24E0 /* Build configuration list for PBXNativeTarget "Editor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE2B9A3B2B01853C00DE24E0 /* Release */,
-				CED3D66D2B12D3B500C5FB04 /* Dev */,
+				CE2B9A3B2B01853C00DE24E0 /* Universal */,
+				CED3D66D2B12D3B500C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Universal;
+		};
+		CE46BD052CFC33CD002F900C /* Build configuration list for PBXNativeTarget "EditorDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE46BD062CFC33CD002F900C /* Universal */,
+				CE46BD072CFC33CD002F900C /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
 		};
 		CED3D6942B12D3D700C5FB04 /* Build configuration list for PBXNativeTarget "EditorD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CED3D6962B12D3D700C5FB04 /* Release */,
-				CED3D6972B12D3D700C5FB04 /* Dev */,
+				CED3D6962B12D3D700C5FB04 /* Universal */,
+				CED3D6972B12D3D700C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Universal;
 		};
 /* End XCConfigurationList section */
 	};

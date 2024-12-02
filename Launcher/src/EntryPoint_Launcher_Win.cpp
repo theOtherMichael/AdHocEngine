@@ -37,7 +37,7 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
         break;
     case EditorReloadFlag_Dev:
         configName   = "Dev";
-        configSuffix = "";
+        configSuffix = "Dev";
         break;
     case EditorReloadFlag_Release:
         configName   = "Release";
@@ -46,42 +46,27 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
     default: assert(false); break;
     }
 
-    fs::path builtEngineDllPath =
-        "build/" + configName + "/Engine/Engine" + configSuffix + ".dll";
-    fs::path copiedEngineDllPath =
-        "build/" + configName + "/Engine" + configSuffix + ".dll";
-    fs::path builtEnginePdbPath =
-        "build/" + configName + "/Engine/Engine" + configSuffix + ".pdb";
-    fs::path copiedEnginePdbPath =
-        "build/" + configName + "/Engine" + configSuffix + ".pdb";
-    fs::path builtEditorDllPath =
-        "build/" + configName + "/Editor/Editor" + configSuffix + ".dll";
-    fs::path copiedEditorDllPath =
-        "build/" + configName + "/Editor" + configSuffix + ".dll";
-    fs::path builtEditorPdbPath =
-        "build/" + configName + "/Editor/Editor" + configSuffix + ".pdb";
-    fs::path copiedEditorPdbPath =
-        "build/" + configName + "/Editor" + configSuffix + ".pdb";
+    fs::path builtEngineDllPath  = "build/" + configName + "/Engine/Engine" + configSuffix + ".dll";
+    fs::path copiedEngineDllPath = "build/" + configName + "/Engine" + configSuffix + ".dll";
 
-    if (!fs::exists(copiedEngineDllPath))
-        reloadFlags |= EditorReloadFlag_Engine;
+    fs::path builtEnginePdbPath  = "build/" + configName + "/Engine/Engine" + configSuffix + ".pdb";
+    fs::path copiedEnginePdbPath = "build/" + configName + "/Engine" + configSuffix + ".pdb";
+
+    fs::path builtEditorDllPath  = "build/" + configName + "/Editor/Editor" + configSuffix + ".dll";
+    fs::path copiedEditorDllPath = "build/" + configName + "/Editor" + configSuffix + ".dll";
+
+    fs::path builtEditorPdbPath  = "build/" + configName + "/Editor/Editor" + configSuffix + ".pdb";
+    fs::path copiedEditorPdbPath = "build/" + configName + "/Editor" + configSuffix + ".pdb";
 
     if ((reloadFlags & EditorReloadFlag_Engine) != 0)
     {
         std::error_code ec;
-        fs::copy_file(builtEngineDllPath,
-                      copiedEngineDllPath,
-                      fs::copy_options::overwrite_existing,
-                      ec);
 
+        fs::copy_file(builtEngineDllPath, copiedEngineDllPath, fs::copy_options::overwrite_existing, ec);
         if (ec)
             std::cerr << "Could not copy Engine DLL! " << ec.message() << "\n";
 
-        fs::copy_file(builtEnginePdbPath,
-                      copiedEnginePdbPath,
-                      fs::copy_options::overwrite_existing,
-                      ec);
-
+        fs::copy_file(builtEnginePdbPath, copiedEnginePdbPath, fs::copy_options::overwrite_existing, ec);
         if (ec)
             std::cerr << "Could not copy Engine PDB! " << ec.message() << "\n";
     }
@@ -103,18 +88,12 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
     if ((reloadFlags & EditorReloadFlag_Editor) != 0)
     {
         std::error_code ec;
-        fs::copy_file(builtEditorDllPath,
-                      copiedEditorDllPath,
-                      fs::copy_options::overwrite_existing,
-                      ec);
+        fs::copy_file(builtEditorDllPath, copiedEditorDllPath, fs::copy_options::overwrite_existing, ec);
 
         if (ec)
             std::cerr << "Could not copy Editor DLL! " << ec.message() << "\n";
 
-        fs::copy_file(builtEditorPdbPath,
-                      copiedEditorPdbPath,
-                      fs::copy_options::overwrite_existing,
-                      ec);
+        fs::copy_file(builtEditorPdbPath, copiedEditorPdbPath, fs::copy_options::overwrite_existing, ec);
 
         if (ec)
             std::cerr << "Could not copy Editor PDB! " << ec.message() << "\n";
@@ -132,22 +111,32 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
 
 int main(int argc, char* argv[])
 {
-    bool isDevelopmentMode = false;
-    bool isDebugMode       = false;
+    std::cout << "Starting Enterprise...\n";
+
+    bool isDeveloperMode = false;
+    bool isDebugMode     = false;
+
+    std::cout << "Command line arguments:\n";
     for (int i = 1; i < argc; i++)
     {
-        if (strcmp(argv[i], "--development") == 0)
-            isDevelopmentMode = true;
+        std::cout << argv[i] << "\n";
+
+        if (strcmp(argv[i], "--developer") == 0)
+            isDeveloperMode = true;
         else if (strcmp(argv[i], "--debug") == 0)
             isDebugMode = true;
     }
-    std::cout << "Development Mode: " << isDevelopmentMode << "\n";
-    std::cout << "Debug Mode: " << isDebugMode << "\n";
+    std::cout << "\n";
+
+    if (isDeveloperMode)
+        std::cout << "--developer specified, launching in developer mode\n";
+    else if (isDebugMode)
+        std::cout << "--debug specified, launching in debug mode\n";
 
     bool isComInitialized     = false;
     unsigned char reloadFlags = EditorReloadFlag_None;
 
-    if (isDevelopmentMode)
+    if (isDeveloperMode)
     {
         reloadFlags = EditorReloadFlag_Engine | EditorReloadFlag_Editor;
 #ifdef ENTERPRISE_DEBUG
@@ -178,16 +167,22 @@ int main(int argc, char* argv[])
 
     do
     {
-        if (isDevelopmentMode)
+        if (isDeveloperMode)
         {
             editorModuleHandle = CopyAndLoadEditorModule(reloadFlags);
         }
         else
         {
             if (isDebugMode)
+            {
+                std::cout << "Loadng editor in debug mode...\n";
                 editorModuleHandle = LoadLibrary(L"EditorD.dll");
+            }
             else
+            {
+                std::cout << "Loadng editor in release mode...\n";
                 editorModuleHandle = LoadLibrary(L"Editor.dll");
+            }
         }
 
         if (editorModuleHandle == NULL)
@@ -196,13 +191,11 @@ int main(int argc, char* argv[])
             return EXIT_FAILURE;
         }
 
-        editorMainFunctionPtr = (unsigned char (*)(int, char*[]))GetProcAddress(
-            editorModuleHandle, "EditorMain");
+        editorMainFunctionPtr = (unsigned char (*)(int, char*[]))GetProcAddress(editorModuleHandle, "EditorMain");
 
         if (editorMainFunctionPtr == nullptr)
         {
-            std::cerr << "Error retrieving address of EditorMain()! "
-                      << GetLastErrorAsString() << "\n";
+            std::cerr << "Error retrieving address of EditorMain()! " << GetLastErrorAsString() << "\n";
             return EXIT_FAILURE;
         }
 
@@ -211,18 +204,21 @@ int main(int argc, char* argv[])
 
         reloadFlags = editorMainFunctionPtr(argc, argv);
 
-        switch (reloadFlags & EditorReloadFlag_ConfigMask)
+        if (!isDeveloperMode)
         {
-        case EditorReloadFlag_None: break;
-        case EditorReloadFlag_Debug: isDebugMode = true; break;
-        case EditorReloadFlag_Release: isDebugMode = false; break;
-        case EditorReloadFlag_Dev:
-            std::cerr << "Dev configuration was requested in Editor reload! "
-                         "Dev configuration is only available in Development Mode. "
-                         "Release will be used instead.\n";
-            isDebugMode = false;
-            break;
-        default: assert(false); break;
+            switch (reloadFlags & EditorReloadFlag_ConfigMask)
+            {
+            case EditorReloadFlag_None: break;
+            case EditorReloadFlag_Debug: isDebugMode = true; break;
+            case EditorReloadFlag_Release: isDebugMode = false; break;
+            case EditorReloadFlag_Dev:
+                std::cerr << "Dev configuration was requested in Editor reload! "
+                             "Dev configuration is only available in developer mode. "
+                             "Release will be used instead.\n";
+                isDebugMode = false;
+                break;
+            default: assert(false); break;
+            }
         }
 
         isDebuggerAttached = IsDebuggerPresent();
@@ -232,7 +228,6 @@ int main(int argc, char* argv[])
         editorMainFunctionPtr = nullptr;
         FreeLibrary(editorModuleHandle);
         editorModuleHandle = NULL;
-
     } while (reloadFlags != EditorReloadFlag_None);
 
     if (isComInitialized)

@@ -17,48 +17,43 @@
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
-static const std::array<std::string_view, 6> pathsToBuildProducts = {
-    "Debug\\Editor\\EditorD.dll",
-    "Debug\\Engine\\EngineD.dll",
-    "Dev\\Editor\\Editor.dll",
-    "Dev\\Engine\\Engine.dll",
-    "Release\\Editor\\Editor.dll",
-    "Release\\Engine\\Engine.dll"};
+static const std::array<std::string_view, 6> pathsToBuildProducts = {"Debug\\Editor\\EditorD.dll",
+                                                                     "Debug\\Engine\\EngineD.dll",
+                                                                     "Dev\\Editor\\Editor.dll",
+                                                                     "Dev\\Engine\\Engine.dll",
+                                                                     "Release\\Editor\\Editor.dll",
+                                                                     "Release\\Engine\\Engine.dll"};
 
 DWORD WINAPI WaitForEditorOrEngineRecompile(LPVOID reloadFlagsOutPtr)
 {
-    std::atomic_uchar& reloadFlagsOutRef =
-        *reinterpret_cast<std::atomic_uchar*>(reloadFlagsOutPtr);
+    std::atomic_uchar& reloadFlagsOutRef = *reinterpret_cast<std::atomic_uchar*>(reloadFlagsOutPtr);
 
-    HANDLE buildDirectoryHandle =
-        CreateFile(L"build",
-                   FILE_LIST_DIRECTORY,
-                   FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
-                   NULL,
-                   OPEN_ALWAYS,
-                   FILE_FLAG_BACKUP_SEMANTICS,
-                   NULL);
+    HANDLE buildDirectoryHandle = CreateFile(L"build",
+                                             FILE_LIST_DIRECTORY,
+                                             FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
+                                             NULL,
+                                             OPEN_ALWAYS,
+                                             FILE_FLAG_BACKUP_SEMANTICS,
+                                             NULL);
 
     if (buildDirectoryHandle == INVALID_HANDLE_VALUE)
     {
-        fmt::print(stderr,
-                   "Watcher thread could not open handle to build directory! Error: {}",
-                   GetLastErrorAsString());
+        fmt::print(
+            stderr, "Watcher thread could not open handle to build directory! Error: {}", GetLastErrorAsString());
         return EXIT_FAILURE;
     }
 
     char buffer[1024];
     DWORD bytesReturned;
 
-    while (ReadDirectoryChangesW(
-        buildDirectoryHandle,
-        buffer,
-        sizeof(buffer),
-        TRUE,
-        FILE_NOTIFY_CHANGE_LAST_WRITE | FILE_NOTIFY_CHANGE_FILE_NAME,
-        &bytesReturned,
-        NULL,
-        NULL))
+    while (ReadDirectoryChangesW(buildDirectoryHandle,
+                                 buffer,
+                                 sizeof(buffer),
+                                 TRUE,
+                                 FILE_NOTIFY_CHANGE_LAST_WRITE | FILE_NOTIFY_CHANGE_FILE_NAME,
+                                 &bytesReturned,
+                                 NULL,
+                                 NULL))
     {
         FILE_NOTIFY_INFORMATION* notifyInfo = nullptr;
         size_t nextBufferPos                = 0;
@@ -68,12 +63,10 @@ DWORD WINAPI WaitForEditorOrEngineRecompile(LPVOID reloadFlagsOutPtr)
             notifyInfo = (FILE_NOTIFY_INFORMATION*)&buffer[nextBufferPos];
             nextBufferPos += notifyInfo->NextEntryOffset;
 
-            if (notifyInfo->Action != FILE_ACTION_MODIFIED &&
-                notifyInfo->Action != FILE_ACTION_RENAMED_NEW_NAME)
+            if (notifyInfo->Action != FILE_ACTION_MODIFIED && notifyInfo->Action != FILE_ACTION_RENAMED_NEW_NAME)
                 continue;
 
-            std::string modifiedFile = WCHARtoUTF8(
-                notifyInfo->FileName, notifyInfo->FileNameLength / sizeof(WCHAR));
+            std::string modifiedFile = WCHARtoUTF8(notifyInfo->FileName, notifyInfo->FileNameLength / sizeof(WCHAR));
 
             for (const std::string_view watchedFile : pathsToBuildProducts)
             {
@@ -131,9 +124,7 @@ DWORD WINAPI WaitForEditorOrEngineRecompile(LPVOID reloadFlagsOutPtr)
 
     if (GetLastError() != ERROR_OPERATION_ABORTED)
     {
-        fmt::print(stderr,
-                   "Watcher thread ReadDirectoryChangesW() failure! Error: {}\n",
-                   GetLastErrorAsString());
+        fmt::print(stderr, "Watcher thread ReadDirectoryChangesW() failure! Error: {}\n", GetLastErrorAsString());
     }
 
     return EXIT_SUCCESS;
