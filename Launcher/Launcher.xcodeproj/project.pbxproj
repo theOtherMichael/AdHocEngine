@@ -36,6 +36,12 @@
 		CE4C6EA02B01963D0015E51A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
 		CE4C6EA12B01963D0015E51A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
 		CE4C6EEF2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
+		CE5AD0562D002A3F006E4AE8 /* libEditorD.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD262CFC4418002F900C /* libEditorD.dylib */; };
+		CE5AD0572D002A3F006E4AE8 /* libEngineD.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD212CFC4354002F900C /* libEngineD.dylib */; };
+		CE5AD05B2D002BAB006E4AE8 /* libEditor.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD1F2CFC42BB002F900C /* libEditor.dylib */; };
+		CE5AD05C2D002BAB006E4AE8 /* libEngine.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD1C2CFC4260002F900C /* libEngine.dylib */; };
+		CE5AD05E2D002BF0006E4AE8 /* libEngineDev.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */; };
+		CE5AD0602D002BFC006E4AE8 /* libEditorDev.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +73,42 @@
 				CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */,
 			);
 			name = "Copy Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5AD0552D002A07006E4AE8 /* Copy Modules to Reload Cache */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = reload_cache;
+			dstSubfolderSpec = 16;
+			files = (
+				CE5AD0562D002A3F006E4AE8 /* libEditorD.dylib in Copy Modules to Reload Cache */,
+				CE5AD0572D002A3F006E4AE8 /* libEngineD.dylib in Copy Modules to Reload Cache */,
+			);
+			name = "Copy Modules to Reload Cache";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5AD0592D002B5B006E4AE8 /* Copy Modules to Reload Cache */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = reload_cache;
+			dstSubfolderSpec = 16;
+			files = (
+				CE5AD05E2D002BF0006E4AE8 /* libEngineDev.dylib in Copy Modules to Reload Cache */,
+				CE5AD0602D002BFC006E4AE8 /* libEditorDev.dylib in Copy Modules to Reload Cache */,
+			);
+			name = "Copy Modules to Reload Cache";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE5AD05A2D002B97006E4AE8 /* Copy Modules to Reload Cache */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = reload_cache;
+			dstSubfolderSpec = 16;
+			files = (
+				CE5AD05B2D002BAB006E4AE8 /* libEditor.dylib in Copy Modules to Reload Cache */,
+				CE5AD05C2D002BAB006E4AE8 /* libEngine.dylib in Copy Modules to Reload Cache */,
+			);
+			name = "Copy Modules to Reload Cache";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Libraries */ = {
@@ -103,6 +145,8 @@
 		CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebuggerControls_Win.cpp; sourceTree = "<group>"; };
 		CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Win.cpp; sourceTree = "<group>"; };
 		CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Mac.cpp; sourceTree = "<group>"; };
+		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = "<group>"; };
+		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Editor/libEditorDev.dylib; sourceTree = "<group>"; };
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enterprise.entitlements; sourceTree = "<group>"; };
@@ -173,8 +217,10 @@
 				CECE76422B110ACD0098AAEB /* AppKit.framework */,
 				CE46BD1F2CFC42BB002F900C /* libEditor.dylib */,
 				CE46BD262CFC4418002F900C /* libEditorD.dylib */,
+				CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */,
 				CE46BD1C2CFC4260002F900C /* libEngine.dylib */,
 				CE46BD212CFC4354002F900C /* libEngineD.dylib */,
+				CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */,
 				CE46BD282CFC4443002F900C /* libEngineStatic.a */,
 				CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */,
 				CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */,
@@ -215,6 +261,7 @@
 			buildPhases = (
 				CE0684942CEF1CB800031F0A /* Sources */,
 				CE0684952CEF1CB800031F0A /* Frameworks */,
+				CE5AD05A2D002B97006E4AE8 /* Copy Modules to Reload Cache */,
 			);
 			buildRules = (
 			);
@@ -231,6 +278,7 @@
 			buildPhases = (
 				CE0684B02CF064F200031F0A /* Sources */,
 				CE0684B52CF064F200031F0A /* Frameworks */,
+				CE5AD0552D002A07006E4AE8 /* Copy Modules to Reload Cache */,
 			);
 			buildRules = (
 			);
@@ -247,6 +295,7 @@
 			buildPhases = (
 				CE46BD0A2CFC33DC002F900C /* Sources */,
 				CE46BD0F2CFC33DC002F900C /* Frameworks */,
+				CE5AD0592D002B5B006E4AE8 /* Copy Modules to Reload Cache */,
 			);
 			buildRules = (
 			);
@@ -531,10 +580,6 @@
 				INFOPLIST_FILE = "Enterprise-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Universal;
@@ -617,10 +662,6 @@
 				INFOPLIST_FILE = "Enterprise-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = ActiveArch;

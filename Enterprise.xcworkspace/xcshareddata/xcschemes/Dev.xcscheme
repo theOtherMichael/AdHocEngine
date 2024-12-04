@@ -23,34 +23,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE46BCE22CFC3373002F900C"
-               BuildableName = "libEngineStaticDev.a"
-               BlueprintName = "EngineStaticDev"
-               ReferencedContainer = "container:Engine/Engine.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE46BCF82CFC33CD002F900C"
-               BuildableName = "libEditorDev.dylib"
-               BlueprintName = "EditorDev"
-               ReferencedContainer = "container:Editor/Editor.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "CE46BD092CFC33DC002F900C"
                BuildableName = "LauncherDev"
                BlueprintName = "LauncherDev"
@@ -94,13 +66,6 @@
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "DYLD_FALLBACK_LIBRARY_PATH"
-            value = "$(BUILD_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib:$(BUILD_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "ActiveArch"

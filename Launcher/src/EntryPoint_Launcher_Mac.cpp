@@ -17,43 +17,84 @@ namespace fs = std::filesystem;
 using namespace std::chrono_literals;
 using std::chrono::steady_clock;
 
+static void CopyFolderContents(const fs::path& sourceFolder, const fs::path& destinationFolder)
+{
+    std::error_code ec;
+
+    auto sourceFolderIterator = fs::recursive_directory_iterator(sourceFolder, ec);
+    if (ec)
+        std::cerr << "Failed to create iterator for " << sourceFolder << "! " << ec.message() << "\n";
+
+    for (const auto& sourceFolderEntry : sourceFolderIterator)
+    {
+        const fs::path& sourcePath = sourceFolderEntry.path();
+        fs::path relativePath      = fs::relative(sourcePath, sourceFolder);
+        fs::path targetPath        = destinationFolder / relativePath;
+
+        if (fs::is_directory(sourcePath))
+        {
+            fs::create_directories(targetPath, ec);
+            if (ec)
+                std::cerr << "Failed to create directory " << targetPath << "! " << ec.message() << "\n";
+        }
+        else if (fs::is_regular_file(sourcePath))
+        {
+            fs::copy_file(sourcePath, targetPath, ec);
+            if (ec)
+                std::cerr << "Failed to copy file " << sourcePath << "! " << ec.message() << "\n";
+        }
+    }
+}
+
 static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
 {
-    std::string configSuffix;
-
-    switch (reloadFlags)
-    {
-    case EditorReloadFlag_Debug:
-        configSuffix = "D";
-        std::cout << "Debug configuration selected\n";
-        break;
-    case EditorReloadFlag_Dev:
-        configSuffix = "Dev";
-        std::cout << "Dev configuration selected\n";
-        break;
-    case EditorReloadFlag_Release:
-        configSuffix = "";
-        std::cout << "Release configuration selected\n";
-        break;
-    default: assert(false); break;
-    }
-
-    char cPathToLauncher[PATH_MAX + 1];
-    uint32_t pathBufferLength = sizeof(cPathToLauncher);
+    constexpr auto maxPathBufferSize = PATH_MAX + 1;
+    uint32_t pathBufferLength        = maxPathBufferSize;
+    char cPathToLauncher[pathBufferLength];
     if (_NSGetExecutablePath(cPathToLauncher, &pathBufferLength) != 0)
     {
         std::cerr << "Failed to get path to build folder!\n";
         return nullptr;
     }
-    char realCPathToLauncher[PATH_MAX + 1];
+    char realCPathToLauncher[maxPathBufferSize];
     if (realpath(cPathToLauncher, realCPathToLauncher) == NULL)
     {
-        std::cerr << "Failed to resolve path to build folder!\n";
+        std::cerr << "Failed to resolve real path to build folder!\n";
         return nullptr;
     }
 
-    fs::path pathToLauncher    = realCPathToLauncher;
-    fs::path pathToBuildFolder = pathToLauncher.parent_path().parent_path();
+    fs::path pathToLauncher                   = realCPathToLauncher;
+    fs::path pathToBuildFolder                = pathToLauncher.parent_path().parent_path();
+    fs::path pathToReloadCache                = pathToBuildFolder / "Launcher/reload_cache";
+    fs::path pathToEngineVcpkgInstalledFolder = pathToBuildFolder.parent_path() / "Engine/vcpkg_installed/uni-dynamic";
+    fs::path pathToEditorVcpkgInstalledFolder = pathToBuildFolder.parent_path() / "Editor/vcpkg_installed/uni-dynamic";
+
+    fs::path pathToEngineVcpkgDependencies;
+    fs::path pathToEditorVcpkgDependencies;
+    std::string configSuffix;
+
+    switch (reloadFlags)
+    {
+    case EditorReloadFlag_Debug:
+        configSuffix                  = "D";
+        pathToEngineVcpkgDependencies = pathToEngineVcpkgInstalledFolder / "debug/lib";
+        pathToEditorVcpkgDependencies = pathToEditorVcpkgInstalledFolder / "debug/lib";
+        std::cout << "Debug configuration selected\n";
+        break;
+    case EditorReloadFlag_Dev:
+        configSuffix                  = "Dev";
+        pathToEngineVcpkgDependencies = pathToEngineVcpkgInstalledFolder / "lib";
+        pathToEditorVcpkgDependencies = pathToEditorVcpkgInstalledFolder / "lib";
+        std::cout << "Dev configuration selected\n";
+        break;
+    case EditorReloadFlag_Release:
+        configSuffix                  = "";
+        pathToEngineVcpkgDependencies = pathToEngineVcpkgInstalledFolder / "lib";
+        pathToEditorVcpkgDependencies = pathToEditorVcpkgInstalledFolder / "lib";
+        std::cout << "Release configuration selected\n";
+        break;
+    default: assert(false); break;
+    }
 
     std::string engineDylibName = "libEngine" + configSuffix + ".dylib";
     std::string engineDsymName  = "libEngine" + configSuffix + ".dylib.dsym";
@@ -65,69 +106,66 @@ static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
     fs::path builtEditorDylibPath = pathToBuildFolder / "Editor" / editorDylibName;
     fs::path builtEditorDsymPath  = pathToBuildFolder / "Editor" / editorDsymName;
 
-    fs::path copiedEngineDylibPath = pathToBuildFolder / "Launcher/reload_cache" / engineDylibName;
-    fs::path copiedEngineDsymPath  = pathToBuildFolder / "Launcher/reload_cache" / engineDsymName;
-    fs::path copiedEditorDylibPath = pathToBuildFolder / "Launcher/reload_cache" / editorDylibName;
-    fs::path copiedEditorDsymPath  = pathToBuildFolder / "Launcher/reload_cache" / editorDsymName;
-
+    std::cout << "Waiting for build products...\n";
     static fs::file_time_type engineDylibLastModified;
     static fs::file_time_type engineDsymLastModified;
     static fs::file_time_type editorDylibLastModified;
     static fs::file_time_type editorDsymLastModified;
 
-    std::cout << "Waiting for build products...\n";
-
     auto scheduledTimeOut = steady_clock::now() + 15s;
-
-    std::cout << "Waiting for " << builtEngineDylibPath << "...";
-    while (fs::last_write_time(builtEngineDylibPath) <= engineDylibLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << " done!\nWaiting for " << builtEngineDsymPath << "...";
-    while (fs::last_write_time(builtEngineDsymPath) <= engineDsymLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << " done!\nWaiting for " << builtEditorDylibPath << "...";
-    while (fs::last_write_time(builtEditorDylibPath) <= editorDylibLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << " done!\nWaiting for " << builtEditorDsymPath << "...";
-    while (fs::last_write_time(builtEditorDsymPath) <= editorDsymLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << " done!\n";
-
     std::error_code ec;
 
+    std::cout << "Waiting for " << builtEngineDylibPath << "...\n";
+    while (fs::last_write_time(builtEngineDylibPath, ec) <= engineDylibLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+    std::cout << "Waiting for " << builtEngineDsymPath << "...\n";
+    while (fs::last_write_time(builtEngineDsymPath, ec) <= engineDsymLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+    std::cout << "Waiting for " << builtEditorDylibPath << "...\n";
+    while (fs::last_write_time(builtEditorDylibPath, ec) <= editorDylibLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+    std::cout << "Waiting for " << builtEditorDsymPath << "...\n";
+    while (fs::last_write_time(builtEditorDsymPath, ec) <= editorDsymLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+
     std::cout << "Deleting old build products...\n";
-    fs::remove_all(pathToBuildFolder / "Launcher/reload_cache");
-    fs::create_directory(pathToBuildFolder / "Launcher/reload_cache");
+    fs::remove_all(pathToReloadCache);
+    fs::create_directory(pathToReloadCache);
 
     std::cout << "Copying new build products...\n";
-    fs::copy_file(builtEngineDylibPath, copiedEngineDylibPath, ec);
+    fs::copy_file(builtEngineDylibPath, pathToReloadCache / engineDylibName, ec);
     if (ec)
         std::cerr << "Failed to copy Engine dynamic library! " << ec.message() << "\n";
-    fs::copy(builtEngineDsymPath, copiedEngineDsymPath, fs::copy_options::overwrite_existing, ec);
+    fs::copy(builtEngineDsymPath, pathToReloadCache / engineDsymName, ec);
     if (ec)
         std::cerr << "Failed to copy Engine symbols! " << ec.message() << "\n";
-    fs::copy_file(builtEditorDylibPath, copiedEditorDylibPath, fs::copy_options::overwrite_existing, ec);
+    fs::copy_file(builtEditorDylibPath, pathToReloadCache / editorDylibName, ec);
     if (ec)
         std::cerr << "Failed to copy Editor dynamic library! " << ec.message() << "\n";
-    fs::copy(builtEditorDsymPath, copiedEditorDsymPath, fs::copy_options::overwrite_existing, ec);
+    fs::copy(builtEditorDsymPath, pathToReloadCache / editorDsymName, ec);
     if (ec)
         std::cerr << "Failed to copy Editor symbols! " << ec.message() << "\n";
+
+    std::cout << "Copying vcpkg dependencies for Engine...\n";
+    CopyFolderContents(pathToEngineVcpkgDependencies, pathToReloadCache);
+    std::cout << "Copying vcpkg dependencies for Editor...\n";
+    CopyFolderContents(pathToEditorVcpkgDependencies, pathToReloadCache);
 
     auto currentTime        = fs::file_time_type::clock::now();
     engineDylibLastModified = currentTime;
@@ -136,8 +174,8 @@ static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
     editorDsymLastModified  = currentTime;
 
     std::cout << "Loading editor dynamic library...\n";
-    // TODO: Do we have to worry about finding the editor library finding the engine library?
-    return dlopen(editorDylibName.c_str(), RTLD_LAZY | RTLD_LOCAL);
+    std::string relativePathToLibEditor = "@loader_path/reload_cache/" + editorDylibName;
+    return dlopen(relativePathToLibEditor.c_str(), RTLD_NOW | RTLD_LOCAL | RTLD_FIRST);
 }
 
 int main(int argc, char* argv[])
@@ -150,7 +188,7 @@ int main(int argc, char* argv[])
     std::cout << "Command line arguments:\n";
     for (int i = 1; i < argc; i++)
     {
-        std::cout << "    " << argv[i] << "\n";
+        std::cout << "  " << argv[i] << "\n";
 
         if (strcmp(argv[i], "--developer") == 0)
             isDeveloperMode = true;
@@ -191,12 +229,14 @@ int main(int argc, char* argv[])
             if (isDebugMode)
             {
                 std::cout << "Loadng editor in debug mode...\n";
-                editorModuleHandle = dlopen("libEditorD.dylib", RTLD_LAZY | RTLD_LOCAL);
+                editorModuleHandle =
+                    dlopen("@loader_path/../Frameworks/debug/libEditorD.dylib", RTLD_LAZY | RTLD_LOCAL | RTLD_FIRST);
             }
             else
             {
                 std::cout << "Loadng editor in release mode...\n";
-                editorModuleHandle = dlopen("libEditor.dylib", RTLD_LAZY | RTLD_LOCAL);
+                editorModuleHandle =
+                    dlopen("@loader_path/../Frameworks/libEditor.dylib", RTLD_LAZY | RTLD_LOCAL | RTLD_FIRST);
             }
         }
 

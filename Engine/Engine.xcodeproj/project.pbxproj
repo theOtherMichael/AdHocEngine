@@ -258,14 +258,14 @@
 		CE4C6EDC2B01A9870015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEDB379D2CFC16E600FC593F /* libfmtd.a */,
-				CEDB379C2CFC16E600FC593F /* libglfw3.a */,
-				CEDB37982CFC16CA00FC593F /* libfmt.a */,
-				CEDB37992CFC16CA00FC593F /* libglfw3.a */,
-				CEDB37942CFC169B00FC593F /* libfmtd.10.dylib */,
-				CEDB37952CFC169B00FC593F /* libglfw.3.dylib */,
 				CEDB37912CFC166C00FC593F /* libfmt.10.dylib */,
+				CEDB37982CFC16CA00FC593F /* libfmt.a */,
+				CEDB37942CFC169B00FC593F /* libfmtd.10.dylib */,
+				CEDB379D2CFC16E600FC593F /* libfmtd.a */,
+				CEDB37952CFC169B00FC593F /* libglfw.3.dylib */,
 				CEDB37902CFC166C00FC593F /* libglfw.3.dylib */,
+				CEDB379C2CFC16E600FC593F /* libglfw3.a */,
+				CEDB37992CFC16CA00FC593F /* libglfw3.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

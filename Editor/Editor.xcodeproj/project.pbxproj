@@ -367,6 +367,7 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
@@ -478,6 +479,7 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				INSTALL_PATH = "@rpath";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
