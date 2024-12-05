@@ -32,12 +32,12 @@ static void AddHandlerForFile(const char* editorLibPath, dispatch_queue_t reload
         auto eventSourceFlag = dispatch_source_get_data(editorLibDispatchSource);
         if (eventSourceFlag & DISPATCH_VNODE_DELETE)
         {
-            fmt::print("A file was deleted");
+            fmt::print("A file was deleted\n");
             dispatch_source_cancel(editorLibDispatchSource);
         }
         else if (eventSourceFlag & DISPATCH_VNODE_RENAME)
         {
-            fmt::print("A file was renamed");
+            fmt::print("A file was renamed\n");
         }
         NSLog(@"Change at %@ of type %lu", editorLibUrl, eventSourceFlag);
     });

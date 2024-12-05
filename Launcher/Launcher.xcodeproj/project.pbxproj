@@ -139,17 +139,17 @@
 		CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
 		CE46BD302CFC454A002F900C /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = "<group>"; };
 		CE46BD312CFC454A002F900C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
-		CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformHelpers_Launcher_Win.cpp; sourceTree = "<group>"; };
-		CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebuggerControls_Win.h; sourceTree = "<group>"; };
-		CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformHelpers_Launcher_Win.h; sourceTree = "<group>"; };
-		CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DebuggerControls_Win.cpp; sourceTree = "<group>"; };
-		CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Launcher_Mac.cpp; sourceTree = "<group>"; };
+		CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Launcher_Win.cpp; path = src/PlatformHelpers_Launcher_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebuggerControls_Win.h; path = src/DebuggerControls_Win.h; sourceTree = SOURCE_ROOT; };
+		CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Launcher_Win.h; path = src/PlatformHelpers_Launcher_Win.h; sourceTree = SOURCE_ROOT; };
+		CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebuggerControls_Win.cpp; path = src/DebuggerControls_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Launcher_Win.cpp; path = src/EntryPoint_Launcher_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Launcher_Mac.cpp; path = src/EntryPoint_Launcher_Mac.cpp; sourceTree = SOURCE_ROOT; };
 		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = "<group>"; };
 		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Editor/libEditorDev.dylib; sourceTree = "<group>"; };
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Enterprise.entitlements; sourceTree = "<group>"; };
+		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Enterprise.entitlements; path = resources/Enterprise.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -196,7 +196,7 @@
 				CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */,
 			);
 			path = resources;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6E992B01963D0015E51A /* src */ = {
 			isa = PBXGroup;
@@ -209,7 +209,7 @@
 				CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */,
 			);
 			path = src;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EE62B01AE310015E51A /* Frameworks */ = {
 			isa = PBXGroup;

@@ -43,12 +43,12 @@
 		CE46BD162CFC3F45002F900C /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../Engine/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Engine/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../Engine/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorReloadFlags.h; sourceTree = "<group>"; };
-		CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReloadSentinel_Win.h; sourceTree = "<group>"; };
-		CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntryPoint_Editor_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ReloadSentinel_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = "<group>"; };
-		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EntryPoint_Editor_Mac.mm; sourceTree = "<group>"; };
+		CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorReloadFlags.h; path = include/Editor/EditorReloadFlags.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReloadSentinel_Win.h; path = src/ReloadSentinel_Win.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Editor_Win.cpp; path = src/EntryPoint_Editor_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReloadSentinel_Win.cpp; path = src/ReloadSentinel_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
+		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EntryPoint_Editor_Mac.mm; path = src/EntryPoint_Editor_Mac.mm; sourceTree = SOURCE_ROOT; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
 		CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
@@ -120,15 +120,16 @@
 				CE4C6EA32B0196810015E51A /* Editor */,
 			);
 			path = include;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EA32B0196810015E51A /* Editor */ = {
 			isa = PBXGroup;
 			children = (
 				CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */,
 			);
-			path = Editor;
-			sourceTree = "<group>";
+			name = Editor;
+			path = include/Editor;
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EA52B0196810015E51A /* src */ = {
 			isa = PBXGroup;
@@ -139,7 +140,7 @@
 				CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */,
 			);
 			path = src;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EE12B01AA500015E51A /* Frameworks */ = {
 			isa = PBXGroup;

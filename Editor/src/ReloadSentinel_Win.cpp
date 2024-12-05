@@ -39,7 +39,7 @@ DWORD WINAPI WaitForEditorOrEngineRecompile(LPVOID reloadFlagsOutPtr)
     if (buildDirectoryHandle == INVALID_HANDLE_VALUE)
     {
         fmt::print(
-            stderr, "Watcher thread could not open handle to build directory! Error: {}", GetLastErrorAsString());
+            stderr, "Watcher thread could not open handle to build directory! Error: {}\n", GetLastErrorAsString());
         return EXIT_FAILURE;
     }
 

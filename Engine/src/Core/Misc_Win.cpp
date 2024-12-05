@@ -28,7 +28,7 @@ void Enterprise::PrintBacktrace_Implementation()
     {
         if (!SymFromAddr(platformState->processHandle, (DWORD64)(callStack[i]), 0, symbol))
         {
-            fmt::print(stderr, " [{0}] SymFromAddr() failed! Error {1}", i, GetLastErrorAsString());
+            fmt::print(stderr, " [{0}] SymFromAddr() failed! Error {1}\n", i, GetLastErrorAsString());
             continue;
         }
 

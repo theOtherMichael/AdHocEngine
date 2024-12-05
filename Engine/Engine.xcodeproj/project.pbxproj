@@ -99,19 +99,19 @@
 		CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCE12CFC336A002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4C6EB72B0196A60015E51A /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Assertions.h; sourceTree = "<group>"; };
-		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
-		CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformData_Win.h; sourceTree = "<group>"; };
-		CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformHelpers_Win.h; sourceTree = "<group>"; };
-		CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedLibraryExports.h; sourceTree = "<group>"; };
-		CE4C6EBF2B0196A60015E51A /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Misc.cpp; sourceTree = "<group>"; };
-		CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformHelpers_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EC12B0196A60015E51A /* Misc_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc_Win.h; sourceTree = "<group>"; };
-		CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlatformData_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Misc_Win.cpp; sourceTree = "<group>"; };
-		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = "<group>"; };
-		CE4C6ED42B019D450015E51A /* Misc_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Misc_Mac.h; sourceTree = "<group>"; };
-		CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Misc_Mac.cpp; sourceTree = "<group>"; };
+		CE4C6EB72B0196A60015E51A /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assertions.h; path = include/Enterprise/Core/Assertions.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = include/Enterprise/Core/Misc.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData_Win.h; path = include/Enterprise/Core/PlatformData_Win.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Win.h; path = include/Enterprise/Core/PlatformHelpers_Win.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedLibraryExports.h; path = include/Enterprise/Core/SharedLibraryExports.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EBF2B0196A60015E51A /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Misc.cpp; path = src/Core/Misc.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Win.cpp; path = src/Core/PlatformHelpers_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EC12B0196A60015E51A /* Misc_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc_Win.h; path = src/Core/Misc_Win.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformData_Win.cpp; path = src/Core/PlatformData_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Misc_Win.cpp; path = src/Core/Misc_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
+		CE4C6ED42B019D450015E51A /* Misc_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Misc_Mac.h; path = src/Core/Misc_Mac.h; sourceTree = SOURCE_ROOT; };
+		CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Misc_Mac.cpp; path = src/Core/Misc_Mac.cpp; sourceTree = SOURCE_ROOT; };
 		CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDB37902CFC166C00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
 		CEDB37912CFC166C00FC593F /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
@@ -211,27 +211,29 @@
 				CE4C6EB52B0196A60015E51A /* Enterprise */,
 			);
 			path = include;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EB52B0196A60015E51A /* Enterprise */ = {
 			isa = PBXGroup;
 			children = (
 				CE4C6EB62B0196A60015E51A /* Core */,
 			);
-			path = Enterprise;
-			sourceTree = "<group>";
+			name = Enterprise;
+			path = include/Enterprise;
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EB62B0196A60015E51A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6EB72B0196A60015E51A /* Assertions.h */,
 				CE4C6EB82B0196A60015E51A /* Misc.h */,
+				CE4C6EB72B0196A60015E51A /* Assertions.h */,
 				CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */,
 				CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */,
 				CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */,
 			);
-			path = Core;
-			sourceTree = "<group>";
+			name = Core;
+			path = include/Enterprise/Core;
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EBD2B0196A60015E51A /* src */ = {
 			isa = PBXGroup;
@@ -239,7 +241,7 @@
 				CE4C6EBE2B0196A60015E51A /* Core */,
 			);
 			path = src;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EBE2B0196A60015E51A /* Core */ = {
 			isa = PBXGroup;
@@ -252,8 +254,9 @@
 				CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */,
 				CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */,
 			);
-			path = Core;
-			sourceTree = "<group>";
+			name = Core;
+			path = src/Core;
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EDC2B01A9870015E51A /* Frameworks */ = {
 			isa = PBXGroup;
