@@ -148,8 +148,8 @@
 		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Engine/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../Editor/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Enterprise.entitlements; path = resources/Enterprise.entitlements; sourceTree = SOURCE_ROOT; };
+		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Enterprise.entitlements; path = resources/Mac/Enterprise.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -189,11 +189,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE2B9A2B2B01681C00DE24E0 /* resources */ = {
+		CE01CABB2D041784008E0A1F /* Mac */ = {
 			isa = PBXGroup;
 			children = (
 				CEA1AE142B01670A005AC6CE /* Assets.xcassets */,
 				CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */,
+			);
+			name = Mac;
+			path = resources/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE2B9A2B2B01681C00DE24E0 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE01CABB2D041784008E0A1F /* Mac */,
 			);
 			path = resources;
 			sourceTree = SOURCE_ROOT;
@@ -534,7 +543,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = resources/Enterprise.entitlements;
+				CODE_SIGN_ENTITLEMENTS = resources/Mac/Enterprise.entitlements;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -615,7 +624,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = resources/Enterprise.entitlements;
+				CODE_SIGN_ENTITLEMENTS = resources/Mac/Enterprise.entitlements;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
