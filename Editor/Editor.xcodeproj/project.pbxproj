@@ -50,10 +50,10 @@
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EntryPoint_Editor_Mac.mm; path = src/EntryPoint_Editor_Mac.mm; sourceTree = SOURCE_ROOT; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = "<group>"; };
-		CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
-		CEDB397A2CFC1B6F00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = "<group>"; };
-		CEDB397B2CFC1B6F00FC593F /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = "<group>"; };
+		CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB397A2CFC1B6F00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB397B2CFC1B6F00FC593F /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 				CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
