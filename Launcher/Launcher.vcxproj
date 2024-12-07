@@ -130,9 +130,16 @@
     <ClCompile Include="src\PlatformHelpers_Launcher_Win.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resources\Win\resource.h" />
     <ClInclude Include="src\Assertions.h" />
     <ClInclude Include="src\DebuggerControls_Win.h" />
     <ClInclude Include="src\PlatformHelpers_Launcher_Win.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\Win\Enterprise.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\Win\Enterprise.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

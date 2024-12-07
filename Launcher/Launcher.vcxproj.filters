@@ -35,5 +35,18 @@
     <ClInclude Include="src\DebuggerControls_Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resources\Win\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\Win\Enterprise.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\Win\Enterprise.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

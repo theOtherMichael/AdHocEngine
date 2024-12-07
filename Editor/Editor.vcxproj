@@ -149,12 +149,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resources\EmbedAppIcon.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="resources\Enterprise.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="include\Editor\EditorReloadFlags.h" />
     <ClInclude Include="src\ReloadSentinel_Win.h" />
   </ItemGroup>
