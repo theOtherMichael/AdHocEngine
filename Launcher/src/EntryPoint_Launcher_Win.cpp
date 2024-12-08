@@ -247,7 +247,20 @@ int main(int argc, char* argv[])
             if (isDebugMode)
             {
                 std::cout << "Loadng editor in debug mode...\n";
-                editorModuleHandle = LoadLibrary(L"EditorD.dll");
+
+                TCHAR cPathToLauncher[MAX_PATH];
+                if (!GetModuleFileName(NULL, cPathToLauncher, MAX_PATH))
+                {
+                    std::cerr << "Failed to get path to build folder!\n";
+                }
+                else
+                {
+                    fs::path pathToLauncher       = cPathToLauncher;
+                    fs::path pathToDebugEditorDll = pathToLauncher.parent_path() / "debug" / "EditorD.dll";
+
+                    editorModuleHandle =
+                        LoadLibraryEx(pathToDebugEditorDll.wstring().c_str(), NULL, LOAD_WITH_ALTERED_SEARCH_PATH);
+                }
             }
             else
             {
