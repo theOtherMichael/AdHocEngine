@@ -495,11 +495,11 @@
 			projectRoot = "";
 			targets = (
 				CE2B9A442B018B8100DE24E0 /* Engine */,
-				CED3D6702B12D3C800C5FB04 /* EngineD */,
 				CE46BCCC2CFC336A002F900C /* EngineDev */,
+				CED3D6702B12D3C800C5FB04 /* EngineD */,
 				CE3833D12CF0E6380004C108 /* EngineStatic */,
-				CE3833D72CF2FC250004C108 /* EngineStaticD */,
 				CE46BCE22CFC3373002F900C /* EngineStaticDev */,
+				CE3833D72CF2FC250004C108 /* EngineStaticD */,
 			);
 		};
 /* End PBXProject section */
@@ -656,6 +656,7 @@
 					ENTERPRISE_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
+				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
 			};
 			name = Universal;
@@ -673,6 +674,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 				);
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -691,6 +693,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 				);
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -748,6 +751,7 @@
 					ENTERPRISE_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -763,6 +767,7 @@
 					ENTERPRISE_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -781,6 +786,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 				);
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -799,6 +805,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 				);
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -881,6 +888,7 @@
 					ENTERPRISE_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
+				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;

@@ -439,6 +439,7 @@
 					"$(inherited)",
 					ENTERPRISE_RELEASE,
 				);
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Universal;
@@ -451,6 +452,7 @@
 					"$(inherited)",
 					ENTERPRISE_RELEASE,
 				);
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = ActiveArch;
@@ -495,6 +497,7 @@
 					"$(inherited)",
 					ENTERPRISE_DEV,
 				);
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Universal;
@@ -507,6 +510,7 @@
 					"$(inherited)",
 					ENTERPRISE_DEV,
 				);
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = ActiveArch;
@@ -588,6 +592,7 @@
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Universal;
@@ -669,6 +674,7 @@
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = ActiveArch;

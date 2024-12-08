@@ -268,8 +268,8 @@
 			projectRoot = "";
 			targets = (
 				CE2B9A342B01853C00DE24E0 /* Editor */,
-				CED3D6872B12D3D700C5FB04 /* EditorD */,
 				CE46BCF82CFC33CD002F900C /* EditorDev */,
+				CED3D6872B12D3D700C5FB04 /* EditorD */,
 			);
 		};
 /* End PBXProject section */
@@ -390,6 +390,7 @@
 					"$(inherited)",
 					ENTERPRISE_RELEASE,
 				);
+				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
 			};
 			name = Universal;
@@ -402,6 +403,7 @@
 					"$(inherited)",
 					ENTERPRISE_DEV,
 				);
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -415,6 +417,7 @@
 					"$(inherited)",
 					ENTERPRISE_DEV,
 				);
+				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -503,6 +506,7 @@
 					"$(inherited)",
 					ENTERPRISE_RELEASE,
 				);
+				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;
