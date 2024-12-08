@@ -24,89 +24,161 @@ namespace fs = std::filesystem;
 using namespace std::chrono_literals;
 using std::chrono::steady_clock;
 
+static void CopyFolderContents(const fs::path& sourceFolder, const fs::path& destinationFolder)
+{
+    std::error_code ec;
+
+    auto sourceFolderIterator = fs::recursive_directory_iterator(sourceFolder, ec);
+    if (ec)
+        std::cerr << "Failed to create iterator for " << sourceFolder << "! " << ec.message() << "\n";
+
+    for (const auto& sourceFolderEntry : sourceFolderIterator)
+    {
+        const fs::path& sourcePath = sourceFolderEntry.path();
+        fs::path relativePath      = fs::relative(sourcePath, sourceFolder);
+        fs::path targetPath        = destinationFolder / relativePath;
+
+        if (fs::is_directory(sourcePath))
+        {
+            fs::create_directories(targetPath, ec);
+            if (ec)
+                std::cerr << "Failed to create directory " << targetPath << "! " << ec.message() << "\n";
+        }
+        else if (fs::is_regular_file(sourcePath))
+        {
+            fs::copy_file(sourcePath, targetPath, ec);
+            if (ec)
+                std::cerr << "Failed to copy file " << sourcePath << "! " << ec.message() << "\n";
+        }
+    }
+}
+
 static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
 {
-    std::string configName;
+    TCHAR cPathToLauncher[MAX_PATH];
+    if (!GetModuleFileName(NULL, cPathToLauncher, MAX_PATH))
+    {
+        std::cerr << "Failed to get path to build folder!\n";
+        return nullptr;
+    }
+    fs::path pathToLauncher    = cPathToLauncher;
+    fs::path pathToBuildFolder = pathToLauncher.parent_path().parent_path();
+    fs::path pathToReloadCache = pathToBuildFolder / "Launcher\\reload_cache";
+
+    fs::path pathToRepository                 = pathToBuildFolder.parent_path();
+    fs::path pathToEngineVcpkgInstalledFolder = pathToRepository / "Engine\\vcpkg_installed\\dynamic\\x64-windows";
+    fs::path pathToEditorVcpkgInstalledFolder = pathToRepository / "Editor\\vcpkg_installed\\dynamic\\x64-windows";
+
+    fs::path pathToEngineVcpkgDependencies;
+    fs::path pathToEditorVcpkgDependencies;
     std::string configSuffix;
 
     switch (reloadFlags & EditorReloadFlag_ConfigMask)
     {
     case EditorReloadFlag_Debug:
-        configName   = "Debug";
-        configSuffix = "D";
+        configSuffix                  = "D";
+        pathToEngineVcpkgDependencies = pathToEngineVcpkgInstalledFolder / "debug\\bin";
+        pathToEditorVcpkgDependencies = pathToEditorVcpkgInstalledFolder / "debug\\bin";
+        std::cout << "Debug configuration selected\n";
         break;
     case EditorReloadFlag_Dev:
-        configName   = "Dev";
-        configSuffix = "Dev";
+        configSuffix                  = "Dev";
+        pathToEngineVcpkgDependencies = pathToEngineVcpkgInstalledFolder / "bin";
+        pathToEditorVcpkgDependencies = pathToEditorVcpkgInstalledFolder / "bin";
+        std::cout << "Dev configuration selected\n";
         break;
     case EditorReloadFlag_Release:
-        configName   = "Release";
-        configSuffix = "";
+        configSuffix                  = "";
+        pathToEngineVcpkgDependencies = pathToEngineVcpkgInstalledFolder / "bin";
+        pathToEditorVcpkgDependencies = pathToEditorVcpkgInstalledFolder / "bin";
+        std::cout << "Release configuration selected\n";
         break;
     default: assert(false); break;
     }
 
-    fs::path builtEngineDllPath  = "build/" + configName + "/Engine/Engine" + configSuffix + ".dll";
-    fs::path copiedEngineDllPath = "build/" + configName + "/Engine" + configSuffix + ".dll";
+    std::string engineModuleName     = "Engine" + configSuffix + ".dll";
+    std::string engineSymbolFileName = "Engine" + configSuffix + ".pdb";
+    std::string editorModuleName     = "Editor" + configSuffix + ".dll";
+    std::string editorSymbolFileName = "Editor" + configSuffix + ".pdb";
 
-    fs::path builtEnginePdbPath  = "build/" + configName + "/Engine/Engine" + configSuffix + ".pdb";
-    fs::path copiedEnginePdbPath = "build/" + configName + "/Engine" + configSuffix + ".pdb";
+    fs::path builtEngineModulePath  = pathToBuildFolder / "Engine" / engineModuleName;
+    fs::path builtEngineSymbolsPath = pathToBuildFolder / "Engine" / engineSymbolFileName;
+    fs::path builtEditorModulePath  = pathToBuildFolder / "Editor" / editorModuleName;
+    fs::path builtEditorSymbolsPath = pathToBuildFolder / "Editor" / editorSymbolFileName;
 
-    fs::path builtEditorDllPath  = "build/" + configName + "/Editor/Editor" + configSuffix + ".dll";
-    fs::path copiedEditorDllPath = "build/" + configName + "/Editor" + configSuffix + ".dll";
+    std::cout << "Waiting for build products...\n";
+    static fs::file_time_type engineModuleLastModified;
+    static fs::file_time_type engineSymbolsLastModified;
+    static fs::file_time_type editorModuleLastModified;
+    static fs::file_time_type editorSymbolsLastModified;
 
-    fs::path builtEditorPdbPath  = "build/" + configName + "/Editor/Editor" + configSuffix + ".pdb";
-    fs::path copiedEditorPdbPath = "build/" + configName + "/Editor" + configSuffix + ".pdb";
+    auto scheduledTimeOut = steady_clock::now() + 15s;
+    std::error_code ec;
 
-    if ((reloadFlags & EditorReloadFlag_Engine) != 0)
+    std::cout << "Waiting for " << builtEngineModulePath << "...\n";
+    while (fs::last_write_time(builtEngineModulePath, ec) <= engineModuleLastModified)
     {
-        std::error_code ec;
-
-        fs::copy_file(builtEngineDllPath, copiedEngineDllPath, fs::copy_options::overwrite_existing, ec);
-        if (ec)
-            std::cerr << "Could not copy Engine DLL! " << ec.message() << "\n";
-
-        fs::copy_file(builtEnginePdbPath, copiedEnginePdbPath, fs::copy_options::overwrite_existing, ec);
-        if (ec)
-            std::cerr << "Could not copy Engine PDB! " << ec.message() << "\n";
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+    std::cout << "Waiting for " << builtEngineSymbolsPath << "...\n";
+    while (fs::last_write_time(builtEngineSymbolsPath, ec) <= engineSymbolsLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+    std::cout << "Waiting for " << builtEditorModulePath << "...\n";
+    while (fs::last_write_time(builtEditorModulePath, ec) <= editorModuleLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+    std::cout << "Waiting for " << builtEditorSymbolsPath << "...\n";
+    while (fs::last_write_time(builtEditorSymbolsPath, ec) <= editorSymbolsLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
     }
 
-    if (!fs::exists(builtEditorDllPath))
-    {
-        std::cout << "Editor DLL not found. Waiting for build to finish...\n";
+    std::cout << "Deleting old build products...\n";
+    fs::remove_all(pathToReloadCache, ec);
+    if (ec)
+        std::cerr << "Failed to clear reload cache! " << ec.message() << "\n";
+    fs::create_directory(pathToReloadCache, ec);
+    if (ec)
+        std::cerr << "Failed to recreate cache folder! " << ec.message() << "\n";
 
-        for (auto endTime = steady_clock::now() + 15s; steady_clock::now() < endTime;)
-        {
-            std::this_thread::sleep_for(300ms);
-            if (fs::exists(builtEditorDllPath))
-                break;
-        }
+    std::cout << "Copying new build products...\n";
+    fs::copy_file(builtEngineModulePath, pathToReloadCache / engineModuleName, ec);
+    if (ec)
+        std::cerr << "Failed to copy Engine dynamic library! " << ec.message() << "\n";
+    fs::copy(builtEngineSymbolsPath, pathToReloadCache / engineSymbolFileName, ec);
+    if (ec)
+        std::cerr << "Failed to copy Engine symbols! " << ec.message() << "\n";
+    fs::copy_file(builtEditorModulePath, pathToReloadCache / editorModuleName, ec);
+    if (ec)
+        std::cerr << "Failed to copy Editor dynamic library! " << ec.message() << "\n";
+    fs::copy(builtEditorSymbolsPath, pathToReloadCache / editorSymbolFileName, ec);
+    if (ec)
+        std::cerr << "Failed to copy Editor symbols! " << ec.message() << "\n";
 
-        reloadFlags |= EditorReloadFlag_Editor;
-    }
+    std::cout << "Copying vcpkg dependencies for Engine...\n";
+    CopyFolderContents(pathToEngineVcpkgDependencies, pathToReloadCache);
+    std::cout << "Copying vcpkg dependencies for Editor...\n";
+    CopyFolderContents(pathToEditorVcpkgDependencies, pathToReloadCache);
 
-    if ((reloadFlags & EditorReloadFlag_Editor) != 0)
-    {
-        std::error_code ec;
-        fs::copy_file(builtEditorDllPath, copiedEditorDllPath, fs::copy_options::overwrite_existing, ec);
+    auto currentTime          = fs::file_time_type::clock::now();
+    engineModuleLastModified  = currentTime;
+    engineSymbolsLastModified = currentTime;
+    editorModuleLastModified  = currentTime;
+    editorSymbolsLastModified = currentTime;
 
-        if (ec)
-            std::cerr << "Could not copy Editor DLL! " << ec.message() << "\n";
-
-        fs::copy_file(builtEditorPdbPath, copiedEditorPdbPath, fs::copy_options::overwrite_existing, ec);
-
-        if (ec)
-            std::cerr << "Could not copy Editor PDB! " << ec.message() << "\n";
-    }
-
-    if (!SetDllDirectory(fs::canonical("build\\" + configName + "\\").wstring().c_str()))
-    {
-        std::cerr << "SetDllDirectory() error: " << GetLastErrorAsString() << "\n";
-    }
-
-    return LoadLibraryEx(UTF8toWCHAR("Editor" + configSuffix + ".dll").c_str(),
-                         NULL,
-                         LOAD_LIBRARY_SEARCH_USER_DIRS | LOAD_LIBRARY_SEARCH_SYSTEM32);
+    std::cout << "Loading editor dynamic library...\n";
+    return LoadLibraryEx((pathToReloadCache / editorModuleName).wstring().c_str(), NULL, LOAD_WITH_ALTERED_SEARCH_PATH);
 }
 
 int main(int argc, char* argv[])
@@ -119,21 +191,20 @@ int main(int argc, char* argv[])
     std::cout << "Command line arguments:\n";
     for (int i = 1; i < argc; i++)
     {
-        std::cout << argv[i] << "\n";
+        std::cout << "  " << argv[i] << "\n";
 
         if (strcmp(argv[i], "--developer") == 0)
             isDeveloperMode = true;
         else if (strcmp(argv[i], "--debug") == 0)
             isDebugMode = true;
     }
-    std::cout << "\n";
 
     if (isDeveloperMode)
         std::cout << "--developer specified, launching in developer mode\n";
     else if (isDebugMode)
         std::cout << "--debug specified, launching in debug mode\n";
 
-    bool isComInitialized     = false;
+    // bool isComInitialized     = false;
     unsigned char reloadFlags = EditorReloadFlag_None;
 
     if (isDeveloperMode)
@@ -147,20 +218,20 @@ int main(int argc, char* argv[])
         reloadFlags |= EditorReloadFlag_Release;
 #endif // ENTERPRISE_DEBUG
 
-        isComInitialized = CoInitialize(NULL) == S_OK;
-        if (!isComInitialized)
-        {
-            std::cerr << "COM initialization failed! "
-                         "Debuggers will not automatically reattach.\n";
-        }
+        // isComInitialized = CoInitialize(NULL) == S_OK;
+        // if (!isComInitialized)
+        //{
+        //     std::cerr << "COM initialization failed! "
+        //                  "Debuggers will not automatically reattach.\n";
+        // }
     }
 
-    bool isDebuggerAttached = IsDebuggerPresent();
-    if (isDebuggerAttached && isComInitialized)
-    {
-        std::cout << "Debugger detected!\n";
-        DetachDebugger(true);
-    }
+    // bool isDebuggerAttached = IsDebuggerPresent();
+    // if (isDebuggerAttached && isComInitialized)
+    //{
+    //     std::cout << "Debugger detected!\n";
+    //     DetachDebugger(true);
+    // }
 
     HMODULE editorModuleHandle                           = NULL;
     unsigned char (*editorMainFunctionPtr)(int, char*[]) = nullptr;
@@ -199,8 +270,8 @@ int main(int argc, char* argv[])
             return EXIT_FAILURE;
         }
 
-        if (isDebuggerAttached && isComInitialized)
-            AttachDebugger();
+        // if (isDebuggerAttached /* && isComInitialized*/)
+        //     AttachDebugger();
 
         reloadFlags = editorMainFunctionPtr(argc, argv);
 
@@ -221,17 +292,17 @@ int main(int argc, char* argv[])
             }
         }
 
-        isDebuggerAttached = IsDebuggerPresent();
-        if (isDebuggerAttached && isComInitialized)
-            DetachDebugger(true);
+        // isDebuggerAttached = IsDebuggerPresent();
+        // if (isDebuggerAttached && isComInitialized)
+        //     DetachDebugger(true);
 
         editorMainFunctionPtr = nullptr;
         FreeLibrary(editorModuleHandle);
         editorModuleHandle = NULL;
     } while (reloadFlags != EditorReloadFlag_None);
 
-    if (isComInitialized)
-        CoUninitialize();
+    // if (isComInitialized)
+    //     CoUninitialize();
 
     return EXIT_SUCCESS;
 }

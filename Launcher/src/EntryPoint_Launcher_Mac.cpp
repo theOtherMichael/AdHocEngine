@@ -53,13 +53,13 @@ static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
     char cPathToLauncher[pathBufferLength];
     if (_NSGetExecutablePath(cPathToLauncher, &pathBufferLength) != 0)
     {
-        std::cerr << "Failed to get path to build folder!\n";
+        std::cerr << "Failed to get path to launcher!\n";
         return nullptr;
     }
     char realCPathToLauncher[maxPathBufferSize];
     if (realpath(cPathToLauncher, realCPathToLauncher) == NULL)
     {
-        std::cerr << "Failed to resolve real path to build folder!\n";
+        std::cerr << "Failed to resolve real path to launcher!\n";
         return nullptr;
     }
 
@@ -242,7 +242,7 @@ int main(int argc, char* argv[])
 
         if (editorModuleHandle == nullptr)
         {
-            std::cerr << "Error loading editor DLL! " << dlerror() << "\n";
+            std::cerr << "Error loading editor dylib! " << dlerror() << "\n";
             return EXIT_FAILURE;
         }
 

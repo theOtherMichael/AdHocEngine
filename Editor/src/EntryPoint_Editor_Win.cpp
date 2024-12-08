@@ -49,17 +49,21 @@ static bool InitSymbolHandler(bool isDeveloperMode)
     bool isSymbolHandlerInitialized = false;
     if (isDeveloperMode)
     {
-#ifdef ENTERPRISE_DEBUG
-        std::string symbolFileSearchPath = fs::canonical("build\\Debug\\").string();
-#elif defined(ENTERPRISE_DEV)
-        std::string symbolFileSearchPath = fs::canonical("build\\Dev\\").string();
-#elif defined(ENTERPRISE_RELEASE)
-        std::string symbolFileSearchPath = fs::canonical("build\\Release\\").string();
-#else
-        static_assert(false);
-#endif // ENTERPRISE_DEBUG
+        TCHAR rawPathToLauncher[MAX_PATH];
+        if (!GetModuleFileName(NULL, rawPathToLauncher, MAX_PATH))
+        {
+            fmt::print(stderr, "Failed to get path to launcher!\n");
+            isSymbolHandlerInitialized = false;
+        }
+        else
+        {
+            fs::path pathToLauncher    = rawPathToLauncher;
+            fs::path pathToBuildFolder = pathToLauncher.parent_path().parent_path();
+            fs::path pathToReloadCache = pathToBuildFolder / "Launcher\\reload_cache";
 
-        isSymbolHandlerInitialized = SymInitialize(platformData->processHandle, symbolFileSearchPath.c_str(), TRUE);
+            isSymbolHandlerInitialized =
+                SymInitialize(platformData->processHandle, pathToReloadCache.string().c_str(), TRUE);
+        }
     }
     else
     {
@@ -144,14 +148,14 @@ extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[]
 
     HANDLE reloadWatchThread      = NULL;
     std::atomic_uchar reloadFlags = EditorReloadFlag_None;
-    if (isDeveloperMode)
-        reloadWatchThread = StartReloadWatchThread(&reloadFlags);
+    // if (isDeveloperMode)
+    //     reloadWatchThread = StartReloadWatchThread(&reloadFlags);
 
     glfwSetErrorCallback(OnGlfwError);
 
     if (!glfwInit())
     {
-        JoinReloadWatchThread(reloadWatchThread);
+        // JoinReloadWatchThread(reloadWatchThread);
         CleanUpSymbolHandler(isSymbolHandlerInitialized);
         return EditorReloadFlag_None;
     }
@@ -161,7 +165,7 @@ extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[]
     if (!mainWindowPtr)
     {
         glfwTerminate();
-        JoinReloadWatchThread(reloadWatchThread);
+        // JoinReloadWatchThread(reloadWatchThread);
         CleanUpSymbolHandler(isSymbolHandlerInitialized);
         return EditorReloadFlag_None;
     }
@@ -178,7 +182,7 @@ extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[]
     }
 
     glfwTerminate();
-    JoinReloadWatchThread(reloadWatchThread);
+    // JoinReloadWatchThread(reloadWatchThread);
     CleanUpSymbolHandler(isSymbolHandlerInitialized);
     return reloadFlags;
 }
