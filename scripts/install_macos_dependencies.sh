@@ -1,5 +1,6 @@
 #!/bin/bash
 # This script is triggered as an Xcode scheme pre-build action.
+# The working directory is the workspace folder (repository root).
 
 engine_manifest_path="./Engine/vcpkg.json"
 editor_manifest_path="./Editor/vcpkg.json"
@@ -8,38 +9,50 @@ editor_checksum_path="./Editor/vcpkg_installed/manifest_checksum.txt"
 
 engine_manifest_checksum=""
 editor_manifest_checksum=""
-is_engine_dependency_install_required=true
-is_editor_dependency_install_required=true
+is_engine_dependency_install_required=false
+is_editor_dependency_install_required=false
 
 check_manifests_for_changes() {
-    echo "Checking Engine/vcpkg.json for changes..."
-    engine_manifest_checksum=$(shasum $engine_manifest_path | awk '{ print $1 }')
-
-    if [ -f $engine_checksum_path ]; then
-        previous_engine_checksum=$(cat $engine_checksum_path)
-        if [ "$engine_manifest_checksum" = "$previous_engine_checksum" ]; then
-            echo "No changes to Engine/vcpkg.json detected since last build"
-            is_engine_dependency_install_required=false
-        else
-            echo "Detected changes to Engine/vcpkg.json. Engine dependencies will be reinstalled"
-        fi
+    if [ ! -f "$engine_manifest_path" ]; then
+        echo "Unable to locate engine manifest at \"$engine_manifest_path\"!"
+        return 1
     else
-        echo "Manifest file $engine_manifest_path not found. Engine dependencies will be installed"
+        echo "Checking \"$engine_manifest_path\" for changes..."
+        engine_manifest_checksum=$(shasum $engine_manifest_path | awk '{ print $1 }')
+        echo "Engine manifest checksum: $engine_manifest_checksum"
+
+        if [ -f $engine_checksum_path ]; then
+            previous_engine_checksum=$(cat $engine_checksum_path)
+            if [ "$engine_manifest_checksum" = "$previous_engine_checksum" ]; then
+                echo "No changes to Engine/vcpkg.json detected since last build. Dependencies will not be reinstalled"
+            else
+                echo "Detected changes to Engine/vcpkg.json. Engine dependencies will be reinstalled"
+                is_engine_dependency_install_required=true
+            fi
+        else
+            echo "Engine checksum file \"$engine_checksum_path\" was not found. Engine dependencies will be installed"
+        fi
     fi
 
-    echo "Checking Editor/vcpkg.json for changes..."
-    editor_manifest_checksum=$(shasum $editor_manifest_path | awk '{ print $1 }')
-
-    if [ -f $editor_checksum_path ]; then
-        previous_editor_checksum=$(cat $editor_checksum_path)
-        if [ "$editor_manifest_checksum" = "$previous_editor_checksum" ]; then
-            echo "No changes to Editor/vcpkg.json detected since last build"
-            is_editor_dependency_install_required=false
-        else
-            echo "Detected changes to Editor/vcpkg.json. Editor dependencies will be reinstalled"
-        fi
+    if [ ! -f "$editor_manifest_path" ]; then
+        echo "Unable to locate editor manifest at \"$editor_manifest_path\"!"
+        return 1
     else
-        echo "Manifest file $editor_manifest_path not found. Editor dependencies will be installed"
+        echo "Checking Editor/vcpkg.json for changes..."
+        editor_manifest_checksum=$(shasum $editor_manifest_path | awk '{ print $1 }')
+        echo "Editor manifest checksum: $editor_manifest_checksum"
+
+        if [ -f $editor_checksum_path ]; then
+            previous_editor_checksum=$(cat $editor_checksum_path)
+            if [ "$editor_manifest_checksum" = "$previous_editor_checksum" ]; then
+                echo "No changes to Editor/vcpkg.json detected since last build. Dependencies will not be reinstalled"
+            else
+                echo "Detected changes to Editor/vcpkg.json. Editor dependencies will be reinstalled"
+                is_editor_dependency_install_required=true
+            fi
+        else
+            echo "Editor checksum file \"$editor_checksum_path\" was not found. Editor dependencies will be installed"
+        fi
     fi
 }
 
@@ -201,3 +214,4 @@ if ! write_checksums_to_file; then
 fi
 
 echo "Successfully completed vcpkg install step!"
+exit 0

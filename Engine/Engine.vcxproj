@@ -99,33 +99,33 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)StaticD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)Dev</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)StaticDev</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)Static</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
@@ -152,8 +152,11 @@
       <Command>
       </Command>
     </PreBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
     <PostBuildEvent>
-      <Command>call $(SolutionDir)scripts\CopyWindowsDependencies.bat $(Configuration)</Command>
+      <Command>echo Building statlic engine library...
+msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
@@ -173,10 +176,8 @@
       <Command>
       </Command>
     </PreBuildEvent>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -200,8 +201,11 @@
       <Command>
       </Command>
     </PreBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
     <PostBuildEvent>
-      <Command>call $(SolutionDir)scripts\CopyWindowsDependencies.bat $(Configuration)</Command>
+      <Command>echo Building statlic engine library...
+msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
@@ -225,10 +229,8 @@
       <Command>
       </Command>
     </PreBuildEvent>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <ClCompile>
@@ -252,8 +254,11 @@
       <Command>
       </Command>
     </PreBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
     <PostBuildEvent>
-      <Command>call $(SolutionDir)scripts\CopyWindowsDependencies.bat $(Configuration)</Command>
+      <Command>echo Building statlic engine library...
+msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
@@ -277,10 +282,8 @@
       <Command>
       </Command>
     </PreBuildEvent>
-    <PostBuildEvent>
-      <Command>
-      </Command>
-    </PostBuildEvent>
+    <PostBuildEvent />
+    <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\Enterprise\Core\Assertions.h" />
@@ -299,30 +302,21 @@
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Static</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">Installing vcpkg dependencies</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Dynamic</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Installing vcpkg dependencies</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Dynamic</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Installing vcpkg dependencies</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Static</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">Installing vcpkg dependencies</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Dynamic</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Installing vcpkg dependencies</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <Command Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat Static</Command>
-      <Message Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">Installing vcpkg dependencies</Message>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">$(ProjectDir)vcpkg_installed\empty.txt</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running vcpkg script</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Running vcpkg script</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running vcpkg script</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">Skipping vcpkg script for static library build</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">Skipping vcpkg script for static library build</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">Skipping vcpkg script for static library build</Message>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
