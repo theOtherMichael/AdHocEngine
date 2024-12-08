@@ -11,7 +11,7 @@
 		CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE46BCFA2CFC33CD002F900C /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
 		CE46BCFB2CFC33CD002F900C /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
-		CE46BCFD2CFC33CD002F900C /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */; };
+		CE46BCFD2CFC33CD002F900C /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
 		CE46BCFE2CFC33CD002F900C /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
 		CE46BCFF2CFC33CD002F900C /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
 		CE46BD022CFC33CD002F900C /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */; };
@@ -24,10 +24,10 @@
 		CE4C6EAF2B0196810015E51A /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
 		CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
 		CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
-		CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */; };
+		CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
 		CED3D68A2B12D3D700C5FB04 /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA42B0196810015E51A /* EditorReloadFlags.h */; };
 		CED3D68B2B12D3D700C5FB04 /* ReloadSentinel_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */; };
-		CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */; };
+		CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */; };
 		CED3D68E2B12D3D700C5FB04 /* EntryPoint_Editor_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */; };
 		CED3D68F2B12D3D700C5FB04 /* ReloadSentinel_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */; };
 		CEDB37A62CFC1B3B00FC593F /* libfmt.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */; };
@@ -48,7 +48,7 @@
 		CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Editor_Win.cpp; path = src/EntryPoint_Editor_Win.cpp; sourceTree = SOURCE_ROOT; };
 		CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ReloadSentinel_Win.cpp; path = src/ReloadSentinel_Win.cpp; sourceTree = SOURCE_ROOT; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
-		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EntryPoint_Editor_Mac.mm; path = src/EntryPoint_Editor_Mac.mm; sourceTree = SOURCE_ROOT; };
+		CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Editor_Mac.cpp; path = src/EntryPoint_Editor_Mac.cpp; sourceTree = SOURCE_ROOT; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDB37A42CFC1B3B00FC593F /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37A52CFC1B3B00FC593F /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = SOURCE_ROOT; };
@@ -134,7 +134,7 @@
 		CE4C6EA52B0196810015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm */,
+				CE8BF0F62B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp */,
 				CE4C6EA82B0196810015E51A /* EntryPoint_Editor_Win.cpp */,
 				CE4C6EA92B0196810015E51A /* ReloadSentinel_Win.cpp */,
 				CE4C6EA72B0196810015E51A /* ReloadSentinel_Win.h */,
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.mm in Sources */,
+				CE8BF0F72B0C87E100ED57FD /* EntryPoint_Editor_Mac.cpp in Sources */,
 				CE4C6EB02B0196810015E51A /* EntryPoint_Editor_Win.cpp in Sources */,
 				CE4C6EB12B0196810015E51A /* ReloadSentinel_Win.cpp in Sources */,
 			);
@@ -289,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BCFD2CFC33CD002F900C /* EntryPoint_Editor_Mac.mm in Sources */,
+				CE46BCFD2CFC33CD002F900C /* EntryPoint_Editor_Mac.cpp in Sources */,
 				CE46BCFE2CFC33CD002F900C /* EntryPoint_Editor_Win.cpp in Sources */,
 				CE46BCFF2CFC33CD002F900C /* ReloadSentinel_Win.cpp in Sources */,
 			);
@@ -299,7 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.mm in Sources */,
+				CED3D68D2B12D3D700C5FB04 /* EntryPoint_Editor_Mac.cpp in Sources */,
 				CED3D68E2B12D3D700C5FB04 /* EntryPoint_Editor_Win.cpp in Sources */,
 				CED3D68F2B12D3D700C5FB04 /* ReloadSentinel_Win.cpp in Sources */,
 			);
