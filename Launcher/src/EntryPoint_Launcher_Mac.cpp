@@ -95,7 +95,7 @@ static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
     fs::path pathToEditorVcpkgDependencies;
     std::string configSuffix;
 
-    switch (reloadFlags)
+    switch (reloadFlags & EditorReloadFlag_ConfigMask)
     {
     case EditorReloadFlag_Debug:
         configSuffix                  = "D";
@@ -204,12 +204,13 @@ int main(int argc, char* argv[])
 
     if (isDeveloperMode)
     {
+        reloadFlags = EditorReloadFlag_Engine | EditorReloadFlag_Editor;
 #ifdef ENTERPRISE_DEBUG
-        reloadFlags = EditorReloadFlag_Debug;
+        reloadFlags |= EditorReloadFlag_Debug;
 #elif defined(ENTERPRISE_DEV)
-        reloadFlags = EditorReloadFlag_Dev;
+        reloadFlags |= EditorReloadFlag_Dev;
 #elif defined(ENTERPRISE_RELEASE)
-        reloadFlags = EditorReloadFlag_Release;
+        reloadFlags |= EditorReloadFlag_Release;
 #endif // ENTERPRISE_DEBUG
     }
 
@@ -256,7 +257,7 @@ int main(int argc, char* argv[])
 
         if (!isDeveloperMode)
         {
-            switch (reloadFlags)
+            switch (reloadFlags & EditorReloadFlag_ConfigMask)
             {
             case EditorReloadFlag_None: break;
             case EditorReloadFlag_Debug: isDebugMode = true; break;
