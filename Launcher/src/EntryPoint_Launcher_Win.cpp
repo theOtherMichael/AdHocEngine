@@ -53,6 +53,28 @@ static void CopyFolderContents(const fs::path& sourceFolder, const fs::path& des
     }
 }
 
+void WaitOnBuildProductChanged(std::filesystem::path& buildProductPath,
+                               std::filesystem::file_time_type& buildProductLastModified,
+                               std::chrono::steady_clock::time_point& scheduledTimeOut)
+{
+    std::error_code ec;
+
+    std::cout << "Waiting for \"" << buildProductPath << "\"...\n";
+    auto engineLastBuildTime = fs::last_write_time(buildProductPath, ec);
+    if (ec)
+    {
+        std::cerr << "Failed to get last build time for product \"" << buildProductPath << "\"! " << ec.message() << "\n";
+        return;
+    }
+
+    while (fs::last_write_time(buildProductPath, ec) <= buildProductLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+}
+
 static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
 {
     TCHAR cPathToLauncher[MAX_PATH];
@@ -113,37 +135,14 @@ static HMODULE CopyAndLoadEditorModule(unsigned char reloadFlags)
     static fs::file_time_type editorSymbolsLastModified;
 
     auto scheduledTimeOut = steady_clock::now() + 15s;
+
+    WaitOnBuildProductChanged(builtEngineModulePath, engineModuleLastModified, scheduledTimeOut);
+    WaitOnBuildProductChanged(builtEngineSymbolsPath, engineSymbolsLastModified, scheduledTimeOut);
+    WaitOnBuildProductChanged(builtEditorModulePath, editorModuleLastModified, scheduledTimeOut);
+    WaitOnBuildProductChanged(builtEditorSymbolsPath, editorSymbolsLastModified, scheduledTimeOut);
+
     std::error_code ec;
-
-    std::cout << "Waiting for " << builtEngineModulePath << "...\n";
-    while (fs::last_write_time(builtEngineModulePath, ec) <= engineModuleLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << "Waiting for " << builtEngineSymbolsPath << "...\n";
-    while (fs::last_write_time(builtEngineSymbolsPath, ec) <= engineSymbolsLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << "Waiting for " << builtEditorModulePath << "...\n";
-    while (fs::last_write_time(builtEditorModulePath, ec) <= editorModuleLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << "Waiting for " << builtEditorSymbolsPath << "...\n";
-    while (fs::last_write_time(builtEditorSymbolsPath, ec) <= editorSymbolsLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-
+    
     std::cout << "Deleting old build products...\n";
     fs::remove_all(pathToReloadCache, ec);
     if (ec)

@@ -46,6 +46,28 @@ static void CopyFolderContents(const fs::path& sourceFolder, const fs::path& des
     }
 }
 
+void WaitOnBuildProductChanged(std::filesystem::path& buildProductPath,
+                               std::filesystem::file_time_type& buildProductLastModified,
+                               std::chrono::steady_clock::time_point& scheduledTimeOut)
+{
+    std::error_code ec;
+
+    std::cout << "Waiting for \"" << buildProductPath << "\"...\n";
+    auto engineLastBuildTime = fs::last_write_time(buildProductPath, ec);
+    if (ec)
+    {
+        std::cerr << "Failed to get last build time for product \"" << buildProductPath << "\"! " << ec.message() << "\n";
+        return;
+    }
+
+    while (fs::last_write_time(buildProductPath, ec) <= buildProductLastModified)
+    {
+        std::this_thread::sleep_for(500ms);
+        if (steady_clock::now() > scheduledTimeOut)
+            break;
+    }
+}
+
 static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
 {
     constexpr auto maxPathBufferSize = PATH_MAX + 1;
@@ -113,36 +135,13 @@ static void* CopyAndLoadEditorModule(unsigned char reloadFlags)
     static fs::file_time_type editorDsymLastModified;
 
     auto scheduledTimeOut = steady_clock::now() + 15s;
-    std::error_code ec;
 
-    std::cout << "Waiting for " << builtEngineDylibPath << "...\n";
-    while (fs::last_write_time(builtEngineDylibPath, ec) <= engineDylibLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << "Waiting for " << builtEngineDsymPath << "...\n";
-    while (fs::last_write_time(builtEngineDsymPath, ec) <= engineDsymLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << "Waiting for " << builtEditorDylibPath << "...\n";
-    while (fs::last_write_time(builtEditorDylibPath, ec) <= editorDylibLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
-    std::cout << "Waiting for " << builtEditorDsymPath << "...\n";
-    while (fs::last_write_time(builtEditorDsymPath, ec) <= editorDsymLastModified)
-    {
-        std::this_thread::sleep_for(500ms);
-        if (steady_clock::now() > scheduledTimeOut)
-            break;
-    }
+    WaitOnBuildProductChanged(builtEngineDylibPath, engineDylibLastModified, scheduledTimeOut);
+    WaitOnBuildProductChanged(builtEngineDsymPath, engineDsymLastModified, scheduledTimeOut);
+    WaitOnBuildProductChanged(builtEditorDylibPath, editorDylibLastModified, scheduledTimeOut);
+    WaitOnBuildProductChanged(builtEditorDsymPath, editorDsymLastModified, scheduledTimeOut);
+
+    std::error_code ec;
 
     std::cout << "Deleting old build products...\n";
     fs::remove_all(pathToReloadCache);
