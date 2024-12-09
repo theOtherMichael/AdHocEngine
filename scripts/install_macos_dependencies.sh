@@ -57,15 +57,6 @@ check_manifests_for_changes() {
     fi
 }
 
-write_checksums_to_file() {
-    if ! echo "$engine_manifest_checksum" >"$engine_checksum_path"; then
-        return 1
-    fi
-    if ! echo "$editor_manifest_checksum" >"$editor_checksum_path"; then
-        return 1
-    fi
-}
-
 lipo_directory_recursive() {
     local source_dir="$1"
     local target_dir="$2"
@@ -210,8 +201,18 @@ if [ "$install_failed" == true ]; then
 fi
 
 echo "Installation steps completed without issue. Writing manifest checksums to file..."
-if ! write_checksums_to_file; then
-    echo "Failed to write manifest checksums to disk! Next build may redundantly reinstall dependencies"
+
+echo "$engine_manifest_checksum" >"$engine_checksum_path"
+engineChecksumFileContents=$(cat $engine_checksum_path)
+if [ "$engineChecksumFileContents" = "$engine_checksum_path" ]; then
+    echo 
+    echo Failed to write engine manifest checksum to disk! Next build may redundantly reinstall dependencies
+fi
+
+echo "$editor_manifest_checksum" >"$editor_checksum_path"
+editorChecksumFileContents=$(cat $editor_checksum_path)
+if [ "$editorChecksumFileContents" = "$editor_checksum_path" ]; then
+    echo Failed to write editor manifest checksum to disk! Next build may redundantly reinstall dependencies
 fi
 
 echo "Successfully completed vcpkg install step!"
