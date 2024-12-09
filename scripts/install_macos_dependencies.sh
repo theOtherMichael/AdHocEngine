@@ -31,6 +31,7 @@ check_manifests_for_changes() {
             fi
         else
             echo "Engine checksum file \"$engine_checksum_path\" was not found. Engine dependencies will be installed"
+            is_engine_dependency_install_required=true
         fi
     fi
 
