@@ -28,10 +28,10 @@
 		CE46BD272CFC4418002F900C /* libEditorD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD262CFC4418002F900C /* libEditorD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE46BD292CFC4443002F900C /* libEngineStatic.a in Copy Developer Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD282CFC4443002F900C /* libEngineStatic.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE46BD2B2CFC4471002F900C /* libEngineStaticD.a in Copy Developer Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD2E2CFC4523002F900C /* libfmt.10.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD2F2CFC4523002F900C /* libglfw.3.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD322CFC454B002F900C /* libfmtd.10.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD332CFC454B002F900C /* libglfw.3.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.3.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD2E2CFC4523002F900C /* libfmt.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD2F2CFC4523002F900C /* libglfw.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD322CFC454B002F900C /* libfmtd.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD332CFC454B002F900C /* libglfw.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE4C6E9F2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
 		CE4C6EA02B01963D0015E51A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
 		CE4C6EA12B01963D0015E51A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
@@ -53,8 +53,8 @@
 			dstPath = debug;
 			dstSubfolderSpec = 10;
 			files = (
-				CE46BD322CFC454B002F900C /* libfmtd.10.dylib in Copy Debug Libraries */,
-				CE46BD332CFC454B002F900C /* libglfw.3.dylib in Copy Debug Libraries */,
+				CE46BD322CFC454B002F900C /* libfmtd.dylib in Copy Debug Libraries */,
+				CE46BD332CFC454B002F900C /* libglfw.dylib in Copy Debug Libraries */,
 				CE46BD222CFC4354002F900C /* libEngineD.dylib in Copy Debug Libraries */,
 				CE46BD272CFC4418002F900C /* libEditorD.dylib in Copy Debug Libraries */,
 			);
@@ -67,8 +67,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE46BD2E2CFC4523002F900C /* libfmt.10.dylib in Copy Libraries */,
-				CE46BD2F2CFC4523002F900C /* libglfw.3.dylib in Copy Libraries */,
+				CE46BD2E2CFC4523002F900C /* libfmt.dylib in Copy Libraries */,
+				CE46BD2F2CFC4523002F900C /* libglfw.dylib in Copy Libraries */,
 				CE46BD1D2CFC4260002F900C /* libEngine.dylib in Copy Libraries */,
 				CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */,
 			);
@@ -135,10 +135,10 @@
 		CE46BD262CFC4418002F900C /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../Editor/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD282CFC4443002F900C /* libEngineStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStatic.a; path = ../Engine/libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticD.a; path = ../Engine/libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.10.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD302CFC454A002F900C /* libfmtd.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.10.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.10.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD312CFC454A002F900C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD2C2CFC4523002F900C /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD2D2CFC4523002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD302CFC454A002F900C /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD312CFC454A002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
 		CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Launcher_Win.cpp; path = src/PlatformHelpers_Launcher_Win.cpp; sourceTree = SOURCE_ROOT; };
 		CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebuggerControls_Win.h; path = src/DebuggerControls_Win.h; sourceTree = SOURCE_ROOT; };
 		CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Launcher_Win.h; path = src/PlatformHelpers_Launcher_Win.h; sourceTree = SOURCE_ROOT; };
@@ -232,10 +232,10 @@
 				CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */,
 				CE46BD282CFC4443002F900C /* libEngineStatic.a */,
 				CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */,
-				CE46BD2C2CFC4523002F900C /* libfmt.10.dylib */,
-				CE46BD302CFC454A002F900C /* libfmtd.10.dylib */,
-				CE46BD2D2CFC4523002F900C /* libglfw.3.dylib */,
-				CE46BD312CFC454A002F900C /* libglfw.3.dylib */,
+				CE46BD2C2CFC4523002F900C /* libfmt.dylib */,
+				CE46BD302CFC454A002F900C /* libfmtd.dylib */,
+				CE46BD2D2CFC4523002F900C /* libglfw.dylib */,
+				CE46BD312CFC454A002F900C /* libglfw.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
