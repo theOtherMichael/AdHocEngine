@@ -1,6 +1,6 @@
-#ifndef _WIN32
+#ifndef ENTERPRISE_WINDOWS
 static_assert(false);
-#endif //_WIN32
+#endif // ENTERPRISE_WINDOWS
 
 #include <atomic>
 #include <chrono>
@@ -15,7 +15,9 @@ static_assert(false);
 #include <Enterprise/Core/PlatformHelpers_Win.h>
 #include <Enterprise/Core/PlatformData_Win.h>
 
-#include <Editor/EditorReloadFlags.h>
+#include <Editor/Core/SymbolExportMacros.h>
+#include <Editor/Core/EditorReloadFlags.h>
+
 #include "ReloadSentinel_Win.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
@@ -131,7 +133,7 @@ static void JoinReloadWatchThread(HANDLE reloadWatchThread)
     }
 }
 
-extern "C" __declspec(dllexport) unsigned char EditorMain(int argc, char* argv[])
+extern "C" EDITOR_API unsigned char EditorMain(int argc, char* argv[])
 {
     const char* editorReloadableFlag = "--developer";
     bool isDeveloperMode             = false;

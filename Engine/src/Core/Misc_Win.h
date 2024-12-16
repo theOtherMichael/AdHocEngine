@@ -1,10 +1,10 @@
 #pragma once
 
-#ifndef _WIN32
+#ifndef ENTERPRISE_WINDOWS
 static_assert(false);
-#endif // _WIN32
+#endif // ENTERPRISE_WINDOWS
 
-#include <Enterprise/Core/SharedLibraryExports.h>
+#include <Enterprise/Core/SymbolExportMacros.h>
 
 namespace Enterprise
 {

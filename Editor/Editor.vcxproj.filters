@@ -26,7 +26,10 @@
     <ClInclude Include="src\ReloadSentinel_Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Editor\EditorReloadFlags.h">
+    <ClInclude Include="include\Editor\Core\EditorReloadFlags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Editor\Core\SymbolExportMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,8 +1,8 @@
 #include <Enterprise/Core/Misc.h>
 
-#ifdef _WIN32
+#ifdef ENTERPRISE_WINDOWS
     #include "Misc_Win.h"
-#endif // _WIN32
+#endif // ENTERPRISE_WINDOWS
 
 #if defined(__APPLE__) && defined(__MACH__)
     #include "Misc_Mac.h"

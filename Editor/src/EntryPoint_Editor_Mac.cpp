@@ -8,14 +8,15 @@ static_assert(false);
 #include <GLFW/glfw3.h>
 #pragma clang diagnostic pop
 
-#include <Editor/EditorReloadFlags.h>
+#include <Editor/Core/SymbolExportMacros.h>
+#include <Editor/Core/EditorReloadFlags.h>
 
 static void OnGlfwError(int error, const char* description)
 {
     fmt::print(stderr, "GLFW error {}: {}\n", error, description);
 }
 
-extern "C" unsigned char EditorMain(int argc, char* argv[])
+extern "C" EDITOR_API unsigned char EditorMain(int argc, char* argv[])
 {
     bool isDeveloperMode = false;
     for (int i = 1; i < argc; i++)

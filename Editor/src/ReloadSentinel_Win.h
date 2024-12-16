@@ -1,6 +1,6 @@
 #pragma once
 
-#ifndef _WIN32
+#ifndef ENTERPRISE_WINDOWS
 static_assert(false);
 #endif
 

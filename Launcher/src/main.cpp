@@ -6,7 +6,7 @@
 #include <string_view>
 #include <thread>
 
-#include <Editor/EditorReloadFlags.h>
+#include <Editor/Core/EditorReloadFlags.h>
 
 #include "DynamicLibrary/DynamicLibrary.h"
 #include "Misc/Misc.h"
@@ -83,20 +83,18 @@ static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
     fs::path pathToReloadCache = pathToBuildFolder / "Launcher" / "reload_cache";
     fs::path pathToRepository  = pathToBuildFolder.parent_path();
 
-#ifdef _WIN32
+#ifdef ENTERPRISE_WINDOWS
     fs::path pathToEngineVcpkgDependencies = pathToRepository / "Engine\\vcpkg_installed\\dynamic\\x64-windows";
     fs::path pathToEditorVcpkgDependencies = pathToRepository / "Editor\\vcpkg_installed\\dynamic\\x64-windows";
     fs::path vcPkgOutputFolderName         = "bin";
     std::string dynamicLibraryExtension    = ".dll";
     std::string symbolsFileExtension       = ".pdb";
-
 #elif defined(__APPLE__) && DEFINED(__MACH__)
     fs::path pathToEngineVcpkgInstalledFolder = pathToRepository / "Engine/vcpkg_installed/uni-dynamic";
     fs::path pathToEditorVcpkgInstalledFolder = pathToRepository / "Editor/vcpkg_installed/uni-dynamic";
     fs::path vcPkgOutputFolderName            = "lib";
     std::string dynamicLibraryExtension       = ".dylib";
     std::string symbolsFileExtension          = ".dylib.dsym";
-
 #else
     static_assert(false);
 #endif
@@ -243,7 +241,7 @@ int main(int argc, char* argv[])
     //     DetachDebugger(true);
     // }
 
-#ifdef _WIN32
+#ifdef ENTERPRISE_WINDOWS
     fs::path pathToLibraries     = Misc::GetLauncherPath().parent_path();
     fs::path nameOfDebugModule   = "EditorD.dll";
     fs::path nameOfReleaseModule = "Editor.dll";

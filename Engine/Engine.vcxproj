@@ -139,7 +139,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_EDITOR;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_EDITOR;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,7 +164,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -186,7 +186,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_EDITOR;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_EDITOR;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -215,7 +215,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -239,7 +239,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_EDITOR;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_EDITOR;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -268,7 +268,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -289,7 +289,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <ClInclude Include="src\Core\Misc_Win.h" />
     <ClInclude Include="include\Enterprise\Core\PlatformHelpers_Win.h" />
     <ClInclude Include="include\Enterprise\Core\PlatformData_Win.h" />
-    <ClInclude Include="include\Enterprise\Core\SharedLibraryExports.h" />
+    <ClInclude Include="include\Enterprise\Core\SymbolExportMacros.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\Misc_Win.cpp" />

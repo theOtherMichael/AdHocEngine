@@ -83,7 +83,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_EDITOR;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_EDITOR;ENTERPRISE_WINDOWS;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -102,7 +102,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_EDITOR;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_EDITOR;ENTERPRISE_WINDOWS;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,7 +123,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_EDITOR;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_EDITOR;ENTERPRISE_WINDOWS;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,7 +145,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Editor\EditorReloadFlags.h" />
+    <ClInclude Include="include\Editor\Core\EditorReloadFlags.h" />
+    <ClInclude Include="include\Editor\Core\SymbolExportMacros.h" />
     <ClInclude Include="src\ReloadSentinel_Win.h" />
   </ItemGroup>
   <ItemGroup>

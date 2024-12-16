@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Enterprise\Core\SharedLibraryExports.h">
+    <ClInclude Include="include\Enterprise\Core\SymbolExportMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Enterprise\Core\PlatformHelpers_Win.h">

@@ -1,8 +1,8 @@
 #pragma once
 
-#ifndef _WIN32
+#ifndef ENTERPRISE_WINDOWS
 static_assert(false);
-#endif // _WIN32
+#endif // ENTERPRISE_WINDOWS
 
 void AttachDebugger();
 void DetachDebugger(bool waitForBreakOrEnd);

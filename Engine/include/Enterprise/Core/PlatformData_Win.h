@@ -1,10 +1,10 @@
 #pragma once
 
-#ifndef _WIN32
+#ifndef ENTERPRISE_WINDOWS
 static_assert(false);
-#endif // !_WIN32
+#endif // !ENTERPRISE_WINDOWS
 
-#include "SharedLibraryExports.h"
+#include "SymbolExportMacros.h"
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
@@ -14,7 +14,7 @@ static_assert(false);
 namespace Enterprise
 {
 
-struct ENTERPRISE_API PlatformData_Win
+struct ENGINE_API PlatformData_Win
 {
 public:
     static const PlatformData_Win* Get();
@@ -30,11 +30,11 @@ private:
     PlatformData_Win(PlatformData_Win&& other)                 = delete;
     PlatformData_Win& operator=(const PlatformData_Win& other) = delete;
 
-    friend ENTERPRISE_API PlatformData_Win* GetMutablePlatformData_Win();
+    friend ENGINE_API PlatformData_Win* GetMutablePlatformData_Win();
 };
 
 #ifdef ENTERPRISE_INTERNAL
-ENTERPRISE_API PlatformData_Win* GetMutablePlatformData_Win();
+ENGINE_API PlatformData_Win* GetMutablePlatformData_Win();
 #endif // ENTERPRISE_INTERNAL
 
 } // namespace Enterprise

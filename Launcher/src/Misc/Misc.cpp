@@ -1,7 +1,7 @@
 #include <iostream>
 #include <filesystem>
 
-#ifdef _WIN32
+#ifdef ENTERPRISE_WINDOWS
     #ifndef WIN32_LEAN_AND_MEAN
         #define WIN32_LEAN_AND_MEAN
     #endif // WIN32_LEAN_AND_MEAN
@@ -20,7 +20,7 @@ namespace Misc
 
 fs::path GetLauncherPath()
 {
-#ifdef _WIN32
+#ifdef ENTERPRISE_WINDOWS
     TCHAR cPathToLauncher[MAX_PATH];
     if (!GetModuleFileName(NULL, cPathToLauncher, MAX_PATH))
     {

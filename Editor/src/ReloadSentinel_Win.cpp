@@ -10,7 +10,7 @@
 #include <Enterprise/Core/Assertions.h>
 #include <Enterprise/Core/PlatformHelpers_Win.h>
 
-#include <Editor/EditorReloadFlags.h>
+#include <Editor/Core/EditorReloadFlags.h>
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN

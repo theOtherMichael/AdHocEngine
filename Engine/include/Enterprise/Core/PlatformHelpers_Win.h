@@ -1,8 +1,8 @@
 #pragma once
 
-#ifndef _WIN32
+#ifndef ENTERPRISE_WINDOWS
 static_assert(false);
-#endif // !_WIN32
+#endif // !ENTERPRISE_WINDOWS
 
 #include <string>
 #include <string_view>
@@ -12,9 +12,9 @@ static_assert(false);
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
-#include <Enterprise/Core/SharedLibraryExports.h>
+#include <Enterprise/Core/SymbolExportMacros.h>
 
-ENTERPRISE_API std::string WCHARtoUTF8(const WCHAR* str, size_t length = 0);
-ENTERPRISE_API std::wstring UTF8toWCHAR(const std::string_view str);
+ENGINE_API std::string WCHARtoUTF8(const WCHAR* str, size_t length = 0);
+ENGINE_API std::wstring UTF8toWCHAR(const std::string_view str);
 
-ENTERPRISE_API std::string GetLastErrorAsString();
+ENGINE_API std::string GetLastErrorAsString();
