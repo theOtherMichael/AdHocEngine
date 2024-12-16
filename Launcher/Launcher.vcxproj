@@ -133,15 +133,19 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\DebuggerControls_Win.cpp" />
-    <ClCompile Include="src\EntryPoint_Launcher_Win.cpp" />
-    <ClCompile Include="src\PlatformHelpers_Launcher_Win.cpp" />
+    <ClCompile Include="src\Debugging\DebuggerControls_Win.cpp" />
+    <ClCompile Include="src\DynamicLibrary\DynamicLibrary_Win.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Misc\Misc.cpp" />
+    <ClCompile Include="src\Misc\WindowsHelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h" />
     <ClInclude Include="src\Assertions.h" />
-    <ClInclude Include="src\DebuggerControls_Win.h" />
-    <ClInclude Include="src\PlatformHelpers_Launcher_Win.h" />
+    <ClInclude Include="src\Debugging\DebuggerControls_Win.h" />
+    <ClInclude Include="src\DynamicLibrary\DynamicLibrary.h" />
+    <ClInclude Include="src\Misc\Misc.h" />
+    <ClInclude Include="src\Misc\WindowsHelpers.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\Win\Enterprise.ico" />

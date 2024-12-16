@@ -15,27 +15,39 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\EntryPoint_Launcher_Win.cpp">
+    <ClCompile Include="src\Misc\WindowsHelpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\PlatformHelpers_Launcher_Win.cpp">
+    <ClCompile Include="src\Debugging\DebuggerControls_Win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\DebuggerControls_Win.cpp">
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DynamicLibrary\DynamicLibrary_Win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Misc\Misc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\PlatformHelpers_Launcher_Win.h">
+    <ClInclude Include="src\Misc\WindowsHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Assertions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\DebuggerControls_Win.h">
+    <ClInclude Include="src\Debugging\DebuggerControls_Win.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resources\Win\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DynamicLibrary\DynamicLibrary.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Misc\Misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

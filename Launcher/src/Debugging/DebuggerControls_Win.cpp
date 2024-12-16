@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-#include "PlatformHelpers_Launcher_Win.h"
-
 // https://msdn.microsoft.com/en-us/library/yf86a8ts.aspx
 #pragma warning(disable : 4278)
 #pragma warning(disable : 4146)

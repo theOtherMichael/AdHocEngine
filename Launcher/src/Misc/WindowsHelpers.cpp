@@ -1,4 +1,8 @@
-#include "PlatformHelpers_Launcher_Win.h"
+#include "WindowsHelpers.h"
+
+#ifndef _WIN32
+static_assert(false);
+#endif
 
 #include <string>
 #include <string_view>
@@ -8,7 +12,30 @@
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
-std::string WCHARtoUTF8(const WCHAR* wideString, size_t length)
+namespace Misc::Win
+{
+
+std::string GetLastErrorMessage()
+{
+    DWORD errorCode = GetLastError();
+
+    LPVOID messageBuffer = nullptr;
+    FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
+                  NULL,
+                  errorCode,
+                  MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
+                  (LPTSTR)&messageBuffer,
+                  0,
+                  NULL);
+
+    std::string formattedMessage = std::to_string(errorCode) + ", " + ToUtf8((LPTSTR)messageBuffer);
+
+    LocalFree(messageBuffer);
+
+    return formattedMessage;
+}
+
+std::string ToUtf8(const WCHAR* wideString, size_t length)
 {
     if (length == 0)
         length = wcslen(wideString);
@@ -24,7 +51,7 @@ std::string WCHARtoUTF8(const WCHAR* wideString, size_t length)
     return convertedString;
 }
 
-std::wstring UTF8toWCHAR(const std::string_view narrowString)
+std::wstring ToWchar(const std::string_view narrowString)
 {
     if (narrowString.length() == 0)
         return std::wstring();
@@ -36,22 +63,4 @@ std::wstring UTF8toWCHAR(const std::string_view narrowString)
     return convertedString;
 }
 
-std::string GetLastErrorAsString()
-{
-    DWORD errorCode = GetLastError();
-
-    LPVOID messageBuffer = nullptr;
-    FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
-                  NULL,
-                  errorCode,
-                  MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-                  (LPTSTR)&messageBuffer,
-                  0,
-                  NULL);
-
-    std::string formattedMessage = std::to_string(errorCode) + ", " + WCHARtoUTF8((LPTSTR)messageBuffer);
-
-    LocalFree(messageBuffer);
-
-    return formattedMessage;
-}
+} // namespace Misc::Win
