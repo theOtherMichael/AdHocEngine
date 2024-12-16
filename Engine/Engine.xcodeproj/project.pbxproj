@@ -21,18 +21,15 @@
 		CE1D83B42CF6FA2200534769 /* Misc_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EC12B0196A60015E51A /* Misc_Win.h */; };
 		CE1D83B52CF6FA2200534769 /* Misc_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */; };
 		CE1D83B62CF6FA2200534769 /* PlatformData_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC22B0196A60015E51A /* PlatformData_Win.cpp */; };
-		CE1D83B72CF6FA3000534769 /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
 		CE1D83B82CF6FA3000534769 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE1D83B92CF6FA3000534769 /* PlatformData_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */; };
 		CE1D83BA2CF6FA3000534769 /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
-		CE1D83BB2CF6FA3100534769 /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
 		CE1D83BC2CF6FA3100534769 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE1D83BD2CF6FA3100534769 /* PlatformData_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */; };
 		CE1D83BE2CF6FA3100534769 /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
 		CE3833D62CF2FBFE0004C108 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
 		CE3833D92CF2FC250004C108 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
 		CE46BCCE2CFC336A002F900C /* Misc_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EC12B0196A60015E51A /* Misc_Win.h */; };
-		CE46BCCF2CFC336A002F900C /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
 		CE46BCD02CFC336A002F900C /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
 		CE46BCD12CFC336A002F900C /* Misc_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6ED42B019D450015E51A /* Misc_Mac.h */; };
 		CE46BCD22CFC336A002F900C /* PlatformData_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */; };
@@ -49,7 +46,6 @@
 		CE46BCE52CFC3373002F900C /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE46BCE62CFC3373002F900C /* Misc_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6ED42B019D450015E51A /* Misc_Mac.h */; };
 		CE46BCE72CFC3373002F900C /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
-		CE46BCE82CFC3373002F900C /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
 		CE46BCE92CFC3373002F900C /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
 		CE46BCEA2CFC3373002F900C /* Misc_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EC12B0196A60015E51A /* Misc_Win.h */; };
 		CE46BCEC2CFC3373002F900C /* Misc_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */; };
@@ -63,7 +59,6 @@
 		CE4C6EC72B0196A60015E51A /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE4C6EC82B0196A60015E51A /* PlatformData_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */; };
 		CE4C6EC92B0196A60015E51A /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
-		CE4C6ECA2B0196A60015E51A /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
 		CE4C6ECC2B0196A60015E51A /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EBF2B0196A60015E51A /* Misc.cpp */; };
 		CE4C6ECE2B0196A60015E51A /* Misc_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EC12B0196A60015E51A /* Misc_Win.h */; };
 		CE4C6ED02B0196A60015E51A /* Misc_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */; };
@@ -72,7 +67,6 @@
 		CE4C6ED52B019D450015E51A /* Misc_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6ED42B019D450015E51A /* Misc_Mac.h */; };
 		CE4C6ED72B019EAD0015E51A /* Misc_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */; };
 		CED3D6732B12D3C800C5FB04 /* Misc_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EC12B0196A60015E51A /* Misc_Win.h */; };
-		CED3D6742B12D3C800C5FB04 /* SharedLibraryExports.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */; };
 		CED3D6752B12D3C800C5FB04 /* PlatformHelpers_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */; };
 		CED3D6762B12D3C800C5FB04 /* Misc_Mac.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6ED42B019D450015E51A /* Misc_Mac.h */; };
 		CED3D6772B12D3C800C5FB04 /* PlatformData_Win.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */; };
@@ -83,6 +77,12 @@
 		CED3D67D2B12D3C800C5FB04 /* Misc_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */; };
 		CED3D67E2B12D3C800C5FB04 /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EBF2B0196A60015E51A /* Misc.cpp */; };
 		CED3D67F2B12D3C800C5FB04 /* Misc_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EC32B0196A60015E51A /* Misc_Win.cpp */; };
+		CED4DDB32D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
+		CED4DDB42D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
+		CED4DDB52D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
+		CED4DDB62D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
+		CED4DDB72D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
+		CED4DDB82D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
 		CEDB37922CFC166C00FC593F /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.dylib */; };
 		CEDB37932CFC166C00FC593F /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.dylib */; };
 		CEDB37962CFC169B00FC593F /* libfmtd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.dylib */; };
@@ -103,7 +103,6 @@
 		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = include/Enterprise/Core/Misc.h; sourceTree = SOURCE_ROOT; };
 		CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData_Win.h; path = include/Enterprise/Core/PlatformData_Win.h; sourceTree = SOURCE_ROOT; };
 		CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Win.h; path = include/Enterprise/Core/PlatformHelpers_Win.h; sourceTree = SOURCE_ROOT; };
-		CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SharedLibraryExports.h; path = include/Enterprise/Core/SharedLibraryExports.h; sourceTree = SOURCE_ROOT; };
 		CE4C6EBF2B0196A60015E51A /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Misc.cpp; path = src/Core/Misc.cpp; sourceTree = SOURCE_ROOT; };
 		CE4C6EC02B0196A60015E51A /* PlatformHelpers_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Win.cpp; path = src/Core/PlatformHelpers_Win.cpp; sourceTree = SOURCE_ROOT; };
 		CE4C6EC12B0196A60015E51A /* Misc_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc_Win.h; path = src/Core/Misc_Win.h; sourceTree = SOURCE_ROOT; };
@@ -113,6 +112,7 @@
 		CE4C6ED42B019D450015E51A /* Misc_Mac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Misc_Mac.h; path = src/Core/Misc_Mac.h; sourceTree = SOURCE_ROOT; };
 		CE4C6ED62B019EAD0015E51A /* Misc_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Misc_Mac.cpp; path = src/Core/Misc_Mac.cpp; sourceTree = SOURCE_ROOT; };
 		CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SymbolExportMacros.h; sourceTree = "<group>"; };
 		CEDB37902CFC166C00FC593F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37912CFC166C00FC593F /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37942CFC169B00FC593F /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
@@ -225,11 +225,11 @@
 		CE4C6EB62B0196A60015E51A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6EB82B0196A60015E51A /* Misc.h */,
 				CE4C6EB72B0196A60015E51A /* Assertions.h */,
+				CE4C6EB82B0196A60015E51A /* Misc.h */,
 				CE4C6EB92B0196A60015E51A /* PlatformData_Win.h */,
 				CE4C6EBA2B0196A60015E51A /* PlatformHelpers_Win.h */,
-				CE4C6EBB2B0196A60015E51A /* SharedLibraryExports.h */,
+				CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */,
 			);
 			name = Core;
 			path = include/Enterprise/Core;
@@ -281,12 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4C6ECE2B0196A60015E51A /* Misc_Win.h in Headers */,
-				CE4C6ECA2B0196A60015E51A /* SharedLibraryExports.h in Headers */,
 				CE4C6EC92B0196A60015E51A /* PlatformHelpers_Win.h in Headers */,
 				CE4C6ED52B019D450015E51A /* Misc_Mac.h in Headers */,
 				CE4C6EC82B0196A60015E51A /* PlatformData_Win.h in Headers */,
 				CE4C6EC72B0196A60015E51A /* Misc.h in Headers */,
 				CE4C6EC62B0196A60015E51A /* Assertions.h in Headers */,
+				CED4DDB32D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,9 +298,9 @@
 				CE1D83B82CF6FA3000534769 /* Misc.h in Headers */,
 				CE1D83B02CF6FA2200534769 /* Misc_Mac.h in Headers */,
 				CE1D83BA2CF6FA3000534769 /* PlatformHelpers_Win.h in Headers */,
-				CE1D83B72CF6FA3000534769 /* SharedLibraryExports.h in Headers */,
 				CE3833D62CF2FBFE0004C108 /* Assertions.h in Headers */,
 				CE1D83B42CF6FA2200534769 /* Misc_Win.h in Headers */,
+				CED4DDB62D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,9 +312,9 @@
 				CE1D83BC2CF6FA3100534769 /* Misc.h in Headers */,
 				CE1D83A92CF6FA2200534769 /* Misc_Mac.h in Headers */,
 				CE1D83BE2CF6FA3100534769 /* PlatformHelpers_Win.h in Headers */,
-				CE1D83BB2CF6FA3100534769 /* SharedLibraryExports.h in Headers */,
 				CE3833D92CF2FC250004C108 /* Assertions.h in Headers */,
 				CE1D83AD2CF6FA2200534769 /* Misc_Win.h in Headers */,
+				CED4DDB82D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,12 +323,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE46BCCE2CFC336A002F900C /* Misc_Win.h in Headers */,
-				CE46BCCF2CFC336A002F900C /* SharedLibraryExports.h in Headers */,
 				CE46BCD02CFC336A002F900C /* PlatformHelpers_Win.h in Headers */,
 				CE46BCD12CFC336A002F900C /* Misc_Mac.h in Headers */,
 				CE46BCD22CFC336A002F900C /* PlatformData_Win.h in Headers */,
 				CE46BCD32CFC336A002F900C /* Misc.h in Headers */,
 				CE46BCD42CFC336A002F900C /* Assertions.h in Headers */,
+				CED4DDB42D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +340,9 @@
 				CE46BCE52CFC3373002F900C /* Misc.h in Headers */,
 				CE46BCE62CFC3373002F900C /* Misc_Mac.h in Headers */,
 				CE46BCE72CFC3373002F900C /* PlatformHelpers_Win.h in Headers */,
-				CE46BCE82CFC3373002F900C /* SharedLibraryExports.h in Headers */,
 				CE46BCE92CFC3373002F900C /* Assertions.h in Headers */,
 				CE46BCEA2CFC3373002F900C /* Misc_Win.h in Headers */,
+				CED4DDB72D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,12 +351,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED3D6732B12D3C800C5FB04 /* Misc_Win.h in Headers */,
-				CED3D6742B12D3C800C5FB04 /* SharedLibraryExports.h in Headers */,
 				CED3D6752B12D3C800C5FB04 /* PlatformHelpers_Win.h in Headers */,
 				CED3D6762B12D3C800C5FB04 /* Misc_Mac.h in Headers */,
 				CED3D6772B12D3C800C5FB04 /* PlatformData_Win.h in Headers */,
 				CED3D6782B12D3C800C5FB04 /* Misc.h in Headers */,
 				CED3D6792B12D3C800C5FB04 /* Assertions.h in Headers */,
+				CED4DDB52D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

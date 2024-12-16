@@ -34,7 +34,7 @@ void* DynamicLibrary::GetRawFunctionPtr(const std::string& functionName)
     if (!libraryHandle)
     {
         std::cerr << "Attempted to load symbol " << functionName + " on an invalid DynamicLibrary!\n";
-        return;
+        return nullptr;
     }
 
     void* functionPtr = dlsym(libraryHandle, functionName.c_str());

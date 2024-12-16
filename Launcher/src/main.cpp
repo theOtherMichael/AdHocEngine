@@ -87,14 +87,16 @@ static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
     fs::path pathToEngineVcpkgDependencies = pathToRepository / "Engine\\vcpkg_installed\\dynamic\\x64-windows";
     fs::path pathToEditorVcpkgDependencies = pathToRepository / "Editor\\vcpkg_installed\\dynamic\\x64-windows";
     fs::path vcPkgOutputFolderName         = "bin";
+    std::string libraryNamePrefix          = "";
     std::string dynamicLibraryExtension    = ".dll";
     std::string symbolsFileExtension       = ".pdb";
-#elif defined(__APPLE__) && DEFINED(__MACH__)
-    fs::path pathToEngineVcpkgInstalledFolder = pathToRepository / "Engine/vcpkg_installed/uni-dynamic";
-    fs::path pathToEditorVcpkgInstalledFolder = pathToRepository / "Editor/vcpkg_installed/uni-dynamic";
-    fs::path vcPkgOutputFolderName            = "lib";
-    std::string dynamicLibraryExtension       = ".dylib";
-    std::string symbolsFileExtension          = ".dylib.dsym";
+#elif defined(__APPLE__) && defined(__MACH__)
+    fs::path pathToEngineVcpkgDependencies = pathToRepository / "Engine/vcpkg_installed/uni-dynamic";
+    fs::path pathToEditorVcpkgDependencies = pathToRepository / "Editor/vcpkg_installed/uni-dynamic";
+    fs::path vcPkgOutputFolderName         = "lib";
+    std::string libraryNamePrefix          = "lib";
+    std::string dynamicLibraryExtension    = ".dylib";
+    std::string symbolsFileExtension       = ".dylib.dsym";
 #else
     static_assert(false);
 #endif
@@ -124,10 +126,10 @@ static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
     default: assert(false); break;
     }
 
-    std::string engineModuleName     = "Engine" + configSuffix + dynamicLibraryExtension;
-    std::string engineSymbolFileName = "Engine" + configSuffix + symbolsFileExtension;
-    std::string editorModuleName     = "Editor" + configSuffix + dynamicLibraryExtension;
-    std::string editorSymbolFileName = "Editor" + configSuffix + symbolsFileExtension;
+    std::string engineModuleName     = libraryNamePrefix + "Engine" + configSuffix + dynamicLibraryExtension;
+    std::string engineSymbolFileName = libraryNamePrefix + "Engine" + configSuffix + symbolsFileExtension;
+    std::string editorModuleName     = libraryNamePrefix + "Editor" + configSuffix + dynamicLibraryExtension;
+    std::string editorSymbolFileName = libraryNamePrefix + "Editor" + configSuffix + symbolsFileExtension;
 
     fs::path builtEngineModulePath  = pathToBuildFolder / "Engine" / engineModuleName;
     fs::path builtEngineSymbolsPath = pathToBuildFolder / "Engine" / engineSymbolFileName;
@@ -245,7 +247,7 @@ int main(int argc, char* argv[])
     fs::path pathToLibraries     = Misc::GetLauncherPath().parent_path();
     fs::path nameOfDebugModule   = "EditorD.dll";
     fs::path nameOfReleaseModule = "Editor.dll";
-#elif defined(__APPLE__) && DEFINED(__MACH__)
+#elif defined(__APPLE__) && defined(__MACH__)
     fs::path pathToLibraries     = "@loader_path/../Frameworks";
     fs::path nameOfDebugModule   = "libEditorD.dylib";
     fs::path nameOfReleaseModule = "libEditor.dylib";

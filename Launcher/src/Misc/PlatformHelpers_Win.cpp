@@ -1,4 +1,4 @@
-#include "WindowsHelpers.h"
+#include "PlatformHelpers_Win.h"
 
 #ifndef ENTERPRISE_WINDOWS
 static_assert(false);

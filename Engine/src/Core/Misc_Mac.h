@@ -4,7 +4,7 @@
 static_assert(false);
 #endif // !(defined(__APPLE__) && defined(__MACH__))
 
-#include <Enterprise/Core/SharedLibraryExports.h>
+#include <Enterprise/Core/SymbolExportMacros.h>
 
 namespace Enterprise
 {

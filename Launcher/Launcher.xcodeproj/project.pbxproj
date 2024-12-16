@@ -7,20 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE06849F2CEF1D0200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
-		CE0684A02CEF1D0200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
-		CE0684A12CEF1D0200031F0A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
-		CE0684A22CEF1D0200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
 		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CE0684B12CF064F200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
-		CE0684B22CF064F200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
-		CE0684B32CF064F200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
-		CE0684B42CF064F200031F0A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
 		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CE46BD0B2CFC33DC002F900C /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
-		CE46BD0C2CFC33DC002F900C /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
-		CE46BD0D2CFC33DC002F900C /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
-		CE46BD0E2CFC33DC002F900C /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
 		CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE46BD1D2CFC4260002F900C /* libEngine.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD1C2CFC4260002F900C /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD1F2CFC42BB002F900C /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -32,10 +20,6 @@
 		CE46BD2F2CFC4523002F900C /* libglfw.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE46BD322CFC454B002F900C /* libfmtd.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE46BD332CFC454B002F900C /* libglfw.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE4C6E9F2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */; };
-		CE4C6EA02B01963D0015E51A /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */; };
-		CE4C6EA12B01963D0015E51A /* EntryPoint_Launcher_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */; };
-		CE4C6EEF2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */; };
 		CE5AD0562D002A3F006E4AE8 /* libEditorD.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD262CFC4418002F900C /* libEditorD.dylib */; };
 		CE5AD0572D002A3F006E4AE8 /* libEngineD.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD212CFC4354002F900C /* libEngineD.dylib */; };
 		CE5AD05B2D002BAB006E4AE8 /* libEditor.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD1F2CFC42BB002F900C /* libEditor.dylib */; };
@@ -44,6 +28,30 @@
 		CE5AD0602D002BFC006E4AE8 /* libEditorDev.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
+		CED4DDAC2D101DFC00BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
+		CED4DDAD2D101DFC00BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
+		CED4DDAE2D101DFC00BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
+		CED4DDAF2D101DFC00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
+		CED4DDB02D101DFC00BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
+		CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
+		CED4DDC22D1020BB00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
+		CED4DDC32D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
+		CED4DDC42D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
+		CED4DDC52D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
+		CED4DDC62D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
+		CED4DDC72D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
+		CED4DDC82D1020D300BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
+		CED4DDC92D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
+		CED4DDCA2D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
+		CED4DDCB2D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
+		CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
+		CED4DDCD2D1020D300BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
+		CED4DDCE2D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
+		CED4DDCF2D1020D400BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
+		CED4DDD02D1020D400BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
+		CED4DDD12D1020D400BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
+		CED4DDD22D1020D400BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
+		CED4DDD32D1020D400BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -139,18 +147,22 @@
 		CE46BD2D2CFC4523002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD302CFC454A002F900C /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD312CFC454A002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
-		CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Launcher_Win.cpp; path = src/PlatformHelpers_Launcher_Win.cpp; sourceTree = SOURCE_ROOT; };
-		CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebuggerControls_Win.h; path = src/DebuggerControls_Win.h; sourceTree = SOURCE_ROOT; };
-		CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Launcher_Win.h; path = src/PlatformHelpers_Launcher_Win.h; sourceTree = SOURCE_ROOT; };
-		CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebuggerControls_Win.cpp; path = src/DebuggerControls_Win.cpp; sourceTree = SOURCE_ROOT; };
-		CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Launcher_Win.cpp; path = src/EntryPoint_Launcher_Win.cpp; sourceTree = SOURCE_ROOT; };
-		CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = EntryPoint_Launcher_Mac.cpp; path = src/EntryPoint_Launcher_Mac.cpp; sourceTree = SOURCE_ROOT; };
 		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Engine/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../Editor/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Enterprise.entitlements; path = resources/Mac/Enterprise.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CED4DDA02D101DFA00BAE96F /* DynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicLibrary.h; path = src/DynamicLibrary/DynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicLibrary_Win.cpp; path = src/DynamicLibrary/DynamicLibrary_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicLibrary_Mac.cpp; path = src/DynamicLibrary/DynamicLibrary_Mac.cpp; sourceTree = SOURCE_ROOT; };
+		CED4DDA42D101DFA00BAE96F /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebuggerControls_Win.h; path = src/Debugging/DebuggerControls_Win.h; sourceTree = SOURCE_ROOT; };
+		CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebuggerControls_Win.cpp; path = src/Debugging/DebuggerControls_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Win.cpp; path = src/Misc/PlatformHelpers_Win.cpp; sourceTree = SOURCE_ROOT; };
+		CED4DDA82D101DFB00BAE96F /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Misc.cpp; path = src/Misc/Misc.cpp; sourceTree = SOURCE_ROOT; };
+		CED4DDA92D101DFB00BAE96F /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = src/Misc/Misc.h; sourceTree = SOURCE_ROOT; };
+		CED4DDAA2D101DFB00BAE96F /* PlatformHelpers_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Win.h; path = src/Misc/PlatformHelpers_Win.h; sourceTree = SOURCE_ROOT; };
+		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,12 +222,10 @@
 		CE4C6E992B01963D0015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6E9D2B01963D0015E51A /* DebuggerControls_Win.cpp */,
-				CE4C6E9B2B01963D0015E51A /* DebuggerControls_Win.h */,
-				CE4C6EEE2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp */,
-				CE4C6E9E2B01963D0015E51A /* EntryPoint_Launcher_Win.cpp */,
-				CE4C6E9A2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp */,
-				CE4C6E9C2B01963D0015E51A /* PlatformHelpers_Launcher_Win.h */,
+				CED4DDAB2D101DFB00BAE96F /* main.cpp */,
+				CED4DDA32D101DFA00BAE96F /* Debugging */,
+				CED4DD9F2D101DFA00BAE96F /* DynamicLibrary */,
+				CED4DDA62D101DFB00BAE96F /* Misc */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -260,6 +270,39 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		CED4DD9F2D101DFA00BAE96F /* DynamicLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */,
+				CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */,
+				CED4DDA02D101DFA00BAE96F /* DynamicLibrary.h */,
+			);
+			name = DynamicLibrary;
+			path = src/DynamicLibrary;
+			sourceTree = SOURCE_ROOT;
+		};
+		CED4DDA32D101DFA00BAE96F /* Debugging */ = {
+			isa = PBXGroup;
+			children = (
+				CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */,
+				CED4DDA42D101DFA00BAE96F /* DebuggerControls_Win.h */,
+			);
+			name = Debugging;
+			path = src/Debugging;
+			sourceTree = SOURCE_ROOT;
+		};
+		CED4DDA62D101DFB00BAE96F /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CED4DDA82D101DFB00BAE96F /* Misc.cpp */,
+				CED4DDA92D101DFB00BAE96F /* Misc.h */,
+				CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */,
+				CED4DDAA2D101DFB00BAE96F /* PlatformHelpers_Win.h */,
+			);
+			name = Misc;
+			path = src/Misc;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -388,10 +431,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0684A02CEF1D0200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */,
-				CE06849F2CEF1D0200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */,
-				CE0684A22CEF1D0200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */,
-				CE0684A12CEF1D0200031F0A /* DebuggerControls_Win.cpp in Sources */,
+				CED4DDC42D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
+				CED4DDD02D1020D400BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CED4DDD12D1020D400BAE96F /* main.cpp in Sources */,
+				CED4DDCF2D1020D400BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
+				CED4DDD22D1020D400BAE96F /* Misc.cpp in Sources */,
+				CED4DDD32D1020D400BAE96F /* DebuggerControls_Win.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +444,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0684B12CF064F200031F0A /* EntryPoint_Launcher_Win.cpp in Sources */,
-				CE0684B22CF064F200031F0A /* EntryPoint_Launcher_Mac.cpp in Sources */,
-				CE0684B32CF064F200031F0A /* PlatformHelpers_Launcher_Win.cpp in Sources */,
-				CE0684B42CF064F200031F0A /* DebuggerControls_Win.cpp in Sources */,
+				CED4DDC22D1020BB00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
+				CED4DDC62D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CED4DDC72D1020D300BAE96F /* main.cpp in Sources */,
+				CED4DDC52D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
+				CED4DDC82D1020D300BAE96F /* Misc.cpp in Sources */,
+				CED4DDC92D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,10 +457,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BD0B2CFC33DC002F900C /* EntryPoint_Launcher_Win.cpp in Sources */,
-				CE46BD0C2CFC33DC002F900C /* EntryPoint_Launcher_Mac.cpp in Sources */,
-				CE46BD0D2CFC33DC002F900C /* PlatformHelpers_Launcher_Win.cpp in Sources */,
-				CE46BD0E2CFC33DC002F900C /* DebuggerControls_Win.cpp in Sources */,
+				CED4DDC32D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
+				CED4DDCB2D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */,
+				CED4DDCA2D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
+				CED4DDCD2D1020D300BAE96F /* Misc.cpp in Sources */,
+				CED4DDCE2D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,10 +470,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4C6E9F2B01963D0015E51A /* PlatformHelpers_Launcher_Win.cpp in Sources */,
-				CE4C6EEF2B01AE840015E51A /* EntryPoint_Launcher_Mac.cpp in Sources */,
-				CE4C6EA12B01963D0015E51A /* EntryPoint_Launcher_Win.cpp in Sources */,
-				CE4C6EA02B01963D0015E51A /* DebuggerControls_Win.cpp in Sources */,
+				CED4DDAC2D101DFC00BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CED4DDAF2D101DFC00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
+				CED4DDB02D101DFC00BAE96F /* Misc.cpp in Sources */,
+				CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */,
+				CED4DDAD2D101DFC00BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
+				CED4DDAE2D101DFC00BAE96F /* DebuggerControls_Win.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
