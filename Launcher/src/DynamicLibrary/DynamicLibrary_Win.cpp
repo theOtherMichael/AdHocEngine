@@ -12,7 +12,7 @@ static_assert(false);
 #endif // WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
-#include "../Misc/WindowsHelpers.h"
+#include "../Misc/PlatformHelpers_Win.h"
 
 namespace fs = std::filesystem;
 

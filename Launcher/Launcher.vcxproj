@@ -137,7 +137,7 @@
     <ClCompile Include="src\DynamicLibrary\DynamicLibrary_Win.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Misc\Misc.cpp" />
-    <ClCompile Include="src\Misc\WindowsHelpers.cpp" />
+    <ClCompile Include="src\Misc\PlatformHelpers_Win.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h" />
@@ -145,7 +145,7 @@
     <ClInclude Include="src\Debugging\DebuggerControls_Win.h" />
     <ClInclude Include="src\DynamicLibrary\DynamicLibrary.h" />
     <ClInclude Include="src\Misc\Misc.h" />
-    <ClInclude Include="src\Misc\WindowsHelpers.h" />
+    <ClInclude Include="src\Misc\PlatformHelpers_Win.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\Win\Enterprise.ico" />
