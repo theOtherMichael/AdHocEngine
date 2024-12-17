@@ -1,6 +1,6 @@
-#if !(defined(__APPLE__) && defined(__MACH__))
+#ifndef ENTERPRISE_MACOS
 static_assert(false);
-#endif // !(defined(__APPLE__) && defined(__MACH))
+#endif // !ENTERPRISE_MACOS
 
 #include <fmt/format.h>
 #pragma clang diagnostic push

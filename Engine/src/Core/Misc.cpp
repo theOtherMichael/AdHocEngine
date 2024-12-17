@@ -4,9 +4,9 @@
     #include "Misc_Win.h"
 #endif // ENTERPRISE_WINDOWS
 
-#if defined(__APPLE__) && defined(__MACH__)
+#if ENTERPRISE_MACOS
     #include "Misc_Mac.h"
-#endif // defined(__APPLE__) && defined(__MACH__)
+#endif // ENTERPRISE_MACOS
 
 namespace Enterprise
 {

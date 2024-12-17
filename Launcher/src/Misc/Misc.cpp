@@ -6,7 +6,7 @@
         #define WIN32_LEAN_AND_MEAN
     #endif // WIN32_LEAN_AND_MEAN
     #include <Windows.h>
-#elif defined(__APPLE__) && defined(__MACH__)
+#elif defined(ENTERPRISE_MACOS)
     #include <dlfcn.h>
     #include <mach-o/dyld.h>
 #else
@@ -29,7 +29,7 @@ fs::path GetLauncherPath()
     }
     return cPathToLauncher;
 
-#elif defined(__APPLE__) && defined(__MACH__)
+#elif ENTERPRISE_MACOS
     constexpr auto maxPathBufferSize = PATH_MAX + 1;
     char cPathToLauncher[maxPathBufferSize];
 

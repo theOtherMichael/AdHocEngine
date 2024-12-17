@@ -1,8 +1,8 @@
 #pragma once
 
-#if !(defined(__APPLE__) && defined(__MACH__))
+#ifndef ENTERPRISE_MACOS
 static_assert(false);
-#endif // !(defined(__APPLE__) && defined(__MACH__))
+#endif // !ENTERPRISE_MACOS
 
 #include <Enterprise/Core/SymbolExportMacros.h>
 

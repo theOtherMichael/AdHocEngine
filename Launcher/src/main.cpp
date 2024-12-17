@@ -90,7 +90,7 @@ static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
     std::string libraryNamePrefix          = "";
     std::string dynamicLibraryExtension    = ".dll";
     std::string symbolsFileExtension       = ".pdb";
-#elif defined(__APPLE__) && defined(__MACH__)
+#elif defined(ENTERPRISE_MACOS)
     fs::path pathToEngineVcpkgDependencies = pathToRepository / "Engine/vcpkg_installed/uni-dynamic";
     fs::path pathToEditorVcpkgDependencies = pathToRepository / "Editor/vcpkg_installed/uni-dynamic";
     fs::path vcPkgOutputFolderName         = "lib";
@@ -247,7 +247,7 @@ int main(int argc, char* argv[])
     fs::path pathToLibraries     = Misc::GetLauncherPath().parent_path();
     fs::path nameOfDebugModule   = "EditorD.dll";
     fs::path nameOfReleaseModule = "Editor.dll";
-#elif defined(__APPLE__) && defined(__MACH__)
+#elif defined(ENTERPRISE_MACOS)
     fs::path pathToLibraries     = "@loader_path/../Frameworks";
     fs::path nameOfDebugModule   = "libEditorD.dylib";
     fs::path nameOfReleaseModule = "libEditor.dylib";

@@ -1,8 +1,8 @@
 #include "DynamicLibrary.h"
 
-#if !(defined(__APPLE__) && defined(__MACH__))
+#ifndef ENTERPRISE_MACOS
 static_assert(false);
-#endif
+#endif // !ENTERPRISE_MACOS
 
 #include <iostream>
 
