@@ -15,7 +15,7 @@ void Enterprise::PrintBacktrace_Implementation()
 {
     auto platformState = Enterprise::PlatformData_Win::Get();
 
-    const int maxFrames = 50;
+    const int maxFrames = 64;
     void* callStack[maxFrames];
 
     USHORT frames        = CaptureStackBackTrace(0, maxFrames, callStack, NULL);
@@ -23,7 +23,7 @@ void Enterprise::PrintBacktrace_Implementation()
     symbol->MaxNameLen   = 255;
     symbol->SizeOfStruct = sizeof(SYMBOL_INFO);
 
-    fmt::print(stderr, "Backtrace:\n");
+    fmt::print("Backtrace ({} frames):\n", frames);
     for (USHORT i = 0; i < frames; ++i)
     {
         if (!SymFromAddr(platformState->processHandle, (DWORD64)(callStack[i]), 0, symbol))
