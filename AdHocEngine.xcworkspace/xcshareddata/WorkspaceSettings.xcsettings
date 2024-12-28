@@ -6,17 +6,5 @@
 	<false/>
 	<key>PreviewsEnabled</key>
 	<false/>
-	<key>BuildLocationStyle</key>
-	<string>CustomLocation</string>
-	<key>CustomBuildIntermediatesPath</key>
-	<string>build-int.noindex</string>
-	<key>CustomBuildLocationType</key>
-	<string>RelativeToWorkspace</string>
-	<key>CustomBuildProductsPath</key>
-	<string>build</string>
-	<key>DerivedDataLocationStyle</key>
-	<string>Default</string>
-	<key>ShowSharedSchemesAutomaticallyEnabled</key>
-	<true/>
 </dict>
 </plist>
