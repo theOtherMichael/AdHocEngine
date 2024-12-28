@@ -1,8 +1,8 @@
 #pragma once
 
-#ifdef ENTERPRISE_INTERNAL
+// WARNING: Don't edit this file in developer mode, it is consumed by Launcher!
 
-// IMPORTANT: Do NOT edit these while running the editor in development mode!
+#ifdef ENTERPRISE_INTERNAL
 
 constexpr unsigned char EditorReloadFlag_None = 0x0;
 

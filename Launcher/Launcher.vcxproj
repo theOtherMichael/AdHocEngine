@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -83,7 +83,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_WINDOWS;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -101,7 +101,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_WINDOWS;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -121,7 +121,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_WINDOWS;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,19 +133,35 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Debugging\DebuggerControls_Win.cpp" />
-    <ClCompile Include="src\DynamicLibrary\DynamicLibrary_Win.cpp" />
+    <ClCompile Include="src\Core\_platform\Mac\MacDynamicLibrary.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\Core\_platform\Mac\MacPlatformMisc.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Misc\Misc.cpp" />
-    <ClCompile Include="src\Misc\PlatformHelpers_Win.cpp" />
+    <ClCompile Include="src\Core\_platform\Windows\WindowsDynamicLibrary.cpp" />
+    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformMisc.cpp" />
+    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h" />
-    <ClInclude Include="src\Assertions.h" />
-    <ClInclude Include="src\Debugging\DebuggerControls_Win.h" />
-    <ClInclude Include="src\DynamicLibrary\DynamicLibrary.h" />
-    <ClInclude Include="src\Misc\Misc.h" />
-    <ClInclude Include="src\Misc\PlatformHelpers_Win.h" />
+    <ClInclude Include="src\Core\MiscMacros.h" />
+    <ClInclude Include="src\Core\DynamicLibrary.h" />
+    <ClInclude Include="src\Core\PlatformMisc.h" />
+    <ClInclude Include="src\Core\PlatformAbstraction.h" />
+    <ClInclude Include="src\Core\PlatformHelpers.h" />
+    <ClInclude Include="src\Core\_platform\Base\BaseDynamicLibrary.h" />
+    <ClInclude Include="src\Core\_platform\Mac\MacDynamicLibrary.h" />
+    <ClInclude Include="src\Core\_platform\Mac\MacPlatformHelpers.h" />
+    <ClInclude Include="src\Core\_platform\Mac\MacPlatformMisc.h" />
+    <ClInclude Include="src\Core\_platform\Windows\WindowsDynamicLibrary.h" />
+    <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformMisc.h" />
+    <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformHelpers.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\Win\Enterprise.ico" />

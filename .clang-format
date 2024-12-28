@@ -5,7 +5,7 @@ AlignConsecutiveAssignments: Consecutive
 AllowShortEnumsOnASingleLine: true
 AllowShortBlocksOnASingleLine: Always
 AllowShortCaseLabelsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortFunctionsOnASingleLine: Inline
 AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations: Yes
 BinPackArguments: false
@@ -20,7 +20,7 @@ BraceWrapping:
 ColumnLimit: 120
 EmptyLineBeforeAccessModifier: Always
 PackConstructorInitializers: NextLine
-IncludeBlocks: Merge
+IncludeBlocks: Preserve
 IndentPPDirectives: BeforeHash
 KeepEmptyLinesAtTheStartOfBlocks: false
 ObjCBlockIndentWidth: 4
@@ -29,6 +29,6 @@ PenaltyBreakBeforeFirstCallParameter: 0
 PenaltyExcessCharacter: 200
 PenaltyReturnTypeOnItsOwnLine: 1000000
 PointerAlignment: Left
-SortIncludes: Never
+SortIncludes: CaseInsensitive
 SortUsingDeclarations: false
 Standard: c++17

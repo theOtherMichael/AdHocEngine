@@ -18,33 +18,54 @@
     <ClInclude Include="include\Enterprise\Core\SymbolExportMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\PlatformHelpers_Win.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Enterprise\Core\Misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Enterprise\Core\Assertions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\PlatformData_Win.h">
+    <ClInclude Include="include\Enterprise\Core\PlatformAbstraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\Misc_Win.h">
+    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsPlatformHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacPlatformHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\PlatformHelpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsMisc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacMisc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\MiscMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\PlatformData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacPlatformData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsPlatformData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\PlatformHelpers_Win.cpp">
+    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Misc.cpp">
+    <ClCompile Include="src\Core\_platform\Windows\WindowsMisc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\PlatformData_Win.cpp">
+    <ClCompile Include="src\Core\_platform\Mac\MacMisc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\Misc_Win.cpp">
+    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

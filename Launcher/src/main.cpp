@@ -1,19 +1,21 @@
+#include "Core/DynamicLibrary.h"
+#include "Core/PlatformMisc.h"
+
+#include <Editor/Core/EditorReloadFlags.h>
+
 #include <cassert>
 #include <chrono>
 #include <filesystem>
+#include <functional>
 #include <iostream>
 #include <string>
 #include <string_view>
 #include <thread>
 
-#include <Editor/Core/EditorReloadFlags.h>
-
-#include "DynamicLibrary/DynamicLibrary.h"
-#include "Misc/Misc.h"
-
 namespace fs = std::filesystem;
-using namespace std::chrono_literals;
+
 using std::chrono::steady_clock;
+using namespace std::chrono_literals;
 
 static void PerformFileOperation(const std::string_view operationMessage,
                                  const std::function<void(std::error_code&)>& operation)
@@ -38,8 +40,7 @@ static void CopyFolderContents(const fs::path& sourceFolder, const fs::path& des
     for (const auto& sourceFolderEntry : sourceFolderIterator)
     {
         const fs::path& sourcePath = sourceFolderEntry.path();
-        fs::path relativePath      = fs::relative(sourcePath, sourceFolder);
-        fs::path targetPath        = destinationFolder / relativePath;
+        fs::path targetPath        = destinationFolder / fs::relative(sourcePath, sourceFolder);
 
         if (fs::is_directory(sourcePath))
         {
@@ -61,7 +62,7 @@ static void WaitOnFileChanged(fs::path& buildProductPath,
     std::error_code ec;
 
     std::cout << "Waiting for " << buildProductPath << "...\n";
-    auto engineLastBuildTime = fs::last_write_time(buildProductPath, ec);
+    std::ignore = fs::last_write_time(buildProductPath, ec);
     if (ec)
     {
         std::cerr << "Failed to get last build time for product " << buildProductPath << "! " << ec.message() << "\n";
@@ -78,7 +79,7 @@ static void WaitOnFileChanged(fs::path& buildProductPath,
 
 static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
 {
-    fs::path pathToLauncher    = Misc::GetLauncherPath();
+    fs::path pathToLauncher    = Platform::GetLauncherPath();
     fs::path pathToBuildFolder = pathToLauncher.parent_path().parent_path();
     fs::path pathToReloadCache = pathToBuildFolder / "Launcher" / "reload_cache";
     fs::path pathToRepository  = pathToBuildFolder.parent_path();
@@ -210,9 +211,9 @@ int main(int argc, char* argv[])
     }
 
     if (isDeveloperMode)
-        std::cout << "--developer specified, launching in developer mode\n";
+        std::cout << "--developer specified, developer mode enabled\n";
     else if (isDebugMode)
-        std::cout << "--debug specified, launching in debug mode\n";
+        std::cout << "--debug specified, debug mode enabled\n";
 
     // bool isComInitialized     = false;
     unsigned char reloadFlags = EditorReloadFlag_None;
@@ -227,24 +228,10 @@ int main(int argc, char* argv[])
 #elif defined(ENTERPRISE_RELEASE)
         reloadFlags |= EditorReloadFlag_Release;
 #endif // ENTERPRISE_DEBUG
-
-        // isComInitialized = CoInitialize(NULL) == S_OK;
-        // if (!isComInitialized)
-        //{
-        //     std::cerr << "COM initialization failed! "
-        //                  "Debuggers will not automatically reattach.\n";
-        // }
     }
 
-    // bool isDebuggerAttached = IsDebuggerPresent();
-    // if (isDebuggerAttached && isComInitialized)
-    //{
-    //     std::cout << "Debugger detected!\n";
-    //     DetachDebugger(true);
-    // }
-
 #ifdef ENTERPRISE_WINDOWS
-    fs::path pathToLibraries     = Misc::GetLauncherPath().parent_path();
+    fs::path pathToLibraries     = Platform::GetLauncherPath().parent_path(); // Install folder
     fs::path nameOfDebugModule   = "EditorD.dll";
     fs::path nameOfReleaseModule = "Editor.dll";
 #elif defined(ENTERPRISE_MACOS)
@@ -261,6 +248,7 @@ int main(int argc, char* argv[])
 
         if (isDeveloperMode)
         {
+            std::cout << "Loading editor in developer mode...\n";
             editorModule = CopyAndLoadEditorModule(reloadFlags);
         }
         else if (isDebugMode)
@@ -280,42 +268,19 @@ int main(int argc, char* argv[])
             return EXIT_FAILURE;
         }
 
-        auto editorMainFunction = editorModule.GetFunctionPtr<unsigned char(int, char*[])>("EditorMain");
-        if (!editorMainFunction)
+        auto EditorMain = editorModule.GetFunction<unsigned char(int, char*[])>("EditorMain");
+        if (!EditorMain)
         {
             std::cerr << "Failed to load EditorMain(), exiting...\n";
             return EXIT_FAILURE;
         }
 
-        // if (isDebuggerAttached /* && isComInitialized*/)
-        //     AttachDebugger();
-
-        reloadFlags = editorMainFunction(argc, argv);
+        reloadFlags = EditorMain(argc, argv);
 
         if (!isDeveloperMode)
-        {
-            switch (reloadFlags & EditorReloadFlag_ConfigMask)
-            {
-            case EditorReloadFlag_None: break;
-            case EditorReloadFlag_Debug: isDebugMode = true; break;
-            case EditorReloadFlag_Release: isDebugMode = false; break;
-            case EditorReloadFlag_Dev:
-                std::cerr << "Dev configuration was requested in Editor reload! "
-                             "Dev configuration is only available in developer mode. "
-                             "Release will be used instead.\n";
-                isDebugMode = false;
-                break;
-            default: assert(false); break;
-            }
-        }
+            isDebugMode = (reloadFlags & EditorReloadFlag_ConfigMask) == EditorReloadFlag_Debug;
 
-        // isDebuggerAttached = IsDebuggerPresent();
-        // if (isDebuggerAttached && isComInitialized)
-        //     DetachDebugger(true);
     } while (reloadFlags != EditorReloadFlag_None);
-
-    // if (isComInitialized)
-    //     CoUninitialize();
 
     return EXIT_SUCCESS;
 }

@@ -1,8 +1,8 @@
 #pragma once
 
-#include <fmt/format.h>
-
 #include "Misc.h"
+
+#include <fmt/format.h>
 
 #ifdef ENTERPRISE_DEBUG
     #define ASSERTIONS_ENABLED
@@ -21,7 +21,7 @@
         fmt::print(                                                                                                    \
             "Assertion failed! {0} at \"{1}\":{2}\n", isMessageEmpty ? #expression : message, __FILE__, __LINE__);     \
                                                                                                                        \
-        Enterprise::PrintBacktrace();                                                                                  \
+        Engine::PrintBacktrace();                                                                                      \
         DEBUGBREAK();                                                                                                  \
         abort();                                                                                                       \
     }
