@@ -9,7 +9,7 @@
          <ExecutionAction
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
-               title = "vpkg install"
+               title = "vcpkg install"
                scriptText = "cd &quot;$(dirname &quot;$WORKSPACE_PATH&quot;)&quot;&#10;sh ./scripts/install_macos_dependencies.sh&#10;">
             </ActionContent>
          </ExecutionAction>

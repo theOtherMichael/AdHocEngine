@@ -120,10 +120,10 @@ install_dependencies_for_project_and_linkage() {
     if ! "$vcpkg" install \
         --no-print-usage \
         --overlay-triplets="./triplets" \
-        --triplet=x64-osx-11_5-$linkage_flag \
+        --triplet=x64-osx-$linkage_flag \
         --x-manifest-root="$project_dir" \
         --x-install-root="$project_dir/vcpkg_installed/x64-$linkage_flag"; then
-        echo "Error running vcpkg on triplet x64-osx-11_5-$linkage_flag!"
+        echo "Error running vcpkg on triplet x64-osx-$linkage_flag!"
         return 1
     fi
 
@@ -131,17 +131,17 @@ install_dependencies_for_project_and_linkage() {
     if ! "$vcpkg" install \
         --no-print-usage \
         --overlay-triplets="./triplets" \
-        --triplet=arm64-osx-11_5-$linkage_flag \
+        --triplet=arm64-osx-$linkage_flag \
         --x-manifest-root="$project_dir" \
         --x-install-root="$project_dir/vcpkg_installed/arm64-$linkage_flag"; then
-        echo "Error running vcpkg on triplet arm64-osx-11_5-$linkage_flag!"
+        echo "Error running vcpkg on triplet arm64-osx-$linkage_flag!"
         return 1
     fi
 
     echo "Merging into universal binaries using lipo tool..."
     if ! lipo_directory_recursive \
-        "$project_dir/vcpkg_installed/x64-$linkage_flag/x64-osx-11_5-$linkage_flag" \
-        "$project_dir/vcpkg_installed/arm64-$linkage_flag/arm64-osx-11_5-$linkage_flag" \
+        "$project_dir/vcpkg_installed/x64-$linkage_flag/x64-osx-$linkage_flag" \
+        "$project_dir/vcpkg_installed/arm64-$linkage_flag/arm64-osx-$linkage_flag" \
         "$project_dir/vcpkg_installed/uni-$linkage_flag"; then
         echo "Error during dependency merging!"
         return 1
@@ -205,7 +205,7 @@ echo "Installation steps completed without issue. Writing manifest checksums to 
 echo "$engine_manifest_checksum" >"$engine_checksum_path"
 engineChecksumFileContents=$(cat $engine_checksum_path)
 if [ "$engineChecksumFileContents" = "$engine_checksum_path" ]; then
-    echo 
+    echo
     echo Failed to write engine manifest checksum to disk! Next build may redundantly reinstall dependencies
 fi
 
