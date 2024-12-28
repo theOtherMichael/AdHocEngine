@@ -28,30 +28,30 @@
 		CE5AD0602D002BFC006E4AE8 /* libEditorDev.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CED4DDAC2D101DFC00BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
-		CED4DDAD2D101DFC00BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
-		CED4DDAE2D101DFC00BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
-		CED4DDAF2D101DFC00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
-		CED4DDB02D101DFC00BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
 		CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
-		CED4DDC22D1020BB00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
-		CED4DDC32D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
-		CED4DDC42D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */; };
-		CED4DDC52D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
-		CED4DDC62D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
 		CED4DDC72D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
-		CED4DDC82D1020D300BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
-		CED4DDC92D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
-		CED4DDCA2D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
-		CED4DDCB2D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
 		CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
-		CED4DDCD2D1020D300BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
-		CED4DDCE2D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
-		CED4DDCF2D1020D400BAE96F /* DynamicLibrary_Mac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */; };
-		CED4DDD02D1020D400BAE96F /* DynamicLibrary_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */; };
 		CED4DDD12D1020D400BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
-		CED4DDD22D1020D400BAE96F /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA82D101DFB00BAE96F /* Misc.cpp */; };
-		CED4DDD32D1020D400BAE96F /* DebuggerControls_Win.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */; };
+		CEDDB0B22D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
+		CEDDB0B32D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
+		CEDDB0B42D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
+		CEDDB0B52D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
+		CEDDB0B62D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
+		CEDDB0B72D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
+		CEDDB0B82D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
+		CEDDB0B92D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
+		CEDDB0BA2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
+		CEDDB0BB2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
+		CEDDB0BC2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
+		CEDDB0BD2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
+		CEDDB0BE2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
+		CEDDB0BF2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
+		CEDDB0C02D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
+		CEDDB0C12D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
+		CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
+		CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
+		CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
+		CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -153,16 +153,24 @@
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Enterprise.entitlements; path = resources/Mac/Enterprise.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		CED4DDA02D101DFA00BAE96F /* DynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicLibrary.h; path = src/DynamicLibrary/DynamicLibrary.h; sourceTree = SOURCE_ROOT; };
-		CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicLibrary_Win.cpp; path = src/DynamicLibrary/DynamicLibrary_Win.cpp; sourceTree = SOURCE_ROOT; };
-		CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicLibrary_Mac.cpp; path = src/DynamicLibrary/DynamicLibrary_Mac.cpp; sourceTree = SOURCE_ROOT; };
-		CED4DDA42D101DFA00BAE96F /* DebuggerControls_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DebuggerControls_Win.h; path = src/Debugging/DebuggerControls_Win.h; sourceTree = SOURCE_ROOT; };
-		CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DebuggerControls_Win.cpp; path = src/Debugging/DebuggerControls_Win.cpp; sourceTree = SOURCE_ROOT; };
-		CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformHelpers_Win.cpp; path = src/Misc/PlatformHelpers_Win.cpp; sourceTree = SOURCE_ROOT; };
-		CED4DDA82D101DFB00BAE96F /* Misc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Misc.cpp; path = src/Misc/Misc.cpp; sourceTree = SOURCE_ROOT; };
-		CED4DDA92D101DFB00BAE96F /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = src/Misc/Misc.h; sourceTree = SOURCE_ROOT; };
-		CED4DDAA2D101DFB00BAE96F /* PlatformHelpers_Win.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers_Win.h; path = src/Misc/PlatformHelpers_Win.h; sourceTree = SOURCE_ROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		CEDDB09D2D1FCCA000EADB67 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = src/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
+		CEDDB09E2D1FCCA000EADB67 /* MiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscMacros.h; path = src/Core/MiscMacros.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0A12D1FCCA000EADB67 /* MacDynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacDynamicLibrary.h; path = src/Core/_platform/Mac/MacDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacPlatformMisc.cpp; path = src/Core/_platform/Mac/MacPlatformMisc.cpp; sourceTree = SOURCE_ROOT; };
+		CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacDynamicLibrary.cpp; path = src/Core/_platform/Mac/MacDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		CEDDB0A42D1FCCA000EADB67 /* MacPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformHelpers.h; path = src/Core/_platform/Mac/MacPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0A52D1FCCA000EADB67 /* MacPlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformMisc.h; path = src/Core/_platform/Mac/MacPlatformMisc.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
+		CEDDB0A82D1FCCA000EADB67 /* WindowsPlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformMisc.h; path = src/Core/_platform/Windows/WindowsPlatformMisc.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsDynamicLibrary.cpp; path = src/Core/_platform/Windows/WindowsDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformMisc.cpp; path = src/Core/_platform/Windows/WindowsPlatformMisc.cpp; sourceTree = SOURCE_ROOT; };
+		CEDDB0AB2D1FCCA000EADB67 /* WindowsDynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsDynamicLibrary.h; path = src/Core/_platform/Windows/WindowsDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0AC2D1FCCA000EADB67 /* WindowsPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformHelpers.h; path = src/Core/_platform/Windows/WindowsPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0AE2D1FCCA000EADB67 /* BaseDynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseDynamicLibrary.h; path = src/Core/_platform/Base/BaseDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0AF2D1FCCA000EADB67 /* PlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers.h; path = src/Core/PlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0B02D1FCCA000EADB67 /* PlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformMisc.h; path = src/Core/PlatformMisc.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0B12D1FCCA000EADB67 /* DynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicLibrary.h; path = src/Core/DynamicLibrary.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,10 +230,8 @@
 		CE4C6E992B01963D0015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CEDDB09C2D1FCCA000EADB67 /* Core */,
 				CED4DDAB2D101DFB00BAE96F /* main.cpp */,
-				CED4DDA32D101DFA00BAE96F /* Debugging */,
-				CED4DD9F2D101DFA00BAE96F /* DynamicLibrary */,
-				CED4DDA62D101DFB00BAE96F /* Misc */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -271,37 +277,65 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CED4DD9F2D101DFA00BAE96F /* DynamicLibrary */ = {
+		CEDDB09C2D1FCCA000EADB67 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CED4DDA22D101DFA00BAE96F /* DynamicLibrary_Mac.cpp */,
-				CED4DDA12D101DFA00BAE96F /* DynamicLibrary_Win.cpp */,
-				CED4DDA02D101DFA00BAE96F /* DynamicLibrary.h */,
+				CEDDB09F2D1FCCA000EADB67 /* _platform */,
+				CEDDB0B12D1FCCA000EADB67 /* DynamicLibrary.h */,
+				CEDDB09E2D1FCCA000EADB67 /* MiscMacros.h */,
+				CEDDB09D2D1FCCA000EADB67 /* PlatformAbstraction.h */,
+				CEDDB0AF2D1FCCA000EADB67 /* PlatformHelpers.h */,
+				CEDDB0B02D1FCCA000EADB67 /* PlatformMisc.h */,
 			);
-			name = DynamicLibrary;
-			path = src/DynamicLibrary;
+			name = Core;
+			path = src/Core;
 			sourceTree = SOURCE_ROOT;
 		};
-		CED4DDA32D101DFA00BAE96F /* Debugging */ = {
+		CEDDB09F2D1FCCA000EADB67 /* _platform */ = {
 			isa = PBXGroup;
 			children = (
-				CED4DDA52D101DFA00BAE96F /* DebuggerControls_Win.cpp */,
-				CED4DDA42D101DFA00BAE96F /* DebuggerControls_Win.h */,
+				CEDDB0AD2D1FCCA000EADB67 /* Base */,
+				CEDDB0A02D1FCCA000EADB67 /* Mac */,
+				CEDDB0A62D1FCCA000EADB67 /* Windows */,
 			);
-			name = Debugging;
-			path = src/Debugging;
+			name = _platform;
+			path = src/Core/_platform;
 			sourceTree = SOURCE_ROOT;
 		};
-		CED4DDA62D101DFB00BAE96F /* Misc */ = {
+		CEDDB0A02D1FCCA000EADB67 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				CED4DDA82D101DFB00BAE96F /* Misc.cpp */,
-				CED4DDA92D101DFB00BAE96F /* Misc.h */,
-				CED4DDA72D101DFB00BAE96F /* PlatformHelpers_Win.cpp */,
-				CED4DDAA2D101DFB00BAE96F /* PlatformHelpers_Win.h */,
+				CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */,
+				CEDDB0A12D1FCCA000EADB67 /* MacDynamicLibrary.h */,
+				CEDDB0A42D1FCCA000EADB67 /* MacPlatformHelpers.h */,
+				CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */,
+				CEDDB0A52D1FCCA000EADB67 /* MacPlatformMisc.h */,
 			);
-			name = Misc;
-			path = src/Misc;
+			name = Mac;
+			path = src/Core/_platform/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEDDB0A62D1FCCA000EADB67 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */,
+				CEDDB0AB2D1FCCA000EADB67 /* WindowsDynamicLibrary.h */,
+				CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */,
+				CEDDB0AC2D1FCCA000EADB67 /* WindowsPlatformHelpers.h */,
+				CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */,
+				CEDDB0A82D1FCCA000EADB67 /* WindowsPlatformMisc.h */,
+			);
+			name = Windows;
+			path = src/Core/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
+		CEDDB0AD2D1FCCA000EADB67 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CEDDB0AE2D1FCCA000EADB67 /* BaseDynamicLibrary.h */,
+			);
+			name = Base;
+			path = src/Core/_platform/Base;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -431,12 +465,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED4DDC42D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
-				CED4DDD02D1020D400BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CEDDB0B32D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDD12D1020D400BAE96F /* main.cpp in Sources */,
-				CED4DDCF2D1020D400BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
-				CED4DDD22D1020D400BAE96F /* Misc.cpp in Sources */,
-				CED4DDD32D1020D400BAE96F /* DebuggerControls_Win.cpp in Sources */,
+				CEDDB0BB2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
+				CEDDB0B72D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
+				CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
+				CEDDB0BF2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,12 +478,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED4DDC22D1020BB00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
-				CED4DDC62D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CEDDB0B52D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDC72D1020D300BAE96F /* main.cpp in Sources */,
-				CED4DDC52D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
-				CED4DDC82D1020D300BAE96F /* Misc.cpp in Sources */,
-				CED4DDC92D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */,
+				CEDDB0BD2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
+				CEDDB0B92D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
+				CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
+				CEDDB0C12D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,12 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED4DDC32D1020BC00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
-				CED4DDCB2D1020D300BAE96F /* DynamicLibrary_Win.cpp in Sources */,
+				CEDDB0B42D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */,
-				CED4DDCA2D1020D300BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
-				CED4DDCD2D1020D300BAE96F /* Misc.cpp in Sources */,
-				CED4DDCE2D1020D300BAE96F /* DebuggerControls_Win.cpp in Sources */,
+				CEDDB0BC2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
+				CEDDB0B82D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
+				CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
+				CEDDB0C02D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,12 +504,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED4DDAC2D101DFC00BAE96F /* DynamicLibrary_Win.cpp in Sources */,
-				CED4DDAF2D101DFC00BAE96F /* PlatformHelpers_Win.cpp in Sources */,
-				CED4DDB02D101DFC00BAE96F /* Misc.cpp in Sources */,
+				CEDDB0B22D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */,
-				CED4DDAD2D101DFC00BAE96F /* DynamicLibrary_Mac.cpp in Sources */,
-				CED4DDAE2D101DFC00BAE96F /* DebuggerControls_Win.cpp in Sources */,
+				CEDDB0BA2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
+				CEDDB0B62D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
+				CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
+				CEDDB0BE2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +639,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				EXCLUDED_SOURCE_FILE_NAMES = "*/_platform/Windows/*";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -620,7 +654,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Editor/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.1.0;
@@ -690,7 +727,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_SOURCE_FILE_NAMES = "*_Win.cpp";
+				EXCLUDED_SOURCE_FILE_NAMES = "*/_platform/Windows/*";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -705,7 +742,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../Editor/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 0.1.0;
