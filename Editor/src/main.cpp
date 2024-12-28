@@ -2,8 +2,8 @@
 #include <Editor/Core/EditorReloadFlags.h>
 #include <Editor/Core/SymbolExportMacros.h>
 
-#include <Enterprise/Core/Assertions.h>
-#include <Enterprise/Core/PlatformData.h>
+#include <Engine/Core/Assertions.h>
+#include <Engine/Core/PlatformData.h>
 
 #include <fmt/format.h>
 #include <GLFW/glfw3.h>

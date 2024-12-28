@@ -76,12 +76,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\Win\Enterprise.ico">
+    <Image Include="resources\Win\AdHocEngine.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resources\Win\Enterprise.rc">
+    <ResourceCompile Include="resources\Win\AdHocEngine.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

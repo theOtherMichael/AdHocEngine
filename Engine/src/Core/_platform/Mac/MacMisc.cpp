@@ -1,10 +1,10 @@
-#include <Enterprise/Core/_platform/Mac/MacMisc.h>
+#include <Engine/Core/_platform/Mac/MacMisc.h>
 
 #include <fmt/format.h>
 
 #include <execinfo.h>
 
-#ifndef ENTERPRISE_MACOS
+#ifndef ADHOC_MACOS
 static_assert(false);
 #endif
 

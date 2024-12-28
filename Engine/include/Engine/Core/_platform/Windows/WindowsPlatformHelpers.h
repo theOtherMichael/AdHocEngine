@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Enterprise/Core/SymbolExportMacros.h>
+#include <Engine/Core/SymbolExportMacros.h>
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
@@ -10,7 +10,7 @@
 #include <string>
 #include <string_view>
 
-#ifndef ENTERPRISE_WINDOWS
+#ifndef ADHOC_WINDOWS
 static_assert(false);
 #endif
 

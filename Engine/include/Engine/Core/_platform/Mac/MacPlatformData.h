@@ -3,7 +3,7 @@
 namespace Engine
 {
 
-#ifdef ENTERPRISE_INTERNAL
+#ifdef ADHOC_INTERNAL
 void InitializePlatformData(){};
 #endif
 

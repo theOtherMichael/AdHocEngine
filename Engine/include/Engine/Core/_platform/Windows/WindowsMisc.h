@@ -1,13 +1,15 @@
 #pragma once
 
-#include <alloca.h>
+#include <Engine/Core/SymbolExportMacros.h>
+
+#include <malloc.h>
 
 namespace Engine
 {
 
-#ifndef ENTERPRISE_RELEASE
+#ifndef ADHOC_RELEASE
     /// Portably trigger a breakpoint in the debugger.
-    #define DEBUGBREAK() __asm__("int $3")
+    #define DEBUGBREAK() (__nop(), __debugbreak())
 #else
     /// Portably trigger a breakpoint in the debugger.
     #define DEBUGBREAK()
@@ -16,10 +18,10 @@ namespace Engine
 /// Portably allocate on the extended stack.
 void* StackAlloc(size_t size)
 {
-    return alloca(size);
+    return _malloca(size);
 }
 
 /// Print the current call stack.
-void PrintBacktrace();
+void ENGINE_API PrintBacktrace();
 
 } // namespace Engine

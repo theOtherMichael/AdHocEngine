@@ -129,11 +129,11 @@
 		CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCE12CFC336A002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4C6EB72B0196A60015E51A /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assertions.h; path = include/Enterprise/Core/Assertions.h; sourceTree = SOURCE_ROOT; };
-		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = include/Enterprise/Core/Misc.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EB72B0196A60015E51A /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assertions.h; path = include/Engine/Core/Assertions.h; sourceTree = SOURCE_ROOT; };
+		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = include/Engine/Core/Misc.h; sourceTree = SOURCE_ROOT; };
 		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Enterprise/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
+		CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Engine/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		CEDB37902CFC166C00FC593F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37912CFC166C00FC593F /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37942CFC169B00FC593F /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
@@ -146,16 +146,16 @@
 		CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsMisc.cpp; path = src/Core/_platform/Windows/WindowsMisc.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformData.cpp; path = src/Core/_platform/Windows/WindowsPlatformData.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers.h; path = include/Enterprise/Core/PlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = include/Enterprise/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscMacros.h; path = include/Enterprise/Core/MiscMacros.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData.h; path = include/Enterprise/Core/PlatformData.h; sourceTree = SOURCE_ROOT; };
-		CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacMisc.h; path = include/Enterprise/Core/_platform/Mac/MacMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformHelpers.h; path = include/Enterprise/Core/_platform/Mac/MacPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformData.h; path = include/Enterprise/Core/_platform/Mac/MacPlatformData.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformData.h; path = include/Enterprise/Core/_platform/Windows/WindowsPlatformData.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformHelpers.h; path = include/Enterprise/Core/_platform/Windows/WindowsPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsMisc.h; path = include/Enterprise/Core/_platform/Windows/WindowsMisc.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers.h; path = include/Engine/Core/PlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = include/Engine/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
+		CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscMacros.h; path = include/Engine/Core/MiscMacros.h; sourceTree = SOURCE_ROOT; };
+		CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData.h; path = include/Engine/Core/PlatformData.h; sourceTree = SOURCE_ROOT; };
+		CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacMisc.h; path = include/Engine/Core/_platform/Mac/MacMisc.h; sourceTree = SOURCE_ROOT; };
+		CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformHelpers.h; path = include/Engine/Core/_platform/Mac/MacPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformData.h; path = include/Engine/Core/_platform/Mac/MacPlatformData.h; sourceTree = SOURCE_ROOT; };
+		CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformData.h; path = include/Engine/Core/_platform/Windows/WindowsPlatformData.h; sourceTree = SOURCE_ROOT; };
+		CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformHelpers.h; path = include/Engine/Core/_platform/Windows/WindowsPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsMisc.h; path = include/Engine/Core/_platform/Windows/WindowsMisc.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,18 +243,18 @@
 		CE4C6EB42B0196A60015E51A /* include */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6EB52B0196A60015E51A /* Enterprise */,
+				CE4C6EB52B0196A60015E51A /* Engine */,
 			);
 			path = include;
 			sourceTree = SOURCE_ROOT;
 		};
-		CE4C6EB52B0196A60015E51A /* Enterprise */ = {
+		CE4C6EB52B0196A60015E51A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
 				CE4C6EB62B0196A60015E51A /* Core */,
 			);
-			name = Enterprise;
-			path = include/Enterprise;
+			name = Engine;
+			path = include/Engine;
 			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EB62B0196A60015E51A /* Core */ = {
@@ -270,7 +270,7 @@
 				CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */,
 			);
 			name = Core;
-			path = include/Enterprise/Core;
+			path = include/Engine/Core;
 			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EBD2B0196A60015E51A /* src */ = {
@@ -342,7 +342,7 @@
 				CEDDB11F2D1FCE6200EADB67 /* Windows */,
 			);
 			name = _platform;
-			path = include/Enterprise/Core/_platform;
+			path = include/Engine/Core/_platform;
 			sourceTree = SOURCE_ROOT;
 		};
 		CEDDB11B2D1FCE6200EADB67 /* Mac */ = {
@@ -353,7 +353,7 @@
 				CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */,
 			);
 			name = Mac;
-			path = include/Enterprise/Core/_platform/Mac;
+			path = include/Engine/Core/_platform/Mac;
 			sourceTree = SOURCE_ROOT;
 		};
 		CEDDB11F2D1FCE6200EADB67 /* Windows */ = {
@@ -364,7 +364,7 @@
 				CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */,
 			);
 			name = Windows;
-			path = include/Enterprise/Core/_platform/Windows;
+			path = include/Engine/Core/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -540,7 +540,7 @@
 			dependencies = (
 			);
 			name = EngineStaticD;
-			productName = EngineStatic;
+			productName = EngineStaticD;
 			productReference = CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -557,7 +557,7 @@
 			dependencies = (
 			);
 			name = EngineDev;
-			productName = Engine;
+			productName = EngineDev;
 			productReference = CE46BCE12CFC336A002F900C /* libEngineDev.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
@@ -574,7 +574,7 @@
 			dependencies = (
 			);
 			name = EngineStaticDev;
-			productName = EngineStatic;
+			productName = EngineStaticDev;
 			productReference = CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -591,7 +591,7 @@
 			dependencies = (
 			);
 			name = EngineD;
-			productName = Engine;
+			productName = EngineD;
 			productReference = CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
@@ -748,9 +748,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ENTERPRISE_ENGINE,
-					ENTERPRISE_INTERNAL,
-					ENTERPRISE_MACOS,
+					ADHOC_ENGINE,
+					ADHOC_INTERNAL,
+					ADHOC_MACOS,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -778,8 +778,8 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
-					ENTERPRISE_EDITOR,
+					ADHOC_RELEASE,
+					ADHOC_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES;
@@ -794,7 +794,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
+					ADHOC_RELEASE,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -813,7 +813,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
+					ADHOC_RELEASE,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -834,7 +834,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ENTERPRISE_DEBUG,
+					ADHOC_DEBUG,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -855,7 +855,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ENTERPRISE_DEBUG,
+					ADHOC_DEBUG,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -873,8 +873,8 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_DEV,
-					ENTERPRISE_EDITOR,
+					ADHOC_DEV,
+					ADHOC_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES_THIN;
@@ -889,8 +889,8 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_DEV,
-					ENTERPRISE_EDITOR,
+					ADHOC_DEV,
+					ADHOC_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES_THIN;
@@ -906,7 +906,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_DEV,
+					ADHOC_DEV,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -925,7 +925,7 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_DEV,
+					ADHOC_DEV,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -981,9 +981,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ENTERPRISE_ENGINE,
-					ENTERPRISE_INTERNAL,
-					ENTERPRISE_MACOS,
+					ADHOC_ENGINE,
+					ADHOC_INTERNAL,
+					ADHOC_MACOS,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -1012,8 +1012,8 @@
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
-					ENTERPRISE_EDITOR,
+					ADHOC_RELEASE,
+					ADHOC_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES;
@@ -1030,8 +1030,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ENTERPRISE_DEBUG,
-					ENTERPRISE_EDITOR,
+					ADHOC_DEBUG,
+					ADHOC_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -1049,8 +1049,8 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ENTERPRISE_DEBUG,
-					ENTERPRISE_EDITOR,
+					ADHOC_DEBUG,
+					ADHOC_EDITOR,
 				);
 				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;

@@ -1,13 +1,13 @@
 #pragma once
 
-#include <Enterprise/Core/SymbolExportMacros.h>
+#include <Engine/Core/SymbolExportMacros.h>
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
 #endif
 #include "Windows.h"
 
-#ifndef ENTERPRISE_WINDOWS
+#ifndef ADHOC_WINDOWS
 static_assert(false);
 #endif
 
@@ -28,7 +28,7 @@ public:
     WindowsPlatformData& operator=(const WindowsPlatformData&) = delete;
 };
 
-#ifdef ENTERPRISE_INTERNAL
+#ifdef ADHOC_INTERNAL
 ENGINE_API WindowsPlatformData& GetMutablePlatformData();
 ENGINE_API void InitializePlatformData();
 #endif

@@ -4,9 +4,9 @@
 
 #include <iostream>
 
-#ifndef ENTERPRISE_MACOS
+#ifndef ADHOC_MACOS
 static_assert(false);
-#endif // !ENTERPRISE_MACOS
+#endif // !ADHOC_MACOS
 
 namespace fs = std::filesystem;
 

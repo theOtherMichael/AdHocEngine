@@ -149,9 +149,9 @@
 		CE46BD312CFC454A002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
 		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Engine/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../Editor/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEA1AE0E2B016708005AC6CE /* Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enterprise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ad Hoc Editor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
-		CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Enterprise.entitlements; path = resources/Mac/Enterprise.entitlements; sourceTree = SOURCE_ROOT; };
+		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB09D2D1FCCA000EADB67 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = src/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
@@ -213,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA1AE142B01670A005AC6CE /* Assets.xcassets */,
-				CEA1AE1B2B01670A005AC6CE /* Enterprise.entitlements */,
+				CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */,
 			);
 			name = Mac;
 			path = resources/Mac;
@@ -269,7 +269,7 @@
 		CEA1AE0F2B016708005AC6CE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CEA1AE0E2B016708005AC6CE /* Enterprise.app */,
+				CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */,
 				CE0684982CEF1CB800031F0A /* Launcher */,
 				CE0684C02CF064F200031F0A /* LauncherD */,
 				CE46BD152CFC33DC002F900C /* LauncherDev */,
@@ -354,7 +354,7 @@
 			dependencies = (
 			);
 			name = Launcher;
-			productName = EnterpriseDevelopment;
+			productName = Launcher;
 			productReference = CE0684982CEF1CB800031F0A /* Launcher */;
 			productType = "com.apple.product-type.tool";
 		};
@@ -371,7 +371,7 @@
 			dependencies = (
 			);
 			name = LauncherD;
-			productName = EnterpriseDevelopment;
+			productName = LauncherD;
 			productReference = CE0684C02CF064F200031F0A /* LauncherD */;
 			productType = "com.apple.product-type.tool";
 		};
@@ -388,13 +388,13 @@
 			dependencies = (
 			);
 			name = LauncherDev;
-			productName = EnterpriseDevelopment;
+			productName = LauncherDev;
 			productReference = CE46BD152CFC33DC002F900C /* LauncherDev */;
 			productType = "com.apple.product-type.tool";
 		};
-		CEA1AE0D2B016708005AC6CE /* Enterprise */ = {
+		CEA1AE0D2B016708005AC6CE /* Ad Hoc Editor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Enterprise" */;
+			buildConfigurationList = CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Ad Hoc Editor" */;
 			buildPhases = (
 				CEA1AE0A2B016708005AC6CE /* Sources */,
 				CECE76412B110A8A0098AAEB /* Frameworks */,
@@ -407,9 +407,9 @@
 			);
 			dependencies = (
 			);
-			name = Enterprise;
-			productName = Enterprise;
-			productReference = CEA1AE0E2B016708005AC6CE /* Enterprise.app */;
+			name = "Ad Hoc Editor";
+			productName = "Ad Hoc Editor";
+			productReference = CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -441,7 +441,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEA1AE0D2B016708005AC6CE /* Enterprise */,
+				CEA1AE0D2B016708005AC6CE /* Ad Hoc Editor */,
 				CE0684972CEF1CB800031F0A /* Launcher */,
 				CE46BD092CFC33DC002F900C /* LauncherDev */,
 				CE0684AF2CF064F200031F0A /* LauncherD */,
@@ -522,7 +522,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
+					ADHOC_RELEASE,
 				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,7 +535,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
+					ADHOC_RELEASE,
 				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,7 +551,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ENTERPRISE_DEBUG,
+					ADHOC_DEBUG,
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -567,7 +567,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ENTERPRISE_DEBUG,
+					ADHOC_DEBUG,
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -580,7 +580,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_DEV,
+					ADHOC_DEV,
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,7 +593,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_DEV,
+					ADHOC_DEV,
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,7 +632,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = resources/Mac/Enterprise.entitlements;
+				CODE_SIGN_ENTITLEMENTS = resources/Mac/AdHocEngine.entitlements;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -644,8 +644,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ENTERPRISE_INTERNAL,
-					ENTERPRISE_MACOS,
+					ADHOC_INTERNAL,
+					ADHOC_MACOS,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -664,7 +664,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine;
 				SDKROOT = macosx;
 			};
 			name = Universal;
@@ -679,7 +679,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
+					ADHOC_RELEASE,
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -720,7 +720,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = resources/Mac/Enterprise.entitlements;
+				CODE_SIGN_ENTITLEMENTS = resources/Mac/AdHocEngine.entitlements;
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -732,8 +732,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ENTERPRISE_INTERNAL,
-					ENTERPRISE_MACOS,
+					ADHOC_INTERNAL,
+					ADHOC_MACOS,
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -752,7 +752,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelMartz.Enterprise;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine;
 				SDKROOT = macosx;
 			};
 			name = ActiveArch;
@@ -767,7 +767,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ENTERPRISE_RELEASE,
+					ADHOC_RELEASE,
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -815,7 +815,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Universal;
 		};
-		CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Enterprise" */ = {
+		CEA1AE1E2B01670A005AC6CE /* Build configuration list for PBXNativeTarget "Ad Hoc Editor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEA1AE202B01670A005AC6CE /* Universal */,

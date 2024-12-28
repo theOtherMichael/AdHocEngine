@@ -8,7 +8,7 @@
 #include <filesystem>
 #include <iostream>
 
-#ifndef ENTERPRISE_WINDOWS
+#ifndef ADHOC_WINDOWS
 static_assert(false);
 #endif
 

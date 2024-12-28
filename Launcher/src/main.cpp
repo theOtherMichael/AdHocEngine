@@ -84,14 +84,14 @@ static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
     fs::path pathToReloadCache = pathToBuildFolder / "Launcher" / "reload_cache";
     fs::path pathToRepository  = pathToBuildFolder.parent_path();
 
-#ifdef ENTERPRISE_WINDOWS
+#ifdef ADHOC_WINDOWS
     fs::path pathToEngineVcpkgDependencies = pathToRepository / "Engine\\vcpkg_installed\\dynamic\\x64-windows";
     fs::path pathToEditorVcpkgDependencies = pathToRepository / "Editor\\vcpkg_installed\\dynamic\\x64-windows";
     fs::path vcPkgOutputFolderName         = "bin";
     std::string libraryNamePrefix          = "";
     std::string dynamicLibraryExtension    = ".dll";
     std::string symbolsFileExtension       = ".pdb";
-#elif defined(ENTERPRISE_MACOS)
+#elif defined(ADHOC_MACOS)
     fs::path pathToEngineVcpkgDependencies = pathToRepository / "Engine/vcpkg_installed/uni-dynamic";
     fs::path pathToEditorVcpkgDependencies = pathToRepository / "Editor/vcpkg_installed/uni-dynamic";
     fs::path vcPkgOutputFolderName         = "lib";
@@ -194,7 +194,7 @@ static DynamicLibrary CopyAndLoadEditorModule(unsigned char reloadFlags)
 
 int main(int argc, char* argv[])
 {
-    std::cout << "Starting Enterprise...\n";
+    std::cout << "Starting Ad Hoc Launcher...\n";
 
     bool isDeveloperMode = false;
     bool isDebugMode     = false;
@@ -221,20 +221,20 @@ int main(int argc, char* argv[])
     if (isDeveloperMode)
     {
         reloadFlags = EditorReloadFlag_Engine | EditorReloadFlag_Editor;
-#ifdef ENTERPRISE_DEBUG
+#ifdef ADHOC_DEBUG
         reloadFlags |= EditorReloadFlag_Debug;
-#elif defined(ENTERPRISE_DEV)
+#elif defined(ADHOC_DEV)
         reloadFlags |= EditorReloadFlag_Dev;
-#elif defined(ENTERPRISE_RELEASE)
+#elif defined(ADHOC_RELEASE)
         reloadFlags |= EditorReloadFlag_Release;
-#endif // ENTERPRISE_DEBUG
+#endif // ADHOC_DEBUG
     }
 
-#ifdef ENTERPRISE_WINDOWS
+#ifdef ADHOC_WINDOWS
     fs::path pathToLibraries     = Platform::GetLauncherPath().parent_path(); // Install folder
     fs::path nameOfDebugModule   = "EditorD.dll";
     fs::path nameOfReleaseModule = "Editor.dll";
-#elif defined(ENTERPRISE_MACOS)
+#elif defined(ADHOC_MACOS)
     fs::path pathToLibraries     = "@loader_path/../Frameworks";
     fs::path nameOfDebugModule   = "libEditorD.dylib";
     fs::path nameOfReleaseModule = "libEditor.dylib";

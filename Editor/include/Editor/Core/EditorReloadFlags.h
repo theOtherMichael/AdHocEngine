@@ -2,7 +2,7 @@
 
 // WARNING: Don't edit this file in developer mode, it is consumed by Launcher!
 
-#ifdef ENTERPRISE_INTERNAL
+#ifdef ADHOC_INTERNAL
 
 constexpr unsigned char EditorReloadFlag_None = 0x0;
 
@@ -21,4 +21,4 @@ constexpr unsigned char EditorReloadFlag_Engine      = 0x4;
 constexpr unsigned char EditorReloadFlag_Editor      = 0x8;
 constexpr unsigned char EditorReloadFlag_ProjectMask = 0x8;
 
-#endif // ENTERPRISE_INTERNAL
+#endif // ADHOC_INTERNAL

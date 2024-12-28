@@ -15,43 +15,43 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Enterprise\Core\SymbolExportMacros.h">
+    <ClInclude Include="include\Engine\Core\SymbolExportMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\Misc.h">
+    <ClInclude Include="include\Engine\Core\Misc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\Assertions.h">
+    <ClInclude Include="include\Engine\Core\Assertions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\PlatformAbstraction.h">
+    <ClInclude Include="include\Engine\Core\PlatformAbstraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsPlatformHelpers.h">
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacPlatformHelpers.h">
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\PlatformHelpers.h">
+    <ClInclude Include="include\Engine\Core\PlatformHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsMisc.h">
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsMisc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacMisc.h">
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\MiscMacros.h">
+    <ClInclude Include="include\Engine\Core\MiscMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\PlatformData.h">
+    <ClInclude Include="include\Engine\Core\PlatformData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacPlatformData.h">
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsPlatformData.h">
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

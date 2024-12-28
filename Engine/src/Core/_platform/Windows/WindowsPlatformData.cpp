@@ -1,6 +1,6 @@
-#include <Enterprise/Core/_platform/Windows/WindowsPlatformData.h>
+#include <Engine/Core/_platform/Windows/WindowsPlatformData.h>
 
-#include <Enterprise/Core/PlatformHelpers.h>
+#include <Engine/Core/PlatformHelpers.h>
 
 #include <fmt/format.h>
 
@@ -9,7 +9,7 @@
 #endif
 #include "Windows.h"
 
-#ifndef ENTERPRISE_WINDOWS
+#ifndef ADHOC_WINDOWS
 static_assert(false);
 #endif
 

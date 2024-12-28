@@ -24,8 +24,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEA1AE0D2B016708005AC6CE"
-               BuildableName = "Enterprise.app"
-               BlueprintName = "Enterprise"
+               BuildableName = "Ad Hoc Editor.app"
+               BlueprintName = "Ad Hoc Editor"
                ReferencedContainer = "container:Launcher/Launcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -54,8 +54,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEA1AE0D2B016708005AC6CE"
-            BuildableName = "Enterprise.app"
-            BlueprintName = "Enterprise"
+            BuildableName = "Ad Hoc Editor.app"
+            BlueprintName = "Ad Hoc Editor"
             ReferencedContainer = "container:Launcher/Launcher.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -77,8 +77,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEA1AE0D2B016708005AC6CE"
-            BuildableName = "Enterprise.app"
-            BlueprintName = "Enterprise"
+            BuildableName = "Ad Hoc Editor.app"
+            BlueprintName = "Ad Hoc Editor"
             ReferencedContainer = "container:Launcher/Launcher.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

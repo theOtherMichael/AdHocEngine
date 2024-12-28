@@ -139,7 +139,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_EDITOR;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ADHOC_INTERNAL;ADHOC_ENGINE;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,7 +164,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ADHOC_INTERNAL;ADHOC_ENGINE;ADHOC_WINDOWS;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -186,7 +186,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_EDITOR;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ADHOC_INTERNAL;ADHOC_ENGINE;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -215,7 +215,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ADHOC_INTERNAL;ADHOC_ENGINE;ADHOC_WINDOWS;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -239,7 +239,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_EDITOR;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ADHOC_INTERNAL;ADHOC_ENGINE;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -268,7 +268,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;ENTERPRISE_INTERNAL;ENTERPRISE_ENGINE;ENTERPRISE_WINDOWS;ENTERPRISE_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;ADHOC_INTERNAL;ADHOC_ENGINE;ADHOC_WINDOWS;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -284,19 +284,19 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\Enterprise\Core\Assertions.h" />
-    <ClInclude Include="include\Enterprise\Core\Misc.h" />
-    <ClInclude Include="include\Enterprise\Core\MiscMacros.h" />
-    <ClInclude Include="include\Enterprise\Core\PlatformAbstraction.h" />
-    <ClInclude Include="include\Enterprise\Core\PlatformData.h" />
-    <ClInclude Include="include\Enterprise\Core\PlatformHelpers.h" />
-    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacMisc.h" />
-    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacPlatformData.h" />
-    <ClInclude Include="include\Enterprise\Core\_platform\Mac\MacPlatformHelpers.h" />
-    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsMisc.h" />
-    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsPlatformData.h" />
-    <ClInclude Include="include\Enterprise\Core\_platform\Windows\WindowsPlatformHelpers.h" />
-    <ClInclude Include="include\Enterprise\Core\SymbolExportMacros.h" />
+    <ClInclude Include="include\Engine\Core\Assertions.h" />
+    <ClInclude Include="include\Engine\Core\Misc.h" />
+    <ClInclude Include="include\Engine\Core\MiscMacros.h" />
+    <ClInclude Include="include\Engine\Core\PlatformAbstraction.h" />
+    <ClInclude Include="include\Engine\Core\PlatformData.h" />
+    <ClInclude Include="include\Engine\Core\PlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformData.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsMisc.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformData.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\SymbolExportMacros.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\_platform\Mac\MacMisc.cpp">

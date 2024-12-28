@@ -1,7 +1,7 @@
 #include "WindowsBacktraceSymbolHandler.h"
 
-#include <Enterprise/Core/PlatformData.h>
-#include <Enterprise/Core/PlatformHelpers.h>
+#include <Engine/Core/PlatformData.h>
+#include <Engine/Core/PlatformHelpers.h>
 
 #include <fmt/format.h>
 
@@ -13,7 +13,7 @@
 
 #include <filesystem>
 
-#ifndef ENTERPRISE_WINDOWS
+#ifndef ADHOC_WINDOWS
 static_assert(false);
 #endif
 

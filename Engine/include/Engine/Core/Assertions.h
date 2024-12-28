@@ -4,14 +4,14 @@
 
 #include <fmt/format.h>
 
-#ifdef ENTERPRISE_DEBUG
+#ifdef ADHOC_DEBUG
     #define ASSERTIONS_ENABLED
     #define SLOWASSERTIONS_ENABLED
-#endif // ENTERPRISE_DEBUG
+#endif // ADHOC_DEBUG
 
-#ifdef ENTERPRISE_DEV
+#ifdef ADHOC_DEV
     #define ASSERTIONS_ENABLED
-#endif // ENTERPRISE_DEV
+#endif // ADHOC_DEV
 
 #define ASSERT_IMPLEMENTATION(expression, message)                                                                     \
     if (expression) {}                                                                                                 \
