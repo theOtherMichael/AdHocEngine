@@ -124,7 +124,7 @@
 				CE46BD082CFC33CD002F900C /* libEditorDev.dylib */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EA22B0196810015E51A /* include */ = {
 			isa = PBXGroup;
@@ -418,7 +418,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Editor";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Editor";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Editor";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -453,13 +454,15 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(BUILD_DIR)/Engine",
+					"$(PROJECT_DIR)/../build/Engine",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
 				PRODUCT_NAME = Editor;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = Universal;
 		};
@@ -536,7 +539,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Editor";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Editor";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Editor";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -571,14 +575,16 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(BUILD_DIR)/Engine",
+					"$(PROJECT_DIR)/../build/Engine",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Editor;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = ActiveArch;
 		};
@@ -610,7 +616,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(BUILD_DIR)/Engine",
+					"$(PROJECT_DIR)/../build/Engine",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,7 +639,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(BUILD_DIR)/Engine",
+					"$(PROJECT_DIR)/../build/Engine",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

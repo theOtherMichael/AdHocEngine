@@ -137,18 +137,18 @@
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD152CFC33DC002F900C /* LauncherDev */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherDev; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD1C2CFC4260002F900C /* libEngine.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../Engine/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD1F2CFC42BB002F900C /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../Editor/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD212CFC4354002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../Engine/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD262CFC4418002F900C /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../Editor/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD282CFC4443002F900C /* libEngineStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStatic.a; path = ../Engine/libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticD.a; path = ../Engine/libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD1C2CFC4260002F900C /* libEngine.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD1F2CFC42BB002F900C /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../build/Editor/libEditor.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD212CFC4354002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD262CFC4418002F900C /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../build/Editor/libEditorD.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD282CFC4443002F900C /* libEngineStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStatic.a; path = ../build/Engine/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
+		CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Engine/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
 		CE46BD2C2CFC4523002F900C /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD2D2CFC4523002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD302CFC454A002F900C /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD312CFC454A002F900C /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
-		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Engine/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../Editor/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Editor/libEditorDev.dylib; sourceTree = SOURCE_ROOT; };
 		CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad Hoc Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
@@ -275,7 +275,7 @@
 				CE46BD152CFC33DC002F900C /* LauncherDev */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CEDDB09C2D1FCCA000EADB67 /* Core */ = {
 			isa = PBXGroup;
@@ -633,7 +633,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = resources/Mac/AdHocEngine.entitlements;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Launcher";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -663,9 +664,11 @@
 				MARKETING_VERSION = 0.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = Universal;
 		};
@@ -675,7 +678,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Bundle";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Bundle";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Launcher";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -721,7 +725,8 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = resources/Mac/AdHocEngine.entitlements;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Launcher";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Launcher";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -751,9 +756,11 @@
 				MARKETING_VERSION = 0.1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = ActiveArch;
 		};
@@ -763,7 +770,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Bundle";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Bundle";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Launcher";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",

@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
+		CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
+		CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
+		CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; };
+		CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; };
+		CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; };
+		CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CEBA0C222D235090006346FC /* Copy Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */,
+			);
+			name = "Copy Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBA0C242D2350C2006346FC /* Copy Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy Libraries */,
+			);
+			name = "Copy Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEBA0C262D2350DD006346FC /* Copy Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */,
+			);
+			name = "Copy Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
+		CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GTMGoogleTestRunner.mm; sourceTree = "<group>"; };
+		CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB948622D231FA8009C272B /* EngineTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE42936E2D2283040020748F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB948462D2315BA009C272B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB9485C2D231FA8009C272B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE42935A2D22828F0020748F = {
+			isa = PBXGroup;
+			children = (
+				CE4293792D2286260020748F /* vcpkg.json */,
+				CE42937F2D228A860020748F /* Frameworks */,
+				CE4293642D22828F0020748F /* Products */,
+				CE4293782D2284EA0020748F /* src */,
+			);
+			sourceTree = "<group>";
+		};
+		CE4293642D22828F0020748F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE4293712D2283040020748F /* EngineTests.xctest */,
+				CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */,
+				CEB948622D231FA8009C272B /* EngineTestsDev.xctest */,
+			);
+			name = Products;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE4293782D2284EA0020748F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CE42937D2D2287D60020748F /* _platform */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE42937D2D2287D60020748F /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				CE42937E2D2287DF0020748F /* Mac */,
+			);
+			name = _platform;
+			path = src/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE42937E2D2287DF0020748F /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */,
+			);
+			name = Mac;
+			path = src/_platform/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE42937F2D228A860020748F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */,
+				CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE4293702D2283040020748F /* EngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE4293752D2283040020748F /* Build configuration list for PBXNativeTarget "EngineTests" */;
+			buildPhases = (
+				CE42936D2D2283040020748F /* Sources */,
+				CE42936E2D2283040020748F /* Frameworks */,
+				CEBA0C222D235090006346FC /* Copy Libraries */,
+				CE42936F2D2283040020748F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineTests;
+			productName = EngineTests;
+			productReference = CE4293712D2283040020748F /* EngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEB948372D2315BA009C272B /* EngineTestsD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB948492D2315BA009C272B /* Build configuration list for PBXNativeTarget "EngineTestsD" */;
+			buildPhases = (
+				CEB948382D2315BA009C272B /* Sources */,
+				CEB948462D2315BA009C272B /* Frameworks */,
+				CEBA0C242D2350C2006346FC /* Copy Libraries */,
+				CEB948482D2315BA009C272B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineTestsD;
+			productName = EngineTests;
+			productReference = CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEB9484D2D231FA8009C272B /* EngineTestsDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB9485F2D231FA8009C272B /* Build configuration list for PBXNativeTarget "EngineTestsDev" */;
+			buildPhases = (
+				CEB9484E2D231FA8009C272B /* Sources */,
+				CEB9485C2D231FA8009C272B /* Frameworks */,
+				CEBA0C262D2350DD006346FC /* Copy Libraries */,
+				CEB9485E2D231FA8009C272B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineTestsDev;
+			productName = EngineTests;
+			productReference = CEB948622D231FA8009C272B /* EngineTestsDev.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE42935B2D22828F0020748F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE4293702D2283040020748F = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = CE42935E2D22828F0020748F /* Build configuration list for PBXProject "EngineTests" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE42935A2D22828F0020748F;
+			productRefGroup = CE4293642D22828F0020748F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE4293702D2283040020748F /* EngineTests */,
+				CEB948372D2315BA009C272B /* EngineTestsD */,
+				CEB9484D2D231FA8009C272B /* EngineTestsDev */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE42936F2D2283040020748F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB948482D2315BA009C272B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB9485E2D231FA8009C272B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE42936D2D2283040020748F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB948382D2315BA009C272B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB9484E2D231FA8009C272B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CE4293682D22828F0020748F /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/EngineTests";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*/_platform/Windows/*.cpp";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ADHOC_INTERNAL,
+					ADHOC_MACOS,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
+			};
+			name = Universal;
+		};
+		CE4293692D22828F0020748F /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/EngineTests";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "*/_platform/Windows/*.cpp";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					ADHOC_INTERNAL,
+					ADHOC_MACOS,
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
+			};
+			name = ActiveArch;
+		};
+		CE4293762D2283040020748F /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_RELEASE,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+				);
+				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Universal;
+		};
+		CE4293772D2283040020748F /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_RELEASE,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+				);
+				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = ActiveArch;
+		};
+		CEB9484A2D2315BA009C272B /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					ADHOC_DEBUG,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Universal;
+		};
+		CEB9484B2D2315BA009C272B /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					ADHOC_DEBUG,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = ActiveArch;
+		};
+		CEB948602D231FA8009C272B /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_DEV,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Universal;
+		};
+		CEB948612D231FA8009C272B /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_DEV,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = ActiveArch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE42935E2D22828F0020748F /* Build configuration list for PBXProject "EngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4293682D22828F0020748F /* Universal */,
+				CE4293692D22828F0020748F /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CE4293752D2283040020748F /* Build configuration list for PBXNativeTarget "EngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE4293762D2283040020748F /* Universal */,
+				CE4293772D2283040020748F /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CEB948492D2315BA009C272B /* Build configuration list for PBXNativeTarget "EngineTestsD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB9484A2D2315BA009C272B /* Universal */,
+				CEB9484B2D2315BA009C272B /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CEB9485F2D231FA8009C272B /* Build configuration list for PBXNativeTarget "EngineTestsDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB948602D231FA8009C272B /* Universal */,
+				CEB948612D231FA8009C272B /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE42935B2D22828F0020748F /* Project object */;
+}

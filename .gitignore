@@ -63,8 +63,7 @@ ipch/
 # Xcode =========================================
 
 ## User settings
-*.xcuserstate
-*.xcbkptlist
+xcuserdata/
 
 ## Xcode 8 and earlier
 *.xcscmblueprint

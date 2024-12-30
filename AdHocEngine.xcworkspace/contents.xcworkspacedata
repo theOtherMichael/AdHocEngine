@@ -2,12 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Engine/Engine.xcodeproj">
+      location = "container:Engine/Engine.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Editor/Editor.xcodeproj">
+      location = "container:EngineTests/EngineTests.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Launcher/Launcher.xcodeproj">
+      location = "container:Editor/Editor.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:EditorTests/EditorTests.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:Launcher/Launcher.xcodeproj">
    </FileRef>
 </Workspace>

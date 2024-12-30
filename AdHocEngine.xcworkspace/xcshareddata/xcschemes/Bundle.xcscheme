@@ -37,6 +37,46 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CE4293702D2283040020748F"
+               BuildableName = "EngineTests.xctest"
+               BlueprintName = "EngineTests"
+               ReferencedContainer = "container:EngineTests/EngineTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEB948372D2315BA009C272B"
+               BuildableName = "EngineTestsD.xctest"
+               BlueprintName = "EngineTestsD"
+               ReferencedContainer = "container:EngineTests/EngineTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEBA0BD72D2344A0006346FC"
+               BuildableName = "EditorTests.xctest"
+               BlueprintName = "EditorTests"
+               ReferencedContainer = "container:EditorTests/EditorTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CEBA0BDF2D2348E5006346FC"
+               BuildableName = "EditorTestsD.xctest"
+               BlueprintName = "EditorTestsD"
+               ReferencedContainer = "container:EditorTests/EditorTests.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

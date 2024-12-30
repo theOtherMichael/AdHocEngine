@@ -4,13 +4,23 @@
 
 engine_manifest_path="./Engine/vcpkg.json"
 editor_manifest_path="./Editor/vcpkg.json"
+engine_tests_manifest_path="./EngineTests/vcpkg.json"
+editor_tests_manifest_path="./EditorTests/vcpkg.json"
+
 engine_checksum_path="./Engine/vcpkg_installed/manifest_checksum.txt"
 editor_checksum_path="./Editor/vcpkg_installed/manifest_checksum.txt"
+engine_tests_checksum_path="./EngineTests/vcpkg_installed/manifest_checksum.txt"
+editor_tests_checksum_path="./EditorTests/vcpkg_installed/manifest_checksum.txt"
 
 engine_manifest_checksum=""
 editor_manifest_checksum=""
+engine_tests_manifest_checksum=""
+editor_tests_manifest_checksum=""
+
 is_engine_dependency_install_required=false
 is_editor_dependency_install_required=false
+is_engine_tests_dependency_install_required=false
+is_editor_tests_dependency_install_required=false
 
 check_manifests_for_changes() {
     if [ ! -f "$engine_manifest_path" ]; then
@@ -53,6 +63,51 @@ check_manifests_for_changes() {
             fi
         else
             echo "Editor checksum file \"$editor_checksum_path\" was not found. Editor dependencies will be installed"
+            is_editor_dependency_install_required=true
+        fi
+    fi
+
+    if [ ! -f "$engine_tests_manifest_path" ]; then
+        echo "Unable to locate engine tests manifest at \"$engine_tests_manifest_path\"!"
+        return 1
+    else
+        echo "Checking EngineTests/vcpkg.json for changes..."
+        engine_tests_manifest_checksum=$(shasum $engine_tests_manifest_path | awk '{ print $1 }')
+        echo "EngineTests manifest checksum: $engine_tests_manifest_checksum"
+
+        if [ -f $engine_tests_checksum_path ]; then
+            previous_engine_tests_checksum=$(cat $engine_tests_checksum_path)
+            if [ "$engine_tests_manifest_checksum" = "$previous_engine_tests_checksum" ]; then
+                echo "No changes to EngineTests/vcpkg.json detected since last build. Dependencies will not be reinstalled"
+            else
+                echo "Detected changes to EngineTests/vcpkg.json. EngineTests dependencies will be reinstalled"
+                is_engine_tests_dependency_install_required=true
+            fi
+        else
+            echo "EngineTests checksum file \"$engine_tests_checksum_path\" was not found. EngineTests dependencies will be installed"
+            is_engine_tests_dependency_install_required=true
+        fi
+    fi
+
+    if [ ! -f "$editor_tests_manifest_path" ]; then
+        echo "Unable to locate editor tests manifest at \"$editor_tests_manifest_path\"!"
+        return 1
+    else
+        echo "Checking EditorTests/vcpkg.json for changes..."
+        editor_tests_manifest_checksum=$(shasum $editor_tests_manifest_path | awk '{ print $1 }')
+        echo "EditorTests manifest checksum: $editor_tests_manifest_checksum"
+
+        if [ -f $editor_tests_checksum_path ]; then
+            previous_editor_tests_checksum=$(cat $editor_tests_checksum_path)
+            if [ "$editor_tests_manifest_checksum" = "$previous_editor_tests_checksum" ]; then
+                echo "No changes to EditorTests/vcpkg.json detected since last build. Dependencies will not be reinstalled"
+            else
+                echo "Detected changes to EditorTests/vcpkg.json. EditorTests dependencies will be reinstalled"
+                is_editor_tests_dependency_install_required=true
+            fi
+        else
+            echo "EditorTests checksum file \"$editor_tests_checksum_path\" was not found. EditorTests dependencies will be installed"
+            is_editor_tests_dependency_install_required=true
         fi
     fi
 }
@@ -195,6 +250,25 @@ else
     echo "Editor dependencies are already installed, skipping"
 fi
 
+if [ "$is_engine_tests_dependency_install_required" == true ]; then
+    if ! install_dependencies_for_project_and_linkage ./EngineTests dynamic; then
+        install_failed=true
+    fi
+    if ! install_dependencies_for_project_and_linkage ./EngineTests static; then
+        install_failed=true
+    fi
+else
+    echo "EngineTests dependencies are already installed, skipping"
+fi
+
+if [ "$is_editor_tests_dependency_install_required" == true ]; then
+    if ! install_dependencies_for_project_and_linkage ./EditorTests dynamic; then
+        install_failed=true
+    fi
+else
+    echo "EditorTests dependencies are already installed, skipping"
+fi
+
 if [ "$install_failed" == true ]; then
     echo "One or more vcpkg install steps failed"
     exit 1
@@ -213,6 +287,19 @@ echo "$editor_manifest_checksum" >"$editor_checksum_path"
 editorChecksumFileContents=$(cat $editor_checksum_path)
 if [ "$editorChecksumFileContents" = "$editor_checksum_path" ]; then
     echo Failed to write editor manifest checksum to disk! Next build may redundantly reinstall dependencies
+fi
+
+echo "$engine_tests_manifest_checksum" >"$engine_tests_checksum_path"
+engineTestsChecksumFileContents=$(cat $engine_tests_checksum_path)
+if [ "$engineTestsChecksumFileContents" = "$engine_tests_checksum_path" ]; then
+    echo
+    echo Failed to write engine tests manifest checksum to disk! Next build may redundantly reinstall dependencies
+fi
+
+echo "$editor_tests_manifest_checksum" >"$editor_tests_checksum_path"
+editorTestsChecksumFileContents=$(cat $editor_tests_checksum_path)
+if [ "$editorTestsChecksumFileContents" = "$editor_tests_checksum_path" ]; then
+    echo Failed to write editor tests manifest checksum to disk! Next build may redundantly reinstall dependencies
 fi
 
 echo "Successfully completed vcpkg install step!"

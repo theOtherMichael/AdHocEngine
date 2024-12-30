@@ -238,7 +238,7 @@
 				CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EB42B0196A60015E51A /* include */ = {
 			isa = PBXGroup;
@@ -736,7 +736,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Engine";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Engine";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Engine";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -764,11 +765,13 @@
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
 				);
 				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = Engine;
+				OBJROOT = "$(SYMROOT)-int.noindex";
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = Universal;
 		};
@@ -781,8 +784,8 @@
 					ADHOC_RELEASE,
 					ADHOC_EDITOR,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Universal;
@@ -796,10 +799,7 @@
 					"$(inherited)",
 					ADHOC_RELEASE,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-static/lib";
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -815,10 +815,7 @@
 					"$(inherited)",
 					ADHOC_RELEASE,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-static/lib";
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -836,10 +833,7 @@
 					"DEBUG=1",
 					ADHOC_DEBUG,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -857,10 +851,7 @@
 					"DEBUG=1",
 					ADHOC_DEBUG,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -876,7 +867,6 @@
 					ADHOC_DEV,
 					ADHOC_EDITOR,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -892,7 +882,6 @@
 					ADHOC_DEV,
 					ADHOC_EDITOR,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -908,10 +897,7 @@
 					"$(inherited)",
 					ADHOC_DEV,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-static/lib";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -927,10 +913,7 @@
 					"$(inherited)",
 					ADHOC_DEV,
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-static/lib";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -969,7 +952,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/Engine";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Engine";
+				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Engine";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -997,12 +981,14 @@
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
 				);
 				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = Engine;
 				SDKROOT = macosx;
+				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = ActiveArch;
 		};
@@ -1015,8 +1001,8 @@
 					ADHOC_RELEASE,
 					ADHOC_EDITOR,
 				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib";
 				LLVM_LTO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;
