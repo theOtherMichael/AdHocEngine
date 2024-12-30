@@ -2,7 +2,7 @@
 
 #ifdef ADHOC_WINDOWS
     #ifdef ADHOC_EDITOR
-        #ifdef ADHOC_ENGINE
+        #ifdef ADHOC_ENGINE_PROJECT
             #define ENGINE_API __declspec(dllexport)
         #else
             #define ENGINE_API __declspec(dllimport)
