@@ -13,7 +13,11 @@ namespace Editor
 class WindowsBacktraceSymbolHandler : public BaseBacktraceSymbolHandler
 {
 public:
-    WindowsBacktraceSymbolHandler(bool isDeveloperMode);
+    explicit WindowsBacktraceSymbolHandler(bool isDeveloperMode);
+
+    WindowsBacktraceSymbolHandler(const WindowsBacktraceSymbolHandler&)            = delete;
+    WindowsBacktraceSymbolHandler& operator=(const WindowsBacktraceSymbolHandler&) = delete;
+
     ~WindowsBacktraceSymbolHandler() override;
 
 private:

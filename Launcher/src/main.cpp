@@ -55,9 +55,9 @@ static void CopyFolderContents(const fs::path& sourceFolder, const fs::path& des
     }
 }
 
-static void WaitOnFileChanged(fs::path& buildProductPath,
-                              fs::file_time_type& buildProductLastModified,
-                              steady_clock::time_point& scheduledTimeOut)
+static void WaitOnFileChanged(const fs::path& buildProductPath,
+                              const fs::file_time_type buildProductLastModified,
+                              const steady_clock::time_point scheduledTimeOut)
 {
     std::error_code ec;
 
