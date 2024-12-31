@@ -10,6 +10,9 @@
 		CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18EF2D23914700F47CDF /* libEngine.dylib */; };
 		CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F12D23915300F47CDF /* libEngineD.dylib */; };
 		CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */; };
+		CE3D19112D23A07A00F47CDF /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
+		CE3D191E2D23A0DB00F47CDF /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
+		CE3D192B2D23A0E600F47CDF /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
 		CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
 		CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
 		CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
@@ -19,6 +22,12 @@
 		CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEE4330A2D23B4D20095A215 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193A2D23A1A000F47CDF /* libgtest.a */; };
+		CEE4330C2D23B4DE0095A215 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D19362D23A15400F47CDF /* libgtest.a */; };
+		CEE4330E2D23B4E70095A215 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D19362D23A15400F47CDF /* libgtest.a */; };
+		CEE4330F2D23B6080095A215 /* libEngineStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D19382D23A16800F47CDF /* libEngineStatic.a */; };
+		CEE433102D23B6130095A215 /* libEngineStaticDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */; };
+		CEE433112D23B6190095A215 /* libEngineStaticD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +70,14 @@
 		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE3D191B2D23A07A00F47CDF /* EngineStaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D19282D23A0DB00F47CDF /* EngineStaticTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D19352D23A0E600F47CDF /* EngineStaticTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D19362D23A15400F47CDF /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
+		CE3D19382D23A16800F47CDF /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../build/Engine/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
+		CE3D193A2D23A1A000F47CDF /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/debug/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
+		CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Engine/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
+		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Engine/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
 		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GTMGoogleTestRunner.mm; sourceTree = "<group>"; };
@@ -98,6 +115,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEE433092D23B4AE0095A215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE4330A2D23B4D20095A215 /* libgtest.a in Frameworks */,
+				CEE433112D23B6190095A215 /* libEngineStaticD.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE4330B2D23B4D80095A215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE4330C2D23B4DE0095A215 /* libgtest.a in Frameworks */,
+				CEE433102D23B6130095A215 /* libEngineStaticDev.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE4330D2D23B4E20095A215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE4330E2D23B4E70095A215 /* libgtest.a in Frameworks */,
+				CEE4330F2D23B6080095A215 /* libEngineStatic.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -117,6 +161,9 @@
 				CE4293712D2283040020748F /* EngineTests.xctest */,
 				CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */,
 				CEB948622D231FA8009C272B /* EngineTestsDev.xctest */,
+				CE3D191B2D23A07A00F47CDF /* EngineStaticTests.xctest */,
+				CE3D19282D23A0DB00F47CDF /* EngineStaticTestsD.xctest */,
+				CE3D19352D23A0E600F47CDF /* EngineStaticTestsDev.xctest */,
 			);
 			name = Products;
 			sourceTree = SOURCE_ROOT;
@@ -153,8 +200,13 @@
 				CE3D18EF2D23914700F47CDF /* libEngine.dylib */,
 				CE3D18F12D23915300F47CDF /* libEngineD.dylib */,
 				CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */,
+				CE3D19382D23A16800F47CDF /* libEngineStatic.a */,
+				CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */,
+				CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */,
 				CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */,
 				CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */,
+				CE3D193A2D23A1A000F47CDF /* libgtest.a */,
+				CE3D19362D23A15400F47CDF /* libgtest.a */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -162,6 +214,57 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CE3D190F2D23A07A00F47CDF /* EngineStaticTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3D19182D23A07A00F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTests" */;
+			buildPhases = (
+				CE3D19102D23A07A00F47CDF /* Sources */,
+				CEE4330D2D23B4E20095A215 /* Frameworks */,
+				CE3D19172D23A07A00F47CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineStaticTests;
+			productName = EngineTests;
+			productReference = CE3D191B2D23A07A00F47CDF /* EngineStaticTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE3D191C2D23A0DB00F47CDF /* EngineStaticTestsD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3D19252D23A0DB00F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTestsD" */;
+			buildPhases = (
+				CE3D191D2D23A0DB00F47CDF /* Sources */,
+				CEE433092D23B4AE0095A215 /* Frameworks */,
+				CE3D19242D23A0DB00F47CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineStaticTestsD;
+			productName = EngineTests;
+			productReference = CE3D19282D23A0DB00F47CDF /* EngineStaticTestsD.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CE3D19292D23A0E600F47CDF /* EngineStaticTestsDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE3D19322D23A0E600F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTestsDev" */;
+			buildPhases = (
+				CE3D192A2D23A0E600F47CDF /* Sources */,
+				CEE4330B2D23B4D80095A215 /* Frameworks */,
+				CE3D19312D23A0E600F47CDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngineStaticTestsDev;
+			productName = EngineTests;
+			productReference = CE3D19352D23A0E600F47CDF /* EngineStaticTestsDev.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CE4293702D2283040020748F /* EngineTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE4293752D2283040020748F /* Build configuration list for PBXNativeTarget "EngineTests" */;
@@ -244,13 +347,37 @@
 			projectRoot = "";
 			targets = (
 				CE4293702D2283040020748F /* EngineTests */,
-				CEB948372D2315BA009C272B /* EngineTestsD */,
 				CEB9484D2D231FA8009C272B /* EngineTestsDev */,
+				CEB948372D2315BA009C272B /* EngineTestsD */,
+				CE3D190F2D23A07A00F47CDF /* EngineStaticTests */,
+				CE3D19292D23A0E600F47CDF /* EngineStaticTestsDev */,
+				CE3D191C2D23A0DB00F47CDF /* EngineStaticTestsD */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CE3D19172D23A07A00F47CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3D19242D23A0DB00F47CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3D19312D23A0E600F47CDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE42936F2D2283040020748F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +402,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CE3D19102D23A07A00F47CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3D19112D23A07A00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3D191D2D23A0DB00F47CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3D191E2D23A0DB00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE3D192A2D23A0E600F47CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE3D192B2D23A0E600F47CDF /* GTMGoogleTestRunner.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CE42936D2D2283040020748F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +453,184 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		CE3D19192D23A07A00F47CDF /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_RELEASE,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+				);
+				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Universal;
+		};
+		CE3D191A2D23A07A00F47CDF /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_RELEASE,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+				);
+				LLVM_LTO = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = ActiveArch;
+		};
+		CE3D19262D23A0DB00F47CDF /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					ADHOC_DEBUG,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Universal;
+		};
+		CE3D19272D23A0DB00F47CDF /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+					ADHOC_DEBUG,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = ActiveArch;
+		};
+		CE3D19332D23A0E600F47CDF /* Universal */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_DEV,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = Universal;
+		};
+		CE3D19342D23A0E600F47CDF /* ActiveArch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					ADHOC_DEV,
+					ADHOC_EDITOR,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+				);
+				LLVM_LTO = YES_THIN;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+			};
+			name = ActiveArch;
+		};
 		CE4293682D22828F0020748F /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -628,6 +957,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CE3D19182D23A07A00F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3D19192D23A07A00F47CDF /* Universal */,
+				CE3D191A2D23A07A00F47CDF /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CE3D19252D23A0DB00F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTestsD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3D19262D23A0DB00F47CDF /* Universal */,
+				CE3D19272D23A0DB00F47CDF /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
+		CE3D19322D23A0E600F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTestsDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE3D19332D23A0E600F47CDF /* Universal */,
+				CE3D19342D23A0E600F47CDF /* ActiveArch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Universal;
+		};
 		CE42935E2D22828F0020748F /* Build configuration list for PBXProject "EngineTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

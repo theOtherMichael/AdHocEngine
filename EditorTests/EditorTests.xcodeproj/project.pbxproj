@@ -244,8 +244,8 @@
 			projectRoot = "";
 			targets = (
 				CEBA0BD72D2344A0006346FC /* EditorTests */,
-				CEBA0BDF2D2348E5006346FC /* EditorTestsD */,
 				CEBA0BE82D234A0C006346FC /* EditorTestsDev */,
+				CEBA0BDF2D2348E5006346FC /* EditorTestsD */,
 			);
 		};
 /* End PBXProject section */

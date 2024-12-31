@@ -163,8 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */,
 				CEDB37932CFC166C00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
+				CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,8 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDB379E2CFC16E600FC593F /* libglfw3.a in Frameworks */,
 				CEDB379F2CFC16E600FC593F /* libfmtd.a in Frameworks */,
+				CEDB379E2CFC16E600FC593F /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,8 +190,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */,
 				CE46BCDD2CFC336A002F900C /* libfmt.11.0.2.dylib in Frameworks */,
+				CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
