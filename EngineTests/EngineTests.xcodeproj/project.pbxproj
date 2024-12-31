@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18EF2D23914700F47CDF /* libEngine.dylib */; };
+		CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F12D23915300F47CDF /* libEngineD.dylib */; };
+		CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */; };
 		CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
 		CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
 		CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
@@ -55,6 +58,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
+		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
+		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
 		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GTMGoogleTestRunner.mm; sourceTree = "<group>"; };
@@ -70,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */,
+				CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */,
+				CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */,
+				CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +150,9 @@
 		CE42937F2D228A860020748F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE3D18EF2D23914700F47CDF /* libEngine.dylib */,
+				CE3D18F12D23915300F47CDF /* libEngineD.dylib */,
+				CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */,
 				CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */,
 				CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */,
 			);
@@ -346,7 +358,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/include",
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/../Frameworks",
+					"$(PROJECT_DIR)/../build/Engine",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../build/Engine";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -412,7 +430,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/include",
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/../Frameworks",
+					"$(PROJECT_DIR)/../build/Engine",
+				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../build/Engine";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -435,6 +459,10 @@
 					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -460,6 +488,10 @@
 					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -487,6 +519,10 @@
 					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
@@ -514,6 +550,10 @@
 					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
@@ -539,6 +579,10 @@
 					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -564,6 +608,10 @@
 					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
