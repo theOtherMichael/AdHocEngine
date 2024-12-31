@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
-		CE46BD022CFC33CD002F900C /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.dylib */; };
-		CE46BD032CFC33CD002F900C /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.dylib */; };
+		CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
+		CE46BD032CFC33CD002F900C /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */; };
 		CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD162CFC3F45002F900C /* libEngine.dylib */; };
 		CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD182CFC3F53002F900C /* libEngineDev.dylib */; };
@@ -24,9 +24,9 @@
 		CED4DDBF2D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
 		CED4DDC02D101ED200BAE96F /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */; };
 		CED4DDC12D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
-		CEDB37A62CFC1B3B00FC593F /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.dylib */; };
-		CEDB397C2CFC1B6F00FC593F /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397A2CFC1B6F00FC593F /* libglfw.dylib */; };
-		CEDB397D2CFC1B6F00FC593F /* libfmtd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397B2CFC1B6F00FC593F /* libfmtd.dylib */; };
+		CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */; };
+		CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */; };
+		CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */; };
 		CEDDB0D02D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */; };
 		CEDDB0D12D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */; };
 		CEDDB0D22D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */; };
@@ -42,7 +42,7 @@
 		CEDDB0DC2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */; };
 		CEDDB0DD2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */; };
 		CEDDB0DE2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */; };
-		CEE1D7D92CFC1FCF00373186 /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.dylib */; };
+		CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,10 +57,10 @@
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Editor/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EditorReloadFlags.h; path = include/Editor/Core/EditorReloadFlags.h; sourceTree = SOURCE_ROOT; };
-		CEDB37A42CFC1B3B00FC593F /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDB37A52CFC1B3B00FC593F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDB397A2CFC1B6F00FC593F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDB397B2CFC1B6F00FC593F /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacBacktraceSymbolHandler.h; path = src/Core/_platform/Mac/MacBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
 		CEDDB0CB2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsBacktraceSymbolHandler.cpp; path = src/Core/_platform/Windows/WindowsBacktraceSymbolHandler.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0CC2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsBacktraceSymbolHandler.h; path = src/Core/_platform/Windows/WindowsBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
@@ -74,8 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */,
-				CEE1D7D92CFC1FCF00373186 /* libglfw.dylib in Frameworks */,
-				CEDB37A62CFC1B3B00FC593F /* libfmt.dylib in Frameworks */,
+				CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */,
+				CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
 				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,8 +85,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */,
-				CE46BD022CFC33CD002F900C /* libglfw.dylib in Frameworks */,
-				CE46BD032CFC33CD002F900C /* libfmt.dylib in Frameworks */,
+				CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */,
+				CE46BD032CFC33CD002F900C /* libfmt.11.0.2.dylib in Frameworks */,
 				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,8 +96,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
-				CEDB397C2CFC1B6F00FC593F /* libglfw.dylib in Frameworks */,
-				CEDB397D2CFC1B6F00FC593F /* libfmtd.dylib in Frameworks */,
+				CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */,
+				CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */,
 				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,10 +159,10 @@
 				CE46BD162CFC3F45002F900C /* libEngine.dylib */,
 				CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */,
 				CE46BD182CFC3F53002F900C /* libEngineDev.dylib */,
-				CEDB37A42CFC1B3B00FC593F /* libfmt.dylib */,
-				CEDB397B2CFC1B6F00FC593F /* libfmtd.dylib */,
-				CEDB397A2CFC1B6F00FC593F /* libglfw.dylib */,
-				CEDB37A52CFC1B3B00FC593F /* libglfw.dylib */,
+				CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */,
+				CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */,
+				CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */,
+				CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;

@@ -13,8 +13,8 @@
 		CE3833D92CF2FC250004C108 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
 		CE46BCD32CFC336A002F900C /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE46BCD42CFC336A002F900C /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
-		CE46BCDC2CFC336A002F900C /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.dylib */; };
-		CE46BCDD2CFC336A002F900C /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.dylib */; };
+		CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
+		CE46BCDD2CFC336A002F900C /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
 		CE46BCE52CFC3373002F900C /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE46BCE92CFC3373002F900C /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
 		CE46BCF22CFC3373002F900C /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37982CFC16CA00FC593F /* libfmt.a */; };
@@ -29,10 +29,10 @@
 		CED4DDB62D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
 		CED4DDB72D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
 		CED4DDB82D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
-		CEDB37922CFC166C00FC593F /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.dylib */; };
-		CEDB37932CFC166C00FC593F /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.dylib */; };
-		CEDB37962CFC169B00FC593F /* libfmtd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.dylib */; };
-		CEDB37972CFC169B00FC593F /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37952CFC169B00FC593F /* libglfw.dylib */; };
+		CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
+		CEDB37932CFC166C00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
+		CEDB37962CFC169B00FC593F /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */; };
+		CEDB37972CFC169B00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */; };
 		CEDB379A2CFC16CA00FC593F /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37982CFC16CA00FC593F /* libfmt.a */; };
 		CEDB379B2CFC16CA00FC593F /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37992CFC16CA00FC593F /* libglfw3.a */; };
 		CEDB379E2CFC16E600FC593F /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB379C2CFC16E600FC593F /* libglfw3.a */; };
@@ -134,10 +134,10 @@
 		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Engine/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
-		CEDB37902CFC166C00FC593F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "vcpkg_installed/uni-dynamic/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDB37912CFC166C00FC593F /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDB37942CFC169B00FC593F /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libfmtd.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDB37952CFC169B00FC593F /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libglfw.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/uni-dynamic/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37982CFC16CA00FC593F /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
 		CEDB37992CFC16CA00FC593F /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vcpkg_installed/uni-static/lib/libglfw3.a"; sourceTree = SOURCE_ROOT; };
 		CEDB379C2CFC16E600FC593F /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vcpkg_installed/uni-static/debug/lib/libglfw3.a"; sourceTree = SOURCE_ROOT; };
@@ -163,8 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDB37922CFC166C00FC593F /* libglfw.dylib in Frameworks */,
-				CEDB37932CFC166C00FC593F /* libfmt.dylib in Frameworks */,
+				CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */,
+				CEDB37932CFC166C00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,8 +190,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BCDC2CFC336A002F900C /* libglfw.dylib in Frameworks */,
-				CE46BCDD2CFC336A002F900C /* libfmt.dylib in Frameworks */,
+				CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */,
+				CE46BCDD2CFC336A002F900C /* libfmt.11.0.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,8 +208,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDB37962CFC169B00FC593F /* libfmtd.dylib in Frameworks */,
-				CEDB37972CFC169B00FC593F /* libglfw.dylib in Frameworks */,
+				CEDB37962CFC169B00FC593F /* libfmtd.11.0.2.dylib in Frameworks */,
+				CEDB37972CFC169B00FC593F /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +293,14 @@
 		CE4C6EDC2B01A9870015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CEDB37912CFC166C00FC593F /* libfmt.dylib */,
+				CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */,
 				CEDB37982CFC16CA00FC593F /* libfmt.a */,
-				CEDB37942CFC169B00FC593F /* libfmtd.dylib */,
+				CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */,
 				CEDB379D2CFC16E600FC593F /* libfmtd.a */,
-				CEDB37952CFC169B00FC593F /* libglfw.dylib */,
-				CEDB37902CFC166C00FC593F /* libglfw.dylib */,
-				CEDB379C2CFC16E600FC593F /* libglfw3.a */,
+				CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */,
+				CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */,
 				CEDB37992CFC16CA00FC593F /* libglfw3.a */,
+				CEDB379C2CFC16E600FC593F /* libglfw3.a */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
