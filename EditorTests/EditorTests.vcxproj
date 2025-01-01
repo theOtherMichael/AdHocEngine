@@ -5,6 +5,10 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Dev|x64">
+      <Configuration>Dev</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
@@ -34,6 +38,11 @@
     <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)Dev</TargetName>
+  </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>false</VcpkgEnabled>
     <VcpkgManifestInstall>false</VcpkgManifestInstall>
@@ -42,59 +51,97 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>X64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ADHOC_EDITOR;ADHOC_INTERNAL;ADHOC_DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Editor\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gmock_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Editor\EditorD.lib;$(SolutionDir)build\Engine\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY $(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
-      <Message>Copying vcpkg dependencies</Message>
+      <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)build\Engine\ $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\debug\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+      <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>X64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ADHOC_EDITOR;ADHOC_INTERNAL;ADHOC_RELEASE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp17</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Editor\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Editor\Editor.lib;$(SolutionDir)build\Engine\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>XCOPY $(ProjectDir)vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
-      <Message>Copying vcpkg dependencies</Message>
+      <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)build\Engine\ $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+      <Message>Copying DLL dependencies</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>ADHOC_EDITOR;ADHOC_INTERNAL;ADHOC_DEV;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Editor\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Editor\EditorDev.lib;$(SolutionDir)build\Engine\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)build\Engine\ $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+      <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="src\_platform\Mac\GTMGoogleTestRunner.mm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
     </None>
     <CustomBuild Include="vcpkg.json">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running vcpkg script</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running vcpkg script</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Running vcpkg script</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
