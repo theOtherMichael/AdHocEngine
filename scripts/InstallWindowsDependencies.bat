@@ -6,6 +6,9 @@ rem The working directory is the current project folder.
 
 set VCPKG="..\vcpkg\vcpkg.exe"
 
+set LOCK_FILE="..\DO_NOT_SAVE.lock"
+set LOCK_TIMEOUT_SECONDS=30
+
 set MANIFEST_PATH="vcpkg.json"
 set CHECKSUM_PATH="vcpkg_installed\manifest_checksum.txt"
 set MANIFEST_CHECKSUM=""
@@ -31,6 +34,28 @@ if /i "%1"=="dynamic" (
     exit /b 1
 )
 
+echo Acquiring lock on vcpkg...
+set LOCK_TIMEOUT_COUNTER=0
+
+:waitForLock
+if exist "%LOCK_FILE%" (
+    set /A LOCK_TIMEOUT_COUNTER+=1
+    if !LOCK_TIMEOUT_COUNTER! geq 15 (
+        echo Timeout reached, aborting...
+        exit /b 1
+    )
+
+    echo Waiting for vcpkg lock...
+    rem Hack to wait 1 sec
+    ping -n 2 127.0.0.1 >nul
+
+    goto waitForLock
+)
+
+type nul > "%LOCK_FILE%"
+echo This file represents a lock on vcpkg. Locked by %0 > "%LOCK_FILE%"
+echo vcpkg lock acquired
+
 echo Running vcpkg install step...
 
 if not exist "..\vcpkg\bootstrap-vcpkg.bat" (
@@ -38,6 +63,8 @@ if not exist "..\vcpkg\bootstrap-vcpkg.bat" (
     call git submodule update --init --recursive
     if errorlevel 1 (
         echo Failure during git submodule update!
+        del "%LOCK_FILE%"
+        echo vcpkg lock released
         exit /b 1
     )
 )
@@ -47,12 +74,16 @@ if not exist "!VCPKG!" (
     call "..\vcpkg\bootstrap-vcpkg.bat"
     if errorlevel 1 (
         echo vcpkg bootstrapping failed!
+        del "%LOCK_FILE%"
+        echo vcpkg lock released
         exit /b 1
     )
 )
 
 if not exist !MANIFEST_PATH! (
     echo Unable to locate manifest at !MANIFEST_PATH!!
+    del "%LOCK_FILE%"
+    echo vcpkg lock released
     exit /b 1
 )
 
@@ -77,6 +108,9 @@ if exist !CHECKSUM_PATH! (
 
 if "!IS_DYNAMIC_INSTALL_REQUIRED!"=="false" (if "!IS_STATIC_INSTALL_REQUIRED!"=="false" (
     echo Project dependencies are already installed, skipping
+
+    del "%LOCK_FILE%"
+    echo vcpkg lock released
     exit 0
 ))
 
@@ -99,6 +133,9 @@ if "!IS_STATIC_INSTALL_REQUIRED!"=="true" (
         set IS_INSTALL_FAILED=true
     )
 )
+
+del "%LOCK_FILE%"
+echo vcpkg lock released
 
 if "!IS_INSTALL_FAILED!"=="true" (
     echo "One or more vcpkg install steps failed"
