@@ -13,6 +13,18 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="StaticDebug|x64">
+      <Configuration>StaticDebug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="StaticDev|x64">
+      <Configuration>StaticDev</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="StaticRelease|x64">
+      <Configuration>StaticRelease</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{b05f8295-4b13-47dd-b6e6-cc99376b97f7}</ProjectGuid>
@@ -33,15 +45,30 @@
     <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)StaticD</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)Static</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)Dev</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
+    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)StaticDev</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>false</VcpkgEnabled>
@@ -70,6 +97,27 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>ADHOC_INTERNAL;ADHOC_DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Engine\EngineStaticD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Message>Deleting EditorTestsD</Message>
+      <Command>DEL $(ProjectDir)..\build\EditorTests\Debug\EditorTestsD.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PreprocessorDefinitions>ADHOC_EDITOR;ADHOC_INTERNAL;ADHOC_RELEASE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -91,6 +139,28 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
 XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
 XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>ADHOC_INTERNAL;ADHOC_RELEASE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Engine\EngineStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Message>Deleting EditorTests</Message>
+      <Command>DEL $(ProjectDir)..\build\EditorTests\Release\EditorTests.exe</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
@@ -116,26 +186,63 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>ADHOC_INTERNAL;ADHOC_DEV;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Engine\EngineStaticDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent />
+    <PostBuildEvent>
+      <Message>Deleting EditorTestsDev</Message>
+      <Command>DEL $(ProjectDir)..\build\EditorTests\Dev\EditorTestsDev.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="src\_platform\Mac\GTMGoogleTestRunner.mm">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">true</ExcludedFromBuild>
     </None>
     <CustomBuild Include="vcpkg.json">
       <FileType>Document</FileType>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">CALL $(SolutionDir)scripts\InstallWindowsDependencies.bat All</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Running vcpkg script</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">Running vcpkg script</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Running vcpkg script</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">Running vcpkg script</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">Running vcpkg script</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">Running vcpkg script</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">$(ProjectDir)vcpkg_installed\manifest_checksum.txt</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
