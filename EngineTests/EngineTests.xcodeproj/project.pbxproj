@@ -462,7 +462,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ADHOC_RELEASE,
-					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,7 +490,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ADHOC_RELEASE,
-					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -522,7 +520,6 @@
 					"$(inherited)",
 					"DEBUG=1",
 					ADHOC_DEBUG,
-					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -553,7 +550,6 @@
 					"$(inherited)",
 					"DEBUG=1",
 					ADHOC_DEBUG,
-					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -582,7 +578,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ADHOC_DEV,
-					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -611,7 +606,6 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					ADHOC_DEV,
-					ADHOC_EDITOR,
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
