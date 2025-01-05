@@ -11,8 +11,6 @@
 namespace Engine::Console
 {
 
-typedef std::function<void(const std::string& message)> LogEventCallback;
-
 enum class LogLevel
 {
     // Fatal,
@@ -21,6 +19,8 @@ enum class LogLevel
     Message,
     Trace,
 };
+
+typedef std::function<void(const LogLevel logLevel, const std::string& message)> LogEventCallback;
 
 class ENGINE_API LogStream
 {
@@ -39,7 +39,7 @@ private:
     unsigned int id;
 };
 
-ENGINE_API void LogImplementation(LogLevel verbosity, const std::string& formattedMessage);
+ENGINE_API void LogImplementation(LogLevel logLevel, const std::string& formattedMessage);
 
 template <typename... Args>
 void LogError(const std::string_view message, Args&&... args)

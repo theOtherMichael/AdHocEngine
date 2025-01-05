@@ -48,7 +48,7 @@ constexpr typename std::underlying_type<E>::type EnumValue(E e) noexcept
     return static_cast<typename std::underlying_type<E>::type>(e);
 }
 
-void LogImplementation(LogLevel verbosity, const std::string& formattedMessage)
+void LogImplementation(LogLevel logLevel, const std::string& formattedMessage)
 {
     // static_assert(to_underlying(LogLevel::Fatal) < to_underlying(LogLevel::Error));
     static_assert(EnumValue(LogLevel::Error) < EnumValue(LogLevel::Warning));
@@ -57,8 +57,8 @@ void LogImplementation(LogLevel verbosity, const std::string& formattedMessage)
 
     for (const auto& callbackInfo : logListenerRegistry)
     {
-        if (EnumValue(verbosity) <= EnumValue(callbackInfo.verbosity))
-            callbackInfo.callback(formattedMessage);
+        if (EnumValue(logLevel) <= EnumValue(callbackInfo.verbosity))
+            callbackInfo.callback(logLevel, formattedMessage);
     }
 }
 
