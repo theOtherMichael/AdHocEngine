@@ -109,7 +109,7 @@ TEST_F(ConsoleTest, FmtStringsWork)
     EXPECT_EQ(traceStreamReceivedMessage, "b 1 see");
 }
 
-TEST_F(ConsoleTest, LogStreamsReceiveVerbosity)
+TEST_F(ConsoleTest, LogStreamsReceiveLogLevel)
 {
     Console::LogError("Test");
 
