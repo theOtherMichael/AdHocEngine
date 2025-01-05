@@ -14,7 +14,7 @@ namespace Engine
 #endif
 
 /// Portably allocate on the extended stack.
-void* StackAlloc(size_t size)
+inline void* StackAlloc(size_t size)
 {
     return alloca(size);
 }
