@@ -284,6 +284,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Engine\Console.h" />
     <ClInclude Include="include\Engine\Core\Assertions.h" />
     <ClInclude Include="include\Engine\Core\Misc.h" />
     <ClInclude Include="include\Engine\Core\MiscMacros.h" />
@@ -299,6 +300,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <ClInclude Include="include\Engine\Core\SymbolExportMacros.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\Console.cpp" />
     <ClCompile Include="src\Core\_platform\Mac\MacMisc.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
