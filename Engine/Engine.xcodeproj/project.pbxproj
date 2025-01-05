@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1031372D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
+		CE1031382D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
+		CE1031392D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
+		CE10313A2D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
+		CE10313B2D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
+		CE10313C2D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
+		CE10313E2D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
+		CE10313F2D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
+		CE1031402D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
+		CE1031412D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
+		CE1031422D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
+		CE1031432D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
 		CE1D83B82CF6FA3000534769 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE1D83BC2CF6FA3100534769 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
 		CE3833D62CF2FBFE0004C108 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
@@ -124,6 +136,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1031362D2A606200590717 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
+		CE10313D2D2A607100590717 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = Core/Console.cpp; sourceTree = "<group>"; };
 		CE2B9A452B018B8100DE24E0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3833D22CF0E6380004C108 /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +265,7 @@
 		CE4C6EB52B0196A60015E51A /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				CE1031362D2A606200590717 /* Console.h */,
 				CE4C6EB62B0196A60015E51A /* Core */,
 			);
 			name = Engine;
@@ -276,6 +291,7 @@
 		CE4C6EBD2B0196A60015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				CE10313D2D2A607100590717 /* Console.cpp */,
 				CE4C6EBE2B0196A60015E51A /* Core */,
 			);
 			path = src;
@@ -376,6 +392,7 @@
 			files = (
 				CE4C6EC72B0196A60015E51A /* Misc.h in Headers */,
 				CEDDB1292D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
+				CE1031372D2A606200590717 /* Console.h in Headers */,
 				CEDDB1142D1FCE4E00EADB67 /* PlatformData.h in Headers */,
 				CEDDB10E2D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
 				CE4C6EC62B0196A60015E51A /* Assertions.h in Headers */,
@@ -396,6 +413,7 @@
 			files = (
 				CE1D83B82CF6FA3000534769 /* Misc.h in Headers */,
 				CEDDB12C2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
+				CE10313A2D2A606200590717 /* Console.h in Headers */,
 				CEDDB1172D1FCE4E00EADB67 /* PlatformData.h in Headers */,
 				CEDDB1112D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
 				CE3833D62CF2FBFE0004C108 /* Assertions.h in Headers */,
@@ -416,6 +434,7 @@
 			files = (
 				CE1D83BC2CF6FA3100534769 /* Misc.h in Headers */,
 				CEDDB12E2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
+				CE10313C2D2A606200590717 /* Console.h in Headers */,
 				CEDDB1192D1FCE4E00EADB67 /* PlatformData.h in Headers */,
 				CEDDB1132D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
 				CE3833D92CF2FC250004C108 /* Assertions.h in Headers */,
@@ -436,6 +455,7 @@
 			files = (
 				CE46BCD32CFC336A002F900C /* Misc.h in Headers */,
 				CEDDB12A2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
+				CE1031382D2A606200590717 /* Console.h in Headers */,
 				CEDDB1152D1FCE4E00EADB67 /* PlatformData.h in Headers */,
 				CEDDB10F2D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
 				CE46BCD42CFC336A002F900C /* Assertions.h in Headers */,
@@ -456,6 +476,7 @@
 			files = (
 				CE46BCE52CFC3373002F900C /* Misc.h in Headers */,
 				CEDDB12D2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
+				CE10313B2D2A606200590717 /* Console.h in Headers */,
 				CEDDB1182D1FCE4E00EADB67 /* PlatformData.h in Headers */,
 				CEDDB1122D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
 				CE46BCE92CFC3373002F900C /* Assertions.h in Headers */,
@@ -476,6 +497,7 @@
 			files = (
 				CED3D6782B12D3C800C5FB04 /* Misc.h in Headers */,
 				CEDDB12B2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
+				CE1031392D2A606200590717 /* Console.h in Headers */,
 				CEDDB1162D1FCE4E00EADB67 /* PlatformData.h in Headers */,
 				CEDDB1102D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
 				CED3D6792B12D3C800C5FB04 /* Assertions.h in Headers */,
@@ -641,6 +663,7 @@
 			files = (
 				CEDDB0EC2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F22D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
+				CE10313E2D2A607100590717 /* Console.cpp in Sources */,
 				CEDDB0F82D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E62D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -652,6 +675,7 @@
 			files = (
 				CEDDB0EF2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F52D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
+				CE1031412D2A607100590717 /* Console.cpp in Sources */,
 				CEDDB0FB2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E92D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -663,6 +687,7 @@
 			files = (
 				CEDDB0F12D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F72D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
+				CE1031432D2A607100590717 /* Console.cpp in Sources */,
 				CEDDB0FD2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0EB2D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -674,6 +699,7 @@
 			files = (
 				CEDDB0ED2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F32D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
+				CE10313F2D2A607100590717 /* Console.cpp in Sources */,
 				CEDDB0F92D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E72D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -685,6 +711,7 @@
 			files = (
 				CEDDB0F02D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F62D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
+				CE1031422D2A607100590717 /* Console.cpp in Sources */,
 				CEDDB0FC2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0EA2D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -696,6 +723,7 @@
 			files = (
 				CEDDB0EE2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F42D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
+				CE1031402D2A607100590717 /* Console.cpp in Sources */,
 				CEDDB0FA2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E82D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);

@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1031302D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE1031312D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE1031322D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE1031332D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE1031342D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE1031352D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
+		CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
+		CE1031482D2A61AD00590717 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */; };
+		CE10314A2D2A61D900590717 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031492D2A61D900590717 /* libfmt.a */; };
+		CE10314B2D2A61EA00590717 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031492D2A61D900590717 /* libfmt.a */; };
+		CE10314D2D2A620D00590717 /* libfmtd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE10314C2D2A620D00590717 /* libfmtd.a */; };
 		CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18EF2D23914700F47CDF /* libEngine.dylib */; };
 		CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F12D23915300F47CDF /* libEngineD.dylib */; };
 		CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */; };
@@ -67,6 +79,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE10312F2D2A484100590717 /* ConsoleTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
+		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
+		CE10314C2D2A620D00590717 /* libfmtd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmtd.a; path = "../Engine/vcpkg_installed/uni-static/debug/lib/libfmtd.a"; sourceTree = SOURCE_ROOT; };
 		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
@@ -92,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */,
 				CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 				CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */,
 			);
@@ -101,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1031482D2A61AD00590717 /* libfmtd.11.0.2.dylib in Frameworks */,
 				CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 				CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */,
 			);
@@ -110,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */,
 				CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 				CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */,
 			);
@@ -119,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE10314D2D2A620D00590717 /* libfmtd.a in Frameworks */,
 				CEE4330A2D23B4D20095A215 /* libgtest.a in Frameworks */,
 				CEE433112D23B6190095A215 /* libEngineStaticD.a in Frameworks */,
 			);
@@ -128,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE10314B2D2A61EA00590717 /* libfmt.a in Frameworks */,
 				CEE4330C2D23B4DE0095A215 /* libgtest.a in Frameworks */,
 				CEE433102D23B6130095A215 /* libEngineStaticDev.a in Frameworks */,
 			);
@@ -137,6 +159,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE10314A2D2A61D900590717 /* libfmt.a in Frameworks */,
 				CEE4330E2D23B4E70095A215 /* libgtest.a in Frameworks */,
 				CEE4330F2D23B6080095A215 /* libEngineStatic.a in Frameworks */,
 			);
@@ -172,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				CE42937D2D2287D60020748F /* _platform */,
+				CE10312F2D2A484100590717 /* ConsoleTests.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -203,6 +227,10 @@
 				CE3D19382D23A16800F47CDF /* libEngineStatic.a */,
 				CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */,
 				CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */,
+				CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */,
+				CE1031492D2A61D900590717 /* libfmt.a */,
+				CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */,
+				CE10314C2D2A620D00590717 /* libfmtd.a */,
 				CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */,
 				CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */,
 				CE3D193A2D23A1A000F47CDF /* libgtest.a */,
@@ -407,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3D19112D23A07A00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
+				CE1031332D2A484100590717 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3D191E2D23A0DB00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
+				CE1031352D2A484100590717 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3D192B2D23A0E600F47CDF /* GTMGoogleTestRunner.mm in Sources */,
+				CE1031342D2A484100590717 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */,
+				CE1031302D2A484100590717 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
+				CE1031322D2A484100590717 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
+				CE1031312D2A484100590717 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +505,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -499,6 +534,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -529,6 +565,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -559,6 +596,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -587,6 +625,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -615,6 +654,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -682,6 +722,7 @@
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
 					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path/../Frameworks",
@@ -754,6 +795,7 @@
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
 					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path/../Frameworks",
@@ -789,6 +831,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -818,6 +861,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -849,6 +893,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -880,6 +925,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -909,6 +955,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -938,6 +985,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
