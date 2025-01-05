@@ -11,6 +11,20 @@
 namespace Engine::Console
 {
 
+std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel)
+{
+    switch (logLevel)
+    {
+    case LogLevel::Error: os << "Error"; break;
+    case LogLevel::Warning: os << "Warning"; break;
+    case LogLevel::Message: os << "Message"; break;
+    case LogLevel::Trace: os << "Trace"; break;
+    default: assert(false);
+    }
+
+    return os;
+}
+
 struct LogListenerInfo
 {
     LogEventCallback callback;

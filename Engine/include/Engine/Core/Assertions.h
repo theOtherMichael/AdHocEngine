@@ -2,7 +2,7 @@
 
 #include "Misc.h"
 
-#include <fmt/format.h>
+#include <Engine/Console.h>
 
 #ifdef ADHOC_DEBUG
     #define ASSERTIONS_ENABLED
@@ -18,8 +18,8 @@
     else                                                                                                               \
     {                                                                                                                  \
         bool isMessageEmpty = std::char_traits<char>::length(message) == 0;                                            \
-        fmt::print(                                                                                                    \
-            "Assertion failed! {0} at \"{1}\":{2}\n", isMessageEmpty ? #expression : message, __FILE__, __LINE__);     \
+        Engine::Console::LogError(                                                                                     \
+            "Assertion failed! {0} at \"{1}\":{2}", isMessageEmpty ? #expression : message, __FILE__, __LINE__);       \
                                                                                                                        \
         Engine::PrintBacktrace();                                                                                      \
         DEBUGBREAK();                                                                                                  \

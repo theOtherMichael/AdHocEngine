@@ -1,6 +1,6 @@
 #include <Engine/Core/_platform/Mac/MacMisc.h>
 
-#include <fmt/format.h>
+#include <Engine/Console.h>
 
 #include <execinfo.h>
 
@@ -21,14 +21,14 @@ void PrintBacktrace()
 
     if (!symbols)
     {
-        fmt::print("Failed to retrieve stack trace symbols.\n");
+        Console::LogError("Failed to retrieve stack trace symbols.");
         return;
     }
 
-    fmt::print("Backtrace ({} frames):\n", frames);
+    Console::Log("Backtrace ({} frames):", frames);
     for (int i = 0; i < frames; ++i)
     {
-        fmt::print(" {}\n", symbols[i]);
+        Console::Log(" {}", symbols[i]);
     }
 
     free(symbols);

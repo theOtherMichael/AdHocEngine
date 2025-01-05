@@ -2,6 +2,7 @@
 
 #include <gtest/gtest.h>
 
+#include <sstream>
 #include <string>
 
 namespace Console = Engine::Console;
@@ -107,6 +108,13 @@ TEST_F(ConsoleTest, FmtStringsWork)
     EXPECT_EQ(warningStreamReceivedMessage, "b 1 see");
     EXPECT_EQ(messageStreamReceivedMessage, "b 1 see");
     EXPECT_EQ(traceStreamReceivedMessage, "b 1 see");
+}
+
+TEST_F(ConsoleTest, LogLevelsOstreamable)
+{
+    std::ostringstream sstream;
+    sstream << LogLevel::Error << LogLevel::Warning << LogLevel::Message << LogLevel::Trace;
+    ASSERT_EQ(sstream.str(), "ErrorWarningMessageTrace");
 }
 
 TEST_F(ConsoleTest, LogStreamsReceiveLogLevel)

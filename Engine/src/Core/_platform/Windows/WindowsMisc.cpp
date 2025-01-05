@@ -1,9 +1,8 @@
 #include <Engine/Core/_platform/Windows/WindowsMisc.h>
 
+#include <Engine/Console.h>
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Core/PlatformHelpers.h>
-
-#include <fmt/format.h>
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
@@ -28,7 +27,7 @@ void PrintBacktrace()
     symbol->MaxNameLen   = 255;
     symbol->SizeOfStruct = sizeof(SYMBOL_INFO);
 
-    fmt::print("Backtrace ({} frames):\n", frames);
+    Console::Log("Backtrace ({} frames):", frames);
 
     const auto& platformData = PlatformData::GetInstance();
 
@@ -36,11 +35,11 @@ void PrintBacktrace()
     {
         if (!SymFromAddr(platformData.processHandle, (DWORD64)(callStack[i]), 0, symbol))
         {
-            fmt::print(stderr, " [{0}] SymFromAddr() failed! Error {1}\n", i, Windows::GetLastErrorMessage());
+            Console::LogError(" [{0}] SymFromAddr() failed! Error {1}", i, Windows::GetLastErrorMessage());
             continue;
         }
 
-        fmt::print(stderr, " [{0}] (0x{1}) {2}\n", i, symbol->Address, symbol->Name);
+        Console::LogError(" [{0}] (0x{1}) {2}", i, symbol->Address, symbol->Name);
     }
 
     free(symbol);

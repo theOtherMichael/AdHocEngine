@@ -2,10 +2,9 @@
 #include <Editor/Core/EditorReloadFlags.h>
 #include <Editor/Core/SymbolExportMacros.h>
 
+#include <Engine/Console.h>
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/PlatformData.h>
-
-#include <fmt/format.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
@@ -13,16 +12,34 @@
 #pragma clang diagnostic pop
 
 #include <filesystem>
+#include <iostream>
+
+namespace Console = Engine::Console;
+using Console::LogLevel;
 
 namespace fs = std::filesystem;
 
+static void OnEngineLogEvent(const LogLevel logLevel, const std::string& message)
+{
+    switch (logLevel)
+    {
+    case LogLevel::Error: [[fallthrough]];
+    case LogLevel::Warning: std::cerr << "[" << logLevel << "] " << message << "\n"; break;
+    case LogLevel::Message: [[fallthrough]];
+    case LogLevel::Trace: std::cout << "[" << logLevel << "] " << message << "\n"; break;
+    //default: ADHOC_ASSERT_NOENTRY(); break;
+    }
+}
+
 static void OnGlfwError(int error, const char* description)
 {
-    fmt::print(stderr, "GLFW error {}: {}\n", error, description);
+    Console::LogError("GLFW error {}: {}", error, description);
 }
 
 extern "C" EDITOR_API unsigned char EditorMain(int argc, char* argv[])
 {
+    auto mainLogStream = Console::LogStream(LogLevel::Trace, OnEngineLogEvent);
+
     bool isDeveloperMode = false;
     for (int i = 1; i < argc; i++)
     {

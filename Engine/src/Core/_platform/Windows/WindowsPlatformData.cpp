@@ -1,8 +1,7 @@
 #include <Engine/Core/_platform/Windows/WindowsPlatformData.h>
 
+#include <Engine/Console.h>
 #include <Engine/Core/PlatformHelpers.h>
-
-#include <fmt/format.h>
 
 #ifndef WIN32_LEAN_AND_MEAN
     #define WIN32_LEAN_AND_MEAN
@@ -26,12 +25,12 @@ void InitializePlatformData()
 {
     auto& data = GetMutablePlatformData();
 
-    fmt::print("Acquiring application process handle...\n");
+    Console::Log("Acquiring application process handle...");
 
     auto process = GetCurrentProcess();
     if (!DuplicateHandle(process, process, process, &data.processHandle, 0, FALSE, DUPLICATE_SAME_ACCESS))
     {
-        fmt::print(stderr, "Could not obtain application process handle! {}\n", Windows::GetLastErrorMessage());
+        Console::LogError("Could not obtain application process handle! {}", Windows::GetLastErrorMessage());
     }
 }
 
@@ -45,11 +44,11 @@ WindowsPlatformData::~WindowsPlatformData()
     if (processHandle == NULL)
         return;
 
-    fmt::print("Closing application process handle...\n");
+    Console::Log("Closing application process handle...");
 
     if (!CloseHandle(processHandle))
     {
-        fmt::print(stderr, "Could not close application process handle! {}\n", Windows::GetLastErrorMessage());
+        Console::LogError("Could not close application process handle! {}", Windows::GetLastErrorMessage());
     }
 
     processHandle = NULL;

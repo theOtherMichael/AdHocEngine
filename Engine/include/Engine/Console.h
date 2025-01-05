@@ -4,7 +4,9 @@
 
 #include <fmt/format.h>
 
+#include <cassert>
 #include <functional>
+#include <ostream>
 #include <string>
 #include <string_view>
 
@@ -19,6 +21,8 @@ enum class LogLevel
     Message,
     Trace,
 };
+
+ENGINE_API std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel);
 
 typedef std::function<void(const LogLevel logLevel, const std::string& message)> LogEventCallback;
 
