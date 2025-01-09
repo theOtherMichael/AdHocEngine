@@ -45,31 +45,31 @@ private:
 
 ENGINE_API void LogImplementation(LogLevel logLevel, const std::string& formattedMessage);
 
-template <typename... Args>
-void LogError(const std::string_view message, Args&&... args)
+template <typename... T>
+void LogError(fmt::format_string<T...> message, T&&... fmtArgs)
 {
-    const auto& formattedMessage = fmt::format(message, std::forward<Args>(args)...);
+    const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     LogImplementation(LogLevel::Error, formattedMessage);
 }
 
-template <typename... Args>
-void LogWarning(const std::string_view message, Args&&... args)
+template <typename... T>
+void LogWarning(fmt::format_string<T...> message, T&&... fmtArgs)
 {
-    const auto& formattedMessage = fmt::format(message, std::forward<Args>(args)...);
+    const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     LogImplementation(LogLevel::Warning, formattedMessage);
 }
 
-template <typename... Args>
-void Log(const std::string_view message, Args&&... args)
+template <typename... T>
+void Log(fmt::format_string<T...> message, T&&... fmtArgs)
 {
-    const auto& formattedMessage = fmt::format(message, std::forward<Args>(args)...);
+    const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     LogImplementation(LogLevel::Message, formattedMessage);
 }
 
-template <typename... Args>
-void LogTrace(const std::string_view message, Args&&... args)
+template <typename... T>
+void LogTrace(fmt::format_string<T...> message, T&&... fmtArgs)
 {
-    const auto& formattedMessage = fmt::format(message, std::forward<Args>(args)...);
+    const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     LogImplementation(LogLevel::Trace, formattedMessage);
 }
 
