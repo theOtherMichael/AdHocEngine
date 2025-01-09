@@ -81,7 +81,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL;ADHOC_EDITOR;ADHOC_EDITOR_PROJECT;ADHOC_WINDOWS;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -100,7 +100,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_EDITOR;ADHOC_EDITOR_PROJECT;ADHOC_WINDOWS;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -121,7 +121,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_EDITOR;ADHOC_EDITOR_PROJECT;ADHOC_WINDOWS;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>

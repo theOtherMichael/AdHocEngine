@@ -88,7 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL;ADHOC_WINDOWS;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -106,7 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_WINDOWS;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -126,7 +126,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_WINDOWS;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>

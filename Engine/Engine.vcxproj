@@ -137,7 +137,7 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -162,7 +162,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -184,7 +184,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -213,7 +213,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -237,7 +237,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -266,7 +266,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>

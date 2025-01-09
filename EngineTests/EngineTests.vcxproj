@@ -82,7 +82,7 @@
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -104,7 +104,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -124,7 +124,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -147,7 +147,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -169,7 +169,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -192,7 +192,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
