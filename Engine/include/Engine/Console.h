@@ -39,7 +39,6 @@ public:
 
 private:
     LogEventCallback callback;
-    LogLevel verbosity;
     unsigned int id;
 };
 

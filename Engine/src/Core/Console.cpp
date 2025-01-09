@@ -38,7 +38,7 @@ struct LogListenerInfo
 
 static std::forward_list<LogListenerInfo> logListenerRegistry;
 
-LogStream::LogStream(LogLevel verbosity, LogEventCallback callback) : callback(callback), verbosity(verbosity)
+LogStream::LogStream(LogLevel verbosity, LogEventCallback callback) : callback(callback)
 {
     id = 0;
     while (std::any_of(logListenerRegistry.begin(),
