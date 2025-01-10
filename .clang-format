@@ -31,4 +31,4 @@ PenaltyReturnTypeOnItsOwnLine: 1000000
 PointerAlignment: Left
 SortIncludes: CaseInsensitive
 SortUsingDeclarations: false
-Standard: c++17
+Standard: c++20
