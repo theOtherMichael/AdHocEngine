@@ -7,40 +7,106 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1031372D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
-		CE1031382D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
-		CE1031392D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
-		CE10313A2D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
-		CE10313B2D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
-		CE10313C2D2A606200590717 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1031362D2A606200590717 /* Console.h */; };
-		CE10313E2D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
-		CE10313F2D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
-		CE1031402D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
-		CE1031412D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
-		CE1031422D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
-		CE1031432D2A607100590717 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10313D2D2A607100590717 /* Console.cpp */; };
-		CE1D83B82CF6FA3000534769 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
-		CE1D83BC2CF6FA3100534769 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
-		CE3833D62CF2FBFE0004C108 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
-		CE3833D92CF2FC250004C108 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
-		CE46BCD32CFC336A002F900C /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
-		CE46BCD42CFC336A002F900C /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
+		CE0D0DFD2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
+		CE0D0DFE2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
+		CE0D0DFF2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
+		CE0D0E002D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
+		CE0D0E012D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
+		CE0D0E022D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
+		CE0D0E032D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
+		CE0D0E042D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
+		CE0D0E052D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
+		CE0D0E062D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
+		CE0D0E072D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
+		CE0D0E082D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
+		CE0D0E2B2D325CA200BC9EB1 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1A2D325CA200BC9EB1 /* Console.h */; };
+		CE0D0E2C2D325CA200BC9EB1 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1A2D325CA200BC9EB1 /* Console.h */; };
+		CE0D0E2D2D325CA200BC9EB1 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1A2D325CA200BC9EB1 /* Console.h */; };
+		CE0D0E2E2D325CA200BC9EB1 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1A2D325CA200BC9EB1 /* Console.h */; };
+		CE0D0E2F2D325CA200BC9EB1 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1A2D325CA200BC9EB1 /* Console.h */; };
+		CE0D0E302D325CA200BC9EB1 /* Console.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1A2D325CA200BC9EB1 /* Console.h */; };
+		CE0D0E312D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */; };
+		CE0D0E322D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */; };
+		CE0D0E332D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */; };
+		CE0D0E342D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */; };
+		CE0D0E352D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */; };
+		CE0D0E362D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */; };
+		CE0D0E372D325CA200BC9EB1 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */; };
+		CE0D0E382D325CA200BC9EB1 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */; };
+		CE0D0E392D325CA200BC9EB1 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */; };
+		CE0D0E3A2D325CA200BC9EB1 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */; };
+		CE0D0E3B2D325CA200BC9EB1 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */; };
+		CE0D0E3C2D325CA200BC9EB1 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */; };
+		CE0D0E3D2D325CA200BC9EB1 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */; };
+		CE0D0E3E2D325CA200BC9EB1 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */; };
+		CE0D0E3F2D325CA200BC9EB1 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */; };
+		CE0D0E402D325CA200BC9EB1 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */; };
+		CE0D0E412D325CA200BC9EB1 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */; };
+		CE0D0E422D325CA200BC9EB1 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */; };
+		CE0D0E432D325CA200BC9EB1 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E202D325CA200BC9EB1 /* MacMisc.h */; };
+		CE0D0E442D325CA200BC9EB1 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E202D325CA200BC9EB1 /* MacMisc.h */; };
+		CE0D0E452D325CA200BC9EB1 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E202D325CA200BC9EB1 /* MacMisc.h */; };
+		CE0D0E462D325CA200BC9EB1 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E202D325CA200BC9EB1 /* MacMisc.h */; };
+		CE0D0E472D325CA200BC9EB1 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E202D325CA200BC9EB1 /* MacMisc.h */; };
+		CE0D0E482D325CA200BC9EB1 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E202D325CA200BC9EB1 /* MacMisc.h */; };
+		CE0D0E492D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */; };
+		CE0D0E4A2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */; };
+		CE0D0E4B2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */; };
+		CE0D0E4C2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */; };
+		CE0D0E4D2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */; };
+		CE0D0E4E2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */; };
+		CE0D0E4F2D325CA200BC9EB1 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */; };
+		CE0D0E502D325CA200BC9EB1 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */; };
+		CE0D0E512D325CA200BC9EB1 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */; };
+		CE0D0E522D325CA200BC9EB1 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */; };
+		CE0D0E532D325CA200BC9EB1 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */; };
+		CE0D0E542D325CA200BC9EB1 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */; };
+		CE0D0E552D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */; };
+		CE0D0E562D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */; };
+		CE0D0E572D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */; };
+		CE0D0E582D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */; };
+		CE0D0E592D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */; };
+		CE0D0E5A2D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */; };
+		CE0D0E5B2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */; };
+		CE0D0E5C2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */; };
+		CE0D0E5D2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */; };
+		CE0D0E5E2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */; };
+		CE0D0E5F2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */; };
+		CE0D0E602D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */; };
+		CE0D0E612D325CA200BC9EB1 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */; };
+		CE0D0E622D325CA200BC9EB1 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */; };
+		CE0D0E632D325CA200BC9EB1 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */; };
+		CE0D0E642D325CA200BC9EB1 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */; };
+		CE0D0E652D325CA200BC9EB1 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */; };
+		CE0D0E662D325CA200BC9EB1 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */; };
+		CE0D0E672D325CA200BC9EB1 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E272D325CA200BC9EB1 /* Misc.h */; };
+		CE0D0E682D325CA200BC9EB1 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E272D325CA200BC9EB1 /* Misc.h */; };
+		CE0D0E692D325CA200BC9EB1 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E272D325CA200BC9EB1 /* Misc.h */; };
+		CE0D0E6A2D325CA200BC9EB1 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E272D325CA200BC9EB1 /* Misc.h */; };
+		CE0D0E6B2D325CA200BC9EB1 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E272D325CA200BC9EB1 /* Misc.h */; };
+		CE0D0E6C2D325CA200BC9EB1 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E272D325CA200BC9EB1 /* Misc.h */; };
+		CE0D0E6D2D325CA200BC9EB1 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */; };
+		CE0D0E6E2D325CA200BC9EB1 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */; };
+		CE0D0E6F2D325CA200BC9EB1 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */; };
+		CE0D0E702D325CA200BC9EB1 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */; };
+		CE0D0E712D325CA200BC9EB1 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */; };
+		CE0D0E722D325CA200BC9EB1 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */; };
+		CE0D0E732D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */; };
+		CE0D0E742D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */; };
+		CE0D0E752D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */; };
+		CE0D0E762D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */; };
+		CE0D0E772D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */; };
+		CE0D0E782D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */; };
+		CE0D0E792D325CA200BC9EB1 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */; };
+		CE0D0E7A2D325CA200BC9EB1 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */; };
+		CE0D0E7B2D325CA200BC9EB1 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */; };
+		CE0D0E7C2D325CA200BC9EB1 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */; };
+		CE0D0E7D2D325CA200BC9EB1 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */; };
+		CE0D0E7E2D325CA200BC9EB1 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */; };
 		CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
 		CE46BCDD2CFC336A002F900C /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
-		CE46BCE52CFC3373002F900C /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
-		CE46BCE92CFC3373002F900C /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
 		CE46BCF22CFC3373002F900C /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37982CFC16CA00FC593F /* libfmt.a */; };
 		CE46BCF32CFC3373002F900C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37992CFC16CA00FC593F /* libglfw3.a */; };
-		CE4C6EC62B0196A60015E51A /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
-		CE4C6EC72B0196A60015E51A /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
-		CED3D6782B12D3C800C5FB04 /* Misc.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB82B0196A60015E51A /* Misc.h */; };
-		CED3D6792B12D3C800C5FB04 /* Assertions.h in Headers */ = {isa = PBXBuildFile; fileRef = CE4C6EB72B0196A60015E51A /* Assertions.h */; };
-		CED4DDB32D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
-		CED4DDB42D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
-		CED4DDB52D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
-		CED4DDB62D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
-		CED4DDB72D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
-		CED4DDB82D101E4200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */; };
 		CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
 		CEDB37932CFC166C00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
 		CEDB37962CFC169B00FC593F /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */; };
@@ -73,81 +139,32 @@
 		CEDDB0FB2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
 		CEDDB0FC2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
 		CEDDB0FD2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
-		CEDDB1022D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */; };
-		CEDDB1032D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */; };
-		CEDDB1042D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */; };
-		CEDDB1052D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */; };
-		CEDDB1062D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */; };
-		CEDDB1072D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */; };
-		CEDDB1082D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */; };
-		CEDDB1092D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */; };
-		CEDDB10A2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */; };
-		CEDDB10B2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */; };
-		CEDDB10C2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */; };
-		CEDDB10D2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */; };
-		CEDDB10E2D1FCE4E00EADB67 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */; };
-		CEDDB10F2D1FCE4E00EADB67 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */; };
-		CEDDB1102D1FCE4E00EADB67 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */; };
-		CEDDB1112D1FCE4E00EADB67 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */; };
-		CEDDB1122D1FCE4E00EADB67 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */; };
-		CEDDB1132D1FCE4E00EADB67 /* MiscMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */; };
-		CEDDB1142D1FCE4E00EADB67 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */; };
-		CEDDB1152D1FCE4E00EADB67 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */; };
-		CEDDB1162D1FCE4E00EADB67 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */; };
-		CEDDB1172D1FCE4E00EADB67 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */; };
-		CEDDB1182D1FCE4E00EADB67 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */; };
-		CEDDB1192D1FCE4E00EADB67 /* PlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */; };
-		CEDDB1232D1FCE6200EADB67 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */; };
-		CEDDB1242D1FCE6200EADB67 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */; };
-		CEDDB1252D1FCE6200EADB67 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */; };
-		CEDDB1262D1FCE6200EADB67 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */; };
-		CEDDB1272D1FCE6200EADB67 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */; };
-		CEDDB1282D1FCE6200EADB67 /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */; };
-		CEDDB1292D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */; };
-		CEDDB12A2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */; };
-		CEDDB12B2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */; };
-		CEDDB12C2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */; };
-		CEDDB12D2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */; };
-		CEDDB12E2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */; };
-		CEDDB12F2D1FCE6200EADB67 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */; };
-		CEDDB1302D1FCE6200EADB67 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */; };
-		CEDDB1312D1FCE6200EADB67 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */; };
-		CEDDB1322D1FCE6200EADB67 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */; };
-		CEDDB1332D1FCE6200EADB67 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */; };
-		CEDDB1342D1FCE6200EADB67 /* MacPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */; };
-		CEDDB1352D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */; };
-		CEDDB1362D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */; };
-		CEDDB1372D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */; };
-		CEDDB1382D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */; };
-		CEDDB1392D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */; };
-		CEDDB13A2D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */; };
-		CEDDB13B2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */; };
-		CEDDB13C2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */; };
-		CEDDB13D2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */; };
-		CEDDB13E2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */; };
-		CEDDB13F2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */; };
-		CEDDB1402D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */; };
-		CEDDB1412D1FCE6200EADB67 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */; };
-		CEDDB1422D1FCE6200EADB67 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */; };
-		CEDDB1432D1FCE6200EADB67 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */; };
-		CEDDB1442D1FCE6200EADB67 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */; };
-		CEDDB1452D1FCE6200EADB67 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */; };
-		CEDDB1462D1FCE6200EADB67 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE1031362D2A606200590717 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Console.h; sourceTree = "<group>"; };
-		CE10313D2D2A607100590717 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = Core/Console.cpp; sourceTree = "<group>"; };
+		CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Assertions.cpp; path = src/Core/Assertions.cpp; sourceTree = SOURCE_ROOT; };
+		CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = src/Core/Console.cpp; sourceTree = SOURCE_ROOT; };
+		CE0D0E1A2D325CA200BC9EB1 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Console.h; path = include/Engine/Core/Console.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = include/Engine/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscMacros.h; path = include/Engine/Core/MiscMacros.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assertions.h; path = include/Engine/Core/Assertions.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E202D325CA200BC9EB1 /* MacMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacMisc.h; path = include/Engine/Core/_platform/Mac/MacMisc.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformHelpers.h; path = include/Engine/Core/_platform/Mac/MacPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformData.h; path = include/Engine/Core/_platform/Mac/MacPlatformData.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformData.h; path = include/Engine/Core/_platform/Windows/WindowsPlatformData.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformHelpers.h; path = include/Engine/Core/_platform/Windows/WindowsPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsMisc.h; path = include/Engine/Core/_platform/Windows/WindowsMisc.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E272D325CA200BC9EB1 /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = include/Engine/Core/Misc.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers.h; path = include/Engine/Core/PlatformHelpers.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Engine/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
+		CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData.h; path = include/Engine/Core/PlatformData.h; sourceTree = SOURCE_ROOT; };
 		CE2B9A452B018B8100DE24E0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3833D22CF0E6380004C108 /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCE12CFC336A002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE4C6EB72B0196A60015E51A /* Assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Assertions.h; path = include/Engine/Core/Assertions.h; sourceTree = SOURCE_ROOT; };
-		CE4C6EB82B0196A60015E51A /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Misc.h; path = include/Engine/Core/Misc.h; sourceTree = SOURCE_ROOT; };
 		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Engine/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/uni-dynamic/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
@@ -160,16 +177,6 @@
 		CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsMisc.cpp; path = src/Core/_platform/Windows/WindowsMisc.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformData.cpp; path = src/Core/_platform/Windows/WindowsPlatformData.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers.h; path = include/Engine/Core/PlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = include/Engine/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscMacros.h; path = include/Engine/Core/MiscMacros.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData.h; path = include/Engine/Core/PlatformData.h; sourceTree = SOURCE_ROOT; };
-		CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacMisc.h; path = include/Engine/Core/_platform/Mac/MacMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformHelpers.h; path = include/Engine/Core/_platform/Mac/MacPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformData.h; path = include/Engine/Core/_platform/Mac/MacPlatformData.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformData.h; path = include/Engine/Core/_platform/Windows/WindowsPlatformData.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformHelpers.h; path = include/Engine/Core/_platform/Windows/WindowsPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsMisc.h; path = include/Engine/Core/_platform/Windows/WindowsMisc.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +237,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0D0E182D325CA200BC9EB1 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				CE0D0E192D325CA200BC9EB1 /* Core */,
+			);
+			name = Engine;
+			path = include/Engine;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE0D0E192D325CA200BC9EB1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE0D0E1E2D325CA200BC9EB1 /* _platform */,
+				CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */,
+				CE0D0E1A2D325CA200BC9EB1 /* Console.h */,
+				CE0D0E272D325CA200BC9EB1 /* Misc.h */,
+				CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */,
+				CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */,
+				CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */,
+				CE0D0E282D325CA200BC9EB1 /* PlatformHelpers.h */,
+				CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */,
+			);
+			name = Core;
+			path = include/Engine/Core;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE0D0E1E2D325CA200BC9EB1 /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				CE0D0E1F2D325CA200BC9EB1 /* Mac */,
+				CE0D0E232D325CA200BC9EB1 /* Windows */,
+			);
+			name = _platform;
+			path = include/Engine/Core/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE0D0E1F2D325CA200BC9EB1 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				CE0D0E202D325CA200BC9EB1 /* MacMisc.h */,
+				CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */,
+				CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */,
+			);
+			name = Mac;
+			path = include/Engine/Core/_platform/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
+		CE0D0E232D325CA200BC9EB1 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */,
+				CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */,
+				CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */,
+			);
+			name = Windows;
+			path = include/Engine/Core/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE2B9A3C2B018B8100DE24E0 = {
 			isa = PBXGroup;
 			children = (
@@ -257,41 +322,14 @@
 		CE4C6EB42B0196A60015E51A /* include */ = {
 			isa = PBXGroup;
 			children = (
-				CE4C6EB52B0196A60015E51A /* Engine */,
+				CE0D0E182D325CA200BC9EB1 /* Engine */,
 			);
 			path = include;
-			sourceTree = SOURCE_ROOT;
-		};
-		CE4C6EB52B0196A60015E51A /* Engine */ = {
-			isa = PBXGroup;
-			children = (
-				CE1031362D2A606200590717 /* Console.h */,
-				CE4C6EB62B0196A60015E51A /* Core */,
-			);
-			name = Engine;
-			path = include/Engine;
-			sourceTree = SOURCE_ROOT;
-		};
-		CE4C6EB62B0196A60015E51A /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB11A2D1FCE6200EADB67 /* _platform */,
-				CE4C6EB72B0196A60015E51A /* Assertions.h */,
-				CE4C6EB82B0196A60015E51A /* Misc.h */,
-				CEDDB1002D1FCE4E00EADB67 /* MiscMacros.h */,
-				CEDDB0FF2D1FCE4E00EADB67 /* PlatformAbstraction.h */,
-				CEDDB1012D1FCE4E00EADB67 /* PlatformData.h */,
-				CEDDB0FE2D1FCE4E00EADB67 /* PlatformHelpers.h */,
-				CED4DDB22D101E4200BAE96F /* SymbolExportMacros.h */,
-			);
-			name = Core;
-			path = include/Engine/Core;
 			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EBD2B0196A60015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
-				CE10313D2D2A607100590717 /* Console.cpp */,
 				CE4C6EBE2B0196A60015E51A /* Core */,
 			);
 			path = src;
@@ -301,6 +339,8 @@
 			isa = PBXGroup;
 			children = (
 				CEDDB0DF2D1FCE0D00EADB67 /* _platform */,
+				CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */,
+				CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */,
 			);
 			name = Core;
 			path = src/Core;
@@ -351,38 +391,6 @@
 			path = src/Core/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
-		CEDDB11A2D1FCE6200EADB67 /* _platform */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB11B2D1FCE6200EADB67 /* Mac */,
-				CEDDB11F2D1FCE6200EADB67 /* Windows */,
-			);
-			name = _platform;
-			path = include/Engine/Core/_platform;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB11B2D1FCE6200EADB67 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB11C2D1FCE6200EADB67 /* MacMisc.h */,
-				CEDDB11E2D1FCE6200EADB67 /* MacPlatformData.h */,
-				CEDDB11D2D1FCE6200EADB67 /* MacPlatformHelpers.h */,
-			);
-			name = Mac;
-			path = include/Engine/Core/_platform/Mac;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB11F2D1FCE6200EADB67 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB1222D1FCE6200EADB67 /* WindowsMisc.h */,
-				CEDDB1202D1FCE6200EADB67 /* WindowsPlatformData.h */,
-				CEDDB1212D1FCE6200EADB67 /* WindowsPlatformHelpers.h */,
-			);
-			name = Windows;
-			path = include/Engine/Core/_platform/Windows;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -390,20 +398,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4C6EC72B0196A60015E51A /* Misc.h in Headers */,
-				CEDDB1292D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
-				CE1031372D2A606200590717 /* Console.h in Headers */,
-				CEDDB1142D1FCE4E00EADB67 /* PlatformData.h in Headers */,
-				CEDDB10E2D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
-				CE4C6EC62B0196A60015E51A /* Assertions.h in Headers */,
-				CEDDB13B2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */,
-				CEDDB1232D1FCE6200EADB67 /* MacMisc.h in Headers */,
-				CED4DDB32D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB12F2D1FCE6200EADB67 /* MacPlatformData.h in Headers */,
-				CEDDB1352D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */,
-				CEDDB1082D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */,
-				CEDDB1412D1FCE6200EADB67 /* WindowsMisc.h in Headers */,
-				CEDDB1022D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */,
+				CE0D0E732D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */,
+				CE0D0E6D2D325CA200BC9EB1 /* PlatformHelpers.h in Headers */,
+				CE0D0E552D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */,
+				CE0D0E2B2D325CA200BC9EB1 /* Console.h in Headers */,
+				CE0D0E372D325CA200BC9EB1 /* MiscMacros.h in Headers */,
+				CE0D0E5B2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */,
+				CE0D0E672D325CA200BC9EB1 /* Misc.h in Headers */,
+				CE0D0E3D2D325CA200BC9EB1 /* Assertions.h in Headers */,
+				CE0D0E4F2D325CA200BC9EB1 /* MacPlatformData.h in Headers */,
+				CE0D0E312D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */,
+				CE0D0E492D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */,
+				CE0D0E432D325CA200BC9EB1 /* MacMisc.h in Headers */,
+				CE0D0E792D325CA200BC9EB1 /* PlatformData.h in Headers */,
+				CE0D0E612D325CA200BC9EB1 /* WindowsMisc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,20 +419,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1D83B82CF6FA3000534769 /* Misc.h in Headers */,
-				CEDDB12C2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
-				CE10313A2D2A606200590717 /* Console.h in Headers */,
-				CEDDB1172D1FCE4E00EADB67 /* PlatformData.h in Headers */,
-				CEDDB1112D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
-				CE3833D62CF2FBFE0004C108 /* Assertions.h in Headers */,
-				CEDDB13E2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */,
-				CEDDB1262D1FCE6200EADB67 /* MacMisc.h in Headers */,
-				CED4DDB62D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB1322D1FCE6200EADB67 /* MacPlatformData.h in Headers */,
-				CEDDB1382D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */,
-				CEDDB10B2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */,
-				CEDDB1442D1FCE6200EADB67 /* WindowsMisc.h in Headers */,
-				CEDDB1052D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */,
+				CE0D0E762D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */,
+				CE0D0E702D325CA200BC9EB1 /* PlatformHelpers.h in Headers */,
+				CE0D0E582D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */,
+				CE0D0E2E2D325CA200BC9EB1 /* Console.h in Headers */,
+				CE0D0E3A2D325CA200BC9EB1 /* MiscMacros.h in Headers */,
+				CE0D0E5E2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */,
+				CE0D0E6A2D325CA200BC9EB1 /* Misc.h in Headers */,
+				CE0D0E402D325CA200BC9EB1 /* Assertions.h in Headers */,
+				CE0D0E522D325CA200BC9EB1 /* MacPlatformData.h in Headers */,
+				CE0D0E342D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */,
+				CE0D0E4C2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */,
+				CE0D0E462D325CA200BC9EB1 /* MacMisc.h in Headers */,
+				CE0D0E7C2D325CA200BC9EB1 /* PlatformData.h in Headers */,
+				CE0D0E642D325CA200BC9EB1 /* WindowsMisc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,20 +440,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1D83BC2CF6FA3100534769 /* Misc.h in Headers */,
-				CEDDB12E2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
-				CE10313C2D2A606200590717 /* Console.h in Headers */,
-				CEDDB1192D1FCE4E00EADB67 /* PlatformData.h in Headers */,
-				CEDDB1132D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
-				CE3833D92CF2FC250004C108 /* Assertions.h in Headers */,
-				CEDDB1402D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */,
-				CEDDB1282D1FCE6200EADB67 /* MacMisc.h in Headers */,
-				CED4DDB82D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB1342D1FCE6200EADB67 /* MacPlatformData.h in Headers */,
-				CEDDB13A2D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */,
-				CEDDB10D2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */,
-				CEDDB1462D1FCE6200EADB67 /* WindowsMisc.h in Headers */,
-				CEDDB1072D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */,
+				CE0D0E782D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */,
+				CE0D0E722D325CA200BC9EB1 /* PlatformHelpers.h in Headers */,
+				CE0D0E5A2D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */,
+				CE0D0E302D325CA200BC9EB1 /* Console.h in Headers */,
+				CE0D0E3C2D325CA200BC9EB1 /* MiscMacros.h in Headers */,
+				CE0D0E602D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */,
+				CE0D0E6C2D325CA200BC9EB1 /* Misc.h in Headers */,
+				CE0D0E422D325CA200BC9EB1 /* Assertions.h in Headers */,
+				CE0D0E542D325CA200BC9EB1 /* MacPlatformData.h in Headers */,
+				CE0D0E362D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */,
+				CE0D0E4E2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */,
+				CE0D0E482D325CA200BC9EB1 /* MacMisc.h in Headers */,
+				CE0D0E7E2D325CA200BC9EB1 /* PlatformData.h in Headers */,
+				CE0D0E662D325CA200BC9EB1 /* WindowsMisc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,20 +461,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BCD32CFC336A002F900C /* Misc.h in Headers */,
-				CEDDB12A2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
-				CE1031382D2A606200590717 /* Console.h in Headers */,
-				CEDDB1152D1FCE4E00EADB67 /* PlatformData.h in Headers */,
-				CEDDB10F2D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
-				CE46BCD42CFC336A002F900C /* Assertions.h in Headers */,
-				CEDDB13C2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */,
-				CEDDB1242D1FCE6200EADB67 /* MacMisc.h in Headers */,
-				CED4DDB42D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB1302D1FCE6200EADB67 /* MacPlatformData.h in Headers */,
-				CEDDB1362D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */,
-				CEDDB1092D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */,
-				CEDDB1422D1FCE6200EADB67 /* WindowsMisc.h in Headers */,
-				CEDDB1032D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */,
+				CE0D0E742D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */,
+				CE0D0E6E2D325CA200BC9EB1 /* PlatformHelpers.h in Headers */,
+				CE0D0E562D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */,
+				CE0D0E2C2D325CA200BC9EB1 /* Console.h in Headers */,
+				CE0D0E382D325CA200BC9EB1 /* MiscMacros.h in Headers */,
+				CE0D0E5C2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */,
+				CE0D0E682D325CA200BC9EB1 /* Misc.h in Headers */,
+				CE0D0E3E2D325CA200BC9EB1 /* Assertions.h in Headers */,
+				CE0D0E502D325CA200BC9EB1 /* MacPlatformData.h in Headers */,
+				CE0D0E322D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */,
+				CE0D0E4A2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */,
+				CE0D0E442D325CA200BC9EB1 /* MacMisc.h in Headers */,
+				CE0D0E7A2D325CA200BC9EB1 /* PlatformData.h in Headers */,
+				CE0D0E622D325CA200BC9EB1 /* WindowsMisc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,20 +482,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BCE52CFC3373002F900C /* Misc.h in Headers */,
-				CEDDB12D2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
-				CE10313B2D2A606200590717 /* Console.h in Headers */,
-				CEDDB1182D1FCE4E00EADB67 /* PlatformData.h in Headers */,
-				CEDDB1122D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
-				CE46BCE92CFC3373002F900C /* Assertions.h in Headers */,
-				CEDDB13F2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */,
-				CEDDB1272D1FCE6200EADB67 /* MacMisc.h in Headers */,
-				CED4DDB72D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB1332D1FCE6200EADB67 /* MacPlatformData.h in Headers */,
-				CEDDB1392D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */,
-				CEDDB10C2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */,
-				CEDDB1452D1FCE6200EADB67 /* WindowsMisc.h in Headers */,
-				CEDDB1062D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */,
+				CE0D0E772D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */,
+				CE0D0E712D325CA200BC9EB1 /* PlatformHelpers.h in Headers */,
+				CE0D0E592D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */,
+				CE0D0E2F2D325CA200BC9EB1 /* Console.h in Headers */,
+				CE0D0E3B2D325CA200BC9EB1 /* MiscMacros.h in Headers */,
+				CE0D0E5F2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */,
+				CE0D0E6B2D325CA200BC9EB1 /* Misc.h in Headers */,
+				CE0D0E412D325CA200BC9EB1 /* Assertions.h in Headers */,
+				CE0D0E532D325CA200BC9EB1 /* MacPlatformData.h in Headers */,
+				CE0D0E352D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */,
+				CE0D0E4D2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */,
+				CE0D0E472D325CA200BC9EB1 /* MacMisc.h in Headers */,
+				CE0D0E7D2D325CA200BC9EB1 /* PlatformData.h in Headers */,
+				CE0D0E652D325CA200BC9EB1 /* WindowsMisc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,20 +503,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED3D6782B12D3C800C5FB04 /* Misc.h in Headers */,
-				CEDDB12B2D1FCE6200EADB67 /* MacPlatformHelpers.h in Headers */,
-				CE1031392D2A606200590717 /* Console.h in Headers */,
-				CEDDB1162D1FCE4E00EADB67 /* PlatformData.h in Headers */,
-				CEDDB1102D1FCE4E00EADB67 /* MiscMacros.h in Headers */,
-				CED3D6792B12D3C800C5FB04 /* Assertions.h in Headers */,
-				CEDDB13D2D1FCE6200EADB67 /* WindowsPlatformHelpers.h in Headers */,
-				CEDDB1252D1FCE6200EADB67 /* MacMisc.h in Headers */,
-				CED4DDB52D101E4200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB1312D1FCE6200EADB67 /* MacPlatformData.h in Headers */,
-				CEDDB1372D1FCE6200EADB67 /* WindowsPlatformData.h in Headers */,
-				CEDDB10A2D1FCE4E00EADB67 /* PlatformAbstraction.h in Headers */,
-				CEDDB1432D1FCE6200EADB67 /* WindowsMisc.h in Headers */,
-				CEDDB1042D1FCE4E00EADB67 /* PlatformHelpers.h in Headers */,
+				CE0D0E752D325CA200BC9EB1 /* SymbolExportMacros.h in Headers */,
+				CE0D0E6F2D325CA200BC9EB1 /* PlatformHelpers.h in Headers */,
+				CE0D0E572D325CA200BC9EB1 /* WindowsPlatformData.h in Headers */,
+				CE0D0E2D2D325CA200BC9EB1 /* Console.h in Headers */,
+				CE0D0E392D325CA200BC9EB1 /* MiscMacros.h in Headers */,
+				CE0D0E5D2D325CA200BC9EB1 /* WindowsPlatformHelpers.h in Headers */,
+				CE0D0E692D325CA200BC9EB1 /* Misc.h in Headers */,
+				CE0D0E3F2D325CA200BC9EB1 /* Assertions.h in Headers */,
+				CE0D0E512D325CA200BC9EB1 /* MacPlatformData.h in Headers */,
+				CE0D0E332D325CA200BC9EB1 /* PlatformAbstraction.h in Headers */,
+				CE0D0E4B2D325CA200BC9EB1 /* MacPlatformHelpers.h in Headers */,
+				CE0D0E452D325CA200BC9EB1 /* MacMisc.h in Headers */,
+				CE0D0E7B2D325CA200BC9EB1 /* PlatformData.h in Headers */,
+				CE0D0E632D325CA200BC9EB1 /* WindowsMisc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,7 +671,8 @@
 			files = (
 				CEDDB0EC2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F22D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
-				CE10313E2D2A607100590717 /* Console.cpp in Sources */,
+				CE0D0E032D325C1200BC9EB1 /* Console.cpp in Sources */,
+				CE0D0DFD2D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0F82D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E62D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -675,7 +684,8 @@
 			files = (
 				CEDDB0EF2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F52D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
-				CE1031412D2A607100590717 /* Console.cpp in Sources */,
+				CE0D0E062D325C1200BC9EB1 /* Console.cpp in Sources */,
+				CE0D0E002D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FB2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E92D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -687,7 +697,8 @@
 			files = (
 				CEDDB0F12D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F72D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
-				CE1031432D2A607100590717 /* Console.cpp in Sources */,
+				CE0D0E082D325C1200BC9EB1 /* Console.cpp in Sources */,
+				CE0D0E022D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FD2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0EB2D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -699,7 +710,8 @@
 			files = (
 				CEDDB0ED2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F32D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
-				CE10313F2D2A607100590717 /* Console.cpp in Sources */,
+				CE0D0E042D325C1200BC9EB1 /* Console.cpp in Sources */,
+				CE0D0DFE2D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0F92D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E72D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -711,7 +723,8 @@
 			files = (
 				CEDDB0F02D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F62D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
-				CE1031422D2A607100590717 /* Console.cpp in Sources */,
+				CE0D0E072D325C1200BC9EB1 /* Console.cpp in Sources */,
+				CE0D0E012D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FC2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0EA2D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);
@@ -723,7 +736,8 @@
 			files = (
 				CEDDB0EE2D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
 				CEDDB0F42D1FCE0D00EADB67 /* WindowsMisc.cpp in Sources */,
-				CE1031402D2A607100590717 /* Console.cpp in Sources */,
+				CE0D0E052D325C1200BC9EB1 /* Console.cpp in Sources */,
+				CE0D0DFF2D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FA2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E82D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
 			);

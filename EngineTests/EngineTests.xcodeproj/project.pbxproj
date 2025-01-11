@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE1031302D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
-		CE1031312D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
-		CE1031322D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
-		CE1031332D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
-		CE1031342D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
-		CE1031352D2A484100590717 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE10312F2D2A484100590717 /* ConsoleTests.cpp */; };
+		CE0D0E0C2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
+		CE0D0E0D2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
+		CE0D0E0E2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
+		CE0D0E0F2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
+		CE0D0E102D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
+		CE0D0E112D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
+		CE0D0E122D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
+		CE0D0E132D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
+		CE0D0E142D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
+		CE0D0E152D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
+		CE0D0E162D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
+		CE0D0E172D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
 		CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031482D2A61AD00590717 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */; };
@@ -79,7 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE10312F2D2A484100590717 /* ConsoleTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
+		CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleTests.cpp; sourceTree = "<group>"; };
+		CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssertionTests.cpp; sourceTree = "<group>"; };
 		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
@@ -168,6 +175,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0D0E092D325C6A00BC9EB1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */,
+				CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		CE42935A2D22828F0020748F = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				CE42937D2D2287D60020748F /* _platform */,
-				CE10312F2D2A484100590717 /* ConsoleTests.cpp */,
+				CE0D0E092D325C6A00BC9EB1 /* Core */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -434,8 +450,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0D0E152D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
 				CE3D19112D23A07A00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
-				CE1031332D2A484100590717 /* ConsoleTests.cpp in Sources */,
+				CE0D0E0F2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,8 +460,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0D0E172D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
 				CE3D191E2D23A0DB00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
-				CE1031352D2A484100590717 /* ConsoleTests.cpp in Sources */,
+				CE0D0E112D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,8 +470,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0D0E162D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
 				CE3D192B2D23A0E600F47CDF /* GTMGoogleTestRunner.mm in Sources */,
-				CE1031342D2A484100590717 /* ConsoleTests.cpp in Sources */,
+				CE0D0E102D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,8 +480,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0D0E122D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
 				CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */,
-				CE1031302D2A484100590717 /* ConsoleTests.cpp in Sources */,
+				CE0D0E0C2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,8 +490,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0D0E142D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
 				CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
-				CE1031322D2A484100590717 /* ConsoleTests.cpp in Sources */,
+				CE0D0E0E2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,8 +500,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0D0E132D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
 				CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
-				CE1031312D2A484100590717 /* ConsoleTests.cpp in Sources */,
+				CE0D0E0D2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
