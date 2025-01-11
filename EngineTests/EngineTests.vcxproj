@@ -246,7 +246,8 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ConsoleTests.cpp" />
+    <ClCompile Include="src\Core\ConsoleTests.cpp" />
+    <ClCompile Include="src\Core\AssertionTests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

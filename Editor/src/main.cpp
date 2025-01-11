@@ -2,9 +2,11 @@
 #include <Editor/Core/EditorReloadFlags.h>
 #include <Editor/Core/SymbolExportMacros.h>
 
-#include <Engine/Console.h>
 #include <Engine/Core/Assertions.h>
+#include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
+
+#include <fmt/format.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
@@ -23,11 +25,12 @@ static void OnEngineLogEvent(const LogLevel logLevel, const std::string& message
 {
     switch (logLevel)
     {
+    case LogLevel::Fatal: [[fallthrough]];
     case LogLevel::Error: [[fallthrough]];
-    case LogLevel::Warning: std::cerr << "[" << logLevel << "] " << message << "\n"; break;
-    case LogLevel::Message: [[fallthrough]];
-    case LogLevel::Trace: std::cout << "[" << logLevel << "] " << message << "\n"; break;
-    //default: ADHOC_ASSERT_NOENTRY(); break;
+    case LogLevel::Warning: fmt::println(stderr, "[{}] {}", logLevel, message); break;
+    case LogLevel::Log: [[fallthrough]];
+    case LogLevel::Trace: fmt::println("[{}] {}", logLevel, message); break;
+    default: Assert_NoEntry(); break;
     }
 }
 

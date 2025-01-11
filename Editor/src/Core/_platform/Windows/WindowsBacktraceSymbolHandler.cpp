@@ -1,6 +1,6 @@
 #include "WindowsBacktraceSymbolHandler.h"
 
-#include <Engine/Console.h>
+#include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Core/PlatformHelpers.h>
 

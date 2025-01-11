@@ -4,7 +4,7 @@
 
 #include <fmt/format.h>
 
-#include <cassert>
+#include <cstdlib>
 #include <functional>
 #include <ostream>
 #include <string>
@@ -15,10 +15,10 @@ namespace Engine::Console
 
 enum class LogLevel
 {
-    // Fatal,
+    Fatal,
     Error,
     Warning,
-    Message,
+    Log,
     Trace,
 };
 
@@ -29,7 +29,7 @@ typedef std::function<void(const LogLevel logLevel, const std::string& message)>
 class ENGINE_API LogStream
 {
 public:
-    LogStream(LogEventCallback callback) : LogStream(LogLevel::Message, callback) {}
+    LogStream(LogEventCallback callback) : LogStream(LogLevel::Log, callback) {}
     LogStream(LogLevel verbosity, LogEventCallback callback);
 
     LogStream(const LogStream&)            = delete;
@@ -42,34 +42,53 @@ private:
     unsigned int id;
 };
 
+namespace Internal
+{
+
 ENGINE_API void LogImplementation(LogLevel logLevel, const std::string& formattedMessage);
+
+}
+
+template <typename... Args>
+void LogFatal(const std::string_view message, Args&&... args)
+{
+    const auto& formattedMessage = fmt::format(message, std::forward<Args>(args)...);
+    Internal::LogImplementation(LogLevel::Fatal, formattedMessage);
+    std::abort();
+}
 
 template <typename... T>
 void LogError(fmt::format_string<T...> message, T&&... fmtArgs)
 {
     const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
-    LogImplementation(LogLevel::Error, formattedMessage);
+    Internal::LogImplementation(LogLevel::Error, formattedMessage);
 }
 
 template <typename... T>
 void LogWarning(fmt::format_string<T...> message, T&&... fmtArgs)
 {
     const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
-    LogImplementation(LogLevel::Warning, formattedMessage);
+    Internal::LogImplementation(LogLevel::Warning, formattedMessage);
 }
 
 template <typename... T>
 void Log(fmt::format_string<T...> message, T&&... fmtArgs)
 {
     const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
-    LogImplementation(LogLevel::Message, formattedMessage);
+    Internal::LogImplementation(LogLevel::Log, formattedMessage);
 }
 
 template <typename... T>
 void LogTrace(fmt::format_string<T...> message, T&&... fmtArgs)
 {
     const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
-    LogImplementation(LogLevel::Trace, formattedMessage);
+    Internal::LogImplementation(LogLevel::Trace, formattedMessage);
 }
 
 } // namespace Engine::Console
+
+template <>
+struct ENGINE_API fmt::formatter<::Engine::Console::LogLevel> : formatter<string_view>
+{
+    auto format(::Engine::Console::LogLevel logLevel, format_context& ctx) const -> format_context::iterator;
+};

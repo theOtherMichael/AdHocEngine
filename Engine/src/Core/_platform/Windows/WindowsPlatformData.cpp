@@ -1,6 +1,6 @@
 #include <Engine/Core/_platform/Windows/WindowsPlatformData.h>
 
-#include <Engine/Console.h>
+#include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformHelpers.h>
 
 #ifndef WIN32_LEAN_AND_MEAN

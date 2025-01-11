@@ -2,15 +2,17 @@
 
 #include <alloca.h>
 
+#include <string>
+
 namespace Engine
 {
 
 #ifndef ADHOC_RELEASE
     /// Portably trigger a breakpoint in the debugger.
-    #define DEBUGBREAK() __asm__("int $3")
+    #define DEBUG_BREAK() __asm__("int $3")
 #else
     /// Portably trigger a breakpoint in the debugger.
-    #define DEBUGBREAK()
+    #define DEBUG_BREAK()
 #endif
 
 /// Portably allocate on the extended stack.
@@ -20,6 +22,6 @@ inline void* StackAlloc(size_t size)
 }
 
 /// Print the current call stack.
-void PrintBacktrace();
+std::string GetBacktrace();
 
 } // namespace Engine

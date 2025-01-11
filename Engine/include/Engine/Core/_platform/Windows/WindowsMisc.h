@@ -4,15 +4,17 @@
 
 #include <malloc.h>
 
+#include <string>
+
 namespace Engine
 {
 
 #ifndef ADHOC_RELEASE
     /// Portably trigger a breakpoint in the debugger.
-    #define DEBUGBREAK() (__nop(), __debugbreak())
+    #define DEBUG_BREAK() (__nop(), __debugbreak())
 #else
     /// Portably trigger a breakpoint in the debugger.
-    #define DEBUGBREAK()
+    #define DEBUG_BREAK()
 #endif
 
 /// Portably allocate on the extended stack.
@@ -22,6 +24,6 @@ inline void* StackAlloc(size_t size)
 }
 
 /// Print the current call stack.
-void ENGINE_API PrintBacktrace();
+ENGINE_API std::string GetBacktrace();
 
 } // namespace Engine
