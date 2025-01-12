@@ -59,7 +59,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
-    <TargetName>AdHocEditor</TargetName>
+    <TargetName>LauncherD</TargetName>
     <LocalDebuggerCommandArguments>--developer</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
-    <TargetName>AdHocEditor</TargetName>
+    <TargetName>LauncherDev</TargetName>
     <LocalDebuggerCommandArguments>--developer</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
