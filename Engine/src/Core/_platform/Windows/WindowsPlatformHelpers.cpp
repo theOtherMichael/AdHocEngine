@@ -1,9 +1,6 @@
 #include <Engine/Core/_platform/Windows/WindowsPlatformHelpers.h>
 
-#ifndef WIN32_LEAN_AND_MEAN
-    #define WIN32_LEAN_AND_MEAN
-#endif
-#include <Windows.h>
+#include <windows.h>
 
 #ifndef ADHOC_WINDOWS
 static_assert(false);
