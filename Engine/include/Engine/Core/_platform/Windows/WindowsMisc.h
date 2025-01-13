@@ -9,7 +9,7 @@
 namespace Engine
 {
 
-#ifndef ADHOC_RELEASE
+#if !ADHOC_RELEASE
     /// Portably trigger a breakpoint in the debugger.
     #define DEBUG_BREAK() (__nop(), __debugbreak())
 #else

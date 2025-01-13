@@ -289,7 +289,7 @@ TEST(AssertionTest, ExpressionsEvaluateOnlyOnce)
 }
 #endif // ADHOC_ASSERTIONS_ON
 
-#ifndef ADHOC_SLOW_ASSERTIONS_ON
+#if !ADHOC_SLOW_ASSERTIONS_ON
 TEST(AssertionTest, NonEvalAssertionsDontEvalWhenOff)
 {
     auto someVariable = 0;
@@ -299,7 +299,7 @@ TEST(AssertionTest, NonEvalAssertionsDontEvalWhenOff)
         EXPECT_EQ(someVariable, 0);                                                                                    \
         someVariable = 0;
 
-    #ifndef ADHOC_ASSERTIONS_ON
+    #if !ADHOC_ASSERTIONS_ON
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_True(++someVariable == 1));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_False(++someVariable == 0));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_Eq(++someVariable, 1));
@@ -339,7 +339,7 @@ TEST(AssertionTest, NonEvalAssertionsDontEvalWhenOff)
 }
 #endif // !ADHOC_ASSERTIONS_ON
 
-#ifndef ADHOC_SLOW_ASSERTIONS_ON
+#if !ADHOC_SLOW_ASSERTIONS_ON
 TEST(AssertionTest, EvalAssertionExpressionsEvaluateWhenOff)
 {
     auto someVariable = 0;
@@ -349,7 +349,7 @@ TEST(AssertionTest, EvalAssertionExpressionsEvaluateWhenOff)
         EXPECT_EQ(someVariable, 1);                                                                                    \
         someVariable = 0;
 
-    #ifndef ADHOC_ASSERTIONS_ON
+    #if !ADHOC_ASSERTIONS_ON
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_True(++someVariable == 1));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_False(++someVariable == 0));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_Eq(++someVariable, 1));

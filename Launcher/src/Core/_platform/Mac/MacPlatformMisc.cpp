@@ -6,7 +6,7 @@
 #include <filesystem>
 #include <iostream>
 
-#ifndef ADHOC_MACOS
+#if !ADHOC_MACOS
 static_assert(false);
 #endif
 

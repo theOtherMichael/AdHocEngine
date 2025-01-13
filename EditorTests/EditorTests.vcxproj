@@ -144,9 +144,6 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\FileName.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>

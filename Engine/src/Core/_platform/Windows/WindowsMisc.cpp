@@ -12,7 +12,7 @@
 #include <sstream>
 #include <string>
 
-#ifndef ADHOC_WINDOWS
+#if !ADHOC_WINDOWS
 static_assert(false);
 #endif
 

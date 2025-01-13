@@ -5,7 +5,7 @@
 #include <string>
 #include <string_view>
 
-#ifndef ADHOC_WINDOWS
+#if !ADHOC_WINDOWS
 static_assert(false);
 #endif
 
