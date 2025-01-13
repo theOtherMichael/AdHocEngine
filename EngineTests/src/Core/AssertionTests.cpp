@@ -389,4 +389,27 @@ TEST(AssertionTest, EvalAssertionExpressionsEvaluateWhenOff)
 }
 #endif // !ADHOC_ASSERTIONS_ON
 
+TEST(AssertionTest, AssertCodeBlocksWork)
+{
+    auto codeBlockHasRun = false;
+
+    Assert_Code(codeBlockHasRun = true;);
+
+#if ADHOC_ASSERTIONS_ON
+    ASSERT_TRUE(codeBlockHasRun);
+#else
+    ASSERT_FALSE(codeBlockHasRun);
+#endif
+
+    codeBlockHasRun = false;
+
+    Assert_Code_Slow(codeBlockHasRun = true;);
+
+#if ADHOC_SLOW_ASSERTIONS_ON
+    ASSERT_TRUE(codeBlockHasRun);
+#else
+    ASSERT_FALSE(codeBlockHasRun);
+#endif
+}
+
 } // namespace Core

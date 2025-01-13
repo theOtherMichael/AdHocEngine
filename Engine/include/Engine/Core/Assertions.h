@@ -263,6 +263,12 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define ExpectF_NoReentry(fmtString, ...)                                                                          \
         ADHOC_ASSERT_IMPLEMENTATION_NO_REENTRY(false, "Call to Assert_NoReentry()", fmt::format(fmtString, __VA_ARGS__))
 
+    #define Assert_Code(code)                                                                                          \
+        do                                                                                                             \
+        {                                                                                                              \
+            code                                                                                                       \
+        } while (false)
+
 #else
 
 // clang-format off
@@ -362,6 +368,8 @@ ENGINE_API void TriggerFatalErrorResponse();
 
     #define ExpectF_NoEntry(fmtString, ...) {}
     #define ExpectF_NoReentry(fmtString, ...) {}
+
+    #define Assert_Code(code) {}
 
 // clang-format on
 
@@ -498,6 +506,12 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define ExpectEvalF_Ge_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=)
 
+    #define Assert_Code_Slow(code)                                                                                     \
+        do                                                                                                             \
+        {                                                                                                              \
+            code                                                                                                       \
+        } while (false)
+
 #else
 
 // clang-format off
@@ -585,6 +599,8 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define ExpectEvalF_Le_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
     #define ExpectEvalF_Gt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
     #define ExpectEvalF_Ge_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+
+    #define Assert_Code_Slow(code) {}
 
 // clang-format on
 
