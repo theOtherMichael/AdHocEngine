@@ -2,6 +2,9 @@
 
 #include <gtest/gtest.h>
 
+#pragma clang diagnostic ignored "-Wunused-value"
+#pragma clang diagnostic ignored "-Wunused-comparison"
+
 // These sometimes erroneously trigger a crash for some reason
 #undef DEBUG_BREAK
 #define DEBUG_BREAK()
