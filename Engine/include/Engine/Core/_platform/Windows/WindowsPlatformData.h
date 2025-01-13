@@ -28,7 +28,7 @@ public:
     WindowsPlatformData& operator=(const WindowsPlatformData&) = delete;
 };
 
-#ifdef ADHOC_INTERNAL
+#if ADHOC_INTERNAL
 ENGINE_API WindowsPlatformData& GetMutablePlatformData();
 ENGINE_API void InitializePlatformData();
 #endif

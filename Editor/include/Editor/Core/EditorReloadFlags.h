@@ -2,7 +2,7 @@
 
 // WARNING: Don't edit this file in developer mode, it is consumed by Launcher!
 
-#ifdef ADHOC_INTERNAL
+#if ADHOC_INTERNAL
 
 constexpr unsigned char EditorReloadFlag_None = 0x0;
 

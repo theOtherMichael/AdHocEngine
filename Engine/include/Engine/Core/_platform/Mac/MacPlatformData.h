@@ -3,8 +3,8 @@
 namespace Engine
 {
 
-#ifdef ADHOC_INTERNAL
-void InitializePlatformData(){};
+#if ADHOC_INTERNAL
+void InitializePlatformData() {};
 #endif
 
 } // namespace Engine

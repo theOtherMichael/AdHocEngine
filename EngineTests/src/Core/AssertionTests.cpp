@@ -62,7 +62,7 @@ TEST(AssertionTest, PassingAssertsDontTriggerCrash)
     SUCCEED();
 }
 
-#ifdef ADHOC_ASSERTIONS_ON
+#if ADHOC_ASSERTIONS_ON
 TEST(AssertionDeathTest, FailingAssertsTriggerCrash)
 {
     EXPECT_DEATH(Assert_NoEntry(), "");
@@ -87,7 +87,7 @@ TEST(AssertionDeathTest, FailingAssertsTriggerCrash)
     EXPECT_DEATH(AssertEval_Gt(1, 2), "");
     EXPECT_DEATH(AssertEval_Ge(1, 2), "");
 
-    #ifdef ADHOC_SLOW_ASSERTIONS_ON
+    #if ADHOC_SLOW_ASSERTIONS_ON
     EXPECT_DEATH(Assert_True_Slow(false), "");
     EXPECT_DEATH(Assert_False_Slow(true), "");
     EXPECT_DEATH(Assert_Eq_Slow(1, 0), "");
@@ -171,7 +171,7 @@ TEST(AssertionTest, PassingExpectsDontLog)
 #undef PASSING_EXPECTS_DONT_LOG_CASE
 }
 
-#ifdef ADHOC_ASSERTIONS_ON
+#if ADHOC_ASSERTIONS_ON
 TEST(AssertionTest, FailingExpectsLogErrors)
 {
     auto lastErrorLog = std::string();
@@ -207,7 +207,7 @@ TEST(AssertionTest, FailingExpectsLogErrors)
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Gt(1, 2));
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Ge(1, 2));
 
-    #ifdef ADHOC_SLOW_ASSERTIONS_ON
+    #if ADHOC_SLOW_ASSERTIONS_ON
     FAILING_EXPECTS_LOG_ERRORS_CASE(Expect_True_Slow(false));
     FAILING_EXPECTS_LOG_ERRORS_CASE(Expect_False_Slow(true));
     FAILING_EXPECTS_LOG_ERRORS_CASE(Expect_Eq_Slow(1, 0));
@@ -231,7 +231,7 @@ TEST(AssertionTest, FailingExpectsLogErrors)
 }
 #endif // ADHOC_ASSERTIONS_ON
 
-#ifdef ADHOC_ASSERTIONS_ON
+#if ADHOC_ASSERTIONS_ON
 TEST(AssertionTest, ExpressionsEvaluateOnlyOnce)
 {
     auto evaluationCount = 0;
@@ -263,7 +263,7 @@ TEST(AssertionTest, ExpressionsEvaluateOnlyOnce)
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Gt(++evaluationCount, 0));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Ge(++evaluationCount, 1));
 
-    #ifdef ADHOC_SLOW_ASSERTIONS_ON
+    #if ADHOC_SLOW_ASSERTIONS_ON
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(Expect_True_Slow(++evaluationCount == 1));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(Expect_False_Slow(++evaluationCount == 0));
 

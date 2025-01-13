@@ -9,13 +9,19 @@
 #include <source_location>
 #include <string_view>
 
-#ifdef ADHOC_DEBUG
-    #define ADHOC_ASSERTIONS_ON
-    #define ADHOC_SLOW_ASSERTIONS_ON
+#if ADHOC_DEBUG
+    #define ADHOC_ASSERTIONS_ON 1
+    #define ADHOC_SLOW_ASSERTIONS_ON 1
 #endif
 
-#ifdef ADHOC_DEV
-    #define ADHOC_ASSERTIONS_ON
+#if ADHOC_DEV
+    #define ADHOC_ASSERTIONS_ON 1
+    #define ADHOC_SLOW_ASSERTIONS_ON 0
+#endif
+
+#if ADHOC_RELEASE
+    #define ADHOC_ASSERTIONS_ON 0
+    #define ADHOC_SLOW_ASSERTIONS_ON 0
 #endif
 
 namespace Engine::Internal
@@ -102,7 +108,7 @@ ENGINE_API void TriggerFatalErrorResponse();
         CONCATENATE(AdHocAssertNoReentry_HasReachedLine, __LINE__) = true;                                             \
     }
 
-#ifdef ADHOC_ASSERTIONS_ON
+#if ADHOC_ASSERTIONS_ON
 
     #define Assert_True(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true)
     #define Assert_False(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false)
@@ -216,7 +222,7 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 #endif
 
-#ifdef ADHOC_SLOW_ASSERTIONS_ON
+#if ADHOC_SLOW_ASSERTIONS_ON
 
     #define Assert_True_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true)
     #define Assert_False_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false)

@@ -1,7 +1,7 @@
 #pragma once
 
-#ifdef ADHOC_WINDOWS
-    #ifdef ADHOC_EDITOR_PROJECT
+#if ADHOC_WINDOWS
+    #if ADHOC_EDITOR_PROJECT
         #define EDITOR_API __declspec(dllexport)
     #else
         #define EDITOR_API __declspec(dllimport)
