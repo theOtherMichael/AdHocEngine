@@ -139,7 +139,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR_PROJECT=0;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -164,7 +164,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR_PROJECT=0;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -186,7 +186,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR_PROJECT=0;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -215,7 +215,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR_PROJECT=0;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -239,7 +239,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_EDITOR;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR_PROJECT=0;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -268,7 +268,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL;ADHOC_ENGINE_PROJECT;ADHOC_WINDOWS;ADHOC_DEV;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR_PROJECT=0;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
