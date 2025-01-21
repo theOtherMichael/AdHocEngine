@@ -9,25 +9,9 @@
 #include <forward_list>
 #include <string>
 #include <string_view>
-#include <type_traits>
 
 namespace Engine::Console
 {
-
-std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel)
-{
-    switch (logLevel)
-    {
-    case LogLevel::Fatal: os << "Fatal"; break;
-    case LogLevel::Error: os << "Error"; break;
-    case LogLevel::Warning: os << "Warning"; break;
-    case LogLevel::Log: os << "Log"; break;
-    case LogLevel::Trace: os << "Trace"; break;
-    default: Assert_NoEntry();
-    }
-
-    return os;
-}
 
 struct LogListenerInfo
 {
@@ -79,6 +63,21 @@ void LogImplementation(LogLevel logLevel, const std::string& formattedMessage)
 
 } // namespace Internal
 
+std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel)
+{
+    switch (logLevel)
+    {
+    case LogLevel::Fatal: os << "Fatal"; break;
+    case LogLevel::Error: os << "Error"; break;
+    case LogLevel::Warning: os << "Warning"; break;
+    case LogLevel::Log: os << "Log"; break;
+    case LogLevel::Trace: os << "Trace"; break;
+    default: Assert_NoEntry();
+    }
+
+    return os;
+}
+
 } // namespace Engine::Console
 
 auto fmt::formatter<::Engine::Console::LogLevel>::format(::Engine::Console::LogLevel logLevel,
@@ -93,6 +92,7 @@ auto fmt::formatter<::Engine::Console::LogLevel>::format(::Engine::Console::LogL
     case ::Engine::Console::LogLevel::Warning: name = "Warning"; break;
     case ::Engine::Console::LogLevel::Log: name = "Log"; break;
     case ::Engine::Console::LogLevel::Trace: name = "Trace"; break;
+    default: Assert_NoEntry(); break;
     }
 
     return formatter<string_view>::format(name, ctx);

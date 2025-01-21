@@ -29,18 +29,18 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)Dev</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
@@ -61,7 +61,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Editor\EditorD.lib;$(SolutionDir)build\Engine\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EditorD.lib;$(SolutionDir)build\Debug\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
@@ -86,7 +86,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Editor\Editor.lib;$(SolutionDir)build\Engine\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Editor.lib;$(SolutionDir)build\Release\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
@@ -111,7 +111,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Editor\EditorDev.lib;$(SolutionDir)build\Engine\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EditorDev.lib;$(SolutionDir)build\Dev\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y

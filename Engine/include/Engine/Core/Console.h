@@ -22,8 +22,6 @@ enum class LogLevel
     Trace,
 };
 
-ENGINE_API std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel);
-
 typedef std::function<void(const LogLevel logLevel, const std::string& message)> LogEventCallback;
 
 class ENGINE_API LogStream
@@ -49,10 +47,10 @@ ENGINE_API void LogImplementation(LogLevel logLevel, const std::string& formatte
 
 }
 
-template <typename... Args>
-void LogFatal(const std::string_view message, Args&&... args)
+template <typename... T>
+void LogFatal(fmt::format_string<T...> message, T&&... fmtArgs)
 {
-    const auto& formattedMessage = fmt::format(message, std::forward<Args>(args)...);
+    const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     Internal::LogImplementation(LogLevel::Fatal, formattedMessage);
     std::abort();
 }
@@ -84,6 +82,8 @@ void LogTrace(fmt::format_string<T...> message, T&&... fmtArgs)
     const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     Internal::LogImplementation(LogLevel::Trace, formattedMessage);
 }
+
+ENGINE_API std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel);
 
 } // namespace Engine::Console
 

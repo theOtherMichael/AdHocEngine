@@ -15,30 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp">
+    <ClCompile Include="src\EditorEntryPoint.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\_platform\Windows\WindowsBacktraceSymbolHandler.cpp">
+    <ClCompile Include="src\Core\EditorState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\EditorConfigurationMode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Editor\Core\EditorReloadFlags.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\_platform\Base\BaseBacktraceSymbolHandler.h">
+    <ClInclude Include="include\Editor\Core\EditorConfigurationMode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\BacktraceSymbolHandler.h">
+    <ClInclude Include="include\Editor\Core\EditorState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\_platform\Windows\WindowsBacktraceSymbolHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\_platform\Mac\MacBacktraceSymbolHandler.h">
+    <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

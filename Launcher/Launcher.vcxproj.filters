@@ -21,15 +21,6 @@
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformMisc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\_platform\Windows\WindowsDynamicLibrary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\_platform\Mac\MacDynamicLibrary.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Core\_platform\Mac\MacPlatformMisc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -41,37 +32,13 @@
     <ClInclude Include="src\Core\PlatformMisc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\PlatformHelpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformMisc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformHelpers.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\DynamicLibrary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\_platform\Windows\WindowsDynamicLibrary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\_platform\Base\BaseDynamicLibrary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\PlatformAbstraction.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\MiscMacros.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Core\_platform\Mac\MacPlatformMisc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\_platform\Mac\MacDynamicLibrary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Core\_platform\Mac\MacPlatformHelpers.h">
+    <ClInclude Include="src\Core\_platform\Base\BasePlatformMisc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

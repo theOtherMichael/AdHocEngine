@@ -1,16 +1,17 @@
 #pragma once
 
 #include "../Base/BaseBacktraceSymbolHandler.h"
+#include <Engine/Core/SymbolExportMacros.h>
 
 #include <windows.h>
 
-namespace Editor
+namespace Engine
 {
 
-class WindowsBacktraceSymbolHandler : public BaseBacktraceSymbolHandler
+class ENGINE_API WindowsBacktraceSymbolHandler : public BaseBacktraceSymbolHandler
 {
 public:
-    explicit WindowsBacktraceSymbolHandler(bool isDeveloperMode);
+    WindowsBacktraceSymbolHandler();
 
     WindowsBacktraceSymbolHandler(const WindowsBacktraceSymbolHandler&)            = delete;
     WindowsBacktraceSymbolHandler& operator=(const WindowsBacktraceSymbolHandler&) = delete;
@@ -23,4 +24,4 @@ private:
 
 typedef WindowsBacktraceSymbolHandler BacktraceSymbolHandler;
 
-} // namespace Editor
+} // namespace Engine

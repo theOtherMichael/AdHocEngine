@@ -1,4 +1,4 @@
-#include "WindowsBacktraceSymbolHandler.h"
+#include <Engine/Core/_platform/Windows/WindowsBacktraceSymbolHandler.h>
 
 #include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
@@ -17,36 +17,16 @@ namespace fs = std::filesystem;
 
 namespace Console = Engine::Console;
 
-namespace Editor
+namespace Engine
 {
 
-WindowsBacktraceSymbolHandler::WindowsBacktraceSymbolHandler(const bool isDeveloperMode)
+WindowsBacktraceSymbolHandler::WindowsBacktraceSymbolHandler()
 {
     const auto& platformData = Engine::PlatformData::GetInstance();
 
     Console::Log("Initializing symbol handler...");
 
-    if (!isDeveloperMode)
-    {
-        isValid = SymInitialize(platformData.processHandle, NULL, TRUE);
-    }
-    else
-    {
-        TCHAR rawPathToLauncher[MAX_PATH];
-        if (!GetModuleFileName(NULL, rawPathToLauncher, MAX_PATH))
-        {
-            Console::LogError("Failed to get path to launcher!");
-            isValid = false;
-        }
-        else
-        {
-            fs::path pathToLauncher    = rawPathToLauncher;
-            fs::path pathToBuildFolder = pathToLauncher.parent_path().parent_path();
-            fs::path pathToReloadCache = pathToBuildFolder / "Launcher\\reload_cache";
-
-            isValid = SymInitialize(platformData.processHandle, pathToReloadCache.string().c_str(), TRUE);
-        }
-    }
+    isValid = SymInitialize(platformData.processHandle, NULL, TRUE);
 
     if (!isValid)
     {
@@ -67,4 +47,4 @@ WindowsBacktraceSymbolHandler::~WindowsBacktraceSymbolHandler()
     }
 }
 
-} // namespace Editor
+} // namespace Engine

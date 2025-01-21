@@ -57,22 +57,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AdHocEditorD</TargetName>
     <LocalDebuggerCommandArguments>--developer</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AdHocEditor</TargetName>
     <LocalDebuggerCommandArguments>--developer</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
-    <OutDir>$(SolutionDir)build\$(ProjectName)\</OutDir>
-    <IntDir>$(SolutionDir)build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>AdHocEditorDev</TargetName>
     <LocalDebuggerCommandArguments>--developer</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
@@ -89,13 +89,15 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;_DEBUG;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)build\Debug\EditorD.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>if not exist "$(OutputPath)reload_cache\" mkdir "$(OutputPath)reload_cache\"</Command>
+      <Command>IF NOT EXIST "$(SolutionDir)build\developer_mode_install\" MKDIR "$(SolutionDir)build\developer_mode_install\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -107,15 +109,17 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;NDEBUG;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)build\Release\Editor.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>if not exist "$(OutputPath)reload_cache\" mkdir "$(OutputPath)reload_cache\"</Command>
+      <Command>IF NOT EXIST "$(SolutionDir)build\developer_mode_install\" MKDIR "$(SolutionDir)build\developer_mode_install\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
@@ -127,47 +131,34 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;NDEBUG;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)build\Dev\EditorDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>if not exist "$(OutputPath)reload_cache\" mkdir "$(OutputPath)reload_cache\"</Command>
+      <Command>IF NOT EXIST "$(SolutionDir)build\developer_mode_install\" MKDIR "$(SolutionDir)build\developer_mode_install\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\_platform\Mac\MacDynamicLibrary.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="src\Core\_platform\Mac\MacPlatformMisc.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Core\_platform\Windows\WindowsDynamicLibrary.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformMisc.cpp" />
-    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h" />
-    <ClInclude Include="src\Core\MiscMacros.h" />
-    <ClInclude Include="src\Core\DynamicLibrary.h" />
     <ClInclude Include="src\Core\PlatformMisc.h" />
-    <ClInclude Include="src\Core\PlatformAbstraction.h" />
-    <ClInclude Include="src\Core\PlatformHelpers.h" />
-    <ClInclude Include="src\Core\_platform\Base\BaseDynamicLibrary.h" />
-    <ClInclude Include="src\Core\_platform\Mac\MacDynamicLibrary.h" />
-    <ClInclude Include="src\Core\_platform\Mac\MacPlatformHelpers.h" />
+    <ClInclude Include="src\Core\_platform\Base\BasePlatformMisc.h" />
     <ClInclude Include="src\Core\_platform\Mac\MacPlatformMisc.h" />
-    <ClInclude Include="src\Core\_platform\Windows\WindowsDynamicLibrary.h" />
     <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformMisc.h" />
-    <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformHelpers.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\Win\AdHocEngine.ico" />

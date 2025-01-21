@@ -2,7 +2,7 @@
 
 #include "../Base/BaseBacktraceSymbolHandler.h"
 
-namespace Editor
+namespace Engine
 {
 
 typedef BaseBacktraceSymbolHandler BacktraceSymbolHandler;

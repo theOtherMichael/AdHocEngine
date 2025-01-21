@@ -1,6 +1,5 @@
 #include <Engine/Core/_platform/Windows/WindowsMisc.h>
 
-#include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Core/PlatformHelpers.h>
 
@@ -31,7 +30,7 @@ std::string GetBacktrace()
 
     const auto& platformData = PlatformData::GetInstance();
 
-    auto output = std::ostringstream();
+    auto output = std::ostringstream{};
     for (auto i = 0; i < frames; ++i)
     {
         if (!SymFromAddr(platformData.processHandle, (DWORD64)(callStack[i]), 0, symbol))

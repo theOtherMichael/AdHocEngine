@@ -1,4 +1,4 @@
-#include "MacDynamicLibrary.h"
+#include <Engine/Core/_platform/Mac/MacDynamicLibrary.h>
 
 #include <dlfcn.h>
 

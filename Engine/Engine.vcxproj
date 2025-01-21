@@ -97,33 +97,33 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)D</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\Debug\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\Debug\Static$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)StaticD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)Dev</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\Dev\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\Dev\Static$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)StaticDev</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build-int\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
-    <OutDir>$(ProjectDir)..\build\$(ProjectName)\</OutDir>
-    <IntDir>$(ProjectDir)..\build-int\$(ProjectName)\$(Configuration)\</IntDir>
+    <OutDir>$(ProjectDir)..\build\Release\</OutDir>
+    <IntDir>$(ProjectDir)..\build-int\Release\Static$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)Static</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
@@ -153,8 +153,10 @@
     <PostBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>echo Building statlic engine library...
-msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"</Command>
+      <Command>ECHO Building static engine library...
+msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"
+ECHO Copying vcpkg dependencies...
+IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
@@ -202,8 +204,10 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <PostBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>echo Building statlic engine library...
-msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"</Command>
+      <Command>ECHO Building static engine library...
+msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"
+ECHO Copying vcpkg dependencies...
+IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
@@ -255,8 +259,10 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <PostBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>echo Building statlic engine library...
-msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"</Command>
+      <Command>ECHO Building static engine library...
+msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"
+ECHO Copying vcpkg dependencies...
+IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
@@ -284,24 +290,41 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Engine\Core\BacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\Console.h" />
     <ClInclude Include="include\Engine\Core\Assertions.h" />
+    <ClInclude Include="include\Engine\Core\DynamicLibrary.h" />
     <ClInclude Include="include\Engine\Core\Misc.h" />
     <ClInclude Include="include\Engine\Core\MiscMacros.h" />
     <ClInclude Include="include\Engine\Core\PlatformAbstraction.h" />
     <ClInclude Include="include\Engine\Core\PlatformData.h" />
     <ClInclude Include="include\Engine\Core\PlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Base\BaseBacktraceSymbolHandler.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Base\BaseDynamicLibrary.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacBacktraceSymbolHandler.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacDynamicLibrary.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformData.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsBacktraceSymbolHandler.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsDynamicLibrary.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsMisc.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformData.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\SymbolExportMacros.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\_platform\Windows\WindowsBacktraceSymbolHandler.cpp" />
     <ClCompile Include="src\Core\Console.cpp" />
     <ClCompile Include="src\Core\Assertions.cpp" />
+    <ClCompile Include="src\Core\_platform\Mac\MacDynamicLibrary.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\Core\_platform\Mac\MacMisc.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
@@ -310,6 +333,7 @@ msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="src\Core\_platform\Windows\WindowsDynamicLibrary.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsMisc.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformData.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />

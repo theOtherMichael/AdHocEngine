@@ -1,6 +1,6 @@
-#include "WindowsDynamicLibrary.h"
+#include <Engine/Core/_platform/Windows/WindowsDynamicLibrary.h>
 
-#include "Core/PlatformHelpers.h"
+#include <Engine/Core/PlatformHelpers.h>
 
 #include <windows.h>
 
@@ -40,9 +40,9 @@ void* WindowsDynamicLibrary::GetRawFunctionPtr(const std::string& functionName)
         return nullptr;
     }
 
-    void* functionPtr = GetProcAddress(libraryHandle, functionName.c_str());
-    if (!functionPtr)
+    auto functionPtr = GetProcAddress(libraryHandle, functionName.c_str());
+    if (functionPtr == NULL)
         std::cerr << "Failed to get symbol " << functionName + "! " << Windows::GetLastErrorMessage() << "\n";
 
-    return functionPtr;
+    return reinterpret_cast<void*>(functionPtr);
 }

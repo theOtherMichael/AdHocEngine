@@ -1,13 +1,14 @@
 #pragma once
 
-namespace Editor
+#include <Engine/Core/SymbolExportMacros.h>
+
+namespace Engine
 {
 
-class BaseBacktraceSymbolHandler
+class ENGINE_API BaseBacktraceSymbolHandler
 {
 public:
     BaseBacktraceSymbolHandler() = default;
-    explicit BaseBacktraceSymbolHandler(const bool isDeveloperMode){};
 
     BaseBacktraceSymbolHandler(const BaseBacktraceSymbolHandler& other)            = delete;
     BaseBacktraceSymbolHandler& operator=(const BaseBacktraceSymbolHandler& other) = delete;
@@ -15,4 +16,4 @@ public:
     virtual ~BaseBacktraceSymbolHandler(){};
 };
 
-} // namespace Editor
+} // namespace Engine
