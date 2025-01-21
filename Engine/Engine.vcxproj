@@ -143,8 +143,9 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -194,8 +195,9 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XC
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -249,8 +251,9 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -337,6 +340,8 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
     <ClCompile Include="src\Core\_platform\Windows\WindowsMisc.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformData.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />
+    <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
+    <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">

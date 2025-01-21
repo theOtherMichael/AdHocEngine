@@ -24,6 +24,9 @@
     <ClCompile Include="src\Core\_platform\Mac\MacPlatformMisc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h">

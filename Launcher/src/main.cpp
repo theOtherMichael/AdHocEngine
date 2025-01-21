@@ -78,10 +78,10 @@ int main(int argc, char* argv[])
 
     auto& editorState = Editor::GetMutableEditorState();
 
+    Console::Log("Configuration: {}", compiledConfigMode);
+    editorState.currentConfigMode = compiledConfigMode;
     Console::Log("Developer Mode: {}", isDeveloperMode);
     editorState.isDeveloperMode = isDeveloperMode;
-    Console::Log("Selected config: {}", compiledConfigMode);
-    editorState.currentConfigMode = compiledConfigMode;
 
     auto reloadFlags = Editor::EditorMain(argc, argv);
 

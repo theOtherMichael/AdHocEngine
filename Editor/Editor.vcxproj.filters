@@ -24,6 +24,12 @@
     <ClCompile Include="src\Core\EditorConfigurationMode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\_platform\Windows\DllMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h">

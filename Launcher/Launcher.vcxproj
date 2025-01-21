@@ -94,7 +94,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)build\Debug\EditorD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)build\Debug\EditorD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(SolutionDir)build\developer_mode_install\" MKDIR "$(SolutionDir)build\developer_mode_install\"</Command>
@@ -116,7 +117,8 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)build\Release\Editor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)build\Release\Editor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(SolutionDir)build\developer_mode_install\" MKDIR "$(SolutionDir)build\developer_mode_install\"</Command>
@@ -138,7 +140,8 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)build\Dev\EditorDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)build\Dev\EditorDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>IF NOT EXIST "$(SolutionDir)build\developer_mode_install\" MKDIR "$(SolutionDir)build\developer_mode_install\"</Command>
@@ -152,6 +155,7 @@
     </ClCompile>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformMisc.cpp" />
+    <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h" />
