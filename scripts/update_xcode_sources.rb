@@ -8,12 +8,16 @@ require 'fileutils'
 
 def audit_file_groups(project)
   puts '  Auditing file groups...'
+
+  should_recheck_for_empty_groups = false
+
   project.main_group.recursive_children_groups.each do |group|
     next if group == project.main_group['Frameworks'] || group == project.main_group['Products']
 
     if group.empty?
       puts "    Removed empty group #{group.hierarchy_path}"
       group.remove_from_project
+      should_recheck_for_empty_groups = true
       next
     end
 
@@ -30,6 +34,18 @@ def audit_file_groups(project)
 
     puts "    Sorted group #{group.path}"
     group.sort({ groups_position: :above })
+  end
+
+  while should_recheck_for_empty_groups
+    should_recheck_for_empty_groups = false
+    project.main_group.recursive_children_groups.each do |group|
+      next unless group.empty?
+
+      puts "    Removed empty group #{group.hierarchy_path}"
+      group.remove_from_project
+      should_recheck_for_empty_groups = true
+      next
+    end
   end
 end
 
