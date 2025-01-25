@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE0D0E0C2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
-		CE0D0E0D2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
-		CE0D0E0E2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
-		CE0D0E0F2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
-		CE0D0E102D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
-		CE0D0E112D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */; };
-		CE0D0E122D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
-		CE0D0E132D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
-		CE0D0E142D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
-		CE0D0E152D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
-		CE0D0E162D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
-		CE0D0E172D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */; };
+		008B7D78AA7FAE16202C2456 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		109964AEEAAA7C96AA1BD4C1 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		11E90EC814B36581163C4ACB /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		1B5042261FE1940686C533B0 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		1C14CE87AA6A2ABB1AB070EC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		271D893CEE32DAE16696C13F /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		27BEF8AF3F28B25D6ACDFE46 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		2F39B04F2E8909AB4F6235F3 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		2FDF7D44BAEE6ACE22FA5788 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		3EA03F7B5735B7A46B0128D8 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		4265E697C7F0224EC75406C4 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		53F9B873DF56158D9AA552C5 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		57FDE3C419499A209AFE6F3C /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		5D3D4FB85CFADB66E579FB8D /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		61D3E4F13093B13B475F1F07 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		73E354116B51A0A2937A5D20 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		7A680C78E660C4810A1FEA14 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		8D4D68546E67A826EABCAE58 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		99ABE2E4A8DD026EFFBBC2B1 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		A84FF11709E260F8C4C9F381 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		BD4C5891E907704DB0712D4B /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
 		CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031482D2A61AD00590717 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */; };
@@ -28,12 +37,6 @@
 		CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18EF2D23914700F47CDF /* libEngine.dylib */; };
 		CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F12D23915300F47CDF /* libEngineD.dylib */; };
 		CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */; };
-		CE3D19112D23A07A00F47CDF /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
-		CE3D191E2D23A0DB00F47CDF /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
-		CE3D192B2D23A0E600F47CDF /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
-		CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
-		CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
-		CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */; };
 		CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; };
 		CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; };
 		CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; };
@@ -46,6 +49,9 @@
 		CEE4330F2D23B6080095A215 /* libEngineStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D19382D23A16800F47CDF /* libEngineStatic.a */; };
 		CEE433102D23B6130095A215 /* libEngineStaticDev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */; };
 		CEE433112D23B6190095A215 /* libEngineStaticD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */; };
+		D490D1EE145C805A7554E430 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		DB5447419404FEA953020B92 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		DFBF79CB2E4E121ABB4337F3 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,8 +91,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConsoleTests.cpp; sourceTree = "<group>"; };
-		CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AssertionTests.cpp; sourceTree = "<group>"; };
+		6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
+		8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/Core/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
+		CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AssertionTests.cpp; path = src/Core/AssertionTests.cpp; sourceTree = SOURCE_ROOT; };
 		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
@@ -104,11 +111,11 @@
 		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Engine/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
 		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
-		CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = GTMGoogleTestRunner.mm; sourceTree = "<group>"; };
 		CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB948622D231FA8009C272B /* EngineTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
+		E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GTMGoogleTestRunner.mm; path = src/_platform/Mac/GTMGoogleTestRunner.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,14 +182,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AAC189E9105792131288CCE /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */,
+			);
+			name = Windows;
+			path = src/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE0D0E092D325C6A00BC9EB1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE0D0E0A2D325C6A00BC9EB1 /* ConsoleTests.cpp */,
-				CE0D0E0B2D325C6A00BC9EB1 /* AssertionTests.cpp */,
+				CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */,
+				8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */,
 			);
-			path = Core;
-			sourceTree = "<group>";
+			name = Core;
+			path = src/Core;
+			sourceTree = SOURCE_ROOT;
 		};
 		CE42935A2D22828F0020748F = {
 			isa = PBXGroup;
@@ -192,7 +209,7 @@
 				CE4293642D22828F0020748F /* Products */,
 				CE4293782D2284EA0020748F /* src */,
 			);
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE4293642D22828F0020748F /* Products */ = {
 			isa = PBXGroup;
@@ -213,6 +230,7 @@
 				CE42937D2D2287D60020748F /* _platform */,
 				CE0D0E092D325C6A00BC9EB1 /* Core */,
 			);
+			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -220,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				CE42937E2D2287DF0020748F /* Mac */,
+				5AAC189E9105792131288CCE /* Windows */,
 			);
 			name = _platform;
 			path = src/_platform;
@@ -228,7 +247,7 @@
 		CE42937E2D2287DF0020748F /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				CEA42C382D229D3F0099CB94 /* GTMGoogleTestRunner.mm */,
+				E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */,
 			);
 			name = Mac;
 			path = src/_platform/Mac;
@@ -450,9 +469,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0D0E152D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
-				CE3D19112D23A07A00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
-				CE0D0E0F2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
+				DB5447419404FEA953020B92 /* AssertionTests.cpp in Sources */,
+				27BEF8AF3F28B25D6ACDFE46 /* ConsoleTests.cpp in Sources */,
+				1C14CE87AA6A2ABB1AB070EC /* GTMGoogleTestRunner.mm in Sources */,
+				8D4D68546E67A826EABCAE58 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,9 +480,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0D0E172D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
-				CE3D191E2D23A0DB00F47CDF /* GTMGoogleTestRunner.mm in Sources */,
-				CE0D0E112D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
+				008B7D78AA7FAE16202C2456 /* AssertionTests.cpp in Sources */,
+				11E90EC814B36581163C4ACB /* ConsoleTests.cpp in Sources */,
+				3EA03F7B5735B7A46B0128D8 /* GTMGoogleTestRunner.mm in Sources */,
+				99ABE2E4A8DD026EFFBBC2B1 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,9 +491,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0D0E162D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
-				CE3D192B2D23A0E600F47CDF /* GTMGoogleTestRunner.mm in Sources */,
-				CE0D0E102D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
+				1B5042261FE1940686C533B0 /* AssertionTests.cpp in Sources */,
+				73E354116B51A0A2937A5D20 /* ConsoleTests.cpp in Sources */,
+				109964AEEAAA7C96AA1BD4C1 /* GTMGoogleTestRunner.mm in Sources */,
+				57FDE3C419499A209AFE6F3C /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,9 +502,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0D0E122D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
-				CEBA0B9F2D233995006346FC /* GTMGoogleTestRunner.mm in Sources */,
-				CE0D0E0C2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
+				2F39B04F2E8909AB4F6235F3 /* AssertionTests.cpp in Sources */,
+				A84FF11709E260F8C4C9F381 /* ConsoleTests.cpp in Sources */,
+				D490D1EE145C805A7554E430 /* GTMGoogleTestRunner.mm in Sources */,
+				BD4C5891E907704DB0712D4B /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,9 +513,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0D0E142D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
-				CEBA0B9E2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
-				CE0D0E0E2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
+				7A680C78E660C4810A1FEA14 /* AssertionTests.cpp in Sources */,
+				2FDF7D44BAEE6ACE22FA5788 /* ConsoleTests.cpp in Sources */,
+				61D3E4F13093B13B475F1F07 /* GTMGoogleTestRunner.mm in Sources */,
+				53F9B873DF56158D9AA552C5 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,9 +524,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0D0E132D325C6A00BC9EB1 /* AssertionTests.cpp in Sources */,
-				CEBA0B9D2D233994006346FC /* GTMGoogleTestRunner.mm in Sources */,
-				CE0D0E0D2D325C6A00BC9EB1 /* ConsoleTests.cpp in Sources */,
+				5D3D4FB85CFADB66E579FB8D /* AssertionTests.cpp in Sources */,
+				271D893CEE32DAE16696C13F /* ConsoleTests.cpp in Sources */,
+				DFBF79CB2E4E121ABB4337F3 /* GTMGoogleTestRunner.mm in Sources */,
+				4265E697C7F0224EC75406C4 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

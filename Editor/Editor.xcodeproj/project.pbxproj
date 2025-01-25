@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0199E0EB46282AAF5304DED2 /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
+		11E61B4295DB7A84EC213515 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */; };
+		1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
+		32F38ACF158402CB6637F498 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
+		35B30732BD08EFFCDED96ADF /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
+		3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
+		5E50C7B5442772BB9D27DCFC /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
+		60E9FA63DBAF084E792F49B3 /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
+		6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
+		6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
+		783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
+		8F3A65F02F969811E5EC75E3 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */; };
+		99F4E6E79DDB745F635A3D28 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */; };
+		A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
+		B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
+		B6A71A503DF87EB57E164FFC /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
+		C478DD344FFE5EA0B544A98D /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
 		CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
@@ -15,37 +32,30 @@
 		CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD162CFC3F45002F900C /* libEngine.dylib */; };
 		CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD182CFC3F53002F900C /* libEngineDev.dylib */; };
 		CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */; };
-		CED08B3B2D1FD09D00BCE479 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED08B3A2D1FD09D00BCE479 /* main.cpp */; };
-		CED08B3C2D1FD09D00BCE479 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED08B3A2D1FD09D00BCE479 /* main.cpp */; };
-		CED08B3D2D1FD09D00BCE479 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED08B3A2D1FD09D00BCE479 /* main.cpp */; };
-		CED4DDBC2D101ED100BAE96F /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */; };
 		CED4DDBD2D101ED100BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
-		CED4DDBE2D101ED200BAE96F /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */; };
 		CED4DDBF2D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
-		CED4DDC02D101ED200BAE96F /* EditorReloadFlags.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */; };
 		CED4DDC12D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
 		CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */; };
 		CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */; };
 		CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */; };
-		CEDDB0D02D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */; };
-		CEDDB0D12D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */; };
-		CEDDB0D22D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */; };
-		CEDDB0D32D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0CB2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp */; };
-		CEDDB0D42D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0CB2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp */; };
-		CEDDB0D52D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0CB2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp */; };
-		CEDDB0D62D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CC2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h */; };
-		CEDDB0D72D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CC2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h */; };
-		CEDDB0D82D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CC2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h */; };
-		CEDDB0D92D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CE2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h */; };
-		CEDDB0DA2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CE2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h */; };
-		CEDDB0DB2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CE2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h */; };
-		CEDDB0DC2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */; };
-		CEDDB0DD2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */; };
-		CEDDB0DE2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */; };
 		CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
+		DA0609722BD72AF310CEDC66 /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
+		DCFF2CA9339ABB2A17D719C3 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
+		E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
+		E2369DD0E69988C9B80F193E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
+		F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
+		FAA500842B41BF7159A08174 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
+		FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorEntryPoint.cpp; path = src/EditorEntryPoint.cpp; sourceTree = SOURCE_ROOT; };
+		482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorConfigurationMode.h; path = include/Editor/Core/EditorConfigurationMode.h; sourceTree = SOURCE_ROOT; };
+		569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
+		5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorEntryPoint.h; path = include/Editor/Core/Internal/EditorEntryPoint.h; sourceTree = SOURCE_ROOT; };
+		5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorState.h; path = include/Editor/Core/EditorState.h; sourceTree = SOURCE_ROOT; };
+		694C820C0FE42FF4E7CB88CC /* EditorState.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorState.cpp; path = src/Core/EditorState.cpp; sourceTree = SOURCE_ROOT; };
+		961F49B2A1FB826F2103F49F /* DllMain.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DllMain.cpp; path = src/_platform/Windows/DllMain.cpp; sourceTree = SOURCE_ROOT; };
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE327B0E2B1593400067EF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE46BD082CFC33CD002F900C /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,19 +63,13 @@
 		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
 		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
-		CED08B3A2D1FD09D00BCE479 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Editor/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
-		CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EditorReloadFlags.h; path = include/Editor/Core/EditorReloadFlags.h; sourceTree = SOURCE_ROOT; };
 		CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacBacktraceSymbolHandler.h; path = src/Core/_platform/Mac/MacBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0CB2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsBacktraceSymbolHandler.cpp; path = src/Core/_platform/Windows/WindowsBacktraceSymbolHandler.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0CC2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsBacktraceSymbolHandler.h; path = src/Core/_platform/Windows/WindowsBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0CE2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseBacktraceSymbolHandler.h; path = src/Core/_platform/Base/BaseBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BacktraceSymbolHandler.h; path = src/Core/BacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
+		DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorConfigurationMode.cpp; path = src/Core/EditorConfigurationMode.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D48CE9160294FF3325E5695 /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				8B7D10DB4E6772027DC06BCD /* Windows */,
+			);
+			name = _platform;
+			path = src/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
+		688B6DE88986951E7329E9E8 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */,
+			);
+			name = Internal;
+			path = include/Editor/Core/Internal;
+			sourceTree = SOURCE_ROOT;
+		};
+		8B7D10DB4E6772027DC06BCD /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				961F49B2A1FB826F2103F49F /* DllMain.cpp */,
+				569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */,
+			);
+			name = Windows;
+			path = src/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE2B9A2C2B01853C00DE24E0 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +146,7 @@
 				CE4C6EA22B0196810015E51A /* include */,
 				CE4C6EA52B0196810015E51A /* src */,
 			);
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE2B9A362B01853C00DE24E0 /* Products */ = {
 			isa = PBXGroup;
@@ -131,6 +163,7 @@
 			children = (
 				CE4C6EA32B0196810015E51A /* Editor */,
 			);
+			name = include;
 			path = include;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -146,9 +179,11 @@
 		CE4C6EA52B0196810015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				2D48CE9160294FF3325E5695 /* _platform */,
 				CEDDB0C62D1FCD3800EADB67 /* Core */,
-				CED08B3A2D1FD09D00BCE479 /* main.cpp */,
+				0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */,
 			);
+			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -170,7 +205,9 @@
 		CED4DDB92D101EB000BAE96F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CED4DDBB2D101EB000BAE96F /* EditorReloadFlags.h */,
+				688B6DE88986951E7329E9E8 /* Internal */,
+				482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */,
+				5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */,
 				CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */,
 			);
 			name = Core;
@@ -180,50 +217,11 @@
 		CEDDB0C62D1FCD3800EADB67 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CEDDB0C72D1FCD3800EADB67 /* _platform */,
-				CEDDB0CF2D1FCD3800EADB67 /* BacktraceSymbolHandler.h */,
+				DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */,
+				694C820C0FE42FF4E7CB88CC /* EditorState.cpp */,
 			);
 			name = Core;
 			path = src/Core;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0C72D1FCD3800EADB67 /* _platform */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0CD2D1FCD3800EADB67 /* Base */,
-				CEDDB0C82D1FCD3800EADB67 /* Mac */,
-				CEDDB0CA2D1FCD3800EADB67 /* Windows */,
-			);
-			name = _platform;
-			path = src/Core/_platform;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0C82D1FCD3800EADB67 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0C92D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h */,
-			);
-			name = Mac;
-			path = src/Core/_platform/Mac;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0CA2D1FCD3800EADB67 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0CB2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp */,
-				CEDDB0CC2D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h */,
-			);
-			name = Windows;
-			path = src/Core/_platform/Windows;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0CD2D1FCD3800EADB67 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0CE2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h */,
-			);
-			name = Base;
-			path = src/Core/_platform/Base;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -233,12 +231,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0D62D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h in Headers */,
-				CED4DDBC2D101ED100BAE96F /* EditorReloadFlags.h in Headers */,
-				CEDDB0DC2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */,
-				CEDDB0D02D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */,
 				CED4DDBD2D101ED100BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB0D92D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,12 +239,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0D72D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h in Headers */,
-				CED4DDBE2D101ED200BAE96F /* EditorReloadFlags.h in Headers */,
-				CEDDB0DD2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */,
-				CEDDB0D12D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */,
 				CED4DDBF2D101ED200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB0DA2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +247,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0D82D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.h in Headers */,
-				CED4DDC02D101ED200BAE96F /* EditorReloadFlags.h in Headers */,
-				CEDDB0DE2D1FCD3800EADB67 /* BacktraceSymbolHandler.h in Headers */,
-				CEDDB0D22D1FCD3800EADB67 /* MacBacktraceSymbolHandler.h in Headers */,
 				CED4DDC12D101ED200BAE96F /* SymbolExportMacros.h in Headers */,
-				CEDDB0DB2D1FCD3800EADB67 /* BaseBacktraceSymbolHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,8 +343,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED08B3B2D1FD09D00BCE479 /* main.cpp in Sources */,
-				CEDDB0D32D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				35B30732BD08EFFCDED96ADF /* EditorConfigurationMode.cpp in Sources */,
+				3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */,
+				DA0609722BD72AF310CEDC66 /* EditorEntryPoint.cpp in Sources */,
+				FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */,
+				99F4E6E79DDB745F635A3D28 /* MimallocNewDeleteOverride.cpp in Sources */,
+				C478DD344FFE5EA0B544A98D /* EditorConfigurationMode.h in Sources */,
+				DCFF2CA9339ABB2A17D719C3 /* EditorState.h in Sources */,
+				1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +358,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED08B3C2D1FD09D00BCE479 /* main.cpp in Sources */,
-				CEDDB0D42D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				0199E0EB46282AAF5304DED2 /* EditorConfigurationMode.cpp in Sources */,
+				783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */,
+				E2369DD0E69988C9B80F193E /* EditorEntryPoint.cpp in Sources */,
+				F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */,
+				11E61B4295DB7A84EC213515 /* MimallocNewDeleteOverride.cpp in Sources */,
+				60E9FA63DBAF084E792F49B3 /* EditorConfigurationMode.h in Sources */,
+				32F38ACF158402CB6637F498 /* EditorState.h in Sources */,
+				6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +373,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED08B3D2D1FD09D00BCE479 /* main.cpp in Sources */,
-				CEDDB0D52D1FCD3800EADB67 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				5E50C7B5442772BB9D27DCFC /* EditorConfigurationMode.cpp in Sources */,
+				FAA500842B41BF7159A08174 /* EditorState.cpp in Sources */,
+				A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */,
+				E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */,
+				8F3A65F02F969811E5EC75E3 /* MimallocNewDeleteOverride.cpp in Sources */,
+				B6A71A503DF87EB57E164FFC /* EditorConfigurationMode.h in Sources */,
+				6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */,
+				B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AF459F62A4FCE0D4BB7D165 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75BA5C83362562D92BE0B8B3 /* MimallocNewDeleteOverride.cpp */; };
+		5A7CD02726F7757A9EB64D18 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75BA5C83362562D92BE0B8B3 /* MimallocNewDeleteOverride.cpp */; };
 		CE3D18F62D2391AE00F47CDF /* libEditor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F52D2391AE00F47CDF /* libEditor.dylib */; };
 		CE3D18F82D2391B400F47CDF /* libEditorD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F72D2391B400F47CDF /* libEditorD.dylib */; };
 		CE3D18FA2D2391B900F47CDF /* libEditorDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F92D2391B900F47CDF /* libEditorDev.dylib */; };
@@ -19,6 +21,7 @@
 		CEBA0C292D23512A006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C172D234DC6006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEBA0C2B2D23513D006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1B2D234E01006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEBA0C2D2D23515A006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C172D234DC6006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		DD4EC812F9CAE7D63C424002 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 75BA5C83362562D92BE0B8B3 /* MimallocNewDeleteOverride.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +61,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		75BA5C83362562D92BE0B8B3 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CE3D18F52D2391AE00F47CDF /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../build/Editor/libEditor.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F72D2391B400F47CDF /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../build/Editor/libEditorD.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F92D2391B900F47CDF /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Editor/libEditorDev.dylib; sourceTree = SOURCE_ROOT; };
@@ -109,7 +113,7 @@
 				CEBA0BAA2D234324006346FC /* Products */,
 				CEBA0BB42D234397006346FC /* src */,
 			);
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CEBA0BAA2D234324006346FC /* Products */ = {
 			isa = PBXGroup;
@@ -126,6 +130,7 @@
 			children = (
 				CEBA0BB82D234397006346FC /* _platform */,
 			);
+			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBA0BB92D234397006346FC /* Mac */,
+				E8B0C6A5B25E807B61D1FF47 /* Windows */,
 			);
 			name = _platform;
 			path = src/_platform;
@@ -157,6 +163,15 @@
 				CEBA0C172D234DC6006346FC /* libgtest.1.15.2.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = SOURCE_ROOT;
+		};
+		E8B0C6A5B25E807B61D1FF47 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				75BA5C83362562D92BE0B8B3 /* MimallocNewDeleteOverride.cpp */,
+			);
+			name = Windows;
+			path = src/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -280,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0BF32D234D14006346FC /* GTMGoogleTestRunner.mm in Sources */,
+				5A7CD02726F7757A9EB64D18 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0BF22D234D13006346FC /* GTMGoogleTestRunner.mm in Sources */,
+				2AF459F62A4FCE0D4BB7D165 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBA0BF42D234D15006346FC /* GTMGoogleTestRunner.mm in Sources */,
+				DD4EC812F9CAE7D63C424002 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

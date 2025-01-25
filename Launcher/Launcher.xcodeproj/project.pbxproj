@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14636AA220BCC090ECF53EEE /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
+		6649C4D16C7400BB343943F7 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
+		6B02E36F78201B4DAF447209 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
+		89659766E0DB625D13A2B640 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
+		AA67B0CBC80417ACCAE7B7BD /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
+		B08534C3FBC17B75D800BDE2 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
+		BB804F324C24828F895D9C36 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
+		BD16A5C57E892258A66EA83E /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
 		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE3D19442D23A73E00F47CDF /* libEngineStaticDev.a in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE3D19432D23A73E00F47CDF /* libEngineStaticDev.a */; };
@@ -39,18 +47,6 @@
 		CEDDB0B32D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
 		CEDDB0B42D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
 		CEDDB0B52D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
-		CEDDB0B62D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
-		CEDDB0B72D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
-		CEDDB0B82D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
-		CEDDB0B92D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */; };
-		CEDDB0BA2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
-		CEDDB0BB2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
-		CEDDB0BC2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
-		CEDDB0BD2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */; };
-		CEDDB0BE2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
-		CEDDB0BF2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
-		CEDDB0C02D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
-		CEDDB0C12D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */; };
 		CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
 		CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
 		CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
@@ -140,6 +136,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasePlatformMisc.h; path = src/Core/_platform/Base/BasePlatformMisc.h; sourceTree = SOURCE_ROOT; };
+		BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19432D23A73E00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Engine/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
@@ -161,23 +159,11 @@
 		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB09D2D1FCCA000EADB67 /* PlatformAbstraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformAbstraction.h; path = src/Core/PlatformAbstraction.h; sourceTree = SOURCE_ROOT; };
-		CEDDB09E2D1FCCA000EADB67 /* MiscMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscMacros.h; path = src/Core/MiscMacros.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0A12D1FCCA000EADB67 /* MacDynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacDynamicLibrary.h; path = src/Core/_platform/Mac/MacDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
 		CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacPlatformMisc.cpp; path = src/Core/_platform/Mac/MacPlatformMisc.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacDynamicLibrary.cpp; path = src/Core/_platform/Mac/MacDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0A42D1FCCA000EADB67 /* MacPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformHelpers.h; path = src/Core/_platform/Mac/MacPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
 		CEDDB0A52D1FCCA000EADB67 /* MacPlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformMisc.h; path = src/Core/_platform/Mac/MacPlatformMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0A82D1FCCA000EADB67 /* WindowsPlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformMisc.h; path = src/Core/_platform/Windows/WindowsPlatformMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsDynamicLibrary.cpp; path = src/Core/_platform/Windows/WindowsDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformMisc.cpp; path = src/Core/_platform/Windows/WindowsPlatformMisc.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0AB2D1FCCA000EADB67 /* WindowsDynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsDynamicLibrary.h; path = src/Core/_platform/Windows/WindowsDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0AC2D1FCCA000EADB67 /* WindowsPlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformHelpers.h; path = src/Core/_platform/Windows/WindowsPlatformHelpers.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0AE2D1FCCA000EADB67 /* BaseDynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseDynamicLibrary.h; path = src/Core/_platform/Base/BaseDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0AF2D1FCCA000EADB67 /* PlatformHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformHelpers.h; path = src/Core/PlatformHelpers.h; sourceTree = SOURCE_ROOT; };
 		CEDDB0B02D1FCCA000EADB67 /* PlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformMisc.h; path = src/Core/PlatformMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0B12D1FCCA000EADB67 /* DynamicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DynamicLibrary.h; path = src/Core/DynamicLibrary.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,11 +202,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		635D866B9D09F6717598ABF9 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */,
+			);
+			name = Windows;
+			path = src/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
+		6E5D78F485C711ACD9741822 /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				635D866B9D09F6717598ABF9 /* Windows */,
+			);
+			name = _platform;
+			path = src/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE01CABB2D041784008E0A1F /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				CEA1AE142B01670A005AC6CE /* Assets.xcassets */,
 				CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */,
+				CEA1AE142B01670A005AC6CE /* Assets.xcassets */,
 			);
 			name = Mac;
 			path = resources/Mac;
@@ -231,15 +235,18 @@
 			children = (
 				CE01CABB2D041784008E0A1F /* Mac */,
 			);
+			name = resources;
 			path = resources;
 			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6E992B01963D0015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				6E5D78F485C711ACD9741822 /* _platform */,
 				CEDDB09C2D1FCCA000EADB67 /* Core */,
 				CED4DDAB2D101DFB00BAE96F /* main.cpp */,
 			);
+			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -272,7 +279,7 @@
 				CE2B9A2B2B01681C00DE24E0 /* resources */,
 				CE4C6E992B01963D0015E51A /* src */,
 			);
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CEA1AE0F2B016708005AC6CE /* Products */ = {
 			isa = PBXGroup;
@@ -289,10 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				CEDDB09F2D1FCCA000EADB67 /* _platform */,
-				CEDDB0B12D1FCCA000EADB67 /* DynamicLibrary.h */,
-				CEDDB09E2D1FCCA000EADB67 /* MiscMacros.h */,
-				CEDDB09D2D1FCCA000EADB67 /* PlatformAbstraction.h */,
-				CEDDB0AF2D1FCCA000EADB67 /* PlatformHelpers.h */,
 				CEDDB0B02D1FCCA000EADB67 /* PlatformMisc.h */,
 			);
 			name = Core;
@@ -313,9 +316,6 @@
 		CEDDB0A02D1FCCA000EADB67 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				CEDDB0A32D1FCCA000EADB67 /* MacDynamicLibrary.cpp */,
-				CEDDB0A12D1FCCA000EADB67 /* MacDynamicLibrary.h */,
-				CEDDB0A42D1FCCA000EADB67 /* MacPlatformHelpers.h */,
 				CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */,
 				CEDDB0A52D1FCCA000EADB67 /* MacPlatformMisc.h */,
 			);
@@ -326,10 +326,6 @@
 		CEDDB0A62D1FCCA000EADB67 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
-				CEDDB0A92D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp */,
-				CEDDB0AB2D1FCCA000EADB67 /* WindowsDynamicLibrary.h */,
-				CEDDB0A72D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp */,
-				CEDDB0AC2D1FCCA000EADB67 /* WindowsPlatformHelpers.h */,
 				CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */,
 				CEDDB0A82D1FCCA000EADB67 /* WindowsPlatformMisc.h */,
 			);
@@ -340,7 +336,7 @@
 		CEDDB0AD2D1FCCA000EADB67 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				CEDDB0AE2D1FCCA000EADB67 /* BaseDynamicLibrary.h */,
+				9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */,
 			);
 			name = Base;
 			path = src/Core/_platform/Base;
@@ -475,10 +471,9 @@
 			files = (
 				CEDDB0B32D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDD12D1020D400BAE96F /* main.cpp in Sources */,
-				CEDDB0BB2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
-				CEDDB0B72D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
 				CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				CEDDB0BF2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
+				6649C4D16C7400BB343943F7 /* BasePlatformMisc.h in Sources */,
+				BD16A5C57E892258A66EA83E /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,10 +483,9 @@
 			files = (
 				CEDDB0B52D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDC72D1020D300BAE96F /* main.cpp in Sources */,
-				CEDDB0BD2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
-				CEDDB0B92D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
 				CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				CEDDB0C12D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
+				B08534C3FBC17B75D800BDE2 /* BasePlatformMisc.h in Sources */,
+				BB804F324C24828F895D9C36 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,10 +495,9 @@
 			files = (
 				CEDDB0B42D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */,
-				CEDDB0BC2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
-				CEDDB0B82D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
 				CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				CEDDB0C02D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
+				6B02E36F78201B4DAF447209 /* BasePlatformMisc.h in Sources */,
+				89659766E0DB625D13A2B640 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,10 +507,9 @@
 			files = (
 				CEDDB0B22D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */,
-				CEDDB0BA2D1FCCA000EADB67 /* WindowsPlatformHelpers.cpp in Sources */,
-				CEDDB0B62D1FCCA000EADB67 /* MacDynamicLibrary.cpp in Sources */,
 				CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				CEDDB0BE2D1FCCA000EADB67 /* WindowsDynamicLibrary.cpp in Sources */,
+				14636AA220BCC090ECF53EEE /* BasePlatformMisc.h in Sources */,
+				AA67B0CBC80417ACCAE7B7BD /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

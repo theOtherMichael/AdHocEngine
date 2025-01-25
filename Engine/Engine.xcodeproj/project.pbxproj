@@ -7,6 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0221FC7E13762403A8116672 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
+		0890BC5797D77E2D2AF79AF3 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		0B835018D39498AB6BFEF151 /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		0C1A40345630C10644DB7DE0 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */; };
+		0DB82B87D29113E8CC0BBF79 /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		11236E826FC2E860CE8549E6 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		12BA6B93305F0D5847091659 /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		133F055E8F7A368EE52F22DC /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		1656E136C8C1D35DE4A60B81 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		1C3AC1D57E0E1349399B7DB6 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
+		1CF66C91DD0C29CE0586A740 /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		1EFD0D253332D1DF52670AAD /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		201504787408F2AD15FB0B0F /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		212BCE146B45DDF293D02B03 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
+		215AEFA9CD836AAFDDA882EB /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		2998B6917801A6DB3D9B8700 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		3C272A5EB21016E9B64A2350 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
+		3E4B3978D567AEB037213195 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
+		3F5CE3FA47BFBEA90E3A9F5E /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		40F18DA894CE9E6670AAC283 /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		48AFD3ACF4D62B7FC7EBA560 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
+		4E341695022C2E5D426E5D2B /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		4E6CD616F18F8B8859BC3202 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		4F06889024D53B1F7F8A26E3 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		50D63B03B2AB0ECE9993EDDF /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		5209D1A90B8DFAD74EB374D7 /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		533BBED14149C3DBA1DFBC4D /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		56ADAC4C938CBCDBFA825E22 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */; };
+		62DD6C6F9524DC0E1D9B88F6 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		645126798C877C61EF91656E /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */; };
+		64E99E99D067E2EBE4B9321C /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		6681619184EAF22F5832A6B5 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
+		682DC67AC40F128D35650C5E /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		68616A035E5081D0EE21F5FE /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		6A747152A647F84013118D99 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		706EAFB5805BDF80FD5F3037 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		71BEAB9C9793248154CD1F2F /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		738894A50FD1DA8207785F0F /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		7461AF79B89FA9B9799F940D /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		751208F6FA169F6BE8691FB8 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		8633DFCB6ED2A951F42539DF /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
+		8B7822D87243517F6C48929A /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		8D93BB5A26DE6A408882DBA4 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		8FF71408C1433077DD912206 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
+		91AB3C6C13123CD9318DCAEA /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */; };
+		9592B2316FFE4D3B828938D0 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
+		9652B410B05B9FEF818B7E7F /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
+		9700433BFECD91BC05B5245F /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		991871A5987AE66183EAF09F /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		99E8FE87C0E96A2A9FE7C87B /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		9AF77ECD4EB166491E282811 /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		9C1FAE4B3B151BFF3055088B /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		9DE05AC0FEC6D364AC066AAD /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */; };
+		9FAA62505C357C2C201630EE /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		A1A3EEAB68489E23F2377DFC /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		A60292AA90C801F1BE4C32AB /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */; };
+		A6DEE2FEF356111B3F0711BD /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		AB147F8EAFC81870710E7392 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		AEC8870566FB4631B83A0B1E /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		B1CE74CA703E918FF92A6157 /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		B281A5FD3E988F6031CF313F /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		B35FF32C5EAF46655C94EB68 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		B50CCAA5F73521C089662E8E /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		B7E50F09C9F72D6884FEA46A /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		BBC50569065B4D8FFE666EE3 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		C438BB27CEC80889370F3F65 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		CB668F9A1034B4986CCB1FC5 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
 		CE0D0DFD2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
 		CE0D0DFE2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
 		CE0D0DFF2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
@@ -139,9 +206,29 @@
 		CEDDB0FB2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
 		CEDDB0FC2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
 		CEDDB0FD2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
+		CF86CA69327FBA8718868591 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		D045EF5430862A14A51ABD21 /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		D1EADCB719FDAA14DC03840B /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		DA52C0940A220EEDED2EDDB2 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		DC9397115F15FB350BEA0269 /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		DF70935DBA79CC17A5CAB47C /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		DFAB34AEEF0B114D88F056F7 /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		E68CE0C8DE050A331CE2E342 /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		EB226059DE08C5B7FE365EC3 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		ED6628C49A2B0FCEF551A2F2 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		EE2E7632ED37C5D1173F90AF /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WindowsBacktraceSymbolHandler.h; path = include/Engine/Core/_platform/Windows/WindowsBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
+		40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BacktraceSymbolHandler.h; path = include/Engine/Core/BacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
+		503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseDynamicLibrary.h; path = include/Engine/Core/_platform/Base/BaseDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DllMain.cpp; path = src/_platform/Windows/DllMain.cpp; sourceTree = SOURCE_ROOT; };
+		824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsBacktraceSymbolHandler.cpp; path = src/Core/_platform/Windows/WindowsBacktraceSymbolHandler.cpp; sourceTree = SOURCE_ROOT; };
+		8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsDynamicLibrary.cpp; path = src/Core/_platform/Windows/WindowsDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MacDynamicLibrary.cpp; path = src/Core/_platform/Mac/MacDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		B461EBCC16E4DF7323256211 /* DynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DynamicLibrary.h; path = include/Engine/Core/DynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MacBacktraceSymbolHandler.h; path = include/Engine/Core/_platform/Mac/MacBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
 		CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Assertions.cpp; path = src/Core/Assertions.cpp; sourceTree = SOURCE_ROOT; };
 		CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = src/Core/Console.cpp; sourceTree = SOURCE_ROOT; };
 		CE0D0E1A2D325CA200BC9EB1 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Console.h; path = include/Engine/Core/Console.h; sourceTree = SOURCE_ROOT; };
@@ -177,6 +264,10 @@
 		CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsMisc.cpp; path = src/Core/_platform/Windows/WindowsMisc.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformData.cpp; path = src/Core/_platform/Windows/WindowsPlatformData.cpp; sourceTree = SOURCE_ROOT; };
+		E71D733E863B862252F24D52 /* MacDynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MacDynamicLibrary.h; path = include/Engine/Core/_platform/Mac/MacDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
+		F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseBacktraceSymbolHandler.h; path = include/Engine/Core/_platform/Base/BaseBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
+		FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WindowsDynamicLibrary.h; path = include/Engine/Core/_platform/Windows/WindowsDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +328,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34B8943EB0C0E2DD6C4462B9 /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				771FBDA37E3571BD419B7B52 /* Windows */,
+			);
+			name = _platform;
+			path = src/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
+		662E211BA2A7C61D7FA9672B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */,
+				503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */,
+			);
+			name = Base;
+			path = include/Engine/Core/_platform/Base;
+			sourceTree = SOURCE_ROOT;
+		};
+		771FBDA37E3571BD419B7B52 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */,
+				F5D384739AD71A5300FE6EE2 /* MimallocNewDeleteOverride.cpp */,
+			);
+			name = Windows;
+			path = src/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE0D0E182D325CA200BC9EB1 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +371,9 @@
 			children = (
 				CE0D0E1E2D325CA200BC9EB1 /* _platform */,
 				CE0D0E1D2D325CA200BC9EB1 /* Assertions.h */,
+				40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */,
 				CE0D0E1A2D325CA200BC9EB1 /* Console.h */,
+				B461EBCC16E4DF7323256211 /* DynamicLibrary.h */,
 				CE0D0E272D325CA200BC9EB1 /* Misc.h */,
 				CE0D0E1C2D325CA200BC9EB1 /* MiscMacros.h */,
 				CE0D0E1B2D325CA200BC9EB1 /* PlatformAbstraction.h */,
@@ -266,6 +388,7 @@
 		CE0D0E1E2D325CA200BC9EB1 /* _platform */ = {
 			isa = PBXGroup;
 			children = (
+				662E211BA2A7C61D7FA9672B /* Base */,
 				CE0D0E1F2D325CA200BC9EB1 /* Mac */,
 				CE0D0E232D325CA200BC9EB1 /* Windows */,
 			);
@@ -276,6 +399,8 @@
 		CE0D0E1F2D325CA200BC9EB1 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */,
+				E71D733E863B862252F24D52 /* MacDynamicLibrary.h */,
 				CE0D0E202D325CA200BC9EB1 /* MacMisc.h */,
 				CE0D0E222D325CA200BC9EB1 /* MacPlatformData.h */,
 				CE0D0E212D325CA200BC9EB1 /* MacPlatformHelpers.h */,
@@ -287,6 +412,8 @@
 		CE0D0E232D325CA200BC9EB1 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */,
+				FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */,
 				CE0D0E262D325CA200BC9EB1 /* WindowsMisc.h */,
 				CE0D0E242D325CA200BC9EB1 /* WindowsPlatformData.h */,
 				CE0D0E252D325CA200BC9EB1 /* WindowsPlatformHelpers.h */,
@@ -304,7 +431,7 @@
 				CE4C6EB42B0196A60015E51A /* include */,
 				CE4C6EBD2B0196A60015E51A /* src */,
 			);
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CE2B9A462B018B8100DE24E0 /* Products */ = {
 			isa = PBXGroup;
@@ -324,14 +451,17 @@
 			children = (
 				CE0D0E182D325CA200BC9EB1 /* Engine */,
 			);
+			name = include;
 			path = include;
 			sourceTree = SOURCE_ROOT;
 		};
 		CE4C6EBD2B0196A60015E51A /* src */ = {
 			isa = PBXGroup;
 			children = (
+				34B8943EB0C0E2DD6C4462B9 /* _platform */,
 				CE4C6EBE2B0196A60015E51A /* Core */,
 			);
+			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -374,6 +504,7 @@
 		CEDDB0E02D1FCE0D00EADB67 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
+				96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */,
 				CEDDB0E12D1FCE0D00EADB67 /* MacMisc.cpp */,
 			);
 			name = Mac;
@@ -383,6 +514,8 @@
 		CEDDB0E22D1FCE0D00EADB67 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */,
+				8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */,
 				CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */,
 				CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */,
 				CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */,
@@ -675,6 +808,19 @@
 				CE0D0DFD2D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0F82D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E62D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
+				215AEFA9CD836AAFDDA882EB /* MacDynamicLibrary.cpp in Sources */,
+				0221FC7E13762403A8116672 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				8B7822D87243517F6C48929A /* WindowsDynamicLibrary.cpp in Sources */,
+				751208F6FA169F6BE8691FB8 /* DllMain.cpp in Sources */,
+				9DE05AC0FEC6D364AC066AAD /* MimallocNewDeleteOverride.cpp in Sources */,
+				3F5CE3FA47BFBEA90E3A9F5E /* BacktraceSymbolHandler.h in Sources */,
+				B35FF32C5EAF46655C94EB68 /* DynamicLibrary.h in Sources */,
+				D045EF5430862A14A51ABD21 /* BaseBacktraceSymbolHandler.h in Sources */,
+				1CF66C91DD0C29CE0586A740 /* BaseDynamicLibrary.h in Sources */,
+				133F055E8F7A368EE52F22DC /* MacBacktraceSymbolHandler.h in Sources */,
+				8FF71408C1433077DD912206 /* MacDynamicLibrary.h in Sources */,
+				0B835018D39498AB6BFEF151 /* WindowsBacktraceSymbolHandler.h in Sources */,
+				EB226059DE08C5B7FE365EC3 /* WindowsDynamicLibrary.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,6 +834,19 @@
 				CE0D0E002D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FB2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E92D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
+				62DD6C6F9524DC0E1D9B88F6 /* MacDynamicLibrary.cpp in Sources */,
+				9652B410B05B9FEF818B7E7F /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				682DC67AC40F128D35650C5E /* WindowsDynamicLibrary.cpp in Sources */,
+				4E341695022C2E5D426E5D2B /* DllMain.cpp in Sources */,
+				0C1A40345630C10644DB7DE0 /* MimallocNewDeleteOverride.cpp in Sources */,
+				99E8FE87C0E96A2A9FE7C87B /* BacktraceSymbolHandler.h in Sources */,
+				50D63B03B2AB0ECE9993EDDF /* DynamicLibrary.h in Sources */,
+				9C1FAE4B3B151BFF3055088B /* BaseBacktraceSymbolHandler.h in Sources */,
+				533BBED14149C3DBA1DFBC4D /* BaseDynamicLibrary.h in Sources */,
+				201504787408F2AD15FB0B0F /* MacBacktraceSymbolHandler.h in Sources */,
+				1C3AC1D57E0E1349399B7DB6 /* MacDynamicLibrary.h in Sources */,
+				9FAA62505C357C2C201630EE /* WindowsBacktraceSymbolHandler.h in Sources */,
+				AB147F8EAFC81870710E7392 /* WindowsDynamicLibrary.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +860,19 @@
 				CE0D0E022D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FD2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0EB2D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
+				9700433BFECD91BC05B5245F /* MacDynamicLibrary.cpp in Sources */,
+				8633DFCB6ED2A951F42539DF /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				C438BB27CEC80889370F3F65 /* WindowsDynamicLibrary.cpp in Sources */,
+				2998B6917801A6DB3D9B8700 /* DllMain.cpp in Sources */,
+				91AB3C6C13123CD9318DCAEA /* MimallocNewDeleteOverride.cpp in Sources */,
+				B7E50F09C9F72D6884FEA46A /* BacktraceSymbolHandler.h in Sources */,
+				11236E826FC2E860CE8549E6 /* DynamicLibrary.h in Sources */,
+				DC9397115F15FB350BEA0269 /* BaseBacktraceSymbolHandler.h in Sources */,
+				1EFD0D253332D1DF52670AAD /* BaseDynamicLibrary.h in Sources */,
+				0DB82B87D29113E8CC0BBF79 /* MacBacktraceSymbolHandler.h in Sources */,
+				6681619184EAF22F5832A6B5 /* MacDynamicLibrary.h in Sources */,
+				40F18DA894CE9E6670AAC283 /* WindowsBacktraceSymbolHandler.h in Sources */,
+				0890BC5797D77E2D2AF79AF3 /* WindowsDynamicLibrary.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,6 +886,19 @@
 				CE0D0DFE2D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0F92D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E72D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
+				68616A035E5081D0EE21F5FE /* MacDynamicLibrary.cpp in Sources */,
+				3C272A5EB21016E9B64A2350 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				8D93BB5A26DE6A408882DBA4 /* WindowsDynamicLibrary.cpp in Sources */,
+				DF70935DBA79CC17A5CAB47C /* DllMain.cpp in Sources */,
+				A60292AA90C801F1BE4C32AB /* MimallocNewDeleteOverride.cpp in Sources */,
+				B281A5FD3E988F6031CF313F /* BacktraceSymbolHandler.h in Sources */,
+				DA52C0940A220EEDED2EDDB2 /* DynamicLibrary.h in Sources */,
+				E68CE0C8DE050A331CE2E342 /* BaseBacktraceSymbolHandler.h in Sources */,
+				12BA6B93305F0D5847091659 /* BaseDynamicLibrary.h in Sources */,
+				A6DEE2FEF356111B3F0711BD /* MacBacktraceSymbolHandler.h in Sources */,
+				3E4B3978D567AEB037213195 /* MacDynamicLibrary.h in Sources */,
+				AEC8870566FB4631B83A0B1E /* WindowsBacktraceSymbolHandler.h in Sources */,
+				1656E136C8C1D35DE4A60B81 /* WindowsDynamicLibrary.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +912,19 @@
 				CE0D0E012D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FC2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0EA2D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
+				BBC50569065B4D8FFE666EE3 /* MacDynamicLibrary.cpp in Sources */,
+				CB668F9A1034B4986CCB1FC5 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				EE2E7632ED37C5D1173F90AF /* WindowsDynamicLibrary.cpp in Sources */,
+				4E6CD616F18F8B8859BC3202 /* DllMain.cpp in Sources */,
+				56ADAC4C938CBCDBFA825E22 /* MimallocNewDeleteOverride.cpp in Sources */,
+				B1CE74CA703E918FF92A6157 /* BacktraceSymbolHandler.h in Sources */,
+				CF86CA69327FBA8718868591 /* DynamicLibrary.h in Sources */,
+				B50CCAA5F73521C089662E8E /* BaseBacktraceSymbolHandler.h in Sources */,
+				64E99E99D067E2EBE4B9321C /* BaseDynamicLibrary.h in Sources */,
+				9AF77ECD4EB166491E282811 /* MacBacktraceSymbolHandler.h in Sources */,
+				212BCE146B45DDF293D02B03 /* MacDynamicLibrary.h in Sources */,
+				738894A50FD1DA8207785F0F /* WindowsBacktraceSymbolHandler.h in Sources */,
+				ED6628C49A2B0FCEF551A2F2 /* WindowsDynamicLibrary.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,6 +938,19 @@
 				CE0D0DFF2D325C1200BC9EB1 /* Assertions.cpp in Sources */,
 				CEDDB0FA2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */,
 				CEDDB0E82D1FCE0D00EADB67 /* MacMisc.cpp in Sources */,
+				706EAFB5805BDF80FD5F3037 /* MacDynamicLibrary.cpp in Sources */,
+				48AFD3ACF4D62B7FC7EBA560 /* WindowsBacktraceSymbolHandler.cpp in Sources */,
+				7461AF79B89FA9B9799F940D /* WindowsDynamicLibrary.cpp in Sources */,
+				4F06889024D53B1F7F8A26E3 /* DllMain.cpp in Sources */,
+				645126798C877C61EF91656E /* MimallocNewDeleteOverride.cpp in Sources */,
+				DFAB34AEEF0B114D88F056F7 /* BacktraceSymbolHandler.h in Sources */,
+				6A747152A647F84013118D99 /* DynamicLibrary.h in Sources */,
+				A1A3EEAB68489E23F2377DFC /* BaseBacktraceSymbolHandler.h in Sources */,
+				5209D1A90B8DFAD74EB374D7 /* BaseDynamicLibrary.h in Sources */,
+				991871A5987AE66183EAF09F /* MacBacktraceSymbolHandler.h in Sources */,
+				9592B2316FFE4D3B828938D0 /* MacDynamicLibrary.h in Sources */,
+				71BEAB9C9793248154CD1F2F /* WindowsBacktraceSymbolHandler.h in Sources */,
+				D1EADCB719FDAA14DC03840B /* WindowsDynamicLibrary.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
