@@ -68,7 +68,7 @@ def add_missing_file_references(project, project_files)
   puts '  Adding missing file references...'
 
   project_file_references = project.files.select do |path|
-    path.path.end_with?('.h', '.c', '.cpp', 'm', 'mm')
+    path.path.start_with?('src/', 'include/') && path.path.end_with?('.h', '.c', '.cpp', 'm', 'mm')
   end
 
   project_files.each do |project_file|
@@ -82,7 +82,7 @@ def remove_broken_file_references(project, project_files)
   puts '  Removing broken file references...'
 
   project_file_references = project.files.select do |path|
-    path.path.end_with?('.h', '.c', '.cpp', 'm', 'mm')
+    path.path.start_with?('src/', 'include/') && path.path.end_with?('.h', '.c', '.cpp', 'm', 'mm')
   end
 
   project_file_references.each do |project_file_reference|
