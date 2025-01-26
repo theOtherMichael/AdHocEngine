@@ -8,35 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		14636AA220BCC090ECF53EEE /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
+		30BF7C1635D5EE394C6F3A57 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
+		38F742AD55168D4F59E564D4 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
+		46C309C8038E309170FDF5B6 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 		6649C4D16C7400BB343943F7 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
 		6B02E36F78201B4DAF447209 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
-		89659766E0DB625D13A2B640 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
-		AA67B0CBC80417ACCAE7B7BD /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
 		B08534C3FBC17B75D800BDE2 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
-		BB804F324C24828F895D9C36 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
-		BD16A5C57E892258A66EA83E /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */; };
 		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CE3D19442D23A73E00F47CDF /* libEngineStaticDev.a in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE3D19432D23A73E00F47CDF /* libEngineStaticDev.a */; };
-		CE3D19472D23A83700F47CDF /* libEngineStatic.a in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD282CFC4443002F900C /* libEngineStatic.a */; };
-		CE3D19482D23A84000F47CDF /* libEngineStaticD.a in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */; };
 		CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CE46BD1D2CFC4260002F900C /* libEngine.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD1C2CFC4260002F900C /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD1F2CFC42BB002F900C /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD222CFC4354002F900C /* libEngineD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD212CFC4354002F900C /* libEngineD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD272CFC4418002F900C /* libEditorD.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD262CFC4418002F900C /* libEditorD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD292CFC4443002F900C /* libEngineStatic.a in Copy Developer Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD282CFC4443002F900C /* libEngineStatic.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD2B2CFC4471002F900C /* libEngineStaticD.a in Copy Developer Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD2E2CFC4523002F900C /* libfmt.11.0.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD2F2CFC4523002F900C /* libglfw.3.4.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD322CFC454B002F900C /* libfmtd.11.0.2.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD332CFC454B002F900C /* libglfw.3.4.dylib in Copy Debug Libraries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE5AD0562D002A3F006E4AE8 /* libEditorD.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD262CFC4418002F900C /* libEditorD.dylib */; };
-		CE5AD0572D002A3F006E4AE8 /* libEngineD.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD212CFC4354002F900C /* libEngineD.dylib */; };
-		CE5AD05B2D002BAB006E4AE8 /* libEditor.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD1F2CFC42BB002F900C /* libEditor.dylib */; };
-		CE5AD05C2D002BAB006E4AE8 /* libEngine.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE46BD1C2CFC4260002F900C /* libEngine.dylib */; };
-		CE5AD05E2D002BF0006E4AE8 /* libEngineDev.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */; };
-		CE5AD0602D002BFC006E4AE8 /* libEditorDev.dylib in Copy Modules to Reload Cache */ = {isa = PBXBuildFile; fileRef = CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */; };
+		CE46BD2E2CFC4523002F900C /* libfmt.11.0.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD2F2CFC4523002F900C /* libglfw.3.4.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD322CFC454B002F900C /* libfmtd.11.0.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE46BD332CFC454B002F900C /* libglfw.3.4.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE9743032D457A0800C7D0F7 /* LauncherD in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE0684C02CF064F200031F0A /* LauncherD */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE9743082D457B8E00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; };
+		CE97430A2D457B8E00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE97430B2D457C0200C7D0F7 /* libmimalloc.2.1.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE97430D2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE9743122D457CE400C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; };
+		CE9743132D457CE400C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE9743182D457D2D00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; };
+		CE9743192D457D2D00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE9743202D457E9E00C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib */; };
+		CE9743212D45818000C7D0F7 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */; };
+		CE9743232D4581E800C7D0F7 /* libEditor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743222D4581E800C7D0F7 /* libEditor.dylib */; };
+		CE9743252D4581E900C7D0F7 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743242D4581E900C7D0F7 /* libEngine.dylib */; };
+		CE9743262D4581F000C7D0F7 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743242D4581E900C7D0F7 /* libEngine.dylib */; };
+		CE9743272D4581F300C7D0F7 /* libEditor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743222D4581E800C7D0F7 /* libEditor.dylib */; };
+		CE9743282D45840100C7D0F7 /* libEditor.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE9743222D4581E800C7D0F7 /* libEditor.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE9743292D45840100C7D0F7 /* libEngine.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE9743242D4581E900C7D0F7 /* libEngine.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE97432B2D45850100C7D0F7 /* libEditorDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */; };
+		CE97432D2D45850100C7D0F7 /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */; };
+		CE97432F2D45852500C7D0F7 /* libEditorD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97432E2D45852500C7D0F7 /* libEditorD.dylib */; };
+		CE9743312D45852500C7D0F7 /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743302D45852500C7D0F7 /* libEngineD.dylib */; };
+		CE9743322D45854800C7D0F7 /* libEditorD.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE97432E2D45852500C7D0F7 /* libEditorD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE9743332D45854800C7D0F7 /* libEngineD.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE9743302D45852500C7D0F7 /* libEngineD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE97433A2D4589DB00C7D0F7 /* libEngineStaticD.a in Copy Developer Binaries */ = {isa = PBXBuildFile; fileRef = CE9743382D4589CB00C7D0F7 /* libEngineStaticD.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CE97433B2D4589E400C7D0F7 /* libEngineStatic.a in Copy Developer Binaries */ = {isa = PBXBuildFile; fileRef = CE9743342D4589B500C7D0F7 /* libEngineStatic.a */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
@@ -51,109 +60,76 @@
 		CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
 		CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
 		CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
+		E50EA45F27CD2F678F73C0DF /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CE3370252B131E170020E817 /* Copy Debug Libraries */ = {
+		CE3370252B131E170020E817 /* Copy Debug Binaries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = debug;
 			dstSubfolderSpec = 10;
 			files = (
-				CE46BD322CFC454B002F900C /* libfmtd.11.0.2.dylib in Copy Debug Libraries */,
-				CE46BD332CFC454B002F900C /* libglfw.3.4.dylib in Copy Debug Libraries */,
-				CE46BD222CFC4354002F900C /* libEngineD.dylib in Copy Debug Libraries */,
-				CE46BD272CFC4418002F900C /* libEditorD.dylib in Copy Debug Libraries */,
+				CE97430D2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib in Copy Debug Binaries */,
+				CE46BD322CFC454B002F900C /* libfmtd.11.0.2.dylib in Copy Debug Binaries */,
+				CE46BD332CFC454B002F900C /* libglfw.3.4.dylib in Copy Debug Binaries */,
+				CE9743332D45854800C7D0F7 /* libEngineD.dylib in Copy Debug Binaries */,
+				CE9743322D45854800C7D0F7 /* libEditorD.dylib in Copy Debug Binaries */,
+				CE9743032D457A0800C7D0F7 /* LauncherD in Copy Debug Binaries */,
 			);
-			name = "Copy Debug Libraries";
+			name = "Copy Debug Binaries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE4C6EF22B01AFF30015E51A /* Copy Libraries */ = {
+		CE4C6EF22B01AFF30015E51A /* Copy Release Binaries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE46BD2E2CFC4523002F900C /* libfmt.11.0.2.dylib in Copy Libraries */,
-				CE46BD2F2CFC4523002F900C /* libglfw.3.4.dylib in Copy Libraries */,
-				CE46BD1D2CFC4260002F900C /* libEngine.dylib in Copy Libraries */,
-				CE46BD202CFC42BB002F900C /* libEditor.dylib in Copy Libraries */,
+				CE97430B2D457C0200C7D0F7 /* libmimalloc.2.1.dylib in Copy Release Binaries */,
+				CE46BD2E2CFC4523002F900C /* libfmt.11.0.2.dylib in Copy Release Binaries */,
+				CE46BD2F2CFC4523002F900C /* libglfw.3.4.dylib in Copy Release Binaries */,
+				CE9743282D45840100C7D0F7 /* libEditor.dylib in Copy Release Binaries */,
+				CE9743292D45840100C7D0F7 /* libEngine.dylib in Copy Release Binaries */,
 			);
-			name = "Copy Libraries";
+			name = "Copy Release Binaries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE5AD0552D002A07006E4AE8 /* Copy Modules to Reload Cache */ = {
+		CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Binaries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = reload_cache;
-			dstSubfolderSpec = 16;
-			files = (
-				CE3D19482D23A84000F47CDF /* libEngineStaticD.a in Copy Modules to Reload Cache */,
-				CE5AD0562D002A3F006E4AE8 /* libEditorD.dylib in Copy Modules to Reload Cache */,
-				CE5AD0572D002A3F006E4AE8 /* libEngineD.dylib in Copy Modules to Reload Cache */,
-			);
-			name = "Copy Modules to Reload Cache";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE5AD0592D002B5B006E4AE8 /* Copy Modules to Reload Cache */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = reload_cache;
-			dstSubfolderSpec = 16;
-			files = (
-				CE3D19442D23A73E00F47CDF /* libEngineStaticDev.a in Copy Modules to Reload Cache */,
-				CE5AD05E2D002BF0006E4AE8 /* libEngineDev.dylib in Copy Modules to Reload Cache */,
-				CE5AD0602D002BFC006E4AE8 /* libEditorDev.dylib in Copy Modules to Reload Cache */,
-			);
-			name = "Copy Modules to Reload Cache";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE5AD05A2D002B97006E4AE8 /* Copy Modules to Reload Cache */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = reload_cache;
-			dstSubfolderSpec = 16;
-			files = (
-				CE3D19472D23A83700F47CDF /* libEngineStatic.a in Copy Modules to Reload Cache */,
-				CE5AD05B2D002BAB006E4AE8 /* libEditor.dylib in Copy Modules to Reload Cache */,
-				CE5AD05C2D002BAB006E4AE8 /* libEngine.dylib in Copy Modules to Reload Cache */,
-			);
-			name = "Copy Modules to Reload Cache";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Libraries */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = developer/engine/lib;
+			dstPath = developer/lib;
 			dstSubfolderSpec = 7;
 			files = (
-				CE46BD292CFC4443002F900C /* libEngineStatic.a in Copy Developer Libraries */,
-				CE46BD2B2CFC4471002F900C /* libEngineStaticD.a in Copy Developer Libraries */,
+				CE97433A2D4589DB00C7D0F7 /* libEngineStaticD.a in Copy Developer Binaries */,
+				CE97433B2D4589E400C7D0F7 /* libEngineStatic.a in Copy Developer Binaries */,
 			);
-			name = "Copy Developer Libraries";
+			name = "Copy Developer Binaries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasePlatformMisc.h; path = src/Core/_platform/Base/BasePlatformMisc.h; sourceTree = SOURCE_ROOT; };
-		BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
+		CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3D19432D23A73E00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Engine/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
 		CE46BD152CFC33DC002F900C /* LauncherDev */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherDev; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD1C2CFC4260002F900C /* libEngine.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD1F2CFC42BB002F900C /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../build/Editor/libEditor.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD212CFC4354002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD262CFC4418002F900C /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../build/Editor/libEditorD.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD282CFC4443002F900C /* libEngineStatic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStatic.a; path = ../build/Engine/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
-		CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Engine/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
 		CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
-		CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
-		CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Editor/libEditorDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE9743222D4581E800C7D0F7 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../build/Release/libEditor.dylib; sourceTree = SOURCE_ROOT; };
+		CE9743242D4581E900C7D0F7 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Release/libEngine.dylib; sourceTree = SOURCE_ROOT; };
+		CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Dev/libEditorDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Dev/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE97432E2D45852500C7D0F7 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../build/Debug/libEditorD.dylib; sourceTree = SOURCE_ROOT; };
+		CE9743302D45852500C7D0F7 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Debug/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
+		CE9743342D4589B500C7D0F7 /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../build/Release/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
+		CE9743362D4589C200C7D0F7 /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Dev/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
+		CE9743382D4589CB00C7D0F7 /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Debug/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
 		CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad Hoc Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
@@ -171,6 +147,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9743132D457CE400C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
+				CE9743122D457CE400C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */,
+				CE9743252D4581E900C7D0F7 /* libEngine.dylib in Frameworks */,
+				CE9743232D4581E800C7D0F7 /* libEditor.dylib in Frameworks */,
 				CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +159,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9743202D457E9E00C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */,
+				CE9743212D45818000C7D0F7 /* libfmtd.11.0.2.dylib in Frameworks */,
+				CE9743312D45852500C7D0F7 /* libEngineD.dylib in Frameworks */,
+				CE97432F2D45852500C7D0F7 /* libEditorD.dylib in Frameworks */,
 				CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +171,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9743192D457D2D00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
+				CE9743182D457D2D00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */,
+				CE97432D2D45850100C7D0F7 /* libEngineDev.dylib in Frameworks */,
+				CE97432B2D45850100C7D0F7 /* libEditorDev.dylib in Frameworks */,
 				CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,6 +183,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE97430A2D457B8E00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
+				CE9743082D457B8E00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */,
+				CE9743262D4581F000C7D0F7 /* libEngine.dylib in Frameworks */,
+				CE9743272D4581F300C7D0F7 /* libEditor.dylib in Frameworks */,
 				CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,7 +197,7 @@
 		635D866B9D09F6717598ABF9 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
-				BB9B139C4E4771EF4F9FFD4B /* MimallocNewDeleteOverride.cpp */,
+				CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */,
 			);
 			name = Windows;
 			path = src/_platform/Windows;
@@ -253,20 +245,22 @@
 		CE4C6EE62B01AE310015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CECE76422B110ACD0098AAEB /* AppKit.framework */,
-				CE46BD1F2CFC42BB002F900C /* libEditor.dylib */,
-				CE46BD262CFC4418002F900C /* libEditorD.dylib */,
-				CE5AD05F2D002BFC006E4AE8 /* libEditorDev.dylib */,
-				CE46BD1C2CFC4260002F900C /* libEngine.dylib */,
-				CE46BD212CFC4354002F900C /* libEngineD.dylib */,
-				CE5AD05D2D002BF0006E4AE8 /* libEngineDev.dylib */,
-				CE46BD282CFC4443002F900C /* libEngineStatic.a */,
-				CE46BD2A2CFC4470002F900C /* libEngineStaticD.a */,
-				CE3D19432D23A73E00F47CDF /* libEngineStaticDev.a */,
+				CE9743342D4589B500C7D0F7 /* libEngineStatic.a */,
+				CE9743382D4589CB00C7D0F7 /* libEngineStaticD.a */,
+				CE9743362D4589C200C7D0F7 /* libEngineStaticDev.a */,
+				CE9743222D4581E800C7D0F7 /* libEditor.dylib */,
+				CE97432E2D45852500C7D0F7 /* libEditorD.dylib */,
+				CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */,
+				CE9743242D4581E900C7D0F7 /* libEngine.dylib */,
+				CE9743302D45852500C7D0F7 /* libEngineD.dylib */,
+				CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */,
 				CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */,
 				CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */,
 				CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */,
 				CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */,
+				CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib */,
+				CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */,
+				CECE76422B110ACD0098AAEB /* AppKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -351,7 +345,6 @@
 			buildPhases = (
 				CE0684942CEF1CB800031F0A /* Sources */,
 				CE0684952CEF1CB800031F0A /* Frameworks */,
-				CE5AD05A2D002B97006E4AE8 /* Copy Modules to Reload Cache */,
 			);
 			buildRules = (
 			);
@@ -368,7 +361,6 @@
 			buildPhases = (
 				CE0684B02CF064F200031F0A /* Sources */,
 				CE0684B52CF064F200031F0A /* Frameworks */,
-				CE5AD0552D002A07006E4AE8 /* Copy Modules to Reload Cache */,
 			);
 			buildRules = (
 			);
@@ -385,7 +377,6 @@
 			buildPhases = (
 				CE46BD0A2CFC33DC002F900C /* Sources */,
 				CE46BD0F2CFC33DC002F900C /* Frameworks */,
-				CE5AD0592D002B5B006E4AE8 /* Copy Modules to Reload Cache */,
 			);
 			buildRules = (
 			);
@@ -402,9 +393,9 @@
 			buildPhases = (
 				CEA1AE0A2B016708005AC6CE /* Sources */,
 				CECE76412B110A8A0098AAEB /* Frameworks */,
-				CE4C6EF22B01AFF30015E51A /* Copy Libraries */,
-				CE3370252B131E170020E817 /* Copy Debug Libraries */,
-				CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Libraries */,
+				CE4C6EF22B01AFF30015E51A /* Copy Release Binaries */,
+				CE3370252B131E170020E817 /* Copy Debug Binaries */,
+				CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Binaries */,
 				CEA1AE0C2B016708005AC6CE /* Resources */,
 			);
 			buildRules = (
@@ -445,10 +436,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CEA1AE0D2B016708005AC6CE /* Ad Hoc Editor */,
-				CE0684972CEF1CB800031F0A /* Launcher */,
-				CE46BD092CFC33DC002F900C /* LauncherDev */,
 				CE0684AF2CF064F200031F0A /* LauncherD */,
+				CE46BD092CFC33DC002F900C /* LauncherDev */,
+				CE0684972CEF1CB800031F0A /* Launcher */,
+				CEA1AE0D2B016708005AC6CE /* Ad Hoc Editor */,
 			);
 		};
 /* End PBXProject section */
@@ -473,7 +464,7 @@
 				CED4DDD12D1020D400BAE96F /* main.cpp in Sources */,
 				CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
 				6649C4D16C7400BB343943F7 /* BasePlatformMisc.h in Sources */,
-				BD16A5C57E892258A66EA83E /* MimallocNewDeleteOverride.cpp in Sources */,
+				E50EA45F27CD2F678F73C0DF /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +476,7 @@
 				CED4DDC72D1020D300BAE96F /* main.cpp in Sources */,
 				CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
 				B08534C3FBC17B75D800BDE2 /* BasePlatformMisc.h in Sources */,
-				BB804F324C24828F895D9C36 /* MimallocNewDeleteOverride.cpp in Sources */,
+				46C309C8038E309170FDF5B6 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +488,7 @@
 				CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */,
 				CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
 				6B02E36F78201B4DAF447209 /* BasePlatformMisc.h in Sources */,
-				89659766E0DB625D13A2B640 /* MimallocNewDeleteOverride.cpp in Sources */,
+				30BF7C1635D5EE394C6F3A57 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,7 +500,7 @@
 				CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */,
 				CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
 				14636AA220BCC090ECF53EEE /* BasePlatformMisc.h in Sources */,
-				AA67B0CBC80417ACCAE7B7BD /* MimallocNewDeleteOverride.cpp in Sources */,
+				38F742AD55168D4F59E564D4 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,10 +510,19 @@
 		CE06849C2CEF1CB800031F0A /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,10 +532,19 @@
 		CE06849D2CEF1CB800031F0A /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,13 +554,22 @@
 		CE0684BD2CF064F200031F0A /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ADHOC_DEBUG,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -561,13 +579,22 @@
 		CE0684BE2CF064F200031F0A /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
 				DEVELOPMENT_TEAM = "";
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ADHOC_DEBUG,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -577,10 +604,19 @@
 		CE46BD132CFC33DC002F900C /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,10 +626,19 @@
 		CE46BD142CFC33DC002F900C /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
 				DEVELOPMENT_TEAM = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
+				);
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -633,7 +678,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = resources/Mac/AdHocEngine.entitlements;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Launcher";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -645,8 +689,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ADHOC_INTERNAL,
-					ADHOC_MACOS,
+					"ADHOC_INTERNAL=1",
+					"ADHOC_MACOS=1",
+					"ADHOC_WINDOWS=0",
+					"ADHOC_EDITOR=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -658,6 +704,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -683,10 +732,18 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -725,7 +782,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = resources/Mac/AdHocEngine.entitlements;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Launcher";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Launcher";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
@@ -737,8 +793,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ADHOC_INTERNAL,
-					ADHOC_MACOS,
+					"ADHOC_INTERNAL=1",
+					"ADHOC_MACOS=1",
+					"ADHOC_WINDOWS=0",
+					"ADHOC_EDITOR=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -750,6 +808,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -775,10 +836,18 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

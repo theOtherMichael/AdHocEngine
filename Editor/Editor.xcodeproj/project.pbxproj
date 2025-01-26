@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0199E0EB46282AAF5304DED2 /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
-		11E61B4295DB7A84EC213515 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */; };
 		1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
+		2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
 		32F38ACF158402CB6637F498 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
 		35B30732BD08EFFCDED96ADF /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
 		3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
@@ -18,8 +18,7 @@
 		6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
 		6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
 		783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
-		8F3A65F02F969811E5EC75E3 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */; };
-		99F4E6E79DDB745F635A3D28 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */; };
+		96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
 		A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
 		B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
 		B6A71A503DF87EB57E164FFC /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
@@ -32,6 +31,9 @@
 		CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD162CFC3F45002F900C /* libEngine.dylib */; };
 		CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD182CFC3F53002F900C /* libEngineDev.dylib */; };
 		CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */; };
+		CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */; };
+		CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
 		CED4DDBD2D101ED100BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
 		CED4DDBF2D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
 		CED4DDC12D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
@@ -41,6 +43,7 @@
 		CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
 		DA0609722BD72AF310CEDC66 /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
 		DCFF2CA9339ABB2A17D719C3 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
+		DF4390B90BB7AE79467DF845 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
 		E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
 		E2369DD0E69988C9B80F193E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
 		F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
@@ -48,10 +51,43 @@
 		FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9743512D45BF8000C7D0F7 /* Copy Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Copy Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9743522D45BF9E00C7D0F7 /* Copy Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9743532D45BFAE00C7D0F7 /* Copy Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			name = "Copy Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorEntryPoint.cpp; path = src/EditorEntryPoint.cpp; sourceTree = SOURCE_ROOT; };
 		482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorConfigurationMode.h; path = include/Editor/Core/EditorConfigurationMode.h; sourceTree = SOURCE_ROOT; };
-		569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorEntryPoint.h; path = include/Editor/Core/Internal/EditorEntryPoint.h; sourceTree = SOURCE_ROOT; };
 		5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorState.h; path = include/Editor/Core/EditorState.h; sourceTree = SOURCE_ROOT; };
 		694C820C0FE42FF4E7CB88CC /* EditorState.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorState.cpp; path = src/Core/EditorState.cpp; sourceTree = SOURCE_ROOT; };
@@ -59,10 +95,12 @@
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE327B0E2B1593400067EF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE46BD082CFC33CD002F900C /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD162CFC3F45002F900C /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD162CFC3F45002F900C /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Release/libEngine.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Dev/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Debug/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
+		CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = "<group>"; };
+		CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = "<group>"; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Editor/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
@@ -77,9 +115,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */,
-				CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */,
+				CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
 				CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
+				CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */,
+				CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */,
 				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,9 +127,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */,
-				CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */,
+				CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
 				CE46BD032CFC33CD002F900C /* libfmt.11.0.2.dylib in Frameworks */,
+				CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */,
+				CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */,
 				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,9 +139,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
-				CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */,
+				CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */,
 				CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */,
+				CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */,
+				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
 				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,7 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				961F49B2A1FB826F2103F49F /* DllMain.cpp */,
-				569F4ED5F5266B0708D9ADFC /* MimallocNewDeleteOverride.cpp */,
+				091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */,
 			);
 			name = Windows;
 			path = src/_platform/Windows;
@@ -190,7 +231,6 @@
 		CE4C6EE12B01AA500015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE327B0E2B1593400067EF26 /* Foundation.framework */,
 				CE46BD162CFC3F45002F900C /* libEngine.dylib */,
 				CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */,
 				CE46BD182CFC3F53002F900C /* libEngineDev.dylib */,
@@ -198,6 +238,9 @@
 				CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */,
 				CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */,
 				CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */,
+				CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */,
+				CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */,
+				CE327B0E2B1593400067EF26 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -261,6 +304,7 @@
 				CE2B9A312B01853C00DE24E0 /* Headers */,
 				CE2B9A322B01853C00DE24E0 /* Sources */,
 				CE2B9A332B01853C00DE24E0 /* Frameworks */,
+				CE9743532D45BFAE00C7D0F7 /* Copy Dependencies */,
 			);
 			buildRules = (
 			);
@@ -278,6 +322,7 @@
 				CE46BCF92CFC33CD002F900C /* Headers */,
 				CE46BCFC2CFC33CD002F900C /* Sources */,
 				CE46BD002CFC33CD002F900C /* Frameworks */,
+				CE9743522D45BF9E00C7D0F7 /* Copy Dependencies */,
 			);
 			buildRules = (
 			);
@@ -295,6 +340,7 @@
 				CED3D6892B12D3D700C5FB04 /* Headers */,
 				CED3D68C2B12D3D700C5FB04 /* Sources */,
 				CED3D6902B12D3D700C5FB04 /* Frameworks */,
+				CE9743512D45BF8000C7D0F7 /* Copy Dependencies */,
 			);
 			buildRules = (
 			);
@@ -331,9 +377,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE2B9A342B01853C00DE24E0 /* Editor */,
-				CE46BCF82CFC33CD002F900C /* EditorDev */,
 				CED3D6872B12D3D700C5FB04 /* EditorD */,
+				CE46BCF82CFC33CD002F900C /* EditorDev */,
+				CE2B9A342B01853C00DE24E0 /* Editor */,
 			);
 		};
 /* End PBXProject section */
@@ -347,10 +393,10 @@
 				3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */,
 				DA0609722BD72AF310CEDC66 /* EditorEntryPoint.cpp in Sources */,
 				FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */,
-				99F4E6E79DDB745F635A3D28 /* MimallocNewDeleteOverride.cpp in Sources */,
 				C478DD344FFE5EA0B544A98D /* EditorConfigurationMode.h in Sources */,
 				DCFF2CA9339ABB2A17D719C3 /* EditorState.h in Sources */,
 				1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */,
+				96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,10 +408,10 @@
 				783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */,
 				E2369DD0E69988C9B80F193E /* EditorEntryPoint.cpp in Sources */,
 				F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */,
-				11E61B4295DB7A84EC213515 /* MimallocNewDeleteOverride.cpp in Sources */,
 				60E9FA63DBAF084E792F49B3 /* EditorConfigurationMode.h in Sources */,
 				32F38ACF158402CB6637F498 /* EditorState.h in Sources */,
 				6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */,
+				DF4390B90BB7AE79467DF845 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +423,10 @@
 				FAA500842B41BF7159A08174 /* EditorState.cpp in Sources */,
 				A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */,
 				E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */,
-				8F3A65F02F969811E5EC75E3 /* MimallocNewDeleteOverride.cpp in Sources */,
 				B6A71A503DF87EB57E164FFC /* EditorConfigurationMode.h in Sources */,
 				6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */,
 				B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */,
+				2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +465,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Editor";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Editor";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -432,10 +477,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ADHOC_EDITOR,
-					ADHOC_EDITOR_PROJECT,
-					ADHOC_INTERNAL,
-					ADHOC_MACOS,
+					"ADHOC_INTERNAL=1",
+					"ADHOC_EDITOR_PROJECT=1",
+					"ADHOC_MACOS=1",
+					"ADHOC_WINDOWS=0",
+					"ADHOC_EDITOR=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -446,17 +492,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Engine",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -470,10 +511,18 @@
 		CE2B9A3B2B01853C00DE24E0 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
@@ -483,10 +532,18 @@
 		CE46BD062CFC33CD002F900C /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -497,10 +554,18 @@
 		CE46BD072CFC33CD002F900C /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -540,7 +605,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Editor";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Editor";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -553,10 +617,11 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ADHOC_EDITOR,
-					ADHOC_EDITOR_PROJECT,
-					ADHOC_INTERNAL,
-					ADHOC_MACOS,
+					"ADHOC_INTERNAL=1",
+					"ADHOC_EDITOR_PROJECT=1",
+					"ADHOC_MACOS=1",
+					"ADHOC_WINDOWS=0",
+					"ADHOC_EDITOR=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -567,17 +632,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Engine",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -592,10 +652,18 @@
 		CED3D66D2B12D3B500C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
@@ -605,6 +673,7 @@
 		CED3D6962B12D3D700C5FB04 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -612,12 +681,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ADHOC_DEBUG,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../build/Engine",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -628,6 +699,7 @@
 		CED3D6972B12D3D700C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -635,12 +707,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"DEBUG=1",
-					ADHOC_DEBUG,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../build/Engine",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

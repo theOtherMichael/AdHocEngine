@@ -10,24 +10,23 @@
 		008B7D78AA7FAE16202C2456 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		109964AEEAAA7C96AA1BD4C1 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 		11E90EC814B36581163C4ACB /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		13C2438DBD4A3FA74119FCF3 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		1B5042261FE1940686C533B0 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		1C14CE87AA6A2ABB1AB070EC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		23A8146F0A3CBCD6C05E1E1B /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		271D893CEE32DAE16696C13F /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		27BEF8AF3F28B25D6ACDFE46 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		2F39B04F2E8909AB4F6235F3 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		2FDF7D44BAEE6ACE22FA5788 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
+		37186556435C063070BFB57B /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		3EA03F7B5735B7A46B0128D8 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
-		4265E697C7F0224EC75406C4 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
-		53F9B873DF56158D9AA552C5 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
-		57FDE3C419499A209AFE6F3C /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		4558B695CF7A68354D025B3D /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		5D3D4FB85CFADB66E579FB8D /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		61D3E4F13093B13B475F1F07 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 		73E354116B51A0A2937A5D20 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		7A680C78E660C4810A1FEA14 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
-		8D4D68546E67A826EABCAE58 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
-		99ABE2E4A8DD026EFFBBC2B1 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
+		A18D33F234572993E48486FB /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		A84FF11709E260F8C4C9F381 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
-		BD4C5891E907704DB0712D4B /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */; };
 		CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031482D2A61AD00590717 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */; };
@@ -37,12 +36,16 @@
 		CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18EF2D23914700F47CDF /* libEngine.dylib */; };
 		CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F12D23915300F47CDF /* libEngineD.dylib */; };
 		CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */; };
+		CE7CD2090FC286BC74EBE0D8 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
+		CE97433D2D458EB200C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE97433E2D458EC700C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE9743402D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97433F2D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib */; };
 		CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; };
 		CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; };
 		CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; };
-		CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEE4330A2D23B4D20095A215 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193A2D23A1A000F47CDF /* libgtest.a */; };
 		CEE4330C2D23B4DE0095A215 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D19362D23A15400F47CDF /* libgtest.a */; };
 		CEE4330E2D23B4E70095A215 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D19362D23A15400F47CDF /* libgtest.a */; };
@@ -55,67 +58,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CEBA0C222D235090006346FC /* Copy Libraries */ = {
+		CEBA0C222D235090006346FC /* Copy gtest */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */,
+				CEBA0C232D2350BB006346FC /* libgtest.1.15.2.dylib in Copy gtest */,
 			);
-			name = "Copy Libraries";
+			name = "Copy gtest";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEBA0C242D2350C2006346FC /* Copy Libraries */ = {
+		CEBA0C242D2350C2006346FC /* Copy gtest */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy Libraries */,
+				CEBA0C252D2350D1006346FC /* libgtest.1.15.2.dylib in Copy gtest */,
 			);
-			name = "Copy Libraries";
+			name = "Copy gtest";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEBA0C262D2350DD006346FC /* Copy Libraries */ = {
+		CEBA0C262D2350DD006346FC /* Copy gtest */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy Libraries */,
+				CEBA0C272D2350EB006346FC /* libgtest.1.15.2.dylib in Copy gtest */,
 			);
-			name = "Copy Libraries";
+			name = "Copy gtest";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/Core/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
+		C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AssertionTests.cpp; path = src/Core/AssertionTests.cpp; sourceTree = SOURCE_ROOT; };
 		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
-		CE10314C2D2A620D00590717 /* libfmtd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmtd.a; path = "../Engine/vcpkg_installed/uni-static/debug/lib/libfmtd.a"; sourceTree = SOURCE_ROOT; };
-		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Engine/libEngine.dylib; sourceTree = SOURCE_ROOT; };
-		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Engine/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
-		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Engine/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
+		CE10314C2D2A620D00590717 /* libfmtd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmtd.a; path = "../Engine/vcpkg_installed/uni-static/debug/lib/libfmtd.a"; sourceTree = SOURCE_ROOT; };
+		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Release/libEngine.dylib; sourceTree = SOURCE_ROOT; };
+		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Debug/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
+		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Dev/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D191B2D23A07A00F47CDF /* EngineStaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19282D23A0DB00F47CDF /* EngineStaticTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19352D23A0E600F47CDF /* EngineStaticTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3D19362D23A15400F47CDF /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
-		CE3D19382D23A16800F47CDF /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../build/Engine/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
-		CE3D193A2D23A1A000F47CDF /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/debug/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
-		CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Engine/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
-		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Engine/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
+		CE3D19362D23A15400F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
+		CE3D19382D23A16800F47CDF /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../build/Release/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
+		CE3D193A2D23A1A000F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/debug/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
+		CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Debug/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
+		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Dev/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
 		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
+		CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE97433F2D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
 		CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB948622D231FA8009C272B /* EngineTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
-		E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GTMGoogleTestRunner.mm; path = src/_platform/Mac/GTMGoogleTestRunner.mm; sourceTree = SOURCE_ROOT; };
+		E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GTMGoogleTestRunner.mm; path = src/_platform/Mac/GTMGoogleTestRunner.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,9 +128,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE97433D2D458EB200C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
 				CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */,
-				CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 				CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */,
+				CEBA0C1E2D234EE1006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,9 +139,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9743402D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */,
 				CE1031482D2A61AD00590717 /* libfmtd.11.0.2.dylib in Frameworks */,
-				CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 				CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */,
+				CEBA0C212D234EFE006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +150,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE97433E2D458EC700C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
 				CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */,
-				CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 				CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */,
+				CEBA0C1F2D234EE8006346FC /* libgtest.1.15.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,8 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE10314D2D2A620D00590717 /* libfmtd.a in Frameworks */,
-				CEE4330A2D23B4D20095A215 /* libgtest.a in Frameworks */,
 				CEE433112D23B6190095A215 /* libEngineStaticD.a in Frameworks */,
+				CEE4330A2D23B4D20095A215 /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +172,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE10314B2D2A61EA00590717 /* libfmt.a in Frameworks */,
-				CEE4330C2D23B4DE0095A215 /* libgtest.a in Frameworks */,
 				CEE433102D23B6130095A215 /* libEngineStaticDev.a in Frameworks */,
+				CEE4330C2D23B4DE0095A215 /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE10314A2D2A61D900590717 /* libfmt.a in Frameworks */,
-				CEE4330E2D23B4E70095A215 /* libgtest.a in Frameworks */,
 				CEE4330F2D23B6080095A215 /* libEngineStatic.a in Frameworks */,
+				CEE4330E2D23B4E70095A215 /* libgtest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +193,7 @@
 		5AAC189E9105792131288CCE /* Windows */ = {
 			isa = PBXGroup;
 			children = (
-				6FB61F4C2AB345C7AC22580D /* MimallocNewDeleteOverride.cpp */,
+				C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */,
 			);
 			name = Windows;
 			path = src/_platform/Windows;
@@ -256,20 +264,22 @@
 		CE42937F2D228A860020748F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE3D18EF2D23914700F47CDF /* libEngine.dylib */,
-				CE3D18F12D23915300F47CDF /* libEngineD.dylib */,
-				CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */,
 				CE3D19382D23A16800F47CDF /* libEngineStatic.a */,
 				CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */,
 				CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */,
-				CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */,
 				CE1031492D2A61D900590717 /* libfmt.a */,
-				CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */,
 				CE10314C2D2A620D00590717 /* libfmtd.a */,
-				CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */,
-				CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */,
 				CE3D193A2D23A1A000F47CDF /* libgtest.a */,
 				CE3D19362D23A15400F47CDF /* libgtest.a */,
+				CE3D18EF2D23914700F47CDF /* libEngine.dylib */,
+				CE3D18F12D23915300F47CDF /* libEngineD.dylib */,
+				CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */,
+				CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */,
+				CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */,
+				CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */,
+				CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */,
+				CE97433F2D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib */,
+				CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -334,7 +344,7 @@
 			buildPhases = (
 				CE42936D2D2283040020748F /* Sources */,
 				CE42936E2D2283040020748F /* Frameworks */,
-				CEBA0C222D235090006346FC /* Copy Libraries */,
+				CEBA0C222D235090006346FC /* Copy gtest */,
 				CE42936F2D2283040020748F /* Resources */,
 			);
 			buildRules = (
@@ -352,7 +362,7 @@
 			buildPhases = (
 				CEB948382D2315BA009C272B /* Sources */,
 				CEB948462D2315BA009C272B /* Frameworks */,
-				CEBA0C242D2350C2006346FC /* Copy Libraries */,
+				CEBA0C242D2350C2006346FC /* Copy gtest */,
 				CEB948482D2315BA009C272B /* Resources */,
 			);
 			buildRules = (
@@ -370,7 +380,7 @@
 			buildPhases = (
 				CEB9484E2D231FA8009C272B /* Sources */,
 				CEB9485C2D231FA8009C272B /* Frameworks */,
-				CEBA0C262D2350DD006346FC /* Copy Libraries */,
+				CEBA0C262D2350DD006346FC /* Copy gtest */,
 				CEB9485E2D231FA8009C272B /* Resources */,
 			);
 			buildRules = (
@@ -409,12 +419,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE4293702D2283040020748F /* EngineTests */,
-				CEB9484D2D231FA8009C272B /* EngineTestsDev */,
 				CEB948372D2315BA009C272B /* EngineTestsD */,
-				CE3D190F2D23A07A00F47CDF /* EngineStaticTests */,
-				CE3D19292D23A0E600F47CDF /* EngineStaticTestsDev */,
+				CEB9484D2D231FA8009C272B /* EngineTestsDev */,
+				CE4293702D2283040020748F /* EngineTests */,
 				CE3D191C2D23A0DB00F47CDF /* EngineStaticTestsD */,
+				CE3D19292D23A0E600F47CDF /* EngineStaticTestsDev */,
+				CE3D190F2D23A07A00F47CDF /* EngineStaticTests */,
 			);
 		};
 /* End PBXProject section */
@@ -472,7 +482,7 @@
 				DB5447419404FEA953020B92 /* AssertionTests.cpp in Sources */,
 				27BEF8AF3F28B25D6ACDFE46 /* ConsoleTests.cpp in Sources */,
 				1C14CE87AA6A2ABB1AB070EC /* GTMGoogleTestRunner.mm in Sources */,
-				8D4D68546E67A826EABCAE58 /* MimallocNewDeleteOverride.cpp in Sources */,
+				13C2438DBD4A3FA74119FCF3 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +493,7 @@
 				008B7D78AA7FAE16202C2456 /* AssertionTests.cpp in Sources */,
 				11E90EC814B36581163C4ACB /* ConsoleTests.cpp in Sources */,
 				3EA03F7B5735B7A46B0128D8 /* GTMGoogleTestRunner.mm in Sources */,
-				99ABE2E4A8DD026EFFBBC2B1 /* MimallocNewDeleteOverride.cpp in Sources */,
+				23A8146F0A3CBCD6C05E1E1B /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,7 +504,7 @@
 				1B5042261FE1940686C533B0 /* AssertionTests.cpp in Sources */,
 				73E354116B51A0A2937A5D20 /* ConsoleTests.cpp in Sources */,
 				109964AEEAAA7C96AA1BD4C1 /* GTMGoogleTestRunner.mm in Sources */,
-				57FDE3C419499A209AFE6F3C /* MimallocNewDeleteOverride.cpp in Sources */,
+				37186556435C063070BFB57B /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,7 +515,7 @@
 				2F39B04F2E8909AB4F6235F3 /* AssertionTests.cpp in Sources */,
 				A84FF11709E260F8C4C9F381 /* ConsoleTests.cpp in Sources */,
 				D490D1EE145C805A7554E430 /* GTMGoogleTestRunner.mm in Sources */,
-				BD4C5891E907704DB0712D4B /* MimallocNewDeleteOverride.cpp in Sources */,
+				A18D33F234572993E48486FB /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +526,7 @@
 				7A680C78E660C4810A1FEA14 /* AssertionTests.cpp in Sources */,
 				2FDF7D44BAEE6ACE22FA5788 /* ConsoleTests.cpp in Sources */,
 				61D3E4F13093B13B475F1F07 /* GTMGoogleTestRunner.mm in Sources */,
-				53F9B873DF56158D9AA552C5 /* MimallocNewDeleteOverride.cpp in Sources */,
+				CE7CD2090FC286BC74EBE0D8 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,7 +537,7 @@
 				5D3D4FB85CFADB66E579FB8D /* AssertionTests.cpp in Sources */,
 				271D893CEE32DAE16696C13F /* ConsoleTests.cpp in Sources */,
 				DFBF79CB2E4E121ABB4337F3 /* GTMGoogleTestRunner.mm in Sources */,
-				4265E697C7F0224EC75406C4 /* MimallocNewDeleteOverride.cpp in Sources */,
+				4558B695CF7A68354D025B3D /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,21 +548,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticRelease";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_EDITOR=0",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -567,21 +577,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticRelease";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
+					"ADHOC_EDITOR=0",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -596,23 +606,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDebug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
+					"ADHOC_EDITOR=0",
 					"DEBUG=1",
-					ADHOC_DEBUG,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -627,23 +637,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDebug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
+					"ADHOC_EDITOR=0",
 					"DEBUG=1",
-					ADHOC_DEBUG,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -658,21 +668,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
+					"ADHOC_EDITOR=0",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -687,21 +697,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
+					"ADHOC_EDITOR=0",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -744,7 +754,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/EngineTests";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -756,8 +765,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ADHOC_INTERNAL,
-					ADHOC_MACOS,
+					"ADHOC_INTERNAL=1",
+					"ADHOC_MACOS=1",
+					"ADHOC_WINDOWS=0",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -771,11 +781,7 @@
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@loader_path/../Frameworks",
-					"$(PROJECT_DIR)/../build/Engine",
-				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../build/Engine";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -818,7 +824,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests";
 				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/EngineTests";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -829,8 +834,9 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					ADHOC_INTERNAL,
-					ADHOC_MACOS,
+					"ADHOC_INTERNAL=1",
+					"ADHOC_MACOS=1",
+					"ADHOC_WINDOWS=0",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -844,11 +850,7 @@
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
 				);
-				LD_RUNPATH_SEARCH_PATHS = (
-					"@loader_path/../Frameworks",
-					"$(PROJECT_DIR)/../build/Engine",
-				);
-				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../build/Engine";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -863,22 +865,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Release";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
-					ADHOC_EDITOR,
+					"ADHOC_EDITOR=1",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/../build/Release",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -893,22 +899,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Release";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_RELEASE,
-					ADHOC_EDITOR,
+					"ADHOC_EDITOR=1",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=1",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/../build/Release",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -923,24 +933,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Debug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
+					"ADHOC_EDITOR=1",
 					"DEBUG=1",
-					ADHOC_DEBUG,
-					ADHOC_EDITOR,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/../build/Debug",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -955,24 +969,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Debug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
+					"ADHOC_EDITOR=1",
 					"DEBUG=1",
-					ADHOC_DEBUG,
-					ADHOC_EDITOR,
+					"ADHOC_DEBUG=1",
+					"ADHOC_DEV=0",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/../build/Debug",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -987,22 +1005,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Dev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
-					ADHOC_EDITOR,
+					"ADHOC_EDITOR=1",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/../build/Dev",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -1017,22 +1039,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Dev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					ADHOC_DEV,
-					ADHOC_EDITOR,
+					"ADHOC_EDITOR=1",
+					"ADHOC_DEBUG=0",
+					"ADHOC_DEV=1",
+					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/../build/Dev",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
