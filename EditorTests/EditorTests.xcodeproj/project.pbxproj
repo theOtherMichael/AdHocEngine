@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065A775FCE934C821D97C646 /* SimpleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2AFD567D814A1776FB1E547 /* SimpleTests.cpp */; };
 		1D106AB3DD36D84D52D56141 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19AA86E739F48986C938A777 /* MimallocNewDeleteOverride.cpp */; };
 		A0787FDFB3636641A8D33564 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19AA86E739F48986C938A777 /* MimallocNewDeleteOverride.cpp */; };
 		A7E82CF2FEC7CE4F99D47694 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 19AA86E739F48986C938A777 /* MimallocNewDeleteOverride.cpp */; };
@@ -28,6 +29,11 @@
 		CEBA0C292D23512A006346FC /* libgtest.1.15.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEBA0C172D234DC6006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEBA0C2B2D23513D006346FC /* libgtest.1.15.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEBA0C1B2D234E01006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEBA0C2D2D23515A006346FC /* libgtest.1.15.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEBA0C172D234DC6006346FC /* libgtest.1.15.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEF3266C2D4748FA0022CB0D /* SimpleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3266B2D4748FA0022CB0D /* SimpleTests.cpp */; };
+		CEF3266D2D4748FA0022CB0D /* SimpleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3266B2D4748FA0022CB0D /* SimpleTests.cpp */; };
+		CEF3266E2D4748FA0022CB0D /* SimpleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEF3266B2D4748FA0022CB0D /* SimpleTests.cpp */; };
+		DDC65B16236433D7FC1793C5 /* SimpleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2AFD567D814A1776FB1E547 /* SimpleTests.cpp */; };
+		F0A8FBC03A2E392EC58C7D24 /* SimpleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2AFD567D814A1776FB1E547 /* SimpleTests.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -68,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		19AA86E739F48986C938A777 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
+		C2AFD567D814A1776FB1E547 /* SimpleTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = SimpleTests.cpp; path = src/SimpleTests.cpp; sourceTree = SOURCE_ROOT; };
 		CE3D18F52D2391AE00F47CDF /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../build/Release/libEditor.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F72D2391B400F47CDF /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../build/Debug/libEditorD.dylib; sourceTree = SOURCE_ROOT; };
 		CE3D18F92D2391B900F47CDF /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../build/Dev/libEditorDev.dylib; sourceTree = SOURCE_ROOT; };
@@ -82,6 +89,7 @@
 		CEBA0BF02D234A0C006346FC /* EditorTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBA0C172D234DC6006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEBA0C1B2D234E01006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEF3266B2D4748FA0022CB0D /* SimpleTests.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleTests.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				CEBA0BB82D234397006346FC /* _platform */,
+				CEF3266B2D4748FA0022CB0D /* SimpleTests.cpp */,
+				C2AFD567D814A1776FB1E547 /* SimpleTests.cpp */,
 			);
 			name = src;
 			path = src;
@@ -314,8 +324,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF3266E2D4748FA0022CB0D /* SimpleTests.cpp in Sources */,
 				CEBA0BF32D234D14006346FC /* GTMGoogleTestRunner.mm in Sources */,
 				A7E82CF2FEC7CE4F99D47694 /* MimallocNewDeleteOverride.cpp in Sources */,
+				065A775FCE934C821D97C646 /* SimpleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +335,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF3266C2D4748FA0022CB0D /* SimpleTests.cpp in Sources */,
 				CEBA0BF22D234D13006346FC /* GTMGoogleTestRunner.mm in Sources */,
 				A0787FDFB3636641A8D33564 /* MimallocNewDeleteOverride.cpp in Sources */,
+				DDC65B16236433D7FC1793C5 /* SimpleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,8 +346,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF3266D2D4748FA0022CB0D /* SimpleTests.cpp in Sources */,
 				CEBA0BF42D234D15006346FC /* GTMGoogleTestRunner.mm in Sources */,
 				1D106AB3DD36D84D52D56141 /* MimallocNewDeleteOverride.cpp in Sources */,
+				F0A8FBC03A2E392EC58C7D24 /* SimpleTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +514,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../Release",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -530,7 +546,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../Release",
+					"$(PROJECT_DIR)/../build/Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -565,7 +581,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../Debug",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
@@ -599,7 +615,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../Debug",
+					"$(PROJECT_DIR)/../build/Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
@@ -630,7 +646,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../Dev",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -662,7 +678,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../Dev",
+					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",

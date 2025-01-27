@@ -34,9 +34,6 @@
 		CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */; };
 		CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
 		CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
-		CED4DDBD2D101ED100BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
-		CED4DDBF2D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
-		CED4DDC12D101ED200BAE96F /* SymbolExportMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */; };
 		CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */; };
 		CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */; };
 		CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */; };
@@ -269,39 +266,11 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		CE2B9A312B01853C00DE24E0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED4DDBD2D101ED100BAE96F /* SymbolExportMacros.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE46BCF92CFC33CD002F900C /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED4DDBF2D101ED200BAE96F /* SymbolExportMacros.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CED3D6892B12D3D700C5FB04 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED4DDC12D101ED200BAE96F /* SymbolExportMacros.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		CE2B9A342B01853C00DE24E0 /* Editor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2B9A392B01853C00DE24E0 /* Build configuration list for PBXNativeTarget "Editor" */;
 			buildPhases = (
-				CE2B9A312B01853C00DE24E0 /* Headers */,
 				CE2B9A322B01853C00DE24E0 /* Sources */,
 				CE2B9A332B01853C00DE24E0 /* Frameworks */,
 				CE9743532D45BFAE00C7D0F7 /* Copy Dependencies */,
@@ -319,7 +288,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE46BD052CFC33CD002F900C /* Build configuration list for PBXNativeTarget "EditorDev" */;
 			buildPhases = (
-				CE46BCF92CFC33CD002F900C /* Headers */,
 				CE46BCFC2CFC33CD002F900C /* Sources */,
 				CE46BD002CFC33CD002F900C /* Frameworks */,
 				CE9743522D45BF9E00C7D0F7 /* Copy Dependencies */,
@@ -337,7 +305,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED3D6942B12D3D700C5FB04 /* Build configuration list for PBXNativeTarget "EditorD" */;
 			buildPhases = (
-				CED3D6892B12D3D700C5FB04 /* Headers */,
 				CED3D68C2B12D3D700C5FB04 /* Sources */,
 				CED3D6902B12D3D700C5FB04 /* Frameworks */,
 				CE9743512D45BF8000C7D0F7 /* Copy Dependencies */,

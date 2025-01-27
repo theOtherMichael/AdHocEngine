@@ -879,7 +879,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../build/Release",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -913,7 +912,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../build/Release",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -949,7 +947,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../build/Debug",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
@@ -985,7 +982,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../build/Debug",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
@@ -1019,7 +1015,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../build/Dev",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
@@ -1053,7 +1048,6 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../build/Dev",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
