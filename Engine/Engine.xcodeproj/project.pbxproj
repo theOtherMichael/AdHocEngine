@@ -150,7 +150,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		CEB804092D46051600BD6E47 /* Copy vcpkg Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
