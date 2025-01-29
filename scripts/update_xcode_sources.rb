@@ -27,7 +27,7 @@ def audit_file_groups(project)
     end
 
     group_folder_name = File.basename(group.path)
-    if group.name != group_folder_name
+    if group.name != group_folder_name && group_folder_name != group.path
       puts("    Renamed non-matching group name \"#{group.name}\" to \"#{group_folder_name}\"")
       group.name = group_folder_name
     end
