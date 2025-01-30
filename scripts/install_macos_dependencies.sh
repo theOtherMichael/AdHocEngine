@@ -134,11 +134,6 @@ lipo_directory_recursive() {
             target_entry="$target_dir$source_file_relative_path"
 
             if [ -f "$target_entry" ]; then
-                if [ -L "$target_entry" ]; then
-                    echo "Skipping \"$target_entry\" as it is a symlink"
-                    continue
-                fi
-
                 file_name=$(basename "$source_entry")
                 file_extension="${file_name##*.}"
 
@@ -146,16 +141,28 @@ lipo_directory_recursive() {
                 output_file="$output_dir/$(basename "$source_entry")"
 
                 if [ "$file_extension" = "a" ] || [ "$file_extension" = "dylib" ]; then
-                    echo "Creating \"$output_file\" from x64 and arm64 binaries..."
-                    if ! lipo -create "$source_entry" "$target_entry" -output "$output_file"; then
-                        echo "Failed to merge $file_name!"
-                        failure_detected=true
+                    if [ -L "$target_entry" ]; then
+                        symlink_origin=$(readlink "$target_entry")
+                        if ! ln -s "$symlink_origin" "$output_file"; then
+                            echo "Failed to symlink \"$output_file\"!"
+                            failure_detected=true
+                        else
+                            echo "Created symlink \"$symlink_origin\" to \"$output_file\""
+                        fi
+                    else
+                        if ! lipo -create "$source_entry" "$target_entry" -output "$output_file"; then
+                            echo "Failed to merge $file_name!"
+                            failure_detected=true
+                        else
+                            echo "Merged \"$source_entry\" and \"$target_entry\" into universal file \"$output_file\""
+                        fi
                     fi
                 else
-                    echo "Copying non-binary file \"$source_entry\"..."
                     if ! cp "$source_entry" "$output_file"; then
                         echo "Failed to copy \"$file_name\"!"
                         failure_detected=true
+                    else
+                        echo "Copied non-binary file \"$source_entry\""
                     fi
                 fi
             fi
