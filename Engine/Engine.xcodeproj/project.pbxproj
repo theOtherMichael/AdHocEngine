@@ -217,10 +217,10 @@
 		CE0D0E292D325CA200BC9EB1 /* SymbolExportMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Engine/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		CE0D0E2A2D325CA200BC9EB1 /* PlatformData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformData.h; path = include/Engine/Core/PlatformData.h; sourceTree = SOURCE_ROOT; };
 		CE2B9A452B018B8100DE24E0 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3833D22CF0E6380004C108 /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3833D22CF0E6380004C108 /* libEngineStatic.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libEngineStatic.dylib; path = libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3833DF2CF2FC250004C108 /* libEngineStaticD.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libEngineStaticD.dylib; path = libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BCE12CFC336A002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BCF72CFC3373002F900C /* libEngineStaticDev.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libEngineStaticDev.dylib; path = libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EC52B0196A60015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
 		CE9743572D45ED0000C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
@@ -413,10 +413,10 @@
 			children = (
 				CE2B9A452B018B8100DE24E0 /* libEngine.dylib */,
 				CED3D6862B12D3C800C5FB04 /* libEngineD.dylib */,
-				CE3833D22CF0E6380004C108 /* libEngineStatic.a */,
-				CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */,
+				CE3833D22CF0E6380004C108 /* libEngineStatic.dylib */,
+				CE3833DF2CF2FC250004C108 /* libEngineStaticD.dylib */,
 				CE46BCE12CFC336A002F900C /* libEngineDev.dylib */,
-				CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */,
+				CE46BCF72CFC3373002F900C /* libEngineStaticDev.dylib */,
 			);
 			name = Products;
 			sourceTree = SOURCE_ROOT;
@@ -426,7 +426,6 @@
 			children = (
 				CE0D0E182D325CA200BC9EB1 /* Engine */,
 			);
-			name = include;
 			path = include;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -436,7 +435,6 @@
 				34B8943EB0C0E2DD6C4462B9 /* _platform */,
 				CE4C6EBE2B0196A60015E51A /* Core */,
 			);
-			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -534,7 +532,7 @@
 			);
 			name = EngineStatic;
 			productName = EngineStatic;
-			productReference = CE3833D22CF0E6380004C108 /* libEngineStatic.a */;
+			productReference = CE3833D22CF0E6380004C108 /* libEngineStatic.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		CE3833D72CF2FC250004C108 /* EngineStaticD */ = {
@@ -550,7 +548,7 @@
 			);
 			name = EngineStaticD;
 			productName = EngineStaticD;
-			productReference = CE3833DF2CF2FC250004C108 /* libEngineStaticD.a */;
+			productReference = CE3833DF2CF2FC250004C108 /* libEngineStaticD.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		CE46BCCC2CFC336A002F900C /* EngineDev */ = {
@@ -583,7 +581,7 @@
 			);
 			name = EngineStaticDev;
 			productName = EngineStaticDev;
-			productReference = CE46BCF72CFC3373002F900C /* libEngineStaticDev.a */;
+			productReference = CE46BCF72CFC3373002F900C /* libEngineStaticDev.dylib */;
 			productType = "com.apple.product-type.library.static";
 		};
 		CED3D6702B12D3C800C5FB04 /* EngineD */ = {
@@ -834,7 +832,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Engine";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -866,16 +864,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OBJROOT = "$(SYMROOT)-int.noindex";
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = Universal;
 		};
 		CE2B9A4B2B018B8100DE24E0 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -895,7 +891,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -915,7 +911,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -935,7 +931,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -957,7 +953,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -978,7 +974,7 @@
 		CE46BCDF2CFC336A002F900C /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -997,7 +993,7 @@
 		CE46BCE02CFC336A002F900C /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1017,7 +1013,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1037,7 +1033,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1085,7 +1081,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Engine";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1117,17 +1113,15 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = ActiveArch;
 		};
 		CED3D66F2B12D3BC00C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -1146,7 +1140,7 @@
 		CED3D6842B12D3C800C5FB04 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1168,7 +1162,7 @@
 		CED3D6852B12D3C800C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_OPTIMIZATION_LEVEL = 0;

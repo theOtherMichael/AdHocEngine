@@ -92,9 +92,9 @@
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE327B0E2B1593400067EF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE46BD082CFC33CD002F900C /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD162CFC3F45002F900C /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Release/libEngine.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Dev/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
-		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Debug/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
+		CE46BD162CFC3F45002F900C /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = "<group>"; };
 		CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = "<group>"; };
@@ -201,7 +201,6 @@
 			children = (
 				CE4C6EA32B0196810015E51A /* Editor */,
 			);
-			name = include;
 			path = include;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -221,7 +220,6 @@
 				CEDDB0C62D1FCD3800EADB67 /* Core */,
 				0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */,
 			);
-			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -432,7 +430,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Editor";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -465,20 +463,19 @@
 				);
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OBJROOT = "$(SYMROOT)-int.noindex";
 				PRODUCT_NAME = Editor;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = Universal;
 		};
 		CE2B9A3B2B01853C00DE24E0 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -487,9 +484,8 @@
 					"ADHOC_RELEASE=1",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
@@ -499,7 +495,7 @@
 		CE46BD062CFC33CD002F900C /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -508,9 +504,8 @@
 					"ADHOC_RELEASE=0",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -521,7 +516,7 @@
 		CE46BD072CFC33CD002F900C /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Dev";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -530,9 +525,8 @@
 					"ADHOC_RELEASE=0",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -572,7 +566,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/Editor";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -605,21 +599,20 @@
 				);
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Editor;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = ActiveArch;
 		};
 		CED3D66D2B12D3B500C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Release";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -628,9 +621,8 @@
 					"ADHOC_RELEASE=1",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Release",
 				);
 				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
@@ -640,7 +632,7 @@
 		CED3D6962B12D3D700C5FB04 /* Universal */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -653,9 +645,8 @@
 					"ADHOC_RELEASE=0",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../build/Debug",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -666,7 +657,7 @@
 		CED3D6972B12D3D700C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/Debug";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
 				ENABLE_NS_ASSERTIONS = YES;
 				ENABLE_TESTABILITY = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -679,9 +670,8 @@
 					"ADHOC_RELEASE=0",
 				);
 				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../build/Debug",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

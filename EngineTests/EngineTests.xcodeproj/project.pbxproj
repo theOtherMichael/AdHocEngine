@@ -101,17 +101,17 @@
 		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
 		CE10314C2D2A620D00590717 /* libfmtd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmtd.a; path = "../Engine/vcpkg_installed/uni-static/debug/lib/libfmtd.a"; sourceTree = SOURCE_ROOT; };
-		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../build/Release/libEngine.dylib; sourceTree = SOURCE_ROOT; };
-		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../build/Debug/libEngineD.dylib; sourceTree = SOURCE_ROOT; };
-		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../build/Dev/libEngineDev.dylib; sourceTree = SOURCE_ROOT; };
+		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D191B2D23A07A00F47CDF /* EngineStaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19282D23A0DB00F47CDF /* EngineStaticTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19352D23A0E600F47CDF /* EngineStaticTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19362D23A15400F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
-		CE3D19382D23A16800F47CDF /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../build/Release/libEngineStatic.a; sourceTree = SOURCE_ROOT; };
+		CE3D19382D23A16800F47CDF /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../Release/libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D193A2D23A1A000F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/debug/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
-		CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../build/Debug/libEngineStaticD.a; sourceTree = SOURCE_ROOT; };
-		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../build/Dev/libEngineStaticDev.a; sourceTree = SOURCE_ROOT; };
+		CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../Debug/libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../Dev/libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
@@ -238,7 +238,6 @@
 				CE42937D2D2287D60020748F /* _platform */,
 				CE0D0E092D325C6A00BC9EB1 /* Core */,
 			);
-			name = src;
 			path = src;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -293,7 +292,6 @@
 			buildPhases = (
 				CE3D19102D23A07A00F47CDF /* Sources */,
 				CEE4330D2D23B4E20095A215 /* Frameworks */,
-				CE3D19172D23A07A00F47CDF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -310,7 +308,6 @@
 			buildPhases = (
 				CE3D191D2D23A0DB00F47CDF /* Sources */,
 				CEE433092D23B4AE0095A215 /* Frameworks */,
-				CE3D19242D23A0DB00F47CDF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -327,7 +324,6 @@
 			buildPhases = (
 				CE3D192A2D23A0E600F47CDF /* Sources */,
 				CEE4330B2D23B4D80095A215 /* Frameworks */,
-				CE3D19312D23A0E600F47CDF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -345,7 +341,6 @@
 				CE42936D2D2283040020748F /* Sources */,
 				CE42936E2D2283040020748F /* Frameworks */,
 				CEBA0C222D235090006346FC /* Copy gtest */,
-				CE42936F2D2283040020748F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -363,7 +358,6 @@
 				CEB948382D2315BA009C272B /* Sources */,
 				CEB948462D2315BA009C272B /* Frameworks */,
 				CEBA0C242D2350C2006346FC /* Copy gtest */,
-				CEB948482D2315BA009C272B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -381,7 +375,6 @@
 				CEB9484E2D231FA8009C272B /* Sources */,
 				CEB9485C2D231FA8009C272B /* Frameworks */,
 				CEBA0C262D2350DD006346FC /* Copy gtest */,
-				CEB9485E2D231FA8009C272B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -428,51 +421,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		CE3D19172D23A07A00F47CDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE3D19242D23A0DB00F47CDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE3D19312D23A0E600F47CDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CE42936F2D2283040020748F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEB948482D2315BA009C272B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEB9485E2D231FA8009C272B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE3D19102D23A07A00F47CDF /* Sources */ = {
@@ -548,7 +496,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticRelease";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -562,7 +509,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../build/Release",
+					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -577,7 +524,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticRelease";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -591,7 +537,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../build/Release",
+					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -606,7 +552,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDebug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -622,7 +567,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
-					"$(PROJECT_DIR)/../build/Debug",
+					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -637,7 +582,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDebug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -653,7 +597,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
-					"$(PROJECT_DIR)/../build/Debug",
+					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -668,7 +612,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -682,7 +625,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../build/Dev",
+					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -697,7 +640,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/StaticDev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -711,7 +653,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../build/Dev",
+					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -754,7 +696,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/EngineTests";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Tests";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -785,10 +727,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = Universal;
 		};
@@ -824,7 +764,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_TEMP_DIR = "$(PROJECT_DIR)/../build-int.noindex/$(CONFIGURATION)/EngineTests";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Tests";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -854,10 +794,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OBJROOT = "$(SYMROOT)-int.noindex";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SYMROOT = "$(PROJECT_DIR)/../build";
 			};
 			name = ActiveArch;
 		};
@@ -865,7 +803,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Release";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -878,12 +815,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../build/Release",
+					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Release",
+					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -898,7 +834,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Release";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -911,12 +846,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../build/Release",
+					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Release",
+					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -931,7 +865,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Debug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -946,12 +879,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../build/Debug",
+					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../build/Debug",
+					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -966,7 +898,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Debug";
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_NS_ASSERTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -981,12 +912,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../build/Debug",
+					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/debug/lib",
-					"$(PROJECT_DIR)/../build/Debug",
+					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -1001,7 +931,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Dev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1014,12 +943,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../build/Dev",
+					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Dev",
+					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
@@ -1034,7 +962,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/../build/EngineTests/Dev";
 				CURRENT_PROJECT_VERSION = 1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1047,12 +974,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/../build/Dev",
+					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/lib",
-					"$(PROJECT_DIR)/../build/Dev",
+					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
