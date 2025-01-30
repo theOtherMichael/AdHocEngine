@@ -134,6 +134,11 @@ lipo_directory_recursive() {
             target_entry="$target_dir$source_file_relative_path"
 
             if [ -f "$target_entry" ]; then
+                if [ -L "$target_entry" ]; then
+                    echo "Skipping \"$target_entry\" as it is a symlink"
+                    continue
+                fi
+
                 file_name=$(basename "$source_entry")
                 file_extension="${file_name##*.}"
 
