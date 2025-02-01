@@ -87,7 +87,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\bgfx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\bx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\bimg.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -114,7 +114,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bgfx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bimg.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -141,7 +141,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bgfx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bimg.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
