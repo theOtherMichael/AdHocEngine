@@ -16,8 +16,11 @@
 #include <GLFW/glfw3native.h>
 #pragma clang diagnostic pop
 
+#include <bgfx-imgui/imgui_impl_bgfx.h>
 #include <bgfx/bgfx.h>
 #include <bgfx/platform.h>
+#include <imgui.h>
+#include <imgui_impl_glfw.h>
 
 namespace Console = Engine::Console;
 
@@ -78,17 +81,48 @@ ReloadOption EditorMain(int argc, char* argv[])
 
     Assert_True(bgfx::init(init));
 
-    bgfx::setViewClear(kClearView, BGFX_CLEAR_COLOR);
+    bgfx::setViewClear(kClearView, BGFX_CLEAR_COLOR, 0xFFFFFFFF);
     bgfx::setViewRect(kClearView, 0, 0, bgfx::BackbufferRatio::Equal);
+
+    IMGUI_CHECKVERSION();
+    ImGui::CreateContext();
+    ImGuiIO& io = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+
+    ImGui_ImplGlfw_InitForOther(mainWindowPtr, true);
+    ImGui_Implbgfx_Init(kClearView);
 
     while (!glfwWindowShouldClose(mainWindowPtr))
     {
-        glfwWaitEvents();
+        glfwPollEvents();
 
         // TODO: Check recompile watch thread
 
+        bgfx::touch(kClearView);
+
+        ImGui_Implbgfx_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+
+        ImGui::ShowDemoWindow(); // GUI stuff here
+
+        ImGui::Render();
+        ImGui_Implbgfx_RenderDrawLists(ImGui::GetDrawData());
+        
+        if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+        {
+            ImGui::UpdatePlatformWindows();
+            ImGui::RenderPlatformWindowsDefault();
+        }
+
         bgfx::frame();
     }
+
+    ImGui_Implbgfx_Shutdown();
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
 
     bgfx::shutdown();
     glfwTerminate();

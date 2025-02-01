@@ -30,6 +30,9 @@
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="vendor\bgfx-imgui\imgui_impl_bgfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h">
@@ -42,6 +45,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\bgfx-imgui\fs_ocornut_imgui.bin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\bgfx-imgui\imgui_impl_bgfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\bgfx-imgui\vs_ocornut_imgui.bin.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
