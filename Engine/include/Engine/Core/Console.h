@@ -88,7 +88,7 @@ ENGINE_API std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel);
 } // namespace Engine::Console
 
 template <>
-struct ENGINE_API fmt::formatter<::Engine::Console::LogLevel> : formatter<string_view>
+struct fmt::formatter<::Engine::Console::LogLevel> : formatter<string_view>
 {
-    auto format(::Engine::Console::LogLevel logLevel, format_context& ctx) const -> format_context::iterator;
+    ENGINE_API auto format(::Engine::Console::LogLevel logLevel, format_context& ctx) const -> format_context::iterator;
 };

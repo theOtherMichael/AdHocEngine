@@ -19,7 +19,8 @@ EDITOR_API std::ostream& operator<<(std::ostream& os, const ConfigurationMode& c
 } // namespace Editor
 
 template <>
-struct EDITOR_API fmt::formatter<::Editor::ConfigurationMode> : formatter<string_view>
+struct fmt::formatter<::Editor::ConfigurationMode> : formatter<string_view>
 {
-    auto format(::Editor::ConfigurationMode configMode, format_context& ctx) const -> format_context::iterator;
+    EDITOR_API auto format(::Editor::ConfigurationMode configMode, format_context& ctx) const
+        -> format_context::iterator;
 };
