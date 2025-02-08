@@ -7,6 +7,8 @@
 #include <imgui_stdlib.h>
 
 #include <string>
+#include <utility>
+#include <vector>
 
 using Engine::Console::LogLevel;
 
@@ -17,6 +19,9 @@ struct ConsoleEntry
 {
     std::string message;
     LogLevel logLevel;
+
+    ConsoleEntry() = default;
+    explicit ConsoleEntry(std::string&& message, const LogLevel logLevel) : message(message), logLevel(logLevel) {}
 };
 
 static std::vector<ConsoleEntry> consoleLogs;
@@ -24,7 +29,7 @@ static std::vector<ConsoleEntry> consoleLogs;
 void HandleConsoleViewLogs(const LogLevel logLevel, const std::string& message)
 {
     auto formattedMessage = fmt::format("[{}] {}", logLevel, message);
-    consoleLogs.emplace_back(formattedMessage, logLevel);
+    consoleLogs.emplace_back(std::move(formattedMessage), logLevel);
 }
 
 static ImVec4 ColorOfLogLevel(LogLevel logLevel)

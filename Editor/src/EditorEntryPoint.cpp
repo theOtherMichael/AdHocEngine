@@ -17,7 +17,9 @@
 #pragma clang diagnostic pop
 
 #include <imgui.h>
-#include <imgui_impl_dx11.h>
+#if ADHOC_WINDOWS
+    #include <imgui_impl_dx11.h>
+#endif
 #include <imgui_impl_glfw.h>
 
 namespace Console = Engine::Console;
@@ -27,7 +29,9 @@ namespace Editor
 
 static void Update()
 {
+#if ADHOC_WINDOWS
     ImGui_ImplDX11_NewFrame();
+#endif
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
@@ -39,12 +43,15 @@ static void Update()
     ImGui::Render();
 
     // TODO: Handle other backends
-    const float clearColor[4] = {0.1f, 0.1f, 0.1f, 1.0f};
 
+#if ADHOC_WINDOWS
     auto dx11Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3D11GraphicsContext>();
+
+    const float clearColor[4] = {0.1f, 0.1f, 0.1f, 1.0f};
     dx11Context->pd3dDeviceContext->OMSetRenderTargets(1, &dx11Context->mainRenderTargetView, nullptr);
     dx11Context->pd3dDeviceContext->ClearRenderTargetView(dx11Context->mainRenderTargetView, clearColor);
     ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+#endif
 
     ImGuiIO& io = ImGui::GetIO();
     if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
@@ -53,7 +60,9 @@ static void Update()
         ImGui::RenderPlatformWindowsDefault();
     }
 
+#if ADHOC_WINDOWS
     dx11Context->Present();
+#endif
 }
 
 static void OnGlfwError(int error, const char* description)
@@ -125,7 +134,9 @@ ReloadOption EditorMain(int argc, char* argv[])
         Update();
     }
 
+#if ADHOC_WINDOWS
     ImGui_ImplDX11_Shutdown();
+#endif
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 

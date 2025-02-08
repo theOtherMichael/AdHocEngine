@@ -29,9 +29,13 @@ bool SetApiMode(ApiMode apiMode)
     case Engine::Graphics::ApiMode::Vulkan: Assert_NoEntry(); break;
     case Engine::Graphics::ApiMode::D3D11:
     {
+#if ADHOC_WINDOWS
         auto lock = std::unique_lock(currentGraphicsContextMutex);
         currentGraphicsContext.reset(nullptr);
         currentGraphicsContext = std::make_unique<D3D11GraphicsContext>();
+#else
+        Assert_NoEntry();
+#endif
     }
     break;
     case Engine::Graphics::ApiMode::D3D12: Assert_NoEntry(); break;

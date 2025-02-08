@@ -41,6 +41,9 @@
 		CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD162CFC3F45002F900C /* libEngine.dylib */; };
 		CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD182CFC3F53002F900C /* libEngineDev.dylib */; };
 		CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */; };
+		CE9324302D574DE900A05A63 /* libimguid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93242F2D574DE900A05A63 /* libimguid.a */; };
+		CE9324322D574E2200A05A63 /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9324312D574E2200A05A63 /* libimgui.a */; };
+		CE9324332D574E3200A05A63 /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9324312D574E2200A05A63 /* libimgui.a */; };
 		CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */; };
 		CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
 		CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
@@ -112,6 +115,8 @@
 		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
+		CE93242F2D574DE900A05A63 /* libimguid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimguid.a; path = "vcpkg_installed/uni-dynamic/debug/lib/libimguid.a"; sourceTree = "<group>"; };
+		CE9324312D574E2200A05A63 /* libimgui.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimgui.a; path = "vcpkg_installed/uni-dynamic/lib/libimgui.a"; sourceTree = "<group>"; };
 		CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = "<group>"; };
 		CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = "<group>"; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +137,7 @@
 				CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
 				CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */,
 				CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */,
+				CE9324332D574E3200A05A63 /* libimgui.a in Frameworks */,
 				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +150,7 @@
 				CE46BD032CFC33CD002F900C /* libfmt.11.0.2.dylib in Frameworks */,
 				CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */,
 				CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */,
+				CE9324322D574E2200A05A63 /* libimgui.a in Frameworks */,
 				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +163,7 @@
 				CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */,
 				CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */,
 				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
+				CE9324302D574DE900A05A63 /* libimguid.a in Frameworks */,
 				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +262,8 @@
 		CE4C6EE12B01AA500015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE9324312D574E2200A05A63 /* libimgui.a */,
+				CE93242F2D574DE900A05A63 /* libimguid.a */,
 				CE46BD162CFC3F45002F900C /* libEngine.dylib */,
 				CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */,
 				CE46BD182CFC3F53002F900C /* libEngineDev.dylib */,

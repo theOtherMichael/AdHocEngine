@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Engine/Graphics/GraphicsApiMode.h>
+#include <Engine/Graphics/GraphicsContext.h>
 
 namespace Editor::Graphics
 {

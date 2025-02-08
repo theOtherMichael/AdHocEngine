@@ -4,7 +4,9 @@
 
 #include <fmt/format.h>
 
+#include <dlfcn.h>
 #include <execinfo.h>
+#include <mach-o/dyld.h>
 
 #include <filesystem>
 #include <sstream>

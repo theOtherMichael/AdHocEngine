@@ -4,6 +4,7 @@
 
 #include <chrono>
 #include <future>
+#include <optional>
 #include <shared_mutex>
 
 namespace Engine
