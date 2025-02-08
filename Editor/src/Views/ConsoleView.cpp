@@ -80,7 +80,7 @@ void DrawConsoleView()
         for (auto& log : consoleLogs)
         {
             ImGui::PushStyleColor(ImGuiCol_Text, ColorOfLogLevel(log.logLevel));
-            ImGui::TextUnformatted(log.message._Unchecked_begin(), log.message._Unchecked_end());
+            ImGui::TextUnformatted(log.message.data());
             ImGui::PopStyleColor();
         }
 
