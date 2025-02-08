@@ -157,6 +157,7 @@
     <ClCompile Include="src\Core\EditorConfigurationMode.cpp" />
     <ClCompile Include="src\Core\EditorState.cpp" />
     <ClCompile Include="src\EditorEntryPoint.cpp" />
+    <ClCompile Include="src\Views\ConsoleView.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>
@@ -170,6 +171,7 @@
     <ClInclude Include="include\Editor\Core\EditorState.h" />
     <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h" />
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h" />
+    <ClInclude Include="src\Views\ConsoleView.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">

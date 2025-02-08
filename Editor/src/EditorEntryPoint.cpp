@@ -9,6 +9,8 @@
 #include <Engine/Graphics/GraphicsContext.h>
 #include <Engine/Window/GlfwLifetime.h>
 
+#include "Views/ConsoleView.h"
+
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
 #include <GLFW/glfw3.h>
@@ -23,13 +25,16 @@ namespace Console = Engine::Console;
 namespace Editor
 {
 
-static void NewFrame()
+static void Update()
 {
     ImGui_ImplDX11_NewFrame();
     ImGui_ImplGlfw_NewFrame();
     ImGui::NewFrame();
 
+    // TODO: Check recompile watch thread
+
     ImGui::ShowDemoWindow();
+    Views::DrawConsoleView();
 
     ImGui::Render();
 
@@ -64,7 +69,7 @@ static void OnGlfwFramebufferResize(GLFWwindow*, int width, int height)
 
 static void OnGlfwWindowSize(GLFWwindow* window, int width, int height)
 {
-    NewFrame();
+    Update();
 }
 
 ReloadOption EditorMain(int argc, char* argv[])
@@ -112,13 +117,12 @@ ReloadOption EditorMain(int argc, char* argv[])
 #endif
     }
 
+    auto logStream = Console::LogStream(Console::LogLevel::Log, Views::HandleConsoleViewLogs);
+
     while (!glfwWindowShouldClose(mainWindowPtr))
     {
         glfwPollEvents();
-
-        NewFrame();
-
-        // TODO: Check recompile watch thread
+        Update();
     }
 
     ImGui_ImplDX11_Shutdown();
