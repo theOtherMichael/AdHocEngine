@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../Base/BaseMisc.h"
 #include <Engine/Core/SymbolExportMacros.h>
 
 #include <malloc.h>

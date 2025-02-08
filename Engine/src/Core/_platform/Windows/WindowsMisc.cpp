@@ -1,5 +1,6 @@
 #include <Engine/Core/_platform/Windows/WindowsMisc.h>
 
+#include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Core/PlatformHelpers.h>
 
@@ -15,8 +16,21 @@
 static_assert(false);
 #endif
 
+namespace fs = std::filesystem;
+
 namespace Engine
 {
+
+fs::path GetExecutablePath()
+{
+    TCHAR rawPathToExecutable[MAX_PATH];
+    if (!GetModuleFileName(NULL, rawPathToExecutable, MAX_PATH))
+    {
+        Console::LogError("Failed to get path to executable! Error: {}", Windows::GetLastErrorMessage());
+        return fs::path();
+    }
+    return rawPathToExecutable;
+}
 
 std::string GetBacktrace()
 {

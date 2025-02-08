@@ -143,7 +143,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\bgfx.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\bx.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\bimg.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -195,7 +195,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XC
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\bgfx.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\bx.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\bimg.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -251,7 +251,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\bgfx.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\bx.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\bimg.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -293,6 +293,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\Engine\Common\ThreadSafeViews.h" />
     <ClInclude Include="include\Engine\Core\BacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\Console.h" />
     <ClInclude Include="include\Engine\Core\Assertions.h" />
@@ -304,6 +305,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
     <ClInclude Include="include\Engine\Core\PlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\_platform\Base\BaseBacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\_platform\Base\BaseDynamicLibrary.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Base\BaseMisc.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacBacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacDynamicLibrary.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h" />
@@ -315,8 +317,22 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformData.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\SymbolExportMacros.h" />
+    <ClInclude Include="include\Engine\Graphics\D3D11GraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\GraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\_platform\Base\BaseGraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\_platform\Mac\MacD3D11GraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.h" />
+    <ClInclude Include="include\Engine\Window\GlfwLifetime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Core\_platform\Mac\MacPlatformData.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\Core\_platform\Windows\WindowsBacktraceSymbolHandler.cpp" />
     <ClCompile Include="src\Core\Console.cpp" />
     <ClCompile Include="src\Core\Assertions.cpp" />
@@ -340,6 +356,8 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
     <ClCompile Include="src\Core\_platform\Windows\WindowsMisc.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformData.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />
+    <ClCompile Include="src\Graphics\GraphicsContext.cpp" />
+    <ClCompile Include="src\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>

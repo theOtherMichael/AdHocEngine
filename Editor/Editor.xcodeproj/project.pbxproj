@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0199E0EB46282AAF5304DED2 /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
+		0EFA0BBA7066A061821C41E8 /* GraphicsApiMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8590011EEB2C259568C017EF /* GraphicsApiMode.cpp */; };
+		0FDC65BDD00083FA89F6DD8B /* GraphicsApiMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 0552D0CED991413E4D661572 /* GraphicsApiMode.h */; };
 		1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
 		2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
 		32F38ACF158402CB6637F498 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
 		35B30732BD08EFFCDED96ADF /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
+		3CA174024EBE1A01CF9EB672 /* GraphicsApiMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 0552D0CED991413E4D661572 /* GraphicsApiMode.h */; };
+		3D1250B3436B79DEB2E8DC94 /* GraphicsApiMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8590011EEB2C259568C017EF /* GraphicsApiMode.cpp */; };
 		3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
 		5E50C7B5442772BB9D27DCFC /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
 		60E9FA63DBAF084E792F49B3 /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
@@ -19,6 +23,8 @@
 		6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
 		783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
 		96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
+		A38B54CDA0538BA1628109D5 /* GraphicsApiMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8590011EEB2C259568C017EF /* GraphicsApiMode.cpp */; };
+		A6C64A33AD498E3F759E2FD4 /* GraphicsApiMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 0552D0CED991413E4D661572 /* GraphicsApiMode.h */; };
 		A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
 		B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
 		B6A71A503DF87EB57E164FFC /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
@@ -82,12 +88,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0552D0CED991413E4D661572 /* GraphicsApiMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GraphicsApiMode.h; path = include/Editor/Graphics/GraphicsApiMode.h; sourceTree = SOURCE_ROOT; };
 		091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorEntryPoint.cpp; path = src/EditorEntryPoint.cpp; sourceTree = SOURCE_ROOT; };
 		482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorConfigurationMode.h; path = include/Editor/Core/EditorConfigurationMode.h; sourceTree = SOURCE_ROOT; };
 		5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorEntryPoint.h; path = include/Editor/Core/Internal/EditorEntryPoint.h; sourceTree = SOURCE_ROOT; };
 		5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorState.h; path = include/Editor/Core/EditorState.h; sourceTree = SOURCE_ROOT; };
 		694C820C0FE42FF4E7CB88CC /* EditorState.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorState.cpp; path = src/Core/EditorState.cpp; sourceTree = SOURCE_ROOT; };
+		8590011EEB2C259568C017EF /* GraphicsApiMode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicsApiMode.cpp; path = src/Graphics/GraphicsApiMode.cpp; sourceTree = SOURCE_ROOT; };
 		961F49B2A1FB826F2103F49F /* DllMain.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DllMain.cpp; path = src/_platform/Windows/DllMain.cpp; sourceTree = SOURCE_ROOT; };
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE327B0E2B1593400067EF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -156,6 +164,15 @@
 			path = src/_platform;
 			sourceTree = SOURCE_ROOT;
 		};
+		61EBF388DA50C88E972B4CCE /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				8590011EEB2C259568C017EF /* GraphicsApiMode.cpp */,
+			);
+			name = Graphics;
+			path = src/Graphics;
+			sourceTree = SOURCE_ROOT;
+		};
 		688B6DE88986951E7329E9E8 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				CED4DDB92D101EB000BAE96F /* Core */,
+				DAAADA8256D98CD4A1F4E762 /* Graphics */,
 			);
 			name = Editor;
 			path = include/Editor;
@@ -218,6 +236,7 @@
 			children = (
 				2D48CE9160294FF3325E5695 /* _platform */,
 				CEDDB0C62D1FCD3800EADB67 /* Core */,
+				61EBF388DA50C88E972B4CCE /* Graphics */,
 				0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */,
 			);
 			path = src;
@@ -260,6 +279,15 @@
 			);
 			name = Core;
 			path = src/Core;
+			sourceTree = SOURCE_ROOT;
+		};
+		DAAADA8256D98CD4A1F4E762 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				0552D0CED991413E4D661572 /* GraphicsApiMode.h */,
+			);
+			name = Graphics;
+			path = include/Editor/Graphics;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -362,6 +390,8 @@
 				DCFF2CA9339ABB2A17D719C3 /* EditorState.h in Sources */,
 				1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */,
 				96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */,
+				A38B54CDA0538BA1628109D5 /* GraphicsApiMode.cpp in Sources */,
+				A6C64A33AD498E3F759E2FD4 /* GraphicsApiMode.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +407,8 @@
 				32F38ACF158402CB6637F498 /* EditorState.h in Sources */,
 				6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */,
 				DF4390B90BB7AE79467DF845 /* MimallocNewDeleteOverride.cpp in Sources */,
+				0EFA0BBA7066A061821C41E8 /* GraphicsApiMode.cpp in Sources */,
+				0FDC65BDD00083FA89F6DD8B /* GraphicsApiMode.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +424,8 @@
 				6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */,
 				B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */,
 				2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */,
+				3D1250B3436B79DEB2E8DC94 /* GraphicsApiMode.cpp in Sources */,
+				3CA174024EBE1A01CF9EB672 /* GraphicsApiMode.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

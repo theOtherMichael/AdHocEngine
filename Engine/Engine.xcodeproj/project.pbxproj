@@ -10,69 +10,124 @@
 		0221FC7E13762403A8116672 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
 		03CE4123449EBBB7DFA83284 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		0890BC5797D77E2D2AF79AF3 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		09093DD63B2A1FBFD9534D61 /* GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */; };
+		0B52D2BD1ABB0837AF6DF0A5 /* ThreadSafeViews.h in Sources */ = {isa = PBXBuildFile; fileRef = DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */; };
+		0B757F4619A16C122F48A18A /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */; };
 		0B835018D39498AB6BFEF151 /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		0CFC45DC003D89BA1BEF2237 /* BaseGraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */; };
 		0DB82B87D29113E8CC0BBF79 /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
 		11236E826FC2E860CE8549E6 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
 		12BA6B93305F0D5847091659 /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		1310377D285BFAFF7A017995 /* D3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */; };
 		133F055E8F7A368EE52F22DC /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		13D8379092677C0325CC29C0 /* BaseGraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */; };
 		1656E136C8C1D35DE4A60B81 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		1A7C791F606D42BC7057A131 /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */; };
 		1B1F86B6B34CEDEEF641F557 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
+		1B9E41A01D09429CA1A13341 /* D3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */; };
 		1C3AC1D57E0E1349399B7DB6 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
 		1CF66C91DD0C29CE0586A740 /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
 		1EFD0D253332D1DF52670AAD /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
 		201504787408F2AD15FB0B0F /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
 		212BCE146B45DDF293D02B03 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
 		215AEFA9CD836AAFDDA882EB /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		26C1B42E1EF641768A4D3B69 /* GlfwLifetime.h in Sources */ = {isa = PBXBuildFile; fileRef = B08A89E061A7E0A8F321341E /* GlfwLifetime.h */; };
+		295CB9DBE4317B10FF9FADB1 /* WindowsD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */; };
 		2998B6917801A6DB3D9B8700 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		2E43DB698E046FF933C35FC0 /* GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */; };
+		3183CC5554175B131BA5D06E /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
+		33086155EECEB47341EFE263 /* BaseGraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */; };
+		3A43AD785C5F706FF05A642A /* WindowsD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */; };
+		3AFF3EC1DC383C8AFBC07B2C /* MacPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */; };
+		3BD8709CBF1D7DF88E990B42 /* D3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */; };
+		3BE628BB8A5C7A3E4D948AF4 /* GlfwLifetime.h in Sources */ = {isa = PBXBuildFile; fileRef = B08A89E061A7E0A8F321341E /* GlfwLifetime.h */; };
 		3C272A5EB21016E9B64A2350 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
+		3C80BC23B758AB15816D546A /* GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */; };
 		3E4B3978D567AEB037213195 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
 		3F5CE3FA47BFBEA90E3A9F5E /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
 		40F18DA894CE9E6670AAC283 /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		458ACE844F25ACE6B0F05330 /* BaseMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */; };
+		48459D92393BF1E2E5CD7D73 /* WindowsD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */; };
 		48AFD3ACF4D62B7FC7EBA560 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
 		4E341695022C2E5D426E5D2B /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
 		4E6CD616F18F8B8859BC3202 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		4E8ACB0430E931AC440D2FDC /* ThreadSafeViews.h in Sources */ = {isa = PBXBuildFile; fileRef = DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */; };
 		4F06889024D53B1F7F8A26E3 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
 		50D63B03B2AB0ECE9993EDDF /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		5105EEC67F8DF6C2B432E131 /* GlfwLifetime.h in Sources */ = {isa = PBXBuildFile; fileRef = B08A89E061A7E0A8F321341E /* GlfwLifetime.h */; };
 		5209D1A90B8DFAD74EB374D7 /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
 		533BBED14149C3DBA1DFBC4D /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
+		58122B7A88D435C2473C2452 /* ThreadSafeViews.h in Sources */ = {isa = PBXBuildFile; fileRef = DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */; };
 		595130EF3F3CED072C272E28 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
+		5E254D22E502195B303BDF59 /* GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */; };
 		62DD6C6F9524DC0E1D9B88F6 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		64461ED0B75ED26A7D5F18EB /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */; };
 		64E99E99D067E2EBE4B9321C /* BaseDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = 503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */; };
 		6681619184EAF22F5832A6B5 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
 		682DC67AC40F128D35650C5E /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
 		68616A035E5081D0EE21F5FE /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
 		6A747152A647F84013118D99 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		6AE3501AA1E45415605DE8C1 /* ThreadSafeViews.h in Sources */ = {isa = PBXBuildFile; fileRef = DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */; };
+		6AF32A110C19A9429F1B3AD6 /* WindowsD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */; };
+		6B6F61899851B221C44DDC86 /* GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */; };
+		6C74785F76C9D0314DAD50A3 /* MacPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */; };
+		6C7BE18E00275E0EF56FE2A0 /* MacPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */; };
+		6E8AA97C47B10C3FCFB24310 /* MacD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */; };
+		70658B0D0D32E017CF7804B7 /* MacPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */; };
 		706EAFB5805BDF80FD5F3037 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
 		71BEAB9C9793248154CD1F2F /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
 		738894A50FD1DA8207785F0F /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
 		7461AF79B89FA9B9799F940D /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
 		751208F6FA169F6BE8691FB8 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
+		776AB8BE5533F815137251B4 /* MacD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */; };
+		77AFFAC5694258F5D16FE1C5 /* MacPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */; };
+		780BDF342473F90F3A7EFA84 /* ThreadSafeViews.h in Sources */ = {isa = PBXBuildFile; fileRef = DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */; };
+		7968945EB6D3B1A087678804 /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
+		7996E61DFFEEDDC5A804A627 /* MacPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */; };
+		811712C990F4A86D67C85CDC /* ThreadSafeViews.h in Sources */ = {isa = PBXBuildFile; fileRef = DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */; };
+		820408C0A986F147B6B4068F /* GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */; };
+		84B98324D0E8D0F9AD5D9650 /* BaseMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */; };
 		8633DFCB6ED2A951F42539DF /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
 		8667A166B91929C4EA2EE413 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
+		8AB608618B120FCF945D7D61 /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
 		8B7822D87243517F6C48929A /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
 		8D93BB5A26DE6A408882DBA4 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		8DF8880BA1A655CED3DDCB19 /* BaseGraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */; };
 		8FF71408C1433077DD912206 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
 		9592B2316FFE4D3B828938D0 /* MacDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = E71D733E863B862252F24D52 /* MacDynamicLibrary.h */; };
 		9652B410B05B9FEF818B7E7F /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
 		9700433BFECD91BC05B5245F /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
+		97EBE5A601D884C9B31DAC57 /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */; };
 		991871A5987AE66183EAF09F /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
 		99E8FE87C0E96A2A9FE7C87B /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
 		9AF77ECD4EB166491E282811 /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
 		9C1FAE4B3B151BFF3055088B /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		9D5B38F97EDCA53D4011CB82 /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
+		9DCBD8D8F9891EB3C5D3667B /* BaseMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */; };
+		9EB7FD62E110561CD5F85D44 /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */; };
 		9FAA62505C357C2C201630EE /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		A007146EB60C6875EE07489E /* MacD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */; };
+		A12C3D3386D19E25B99493BD /* BaseMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */; };
 		A1A3EEAB68489E23F2377DFC /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
 		A6DEE2FEF356111B3F0711BD /* MacBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */; };
+		A8456D39B27247A2BDF46E3C /* D3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */; };
+		A944BC105481654151D42DA0 /* WindowsD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */; };
+		A96C40DC8C4288284ECCE1F5 /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
 		AB147F8EAFC81870710E7392 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
 		AEC8870566FB4631B83A0B1E /* WindowsBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */; };
+		AF4FFCDACBE6D0C8EFBAFF5F /* MacD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */; };
 		B1CE74CA703E918FF92A6157 /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
 		B281A5FD3E988F6031CF313F /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
+		B34E486AB148A5AC8CA23A3A /* MacD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */; };
 		B35FF32C5EAF46655C94EB68 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
+		B3621F0A8835345C770B28AB /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */; };
 		B50CCAA5F73521C089662E8E /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
 		B7E50F09C9F72D6884FEA46A /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
 		B84295B2045294664262925F /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		BBC50569065B4D8FFE666EE3 /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
 		BFC40F0EC72A137504EC13FD /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		C438BB27CEC80889370F3F65 /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		C977D85E73EF128596EACDB3 /* BaseGraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */; };
 		CB668F9A1034B4986CCB1FC5 /* WindowsBacktraceSymbolHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */; };
 		CE0D0DFD2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
 		CE0D0DFE2D325C1200BC9EB1 /* Assertions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */; };
@@ -137,14 +192,25 @@
 		CF86CA69327FBA8718868591 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
 		D045EF5430862A14A51ABD21 /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
 		D1EADCB719FDAA14DC03840B /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		D2D36B8549BF225574F19BD7 /* MacD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */; };
+		D3456EC9772BF23DD67FF21E /* GlfwLifetime.h in Sources */ = {isa = PBXBuildFile; fileRef = B08A89E061A7E0A8F321341E /* GlfwLifetime.h */; };
+		D477D992FBA8E66B73B64AE4 /* GlfwLifetime.h in Sources */ = {isa = PBXBuildFile; fileRef = B08A89E061A7E0A8F321341E /* GlfwLifetime.h */; };
 		DA52C0940A220EEDED2EDDB2 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
 		DC9397115F15FB350BEA0269 /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		DF511B4FDF9B673793D57C3D /* BaseGraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */; };
 		DF70935DBA79CC17A5CAB47C /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */; };
 		DFAB34AEEF0B114D88F056F7 /* BacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = 40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */; };
 		E68CE0C8DE050A331CE2E342 /* BaseBacktraceSymbolHandler.h in Sources */ = {isa = PBXBuildFile; fileRef = F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */; };
+		EAE1DACF23540588542D2369 /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
 		EB226059DE08C5B7FE365EC3 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
+		EBD88EB31A1334C1DBC5314B /* BaseMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */; };
 		ED6628C49A2B0FCEF551A2F2 /* WindowsDynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */; };
 		EE2E7632ED37C5D1173F90AF /* WindowsDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */; };
+		F50ABFBDB7F3D7EB210F0780 /* D3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */; };
+		F62B581D08462CC2E13BBD5C /* WindowsD3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */; };
+		F8CAAA9CBCE445542A0223CB /* D3D11GraphicsContext.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */; };
+		F8F239462556F4B570C28E05 /* GlfwLifetime.h in Sources */ = {isa = PBXBuildFile; fileRef = B08A89E061A7E0A8F321341E /* GlfwLifetime.h */; };
+		FFA7820A181D7C0CFAC1B336 /* BaseMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -191,15 +257,23 @@
 
 /* Begin PBXFileReference section */
 		2F63568507269A791291C086 /* WindowsBacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WindowsBacktraceSymbolHandler.h; path = include/Engine/Core/_platform/Windows/WindowsBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
+		2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MacD3D11GraphicsContext.h; path = include/Engine/Graphics/_platform/Mac/MacD3D11GraphicsContext.h; sourceTree = SOURCE_ROOT; };
 		3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		40D6414B063219FED91C26DA /* BacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BacktraceSymbolHandler.h; path = include/Engine/Core/BacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
 		503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseDynamicLibrary.h; path = include/Engine/Core/_platform/Base/BaseDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		7D6304D08A18521CC818C76D /* GraphicsContext.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = GraphicsContext.cpp; path = src/Graphics/GraphicsContext.cpp; sourceTree = SOURCE_ROOT; };
 		7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DllMain.cpp; path = src/_platform/Windows/DllMain.cpp; sourceTree = SOURCE_ROOT; };
+		82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WindowsD3D11GraphicsContext.h; path = include/Engine/Graphics/_platform/Windows/WindowsD3D11GraphicsContext.h; sourceTree = SOURCE_ROOT; };
 		824F3014549271C830FA6D87 /* WindowsBacktraceSymbolHandler.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsBacktraceSymbolHandler.cpp; path = src/Core/_platform/Windows/WindowsBacktraceSymbolHandler.cpp; sourceTree = SOURCE_ROOT; };
 		8D93B0BEE644482F2DC10AA3 /* WindowsDynamicLibrary.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsDynamicLibrary.cpp; path = src/Core/_platform/Windows/WindowsDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
 		96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MacDynamicLibrary.cpp; path = src/Core/_platform/Mac/MacDynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
+		9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = D3D11GraphicsContext.h; path = include/Engine/Graphics/D3D11GraphicsContext.h; sourceTree = SOURCE_ROOT; };
+		A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseGraphicsContext.h; path = include/Engine/Graphics/_platform/Base/BaseGraphicsContext.h; sourceTree = SOURCE_ROOT; };
+		B08A89E061A7E0A8F321341E /* GlfwLifetime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GlfwLifetime.h; path = include/Engine/Window/GlfwLifetime.h; sourceTree = SOURCE_ROOT; };
 		B461EBCC16E4DF7323256211 /* DynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DynamicLibrary.h; path = include/Engine/Core/DynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseMisc.h; path = include/Engine/Core/_platform/Base/BaseMisc.h; sourceTree = SOURCE_ROOT; };
 		C6269FC5E3BC251863BDE7B0 /* MacBacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MacBacktraceSymbolHandler.h; path = include/Engine/Core/_platform/Mac/MacBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
+		CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GraphicsContext.h; path = include/Engine/Graphics/GraphicsContext.h; sourceTree = SOURCE_ROOT; };
 		CE0D0DFB2D325C1200BC9EB1 /* Assertions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Assertions.cpp; path = src/Core/Assertions.cpp; sourceTree = SOURCE_ROOT; };
 		CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Console.cpp; path = src/Core/Console.cpp; sourceTree = SOURCE_ROOT; };
 		CE0D0E1A2D325CA200BC9EB1 /* Console.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Console.h; path = include/Engine/Core/Console.h; sourceTree = SOURCE_ROOT; };
@@ -237,7 +311,10 @@
 		CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsMisc.cpp; path = src/Core/_platform/Windows/WindowsMisc.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformData.cpp; path = src/Core/_platform/Windows/WindowsPlatformData.cpp; sourceTree = SOURCE_ROOT; };
+		D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsD3D11GraphicsContext.cpp; path = src/Graphics/_platform/Windows/WindowsD3D11GraphicsContext.cpp; sourceTree = SOURCE_ROOT; };
+		DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ThreadSafeViews.h; path = include/Engine/Common/ThreadSafeViews.h; sourceTree = SOURCE_ROOT; };
 		E71D733E863B862252F24D52 /* MacDynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MacDynamicLibrary.h; path = include/Engine/Core/_platform/Mac/MacDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
+		EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MacPlatformData.cpp; path = src/Core/_platform/Mac/MacPlatformData.cpp; sourceTree = SOURCE_ROOT; };
 		F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseBacktraceSymbolHandler.h; path = include/Engine/Core/_platform/Base/BaseBacktraceSymbolHandler.h; sourceTree = SOURCE_ROOT; };
 		FB2D8002D36CEA5A4D4E4D68 /* WindowsDynamicLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WindowsDynamicLibrary.h; path = include/Engine/Core/_platform/Windows/WindowsDynamicLibrary.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -303,6 +380,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030573A710F6823DBA5189EC /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				B08A89E061A7E0A8F321341E /* GlfwLifetime.h */,
+			);
+			name = Window;
+			path = include/Engine/Window;
+			sourceTree = SOURCE_ROOT;
+		};
+		09DC69BDF8BFA0AAF4088D1F /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				74FED9772E2C3D1D9FDDE271 /* Windows */,
+			);
+			name = _platform;
+			path = src/Graphics/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
 		34B8943EB0C0E2DD6C4462B9 /* _platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,14 +407,54 @@
 			path = src/_platform;
 			sourceTree = SOURCE_ROOT;
 		};
+		3505980C23273A97C2C0D7A6 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				2FA48F80E89CB0E85C017D94 /* MacD3D11GraphicsContext.h */,
+			);
+			name = Mac;
+			path = include/Engine/Graphics/_platform/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
+		3D39B50DA4C8C8D9F7AA49A7 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				9EDFAD4385578C28C62F14DB /* _platform */,
+				9EE14B6FB75150CC9B612864 /* D3D11GraphicsContext.h */,
+				CD5A0FC14DA4A414BD50FD82 /* GraphicsContext.h */,
+			);
+			name = Graphics;
+			path = include/Engine/Graphics;
+			sourceTree = SOURCE_ROOT;
+		};
+		44E6716087AE6E26FD1187E2 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				09DC69BDF8BFA0AAF4088D1F /* _platform */,
+				7D6304D08A18521CC818C76D /* GraphicsContext.cpp */,
+			);
+			name = Graphics;
+			path = src/Graphics;
+			sourceTree = SOURCE_ROOT;
+		};
 		662E211BA2A7C61D7FA9672B /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				F87221A85A8A1DC94BF577C0 /* BaseBacktraceSymbolHandler.h */,
 				503F1DE813DBA8F9708A835A /* BaseDynamicLibrary.h */,
+				C3AE8FE21E99368ADFDCA69B /* BaseMisc.h */,
 			);
 			name = Base;
 			path = include/Engine/Core/_platform/Base;
+			sourceTree = SOURCE_ROOT;
+		};
+		74FED9772E2C3D1D9FDDE271 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				D780AE7FD2946A6E534B1C2E /* WindowsD3D11GraphicsContext.cpp */,
+			);
+			name = Windows;
+			path = src/Graphics/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
 		771FBDA37E3571BD419B7B52 /* Windows */ = {
@@ -332,10 +467,33 @@
 			path = src/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
+		962D95D542FCBAE28B74A60B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				DE681C9172A393A94AA8F221 /* ThreadSafeViews.h */,
+			);
+			name = Common;
+			path = include/Engine/Common;
+			sourceTree = SOURCE_ROOT;
+		};
+		9EDFAD4385578C28C62F14DB /* _platform */ = {
+			isa = PBXGroup;
+			children = (
+				EC24075D342F1590B2886BE6 /* Base */,
+				3505980C23273A97C2C0D7A6 /* Mac */,
+				F5F63077A60B83E3C36F2140 /* Windows */,
+			);
+			name = _platform;
+			path = include/Engine/Graphics/_platform;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE0D0E182D325CA200BC9EB1 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				962D95D542FCBAE28B74A60B /* Common */,
 				CE0D0E192D325CA200BC9EB1 /* Core */,
+				3D39B50DA4C8C8D9F7AA49A7 /* Graphics */,
+				030573A710F6823DBA5189EC /* Window */,
 			);
 			name = Engine;
 			path = include/Engine;
@@ -434,6 +592,7 @@
 			children = (
 				34B8943EB0C0E2DD6C4462B9 /* _platform */,
 				CE4C6EBE2B0196A60015E51A /* Core */,
+				44E6716087AE6E26FD1187E2 /* Graphics */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -481,6 +640,7 @@
 			children = (
 				96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */,
 				CEDDB0E12D1FCE0D00EADB67 /* MacMisc.cpp */,
+				EDFD2E9B66D72B978231C074 /* MacPlatformData.cpp */,
 			);
 			name = Mac;
 			path = src/Core/_platform/Mac;
@@ -497,6 +657,24 @@
 			);
 			name = Windows;
 			path = src/Core/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC24075D342F1590B2886BE6 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A57AB7F379AAE438AA2D2528 /* BaseGraphicsContext.h */,
+			);
+			name = Base;
+			path = include/Engine/Graphics/_platform/Base;
+			sourceTree = SOURCE_ROOT;
+		};
+		F5F63077A60B83E3C36F2140 /* Windows */ = {
+			isa = PBXGroup;
+			children = (
+				82383E1DABF1F0414AE48131 /* WindowsD3D11GraphicsContext.h */,
+			);
+			name = Windows;
+			path = include/Engine/Graphics/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -664,6 +842,17 @@
 				0B835018D39498AB6BFEF151 /* WindowsBacktraceSymbolHandler.h in Sources */,
 				EB226059DE08C5B7FE365EC3 /* WindowsDynamicLibrary.h in Sources */,
 				03CE4123449EBBB7DFA83284 /* MimallocNewDeleteOverride.cpp in Sources */,
+				7996E61DFFEEDDC5A804A627 /* MacPlatformData.cpp in Sources */,
+				3183CC5554175B131BA5D06E /* GraphicsContext.cpp in Sources */,
+				97EBE5A601D884C9B31DAC57 /* WindowsD3D11GraphicsContext.cpp in Sources */,
+				4E8ACB0430E931AC440D2FDC /* ThreadSafeViews.h in Sources */,
+				F8CAAA9CBCE445542A0223CB /* D3D11GraphicsContext.h in Sources */,
+				09093DD63B2A1FBFD9534D61 /* GraphicsContext.h in Sources */,
+				8DF8880BA1A655CED3DDCB19 /* BaseGraphicsContext.h in Sources */,
+				AF4FFCDACBE6D0C8EFBAFF5F /* MacD3D11GraphicsContext.h in Sources */,
+				A944BC105481654151D42DA0 /* WindowsD3D11GraphicsContext.h in Sources */,
+				26C1B42E1EF641768A4D3B69 /* GlfwLifetime.h in Sources */,
+				84B98324D0E8D0F9AD5D9650 /* BaseMisc.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +879,17 @@
 				9FAA62505C357C2C201630EE /* WindowsBacktraceSymbolHandler.h in Sources */,
 				AB147F8EAFC81870710E7392 /* WindowsDynamicLibrary.h in Sources */,
 				BFC40F0EC72A137504EC13FD /* MimallocNewDeleteOverride.cpp in Sources */,
+				70658B0D0D32E017CF7804B7 /* MacPlatformData.cpp in Sources */,
+				8AB608618B120FCF945D7D61 /* GraphicsContext.cpp in Sources */,
+				9EB7FD62E110561CD5F85D44 /* WindowsD3D11GraphicsContext.cpp in Sources */,
+				0B52D2BD1ABB0837AF6DF0A5 /* ThreadSafeViews.h in Sources */,
+				1310377D285BFAFF7A017995 /* D3D11GraphicsContext.h in Sources */,
+				6B6F61899851B221C44DDC86 /* GraphicsContext.h in Sources */,
+				C977D85E73EF128596EACDB3 /* BaseGraphicsContext.h in Sources */,
+				A007146EB60C6875EE07489E /* MacD3D11GraphicsContext.h in Sources */,
+				295CB9DBE4317B10FF9FADB1 /* WindowsD3D11GraphicsContext.h in Sources */,
+				D3456EC9772BF23DD67FF21E /* GlfwLifetime.h in Sources */,
+				9DCBD8D8F9891EB3C5D3667B /* BaseMisc.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,6 +916,17 @@
 				40F18DA894CE9E6670AAC283 /* WindowsBacktraceSymbolHandler.h in Sources */,
 				0890BC5797D77E2D2AF79AF3 /* WindowsDynamicLibrary.h in Sources */,
 				1B1F86B6B34CEDEEF641F557 /* MimallocNewDeleteOverride.cpp in Sources */,
+				6C74785F76C9D0314DAD50A3 /* MacPlatformData.cpp in Sources */,
+				A96C40DC8C4288284ECCE1F5 /* GraphicsContext.cpp in Sources */,
+				B3621F0A8835345C770B28AB /* WindowsD3D11GraphicsContext.cpp in Sources */,
+				58122B7A88D435C2473C2452 /* ThreadSafeViews.h in Sources */,
+				1B9E41A01D09429CA1A13341 /* D3D11GraphicsContext.h in Sources */,
+				820408C0A986F147B6B4068F /* GraphicsContext.h in Sources */,
+				13D8379092677C0325CC29C0 /* BaseGraphicsContext.h in Sources */,
+				B34E486AB148A5AC8CA23A3A /* MacD3D11GraphicsContext.h in Sources */,
+				3A43AD785C5F706FF05A642A /* WindowsD3D11GraphicsContext.h in Sources */,
+				F8F239462556F4B570C28E05 /* GlfwLifetime.h in Sources */,
+				458ACE844F25ACE6B0F05330 /* BaseMisc.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +953,17 @@
 				AEC8870566FB4631B83A0B1E /* WindowsBacktraceSymbolHandler.h in Sources */,
 				1656E136C8C1D35DE4A60B81 /* WindowsDynamicLibrary.h in Sources */,
 				B84295B2045294664262925F /* MimallocNewDeleteOverride.cpp in Sources */,
+				77AFFAC5694258F5D16FE1C5 /* MacPlatformData.cpp in Sources */,
+				EAE1DACF23540588542D2369 /* GraphicsContext.cpp in Sources */,
+				64461ED0B75ED26A7D5F18EB /* WindowsD3D11GraphicsContext.cpp in Sources */,
+				811712C990F4A86D67C85CDC /* ThreadSafeViews.h in Sources */,
+				3BD8709CBF1D7DF88E990B42 /* D3D11GraphicsContext.h in Sources */,
+				5E254D22E502195B303BDF59 /* GraphicsContext.h in Sources */,
+				0CFC45DC003D89BA1BEF2237 /* BaseGraphicsContext.h in Sources */,
+				776AB8BE5533F815137251B4 /* MacD3D11GraphicsContext.h in Sources */,
+				6AF32A110C19A9429F1B3AD6 /* WindowsD3D11GraphicsContext.h in Sources */,
+				D477D992FBA8E66B73B64AE4 /* GlfwLifetime.h in Sources */,
+				EBD88EB31A1334C1DBC5314B /* BaseMisc.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -768,6 +990,17 @@
 				738894A50FD1DA8207785F0F /* WindowsBacktraceSymbolHandler.h in Sources */,
 				ED6628C49A2B0FCEF551A2F2 /* WindowsDynamicLibrary.h in Sources */,
 				595130EF3F3CED072C272E28 /* MimallocNewDeleteOverride.cpp in Sources */,
+				3AFF3EC1DC383C8AFBC07B2C /* MacPlatformData.cpp in Sources */,
+				9D5B38F97EDCA53D4011CB82 /* GraphicsContext.cpp in Sources */,
+				1A7C791F606D42BC7057A131 /* WindowsD3D11GraphicsContext.cpp in Sources */,
+				6AE3501AA1E45415605DE8C1 /* ThreadSafeViews.h in Sources */,
+				F50ABFBDB7F3D7EB210F0780 /* D3D11GraphicsContext.h in Sources */,
+				2E43DB698E046FF933C35FC0 /* GraphicsContext.h in Sources */,
+				DF511B4FDF9B673793D57C3D /* BaseGraphicsContext.h in Sources */,
+				D2D36B8549BF225574F19BD7 /* MacD3D11GraphicsContext.h in Sources */,
+				F62B581D08462CC2E13BBD5C /* WindowsD3D11GraphicsContext.h in Sources */,
+				3BE628BB8A5C7A3E4D948AF4 /* GlfwLifetime.h in Sources */,
+				FFA7820A181D7C0CFAC1B336 /* BaseMisc.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,6 +1027,17 @@
 				71BEAB9C9793248154CD1F2F /* WindowsBacktraceSymbolHandler.h in Sources */,
 				D1EADCB719FDAA14DC03840B /* WindowsDynamicLibrary.h in Sources */,
 				8667A166B91929C4EA2EE413 /* MimallocNewDeleteOverride.cpp in Sources */,
+				6C7BE18E00275E0EF56FE2A0 /* MacPlatformData.cpp in Sources */,
+				7968945EB6D3B1A087678804 /* GraphicsContext.cpp in Sources */,
+				0B757F4619A16C122F48A18A /* WindowsD3D11GraphicsContext.cpp in Sources */,
+				780BDF342473F90F3A7EFA84 /* ThreadSafeViews.h in Sources */,
+				A8456D39B27247A2BDF46E3C /* D3D11GraphicsContext.h in Sources */,
+				3C80BC23B758AB15816D546A /* GraphicsContext.h in Sources */,
+				33086155EECEB47341EFE263 /* BaseGraphicsContext.h in Sources */,
+				6E8AA97C47B10C3FCFB24310 /* MacD3D11GraphicsContext.h in Sources */,
+				48459D92393BF1E2E5CD7D73 /* WindowsD3D11GraphicsContext.h in Sources */,
+				5105EEC67F8DF6C2B432E131 /* GlfwLifetime.h in Sources */,
+				A12C3D3386D19E25B99493BD /* BaseMisc.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,16 +24,16 @@ enum class LogLevel
 
 typedef std::function<void(const LogLevel logLevel, const std::string& message)> LogEventCallback;
 
-class ENGINE_API LogStream
+class LogStream
 {
 public:
     LogStream(LogEventCallback callback) : LogStream(LogLevel::Log, callback) {}
-    LogStream(LogLevel verbosity, LogEventCallback callback);
+    ENGINE_API LogStream(LogLevel verbosity, LogEventCallback callback);
 
     LogStream(const LogStream&)            = delete;
     LogStream& operator=(const LogStream&) = delete;
 
-    ~LogStream();
+    ENGINE_API ~LogStream();
 
 private:
     LogEventCallback callback;

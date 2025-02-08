@@ -148,21 +148,11 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\_platform\Mac\MacPlatformMisc.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-    </ClCompile>
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformMisc.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resources\Win\resource.h" />
-    <ClInclude Include="src\Core\PlatformMisc.h" />
-    <ClInclude Include="src\Core\_platform\Base\BasePlatformMisc.h" />
-    <ClInclude Include="src\Core\_platform\Mac\MacPlatformMisc.h" />
-    <ClInclude Include="src\Core\_platform\Windows\WindowsPlatformMisc.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resources\Win\AdHocEngine.ico" />

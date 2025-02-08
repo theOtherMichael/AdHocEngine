@@ -82,12 +82,12 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include\bx\compat\msvc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\bgfx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\bx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\bimg.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\imguid.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\imguid.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -107,14 +107,14 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include\bx\compat\msvc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bgfx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bimg.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\imgui.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\imgui.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -134,14 +134,14 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include\bx\compat\msvc</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bgfx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bx.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\bimg.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\imgui.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\imgui.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -159,7 +159,6 @@
     <ClCompile Include="src\EditorEntryPoint.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
-    <ClCompile Include="vendor\bgfx-imgui\imgui_impl_bgfx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
@@ -171,9 +170,6 @@
     <ClInclude Include="include\Editor\Core\EditorState.h" />
     <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h" />
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h" />
-    <ClInclude Include="vendor\bgfx-imgui\fs_ocornut_imgui.bin.h" />
-    <ClInclude Include="vendor\bgfx-imgui\imgui_impl_bgfx.h" />
-    <ClInclude Include="vendor\bgfx-imgui\vs_ocornut_imgui.bin.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">

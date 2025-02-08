@@ -11,8 +11,10 @@
 		109964AEEAAA7C96AA1BD4C1 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 		11E90EC814B36581163C4ACB /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		13C2438DBD4A3FA74119FCF3 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
+		14C114D8F037C4396B34583A /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
 		1B5042261FE1940686C533B0 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		1C14CE87AA6A2ABB1AB070EC /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
+		20EA10723B3E224DC29F987A /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
 		23A8146F0A3CBCD6C05E1E1B /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		271D893CEE32DAE16696C13F /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		27BEF8AF3F28B25D6ACDFE46 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
@@ -21,11 +23,14 @@
 		37186556435C063070BFB57B /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
 		3EA03F7B5735B7A46B0128D8 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 		4558B695CF7A68354D025B3D /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
+		466F58E08E70EA179029B5D2 /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
+		500F37F67D7828F341F732C8 /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
 		5D3D4FB85CFADB66E579FB8D /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		61D3E4F13093B13B475F1F07 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 		73E354116B51A0A2937A5D20 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		7A680C78E660C4810A1FEA14 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
 		A18D33F234572993E48486FB /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */; };
+		A3277657DE87A1E7A3D06A58 /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
 		A84FF11709E260F8C4C9F381 /* ConsoleTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */; };
 		CE1031452D2A615900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
 		CE1031462D2A618900590717 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */; };
@@ -54,6 +59,7 @@
 		CEE433112D23B6190095A215 /* libEngineStaticD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */; };
 		D490D1EE145C805A7554E430 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 		DB5447419404FEA953020B92 /* AssertionTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */; };
+		DDB15EC58FC7C7A307DC5113 /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
 		DFBF79CB2E4E121ABB4337F3 /* GTMGoogleTestRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/Core/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
+		997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadSafeViewsTests.cpp; path = src/Common/ThreadSafeViewsTests.cpp; sourceTree = SOURCE_ROOT; };
 		C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AssertionTests.cpp; path = src/Core/AssertionTests.cpp; sourceTree = SOURCE_ROOT; };
 		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
@@ -199,6 +206,15 @@
 			path = src/_platform/Windows;
 			sourceTree = SOURCE_ROOT;
 		};
+		61132B82E99998DADBE75B31 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */,
+			);
+			name = Common;
+			path = src/Common;
+			sourceTree = SOURCE_ROOT;
+		};
 		CE0D0E092D325C6A00BC9EB1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				CE42937D2D2287D60020748F /* _platform */,
+				61132B82E99998DADBE75B31 /* Common */,
 				CE0D0E092D325C6A00BC9EB1 /* Core */,
 			);
 			path = src;
@@ -431,6 +448,7 @@
 				27BEF8AF3F28B25D6ACDFE46 /* ConsoleTests.cpp in Sources */,
 				1C14CE87AA6A2ABB1AB070EC /* GTMGoogleTestRunner.mm in Sources */,
 				13C2438DBD4A3FA74119FCF3 /* MimallocNewDeleteOverride.cpp in Sources */,
+				14C114D8F037C4396B34583A /* ThreadSafeViewsTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +460,7 @@
 				11E90EC814B36581163C4ACB /* ConsoleTests.cpp in Sources */,
 				3EA03F7B5735B7A46B0128D8 /* GTMGoogleTestRunner.mm in Sources */,
 				23A8146F0A3CBCD6C05E1E1B /* MimallocNewDeleteOverride.cpp in Sources */,
+				466F58E08E70EA179029B5D2 /* ThreadSafeViewsTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +472,7 @@
 				73E354116B51A0A2937A5D20 /* ConsoleTests.cpp in Sources */,
 				109964AEEAAA7C96AA1BD4C1 /* GTMGoogleTestRunner.mm in Sources */,
 				37186556435C063070BFB57B /* MimallocNewDeleteOverride.cpp in Sources */,
+				500F37F67D7828F341F732C8 /* ThreadSafeViewsTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +484,7 @@
 				A84FF11709E260F8C4C9F381 /* ConsoleTests.cpp in Sources */,
 				D490D1EE145C805A7554E430 /* GTMGoogleTestRunner.mm in Sources */,
 				A18D33F234572993E48486FB /* MimallocNewDeleteOverride.cpp in Sources */,
+				DDB15EC58FC7C7A307DC5113 /* ThreadSafeViewsTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +496,7 @@
 				2FDF7D44BAEE6ACE22FA5788 /* ConsoleTests.cpp in Sources */,
 				61D3E4F13093B13B475F1F07 /* GTMGoogleTestRunner.mm in Sources */,
 				CE7CD2090FC286BC74EBE0D8 /* MimallocNewDeleteOverride.cpp in Sources */,
+				20EA10723B3E224DC29F987A /* ThreadSafeViewsTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +508,7 @@
 				271D893CEE32DAE16696C13F /* ConsoleTests.cpp in Sources */,
 				DFBF79CB2E4E121ABB4337F3 /* GTMGoogleTestRunner.mm in Sources */,
 				4558B695CF7A68354D025B3D /* MimallocNewDeleteOverride.cpp in Sources */,
+				A3277657DE87A1E7A3D06A58 /* ThreadSafeViewsTests.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14636AA220BCC090ECF53EEE /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
 		30BF7C1635D5EE394C6F3A57 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 		38F742AD55168D4F59E564D4 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 		46C309C8038E309170FDF5B6 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
-		6649C4D16C7400BB343943F7 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
-		6B02E36F78201B4DAF447209 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
-		B08534C3FBC17B75D800BDE2 /* BasePlatformMisc.h in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */; };
 		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
@@ -52,14 +48,6 @@
 		CED4DDC72D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
 		CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
 		CED4DDD12D1020D400BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
-		CEDDB0B22D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
-		CEDDB0B32D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
-		CEDDB0B42D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
-		CEDDB0B52D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */; };
-		CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
-		CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
-		CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
-		CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */; };
 		E50EA45F27CD2F678F73C0DF /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 /* End PBXBuildFile section */
 
@@ -110,7 +98,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BasePlatformMisc.h; path = src/Core/_platform/Base/BasePlatformMisc.h; sourceTree = SOURCE_ROOT; };
 		CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,11 +122,6 @@
 		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacPlatformMisc.cpp; path = src/Core/_platform/Mac/MacPlatformMisc.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0A52D1FCCA000EADB67 /* MacPlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacPlatformMisc.h; path = src/Core/_platform/Mac/MacPlatformMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0A82D1FCCA000EADB67 /* WindowsPlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowsPlatformMisc.h; path = src/Core/_platform/Windows/WindowsPlatformMisc.h; sourceTree = SOURCE_ROOT; };
-		CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformMisc.cpp; path = src/Core/_platform/Windows/WindowsPlatformMisc.cpp; sourceTree = SOURCE_ROOT; };
-		CEDDB0B02D1FCCA000EADB67 /* PlatformMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlatformMisc.h; path = src/Core/PlatformMisc.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				6E5D78F485C711ACD9741822 /* _platform */,
-				CEDDB09C2D1FCCA000EADB67 /* Core */,
 				CED4DDAB2D101DFB00BAE96F /* main.cpp */,
 			);
 			path = src;
@@ -282,56 +263,6 @@
 				CE46BD152CFC33DC002F900C /* LauncherDev */,
 			);
 			name = Products;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB09C2D1FCCA000EADB67 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB09F2D1FCCA000EADB67 /* _platform */,
-				CEDDB0B02D1FCCA000EADB67 /* PlatformMisc.h */,
-			);
-			name = Core;
-			path = src/Core;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB09F2D1FCCA000EADB67 /* _platform */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0AD2D1FCCA000EADB67 /* Base */,
-				CEDDB0A02D1FCCA000EADB67 /* Mac */,
-				CEDDB0A62D1FCCA000EADB67 /* Windows */,
-			);
-			name = _platform;
-			path = src/Core/_platform;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0A02D1FCCA000EADB67 /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0A22D1FCCA000EADB67 /* MacPlatformMisc.cpp */,
-				CEDDB0A52D1FCCA000EADB67 /* MacPlatformMisc.h */,
-			);
-			name = Mac;
-			path = src/Core/_platform/Mac;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0A62D1FCCA000EADB67 /* Windows */ = {
-			isa = PBXGroup;
-			children = (
-				CEDDB0AA2D1FCCA000EADB67 /* WindowsPlatformMisc.cpp */,
-				CEDDB0A82D1FCCA000EADB67 /* WindowsPlatformMisc.h */,
-			);
-			name = Windows;
-			path = src/Core/_platform/Windows;
-			sourceTree = SOURCE_ROOT;
-		};
-		CEDDB0AD2D1FCCA000EADB67 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				9A17AE9C282049EFD73089F9 /* BasePlatformMisc.h */,
-			);
-			name = Base;
-			path = src/Core/_platform/Base;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -458,10 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0B32D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDD12D1020D400BAE96F /* main.cpp in Sources */,
-				CEDDB0C32D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				6649C4D16C7400BB343943F7 /* BasePlatformMisc.h in Sources */,
 				E50EA45F27CD2F678F73C0DF /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,10 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0B52D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDC72D1020D300BAE96F /* main.cpp in Sources */,
-				CEDDB0C52D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				B08534C3FBC17B75D800BDE2 /* BasePlatformMisc.h in Sources */,
 				46C309C8038E309170FDF5B6 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,10 +407,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0B42D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */,
-				CEDDB0C42D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				6B02E36F78201B4DAF447209 /* BasePlatformMisc.h in Sources */,
 				30BF7C1635D5EE394C6F3A57 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,10 +416,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEDDB0B22D1FCCA000EADB67 /* MacPlatformMisc.cpp in Sources */,
 				CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */,
-				CEDDB0C22D1FCCA000EADB67 /* WindowsPlatformMisc.cpp in Sources */,
-				14636AA220BCC090ECF53EEE /* BasePlatformMisc.h in Sources */,
 				38F742AD55168D4F59E564D4 /* MimallocNewDeleteOverride.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

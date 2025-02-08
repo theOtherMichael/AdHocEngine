@@ -3,23 +3,19 @@
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/BacktraceSymbolHandler.h>
 #include <Engine/Core/Console.h>
+#include <Engine/Core/Misc.h>
 #include <Engine/Core/PlatformData.h>
+#include <Engine/Graphics/D3D11GraphicsContext.h>
+#include <Engine/Graphics/GraphicsContext.h>
+#include <Engine/Window/GlfwLifetime.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
-#if ADHOC_WINDOWS
-    #define GLFW_EXPOSE_NATIVE_WIN32
-#elif ADHOC_MACOS
-    #define GLFW_EXPOSE_NATIVE_COCOA
-#endif
 #include <GLFW/glfw3.h>
-#include <GLFW/glfw3native.h>
 #pragma clang diagnostic pop
 
-#include <bgfx-imgui/imgui_impl_bgfx.h>
-#include <bgfx/bgfx.h>
-#include <bgfx/platform.h>
 #include <imgui.h>
+#include <imgui_impl_dx11.h>
 #include <imgui_impl_glfw.h>
 
 namespace Console = Engine::Console;
@@ -27,107 +23,109 @@ namespace Console = Engine::Console;
 namespace Editor
 {
 
-constexpr bgfx::ViewId kClearView = 0;
+static void NewFrame()
+{
+    ImGui_ImplDX11_NewFrame();
+    ImGui_ImplGlfw_NewFrame();
+    ImGui::NewFrame();
+
+    ImGui::ShowDemoWindow();
+
+    ImGui::Render();
+
+    // TODO: Handle other backends
+    const float clearColor[4] = {0.1f, 0.1f, 0.1f, 1.0f};
+
+    auto dx11Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3D11GraphicsContext>();
+    dx11Context->pd3dDeviceContext->OMSetRenderTargets(1, &dx11Context->mainRenderTargetView, nullptr);
+    dx11Context->pd3dDeviceContext->ClearRenderTargetView(dx11Context->mainRenderTargetView, clearColor);
+    ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
+    ImGuiIO& io = ImGui::GetIO();
+    if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+    {
+        ImGui::UpdatePlatformWindows();
+        ImGui::RenderPlatformWindowsDefault();
+    }
+
+    dx11Context->Present();
+}
 
 static void OnGlfwError(int error, const char* description)
 {
     Console::LogError("GLFW error {}: {}", error, description);
 }
 
-static void OnGlfwResize(GLFWwindow* window, int width, int height)
+static void OnGlfwFramebufferResize(GLFWwindow*, int width, int height)
 {
-    bgfx::reset((uint32_t)width, (uint32_t)height, BGFX_RESET_VSYNC);
-    bgfx::setViewRect(kClearView, 0, 0, bgfx::BackbufferRatio::Equal);
+    auto context = Engine::Graphics::GetMutableContext();
+    context->OnFramebufferResize(width, height);
+}
+
+static void OnGlfwWindowSize(GLFWwindow* window, int width, int height)
+{
+    NewFrame();
 }
 
 ReloadOption EditorMain(int argc, char* argv[])
 {
-    Engine::InitializePlatformData();
+    Engine::InitializeProcessInfo();
     auto symbolHandler = Engine::BacktraceSymbolHandler{};
 
     // TODO: Reimplement the recompile watch thread
 
     glfwSetErrorCallback(OnGlfwError);
 
-    if (!glfwInit())
-        Console::LogFatal("glfwInit() failure!");
+    auto glfwLifetime = Engine::Window::GlfwLifetime{};
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     GLFWwindow* mainWindowPtr = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
+    Assert_Ne(fmt::ptr(mainWindowPtr), nullptr);
+    Engine::SetNativeWindowHandle(mainWindowPtr);
 
-    if (!mainWindowPtr)
-    {
-        glfwTerminate();
-        Console::LogFatal("glfwCreateWindow() failure!");
-    }
+    auto graphicsApiLifetime = Engine::Graphics::ApiLifetime{};
+    Engine::Graphics::SetApiMode(Engine::Graphics::ApiMode::D3D11);
 
-    glfwSetWindowSizeCallback(mainWindowPtr, OnGlfwResize);
-
-    // This prevents bgfx from starting its own render thread
-    bgfx::renderFrame();
-
-    bgfx::Init init;
-#if ADHOC_MACOS
-    init.platformData.nwh = glfwGetCocoaWindow(mainWindowPtr);
-#elif ADHOC_WINDOWS
-    init.platformData.nwh = glfwGetWin32Window(mainWindowPtr);
-#endif
-
-    int width, height;
-    glfwGetWindowSize(mainWindowPtr, &width, &height);
-    init.resolution.width  = static_cast<uint32_t>(width);
-    init.resolution.height = static_cast<uint32_t>(height);
-    init.resolution.reset  = BGFX_RESET_VSYNC;
-
-    Assert_True(bgfx::init(init));
-
-    bgfx::setViewClear(kClearView, BGFX_CLEAR_COLOR, 0xFFFFFFFF);
-    bgfx::setViewRect(kClearView, 0, 0, bgfx::BackbufferRatio::Equal);
+    glfwSetFramebufferSizeCallback(mainWindowPtr, OnGlfwFramebufferResize);
+    glfwSetWindowSizeCallback(mainWindowPtr, OnGlfwWindowSize);
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
+
+    auto imguiIniFilePath      = Engine::GetExecutablePath().parent_path() / "imgui.ini";
+    auto imguiIniFilePathAsStr = imguiIniFilePath.string();
+
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+    io.IniFilename = imguiIniFilePathAsStr.c_str();
 
-    ImGui_ImplGlfw_InitForOther(mainWindowPtr, true);
-    ImGui_Implbgfx_Init(kClearView);
+    {
+// TODO: Handle other backends
+#if ADHOC_MACOS
+        // Metal goes here (for now)
+#elif ADHOC_WINDOWS
+        auto dx11Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3D11GraphicsContext>();
+        ImGui_ImplGlfw_InitForOther(mainWindowPtr, true);
+        ImGui_ImplDX11_Init(dx11Context->pd3dDevice, dx11Context->pd3dDeviceContext);
+#endif
+    }
 
     while (!glfwWindowShouldClose(mainWindowPtr))
     {
         glfwPollEvents();
 
+        NewFrame();
+
         // TODO: Check recompile watch thread
-
-        bgfx::touch(kClearView);
-
-        ImGui_Implbgfx_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-
-        ImGui::ShowDemoWindow(); // GUI stuff here
-
-        ImGui::Render();
-        ImGui_Implbgfx_RenderDrawLists(ImGui::GetDrawData());
-        
-        if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
-        {
-            ImGui::UpdatePlatformWindows();
-            ImGui::RenderPlatformWindowsDefault();
-        }
-
-        bgfx::frame();
     }
 
-    ImGui_Implbgfx_Shutdown();
+    ImGui_ImplDX11_Shutdown();
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 
-    bgfx::shutdown();
-    glfwTerminate();
-
     return ReloadOption{.isReloadRequested = false};
-}
+} // namespace Editor
 
 } // namespace Editor

@@ -5,7 +5,15 @@
       "name": "imgui",
       "features": [
         "docking-experimental",
-        "glfw-binding"
+        "glfw-binding",
+        {
+          "name": "dx11-binding",
+          "platform": "windows"
+        },
+        {
+          "name": "metal-binding",
+          "platform": "osx"
+        }
       ]
     }
   ]

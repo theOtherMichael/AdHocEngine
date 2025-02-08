@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../Base/BaseMisc.h"
+
 #include <alloca.h>
 
 #include <string>

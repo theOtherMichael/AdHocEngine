@@ -246,6 +246,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Common\ThreadSafeViewsTests.cpp" />
     <ClCompile Include="src\Core\ConsoleTests.cpp" />
     <ClCompile Include="src\Core\AssertionTests.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp">

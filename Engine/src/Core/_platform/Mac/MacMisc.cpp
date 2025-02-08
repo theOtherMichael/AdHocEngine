@@ -6,6 +6,7 @@
 
 #include <execinfo.h>
 
+#include <filesystem>
 #include <sstream>
 #include <string>
 
@@ -13,8 +14,31 @@
 static_assert(false);
 #endif
 
+namespace fs = std::filesystem;
+
 namespace Engine
 {
+
+fs::path GetExecutablePath()
+{
+    constexpr auto maxPathBufferSize = PATH_MAX + 1;
+    char rawPathToExecutable[maxPathBufferSize];
+
+    uint32_t pathBufferLength = maxPathBufferSize;
+    if (_NSGetExecutablePath(rawPathToExecutable, &pathBufferLength) != 0)
+    {
+        Console::LogError("Failed to get path to launcher!");
+        return fs::path();
+    }
+
+    char realRawPathToExecutable[maxPathBufferSize];
+    if (realpath(rawPathToExecutable, realRawPathToExecutable) == NULL)
+    {
+        Console::LogError("Failed to resolve real path to launcher!");
+        return fs::path();
+    }
+    return realRawPathToExecutable;
+}
 
 std::string GetBacktrace()
 {

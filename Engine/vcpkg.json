@@ -8,7 +8,6 @@
       ]
     },
     "fmt",
-    "glfw3",
-    "bgfx"
+    "glfw3"
   ]
 }
