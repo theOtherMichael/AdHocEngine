@@ -21,12 +21,15 @@
 		3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
 		5E50C7B5442772BB9D27DCFC /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
 		60E9FA63DBAF084E792F49B3 /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
+		637074F57FC3A3677401C117 /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
 		6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
 		6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
+		749C1734FD82D005E66EBC05 /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
 		783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
 		88E054F2A5EC804BACE05201 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
 		8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
 		96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
+		9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
 		A38B54CDA0538BA1628109D5 /* GraphicsApiMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8590011EEB2C259568C017EF /* GraphicsApiMode.cpp */; };
 		A6C64A33AD498E3F759E2FD4 /* GraphicsApiMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 0552D0CED991413E4D661572 /* GraphicsApiMode.h */; };
 		A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
@@ -100,6 +103,7 @@
 		0552D0CED991413E4D661572 /* GraphicsApiMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GraphicsApiMode.h; path = include/Editor/Graphics/GraphicsApiMode.h; sourceTree = SOURCE_ROOT; };
 		091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorEntryPoint.cpp; path = src/EditorEntryPoint.cpp; sourceTree = SOURCE_ROOT; };
+		289131C67943EE01B31D399A /* imuserconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imuserconfig.h; path = include/imuserconfig.h; sourceTree = SOURCE_ROOT; };
 		482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorConfigurationMode.h; path = include/Editor/Core/EditorConfigurationMode.h; sourceTree = SOURCE_ROOT; };
 		507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ConsoleView.h; path = src/Views/ConsoleView.h; sourceTree = SOURCE_ROOT; };
 		5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorEntryPoint.h; path = include/Editor/Core/Internal/EditorEntryPoint.h; sourceTree = SOURCE_ROOT; };
@@ -233,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4C6EA32B0196810015E51A /* Editor */,
+				289131C67943EE01B31D399A /* imuserconfig.h */,
 			);
 			path = include;
 			sourceTree = SOURCE_ROOT;
@@ -423,6 +428,7 @@
 				A6C64A33AD498E3F759E2FD4 /* GraphicsApiMode.h in Sources */,
 				2311AC816C6711593318D752 /* ConsoleView.cpp in Sources */,
 				88E054F2A5EC804BACE05201 /* ConsoleView.h in Sources */,
+				749C1734FD82D005E66EBC05 /* imuserconfig.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +448,7 @@
 				0FDC65BDD00083FA89F6DD8B /* GraphicsApiMode.h in Sources */,
 				8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */,
 				16A3FD8680EE492D1A8A3F11 /* ConsoleView.h in Sources */,
+				637074F57FC3A3677401C117 /* imuserconfig.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +468,7 @@
 				3CA174024EBE1A01CF9EB672 /* GraphicsApiMode.h in Sources */,
 				EDDE8849890B7E377FABA808 /* ConsoleView.cpp in Sources */,
 				E78BB3583E31106A5151C392 /* ConsoleView.h in Sources */,
+				9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
