@@ -1,20 +1,4 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
-  "dependencies": [
-    {
-      "name": "imgui",
-      "features": [
-        "docking-experimental",
-        "glfw-binding",
-        {
-          "name": "dx11-binding",
-          "platform": "windows"
-        },
-        {
-          "name": "metal-binding",
-          "platform": "osx"
-        }
-      ]
-    }
-  ]
+  "dependencies": []
 }

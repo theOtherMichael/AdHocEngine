@@ -82,12 +82,12 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>D3d11.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\imguid.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -98,6 +98,20 @@
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>IF NOT EXIST "$(ProjectDir)vendor\imgui" git submodule update --init --recursive
+RMDIR /S /Q "$(ProjectDir)vendor\imgui_copied_headers"
+
+MKDIR "$(ProjectDir)vendor\imgui_copied_headers" 2&gt;nul
+XCOPY "$(ProjectDir)vendor\imgui\*.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+
+XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_dx11.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_glfw.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copying Dear ImGui headers...</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -107,14 +121,14 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\imgui.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -125,6 +139,20 @@
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>IF NOT EXIST "$(ProjectDir)vendor\imgui" git submodule update --init --recursive
+RMDIR /S /Q "$(ProjectDir)vendor\imgui_copied_headers"
+
+MKDIR "$(ProjectDir)vendor\imgui_copied_headers" 2&gt;nul
+XCOPY "$(ProjectDir)vendor\imgui\*.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+
+XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_dx11.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_glfw.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copying Dear ImGui headers...</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <ClCompile>
@@ -134,14 +162,14 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\imgui.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -152,6 +180,20 @@
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>IF NOT EXIST "$(ProjectDir)vendor\imgui" git submodule update --init --recursive
+RMDIR /S /Q "$(ProjectDir)vendor\imgui_copied_headers"
+
+MKDIR "$(ProjectDir)vendor\imgui_copied_headers" 2&gt;nul
+XCOPY "$(ProjectDir)vendor\imgui\*.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+
+XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_dx11.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_glfw.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
+XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Copying Dear ImGui headers...</Message>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\EditorConfigurationMode.cpp" />
@@ -160,6 +202,13 @@
     <ClCompile Include="src\Views\ConsoleView.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_dx11.cpp" />
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="vendor\imgui\imgui.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
@@ -172,6 +221,14 @@
     <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h" />
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h" />
     <ClInclude Include="src\Views\ConsoleView.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="vendor\imgui\imstb_truetype.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">

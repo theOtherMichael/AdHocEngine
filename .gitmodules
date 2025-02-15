@@ -1,3 +1,6 @@
 [submodule "vcpkg"]
 	path = vcpkg
 	url = https://github.com/microsoft/vcpkg.git
+[submodule "vendor/imgui"]
+	path = Editor/vendor/imgui
+	url = https://github.com/ocornut/imgui.git
