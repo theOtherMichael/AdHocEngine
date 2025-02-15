@@ -248,6 +248,12 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)scripts\InstallWindowsDependencies.bat</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="vendor\imgui\misc\debuggers\imgui.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vendor\imgui\misc\debuggers\imgui.natstepfilter" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
