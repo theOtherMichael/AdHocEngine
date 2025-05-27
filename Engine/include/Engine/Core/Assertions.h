@@ -1,10 +1,8 @@
 #pragma once
 
+#include "Console.h"
 #include "Misc.h"
-
-#include <Engine/Core/Console.h>
-#include <Engine/Core/Misc.h>
-#include <Engine/Core/SymbolExportMacros.h>
+#include "SymbolExportMacros.h"
 
 #include <source_location>
 #include <string_view>
