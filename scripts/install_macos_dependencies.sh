@@ -187,7 +187,7 @@ install_dependencies_for_project_and_linkage() {
     if ! "$vcpkg" install \
         --no-print-usage \
         --overlay-triplets="./triplets" \
-        --triplet=x64-osx-$linkage_flag \
+        --triplet=x64-osx-$linkage_flag-adhoc \
         --x-manifest-root="$project_dir" \
         --x-install-root="$project_dir/vcpkg_installed/x64-$linkage_flag"; then
         echo "Error running vcpkg on triplet x64-osx-$linkage_flag!"
@@ -198,7 +198,7 @@ install_dependencies_for_project_and_linkage() {
     if ! "$vcpkg" install \
         --no-print-usage \
         --overlay-triplets="./triplets" \
-        --triplet=arm64-osx-$linkage_flag \
+        --triplet=arm64-osx-$linkage_flag-adhoc \
         --x-manifest-root="$project_dir" \
         --x-install-root="$project_dir/vcpkg_installed/arm64-$linkage_flag"; then
         echo "Error running vcpkg on triplet arm64-osx-$linkage_flag!"

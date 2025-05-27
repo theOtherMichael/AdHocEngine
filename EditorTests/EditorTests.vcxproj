@@ -56,20 +56,20 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EditorD.lib;$(SolutionDir)build\Debug\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EditorD.lib;$(SolutionDir)build\Debug\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
 XCOPY $(SolutionDir)build\Engine\ $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\debug\bin $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -80,22 +80,22 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Editor.lib;$(SolutionDir)build\Release\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Editor.lib;$(SolutionDir)build\Release\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
 XCOPY $(SolutionDir)build\Engine\ $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -106,22 +106,22 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EditorDev.lib;$(SolutionDir)build\Dev\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EditorDev.lib;$(SolutionDir)build\Dev\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Editor\ $(OutputPath) /S /C /I /F /R /K /Y
 XCOPY $(SolutionDir)build\Engine\ $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+XCOPY $(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin $(OutputPath) /S /C /I /F /R /K /Y
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>

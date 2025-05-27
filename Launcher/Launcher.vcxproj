@@ -89,12 +89,12 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;_DEBUG;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)build\Debug\EditorD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)build\Debug\EditorD.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
@@ -110,14 +110,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)build\Release\Editor.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)build\Release\Editor.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
@@ -133,14 +133,14 @@
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\include;$(ProjectDir)src</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)build\Dev\EditorDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)build\Dev\EditorDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>

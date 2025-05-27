@@ -83,17 +83,17 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Debug\ $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -105,17 +105,19 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EngineStaticD.lib;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\debug\lib\fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EngineStaticD.lib;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\debug\lib\fmtd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Message>Deleting EditorTestsD</Message>
-      <Command>IF EXIST "$(ProjectDir)..\build\EditorTests\Debug\EditorTestsD.exe" DEL "$(ProjectDir)..\build\EditorTests\Debug\EditorTestsD.exe"</Command>
+      <Command>ECHO "Deleting EditorTestsD so Test Explorer doesn't show dynamic tests"
+IF EXIST "$(ProjectDir)..\build\EditorTests\Debug\EditorTestsD.exe" DEL "$(ProjectDir)..\build\EditorTests\Debug\EditorTestsD.exe"
+ECHO "Copying gtest DLL"
+XCOPY $(ProjectDir)\vcpkg_installed\static\x64-windows-static-md-adhoc\debug\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -125,19 +127,19 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\debug\bin\ $(OutputPath)
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Release\ $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -148,19 +150,21 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\EngineStatic.lib;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\EngineStatic.lib;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Message>Deleting EditorTests</Message>
-      <Command>IF EXIST "$(ProjectDir)..\build\EditorTests\Release\EditorTests.exe" DEL "$(ProjectDir)..\build\EditorTests\Release\EditorTests.exe"</Command>
+      <Command>ECHO "Deleting EditorTests so Test Explorer doesn't show dynamic tests"
+IF EXIST "$(ProjectDir)..\build\EditorTests\Release\EditorTests.exe" DEL "$(ProjectDir)..\build\EditorTests\Release\EditorTests.exe"
+ECHO "Copying gtest DLL"
+XCOPY $(ProjectDir)\vcpkg_installed\static\x64-windows-static-md-adhoc\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
@@ -170,19 +174,19 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
       <Command>XCOPY $(SolutionDir)build\Dev\ $(OutputPath) /S /C /I /F /R /K /Y
-XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
+XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
       <Message>Copying DLL dependencies</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
@@ -193,19 +197,21 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows\bin\ $(OutputPath) /S /C
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EngineStaticDev.lib;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EngineStaticDev.lib;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\lib\fmt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent />
     <PostBuildEvent>
-      <Message>Deleting EditorTestsDev</Message>
-      <Command>IF EXIST "$(ProjectDir)..\build\EditorTests\Dev\EditorTestsDev.exe" DEL "$(ProjectDir)..\build\EditorTests\Dev\EditorTestsDev.exe"</Command>
+      <Command>ECHO "Deleting EditorTestsDev so Test Explorer doesn't show dynamic tests"
+IF EXIST "$(ProjectDir)..\build\EditorTests\Dev\EditorTestsDev.exe" DEL "$(ProjectDir)..\build\EditorTests\Dev\EditorTestsDev.exe"
+ECHO "Copying gtest DLL"
+XCOPY $(ProjectDir)\vcpkg_installed\static\x64-windows-static-md-adhoc\bin\ $(OutputPath) /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -118,7 +118,12 @@ set IS_INSTALL_FAILED=false
 
 if "!IS_DYNAMIC_INSTALL_REQUIRED!"=="true" (
     echo Installing dependencies ^(dynamic linkage^)...
-    call "!VCPKG!" install --no-print-usage --triplet=x64-windows --x-install-root=vcpkg_installed\dynamic
+    call "!VCPKG!" install ^
+        --no-print-usage ^
+        --overlay-triplets=..\triplets ^
+        --triplet=x64-windows-adhoc ^
+        --x-install-root=vcpkg_installed\dynamic
+
     if errorlevel 1 (
         echo Error running vcpkg on triplet x64-windows!
         set IS_INSTALL_FAILED=true
@@ -127,7 +132,12 @@ if "!IS_DYNAMIC_INSTALL_REQUIRED!"=="true" (
 
 if "!IS_STATIC_INSTALL_REQUIRED!"=="true" (
     echo Installing dependencies ^(static linkage^)...
-    call "!VCPKG!" install --no-print-usage --triplet=x64-windows-static-md --x-install-root=vcpkg_installed\static
+    call "!VCPKG!" install ^
+        --no-print-usage ^
+        --overlay-triplets=..\triplets ^
+        --triplet=x64-windows-static-md-adhoc ^
+        --x-install-root=vcpkg_installed\static
+
     if errorlevel 1 (
         echo Error running vcpkg on triplet x64-windows-static-md!
         set IS_INSTALL_FAILED=true

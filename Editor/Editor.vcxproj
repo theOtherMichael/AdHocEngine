@@ -82,19 +82,19 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>D3d11.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\glfw3dll.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>IF EXIST "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\debug\bin" XCOPY "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\debug\bin" "$(OutputPath)" /S /C /I /F /R /K /Y
+      <Command>IF EXIST "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin" XCOPY "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin" "$(OutputPath)" /S /C /I /F /R /K /Y
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
@@ -121,21 +121,21 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>IF EXIST "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin" "$(OutputPath)" /S /C /I /F /R /K /Y
+      <Command>IF EXIST "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XCOPY "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\bin" "$(OutputPath)" /S /C /I /F /R /K /Y
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
@@ -162,21 +162,21 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent />
     <PostBuildEvent />
     <PostBuildEvent>
-      <Command>IF EXIST "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows\bin" "$(OutputPath)" /S /C /I /F /R /K /Y
+      <Command>IF EXIST "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XCOPY "$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\bin" "$(OutputPath)" /S /C /I /F /R /K /Y
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>

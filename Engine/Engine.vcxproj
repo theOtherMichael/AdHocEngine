@@ -138,12 +138,12 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\mimalloc-debug.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -157,7 +157,7 @@
       <Command>ECHO Building static engine library...
 msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"
 ECHO Copying vcpkg dependencies...
-IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
+IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">
@@ -166,7 +166,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XC
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=0;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -188,14 +188,14 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XC
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -209,7 +209,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\debug\bin" XC
       <Command>ECHO Building static engine library...
 msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"
 ECHO Copying vcpkg dependencies...
-IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
+IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">
@@ -220,7 +220,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -244,14 +244,14 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\mimalloc.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -265,7 +265,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
       <Command>ECHO Building static engine library...
 msbuild "$(ProjectPath)" /p:Configuration=Static$(Configuration) /p:Platform="$(Platform)"
 ECHO Copying vcpkg dependencies...
-IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
+IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XCOPY "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" "$(OutputPath)" /S /C /I /F /R /K /Y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">
@@ -276,7 +276,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows\bin" XCOPY "$
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
