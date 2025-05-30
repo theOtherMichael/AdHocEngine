@@ -24,6 +24,13 @@
 
 namespace Engine::Internal
 {
+
+ENGINE_API void LogNullAssertionFailure(const bool isFatal,
+                                        const std::string_view assertionExpression,
+                                        const bool expectedNull,
+                                        const std::string_view fmtMessage,
+                                        const std::source_location location);
+
 ENGINE_API void LogBooleanAssertionFailure(const bool isFatal,
                                            const std::string_view assertionExpression,
                                            const bool expectedResult,
@@ -48,6 +55,21 @@ ENGINE_API void LogAssertionTrap(const bool isFatal,
 ENGINE_API void TriggerFatalErrorResponse();
 
 } // namespace Engine::Internal
+
+#define ADHOC_ASSERT_IMPLEMENTATION_NULL(isFatal, expression, expectedNull, fmtMessage)                                \
+    {                                                                                                                  \
+        decltype(expression) expressionResult = expression;                                                            \
+        if (expectedNull && expressionResult != nullptr || !expectedNull && expressionResult == nullptr)               \
+        {                                                                                                              \
+            ::Engine::Internal::LogNullAssertionFailure(                                                               \
+                isFatal, STRINGIFY(expression), expectedNull, fmtMessage, std::source_location::current());            \
+                                                                                                                       \
+            DEBUG_BREAK();                                                                                             \
+                                                                                                                       \
+            if (isFatal)                                                                                               \
+                ::Engine::Internal::TriggerFatalErrorResponse();                                                       \
+        }                                                                                                              \
+    }
 
 #define ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(isFatal, expression, expected, fmtMessage)                                 \
     {                                                                                                                  \
@@ -118,6 +140,18 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 // Non-fmt versions
 
+    #define Assert_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define Assert_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
+
+    #define Expect_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define Expect_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
+
+    #define AssertEval_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define AssertEval_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
+
+    #define ExpectEval_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define ExpectEval_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
+
     #define Assert_True(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
     #define Assert_False(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, "")
 
@@ -177,6 +211,26 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define Expect_NoReentry() ADHOC_ASSERT_IMPLEMENTATION_NO_REENTRY(false, "Call to Assert_NoReentry()", "")
 
 // Fmt versions
+
+    #define AssertF_Null(pointer, fmtString, ...)                                                                      \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define AssertF_NotNull(pointer, fmtString, ...)                                                                   \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
+
+    #define ExpectF_Null(pointer, fmtString, ...)                                                                      \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define ExpectF_NotNull(pointer, fmtString, ...)                                                                   \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
+
+    #define AssertEvalF_Null(pointer, fmtString, ...)                                                                  \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define AssertEvalF_NotNull(pointer, fmtString, ...)                                                               \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
+
+    #define ExpectEvalF_Null(pointer, fmtString, ...)                                                                  \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define ExpectEvalF_NotNull(pointer, fmtString, ...)                                                               \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
     #define AssertF_True(expression, fmtString, ...)                                                                   \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, fmt::format(fmtString, __VA_ARGS__))
@@ -273,6 +327,18 @@ ENGINE_API void TriggerFatalErrorResponse();
 
     // Non-fmt versions
 
+    #define Assert_Null(pointer) {}
+    #define Assert_NotNull(pointer) {}
+
+    #define Expect_Null(pointer) {}
+    #define Expect_NotNull(pointer) {}
+
+    #define AssertEval_Null(pointer) { pointer; }
+    #define AssertEval_NotNull(pointer) { pointer; }
+
+    #define ExpectEval_Null(pointer) { pointer; }
+    #define ExpectEval_NotNull(pointer) { pointer; }
+
     #define Assert_True(expression) {}
     #define Assert_False(expression) {}
 
@@ -320,6 +386,18 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define Expect_NoReentry() {}
 
     // Fmt versions
+
+    #define AssertF_Null(pointer, fmtString, ...) {}
+    #define AssertF_NotNull(pointer, fmtString, ...) {}
+
+    #define ExpectF_Null(pointer, fmtString, ...) {}
+    #define ExpectF_NotNull(pointer, fmtString, ...) {}
+
+    #define AssertEvalF_Null(pointer, fmtString, ...) { pointer; }
+    #define AssertEvalF_NotNull(pointer, fmtString, ...) { pointer; }
+
+    #define ExpectEvalF_Null(pointer, fmtString, ...) { pointer; }
+    #define ExpectEvalF_NotNull(pointer, fmtString, ...) { pointer; }
 
     #define AssertF_True(expression, fmtString, ...) {}
     #define AssertF_False(expression, fmtString, ...) {}
@@ -377,6 +455,18 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 // Non-fmt versions
 
+    #define Assert_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define Assert_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
+
+    #define Expect_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define Expect_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
+
+    #define AssertEval_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define AssertEval_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
+
+    #define ExpectEval_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define ExpectEval_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
+
     #define Assert_True_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
     #define Assert_False_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, "")
 
@@ -430,6 +520,26 @@ ENGINE_API void TriggerFatalErrorResponse();
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=, "")
 
 // Fmt versions
+
+    #define AssertF_Null_Slow(pointer, fmtString, ...)                                                                 \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define AssertF_NotNull_Slow(pointer, fmtString, ...)                                                              \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
+
+    #define ExpectF_Null_Slow(pointer, fmtString, ...)                                                                 \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define ExpectF_NotNull_Slow(pointer, fmtString, ...)                                                              \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
+
+    #define AssertEvalF_Null_Slow(pointer, fmtString, ...)                                                             \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define AssertEvalF_NotNull_Slow(pointer, fmtString, ...)                                                          \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
+
+    #define ExpectEvalF_Null_Slow(pointer, fmtString, ...)                                                             \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
+    #define ExpectEvalF_NotNull_Slow(pointer, fmtString, ...)                                                          \
+        ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
     #define AssertF_True_Slow(expression, fmtString, ...)                                                              \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, fmt::format(fmtString, __VA_ARGS__))
@@ -516,6 +626,18 @@ ENGINE_API void TriggerFatalErrorResponse();
 
     // Non-fmt versions
 
+    #define Assert_Null_Slow(pointer) {}
+    #define Assert_NotNull_Slow(pointer) {}
+
+    #define Expect_Null_Slow(pointer) {}
+    #define Expect_NotNull_Slow(pointer) {}
+
+    #define AssertEval_Null_Slow(pointer) { pointer; }
+    #define AssertEval_NotNull_Slow(pointer) { pointer; }
+
+    #define ExpectEval_Null_Slow(pointer) { pointer; }
+    #define ExpectEval_NotNull_Slow(pointer) { pointer; }
+
     #define Assert_True_Slow(expression) {}
     #define Assert_False_Slow(expression) {}
 
@@ -557,6 +679,18 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define ExpectEval_Ge_Slow(lhs_evaluated, rhs_discarded) { lhs_evaluated; }
 
     // Fmt versions
+
+    #define AssertF_Null_Slow(pointer, fmtString, ...) {}
+    #define AssertF_NotNull_Slow(pointer, fmtString, ...) {}
+
+    #define ExpectF_Null_Slow(pointer, fmtString, ...) {}
+    #define ExpectF_NotNull_Slow(pointer, fmtString, ...) {}
+
+    #define AssertEvalF_Null_Slow(pointer, fmtString, ...) { pointer; }
+    #define AssertEvalF_NotNull_Slow(pointer, fmtString, ...) { pointer; }
+
+    #define ExpectEvalF_Null_Slow(pointer, fmtString, ...) { pointer; }
+    #define ExpectEvalF_NotNull_Slow(pointer, fmtString, ...) { pointer; }
 
     #define AssertF_True_Slow(expression, fmtString, ...) {}
     #define AssertF_False_Slow(expression, fmtString, ...) {}

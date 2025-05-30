@@ -10,6 +10,29 @@ using Engine::Console::LogLevel;
 namespace Engine::Internal
 {
 
+void LogNullAssertionFailure(const bool isFatal,
+                             const std::string_view assertionExpression,
+                             const bool expectedNull,
+                             const std::string_view fmtMessage,
+                             const std::source_location location)
+{
+    const auto formattedMessage =
+        fmt::format("Assertion failure!\n{:<10} : {}\n{:<10} : {}\n{:<10} : {}\n{:<10} : {}\n{:<10} : {}{}",
+                    "File",
+                    location.file_name(),
+                    "Line",
+                    location.line(),
+                    "Function",
+                    location.function_name(),
+                    "Expression",
+                    assertionExpression,
+                    "Expected",
+                    expectedNull ? "null" : "non-null",
+                    fmtMessage.empty() ? "" : fmt::format("\n{:<10} : {}", "Message", fmtMessage));
+
+    Console::Internal::LogImplementation(isFatal ? LogLevel::Fatal : LogLevel::Error, formattedMessage);
+}
+
 void LogBooleanAssertionFailure(const bool isFatal,
                                 const std::string_view assertionExpression,
                                 const bool expectedResult,
