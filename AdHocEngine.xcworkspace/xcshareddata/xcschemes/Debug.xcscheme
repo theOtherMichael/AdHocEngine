@@ -103,7 +103,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "DYLD_INSERT_LIBRARIES"
-            value = "libmimalloc-debug.2.1.dylib"
+            value = "libmimalloc-debug.2.2.dylib"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable

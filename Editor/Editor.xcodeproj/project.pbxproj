@@ -8,293 +8,105 @@
 
 /* Begin PBXBuildFile section */
 		0199E0EB46282AAF5304DED2 /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
-		02C0AF03EA650DDDA3B0AB9A /* emscripten_mainloop_stub.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C52BAD1805E42E9229AB81C /* emscripten_mainloop_stub.h */; };
-		04E83B9B18752690A9A56702 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A5331495E2EF920E460FC3F /* main.cpp */; };
-		04FEE27C037FDC638ED8C770 /* imgui_impl_glut.h in Sources */ = {isa = PBXBuildFile; fileRef = 39AE22E7017E6AE6A605A776 /* imgui_impl_glut.h */; };
-		053C5CC906E29F9F13795969 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 296345385453DE127F22DA8F /* main.cpp */; };
 		059D7E2B9811623646270292 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = 541670AD11B123F65C274F05 /* imgui_impl_glfw.h */; };
-		064F9BA229DB260D1DB969EF /* imgui_impl_sdlrenderer3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9451AC6644FD4678136D55 /* imgui_impl_sdlrenderer3.cpp */; };
-		07A93508A67AF99058005AFC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146B599A084308D4D108CCBC /* main.cpp */; };
 		087CB2D07121B2D072318073 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 432D9049C92FDF9C131A7BC3 /* imstb_truetype.h */; };
-		091AA700DAD70A682D0B9261 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F546EF48417D8F7C15FA333C /* main.mm */; };
 		0A6260EE3AB14164227A1144 /* imgui_stdlib.h in Sources */ = {isa = PBXBuildFile; fileRef = B1EE8130EEE58F37FC55FFAA /* imgui_stdlib.h */; };
-		0D2A255D2535E8AFE48347B9 /* imgui_impl_vulkan.h in Sources */ = {isa = PBXBuildFile; fileRef = BD03240EB46CEAA06F2849E0 /* imgui_impl_vulkan.h */; };
-		0D90FECAF64DBCFC4A83187C /* imgui_freetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A75E0EA0982B087DBB23 /* imgui_freetype.h */; };
 		0E12221D8EF12808E26BFBB1 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A19E76CC00DF1ADB772C22 /* imgui_impl_opengl3.cpp */; };
-		0EB6269BEBC0A5045C39520A /* imgui_impl_sdlrenderer3.h in Sources */ = {isa = PBXBuildFile; fileRef = B9981EA5028FA72489FE301B /* imgui_impl_sdlrenderer3.h */; };
-		0EEFAD6BE48323314B7DA4C9 /* imgui_impl_sdlrenderer2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0649EE7E3499876FA73A21EA /* imgui_impl_sdlrenderer2.cpp */; };
-		0F749C29C91B38C9B04D8185 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 124B46E0F17F5585C96116EA /* main.mm */; };
-		10C76167043207B72B4C4FAF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AFDC0E0FD0E5B8AFD0D124 /* main.cpp */; };
-		112BA3365230D17BB5E54283 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65A26110105E2CBACECBB06D /* main.cpp */; };
-		1164DB0CAF310915BA7EDAFF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B895136B1D433D5F5AD95BD /* main.cpp */; };
-		11ABA535C99E660AAD289A6A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146B599A084308D4D108CCBC /* main.cpp */; };
 		12023A7676344A9BD7895634 /* imgui_impl_opengl3.h in Sources */ = {isa = PBXBuildFile; fileRef = A9D4B5A4D91337902459247B /* imgui_impl_opengl3.h */; };
-		122B9FD916B329C458B17B42 /* imgui_impl_android.h in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC552AA62D8928B57D72AD /* imgui_impl_android.h */; };
-		128167716B014C85A666FEFA /* imgui_impl_wgpu.h in Sources */ = {isa = PBXBuildFile; fileRef = 120A47B0C7F064C031616CD2 /* imgui_impl_wgpu.h */; };
 		1612B3A57124BD8F712A8578 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
-		16280EDAAC3AFEA5AC97D0E7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF8EADA6A9B7698672881B /* main.cpp */; };
 		16A3FD8680EE492D1A8A3F11 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
-		174F678CA2B82F9079AB8B68 /* imgui_impl_win32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F28C40F7656961D785DAEBC /* imgui_impl_win32.cpp */; };
-		179BDDF4250636B88E01A04B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3701E0F516494A89E5608EAC /* main.cpp */; };
-		17BDEB71F327622F82C6F7B6 /* imgui_impl_sdlrenderer2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0649EE7E3499876FA73A21EA /* imgui_impl_sdlrenderer2.cpp */; };
-		193DF5CD6576243F0D2097DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51D1F6AE799D9EC2B2B286B3 /* main.cpp */; };
-		1A0EC44458449B0284CE6EFE /* imgui_impl_dx9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 913230BCFDAA1067FD49A8E9 /* imgui_impl_dx9.cpp */; };
-		1A729339E6C7A760681EB301 /* imgui_impl_wgpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183C2C3BDD9F055064BD97D2 /* imgui_impl_wgpu.cpp */; };
-		1A82B09BADE73C5A4EBDAD20 /* imconfig_allegro5.h in Sources */ = {isa = PBXBuildFile; fileRef = 80A9686072874F7DCDE21A9A /* imconfig_allegro5.h */; };
 		1B8B0C340EEF41C8EB5041C8 /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
-		1CA918FECBF1D85ECC87AFBB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80E91EA8C77B3D6162980FD3 /* main.cpp */; };
-		1DC55040658F4ACC750F1457 /* imconfig_allegro5.h in Sources */ = {isa = PBXBuildFile; fileRef = 80A9686072874F7DCDE21A9A /* imconfig_allegro5.h */; };
-		1E75B519C8E80D171B042DF3 /* imgui_impl_allegro5.h in Sources */ = {isa = PBXBuildFile; fileRef = 626E22D150ACB74F28875D5E /* imgui_impl_allegro5.h */; };
 		1F0261E500D122001BC2C62F /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
-		1F0B40F294D789016E5B4FBF /* imgui_impl_dx9.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C122B87B6E59C71AB6402B9 /* imgui_impl_dx9.h */; };
 		1F7FAF8130C18A76966C46EC /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
-		2075D67EC911F48C7F93B01F /* imgui_freetype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAA1B5693CB83A70055E6FE /* imgui_freetype.cpp */; };
 		2311AC816C6711593318D752 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
 		2434F5CBE2126CF81B177B81 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = 05977BBC879BD195C8EA9C47 /* imstb_textedit.h */; };
-		256FF06D6F69A1F3738526D9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 271399E2072DD22106871A9E /* main.cpp */; };
-		25F74CC93C48C6CA45F4BFD8 /* imgui_impl_win32.h in Sources */ = {isa = PBXBuildFile; fileRef = C96C7CB4EB2B51A1F4D63097 /* imgui_impl_win32.h */; };
-		2663B0D7B05EFD7B05EF63DD /* imgui_impl_sdlgpu3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8919C2F0455E5A40B9B55A /* imgui_impl_sdlgpu3.cpp */; };
 		2699CA43BF49C460C9117FE9 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = 05977BBC879BD195C8EA9C47 /* imstb_textedit.h */; };
-		27BA1901AB24D41C3F1497AC /* imgui_stdlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCEE4BBE4F5EAD5EAF7E32CB /* imgui_stdlib.cpp */; };
 		28E65BC19303D7DE83DB53AC /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
-		29EBAED54FC82A9F33FD1377 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14066214E497849512D40A45 /* main.cpp */; };
-		2A3E45C330B21348145E12E2 /* imgui_single_file.h in Sources */ = {isa = PBXBuildFile; fileRef = 552F4D048F0BF17707E2E0AD /* imgui_single_file.h */; };
 		2CF5765C3B4528B7BA22DE93 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
 		2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
-		2D366AF8AE008D408B7D6599 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5C1332C0B05DA79C58BEA /* main.cpp */; };
-		2DBFD2C41B6BE188B81A64B6 /* glfw3native.h in Sources */ = {isa = PBXBuildFile; fileRef = FA90840A0DA32A7F209FD100 /* glfw3native.h */; };
 		2EE9B405F5FDE0AD0CB105E6 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 57CC210CF192355B419BB51C /* imgui_impl_metal.h */; };
-		2EF7F3A8C7A166B0E718561D /* imconfig_allegro5.h in Sources */ = {isa = PBXBuildFile; fileRef = 80A9686072874F7DCDE21A9A /* imconfig_allegro5.h */; };
 		2F1A1EBB055CB949E5721359 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
-		2F79961FF05C62B1273370EE /* imgui_impl_sdlgpu3.h in Sources */ = {isa = PBXBuildFile; fileRef = C2EF5B34ECEED8CABC95632E /* imgui_impl_sdlgpu3.h */; };
-		30E072E2961C59A664909219 /* imgui_impl_sdlgpu3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8919C2F0455E5A40B9B55A /* imgui_impl_sdlgpu3.cpp */; };
-		3275234CC0434279C261878C /* imgui_impl_glut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A45030B4FEA1FE19CE29803D /* imgui_impl_glut.cpp */; };
 		32F38ACF158402CB6637F498 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
-		352B63E3C3F644BFC3EE14F2 /* imgui_single_file.h in Sources */ = {isa = PBXBuildFile; fileRef = 552F4D048F0BF17707E2E0AD /* imgui_single_file.h */; };
-		3543D33B62ADC7F46ADF6B25 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AFDC0E0FD0E5B8AFD0D124 /* main.cpp */; };
 		35B30732BD08EFFCDED96ADF /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
 		35CBF7114FD4B78F4A2DA3FE /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
-		37EAF4FCC8A94E8D982C58CF /* glfw3.h in Sources */ = {isa = PBXBuildFile; fileRef = BACF61AAEE78B1A96C88282A /* glfw3.h */; };
-		3849F17FE0810E3A7EA9D557 /* imgui_impl_win32.h in Sources */ = {isa = PBXBuildFile; fileRef = C96C7CB4EB2B51A1F4D63097 /* imgui_impl_win32.h */; };
 		3912F49003C76294FFC4A90A /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = 05977BBC879BD195C8EA9C47 /* imstb_textedit.h */; };
-		398C7209180E2734EEB47AC5 /* imgui_stdlib.h in Sources */ = {isa = PBXBuildFile; fileRef = A5A78AEE5CFE2CD1C5F1A9CD /* imgui_stdlib.h */; };
 		3A19AF58181FA29898A37264 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
 		3A4541678E0CFE7B35FAA834 /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
 		3B59F1C6FAFBDC191EF543EA /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 0CF93228835C37B6B3940BE7 /* imstb_rectpack.h */; };
-		3B70F98B577CCC7D6757F054 /* imgui_impl_dx9.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C122B87B6E59C71AB6402B9 /* imgui_impl_dx9.h */; };
-		3C4809C40D9B7ADCC49FBAC9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 97AFDC0E0FD0E5B8AFD0D124 /* main.cpp */; };
-		3C7071D20F69E9F4BACA93D4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE9C19C54E1A6916D9BC9 /* main.cpp */; };
-		3CCCEE844AAABC9CF406B966 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C53F6888E1D48FDD20105CB2 /* main.mm */; };
-		3E3B553B97FF67152856966E /* uSynergy.c in Sources */ = {isa = PBXBuildFile; fileRef = C132FDAC35D6F358A603051F /* uSynergy.c */; };
-		3E5D959B630C172C969BE03D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65A26110105E2CBACECBB06D /* main.cpp */; };
 		3E7ECCBAF0882943CDE5C7E7 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
 		3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
-		3F733AD50FC2D7286EAF9078 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD94C09A27E494872DF0D4C /* main.cpp */; };
-		3FCCA4C2A0BFEE09B486FB46 /* imgui_impl_wgpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183C2C3BDD9F055064BD97D2 /* imgui_impl_wgpu.cpp */; };
-		40844A0ACB3653D5291B643F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3701E0F516494A89E5608EAC /* main.cpp */; };
 		40C0845091C2DA3F2759F234 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; };
-		41A1A6D2C057C830210B8009 /* imgui_impl_dx12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21819D256FAA2735629916D9 /* imgui_impl_dx12.cpp */; };
 		42304BE9681285E4D7882000 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
-		425FCC7F8A302DFC2FE772C6 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 124B46E0F17F5585C96116EA /* main.mm */; };
 		443DD2D82AD98474ABFF5703 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
 		447FC7AFB17FF96A05BD221D /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
-		44D6F3D0579F61E0DA6AC2DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF8EADA6A9B7698672881B /* main.cpp */; };
 		459031E7D9440B625B051A94 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = A41E4C3B3237701EC8CD090F /* imgui.h */; };
-		45E426E71C74F764F3E6F8A9 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C53F6888E1D48FDD20105CB2 /* main.mm */; };
-		46810EE4F366F70D65B260C5 /* imgui_impl_dx11.h in Sources */ = {isa = PBXBuildFile; fileRef = EBE5C34387EAC949621DA384 /* imgui_impl_dx11.h */; };
-		4885302B9AFD67A0E8CA50A3 /* imgui_impl_sdl2.h in Sources */ = {isa = PBXBuildFile; fileRef = 2E48E72748ED3ECD6B3BF285 /* imgui_impl_sdl2.h */; };
-		491A8086DC203E099C52FFC5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD94C09A27E494872DF0D4C /* main.cpp */; };
-		49569FBA6CD97FCC64C2D512 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F546EF48417D8F7C15FA333C /* main.mm */; };
-		499F27E35C5C46EF534B5E50 /* imgui_impl_allegro5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A340D885FD2711590DA52721 /* imgui_impl_allegro5.cpp */; };
-		4C82BD46445BD06166E78CD5 /* imgui_impl_wgpu.h in Sources */ = {isa = PBXBuildFile; fileRef = 120A47B0C7F064C031616CD2 /* imgui_impl_wgpu.h */; };
-		4C91275AB8576DB3F3D60281 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837634505A9944B69191BDAF /* main.cpp */; };
-		4C9988D75EB3810BBEF8FE8D /* imgui_stdlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCEE4BBE4F5EAD5EAF7E32CB /* imgui_stdlib.cpp */; };
-		4D0A6F6C00AD0F7A9A376AC0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C439F27F105F287D18E8CA50 /* main.cpp */; };
-		4E5270695D8D2E52A16FCAF2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5C1332C0B05DA79C58BEA /* main.cpp */; };
-		4E972BA9EF1928470CB7E3D1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83834257D7EB758D51B4E279 /* main.cpp */; };
 		4EC96F933C9CED22D8A15D5D /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 0CF93228835C37B6B3940BE7 /* imstb_rectpack.h */; };
-		4F57E31A19C348D5AEB451E7 /* uSynergy.h in Sources */ = {isa = PBXBuildFile; fileRef = 063C4BBC1749ED5208E806FF /* uSynergy.h */; };
-		4F906065E76513917230E832 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E56BF6DDF9198EA30450B1F /* main.cpp */; };
 		5009FA385DE4A55BB3977226 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = A41E4C3B3237701EC8CD090F /* imgui.h */; };
-		51C3DB8ADF004F65F4218FB3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19F356529AF04FCDF39AA5A /* main.cpp */; };
 		52658E697343CA8B864CDE6F /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
 		527EFE0085F5DAF3E36E14D8 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
-		540E5A7B6DDE6AF5A16AA7F2 /* imgui_freetype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAA1B5693CB83A70055E6FE /* imgui_freetype.cpp */; };
-		5474E1B2622E614E809763BE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E56BF6DDF9198EA30450B1F /* main.cpp */; };
-		54DECB82403BF1B37F54D884 /* emscripten_mainloop_stub.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C52BAD1805E42E9229AB81C /* emscripten_mainloop_stub.h */; };
 		550D0F1DA1A5CD7FCB909B1E /* imgui_impl_opengl3.h in Sources */ = {isa = PBXBuildFile; fileRef = A9D4B5A4D91337902459247B /* imgui_impl_opengl3.h */; };
-		55816724D20E83B74B693E2B /* imgui_impl_opengl2.h in Sources */ = {isa = PBXBuildFile; fileRef = F19CC964443EB639D48393AA /* imgui_impl_opengl2.h */; };
-		55EFB67A4030D38E2EEA4118 /* imgui_impl_sdlgpu3_shaders.h in Sources */ = {isa = PBXBuildFile; fileRef = E529652E316E43FD0A71960F /* imgui_impl_sdlgpu3_shaders.h */; };
-		56BEFA8EA2D173BF4D2737EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B895136B1D433D5F5AD95BD /* main.cpp */; };
-		56F3764034C5BDF50C376393 /* imgui_impl_dx11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D512599A90ED8C96DC0CD3 /* imgui_impl_dx11.cpp */; };
-		59081C212D7283B5358D3B1A /* binary_to_compressed_c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6D2A583FBFB13E2B897F82 /* binary_to_compressed_c.cpp */; };
-		5A02237956CF6CC205960AB7 /* uSynergy.h in Sources */ = {isa = PBXBuildFile; fileRef = 063C4BBC1749ED5208E806FF /* uSynergy.h */; };
 		5AFBBB38387B1CE0393C469B /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = 541670AD11B123F65C274F05 /* imgui_impl_glfw.h */; };
-		5B2D07E55DF0E06086F04C64 /* imgui_impl_sdl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 253AFC840DE6FF2B60109E78 /* imgui_impl_sdl2.cpp */; };
-		5E13615815A0DED5F15E69D1 /* imgui_impl_android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FC35E4C1C0EFDC104E0A18 /* imgui_impl_android.cpp */; };
 		5E50C7B5442772BB9D27DCFC /* EditorConfigurationMode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */; };
 		5EB6F00C3747507FFFC0ABFC /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
-		5EC0B8F7299FE188B150AAB7 /* imgui_impl_sdlrenderer3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9451AC6644FD4678136D55 /* imgui_impl_sdlrenderer3.cpp */; };
 		60B275B9D2AD6E31C321BAC3 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
 		60E9FA63DBAF084E792F49B3 /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
 		60FD840BA182CC5160C36846 /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
 		613E709CBE4B7AEA1E3C8B95 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
-		62D697F287EF421F00470D72 /* imgui_impl_android.h in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC552AA62D8928B57D72AD /* imgui_impl_android.h */; };
 		637074F57FC3A3677401C117 /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
-		639143134CF2F8F06DBF9F84 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C136DB8C2F9F6ED7318C6869 /* main.cpp */; };
 		63A766E9272E43729ED5076C /* imgui_stdlib.h in Sources */ = {isa = PBXBuildFile; fileRef = B1EE8130EEE58F37FC55FFAA /* imgui_stdlib.h */; };
-		644102B5CFF6E9B43D9D7E7F /* glfw3.h in Sources */ = {isa = PBXBuildFile; fileRef = BACF61AAEE78B1A96C88282A /* glfw3.h */; };
-		6516940639273A0E4F945838 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0DA5C1332C0B05DA79C58BEA /* main.cpp */; };
 		653EF44F1F3D06C900D272F8 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
 		654F3A5E2F79F1AE4BF323A5 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
-		6653FF7B63D4BB531EE1CDAF /* imgui_impl_glut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A45030B4FEA1FE19CE29803D /* imgui_impl_glut.cpp */; };
 		66AE9598B876B90565677D11 /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
-		67196FB78CCBE8BC7E59C6D7 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E28A28CE820E3116B3178271 /* main.mm */; };
-		67BF03B118C38C3C3C7B87FB /* imgui_impl_android.h in Sources */ = {isa = PBXBuildFile; fileRef = 5ECC552AA62D8928B57D72AD /* imgui_impl_android.h */; };
 		6911FB6F2F969EA151F72E8D /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
-		6987B49988370E6883FDB6B8 /* imgui_impl_sdlgpu3.h in Sources */ = {isa = PBXBuildFile; fileRef = C2EF5B34ECEED8CABC95632E /* imgui_impl_sdlgpu3.h */; };
-		699A8B5A81CC3718BCAEBAE5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14066214E497849512D40A45 /* main.cpp */; };
-		69B879D05294CA856E17D587 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83834257D7EB758D51B4E279 /* main.cpp */; };
-		69D4E7A329BBBD7F720A79AF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B895136B1D433D5F5AD95BD /* main.cpp */; };
-		69FF6D4DF062B56FC2B1D92A /* imgui_impl_dx12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21819D256FAA2735629916D9 /* imgui_impl_dx12.cpp */; };
-		6C98CF7F18F8329397857F25 /* imgui_impl_vulkan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01CCDC9B58219DF07AE20E /* imgui_impl_vulkan.cpp */; };
-		6E87C8EFBCC2FA85D03F2353 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E56BF6DDF9198EA30450B1F /* main.cpp */; };
 		6EE77DD31FFA0A8051FB2DBD /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
-		6F404939924C2B1F755DBBE6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6067FD1923BC72FA992C6F6 /* main.cpp */; };
 		6F6D5EC608DC4BEBB2E7DBE2 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 432D9049C92FDF9C131A7BC3 /* imstb_truetype.h */; };
-		6FCE65ABFF64AF4F01D54222 /* uSynergy.c in Sources */ = {isa = PBXBuildFile; fileRef = C132FDAC35D6F358A603051F /* uSynergy.c */; };
-		7145566B66CC322179DAA874 /* imgui_impl_dx11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D512599A90ED8C96DC0CD3 /* imgui_impl_dx11.cpp */; };
 		7174EE6C6441F571D7C69C41 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 199A0B63F4A4CCFCEA9651B7 /* imconfig.h */; };
-		7291C901DA81AEC55C747BBF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6067FD1923BC72FA992C6F6 /* main.cpp */; };
 		72A4977C703D9C62E0ADF19E /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 432D9049C92FDF9C131A7BC3 /* imstb_truetype.h */; };
-		73DA0457F60D10FAC7C6B8F5 /* imgui_impl_dx12.h in Sources */ = {isa = PBXBuildFile; fileRef = 42C581ED42B7F6C628C791B3 /* imgui_impl_dx12.h */; };
 		749C1734FD82D005E66EBC05 /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
-		756FFBCC2C3ADF06CFC8F6E4 /* imgui_impl_opengl2.h in Sources */ = {isa = PBXBuildFile; fileRef = F19CC964443EB639D48393AA /* imgui_impl_opengl2.h */; };
-		75D70BA3166A2A7DCB38F545 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5CBF8EADA6A9B7698672881B /* main.cpp */; };
-		7622FBA52C0074DA1479E82A /* imgui_impl_dx10.h in Sources */ = {isa = PBXBuildFile; fileRef = 900128DBA5E9ED9E801C1FF0 /* imgui_impl_dx10.h */; };
 		7658106A505D5603C708A006 /* imgui_impl_opengl3.h in Sources */ = {isa = PBXBuildFile; fileRef = A9D4B5A4D91337902459247B /* imgui_impl_opengl3.h */; };
 		76C694F3F60528004D19C4F7 /* imgui_impl_opengl3_loader.h in Sources */ = {isa = PBXBuildFile; fileRef = 1079CEEC75D1215302E57ADB /* imgui_impl_opengl3_loader.h */; };
 		783D552B45F05A70E5FFD330 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
-		7A9BB82984598AEC158D4C1C /* imgui_impl_sdlrenderer2.h in Sources */ = {isa = PBXBuildFile; fileRef = A6F6C2F7C84A34A0B95947D4 /* imgui_impl_sdlrenderer2.h */; };
-		7CC2ED001EC9DA6E322B087B /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E28A28CE820E3116B3178271 /* main.mm */; };
-		7EACA699BD222DFE78A3B17D /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E28A28CE820E3116B3178271 /* main.mm */; };
 		7EC3BDFF0D7F1D4ACE27DB6A /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
-		7F5F847B2374816693EA9C15 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C439F27F105F287D18E8CA50 /* main.cpp */; };
-		7F5FD6B3B1247525219F23D8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CDD94C09A27E494872DF0D4C /* main.cpp */; };
-		80B821DB18F5888E514C1B0C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 770DE30140BA82C36D68A055 /* main.cpp */; };
-		812CA11C3CABE97B04403159 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 271399E2072DD22106871A9E /* main.cpp */; };
-		8213646D0044A9927795DA6B /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 124B46E0F17F5585C96116EA /* main.mm */; };
-		822430D69DA26F593483B45A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C439F27F105F287D18E8CA50 /* main.cpp */; };
-		82CE2B919B02B68A38427E96 /* imgui_impl_sdlgpu3_shaders.h in Sources */ = {isa = PBXBuildFile; fileRef = E529652E316E43FD0A71960F /* imgui_impl_sdlgpu3_shaders.h */; };
-		832766524B999580422341E9 /* imgui_impl_win32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F28C40F7656961D785DAEBC /* imgui_impl_win32.cpp */; };
 		844CD25CCAEBEF870BD3437D /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
-		845AFD24DD2008FADE1D7C45 /* imgui_impl_glut.h in Sources */ = {isa = PBXBuildFile; fileRef = 39AE22E7017E6AE6A605A776 /* imgui_impl_glut.h */; };
-		850BAA263124DAE439F32093 /* imgui_impl_sdl3.h in Sources */ = {isa = PBXBuildFile; fileRef = CB2580E569053284CFF94DAF /* imgui_impl_sdl3.h */; };
-		855D0367E3650E597563DF78 /* imgui_impl_opengl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534349495123582EA3899C5E /* imgui_impl_opengl2.cpp */; };
-		87D3F5C4C374007917E3B0E8 /* imgui_impl_opengl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534349495123582EA3899C5E /* imgui_impl_opengl2.cpp */; };
 		88E054F2A5EC804BACE05201 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
-		8B121D3ED45E5A35A3B7212A /* imgui_single_file.h in Sources */ = {isa = PBXBuildFile; fileRef = 552F4D048F0BF17707E2E0AD /* imgui_single_file.h */; };
 		8BB32F4D99EEC0EC6E85C470 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
-		8C17DC101D266A165EE22C2E /* imgui_impl_dx10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1A710B902B374D3C9BFCAD /* imgui_impl_dx10.cpp */; };
 		8D892D3F2D1C977A16835616 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
-		8F1AEE537BCCB4A2787ED78C /* imgui_impl_sdlrenderer2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0649EE7E3499876FA73A21EA /* imgui_impl_sdlrenderer2.cpp */; };
 		8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
-		8FBFC6459C4807FE49DE6DA7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE9C19C54E1A6916D9BC9 /* main.cpp */; };
-		904DED5CD3C84A067C090BE1 /* imgui_impl_android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FC35E4C1C0EFDC104E0A18 /* imgui_impl_android.cpp */; };
-		90EE237467D2665570171BEE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 770DE30140BA82C36D68A055 /* main.cpp */; };
 		92854E6365E3D4041ACEBFC9 /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
-		93DCAF32800C959E15EA72B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6067FD1923BC72FA992C6F6 /* main.cpp */; };
-		9425C3C01DAD261EEE2A59A2 /* imgui_impl_allegro5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A340D885FD2711590DA52721 /* imgui_impl_allegro5.cpp */; };
-		94623C89C4FBAD582034AB77 /* imgui_impl_dx9.h in Sources */ = {isa = PBXBuildFile; fileRef = 7C122B87B6E59C71AB6402B9 /* imgui_impl_dx9.h */; };
-		94D08C089C3C447CAFCC0F4E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 770DE30140BA82C36D68A055 /* main.cpp */; };
 		95D2EA3AE4B0DFE29A88D2D4 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; };
 		96371A6771C7AE55CD7A2C3F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
-		96F89C85BA7CD62971714452 /* imgui_impl_sdlgpu3.h in Sources */ = {isa = PBXBuildFile; fileRef = C2EF5B34ECEED8CABC95632E /* imgui_impl_sdlgpu3.h */; };
-		97C19DDBBCE88988F5CF916D /* imgui_impl_sdlrenderer3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC9451AC6644FD4678136D55 /* imgui_impl_sdlrenderer3.cpp */; };
-		97C635F15F1E931B4A4130AE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 296345385453DE127F22DA8F /* main.cpp */; };
-		97FA1D50B6262ACE32C0B1FC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 146B599A084308D4D108CCBC /* main.cpp */; };
-		9871A60BBE4AD73E65D26CCE /* imgui_impl_dx9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 913230BCFDAA1067FD49A8E9 /* imgui_impl_dx9.cpp */; };
-		9912DBE00736C824332F9413 /* imgui_impl_vulkan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01CCDC9B58219DF07AE20E /* imgui_impl_vulkan.cpp */; };
-		99CE9D2F133C60F3010FEED5 /* imgui_impl_dx10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1A710B902B374D3C9BFCAD /* imgui_impl_dx10.cpp */; };
-		99FF8399AEFC87ECA61359AC /* imgui_impl_sdl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 253AFC840DE6FF2B60109E78 /* imgui_impl_sdl2.cpp */; };
 		9B604853321B6CE0CB55716E /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; };
-		9B869A191C720AEF4C943355 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A5331495E2EF920E460FC3F /* main.cpp */; };
 		9BF7787454419099A7E27B51 /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
-		9CBD1E673B9EF52BB4BD1C45 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 83834257D7EB758D51B4E279 /* main.cpp */; };
-		9E1F5E9DA1DC4F9D600E7512 /* imgui_impl_vulkan.h in Sources */ = {isa = PBXBuildFile; fileRef = BD03240EB46CEAA06F2849E0 /* imgui_impl_vulkan.h */; };
-		9E29BA67BA664B2CF7BECDC2 /* imgui_impl_glut.h in Sources */ = {isa = PBXBuildFile; fileRef = 39AE22E7017E6AE6A605A776 /* imgui_impl_glut.h */; };
-		9F45D01DD137691BC7F93505 /* binary_to_compressed_c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6D2A583FBFB13E2B897F82 /* binary_to_compressed_c.cpp */; };
 		9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
 		9F9D69905DDEAE7A08B89EAA /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
 		9FF77085B41284570C60D511 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = A41E4C3B3237701EC8CD090F /* imgui.h */; };
-		A04EB7D1C633CD2A5056B76F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 296345385453DE127F22DA8F /* main.cpp */; };
-		A0B957BD295B784531B320B6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65A26110105E2CBACECBB06D /* main.cpp */; };
-		A0D4A429A3D5AA89535804A4 /* imgui_impl_android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F1FC35E4C1C0EFDC104E0A18 /* imgui_impl_android.cpp */; };
-		A2A05AC13E26CEDE9E45061E /* imgui_impl_sdl2.h in Sources */ = {isa = PBXBuildFile; fileRef = 2E48E72748ED3ECD6B3BF285 /* imgui_impl_sdl2.h */; };
-		A4334F27DEEF9945B66D1D06 /* binary_to_compressed_c.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BE6D2A583FBFB13E2B897F82 /* binary_to_compressed_c.cpp */; };
-		A5275126A41E8FCA218DB1F9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837634505A9944B69191BDAF /* main.cpp */; };
-		A5C0AE4BAB1F7764334CBB64 /* imgui_impl_sdlrenderer2.h in Sources */ = {isa = PBXBuildFile; fileRef = A6F6C2F7C84A34A0B95947D4 /* imgui_impl_sdlrenderer2.h */; };
-		A701877A62ED5AA743A3D247 /* imgui_impl_sdlgpu3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA8919C2F0455E5A40B9B55A /* imgui_impl_sdlgpu3.cpp */; };
 		A7156C23A879DD0B913AC155 /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = F2434DE752D813530D366592 /* imgui_internal.h */; };
 		A868A1A53287FAE31DA9A33E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
-		A8764F309245D49DAF172D34 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 837634505A9944B69191BDAF /* main.cpp */; };
-		A89BB851B37DFC3046BD153A /* imgui_freetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A75E0EA0982B087DBB23 /* imgui_freetype.h */; };
-		A9850EACC800814493F9EBF9 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = C53F6888E1D48FDD20105CB2 /* main.mm */; };
-		AA399FDBC62BD9108C7505B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19F356529AF04FCDF39AA5A /* main.cpp */; };
 		AA7439FC317F552681E6FE4F /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
 		AB22B255427A6424ACB8CD89 /* imgui_impl_opengl3_loader.h in Sources */ = {isa = PBXBuildFile; fileRef = 1079CEEC75D1215302E57ADB /* imgui_impl_opengl3_loader.h */; };
-		AB6E2A65E9C660AB9F523D9B /* uSynergy.c in Sources */ = {isa = PBXBuildFile; fileRef = C132FDAC35D6F358A603051F /* uSynergy.c */; };
-		ABDB44ACE053BECA70577847 /* imgui_impl_dx10.h in Sources */ = {isa = PBXBuildFile; fileRef = 900128DBA5E9ED9E801C1FF0 /* imgui_impl_dx10.h */; };
-		ACAB9A1BC857C7FF4B9D85E6 /* imgui_impl_dx11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5D512599A90ED8C96DC0CD3 /* imgui_impl_dx11.cpp */; };
-		AD45213BC81B35599F9B110D /* imgui_impl_sdl3.h in Sources */ = {isa = PBXBuildFile; fileRef = CB2580E569053284CFF94DAF /* imgui_impl_sdl3.h */; };
-		AE3B332484C9050784C6F9B8 /* imgui_impl_dx9.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 913230BCFDAA1067FD49A8E9 /* imgui_impl_dx9.cpp */; };
-		AE8F434775F1C7A461331230 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E19F356529AF04FCDF39AA5A /* main.cpp */; };
 		B03503C731F2D50C8F1EB67B /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A19E76CC00DF1ADB772C22 /* imgui_impl_opengl3.cpp */; };
-		B2EEB5E6890B10B8AD2C50DE /* imgui_stdlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCEE4BBE4F5EAD5EAF7E32CB /* imgui_stdlib.cpp */; };
 		B32A1EB668751B837EFDA5AE /* imgui_stdlib.h in Sources */ = {isa = PBXBuildFile; fileRef = B1EE8130EEE58F37FC55FFAA /* imgui_stdlib.h */; };
 		B35FA429874BAE5D0AA21D94 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
-		B41147166EA20015E9DFDB49 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3701E0F516494A89E5608EAC /* main.cpp */; };
-		B4648B0F64628611851644EE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80E91EA8C77B3D6162980FD3 /* main.cpp */; };
 		B5AA48324DB015733004BF40 /* EditorEntryPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */; };
 		B6A71A503DF87EB57E164FFC /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
-		B6FAB881D2C0AFCC77AC1990 /* glfw3.h in Sources */ = {isa = PBXBuildFile; fileRef = BACF61AAEE78B1A96C88282A /* glfw3.h */; };
 		B7506E7533547FC67DA52DE9 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		B7555F34C2E451B5655B89ED /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		B83A8AEEE521DF1AA3F0CCF3 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
 		B8AF0BE14C1011F36BF9D3E8 /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 0CF93228835C37B6B3940BE7 /* imstb_rectpack.h */; };
 		B92BC6D67EF8802689BBDCE9 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
-		B9446220A9224AB635E948F4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C136DB8C2F9F6ED7318C6869 /* main.cpp */; };
 		B981D7646BBFE6DDFF11AC22 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
 		BB378E1319903AEC439F4506 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 57CC210CF192355B419BB51C /* imgui_impl_metal.h */; };
 		BBACD102982258B501D9D593 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
-		BC56AC1E16BCC2927B558473 /* imgui_impl_sdlrenderer2.h in Sources */ = {isa = PBXBuildFile; fileRef = A6F6C2F7C84A34A0B95947D4 /* imgui_impl_sdlrenderer2.h */; };
-		BD8FCD6031FE9AACFA0D2974 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A5331495E2EF920E460FC3F /* main.cpp */; };
 		BE865F9808BFCB2F743ED0F2 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
-		BFAD129576E12348BC79DED4 /* imgui_impl_vulkan.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC01CCDC9B58219DF07AE20E /* imgui_impl_vulkan.cpp */; };
-		C0116E71F88EC39CAFE4533D /* imgui_impl_win32.h in Sources */ = {isa = PBXBuildFile; fileRef = C96C7CB4EB2B51A1F4D63097 /* imgui_impl_win32.h */; };
-		C0EC12F78BB70DD4EA705DF7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80E91EA8C77B3D6162980FD3 /* main.cpp */; };
-		C2706AFCF1C3CBEB53296F02 /* imgui_impl_sdl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EB43205CA47E1712C215A08 /* imgui_impl_sdl3.cpp */; };
 		C2AA1DD70AE5EE5A3AD5964C /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
 		C36A9DFC736547950FB74FA7 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
-		C3C6C154A7D1B34A97D928CF /* imgui_impl_allegro5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A340D885FD2711590DA52721 /* imgui_impl_allegro5.cpp */; };
 		C4410B06D34280D80034D310 /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
-		C444AC38E55E3FA4A3884425 /* imgui_freetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DF3A75E0EA0982B087DBB23 /* imgui_freetype.h */; };
 		C478DD344FFE5EA0B544A98D /* EditorConfigurationMode.h in Sources */ = {isa = PBXBuildFile; fileRef = 482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */; };
-		C5BD3EBF2D4AA09722A3E04E /* imgui_impl_wgpu.h in Sources */ = {isa = PBXBuildFile; fileRef = 120A47B0C7F064C031616CD2 /* imgui_impl_wgpu.h */; };
-		C65FD3DA388EA7767A8A4B7C /* imgui_impl_dx10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AE1A710B902B374D3C9BFCAD /* imgui_impl_dx10.cpp */; };
-		C7405D116E79BB2180F3BDD6 /* emscripten_mainloop_stub.h in Sources */ = {isa = PBXBuildFile; fileRef = 5C52BAD1805E42E9229AB81C /* emscripten_mainloop_stub.h */; };
 		C8214DF779BA15D1BD0FACDD /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 199A0B63F4A4CCFCEA9651B7 /* imconfig.h */; };
 		C83DBD3F715290B9AC8A0796 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
-		C8982242674B4152B9F794CD /* imgui_impl_sdl2.h in Sources */ = {isa = PBXBuildFile; fileRef = 2E48E72748ED3ECD6B3BF285 /* imgui_impl_sdl2.h */; };
-		C9ED717859061665A1260B5F /* imgui_impl_dx11.h in Sources */ = {isa = PBXBuildFile; fileRef = EBE5C34387EAC949621DA384 /* imgui_impl_dx11.h */; };
-		CB553B038C216D14736B3F76 /* imgui_impl_dx12.h in Sources */ = {isa = PBXBuildFile; fileRef = 42C581ED42B7F6C628C791B3 /* imgui_impl_dx12.h */; };
-		CB8E1EEBA823B8140AFF013E /* imgui_impl_sdl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EB43205CA47E1712C215A08 /* imgui_impl_sdl3.cpp */; };
-		CBEE4708D2FC7964FD921999 /* imgui_impl_sdl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 253AFC840DE6FF2B60109E78 /* imgui_impl_sdl2.cpp */; };
 		CC06C690854AA163A4BDFA49 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 199A0B63F4A4CCFCEA9651B7 /* imconfig.h */; };
 		CCD75F6735F40AF23B9FDC62 /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = F2434DE752D813530D366592 /* imgui_internal.h */; };
-		CCF9110E6FCF1FE29598A6A3 /* imgui_impl_opengl2.h in Sources */ = {isa = PBXBuildFile; fileRef = F19CC964443EB639D48393AA /* imgui_impl_opengl2.h */; };
-		CDE06748550E91A139575EE1 /* imgui_freetype.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EAAA1B5693CB83A70055E6FE /* imgui_freetype.cpp */; };
 		CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
@@ -303,61 +115,42 @@
 		CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD162CFC3F45002F900C /* libEngine.dylib */; };
 		CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD182CFC3F53002F900C /* libEngineDev.dylib */; };
 		CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */; };
-		CE9324302D574DE900A05A63 /* libimguid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE93242F2D574DE900A05A63 /* libimguid.a */; };
-		CE9324322D574E2200A05A63 /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9324312D574E2200A05A63 /* libimgui.a */; };
-		CE9324332D574E3200A05A63 /* libimgui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9324312D574E2200A05A63 /* libimgui.a */; };
-		CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */; };
-		CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
-		CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */; };
+		CE6FCE6F2DEAD3B1006C4B6D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE6E2DEAD3B1006C4B6D /* AppKit.framework */; };
+		CE6FCE712DEAD3E0006C4B6D /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE702DEAD3E0006C4B6D /* GameController.framework */; };
+		CE6FCE732DEAD3F5006C4B6D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE722DEAD3F5006C4B6D /* Metal.framework */; };
+		CE6FCE752DEAD414006C4B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE742DEAD414006C4B6D /* QuartzCore.framework */; };
+		CE6FCE762DEAD444006C4B6D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE6E2DEAD3B1006C4B6D /* AppKit.framework */; };
+		CE6FCE772DEAD444006C4B6D /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE702DEAD3E0006C4B6D /* GameController.framework */; };
+		CE6FCE782DEAD444006C4B6D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE722DEAD3F5006C4B6D /* Metal.framework */; };
+		CE6FCE792DEAD444006C4B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE742DEAD414006C4B6D /* QuartzCore.framework */; };
+		CE6FCE7A2DEAD44A006C4B6D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE6E2DEAD3B1006C4B6D /* AppKit.framework */; };
+		CE6FCE7B2DEAD44A006C4B6D /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE702DEAD3E0006C4B6D /* GameController.framework */; };
+		CE6FCE7C2DEAD44A006C4B6D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE722DEAD3F5006C4B6D /* Metal.framework */; };
+		CE6FCE7D2DEAD44A006C4B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE742DEAD414006C4B6D /* QuartzCore.framework */; };
+		CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.2.dylib */; };
+		CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.2.dylib */; };
+		CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.2.dylib */; };
 		CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */; };
 		CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */; };
 		CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */; };
 		CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */; };
-		CF24EE85AE47DD6D145E5629 /* imgui_impl_sdlrenderer3.h in Sources */ = {isa = PBXBuildFile; fileRef = B9981EA5028FA72489FE301B /* imgui_impl_sdlrenderer3.h */; };
-		CF49BAECE047B15C5CA619BC /* imgui_impl_dx10.h in Sources */ = {isa = PBXBuildFile; fileRef = 900128DBA5E9ED9E801C1FF0 /* imgui_impl_dx10.h */; };
-		D0C004832413B6AC89502BEC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EAEE9C19C54E1A6916D9BC9 /* main.cpp */; };
-		D26B7AAC04AEA7323BA5B9EE /* imgui_impl_sdlrenderer3.h in Sources */ = {isa = PBXBuildFile; fileRef = B9981EA5028FA72489FE301B /* imgui_impl_sdlrenderer3.h */; };
-		D2E220BCC0FD211FEB05C833 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51D1F6AE799D9EC2B2B286B3 /* main.cpp */; };
 		D2F533D70CA4AA1FFA232676 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = 541670AD11B123F65C274F05 /* imgui_impl_glfw.h */; };
-		D4D2543AF42CEECA209A76D9 /* imgui_impl_opengl2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 534349495123582EA3899C5E /* imgui_impl_opengl2.cpp */; };
-		D6999B5E180255DB95D9E847 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14066214E497849512D40A45 /* main.cpp */; };
-		D703B0BDD598C04D795620A6 /* imgui_impl_allegro5.h in Sources */ = {isa = PBXBuildFile; fileRef = 626E22D150ACB74F28875D5E /* imgui_impl_allegro5.h */; };
-		D7BF5687A2116D3E00492B95 /* imgui_impl_sdl3.h in Sources */ = {isa = PBXBuildFile; fileRef = CB2580E569053284CFF94DAF /* imgui_impl_sdl3.h */; };
 		D846746CFF0A42105CB3D234 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
 		D97409EDB7163B2196CE7F88 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
 		DA0609722BD72AF310CEDC66 /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
-		DB3B7007D87A38FB53198B5F /* imgui_impl_win32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F28C40F7656961D785DAEBC /* imgui_impl_win32.cpp */; };
 		DB5912B59D6216A7DA534351 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
 		DCFF2CA9339ABB2A17D719C3 /* EditorState.h in Sources */ = {isa = PBXBuildFile; fileRef = 5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */; };
-		DD94791E32C2FD41C6AE3CC2 /* imgui_impl_dx11.h in Sources */ = {isa = PBXBuildFile; fileRef = EBE5C34387EAC949621DA384 /* imgui_impl_dx11.h */; };
-		DDE362E48BBA1D7AFF60D6F1 /* glfw3native.h in Sources */ = {isa = PBXBuildFile; fileRef = FA90840A0DA32A7F209FD100 /* glfw3native.h */; };
-		DE544851CEEEFACB22DFE895 /* imgui_stdlib.h in Sources */ = {isa = PBXBuildFile; fileRef = A5A78AEE5CFE2CD1C5F1A9CD /* imgui_stdlib.h */; };
-		DE8AC4F4A28294B1A98F418A /* imgui_impl_allegro5.h in Sources */ = {isa = PBXBuildFile; fileRef = 626E22D150ACB74F28875D5E /* imgui_impl_allegro5.h */; };
-		DEE5E63F6CE010FAB166FF03 /* imgui_impl_dx12.h in Sources */ = {isa = PBXBuildFile; fileRef = 42C581ED42B7F6C628C791B3 /* imgui_impl_dx12.h */; };
 		DF4390B90BB7AE79467DF845 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
-		DF67443A2EC392A4D0E04B58 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 271399E2072DD22106871A9E /* main.cpp */; };
 		E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
-		E0C2312E41FA08CB31D6F58B /* imgui_impl_wgpu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 183C2C3BDD9F055064BD97D2 /* imgui_impl_wgpu.cpp */; };
 		E1410A0BEEA1971144D8FD89 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
 		E2369DD0E69988C9B80F193E /* EditorEntryPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */; };
-		E46FB9CE49D56CD60A938DD7 /* imgui_impl_vulkan.h in Sources */ = {isa = PBXBuildFile; fileRef = BD03240EB46CEAA06F2849E0 /* imgui_impl_vulkan.h */; };
-		E52382690B262A9460893DB2 /* imgui_impl_glut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A45030B4FEA1FE19CE29803D /* imgui_impl_glut.cpp */; };
-		E57B0A69BF7E3F7A5034E703 /* glfw3native.h in Sources */ = {isa = PBXBuildFile; fileRef = FA90840A0DA32A7F209FD100 /* glfw3native.h */; };
-		E5FF64F200B15B1CA289F263 /* imgui_impl_dx12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 21819D256FAA2735629916D9 /* imgui_impl_dx12.cpp */; };
-		E63EC45E26DAE2B6AD9E9120 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51D1F6AE799D9EC2B2B286B3 /* main.cpp */; };
 		E78BB3583E31106A5151C392 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
 		E9BA7F0BE2BC3190E1768D2B /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = F2434DE752D813530D366592 /* imgui_internal.h */; };
 		EA2B03FCAD4C13FD4516B669 /* imgui_impl_opengl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14A19E76CC00DF1ADB772C22 /* imgui_impl_opengl3.cpp */; };
 		ED07C6CADF36CD5F0D387BF0 /* imgui_impl_opengl3_loader.h in Sources */ = {isa = PBXBuildFile; fileRef = 1079CEEC75D1215302E57ADB /* imgui_impl_opengl3_loader.h */; };
-		ED7DC52D1C75C077AB99AC07 /* imgui_impl_sdl3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5EB43205CA47E1712C215A08 /* imgui_impl_sdl3.cpp */; };
 		EDDE8849890B7E377FABA808 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
-		EF09941C8AC0B8DB7358B5CE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C136DB8C2F9F6ED7318C6869 /* main.cpp */; };
 		F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
 		F24A4683DDA53A54054AA8FB /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
-		F38DE43D8D3BB54EC70C8359 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = F546EF48417D8F7C15FA333C /* main.mm */; };
-		F4027246CFCFCF80D3410FC1 /* imgui_stdlib.h in Sources */ = {isa = PBXBuildFile; fileRef = A5A78AEE5CFE2CD1C5F1A9CD /* imgui_stdlib.h */; };
-		F6FFFD5ADC3D563B7BBF9285 /* imgui_impl_sdlgpu3_shaders.h in Sources */ = {isa = PBXBuildFile; fileRef = E529652E316E43FD0A71960F /* imgui_impl_sdlgpu3_shaders.h */; };
-		F81632715A9C1A7A0EB56851 /* uSynergy.h in Sources */ = {isa = PBXBuildFile; fileRef = 063C4BBC1749ED5208E806FF /* uSynergy.h */; };
 		FA399E45D82E52BC0ED1BAC6 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 57CC210CF192355B419BB51C /* imgui_impl_metal.h */; };
 		FAA500842B41BF7159A08174 /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
 		FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
@@ -398,101 +191,41 @@
 
 /* Begin PBXFileReference section */
 		05977BBC879BD195C8EA9C47 /* imstb_textedit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imstb_textedit.h; path = vendor/imgui_copied_headers/imstb_textedit.h; sourceTree = SOURCE_ROOT; };
-		063C4BBC1749ED5208E806FF /* uSynergy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = uSynergy.h; path = vendor/imgui/examples/libs/usynergy/uSynergy.h; sourceTree = SOURCE_ROOT; };
-		0649EE7E3499876FA73A21EA /* imgui_impl_sdlrenderer2.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_sdlrenderer2.cpp; path = vendor/imgui/backends/imgui_impl_sdlrenderer2.cpp; sourceTree = SOURCE_ROOT; };
 		091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
-		0B895136B1D433D5F5AD95BD /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl3_sdlgpu3/main.cpp; sourceTree = SOURCE_ROOT; };
 		0CF93228835C37B6B3940BE7 /* imstb_rectpack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imstb_rectpack.h; path = vendor/imgui_copied_headers/imstb_rectpack.h; sourceTree = SOURCE_ROOT; };
-		0DA5C1332C0B05DA79C58BEA /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_glfw_opengl2/main.cpp; sourceTree = SOURCE_ROOT; };
 		0E15C87450FCEBEED9FE65D8 /* EditorEntryPoint.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorEntryPoint.cpp; path = src/EditorEntryPoint.cpp; sourceTree = SOURCE_ROOT; };
 		1079CEEC75D1215302E57ADB /* imgui_impl_opengl3_loader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_opengl3_loader.h; path = vendor/imgui/backends/imgui_impl_opengl3_loader.h; sourceTree = SOURCE_ROOT; };
-		120A47B0C7F064C031616CD2 /* imgui_impl_wgpu.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_wgpu.h; path = vendor/imgui/backends/imgui_impl_wgpu.h; sourceTree = SOURCE_ROOT; };
-		124B46E0F17F5585C96116EA /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = main.mm; path = vendor/imgui/examples/example_apple_opengl2/main.mm; sourceTree = SOURCE_ROOT; };
-		14066214E497849512D40A45 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl3_sdlrenderer3/main.cpp; sourceTree = SOURCE_ROOT; };
-		146B599A084308D4D108CCBC /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_win32_directx12/main.cpp; sourceTree = SOURCE_ROOT; };
 		14A19E76CC00DF1ADB772C22 /* imgui_impl_opengl3.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl3.cpp; path = vendor/imgui/backends/imgui_impl_opengl3.cpp; sourceTree = SOURCE_ROOT; };
 		166D4FFA99E174F68310686E /* imgui.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui.h; path = vendor/imgui/imgui.h; sourceTree = SOURCE_ROOT; };
-		183C2C3BDD9F055064BD97D2 /* imgui_impl_wgpu.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_wgpu.cpp; path = vendor/imgui/backends/imgui_impl_wgpu.cpp; sourceTree = SOURCE_ROOT; };
 		199A0B63F4A4CCFCEA9651B7 /* imconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imconfig.h; path = vendor/imgui_copied_headers/imconfig.h; sourceTree = SOURCE_ROOT; };
-		1E56BF6DDF9198EA30450B1F /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl2_sdlrenderer2/main.cpp; sourceTree = SOURCE_ROOT; };
-		21819D256FAA2735629916D9 /* imgui_impl_dx12.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_dx12.cpp; path = vendor/imgui/backends/imgui_impl_dx12.cpp; sourceTree = SOURCE_ROOT; };
-		253AFC840DE6FF2B60109E78 /* imgui_impl_sdl2.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_sdl2.cpp; path = vendor/imgui/backends/imgui_impl_sdl2.cpp; sourceTree = SOURCE_ROOT; };
-		271399E2072DD22106871A9E /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl3_opengl3/main.cpp; sourceTree = SOURCE_ROOT; };
 		289131C67943EE01B31D399A /* imuserconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imuserconfig.h; path = include/imuserconfig.h; sourceTree = SOURCE_ROOT; };
-		296345385453DE127F22DA8F /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_glut_opengl2/main.cpp; sourceTree = SOURCE_ROOT; };
-		2E48E72748ED3ECD6B3BF285 /* imgui_impl_sdl2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_sdl2.h; path = vendor/imgui/backends/imgui_impl_sdl2.h; sourceTree = SOURCE_ROOT; };
-		3701E0F516494A89E5608EAC /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_glfw_opengl3/main.cpp; sourceTree = SOURCE_ROOT; };
-		39AE22E7017E6AE6A605A776 /* imgui_impl_glut.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_glut.h; path = vendor/imgui/backends/imgui_impl_glut.h; sourceTree = SOURCE_ROOT; };
-		3DF3A75E0EA0982B087DBB23 /* imgui_freetype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_freetype.h; path = vendor/imgui/misc/freetype/imgui_freetype.h; sourceTree = SOURCE_ROOT; };
-		3EAEE9C19C54E1A6916D9BC9 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_null/main.cpp; sourceTree = SOURCE_ROOT; };
 		41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_metal.h; path = vendor/imgui/backends/imgui_impl_metal.h; sourceTree = SOURCE_ROOT; };
 		41ED785FD8BD39060931E2EA /* imstb_truetype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imstb_truetype.h; path = vendor/imgui/imstb_truetype.h; sourceTree = SOURCE_ROOT; };
-		42C581ED42B7F6C628C791B3 /* imgui_impl_dx12.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_dx12.h; path = vendor/imgui/backends/imgui_impl_dx12.h; sourceTree = SOURCE_ROOT; };
 		432D9049C92FDF9C131A7BC3 /* imstb_truetype.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imstb_truetype.h; path = vendor/imgui_copied_headers/imstb_truetype.h; sourceTree = SOURCE_ROOT; };
 		482C207C2E16522B4A97A05C /* EditorConfigurationMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorConfigurationMode.h; path = include/Editor/Core/EditorConfigurationMode.h; sourceTree = SOURCE_ROOT; };
 		4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imstb_rectpack.h; path = vendor/imgui/imstb_rectpack.h; sourceTree = SOURCE_ROOT; };
 		507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ConsoleView.h; path = src/Views/ConsoleView.h; sourceTree = SOURCE_ROOT; };
 		50F6CB46BD5DADB263C192AA /* imgui.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui.cpp; path = vendor/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
-		51D1F6AE799D9EC2B2B286B3 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_win32_opengl3/main.cpp; sourceTree = SOURCE_ROOT; };
-		534349495123582EA3899C5E /* imgui_impl_opengl2.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_opengl2.cpp; path = vendor/imgui/backends/imgui_impl_opengl2.cpp; sourceTree = SOURCE_ROOT; };
 		541670AD11B123F65C274F05 /* imgui_impl_glfw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_glfw.h; path = vendor/imgui_copied_headers/imgui_impl_glfw.h; sourceTree = SOURCE_ROOT; };
-		552F4D048F0BF17707E2E0AD /* imgui_single_file.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_single_file.h; path = vendor/imgui/misc/single_file/imgui_single_file.h; sourceTree = SOURCE_ROOT; };
 		57CC210CF192355B419BB51C /* imgui_impl_metal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_metal.h; path = vendor/imgui_copied_headers/imgui_impl_metal.h; sourceTree = SOURCE_ROOT; };
 		5C36E37C4FB81FEF72FB7413 /* EditorEntryPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorEntryPoint.h; path = include/Editor/Core/Internal/EditorEntryPoint.h; sourceTree = SOURCE_ROOT; };
-		5C52BAD1805E42E9229AB81C /* emscripten_mainloop_stub.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = emscripten_mainloop_stub.h; path = vendor/imgui/examples/libs/emscripten/emscripten_mainloop_stub.h; sourceTree = SOURCE_ROOT; };
-		5CBF8EADA6A9B7698672881B /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_win32_vulkan/main.cpp; sourceTree = SOURCE_ROOT; };
 		5D8D2462EDFD9C3E0DCCC0B9 /* EditorState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EditorState.h; path = include/Editor/Core/EditorState.h; sourceTree = SOURCE_ROOT; };
-		5EB43205CA47E1712C215A08 /* imgui_impl_sdl3.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_sdl3.cpp; path = vendor/imgui/backends/imgui_impl_sdl3.cpp; sourceTree = SOURCE_ROOT; };
-		5ECC552AA62D8928B57D72AD /* imgui_impl_android.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_android.h; path = vendor/imgui/backends/imgui_impl_android.h; sourceTree = SOURCE_ROOT; };
-		626E22D150ACB74F28875D5E /* imgui_impl_allegro5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_allegro5.h; path = vendor/imgui/backends/imgui_impl_allegro5.h; sourceTree = SOURCE_ROOT; };
-		65A26110105E2CBACECBB06D /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl2_directx11/main.cpp; sourceTree = SOURCE_ROOT; };
 		694C820C0FE42FF4E7CB88CC /* EditorState.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorState.cpp; path = src/Core/EditorState.cpp; sourceTree = SOURCE_ROOT; };
-		770DE30140BA82C36D68A055 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl3_vulkan/main.cpp; sourceTree = SOURCE_ROOT; };
-		7A5331495E2EF920E460FC3F /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl2_opengl3/main.cpp; sourceTree = SOURCE_ROOT; };
 		7BF2227573260E64F539DCAD /* imgui_draw.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_draw.cpp; path = vendor/imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
-		7C122B87B6E59C71AB6402B9 /* imgui_impl_dx9.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_dx9.h; path = vendor/imgui/backends/imgui_impl_dx9.h; sourceTree = SOURCE_ROOT; };
 		7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleView.cpp; path = src/Views/ConsoleView.cpp; sourceTree = SOURCE_ROOT; };
-		80A9686072874F7DCDE21A9A /* imconfig_allegro5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imconfig_allegro5.h; path = vendor/imgui/examples/example_allegro5/imconfig_allegro5.h; sourceTree = SOURCE_ROOT; };
-		80E91EA8C77B3D6162980FD3 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_allegro5/main.cpp; sourceTree = SOURCE_ROOT; };
-		837634505A9944B69191BDAF /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_android_opengl3/main.cpp; sourceTree = SOURCE_ROOT; };
-		83834257D7EB758D51B4E279 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_glfw_vulkan/main.cpp; sourceTree = SOURCE_ROOT; };
-		900128DBA5E9ED9E801C1FF0 /* imgui_impl_dx10.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_dx10.h; path = vendor/imgui/backends/imgui_impl_dx10.h; sourceTree = SOURCE_ROOT; };
-		913230BCFDAA1067FD49A8E9 /* imgui_impl_dx9.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_dx9.cpp; path = vendor/imgui/backends/imgui_impl_dx9.cpp; sourceTree = SOURCE_ROOT; };
 		961F49B2A1FB826F2103F49F /* DllMain.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DllMain.cpp; path = src/_platform/Windows/DllMain.cpp; sourceTree = SOURCE_ROOT; };
-		97AFDC0E0FD0E5B8AFD0D124 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_glfw_wgpu/main.cpp; sourceTree = SOURCE_ROOT; };
 		9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glfw.cpp; path = vendor/imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
 		9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_tables.cpp; path = vendor/imgui/imgui_tables.cpp; sourceTree = SOURCE_ROOT; };
-		9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = imgui_impl_metal.mm; path = vendor/imgui/backends/imgui_impl_metal.mm; sourceTree = SOURCE_ROOT; };
-		9F28C40F7656961D785DAEBC /* imgui_impl_win32.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_win32.cpp; path = vendor/imgui/backends/imgui_impl_win32.cpp; sourceTree = SOURCE_ROOT; };
+		9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = imgui_impl_metal.mm; path = vendor/imgui/backends/imgui_impl_metal.mm; sourceTree = SOURCE_ROOT; };
 		9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_osx.h; path = vendor/imgui/backends/imgui_impl_osx.h; sourceTree = SOURCE_ROOT; };
-		A340D885FD2711590DA52721 /* imgui_impl_allegro5.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_allegro5.cpp; path = vendor/imgui/backends/imgui_impl_allegro5.cpp; sourceTree = SOURCE_ROOT; };
 		A41E4C3B3237701EC8CD090F /* imgui.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui.h; path = vendor/imgui_copied_headers/imgui.h; sourceTree = SOURCE_ROOT; };
-		A45030B4FEA1FE19CE29803D /* imgui_impl_glut.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_glut.cpp; path = vendor/imgui/backends/imgui_impl_glut.cpp; sourceTree = SOURCE_ROOT; };
 		A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_demo.cpp; path = vendor/imgui/imgui_demo.cpp; sourceTree = SOURCE_ROOT; };
-		A5A78AEE5CFE2CD1C5F1A9CD /* imgui_stdlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_stdlib.h; path = vendor/imgui/misc/cpp/imgui_stdlib.h; sourceTree = SOURCE_ROOT; };
-		A5D512599A90ED8C96DC0CD3 /* imgui_impl_dx11.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_dx11.cpp; path = vendor/imgui/backends/imgui_impl_dx11.cpp; sourceTree = SOURCE_ROOT; };
-		A6F6C2F7C84A34A0B95947D4 /* imgui_impl_sdlrenderer2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_sdlrenderer2.h; path = vendor/imgui/backends/imgui_impl_sdlrenderer2.h; sourceTree = SOURCE_ROOT; };
 		A9D4B5A4D91337902459247B /* imgui_impl_opengl3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_opengl3.h; path = vendor/imgui/backends/imgui_impl_opengl3.h; sourceTree = SOURCE_ROOT; };
-		AE1A710B902B374D3C9BFCAD /* imgui_impl_dx10.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_dx10.cpp; path = vendor/imgui/backends/imgui_impl_dx10.cpp; sourceTree = SOURCE_ROOT; };
 		B1B07611032F76969968DFE5 /* imconfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imconfig.h; path = vendor/imgui/imconfig.h; sourceTree = SOURCE_ROOT; };
 		B1EE8130EEE58F37FC55FFAA /* imgui_stdlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_stdlib.h; path = vendor/imgui_copied_headers/imgui_stdlib.h; sourceTree = SOURCE_ROOT; };
-		B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = imgui_impl_osx.mm; path = vendor/imgui/backends/imgui_impl_osx.mm; sourceTree = SOURCE_ROOT; };
-		B9981EA5028FA72489FE301B /* imgui_impl_sdlrenderer3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_sdlrenderer3.h; path = vendor/imgui/backends/imgui_impl_sdlrenderer3.h; sourceTree = SOURCE_ROOT; };
-		BACF61AAEE78B1A96C88282A /* glfw3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = glfw3.h; path = vendor/imgui/examples/libs/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
-		BD03240EB46CEAA06F2849E0 /* imgui_impl_vulkan.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_vulkan.h; path = vendor/imgui/backends/imgui_impl_vulkan.h; sourceTree = SOURCE_ROOT; };
-		BE6D2A583FBFB13E2B897F82 /* binary_to_compressed_c.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = binary_to_compressed_c.cpp; path = vendor/imgui/misc/fonts/binary_to_compressed_c.cpp; sourceTree = SOURCE_ROOT; };
-		C132FDAC35D6F358A603051F /* uSynergy.c */ = {isa = PBXFileReference; includeInIndex = 1; name = uSynergy.c; path = vendor/imgui/examples/libs/usynergy/uSynergy.c; sourceTree = SOURCE_ROOT; };
-		C136DB8C2F9F6ED7318C6869 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl2_vulkan/main.cpp; sourceTree = SOURCE_ROOT; };
-		C2EF5B34ECEED8CABC95632E /* imgui_impl_sdlgpu3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_sdlgpu3.h; path = vendor/imgui/backends/imgui_impl_sdlgpu3.h; sourceTree = SOURCE_ROOT; };
-		C439F27F105F287D18E8CA50 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_win32_directx9/main.cpp; sourceTree = SOURCE_ROOT; };
-		C53F6888E1D48FDD20105CB2 /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = main.mm; path = vendor/imgui/examples/example_apple_metal/main.mm; sourceTree = SOURCE_ROOT; };
+		B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = imgui_impl_osx.mm; path = vendor/imgui/backends/imgui_impl_osx.mm; sourceTree = SOURCE_ROOT; };
 		C61ED2DFC8299631067EED02 /* imstb_textedit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imstb_textedit.h; path = vendor/imgui/imstb_textedit.h; sourceTree = SOURCE_ROOT; };
 		C725434163B85C63A62E5FB3 /* imgui_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_internal.h; path = vendor/imgui/imgui_internal.h; sourceTree = SOURCE_ROOT; };
-		C96C7CB4EB2B51A1F4D63097 /* imgui_impl_win32.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_win32.h; path = vendor/imgui/backends/imgui_impl_win32.h; sourceTree = SOURCE_ROOT; };
-		CA8919C2F0455E5A40B9B55A /* imgui_impl_sdlgpu3.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_sdlgpu3.cpp; path = vendor/imgui/backends/imgui_impl_sdlgpu3.cpp; sourceTree = SOURCE_ROOT; };
-		CB2580E569053284CFF94DAF /* imgui_impl_sdl3.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_sdl3.h; path = vendor/imgui/backends/imgui_impl_sdl3.h; sourceTree = SOURCE_ROOT; };
-		CC9451AC6644FD4678136D55 /* imgui_impl_sdlrenderer3.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_sdlrenderer3.cpp; path = vendor/imgui/backends/imgui_impl_sdlrenderer3.cpp; sourceTree = SOURCE_ROOT; };
-		CDD94C09A27E494872DF0D4C /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_sdl2_opengl2/main.cpp; sourceTree = SOURCE_ROOT; };
 		CE2B9A352B01853C00DE24E0 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE327B0E2B1593400067EF26 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CE46BD082CFC33CD002F900C /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,10 +233,12 @@
 		CE46BD182CFC3F53002F900C /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4C6EAC2B0196810015E51A /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
-		CE93242F2D574DE900A05A63 /* libimguid.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimguid.a; path = "vcpkg_installed/universal-dynamic-adhoc/debug/lib/libimguid.a"; sourceTree = "<group>"; };
-		CE9324312D574E2200A05A63 /* libimgui.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libimgui.a; path = "vcpkg_installed/universal-dynamic-adhoc/lib/libimgui.a"; sourceTree = "<group>"; };
-		CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = "<group>"; };
-		CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libmimalloc.2.1.dylib"; sourceTree = "<group>"; };
+		CE6FCE6E2DEAD3B1006C4B6D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CE6FCE702DEAD3E0006C4B6D /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = System/Library/Frameworks/GameController.framework; sourceTree = SDKROOT; };
+		CE6FCE722DEAD3F5006C4B6D /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		CE6FCE742DEAD414006C4B6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = "<group>"; };
+		CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = "<group>"; };
 		CED3D6982B12D3D700C5FB04 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Editor/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		CEDB37A42CFC1B3B00FC593F /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
@@ -511,21 +246,9 @@
 		CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
 		CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
 		D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_glfw.h; path = vendor/imgui/backends/imgui_impl_glfw.h; sourceTree = SOURCE_ROOT; };
-		DCEE4BBE4F5EAD5EAF7E32CB /* imgui_stdlib.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_stdlib.cpp; path = vendor/imgui/misc/cpp/imgui_stdlib.cpp; sourceTree = SOURCE_ROOT; };
 		DD69B354237EA7C9DA788144 /* EditorConfigurationMode.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = EditorConfigurationMode.cpp; path = src/Core/EditorConfigurationMode.cpp; sourceTree = SOURCE_ROOT; };
-		E19F356529AF04FCDF39AA5A /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_win32_directx10/main.cpp; sourceTree = SOURCE_ROOT; };
-		E28A28CE820E3116B3178271 /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = main.mm; path = vendor/imgui/examples/example_glfw_metal/main.mm; sourceTree = SOURCE_ROOT; };
 		E42AC8B1934894389B33942E /* imgui_widgets.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = vendor/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
-		E529652E316E43FD0A71960F /* imgui_impl_sdlgpu3_shaders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_sdlgpu3_shaders.h; path = vendor/imgui/backends/imgui_impl_sdlgpu3_shaders.h; sourceTree = SOURCE_ROOT; };
-		EAAA1B5693CB83A70055E6FE /* imgui_freetype.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_freetype.cpp; path = vendor/imgui/misc/freetype/imgui_freetype.cpp; sourceTree = SOURCE_ROOT; };
-		EBE5C34387EAC949621DA384 /* imgui_impl_dx11.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_dx11.h; path = vendor/imgui/backends/imgui_impl_dx11.h; sourceTree = SOURCE_ROOT; };
-		EC01CCDC9B58219DF07AE20E /* imgui_impl_vulkan.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_vulkan.cpp; path = vendor/imgui/backends/imgui_impl_vulkan.cpp; sourceTree = SOURCE_ROOT; };
-		F19CC964443EB639D48393AA /* imgui_impl_opengl2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_opengl2.h; path = vendor/imgui/backends/imgui_impl_opengl2.h; sourceTree = SOURCE_ROOT; };
-		F1FC35E4C1C0EFDC104E0A18 /* imgui_impl_android.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_impl_android.cpp; path = vendor/imgui/backends/imgui_impl_android.cpp; sourceTree = SOURCE_ROOT; };
 		F2434DE752D813530D366592 /* imgui_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_internal.h; path = vendor/imgui_copied_headers/imgui_internal.h; sourceTree = SOURCE_ROOT; };
-		F546EF48417D8F7C15FA333C /* main.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = main.mm; path = vendor/imgui/examples/example_sdl2_metal/main.mm; sourceTree = SOURCE_ROOT; };
-		F6067FD1923BC72FA992C6F6 /* main.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = vendor/imgui/examples/example_win32_directx11/main.cpp; sourceTree = SOURCE_ROOT; };
-		FA90840A0DA32A7F209FD100 /* glfw3native.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = glfw3native.h; path = vendor/imgui/examples/libs/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,12 +256,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
+				CE9743602D45EE2F00C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
+				CE6FCE7A2DEAD44A006C4B6D /* AppKit.framework in Frameworks */,
+				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
+				CE6FCE7B2DEAD44A006C4B6D /* GameController.framework in Frameworks */,
+				CE6FCE7C2DEAD44A006C4B6D /* Metal.framework in Frameworks */,
+				CE6FCE7D2DEAD44A006C4B6D /* QuartzCore.framework in Frameworks */,
 				CEDB37A62CFC1B3B00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
 				CEE1D7D92CFC1FCF00373186 /* libglfw.3.4.dylib in Frameworks */,
 				CE46BD172CFC3F45002F900C /* libEngine.dylib in Frameworks */,
-				CE9324332D574E3200A05A63 /* libimgui.a in Frameworks */,
-				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,12 +272,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib in Frameworks */,
+				CE97435F2D45EE2600C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
+				CE6FCE762DEAD444006C4B6D /* AppKit.framework in Frameworks */,
+				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
+				CE6FCE772DEAD444006C4B6D /* GameController.framework in Frameworks */,
+				CE6FCE782DEAD444006C4B6D /* Metal.framework in Frameworks */,
+				CE6FCE792DEAD444006C4B6D /* QuartzCore.framework in Frameworks */,
 				CE46BD032CFC33CD002F900C /* libfmt.11.0.2.dylib in Frameworks */,
 				CE46BD022CFC33CD002F900C /* libglfw.3.4.dylib in Frameworks */,
 				CE46BD192CFC3F53002F900C /* libEngineDev.dylib in Frameworks */,
-				CE9324322D574E2200A05A63 /* libimgui.a in Frameworks */,
-				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,45 +288,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib in Frameworks */,
+				CE97435D2D45EE0800C7D0F7 /* libmimalloc-debug.2.2.dylib in Frameworks */,
+				CE6FCE6F2DEAD3B1006C4B6D /* AppKit.framework in Frameworks */,
+				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
+				CE6FCE712DEAD3E0006C4B6D /* GameController.framework in Frameworks */,
+				CE6FCE732DEAD3F5006C4B6D /* Metal.framework in Frameworks */,
+				CE6FCE752DEAD414006C4B6D /* QuartzCore.framework in Frameworks */,
 				CEDB397D2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib in Frameworks */,
 				CEDB397C2CFC1B6F00FC593F /* libglfw.3.4.dylib in Frameworks */,
 				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
-				CE9324302D574DE900A05A63 /* libimguid.a in Frameworks */,
-				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09D6D3FCE73E53ECFC4CA11C /* example_sdl3_sdlrenderer3 */ = {
-			isa = PBXGroup;
-			children = (
-				14066214E497849512D40A45 /* main.cpp */,
-			);
-			name = example_sdl3_sdlrenderer3;
-			path = vendor/imgui/examples/example_sdl3_sdlrenderer3;
-			sourceTree = SOURCE_ROOT;
-		};
-		14F11E53C0D714AD0ABBAC6C /* example_glfw_opengl3 */ = {
-			isa = PBXGroup;
-			children = (
-				3701E0F516494A89E5608EAC /* main.cpp */,
-			);
-			name = example_glfw_opengl3;
-			path = vendor/imgui/examples/example_glfw_opengl3;
-			sourceTree = SOURCE_ROOT;
-		};
-		254270865CF81F1A6889D779 /* single_file */ = {
-			isa = PBXGroup;
-			children = (
-				552F4D048F0BF17707E2E0AD /* imgui_single_file.h */,
-			);
-			name = single_file;
-			path = vendor/imgui/misc/single_file;
-			sourceTree = SOURCE_ROOT;
-		};
 		2D48CE9160294FF3325E5695 /* _platform */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,85 +312,10 @@
 			path = src/_platform;
 			sourceTree = SOURCE_ROOT;
 		};
-		34BE08C2543218D8604491AF /* cpp */ = {
-			isa = PBXGroup;
-			children = (
-				DCEE4BBE4F5EAD5EAF7E32CB /* imgui_stdlib.cpp */,
-				A5A78AEE5CFE2CD1C5F1A9CD /* imgui_stdlib.h */,
-			);
-			name = cpp;
-			path = vendor/imgui/misc/cpp;
-			sourceTree = SOURCE_ROOT;
-		};
-		372E7C9B3786567B447DE81A /* example_sdl3_opengl3 */ = {
-			isa = PBXGroup;
-			children = (
-				271399E2072DD22106871A9E /* main.cpp */,
-			);
-			name = example_sdl3_opengl3;
-			path = vendor/imgui/examples/example_sdl3_opengl3;
-			sourceTree = SOURCE_ROOT;
-		};
-		3841E13990D71E3F4CAEF94E /* glfw */ = {
-			isa = PBXGroup;
-			children = (
-				B8BF0CAE5E64045D17A46A00 /* include */,
-			);
-			name = glfw;
-			path = vendor/imgui/examples/libs/glfw;
-			sourceTree = SOURCE_ROOT;
-		};
-		3B6127E2EDD089C7D30908CB /* example_glfw_metal */ = {
-			isa = PBXGroup;
-			children = (
-				E28A28CE820E3116B3178271 /* main.mm */,
-			);
-			name = example_glfw_metal;
-			path = vendor/imgui/examples/example_glfw_metal;
-			sourceTree = SOURCE_ROOT;
-		};
-		3EE82C7B73A2C6AE8E2A2F57 /* emscripten */ = {
-			isa = PBXGroup;
-			children = (
-				5C52BAD1805E42E9229AB81C /* emscripten_mainloop_stub.h */,
-			);
-			name = emscripten;
-			path = vendor/imgui/examples/libs/emscripten;
-			sourceTree = SOURCE_ROOT;
-		};
-		4A8E63049403435355A5EE39 /* example_apple_opengl2 */ = {
-			isa = PBXGroup;
-			children = (
-				124B46E0F17F5585C96116EA /* main.mm */,
-			);
-			name = example_apple_opengl2;
-			path = vendor/imgui/examples/example_apple_opengl2;
-			sourceTree = SOURCE_ROOT;
-		};
-		4DF1666ABC9190F4E4F1ECF8 /* example_sdl2_sdlrenderer2 */ = {
-			isa = PBXGroup;
-			children = (
-				1E56BF6DDF9198EA30450B1F /* main.cpp */,
-			);
-			name = example_sdl2_sdlrenderer2;
-			path = vendor/imgui/examples/example_sdl2_sdlrenderer2;
-			sourceTree = SOURCE_ROOT;
-		};
-		4FF384993A9CAC21671D6785 /* example_glfw_opengl2 */ = {
-			isa = PBXGroup;
-			children = (
-				0DA5C1332C0B05DA79C58BEA /* main.cpp */,
-			);
-			name = example_glfw_opengl2;
-			path = vendor/imgui/examples/example_glfw_opengl2;
-			sourceTree = SOURCE_ROOT;
-		};
 		56B3B036BC8501A8A16ACADD /* imgui */ = {
 			isa = PBXGroup;
 			children = (
 				AE52914621143FFE8C281738 /* backends */,
-				898BB5BB2B9BE5A37B30CF6A /* examples */,
-				9AB4F142FBD199C47F1A4EBB /* misc */,
 				B1B07611032F76969968DFE5 /* imconfig.h */,
 				50F6CB46BD5DADB263C192AA /* imgui.cpp */,
 				166D4FFA99E174F68310686E /* imgui.h */,
@@ -702,24 +332,6 @@
 			path = vendor/imgui;
 			sourceTree = SOURCE_ROOT;
 		};
-		6503B9C3D8F7E7A937A1D5EE /* example_sdl3_vulkan */ = {
-			isa = PBXGroup;
-			children = (
-				770DE30140BA82C36D68A055 /* main.cpp */,
-			);
-			name = example_sdl3_vulkan;
-			path = vendor/imgui/examples/example_sdl3_vulkan;
-			sourceTree = SOURCE_ROOT;
-		};
-		65E64A8D19C10C50C62C9F06 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				BE6D2A583FBFB13E2B897F82 /* binary_to_compressed_c.cpp */,
-			);
-			name = fonts;
-			path = vendor/imgui/misc/fonts;
-			sourceTree = SOURCE_ROOT;
-		};
 		688B6DE88986951E7329E9E8 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
@@ -727,88 +339,6 @@
 			);
 			name = Internal;
 			path = include/Editor/Core/Internal;
-			sourceTree = SOURCE_ROOT;
-		};
-		73EBDCC8C27262A54C549F4A /* usynergy */ = {
-			isa = PBXGroup;
-			children = (
-				C132FDAC35D6F358A603051F /* uSynergy.c */,
-				063C4BBC1749ED5208E806FF /* uSynergy.h */,
-			);
-			name = usynergy;
-			path = vendor/imgui/examples/libs/usynergy;
-			sourceTree = SOURCE_ROOT;
-		};
-		746AEEAF167DEE494A65F991 /* example_win32_directx11 */ = {
-			isa = PBXGroup;
-			children = (
-				F6067FD1923BC72FA992C6F6 /* main.cpp */,
-			);
-			name = example_win32_directx11;
-			path = vendor/imgui/examples/example_win32_directx11;
-			sourceTree = SOURCE_ROOT;
-		};
-		7C179B6DC40864F7F99D778C /* example_win32_directx12 */ = {
-			isa = PBXGroup;
-			children = (
-				146B599A084308D4D108CCBC /* main.cpp */,
-			);
-			name = example_win32_directx12;
-			path = vendor/imgui/examples/example_win32_directx12;
-			sourceTree = SOURCE_ROOT;
-		};
-		834C1D3C90ED1EF9C3F00DC0 /* example_null */ = {
-			isa = PBXGroup;
-			children = (
-				3EAEE9C19C54E1A6916D9BC9 /* main.cpp */,
-			);
-			name = example_null;
-			path = vendor/imgui/examples/example_null;
-			sourceTree = SOURCE_ROOT;
-		};
-		898BB5BB2B9BE5A37B30CF6A /* examples */ = {
-			isa = PBXGroup;
-			children = (
-				95F8F7A45FD7AD2C25C83153 /* example_allegro5 */,
-				C9EE86CCF8B84369477DDF37 /* example_android_opengl3 */,
-				AE71B049D2A8F12CE7604DFE /* example_apple_metal */,
-				4A8E63049403435355A5EE39 /* example_apple_opengl2 */,
-				3B6127E2EDD089C7D30908CB /* example_glfw_metal */,
-				4FF384993A9CAC21671D6785 /* example_glfw_opengl2 */,
-				14F11E53C0D714AD0ABBAC6C /* example_glfw_opengl3 */,
-				DFA8FEFFAA41751DBFBB646C /* example_glfw_vulkan */,
-				A21768712059CC7E6A497D1C /* example_glfw_wgpu */,
-				952E604CFF2515376037D353 /* example_glut_opengl2 */,
-				834C1D3C90ED1EF9C3F00DC0 /* example_null */,
-				E6B0AAC4BBC8DAE20FD551C7 /* example_sdl2_directx11 */,
-				A8F40C6F0C8077B71B0E2B90 /* example_sdl2_metal */,
-				8B62B305E5AE30B862769E1B /* example_sdl2_opengl2 */,
-				D96DA1D4A5B5D115049BF11F /* example_sdl2_opengl3 */,
-				4DF1666ABC9190F4E4F1ECF8 /* example_sdl2_sdlrenderer2 */,
-				9C9129D825D7A65F498E35E1 /* example_sdl2_vulkan */,
-				372E7C9B3786567B447DE81A /* example_sdl3_opengl3 */,
-				D21A6242E38D2BE0A42B1712 /* example_sdl3_sdlgpu3 */,
-				09D6D3FCE73E53ECFC4CA11C /* example_sdl3_sdlrenderer3 */,
-				6503B9C3D8F7E7A937A1D5EE /* example_sdl3_vulkan */,
-				BBD80553579A2972EB17BCE3 /* example_win32_directx10 */,
-				746AEEAF167DEE494A65F991 /* example_win32_directx11 */,
-				7C179B6DC40864F7F99D778C /* example_win32_directx12 */,
-				E244B11DA5998D19B6283D88 /* example_win32_directx9 */,
-				8BEC9C26E15492D41E671993 /* example_win32_opengl3 */,
-				A76FBE8F93A0276F211A962E /* example_win32_vulkan */,
-				BD2AB1A5C6A23D10AA1B937D /* libs */,
-			);
-			name = examples;
-			path = vendor/imgui/examples;
-			sourceTree = SOURCE_ROOT;
-		};
-		8B62B305E5AE30B862769E1B /* example_sdl2_opengl2 */ = {
-			isa = PBXGroup;
-			children = (
-				CDD94C09A27E494872DF0D4C /* main.cpp */,
-			);
-			name = example_sdl2_opengl2;
-			path = vendor/imgui/examples/example_sdl2_opengl2;
 			sourceTree = SOURCE_ROOT;
 		};
 		8B7D10DB4E6772027DC06BCD /* Windows */ = {
@@ -819,82 +349,6 @@
 			);
 			name = Windows;
 			path = src/_platform/Windows;
-			sourceTree = SOURCE_ROOT;
-		};
-		8BEC9C26E15492D41E671993 /* example_win32_opengl3 */ = {
-			isa = PBXGroup;
-			children = (
-				51D1F6AE799D9EC2B2B286B3 /* main.cpp */,
-			);
-			name = example_win32_opengl3;
-			path = vendor/imgui/examples/example_win32_opengl3;
-			sourceTree = SOURCE_ROOT;
-		};
-		952E604CFF2515376037D353 /* example_glut_opengl2 */ = {
-			isa = PBXGroup;
-			children = (
-				296345385453DE127F22DA8F /* main.cpp */,
-			);
-			name = example_glut_opengl2;
-			path = vendor/imgui/examples/example_glut_opengl2;
-			sourceTree = SOURCE_ROOT;
-		};
-		95F8F7A45FD7AD2C25C83153 /* example_allegro5 */ = {
-			isa = PBXGroup;
-			children = (
-				80A9686072874F7DCDE21A9A /* imconfig_allegro5.h */,
-				80E91EA8C77B3D6162980FD3 /* main.cpp */,
-			);
-			name = example_allegro5;
-			path = vendor/imgui/examples/example_allegro5;
-			sourceTree = SOURCE_ROOT;
-		};
-		9AB4F142FBD199C47F1A4EBB /* misc */ = {
-			isa = PBXGroup;
-			children = (
-				34BE08C2543218D8604491AF /* cpp */,
-				65E64A8D19C10C50C62C9F06 /* fonts */,
-				EDDC58FD948DFA47AC6ED32F /* freetype */,
-				254270865CF81F1A6889D779 /* single_file */,
-			);
-			name = misc;
-			path = vendor/imgui/misc;
-			sourceTree = SOURCE_ROOT;
-		};
-		9C9129D825D7A65F498E35E1 /* example_sdl2_vulkan */ = {
-			isa = PBXGroup;
-			children = (
-				C136DB8C2F9F6ED7318C6869 /* main.cpp */,
-			);
-			name = example_sdl2_vulkan;
-			path = vendor/imgui/examples/example_sdl2_vulkan;
-			sourceTree = SOURCE_ROOT;
-		};
-		A21768712059CC7E6A497D1C /* example_glfw_wgpu */ = {
-			isa = PBXGroup;
-			children = (
-				97AFDC0E0FD0E5B8AFD0D124 /* main.cpp */,
-			);
-			name = example_glfw_wgpu;
-			path = vendor/imgui/examples/example_glfw_wgpu;
-			sourceTree = SOURCE_ROOT;
-		};
-		A76FBE8F93A0276F211A962E /* example_win32_vulkan */ = {
-			isa = PBXGroup;
-			children = (
-				5CBF8EADA6A9B7698672881B /* main.cpp */,
-			);
-			name = example_win32_vulkan;
-			path = vendor/imgui/examples/example_win32_vulkan;
-			sourceTree = SOURCE_ROOT;
-		};
-		A8F40C6F0C8077B71B0E2B90 /* example_sdl2_metal */ = {
-			isa = PBXGroup;
-			children = (
-				F546EF48417D8F7C15FA333C /* main.mm */,
-			);
-			name = example_sdl2_metal;
-			path = vendor/imgui/examples/example_sdl2_metal;
 			sourceTree = SOURCE_ROOT;
 		};
 		AA67C44F86F1D501F9C66947 /* imgui_copied_headers */ = {
@@ -917,60 +371,18 @@
 		AE52914621143FFE8C281738 /* backends */ = {
 			isa = PBXGroup;
 			children = (
-				A340D885FD2711590DA52721 /* imgui_impl_allegro5.cpp */,
-				626E22D150ACB74F28875D5E /* imgui_impl_allegro5.h */,
-				F1FC35E4C1C0EFDC104E0A18 /* imgui_impl_android.cpp */,
-				5ECC552AA62D8928B57D72AD /* imgui_impl_android.h */,
-				AE1A710B902B374D3C9BFCAD /* imgui_impl_dx10.cpp */,
-				900128DBA5E9ED9E801C1FF0 /* imgui_impl_dx10.h */,
-				A5D512599A90ED8C96DC0CD3 /* imgui_impl_dx11.cpp */,
-				EBE5C34387EAC949621DA384 /* imgui_impl_dx11.h */,
-				21819D256FAA2735629916D9 /* imgui_impl_dx12.cpp */,
-				42C581ED42B7F6C628C791B3 /* imgui_impl_dx12.h */,
-				913230BCFDAA1067FD49A8E9 /* imgui_impl_dx9.cpp */,
-				7C122B87B6E59C71AB6402B9 /* imgui_impl_dx9.h */,
 				9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */,
 				D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */,
-				A45030B4FEA1FE19CE29803D /* imgui_impl_glut.cpp */,
-				39AE22E7017E6AE6A605A776 /* imgui_impl_glut.h */,
 				41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */,
 				9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */,
-				534349495123582EA3899C5E /* imgui_impl_opengl2.cpp */,
-				F19CC964443EB639D48393AA /* imgui_impl_opengl2.h */,
 				14A19E76CC00DF1ADB772C22 /* imgui_impl_opengl3.cpp */,
 				A9D4B5A4D91337902459247B /* imgui_impl_opengl3.h */,
 				1079CEEC75D1215302E57ADB /* imgui_impl_opengl3_loader.h */,
 				9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */,
 				B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */,
-				253AFC840DE6FF2B60109E78 /* imgui_impl_sdl2.cpp */,
-				2E48E72748ED3ECD6B3BF285 /* imgui_impl_sdl2.h */,
-				5EB43205CA47E1712C215A08 /* imgui_impl_sdl3.cpp */,
-				CB2580E569053284CFF94DAF /* imgui_impl_sdl3.h */,
-				CA8919C2F0455E5A40B9B55A /* imgui_impl_sdlgpu3.cpp */,
-				C2EF5B34ECEED8CABC95632E /* imgui_impl_sdlgpu3.h */,
-				E529652E316E43FD0A71960F /* imgui_impl_sdlgpu3_shaders.h */,
-				0649EE7E3499876FA73A21EA /* imgui_impl_sdlrenderer2.cpp */,
-				A6F6C2F7C84A34A0B95947D4 /* imgui_impl_sdlrenderer2.h */,
-				CC9451AC6644FD4678136D55 /* imgui_impl_sdlrenderer3.cpp */,
-				B9981EA5028FA72489FE301B /* imgui_impl_sdlrenderer3.h */,
-				EC01CCDC9B58219DF07AE20E /* imgui_impl_vulkan.cpp */,
-				BD03240EB46CEAA06F2849E0 /* imgui_impl_vulkan.h */,
-				183C2C3BDD9F055064BD97D2 /* imgui_impl_wgpu.cpp */,
-				120A47B0C7F064C031616CD2 /* imgui_impl_wgpu.h */,
-				9F28C40F7656961D785DAEBC /* imgui_impl_win32.cpp */,
-				C96C7CB4EB2B51A1F4D63097 /* imgui_impl_win32.h */,
 			);
 			name = backends;
 			path = vendor/imgui/backends;
-			sourceTree = SOURCE_ROOT;
-		};
-		AE71B049D2A8F12CE7604DFE /* example_apple_metal */ = {
-			isa = PBXGroup;
-			children = (
-				C53F6888E1D48FDD20105CB2 /* main.mm */,
-			);
-			name = example_apple_metal;
-			path = vendor/imgui/examples/example_apple_metal;
 			sourceTree = SOURCE_ROOT;
 		};
 		B6939326AA0AB0CF7F3ED5AF /* vendor */ = {
@@ -979,46 +391,7 @@
 				56B3B036BC8501A8A16ACADD /* imgui */,
 				AA67C44F86F1D501F9C66947 /* imgui_copied_headers */,
 			);
-			name = vendor;
 			path = vendor;
-			sourceTree = SOURCE_ROOT;
-		};
-		B8BF0CAE5E64045D17A46A00 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				E3F7D10313C603D07B90AB38 /* GLFW */,
-			);
-			name = include;
-			path = vendor/imgui/examples/libs/glfw/include;
-			sourceTree = SOURCE_ROOT;
-		};
-		BBD80553579A2972EB17BCE3 /* example_win32_directx10 */ = {
-			isa = PBXGroup;
-			children = (
-				E19F356529AF04FCDF39AA5A /* main.cpp */,
-			);
-			name = example_win32_directx10;
-			path = vendor/imgui/examples/example_win32_directx10;
-			sourceTree = SOURCE_ROOT;
-		};
-		BD2AB1A5C6A23D10AA1B937D /* libs */ = {
-			isa = PBXGroup;
-			children = (
-				3EE82C7B73A2C6AE8E2A2F57 /* emscripten */,
-				3841E13990D71E3F4CAEF94E /* glfw */,
-				73EBDCC8C27262A54C549F4A /* usynergy */,
-			);
-			name = libs;
-			path = vendor/imgui/examples/libs;
-			sourceTree = SOURCE_ROOT;
-		};
-		C9EE86CCF8B84369477DDF37 /* example_android_opengl3 */ = {
-			isa = PBXGroup;
-			children = (
-				837634505A9944B69191BDAF /* main.cpp */,
-			);
-			name = example_android_opengl3;
-			path = vendor/imgui/examples/example_android_opengl3;
 			sourceTree = SOURCE_ROOT;
 		};
 		CE2B9A2C2B01853C00DE24E0 = {
@@ -1075,8 +448,11 @@
 		CE4C6EE12B01AA500015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE9324312D574E2200A05A63 /* libimgui.a */,
-				CE93242F2D574DE900A05A63 /* libimguid.a */,
+				CE6FCE6E2DEAD3B1006C4B6D /* AppKit.framework */,
+				CE327B0E2B1593400067EF26 /* Foundation.framework */,
+				CE6FCE702DEAD3E0006C4B6D /* GameController.framework */,
+				CE6FCE722DEAD3F5006C4B6D /* Metal.framework */,
+				CE6FCE742DEAD414006C4B6D /* QuartzCore.framework */,
 				CE46BD162CFC3F45002F900C /* libEngine.dylib */,
 				CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */,
 				CE46BD182CFC3F53002F900C /* libEngineDev.dylib */,
@@ -1084,9 +460,8 @@
 				CEDB397B2CFC1B6F00FC593F /* libfmtd.11.0.2.dylib */,
 				CEDB37A52CFC1B3B00FC593F /* libglfw.3.4.dylib */,
 				CEDB397A2CFC1B6F00FC593F /* libglfw.3.4.dylib */,
-				CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.1.dylib */,
-				CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.1.dylib */,
-				CE327B0E2B1593400067EF26 /* Foundation.framework */,
+				CE97435C2D45EE0800C7D0F7 /* libmimalloc-debug.2.2.dylib */,
+				CE97435E2D45EE2600C7D0F7 /* libmimalloc.2.2.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -1113,61 +488,6 @@
 			path = src/Core;
 			sourceTree = SOURCE_ROOT;
 		};
-		D21A6242E38D2BE0A42B1712 /* example_sdl3_sdlgpu3 */ = {
-			isa = PBXGroup;
-			children = (
-				0B895136B1D433D5F5AD95BD /* main.cpp */,
-			);
-			name = example_sdl3_sdlgpu3;
-			path = vendor/imgui/examples/example_sdl3_sdlgpu3;
-			sourceTree = SOURCE_ROOT;
-		};
-		D96DA1D4A5B5D115049BF11F /* example_sdl2_opengl3 */ = {
-			isa = PBXGroup;
-			children = (
-				7A5331495E2EF920E460FC3F /* main.cpp */,
-			);
-			name = example_sdl2_opengl3;
-			path = vendor/imgui/examples/example_sdl2_opengl3;
-			sourceTree = SOURCE_ROOT;
-		};
-		DFA8FEFFAA41751DBFBB646C /* example_glfw_vulkan */ = {
-			isa = PBXGroup;
-			children = (
-				83834257D7EB758D51B4E279 /* main.cpp */,
-			);
-			name = example_glfw_vulkan;
-			path = vendor/imgui/examples/example_glfw_vulkan;
-			sourceTree = SOURCE_ROOT;
-		};
-		E244B11DA5998D19B6283D88 /* example_win32_directx9 */ = {
-			isa = PBXGroup;
-			children = (
-				C439F27F105F287D18E8CA50 /* main.cpp */,
-			);
-			name = example_win32_directx9;
-			path = vendor/imgui/examples/example_win32_directx9;
-			sourceTree = SOURCE_ROOT;
-		};
-		E3F7D10313C603D07B90AB38 /* GLFW */ = {
-			isa = PBXGroup;
-			children = (
-				BACF61AAEE78B1A96C88282A /* glfw3.h */,
-				FA90840A0DA32A7F209FD100 /* glfw3native.h */,
-			);
-			name = GLFW;
-			path = vendor/imgui/examples/libs/glfw/include/GLFW;
-			sourceTree = SOURCE_ROOT;
-		};
-		E6B0AAC4BBC8DAE20FD551C7 /* example_sdl2_directx11 */ = {
-			isa = PBXGroup;
-			children = (
-				65A26110105E2CBACECBB06D /* main.cpp */,
-			);
-			name = example_sdl2_directx11;
-			path = vendor/imgui/examples/example_sdl2_directx11;
-			sourceTree = SOURCE_ROOT;
-		};
 		EC6CDAEDA404475C41CB312F /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -1176,16 +496,6 @@
 			);
 			name = Views;
 			path = src/Views;
-			sourceTree = SOURCE_ROOT;
-		};
-		EDDC58FD948DFA47AC6ED32F /* freetype */ = {
-			isa = PBXGroup;
-			children = (
-				EAAA1B5693CB83A70055E6FE /* imgui_freetype.cpp */,
-				3DF3A75E0EA0982B087DBB23 /* imgui_freetype.h */,
-			);
-			name = freetype;
-			path = vendor/imgui/misc/freetype;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -1291,81 +601,15 @@
 				2311AC816C6711593318D752 /* ConsoleView.cpp in Sources */,
 				88E054F2A5EC804BACE05201 /* ConsoleView.h in Sources */,
 				749C1734FD82D005E66EBC05 /* imuserconfig.h in Sources */,
-				C3C6C154A7D1B34A97D928CF /* imgui_impl_allegro5.cpp in Sources */,
-				DE8AC4F4A28294B1A98F418A /* imgui_impl_allegro5.h in Sources */,
-				5E13615815A0DED5F15E69D1 /* imgui_impl_android.cpp in Sources */,
-				62D697F287EF421F00470D72 /* imgui_impl_android.h in Sources */,
-				99CE9D2F133C60F3010FEED5 /* imgui_impl_dx10.cpp in Sources */,
-				CF49BAECE047B15C5CA619BC /* imgui_impl_dx10.h in Sources */,
-				7145566B66CC322179DAA874 /* imgui_impl_dx11.cpp in Sources */,
-				46810EE4F366F70D65B260C5 /* imgui_impl_dx11.h in Sources */,
-				69FF6D4DF062B56FC2B1D92A /* imgui_impl_dx12.cpp in Sources */,
-				DEE5E63F6CE010FAB166FF03 /* imgui_impl_dx12.h in Sources */,
-				AE3B332484C9050784C6F9B8 /* imgui_impl_dx9.cpp in Sources */,
-				94623C89C4FBAD582034AB77 /* imgui_impl_dx9.h in Sources */,
 				95D2EA3AE4B0DFE29A88D2D4 /* imgui_impl_glfw.cpp in Sources */,
 				3A19AF58181FA29898A37264 /* imgui_impl_glfw.h in Sources */,
-				6653FF7B63D4BB531EE1CDAF /* imgui_impl_glut.cpp in Sources */,
-				9E29BA67BA664B2CF7BECDC2 /* imgui_impl_glut.h in Sources */,
 				9F9D69905DDEAE7A08B89EAA /* imgui_impl_metal.h in Sources */,
 				60B275B9D2AD6E31C321BAC3 /* imgui_impl_metal.mm in Sources */,
-				D4D2543AF42CEECA209A76D9 /* imgui_impl_opengl2.cpp in Sources */,
-				55816724D20E83B74B693E2B /* imgui_impl_opengl2.h in Sources */,
 				0E12221D8EF12808E26BFBB1 /* imgui_impl_opengl3.cpp in Sources */,
 				12023A7676344A9BD7895634 /* imgui_impl_opengl3.h in Sources */,
 				AB22B255427A6424ACB8CD89 /* imgui_impl_opengl3_loader.h in Sources */,
 				92854E6365E3D4041ACEBFC9 /* imgui_impl_osx.h in Sources */,
 				1B8B0C340EEF41C8EB5041C8 /* imgui_impl_osx.mm in Sources */,
-				99FF8399AEFC87ECA61359AC /* imgui_impl_sdl2.cpp in Sources */,
-				4885302B9AFD67A0E8CA50A3 /* imgui_impl_sdl2.h in Sources */,
-				ED7DC52D1C75C077AB99AC07 /* imgui_impl_sdl3.cpp in Sources */,
-				850BAA263124DAE439F32093 /* imgui_impl_sdl3.h in Sources */,
-				A701877A62ED5AA743A3D247 /* imgui_impl_sdlgpu3.cpp in Sources */,
-				96F89C85BA7CD62971714452 /* imgui_impl_sdlgpu3.h in Sources */,
-				F6FFFD5ADC3D563B7BBF9285 /* imgui_impl_sdlgpu3_shaders.h in Sources */,
-				0EEFAD6BE48323314B7DA4C9 /* imgui_impl_sdlrenderer2.cpp in Sources */,
-				7A9BB82984598AEC158D4C1C /* imgui_impl_sdlrenderer2.h in Sources */,
-				5EC0B8F7299FE188B150AAB7 /* imgui_impl_sdlrenderer3.cpp in Sources */,
-				CF24EE85AE47DD6D145E5629 /* imgui_impl_sdlrenderer3.h in Sources */,
-				9912DBE00736C824332F9413 /* imgui_impl_vulkan.cpp in Sources */,
-				E46FB9CE49D56CD60A938DD7 /* imgui_impl_vulkan.h in Sources */,
-				E0C2312E41FA08CB31D6F58B /* imgui_impl_wgpu.cpp in Sources */,
-				4C82BD46445BD06166E78CD5 /* imgui_impl_wgpu.h in Sources */,
-				174F678CA2B82F9079AB8B68 /* imgui_impl_win32.cpp in Sources */,
-				3849F17FE0810E3A7EA9D557 /* imgui_impl_win32.h in Sources */,
-				1DC55040658F4ACC750F1457 /* imconfig_allegro5.h in Sources */,
-				C0EC12F78BB70DD4EA705DF7 /* main.cpp in Sources */,
-				4C91275AB8576DB3F3D60281 /* main.cpp in Sources */,
-				A9850EACC800814493F9EBF9 /* main.mm in Sources */,
-				0F749C29C91B38C9B04D8185 /* main.mm in Sources */,
-				67196FB78CCBE8BC7E59C6D7 /* main.mm in Sources */,
-				6516940639273A0E4F945838 /* main.cpp in Sources */,
-				B41147166EA20015E9DFDB49 /* main.cpp in Sources */,
-				69B879D05294CA856E17D587 /* main.cpp in Sources */,
-				10C76167043207B72B4C4FAF /* main.cpp in Sources */,
-				97C635F15F1E931B4A4130AE /* main.cpp in Sources */,
-				3C7071D20F69E9F4BACA93D4 /* main.cpp in Sources */,
-				A0B957BD295B784531B320B6 /* main.cpp in Sources */,
-				F38DE43D8D3BB54EC70C8359 /* main.mm in Sources */,
-				7F5FD6B3B1247525219F23D8 /* main.cpp in Sources */,
-				04E83B9B18752690A9A56702 /* main.cpp in Sources */,
-				6E87C8EFBCC2FA85D03F2353 /* main.cpp in Sources */,
-				639143134CF2F8F06DBF9F84 /* main.cpp in Sources */,
-				DF67443A2EC392A4D0E04B58 /* main.cpp in Sources */,
-				1164DB0CAF310915BA7EDAFF /* main.cpp in Sources */,
-				D6999B5E180255DB95D9E847 /* main.cpp in Sources */,
-				90EE237467D2665570171BEE /* main.cpp in Sources */,
-				AA399FDBC62BD9108C7505B0 /* main.cpp in Sources */,
-				7291C901DA81AEC55C747BBF /* main.cpp in Sources */,
-				07A93508A67AF99058005AFC /* main.cpp in Sources */,
-				822430D69DA26F593483B45A /* main.cpp in Sources */,
-				193DF5CD6576243F0D2097DC /* main.cpp in Sources */,
-				16280EDAAC3AFEA5AC97D0E7 /* main.cpp in Sources */,
-				C7405D116E79BB2180F3BDD6 /* emscripten_mainloop_stub.h in Sources */,
-				37EAF4FCC8A94E8D982C58CF /* glfw3.h in Sources */,
-				DDE362E48BBA1D7AFF60D6F1 /* glfw3native.h in Sources */,
-				3E3B553B97FF67152856966E /* uSynergy.c in Sources */,
-				F81632715A9C1A7A0EB56851 /* uSynergy.h in Sources */,
 				B83A8AEEE521DF1AA3F0CCF3 /* imconfig.h in Sources */,
 				844CD25CCAEBEF870BD3437D /* imgui.cpp in Sources */,
 				B35FA429874BAE5D0AA21D94 /* imgui.h in Sources */,
@@ -1377,12 +621,6 @@
 				3A4541678E0CFE7B35FAA834 /* imstb_rectpack.h in Sources */,
 				8D892D3F2D1C977A16835616 /* imstb_textedit.h in Sources */,
 				DB5912B59D6216A7DA534351 /* imstb_truetype.h in Sources */,
-				27BA1901AB24D41C3F1497AC /* imgui_stdlib.cpp in Sources */,
-				398C7209180E2734EEB47AC5 /* imgui_stdlib.h in Sources */,
-				59081C212D7283B5358D3B1A /* binary_to_compressed_c.cpp in Sources */,
-				CDE06748550E91A139575EE1 /* imgui_freetype.cpp in Sources */,
-				A89BB851B37DFC3046BD153A /* imgui_freetype.h in Sources */,
-				8B121D3ED45E5A35A3B7212A /* imgui_single_file.h in Sources */,
 				7174EE6C6441F571D7C69C41 /* imconfig.h in Sources */,
 				9FF77085B41284570C60D511 /* imgui.h in Sources */,
 				059D7E2B9811623646270292 /* imgui_impl_glfw.h in Sources */,
@@ -1410,81 +648,15 @@
 				8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */,
 				16A3FD8680EE492D1A8A3F11 /* ConsoleView.h in Sources */,
 				637074F57FC3A3677401C117 /* imuserconfig.h in Sources */,
-				499F27E35C5C46EF534B5E50 /* imgui_impl_allegro5.cpp in Sources */,
-				1E75B519C8E80D171B042DF3 /* imgui_impl_allegro5.h in Sources */,
-				A0D4A429A3D5AA89535804A4 /* imgui_impl_android.cpp in Sources */,
-				122B9FD916B329C458B17B42 /* imgui_impl_android.h in Sources */,
-				8C17DC101D266A165EE22C2E /* imgui_impl_dx10.cpp in Sources */,
-				ABDB44ACE053BECA70577847 /* imgui_impl_dx10.h in Sources */,
-				56F3764034C5BDF50C376393 /* imgui_impl_dx11.cpp in Sources */,
-				C9ED717859061665A1260B5F /* imgui_impl_dx11.h in Sources */,
-				41A1A6D2C057C830210B8009 /* imgui_impl_dx12.cpp in Sources */,
-				CB553B038C216D14736B3F76 /* imgui_impl_dx12.h in Sources */,
-				1A0EC44458449B0284CE6EFE /* imgui_impl_dx9.cpp in Sources */,
-				3B70F98B577CCC7D6757F054 /* imgui_impl_dx9.h in Sources */,
 				9B604853321B6CE0CB55716E /* imgui_impl_glfw.cpp in Sources */,
 				42304BE9681285E4D7882000 /* imgui_impl_glfw.h in Sources */,
-				E52382690B262A9460893DB2 /* imgui_impl_glut.cpp in Sources */,
-				04FEE27C037FDC638ED8C770 /* imgui_impl_glut.h in Sources */,
 				BE865F9808BFCB2F743ED0F2 /* imgui_impl_metal.h in Sources */,
 				BBACD102982258B501D9D593 /* imgui_impl_metal.mm in Sources */,
-				855D0367E3650E597563DF78 /* imgui_impl_opengl2.cpp in Sources */,
-				756FFBCC2C3ADF06CFC8F6E4 /* imgui_impl_opengl2.h in Sources */,
 				EA2B03FCAD4C13FD4516B669 /* imgui_impl_opengl3.cpp in Sources */,
 				7658106A505D5603C708A006 /* imgui_impl_opengl3.h in Sources */,
 				76C694F3F60528004D19C4F7 /* imgui_impl_opengl3_loader.h in Sources */,
 				66AE9598B876B90565677D11 /* imgui_impl_osx.h in Sources */,
 				52658E697343CA8B864CDE6F /* imgui_impl_osx.mm in Sources */,
-				CBEE4708D2FC7964FD921999 /* imgui_impl_sdl2.cpp in Sources */,
-				C8982242674B4152B9F794CD /* imgui_impl_sdl2.h in Sources */,
-				C2706AFCF1C3CBEB53296F02 /* imgui_impl_sdl3.cpp in Sources */,
-				D7BF5687A2116D3E00492B95 /* imgui_impl_sdl3.h in Sources */,
-				2663B0D7B05EFD7B05EF63DD /* imgui_impl_sdlgpu3.cpp in Sources */,
-				6987B49988370E6883FDB6B8 /* imgui_impl_sdlgpu3.h in Sources */,
-				82CE2B919B02B68A38427E96 /* imgui_impl_sdlgpu3_shaders.h in Sources */,
-				8F1AEE537BCCB4A2787ED78C /* imgui_impl_sdlrenderer2.cpp in Sources */,
-				A5C0AE4BAB1F7764334CBB64 /* imgui_impl_sdlrenderer2.h in Sources */,
-				97C19DDBBCE88988F5CF916D /* imgui_impl_sdlrenderer3.cpp in Sources */,
-				0EB6269BEBC0A5045C39520A /* imgui_impl_sdlrenderer3.h in Sources */,
-				BFAD129576E12348BC79DED4 /* imgui_impl_vulkan.cpp in Sources */,
-				9E1F5E9DA1DC4F9D600E7512 /* imgui_impl_vulkan.h in Sources */,
-				3FCCA4C2A0BFEE09B486FB46 /* imgui_impl_wgpu.cpp in Sources */,
-				C5BD3EBF2D4AA09722A3E04E /* imgui_impl_wgpu.h in Sources */,
-				DB3B7007D87A38FB53198B5F /* imgui_impl_win32.cpp in Sources */,
-				25F74CC93C48C6CA45F4BFD8 /* imgui_impl_win32.h in Sources */,
-				2EF7F3A8C7A166B0E718561D /* imconfig_allegro5.h in Sources */,
-				B4648B0F64628611851644EE /* main.cpp in Sources */,
-				A8764F309245D49DAF172D34 /* main.cpp in Sources */,
-				45E426E71C74F764F3E6F8A9 /* main.mm in Sources */,
-				8213646D0044A9927795DA6B /* main.mm in Sources */,
-				7CC2ED001EC9DA6E322B087B /* main.mm in Sources */,
-				4E5270695D8D2E52A16FCAF2 /* main.cpp in Sources */,
-				40844A0ACB3653D5291B643F /* main.cpp in Sources */,
-				4E972BA9EF1928470CB7E3D1 /* main.cpp in Sources */,
-				3543D33B62ADC7F46ADF6B25 /* main.cpp in Sources */,
-				053C5CC906E29F9F13795969 /* main.cpp in Sources */,
-				D0C004832413B6AC89502BEC /* main.cpp in Sources */,
-				112BA3365230D17BB5E54283 /* main.cpp in Sources */,
-				091AA700DAD70A682D0B9261 /* main.mm in Sources */,
-				3F733AD50FC2D7286EAF9078 /* main.cpp in Sources */,
-				9B869A191C720AEF4C943355 /* main.cpp in Sources */,
-				5474E1B2622E614E809763BE /* main.cpp in Sources */,
-				EF09941C8AC0B8DB7358B5CE /* main.cpp in Sources */,
-				812CA11C3CABE97B04403159 /* main.cpp in Sources */,
-				56BEFA8EA2D173BF4D2737EF /* main.cpp in Sources */,
-				29EBAED54FC82A9F33FD1377 /* main.cpp in Sources */,
-				94D08C089C3C447CAFCC0F4E /* main.cpp in Sources */,
-				51C3DB8ADF004F65F4218FB3 /* main.cpp in Sources */,
-				93DCAF32800C959E15EA72B0 /* main.cpp in Sources */,
-				11ABA535C99E660AAD289A6A /* main.cpp in Sources */,
-				7F5F847B2374816693EA9C15 /* main.cpp in Sources */,
-				E63EC45E26DAE2B6AD9E9120 /* main.cpp in Sources */,
-				75D70BA3166A2A7DCB38F545 /* main.cpp in Sources */,
-				54DECB82403BF1B37F54D884 /* emscripten_mainloop_stub.h in Sources */,
-				644102B5CFF6E9B43D9D7E7F /* glfw3.h in Sources */,
-				E57B0A69BF7E3F7A5034E703 /* glfw3native.h in Sources */,
-				AB6E2A65E9C660AB9F523D9B /* uSynergy.c in Sources */,
-				4F57E31A19C348D5AEB451E7 /* uSynergy.h in Sources */,
 				1612B3A57124BD8F712A8578 /* imconfig.h in Sources */,
 				7EC3BDFF0D7F1D4ACE27DB6A /* imgui.cpp in Sources */,
 				8BB32F4D99EEC0EC6E85C470 /* imgui.h in Sources */,
@@ -1496,12 +668,6 @@
 				9BF7787454419099A7E27B51 /* imstb_rectpack.h in Sources */,
 				2F1A1EBB055CB949E5721359 /* imstb_textedit.h in Sources */,
 				653EF44F1F3D06C900D272F8 /* imstb_truetype.h in Sources */,
-				4C9988D75EB3810BBEF8FE8D /* imgui_stdlib.cpp in Sources */,
-				DE544851CEEEFACB22DFE895 /* imgui_stdlib.h in Sources */,
-				A4334F27DEEF9945B66D1D06 /* binary_to_compressed_c.cpp in Sources */,
-				2075D67EC911F48C7F93B01F /* imgui_freetype.cpp in Sources */,
-				C444AC38E55E3FA4A3884425 /* imgui_freetype.h in Sources */,
-				2A3E45C330B21348145E12E2 /* imgui_single_file.h in Sources */,
 				C8214DF779BA15D1BD0FACDD /* imconfig.h in Sources */,
 				459031E7D9440B625B051A94 /* imgui.h in Sources */,
 				5AFBBB38387B1CE0393C469B /* imgui_impl_glfw.h in Sources */,
@@ -1529,81 +695,15 @@
 				EDDE8849890B7E377FABA808 /* ConsoleView.cpp in Sources */,
 				E78BB3583E31106A5151C392 /* ConsoleView.h in Sources */,
 				9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */,
-				9425C3C01DAD261EEE2A59A2 /* imgui_impl_allegro5.cpp in Sources */,
-				D703B0BDD598C04D795620A6 /* imgui_impl_allegro5.h in Sources */,
-				904DED5CD3C84A067C090BE1 /* imgui_impl_android.cpp in Sources */,
-				67BF03B118C38C3C3C7B87FB /* imgui_impl_android.h in Sources */,
-				C65FD3DA388EA7767A8A4B7C /* imgui_impl_dx10.cpp in Sources */,
-				7622FBA52C0074DA1479E82A /* imgui_impl_dx10.h in Sources */,
-				ACAB9A1BC857C7FF4B9D85E6 /* imgui_impl_dx11.cpp in Sources */,
-				DD94791E32C2FD41C6AE3CC2 /* imgui_impl_dx11.h in Sources */,
-				E5FF64F200B15B1CA289F263 /* imgui_impl_dx12.cpp in Sources */,
-				73DA0457F60D10FAC7C6B8F5 /* imgui_impl_dx12.h in Sources */,
-				9871A60BBE4AD73E65D26CCE /* imgui_impl_dx9.cpp in Sources */,
-				1F0B40F294D789016E5B4FBF /* imgui_impl_dx9.h in Sources */,
 				40C0845091C2DA3F2759F234 /* imgui_impl_glfw.cpp in Sources */,
 				D97409EDB7163B2196CE7F88 /* imgui_impl_glfw.h in Sources */,
-				3275234CC0434279C261878C /* imgui_impl_glut.cpp in Sources */,
-				845AFD24DD2008FADE1D7C45 /* imgui_impl_glut.h in Sources */,
 				C36A9DFC736547950FB74FA7 /* imgui_impl_metal.h in Sources */,
 				B981D7646BBFE6DDFF11AC22 /* imgui_impl_metal.mm in Sources */,
-				87D3F5C4C374007917E3B0E8 /* imgui_impl_opengl2.cpp in Sources */,
-				CCF9110E6FCF1FE29598A6A3 /* imgui_impl_opengl2.h in Sources */,
 				B03503C731F2D50C8F1EB67B /* imgui_impl_opengl3.cpp in Sources */,
 				550D0F1DA1A5CD7FCB909B1E /* imgui_impl_opengl3.h in Sources */,
 				ED07C6CADF36CD5F0D387BF0 /* imgui_impl_opengl3_loader.h in Sources */,
 				5EB6F00C3747507FFFC0ABFC /* imgui_impl_osx.h in Sources */,
 				447FC7AFB17FF96A05BD221D /* imgui_impl_osx.mm in Sources */,
-				5B2D07E55DF0E06086F04C64 /* imgui_impl_sdl2.cpp in Sources */,
-				A2A05AC13E26CEDE9E45061E /* imgui_impl_sdl2.h in Sources */,
-				CB8E1EEBA823B8140AFF013E /* imgui_impl_sdl3.cpp in Sources */,
-				AD45213BC81B35599F9B110D /* imgui_impl_sdl3.h in Sources */,
-				30E072E2961C59A664909219 /* imgui_impl_sdlgpu3.cpp in Sources */,
-				2F79961FF05C62B1273370EE /* imgui_impl_sdlgpu3.h in Sources */,
-				55EFB67A4030D38E2EEA4118 /* imgui_impl_sdlgpu3_shaders.h in Sources */,
-				17BDEB71F327622F82C6F7B6 /* imgui_impl_sdlrenderer2.cpp in Sources */,
-				BC56AC1E16BCC2927B558473 /* imgui_impl_sdlrenderer2.h in Sources */,
-				064F9BA229DB260D1DB969EF /* imgui_impl_sdlrenderer3.cpp in Sources */,
-				D26B7AAC04AEA7323BA5B9EE /* imgui_impl_sdlrenderer3.h in Sources */,
-				6C98CF7F18F8329397857F25 /* imgui_impl_vulkan.cpp in Sources */,
-				0D2A255D2535E8AFE48347B9 /* imgui_impl_vulkan.h in Sources */,
-				1A729339E6C7A760681EB301 /* imgui_impl_wgpu.cpp in Sources */,
-				128167716B014C85A666FEFA /* imgui_impl_wgpu.h in Sources */,
-				832766524B999580422341E9 /* imgui_impl_win32.cpp in Sources */,
-				C0116E71F88EC39CAFE4533D /* imgui_impl_win32.h in Sources */,
-				1A82B09BADE73C5A4EBDAD20 /* imconfig_allegro5.h in Sources */,
-				1CA918FECBF1D85ECC87AFBB /* main.cpp in Sources */,
-				A5275126A41E8FCA218DB1F9 /* main.cpp in Sources */,
-				3CCCEE844AAABC9CF406B966 /* main.mm in Sources */,
-				425FCC7F8A302DFC2FE772C6 /* main.mm in Sources */,
-				7EACA699BD222DFE78A3B17D /* main.mm in Sources */,
-				2D366AF8AE008D408B7D6599 /* main.cpp in Sources */,
-				179BDDF4250636B88E01A04B /* main.cpp in Sources */,
-				9CBD1E673B9EF52BB4BD1C45 /* main.cpp in Sources */,
-				3C4809C40D9B7ADCC49FBAC9 /* main.cpp in Sources */,
-				A04EB7D1C633CD2A5056B76F /* main.cpp in Sources */,
-				8FBFC6459C4807FE49DE6DA7 /* main.cpp in Sources */,
-				3E5D959B630C172C969BE03D /* main.cpp in Sources */,
-				49569FBA6CD97FCC64C2D512 /* main.mm in Sources */,
-				491A8086DC203E099C52FFC5 /* main.cpp in Sources */,
-				BD8FCD6031FE9AACFA0D2974 /* main.cpp in Sources */,
-				4F906065E76513917230E832 /* main.cpp in Sources */,
-				B9446220A9224AB635E948F4 /* main.cpp in Sources */,
-				256FF06D6F69A1F3738526D9 /* main.cpp in Sources */,
-				69D4E7A329BBBD7F720A79AF /* main.cpp in Sources */,
-				699A8B5A81CC3718BCAEBAE5 /* main.cpp in Sources */,
-				80B821DB18F5888E514C1B0C /* main.cpp in Sources */,
-				AE8F434775F1C7A461331230 /* main.cpp in Sources */,
-				6F404939924C2B1F755DBBE6 /* main.cpp in Sources */,
-				97FA1D50B6262ACE32C0B1FC /* main.cpp in Sources */,
-				4D0A6F6C00AD0F7A9A376AC0 /* main.cpp in Sources */,
-				D2E220BCC0FD211FEB05C833 /* main.cpp in Sources */,
-				44D6F3D0579F61E0DA6AC2DB /* main.cpp in Sources */,
-				02C0AF03EA650DDDA3B0AB9A /* emscripten_mainloop_stub.h in Sources */,
-				B6FAB881D2C0AFCC77AC1990 /* glfw3.h in Sources */,
-				2DBFD2C41B6BE188B81A64B6 /* glfw3native.h in Sources */,
-				6FCE65ABFF64AF4F01D54222 /* uSynergy.c in Sources */,
-				5A02237956CF6CC205960AB7 /* uSynergy.h in Sources */,
 				C83DBD3F715290B9AC8A0796 /* imconfig.h in Sources */,
 				C2AA1DD70AE5EE5A3AD5964C /* imgui.cpp in Sources */,
 				F24A4683DDA53A54054AA8FB /* imgui.h in Sources */,
@@ -1615,12 +715,6 @@
 				28E65BC19303D7DE83DB53AC /* imstb_rectpack.h in Sources */,
 				2CF5765C3B4528B7BA22DE93 /* imstb_textedit.h in Sources */,
 				B92BC6D67EF8802689BBDCE9 /* imstb_truetype.h in Sources */,
-				B2EEB5E6890B10B8AD2C50DE /* imgui_stdlib.cpp in Sources */,
-				F4027246CFCFCF80D3410FC1 /* imgui_stdlib.h in Sources */,
-				9F45D01DD137691BC7F93505 /* binary_to_compressed_c.cpp in Sources */,
-				540E5A7B6DDE6AF5A16AA7F2 /* imgui_freetype.cpp in Sources */,
-				0D90FECAF64DBCFC4A83187C /* imgui_freetype.h in Sources */,
-				352B63E3C3F644BFC3EE14F2 /* imgui_single_file.h in Sources */,
 				CC06C690854AA163A4BDFA49 /* imconfig.h in Sources */,
 				5009FA385DE4A55BB3977226 /* imgui.h in Sources */,
 				D2F533D70CA4AA1FFA232676 /* imgui_impl_glfw.h in Sources */,
@@ -1695,6 +789,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vendor/imgui_copied_headers",
 					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
@@ -1722,10 +817,6 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
-				);
 				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
 			};
@@ -1741,10 +832,6 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1762,10 +849,6 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1832,6 +915,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vendor/imgui_copied_headers",
 					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
@@ -1860,10 +944,6 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
-				);
 				LLVM_LTO = YES;
 				SKIP_INSTALL = YES;
 			};
@@ -1883,10 +963,6 @@
 					"ADHOC_DEBUG=1",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1908,10 +984,6 @@
 					"ADHOC_DEBUG=1",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";

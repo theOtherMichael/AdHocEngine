@@ -9,13 +9,13 @@
 namespace Editor
 {
 
-EDITOR_API std::ostream& operator<<(std::ostream& os, const ConfigurationMode& configMode)
+std::ostream& operator<<(std::ostream& os, const ConfigurationMode& configMode)
 {
     switch (configMode)
     {
-    case ::Editor::ConfigurationMode::Debug: os << "Debug"; break;
-    case ::Editor::ConfigurationMode::Dev: os << "Dev"; break;
-    case ::Editor::ConfigurationMode::Release: os << "Release"; break;
+    case ConfigurationMode::Debug: os << "Debug"; break;
+    case ConfigurationMode::Dev: os << "Dev"; break;
+    case ConfigurationMode::Release: os << "Release"; break;
     default: Assert_NoEntry();
     }
 

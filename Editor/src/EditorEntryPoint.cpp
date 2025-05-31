@@ -23,6 +23,7 @@
 #include <imgui_impl_glfw.h>
 
 namespace Console = Engine::Console;
+using Engine::Graphics::ApiMode;
 
 namespace Editor
 {
@@ -98,7 +99,15 @@ ReloadOption EditorMain(int argc, char* argv[])
     Engine::SetNativeWindowHandle(mainWindowPtr);
 
     auto graphicsApiLifetime = Engine::Graphics::ApiLifetime{};
-    Engine::Graphics::SetApiMode(Engine::Graphics::ApiMode::D3D11);
+
+    // TODO: Get current mode from persistent data, then from heuristic
+#if ADHOC_WINDOWS
+    Engine::Graphics::SetApiMode(ApiMode::D3D11);
+#elif ADHOC_MACOS
+    Engine::Graphics::SetApiMode(ApiMode::Metal);
+#else
+    Assert_NoEntry();
+#endif
 
     glfwSetFramebufferSizeCallback(mainWindowPtr, OnGlfwFramebufferResize);
     glfwSetWindowSizeCallback(mainWindowPtr, OnGlfwWindowSize);
