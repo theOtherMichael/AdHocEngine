@@ -1,12 +1,12 @@
 #include <Engine/Core/_platform/Mac/MacDynamicLibrary.h>
 
+#include <Engine/Core/Assertions.h>
+
 #include <dlfcn.h>
 
 #include <iostream>
 
-#if !ADHOC_MACOS
-static_assert(false);
-#endif // !ADHOC_MACOS
+ASSERT_PLATFORM_MACOS;
 
 namespace fs = std::filesystem;
 

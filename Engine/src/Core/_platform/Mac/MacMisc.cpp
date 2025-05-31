@@ -1,5 +1,6 @@
 #include <Engine/Core/_platform/Mac/MacMisc.h>
 
+#include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 
 #include <fmt/format.h>
@@ -12,9 +13,7 @@
 #include <sstream>
 #include <string>
 
-#if !ADHOC_MACOS
-static_assert(false);
-#endif
+ASSERT_PLATFORM_MACOS;
 
 namespace fs = std::filesystem;
 

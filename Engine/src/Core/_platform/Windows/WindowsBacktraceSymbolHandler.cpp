@@ -1,5 +1,6 @@
 #include <Engine/Core/_platform/Windows/WindowsBacktraceSymbolHandler.h>
 
+#include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Core/PlatformHelpers.h>
@@ -9,9 +10,7 @@
 
 #include <filesystem>
 
-#if !ADHOC_WINDOWS
-static_assert(false);
-#endif
+ASSERT_PLATFORM_WINDOWS;
 
 namespace fs = std::filesystem;
 

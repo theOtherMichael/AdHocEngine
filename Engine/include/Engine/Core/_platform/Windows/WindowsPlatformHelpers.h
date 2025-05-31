@@ -7,10 +7,6 @@
 #include <string>
 #include <string_view>
 
-#if !ADHOC_WINDOWS
-static_assert(false);
-#endif
-
 namespace Windows
 {
 

@@ -1,5 +1,6 @@
 #include <Engine/Core/_platform/Windows/WindowsMisc.h>
 
+#include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Core/PlatformHelpers.h>
@@ -12,9 +13,7 @@
 #include <sstream>
 #include <string>
 
-#if !ADHOC_WINDOWS
-static_assert(false);
-#endif
+ASSERT_PLATFORM_WINDOWS;
 
 namespace fs = std::filesystem;
 

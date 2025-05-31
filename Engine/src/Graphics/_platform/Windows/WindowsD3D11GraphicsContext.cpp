@@ -1,7 +1,18 @@
 #include <Engine/Graphics/_platform/Windows/WindowsD3D11GraphicsContext.h>
 
+#include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformData.h>
+#include <Engine/Window/WindowData.h>
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdocumentation"
+#define GLFW_EXPOSE_NATIVE_WIN32
+#include <GLFW/glfw3.h>
+#include <GLFW/glfw3native.h>
+#pragma clang diagnostic pop
+
+ASSERT_PLATFORM_WINDOWS;
 
 namespace Engine::Graphics
 {
@@ -27,7 +38,7 @@ void WindowsD3D11GraphicsContext::Present() const
 
 WindowsD3D11GraphicsContext::WindowsD3D11GraphicsContext()
 {
-    const auto& platformData = PlatformData::GetInstance();
+    auto nativeWindowHandle = glfwGetWin32Window(Window::WindowData::GetInstance().mainWindowHandle);
 
     DXGI_SWAP_CHAIN_DESC sd{};
     sd.BufferCount                        = 2;
@@ -38,7 +49,7 @@ WindowsD3D11GraphicsContext::WindowsD3D11GraphicsContext()
     sd.BufferDesc.RefreshRate.Denominator = 1;
     sd.Flags                              = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
     sd.BufferUsage                        = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-    sd.OutputWindow                       = platformData.windowHandle;
+    sd.OutputWindow                       = nativeWindowHandle;
     sd.SampleDesc.Count                   = 1;
     sd.SampleDesc.Quality                 = 0;
     sd.Windowed                           = TRUE;

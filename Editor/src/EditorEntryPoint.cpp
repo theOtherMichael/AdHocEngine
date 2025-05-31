@@ -7,9 +7,10 @@
 #include <Engine/Core/PlatformData.h>
 #include <Engine/Graphics/D3D11GraphicsContext.h>
 #include <Engine/Graphics/GraphicsContext.h>
-#include <Engine/Window/GlfwLifetime.h>
+#include <Engine/Window/Internal/GlfwLifetime.h>
+#include <Engine/Window/WindowData.h>
 
-#include "Views/ConsoleView.h"
+#include <Views/ConsoleView.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
@@ -91,12 +92,12 @@ ReloadOption EditorMain(int argc, char* argv[])
 
     glfwSetErrorCallback(OnGlfwError);
 
-    auto glfwLifetime = Engine::Window::GlfwLifetime{};
+    auto glfwLifetime = Engine::Window::Internal::GlfwLifetime{};
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-    GLFWwindow* mainWindowPtr = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
-    Assert_NotNull(mainWindowPtr);
-    Engine::SetNativeWindowHandle(mainWindowPtr);
+    GLFWwindow* mainWindowHandle = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
+    Assert_NotNull(mainWindowHandle);
+    Engine::Window::GetMutableWindowData().mainWindowHandle = mainWindowHandle;
 
     auto graphicsApiLifetime = Engine::Graphics::ApiLifetime{};
 
@@ -109,8 +110,8 @@ ReloadOption EditorMain(int argc, char* argv[])
     Assert_NoEntry();
 #endif
 
-    glfwSetFramebufferSizeCallback(mainWindowPtr, OnGlfwFramebufferResize);
-    glfwSetWindowSizeCallback(mainWindowPtr, OnGlfwWindowSize);
+    glfwSetFramebufferSizeCallback(mainWindowHandle, OnGlfwFramebufferResize);
+    glfwSetWindowSizeCallback(mainWindowHandle, OnGlfwWindowSize);
 
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
@@ -130,14 +131,14 @@ ReloadOption EditorMain(int argc, char* argv[])
         // Metal goes here (for now)
 #elif ADHOC_WINDOWS
         auto dx11Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3D11GraphicsContext>();
-        ImGui_ImplGlfw_InitForOther(mainWindowPtr, true);
+        ImGui_ImplGlfw_InitForOther(mainWindowHandle, true);
         ImGui_ImplDX11_Init(dx11Context->pd3dDevice, dx11Context->pd3dDeviceContext);
 #endif
     }
 
     auto logStream = Console::LogStream(Console::LogLevel::Log, Views::HandleConsoleViewLogs);
 
-    while (!glfwWindowShouldClose(mainWindowPtr))
+    while (!glfwWindowShouldClose(mainWindowHandle))
     {
         glfwPollEvents();
         Update();

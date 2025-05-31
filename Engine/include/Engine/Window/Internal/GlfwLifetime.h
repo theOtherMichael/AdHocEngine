@@ -7,7 +7,7 @@
 #include <GLFW/glfw3.h>
 #pragma clang diagnostic pop
 
-namespace Engine::Window
+namespace Engine::Window::Internal
 {
 
 class GlfwLifetime

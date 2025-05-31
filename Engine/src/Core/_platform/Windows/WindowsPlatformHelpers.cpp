@@ -1,10 +1,10 @@
 #include <Engine/Core/_platform/Windows/WindowsPlatformHelpers.h>
 
+#include <Engine/Core/Assertions.h>
+
 #include <windows.h>
 
-#if !ADHOC_WINDOWS
-static_assert(false);
-#endif
+ASSERT_PLATFORM_WINDOWS;
 
 namespace Windows
 {

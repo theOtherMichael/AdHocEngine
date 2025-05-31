@@ -4,10 +4,6 @@
 
 #include <windows.h>
 
-#if !ADHOC_WINDOWS
-static_assert(false);
-#endif
-
 class WindowsDynamicLibrary : public BaseDynamicLibrary
 {
 public:

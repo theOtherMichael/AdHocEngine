@@ -1,13 +1,25 @@
 #pragma once
 
-#include "Console.h"
-#include "Misc.h"
-#include "SymbolExportMacros.h"
+#include <Engine/Core/Console.h>
+#include <Engine/Core/Misc.h>
+#include <Engine/Core/SymbolExportMacros.h>
 
 #include <fmt/format.h>
 
 #include <source_location>
 #include <string_view>
+
+#if ADHOC_WINDOWS
+    #define ASSERT_PLATFORM_WINDOWS static_assert(true, "This file can only be compiled on Windows, and it is!")
+#else
+    #define ASSERT_PLATFORM_WINDOWS static_assert(false, "This file can only be compiled on Windows! " __FILE__)
+#endif
+
+#if ADHOC_MACOS
+    #define ASSERT_PLATFORM_MACOS static_assert(true, "This file can only be compiled on macOS, and it is!")
+#else
+    #define ASSERT_PLATFORM_MACOS static_assert(false, "This file can only be compiled on macOS! " __FILE__)
+#endif
 
 #if ADHOC_DEBUG
     #define ADHOC_ASSERTIONS_ON 1
@@ -282,30 +294,30 @@ ENGINE_API void TriggerFatalErrorResponse();
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, >=, fmt::format(fmtString, __VA_ARGS__))
 
     #define AssertEval_Eq_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, ==)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, ==, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Ne_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, !=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, !=, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Lt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Le_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <=, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Gt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Ge_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >=, fmt::format(fmtString, __VA_ARGS__))
 
     #define ExpectEval_Eq_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, ==)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, ==, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Ne_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, !=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, !=, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Lt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Le_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <=, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Gt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Ge_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=, fmt::format(fmtString, __VA_ARGS__))
 
     #define Assert_NoEntry_Fmt(fmtString, ...)                                                                         \
         ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(true, "Call to Assert_NoEntry()", fmt::format(fmtString, __VA_ARGS__))
@@ -591,30 +603,30 @@ ENGINE_API void TriggerFatalErrorResponse();
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, >=, fmt::format(fmtString, __VA_ARGS__))
 
     #define AssertEval_Eq_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, ==)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, ==, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Ne_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, !=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, !=, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Lt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Le_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <=, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Gt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >, fmt::format(fmtString, __VA_ARGS__))
     #define AssertEval_Ge_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >=, fmt::format(fmtString, __VA_ARGS__))
 
     #define ExpectEval_Eq_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, ==)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, ==, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Ne_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, !=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, !=, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Lt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Le_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <=, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Gt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >, fmt::format(fmtString, __VA_ARGS__))
     #define ExpectEval_Ge_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
-        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=)
+        ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=, fmt::format(fmtString, __VA_ARGS__))
 
     #define Assert_Code_Slow(code)                                                                                     \
         do                                                                                                             \

@@ -1,24 +1,19 @@
 #include <Engine/Core/_platform/Windows/WindowsPlatformData.h>
 
+#include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 #include <Engine/Core/PlatformHelpers.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
-#if ADHOC_WINDOWS
-    #define GLFW_EXPOSE_NATIVE_WIN32
-#elif ADHOC_MACOS
-    #define GLFW_EXPOSE_NATIVE_COCOA
-#endif
+#define GLFW_EXPOSE_NATIVE_WIN32
 #include <GLFW/glfw3.h>
 #include <GLFW/glfw3native.h>
 #pragma clang diagnostic pop
 
 #include <windows.h>
 
-#if !ADHOC_WINDOWS
-static_assert(false);
-#endif
+ASSERT_PLATFORM_WINDOWS;
 
 namespace Engine
 {
@@ -40,12 +35,6 @@ void InitializeProcessInfo()
     {
         Console::LogError("Could not obtain application process handle! {}", Windows::GetLastErrorMessage());
     }
-}
-
-void SetNativeWindowHandle(GLFWwindow* window)
-{
-    auto& data        = GetMutablePlatformData();
-    data.windowHandle = glfwGetWin32Window(window);
 }
 
 const WindowsPlatformData& WindowsPlatformData::GetInstance()
