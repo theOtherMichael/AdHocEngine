@@ -35,7 +35,7 @@
 		3B59F1C6FAFBDC191EF543EA /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 0CF93228835C37B6B3940BE7 /* imstb_rectpack.h */; };
 		3E7ECCBAF0882943CDE5C7E7 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
 		3EA11EC187B1C42B55D091FA /* EditorState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694C820C0FE42FF4E7CB88CC /* EditorState.cpp */; };
-		40C0845091C2DA3F2759F234 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; };
+		40C0845091C2DA3F2759F234 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation"; }; };
 		42304BE9681285E4D7882000 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
 		443DD2D82AD98474ABFF5703 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
 		447FC7AFB17FF96A05BD221D /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
@@ -73,10 +73,10 @@
 		8D892D3F2D1C977A16835616 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
 		8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
 		92854E6365E3D4041ACEBFC9 /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
-		95D2EA3AE4B0DFE29A88D2D4 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; };
+		95D2EA3AE4B0DFE29A88D2D4 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation"; }; };
 		96371A6771C7AE55CD7A2C3F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
-		9B604853321B6CE0CB55716E /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; };
+		9B604853321B6CE0CB55716E /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation"; }; };
 		9BF7787454419099A7E27B51 /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
 		9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
 		9F9D69905DDEAE7A08B89EAA /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
