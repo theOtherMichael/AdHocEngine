@@ -33,7 +33,7 @@ ENGINE_API void ShutdownContext();
 
 ENGINE_API ThreadSafeSharedView<BaseGraphicsContext> GetContext();
 
-template <typename DerivedContextType> 
+template <typename DerivedContextType>
     requires std::is_base_of_v<BaseGraphicsContext, DerivedContextType>
 ThreadSafeSharedView<DerivedContextType> GetContextAs()
 {

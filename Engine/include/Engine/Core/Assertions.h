@@ -4,6 +4,8 @@
 #include "Misc.h"
 #include "SymbolExportMacros.h"
 
+#include <fmt/format.h>
+
 #include <source_location>
 #include <string_view>
 
@@ -212,107 +214,107 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 // Fmt versions
 
-    #define AssertF_Null(pointer, fmtString, ...)                                                                      \
+    #define Assert_Null_Fmt(pointer, fmtString, ...)                                                                   \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_NotNull(pointer, fmtString, ...)                                                                   \
+    #define Assert_NotNull_Fmt(pointer, fmtString, ...)                                                                \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_Null(pointer, fmtString, ...)                                                                      \
+    #define Expect_Null_Fmt(pointer, fmtString, ...)                                                                   \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_NotNull(pointer, fmtString, ...)                                                                   \
+    #define Expect_NotNull_Fmt(pointer, fmtString, ...)                                                                \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertEvalF_Null(pointer, fmtString, ...)                                                                  \
+    #define AssertEval_Null_Fmt(pointer, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertEvalF_NotNull(pointer, fmtString, ...)                                                               \
+    #define AssertEval_NotNull_Fmt(pointer, fmtString, ...)                                                            \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectEvalF_Null(pointer, fmtString, ...)                                                                  \
+    #define ExpectEval_Null_Fmt(pointer, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectEvalF_NotNull(pointer, fmtString, ...)                                                               \
+    #define ExpectEval_NotNull_Fmt(pointer, fmtString, ...)                                                            \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertF_True(expression, fmtString, ...)                                                                   \
+    #define Assert_True_Fmt(expression, fmtString, ...)                                                                \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_False(expression, fmtString, ...)                                                                  \
+    #define Assert_False_Fmt(expression, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_True(expression, fmtString, ...)                                                                   \
+    #define Expect_True_Fmt(expression, fmtString, ...)                                                                \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_False(expression, fmtString, ...)                                                                  \
+    #define Expect_False_Fmt(expression, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertEvalF_True(expression, fmtString, ...)                                                               \
+    #define AssertEval_True_Fmt(expression, fmtString, ...)                                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertEvalF_False(expression, fmtString, ...)                                                              \
+    #define AssertEval_False_Fmt(expression, fmtString, ...)                                                           \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectEvalF_True(expression, fmtString, ...)                                                               \
+    #define ExpectEval_True_Fmt(expression, fmtString, ...)                                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectEvalF_False(expression, fmtString, ...)                                                              \
+    #define ExpectEval_False_Fmt(expression, fmtString, ...)                                                           \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertF_Eq(lhs, rhs, fmtString, ...)                                                                       \
+    #define Assert_Eq_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, ==, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Ne(lhs, rhs, fmtString, ...)                                                                       \
+    #define Assert_Ne_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, !=, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Lt(lhs, rhs, fmtString, ...)                                                                       \
+    #define Assert_Lt_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, <, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Le(lhs, rhs, fmtString, ...)                                                                       \
+    #define Assert_Le_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, <=, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Gt(lhs, rhs, fmtString, ...)                                                                       \
+    #define Assert_Gt_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, >, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Ge(lhs, rhs, fmtString, ...)                                                                       \
+    #define Assert_Ge_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, >=, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_Eq(lhs, rhs, fmtString, ...)                                                                       \
+    #define Expect_Eq_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, ==, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Ne(lhs, rhs, fmtString, ...)                                                                       \
+    #define Expect_Ne_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, !=, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Lt(lhs, rhs, fmtString, ...)                                                                       \
+    #define Expect_Lt_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, <, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Le(lhs, rhs, fmtString, ...)                                                                       \
+    #define Expect_Le_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(                                                                            \
             false, lhs, rhs, <=, fmt::format(fmtString, __VA_ARGS__, fmt::format(fmtString, __VA_ARGS__)))
-    #define ExpectF_Gt(lhs, rhs, fmtString, ...)                                                                       \
+    #define Expect_Gt_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, >, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Ge(lhs, rhs, fmtString, ...)                                                                       \
+    #define Expect_Ge_Fmt(lhs, rhs, fmtString, ...)                                                                    \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, >=, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertEvalF_Eq(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define AssertEval_Eq_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, ==)
-    #define AssertEvalF_Ne(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define AssertEval_Ne_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, !=)
-    #define AssertEvalF_Lt(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define AssertEval_Lt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <)
-    #define AssertEvalF_Le(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define AssertEval_Le_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <=)
-    #define AssertEvalF_Gt(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define AssertEval_Gt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >)
-    #define AssertEvalF_Ge(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define AssertEval_Ge_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >=)
 
-    #define ExpectEvalF_Eq(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define ExpectEval_Eq_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, ==)
-    #define ExpectEvalF_Ne(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define ExpectEval_Ne_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, !=)
-    #define ExpectEvalF_Lt(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define ExpectEval_Lt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <)
-    #define ExpectEvalF_Le(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define ExpectEval_Le_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <=)
-    #define ExpectEvalF_Gt(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define ExpectEval_Gt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >)
-    #define ExpectEvalF_Ge(lhs_evaluated, rhs_discarded, fmtString, ...)                                               \
+    #define ExpectEval_Ge_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                            \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=)
 
-    #define AssertF_NoEntry(fmtString, ...)                                                                            \
+    #define Assert_NoEntry_Fmt(fmtString, ...)                                                                         \
         ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(true, "Call to Assert_NoEntry()", fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_NoReentry(fmtString, ...)                                                                          \
+    #define Assert_NoReentry_Fmt(fmtString, ...)                                                                       \
         ADHOC_ASSERT_IMPLEMENTATION_NO_REENTRY(true, "Call to Assert_NoReentry()", fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_NoEntry(fmtString, ...)                                                                            \
+    #define Expect_NoEntry_Fmt(fmtString, ...)                                                                         \
         ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(false, "Call to Assert_NoEntry()", fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_NoReentry(fmtString, ...)                                                                          \
+    #define Expect_NoReentry_Fmt(fmtString, ...)                                                                       \
         ADHOC_ASSERT_IMPLEMENTATION_NO_REENTRY(false, "Call to Assert_NoReentry()", fmt::format(fmtString, __VA_ARGS__))
 
     #define Assert_Code(code)                                                                                          \
@@ -387,63 +389,63 @@ ENGINE_API void TriggerFatalErrorResponse();
 
     // Fmt versions
 
-    #define AssertF_Null(pointer, fmtString, ...) {}
-    #define AssertF_NotNull(pointer, fmtString, ...) {}
+    #define Assert_Null_Fmt(pointer, fmtString, ...) {}
+    #define Assert_NotNull_Fmt(pointer, fmtString, ...) {}
 
-    #define ExpectF_Null(pointer, fmtString, ...) {}
-    #define ExpectF_NotNull(pointer, fmtString, ...) {}
+    #define Expect_Null_Fmt(pointer, fmtString, ...) {}
+    #define Expect_NotNull_Fmt(pointer, fmtString, ...) {}
 
-    #define AssertEvalF_Null(pointer, fmtString, ...) { pointer; }
-    #define AssertEvalF_NotNull(pointer, fmtString, ...) { pointer; }
+    #define AssertEval_Null_Fmt(pointer, fmtString, ...) { pointer; }
+    #define AssertEval_NotNull_Fmt(pointer, fmtString, ...) { pointer; }
 
-    #define ExpectEvalF_Null(pointer, fmtString, ...) { pointer; }
-    #define ExpectEvalF_NotNull(pointer, fmtString, ...) { pointer; }
+    #define ExpectEval_Null_Fmt(pointer, fmtString, ...) { pointer; }
+    #define ExpectEval_NotNull_Fmt(pointer, fmtString, ...) { pointer; }
 
-    #define AssertF_True(expression, fmtString, ...) {}
-    #define AssertF_False(expression, fmtString, ...) {}
+    #define Assert_True_Fmt(expression, fmtString, ...) {}
+    #define Assert_False_Fmt(expression, fmtString, ...) {}
 
-    #define ExpectF_True(expression, fmtString, ...) {}
-    #define ExpectF_False(expression, fmtString, ...) {}
+    #define Expect_True_Fmt(expression, fmtString, ...) {}
+    #define Expect_False_Fmt(expression, fmtString, ...) {}
 
-    #define AssertEvalF_True(expression, fmtString, ...) { expression; }
-    #define AssertEvalF_False(expression, fmtString, ...) { expression; }
+    #define AssertEval_True_Fmt(expression, fmtString, ...) { expression; }
+    #define AssertEval_False_Fmt(expression, fmtString, ...) { expression; }
 
-    #define ExpectEvalF_True(expression, fmtString, ...) { expression; }
-    #define ExpectEvalF_False(expression, fmtString, ...) { expression; }
+    #define ExpectEval_True_Fmt(expression, fmtString, ...) { expression; }
+    #define ExpectEval_False_Fmt(expression, fmtString, ...) { expression; }
 
-    #define AssertF_Eq(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Ne(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Lt(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Le(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Gt(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Ge(lhs, rhs, fmtString, ...) {}
+    #define Assert_Eq_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Ne_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Lt_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Le_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Gt_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Ge_Fmt(lhs, rhs, fmtString, ...) {}
 
-    #define ExpectF_Eq(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Ne(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Lt(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Le(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Gt(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Ge(lhs, rhs, fmtString, ...) {}
+    #define Expect_Eq_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Ne_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Lt_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Le_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Gt_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Ge_Fmt(lhs, rhs, fmtString, ...) {}
 
-    #define AssertEvalF_Eq(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Ne(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Lt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Le(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Gt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Ge(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Eq_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Ne_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Lt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Le_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Gt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Ge_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
 
-    #define ExpectEvalF_Eq(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Ne(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Lt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Le(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Gt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Ge(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Eq_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Ne_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Lt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Le_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Gt_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Ge_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
 
-    #define AssertF_NoEntry(fmtString, ...) {}
-    #define AssertF_NoReentry(fmtString, ...) {}
+    #define Assert_NoEntry_Fmt(fmtString, ...) {}
+    #define Assert_NoReentry_Fmt(fmtString, ...) {}
 
-    #define ExpectF_NoEntry(fmtString, ...) {}
-    #define ExpectF_NoReentry(fmtString, ...) {}
+    #define Expect_NoEntry_Fmt(fmtString, ...) {}
+    #define Expect_NoReentry_Fmt(fmtString, ...) {}
 
     #define Assert_Code(code) {}
 
@@ -521,97 +523,97 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 // Fmt versions
 
-    #define AssertF_Null_Slow(pointer, fmtString, ...)                                                                 \
+    #define Assert_Null_Slow_Fmt(pointer, fmtString, ...)                                                              \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_NotNull_Slow(pointer, fmtString, ...)                                                              \
+    #define Assert_NotNull_Slow_Fmt(pointer, fmtString, ...)                                                           \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_Null_Slow(pointer, fmtString, ...)                                                                 \
+    #define Expect_Null_Slow_Fmt(pointer, fmtString, ...)                                                              \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_NotNull_Slow(pointer, fmtString, ...)                                                              \
+    #define Expect_NotNull_Slow_Fmt(pointer, fmtString, ...)                                                           \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertEvalF_Null_Slow(pointer, fmtString, ...)                                                             \
+    #define AssertEval_Null_Slow_Fmt(pointer, fmtString, ...)                                                          \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertEvalF_NotNull_Slow(pointer, fmtString, ...)                                                          \
+    #define AssertEval_NotNull_Slow_Fmt(pointer, fmtString, ...)                                                       \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectEvalF_Null_Slow(pointer, fmtString, ...)                                                             \
+    #define ExpectEval_Null_Slow_Fmt(pointer, fmtString, ...)                                                          \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectEvalF_NotNull_Slow(pointer, fmtString, ...)                                                          \
+    #define ExpectEval_NotNull_Slow_Fmt(pointer, fmtString, ...)                                                       \
         ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertF_True_Slow(expression, fmtString, ...)                                                              \
+    #define Assert_True_Slow_Fmt(expression, fmtString, ...)                                                           \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_False_Slow(expression, fmtString, ...)                                                             \
+    #define Assert_False_Slow_Fmt(expression, fmtString, ...)                                                          \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_True_Slow(expression, fmtString, ...)                                                              \
+    #define Expect_True_Slow_Fmt(expression, fmtString, ...)                                                           \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_False_Slow(expression, fmtString, ...)                                                             \
+    #define Expect_False_Slow_Fmt(expression, fmtString, ...)                                                          \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertEvalF_True_Slow(expression, fmtString, ...)                                                          \
+    #define AssertEval_True_Slow_Fmt(expression, fmtString, ...)                                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertEvalF_False_Slow(expression, fmtString, ...)                                                         \
+    #define AssertEval_False_Slow_Fmt(expression, fmtString, ...)                                                      \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectEvalF_True_Slow(expression, fmtString, ...)                                                          \
+    #define ExpectEval_True_Slow_Fmt(expression, fmtString, ...)                                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectEvalF_False_Slow(expression, fmtString, ...)                                                         \
+    #define ExpectEval_False_Slow_Fmt(expression, fmtString, ...)                                                      \
         ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertF_Eq_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Assert_Eq_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, ==, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Ne_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Assert_Ne_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, !=, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Lt_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Assert_Lt_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, <, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Le_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Assert_Le_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, <=, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Gt_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Assert_Gt_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, >, fmt::format(fmtString, __VA_ARGS__))
-    #define AssertF_Ge_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Assert_Ge_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, >=, fmt::format(fmtString, __VA_ARGS__))
 
-    #define ExpectF_Eq_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Expect_Eq_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, ==, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Ne_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Expect_Ne_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, !=, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Lt_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Expect_Lt_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, <, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Le_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Expect_Le_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(                                                                            \
             false, lhs, rhs, <=, fmt::format(fmtString, __VA_ARGS__, fmt::format(fmtString, __VA_ARGS__)))
-    #define ExpectF_Gt_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Expect_Gt_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, >, fmt::format(fmtString, __VA_ARGS__))
-    #define ExpectF_Ge_Slow(lhs, rhs, fmtString, ...)                                                                  \
+    #define Expect_Ge_Slow_Fmt(lhs, rhs, fmtString, ...)                                                               \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs, rhs, >=, fmt::format(fmtString, __VA_ARGS__))
 
-    #define AssertEvalF_Eq_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define AssertEval_Eq_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, ==)
-    #define AssertEvalF_Ne_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define AssertEval_Ne_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, !=)
-    #define AssertEvalF_Lt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define AssertEval_Lt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <)
-    #define AssertEvalF_Le_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define AssertEval_Le_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, <=)
-    #define AssertEvalF_Gt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define AssertEval_Gt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >)
-    #define AssertEvalF_Ge_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define AssertEval_Ge_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs_evaluated, rhs_discarded, >=)
 
-    #define ExpectEvalF_Eq_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define ExpectEval_Eq_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, ==)
-    #define ExpectEvalF_Ne_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define ExpectEval_Ne_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, !=)
-    #define ExpectEvalF_Lt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define ExpectEval_Lt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <)
-    #define ExpectEvalF_Le_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define ExpectEval_Le_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, <=)
-    #define ExpectEvalF_Gt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define ExpectEval_Gt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >)
-    #define ExpectEvalF_Ge_Slow(lhs_evaluated, rhs_discarded, fmtString, ...)                                          \
+    #define ExpectEval_Ge_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...)                                       \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=)
 
     #define Assert_Code_Slow(code)                                                                                     \
@@ -680,57 +682,57 @@ ENGINE_API void TriggerFatalErrorResponse();
 
     // Fmt versions
 
-    #define AssertF_Null_Slow(pointer, fmtString, ...) {}
-    #define AssertF_NotNull_Slow(pointer, fmtString, ...) {}
+    #define Assert_Null_Slow_Fmt(pointer, fmtString, ...) {}
+    #define Assert_NotNull_Slow_Fmt(pointer, fmtString, ...) {}
 
-    #define ExpectF_Null_Slow(pointer, fmtString, ...) {}
-    #define ExpectF_NotNull_Slow(pointer, fmtString, ...) {}
+    #define Expect_Null_Slow_Fmt(pointer, fmtString, ...) {}
+    #define Expect_NotNull_Slow_Fmt(pointer, fmtString, ...) {}
 
-    #define AssertEvalF_Null_Slow(pointer, fmtString, ...) { pointer; }
-    #define AssertEvalF_NotNull_Slow(pointer, fmtString, ...) { pointer; }
+    #define AssertEval_Null_Slow_Fmt(pointer, fmtString, ...) { pointer; }
+    #define AssertEval_NotNull_Slow_Fmt(pointer, fmtString, ...) { pointer; }
 
-    #define ExpectEvalF_Null_Slow(pointer, fmtString, ...) { pointer; }
-    #define ExpectEvalF_NotNull_Slow(pointer, fmtString, ...) { pointer; }
+    #define ExpectEval_Null_Slow_Fmt(pointer, fmtString, ...) { pointer; }
+    #define ExpectEval_NotNull_Slow_Fmt(pointer, fmtString, ...) { pointer; }
 
-    #define AssertF_True_Slow(expression, fmtString, ...) {}
-    #define AssertF_False_Slow(expression, fmtString, ...) {}
+    #define Assert_True_Slow_Fmt(expression, fmtString, ...) {}
+    #define Assert_False_Slow_Fmt(expression, fmtString, ...) {}
 
-    #define ExpectF_True_Slow(expression, fmtString, ...) {}
-    #define ExpectF_False_Slow(expression, fmtString, ...) {}
+    #define Expect_True_Slow_Fmt(expression, fmtString, ...) {}
+    #define Expect_False_Slow_Fmt(expression, fmtString, ...) {}
 
-    #define AssertEvalF_True_Slow(expression, fmtString, ...) { expression; }
-    #define AssertEvalF_False_Slow(expression, fmtString, ...) { expression; }
+    #define AssertEval_True_Slow_Fmt(expression, fmtString, ...) { expression; }
+    #define AssertEval_False_Slow_Fmt(expression, fmtString, ...) { expression; }
 
-    #define ExpectEvalF_True_Slow(expression, fmtString, ...) { expression; }
-    #define ExpectEvalF_False_Slow(expression, fmtString, ...) { expression; }
+    #define ExpectEval_True_Slow_Fmt(expression, fmtString, ...) { expression; }
+    #define ExpectEval_False_Slow_Fmt(expression, fmtString, ...) { expression; }
 
-    #define AssertF_Eq_Slow(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Ne_Slow(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Lt_Slow(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Le_Slow(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Gt_Slow(lhs, rhs, fmtString, ...) {}
-    #define AssertF_Ge_Slow(lhs, rhs, fmtString, ...) {}
+    #define Assert_Eq_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Ne_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Lt_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Le_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Gt_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Assert_Ge_Slow_Fmt(lhs, rhs, fmtString, ...) {}
 
-    #define ExpectF_Eq_Slow(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Ne_Slow(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Lt_Slow(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Le_Slow(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Gt_Slow(lhs, rhs, fmtString, ...) {}
-    #define ExpectF_Ge_Slow(lhs, rhs, fmtString, ...) {}
+    #define Expect_Eq_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Ne_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Lt_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Le_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Gt_Slow_Fmt(lhs, rhs, fmtString, ...) {}
+    #define Expect_Ge_Slow_Fmt(lhs, rhs, fmtString, ...) {}
 
-    #define AssertEvalF_Eq_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Ne_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Lt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Le_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Gt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define AssertEvalF_Ge_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Eq_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Ne_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Lt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Le_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Gt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define AssertEval_Ge_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
 
-    #define ExpectEvalF_Eq_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Ne_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Lt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Le_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Gt_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
-    #define ExpectEvalF_Ge_Slow(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Eq_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Ne_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Lt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Le_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Gt_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
+    #define ExpectEval_Ge_Slow_Fmt(lhs_evaluated, rhs_discarded, fmtString, ...) { lhs_evaluated; }
 
     #define Assert_Code_Slow(code) {}
 
