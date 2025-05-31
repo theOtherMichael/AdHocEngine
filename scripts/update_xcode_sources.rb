@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This script can be used to manually update the /src and /include groups in the Xcode projects.
+# This script can be used to manually update the /src, /include, and /vendor groups in the Xcode projects.
 # Use it habitually before commiting changes that involve adding, removing, or moving files and folders.
 
 require 'xcodeproj'
@@ -68,7 +68,7 @@ def add_missing_file_references(project, project_files)
   puts '  Adding missing file references...'
 
   project_file_references = project.files.select do |path|
-    path.path.start_with?('src/', 'include/') && path.path.end_with?('.h', '.c', '.cpp', 'm', 'mm')
+    path.path.start_with?('src/', 'include/', 'vendor/') && path.path.end_with?('.c', '.cpp', '.cc', '.cxx', '.h', '.hpp', '.hxx', '.m', '.mm')
   end
 
   project_files.each do |project_file|
@@ -82,7 +82,7 @@ def remove_broken_file_references(project, project_files)
   puts '  Removing broken file references...'
 
   project_file_references = project.files.select do |path|
-    path.path.end_with?('.h', '.c', '.cpp', 'm', 'mm')
+    path.path.end_with?('.c', '.cpp', '.cc', '.cxx', '.h', '.hpp', '.hxx', '.m', '.mm')
   end
 
   project_file_references.each do |project_file_reference|
@@ -93,7 +93,7 @@ def remove_broken_file_references(project, project_files)
     end
 
     next if project_files.include?(project_file_reference.path)
-    next unless project_file_reference.path.start_with?('src/', 'include/')
+    next unless project_file_reference.path.start_with?('src/', 'include/', 'vendor/')
 
     puts("    Removing reference to now-deleted #{project_file_reference.path}")
     project_file_reference.remove_from_project
