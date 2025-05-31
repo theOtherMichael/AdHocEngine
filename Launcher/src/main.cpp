@@ -72,16 +72,17 @@ int main(int argc, char* argv[])
         }
         else
         {
-            // TODO: Relaunch in the override mode
+            // TODO: Relaunch in selectedConfigMode
         }
     }
 
     auto& editorState = Editor::GetMutableEditorState();
 
     Console::Log("Configuration: {}", compiledConfigMode);
-    editorState.currentConfigMode = compiledConfigMode;
     Console::Log("Developer Mode: {}", isDeveloperMode);
-    editorState.isDeveloperMode = isDeveloperMode;
+
+    editorState.currentConfigMode = compiledConfigMode;
+    editorState.isDeveloperMode   = isDeveloperMode;
 
     auto reloadFlags = Editor::EditorMain(argc, argv);
 

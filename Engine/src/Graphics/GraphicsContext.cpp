@@ -20,26 +20,31 @@ bool SetApiMode(ApiMode apiMode)
     switch (apiMode)
     {
     case Engine::Graphics::ApiMode::None:
-    {
-        auto lock = std::unique_lock(currentGraphicsContextMutex);
-        currentGraphicsContext.reset(nullptr);
-    }
-    break;
-    case Engine::Graphics::ApiMode::OpenGl: Assert_NoEntry(); break;
-    case Engine::Graphics::ApiMode::Vulkan: Assert_NoEntry(); break;
+        Console::LogError("Setting API mode to \"None\" is not allowed!");
+        return false;
+    case Engine::Graphics::ApiMode::OpenGl: Console::LogError("Not yet implemented!"); return false;
+    case Engine::Graphics::ApiMode::Vulkan: Console::LogError("Not yet implemented!"); return false;
     case Engine::Graphics::ApiMode::D3D11:
     {
 #if ADHOC_WINDOWS
-        auto lock = std::unique_lock(currentGraphicsContextMutex);
-        currentGraphicsContext.reset(nullptr);
+        auto lock              = std::unique_lock(currentGraphicsContextMutex);
         currentGraphicsContext = std::make_unique<D3D11GraphicsContext>();
+        break;
 #else
-        Assert_NoEntry();
+        Console::LogError("D3D11 not supported on this platform!");
+        return false;
 #endif
     }
-    break;
-    case Engine::Graphics::ApiMode::D3D12: Assert_NoEntry(); break;
-    case Engine::Graphics::ApiMode::Metal: Assert_NoEntry(); break;
+    case Engine::Graphics::ApiMode::D3D12:
+#if ADHOC_WINDOWS
+        Console::LogError("Not yet implemented!");
+        return false;
+#else
+        Console::LogError("D3D12 is not supported on this platform!");
+        return false;
+#endif
+
+    case Engine::Graphics::ApiMode::Metal: Console::LogError("Not yet implemented!"); return false;
     default: Assert_NoEntry(); break;
     }
 
@@ -52,8 +57,9 @@ ApiMode GetApiMode()
     return currentApiMode;
 }
 
-BaseGraphicsContext& Internal::GetContextRaw()
+BaseGraphicsContext& Internal::GetContextUnsafe()
 {
+    Assert_NotNull(currentGraphicsContext.get());
     return *currentGraphicsContext.get();
 }
 
@@ -62,19 +68,27 @@ std::shared_mutex& Internal::GetContextMutex()
     return currentGraphicsContextMutex;
 }
 
+void Internal::ShutdownContext()
+{
+    auto lock = std::unique_lock(currentGraphicsContextMutex);
+    currentGraphicsContext.reset(nullptr);
+}
+
 ThreadSafeSharedView<BaseGraphicsContext> GetContext()
 {
+    Assert_NotNull(currentGraphicsContext.get());
     return ThreadSafeSharedView(currentGraphicsContextMutex, *currentGraphicsContext.get());
 }
 
 ThreadSafeExclusiveView<BaseGraphicsContext> GetMutableContext()
 {
+    Assert_NotNull(currentGraphicsContext.get());
     return ThreadSafeExclusiveView(currentGraphicsContextMutex, *currentGraphicsContext.get());
 }
 
 ApiLifetime::~ApiLifetime()
 {
-    SetApiMode(ApiMode::None);
+    Internal::ShutdownContext();
 }
 
 } // namespace Engine::Graphics

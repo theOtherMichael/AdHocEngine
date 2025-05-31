@@ -1,5 +1,4 @@
 #pragma once
-#pragma once
 
 #include <Engine/Common/ThreadSafeViews.h>
 #include <Engine/Core/SymbolExportMacros.h>
@@ -27,17 +26,18 @@ ENGINE_API ApiMode GetApiMode();
 
 namespace Internal
 {
-ENGINE_API BaseGraphicsContext& GetContextRaw();
+ENGINE_API BaseGraphicsContext& GetContextUnsafe();
 ENGINE_API std::shared_mutex& GetContextMutex();
+ENGINE_API void ShutdownContext();
 } // namespace Internal
 
 ENGINE_API ThreadSafeSharedView<BaseGraphicsContext> GetContext();
 
-template <typename DerivedContextType>
+template <typename DerivedContextType> 
     requires std::is_base_of_v<BaseGraphicsContext, DerivedContextType>
 ThreadSafeSharedView<DerivedContextType> GetContextAs()
 {
-    const auto& context = dynamic_cast<const DerivedContextType&>(Internal::GetContextRaw());
+    const auto& context = dynamic_cast<const DerivedContextType&>(Internal::GetContextUnsafe());
     return ThreadSafeSharedView(Internal::GetContextMutex(), context);
 }
 
@@ -47,7 +47,7 @@ template <typename DerivedContextType>
     requires std::is_base_of_v<BaseGraphicsContext, DerivedContextType>
 ThreadSafeExclusiveView<DerivedContextType> GetMutableContextAs()
 {
-    auto& context = dynamic_cast<DerivedContextType&>(Internal::GetContextRaw());
+    auto& context = dynamic_cast<DerivedContextType&>(Internal::GetContextUnsafe());
     return ThreadSafeExclusiveView(Internal::GetContextMutex(), context);
 }
 

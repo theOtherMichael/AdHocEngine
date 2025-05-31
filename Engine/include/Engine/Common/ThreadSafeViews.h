@@ -56,7 +56,7 @@ public:
         if (!lockFuture.valid())
             return lock.has_value();
 
-        return lockFuture.wait_for(std::chrono::seconds(0)) == std::future_status::ready;
+        return lockFuture.wait_for(std::chrono::seconds::zero()) == std::future_status::ready;
     }
 
     explicit operator bool() const { return IsReady(); }
@@ -104,7 +104,7 @@ public:
         if (!lockFuture.valid())
             return lock.has_value();
 
-        return lockFuture.wait_for(std::chrono::seconds(0)) == std::future_status::ready;
+        return lockFuture.wait_for(std::chrono::seconds::zero()) == std::future_status::ready;
     }
 
     explicit operator bool() const { return IsReady(); }
