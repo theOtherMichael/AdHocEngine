@@ -189,8 +189,8 @@ install_dependencies_for_project_and_linkage() {
         --overlay-triplets="./triplets" \
         --triplet=x64-osx-$linkage_flag-adhoc \
         --x-manifest-root="$project_dir" \
-        --x-install-root="$project_dir/vcpkg_installed/x64-$linkage_flag"; then
-        echo "Error running vcpkg on triplet x64-osx-$linkage_flag!"
+        --x-install-root="$project_dir/vcpkg_installed/x64-$linkage_flag-adhoc"; then
+        echo "Error running vcpkg on triplet x64-osx-$linkage_flag-adhoc!"
         return 1
     fi
 
@@ -200,16 +200,16 @@ install_dependencies_for_project_and_linkage() {
         --overlay-triplets="./triplets" \
         --triplet=arm64-osx-$linkage_flag-adhoc \
         --x-manifest-root="$project_dir" \
-        --x-install-root="$project_dir/vcpkg_installed/arm64-$linkage_flag"; then
-        echo "Error running vcpkg on triplet arm64-osx-$linkage_flag!"
+        --x-install-root="$project_dir/vcpkg_installed/arm64-$linkage_flag-adhoc"; then
+        echo "Error running vcpkg on triplet arm64-osx-$linkage_flag-adhoc!"
         return 1
     fi
 
     echo "Merging into universal binaries using lipo tool..."
     if ! lipo_directory_recursive \
-        "$project_dir/vcpkg_installed/x64-$linkage_flag/x64-osx-$linkage_flag" \
-        "$project_dir/vcpkg_installed/arm64-$linkage_flag/arm64-osx-$linkage_flag" \
-        "$project_dir/vcpkg_installed/uni-$linkage_flag"; then
+        "$project_dir/vcpkg_installed/x64-$linkage_flag-adhoc/x64-osx-$linkage_flag-adhoc" \
+        "$project_dir/vcpkg_installed/arm64-$linkage_flag-adhoc/arm64-osx-$linkage_flag-adhoc" \
+        "$project_dir/vcpkg_installed/universal-$linkage_flag-adhoc"; then
         echo "Error during dependency merging!"
         return 1
     fi

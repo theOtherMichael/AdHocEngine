@@ -104,29 +104,29 @@
 		997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadSafeViewsTests.cpp; path = src/Common/ThreadSafeViewsTests.cpp; sourceTree = SOURCE_ROOT; };
 		C0911E07F42A822647B2F679 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CBC0D00DC9DDE1A807A68FE9 /* AssertionTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = AssertionTests.cpp; path = src/Core/AssertionTests.cpp; sourceTree = SOURCE_ROOT; };
-		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/uni-static/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
-		CE10314C2D2A620D00590717 /* libfmtd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmtd.a; path = "../Engine/vcpkg_installed/uni-static/debug/lib/libfmtd.a"; sourceTree = SOURCE_ROOT; };
+		CE1031442D2A615900590717 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CE1031472D2A61AC00590717 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CE1031492D2A61D900590717 /* libfmt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmt.a; path = "../Engine/vcpkg_installed/universal-static-adhoc/lib/libfmt.a"; sourceTree = SOURCE_ROOT; };
+		CE10314C2D2A620D00590717 /* libfmtd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libfmtd.a; path = "../Engine/vcpkg_installed/universal-static-adhoc/debug/lib/libfmtd.a"; sourceTree = SOURCE_ROOT; };
 		CE3D18EF2D23914700F47CDF /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = ../Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D18F12D23915300F47CDF /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = ../Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = ../Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D191B2D23A07A00F47CDF /* EngineStaticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19282D23A0DB00F47CDF /* EngineStaticTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D19352D23A0E600F47CDF /* EngineStaticTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineStaticTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3D19362D23A15400F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
+		CE3D19362D23A15400F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/universal-static-adhoc/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
 		CE3D19382D23A16800F47CDF /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.a; path = ../Release/libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3D193A2D23A1A000F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/uni-static/debug/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
+		CE3D193A2D23A1A000F47CDF /* libgtest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libgtest.a; path = "vcpkg_installed/universal-static-adhoc/debug/lib/libgtest.a"; sourceTree = SOURCE_ROOT; };
 		CE3D193C2D23A1AC00F47CDF /* libEngineStaticD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.a; path = ../Debug/libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3D193F2D23A1EC00F47CDF /* libEngineStaticDev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.a; path = ../Dev/libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293712D2283040020748F /* EngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
-		CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
-		CE97433F2D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE97433C2D458EB200C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE97433F2D458EE500C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
 		CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB948622D231FA8009C272B /* EngineTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/uni-dynamic/debug/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEBA0C1D2D234EE1006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/universal-dynamic-adhoc/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEBA0C202D234EFE006346FC /* libgtest.1.15.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.15.2.dylib; path = "vcpkg_installed/universal-dynamic-adhoc/debug/lib/libgtest.1.15.2.dylib"; sourceTree = SOURCE_ROOT; };
 		E2D6145DFE947D530FBF17A8 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GTMGoogleTestRunner.mm; path = src/_platform/Mac/GTMGoogleTestRunner.mm; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -530,8 +530,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -558,8 +558,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -588,8 +588,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -618,8 +618,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -646,8 +646,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
@@ -674,8 +674,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-static/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-static/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
@@ -742,9 +742,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -810,9 +810,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -843,7 +843,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -874,7 +874,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -907,7 +907,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -940,7 +940,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -971,7 +971,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
@@ -1002,7 +1002,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/uni-dynamic/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;

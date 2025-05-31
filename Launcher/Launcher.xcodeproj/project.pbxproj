@@ -102,12 +102,12 @@
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD152CFC33DC002F900C /* LauncherDev */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherDev; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
-		CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/uni-dynamic/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
-		CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/uni-dynamic/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
+		CE9743092D457B8E00C7D0F7 /* libmimalloc.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.1.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libmimalloc.2.1.dylib"; sourceTree = SOURCE_ROOT; };
+		CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.1.dylib"; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libmimalloc-debug.2.1.dylib"; sourceTree = SOURCE_ROOT; };
 		CE9743222D4581E800C7D0F7 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9743242D4581E900C7D0F7 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = Dev/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -591,9 +591,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";
@@ -690,9 +690,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/uni-dynamic/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)";

@@ -102,9 +102,10 @@ def remove_broken_file_references(project, project_files)
 end
 
 def glob_files_in_dir(dir)
-  files = []
-  Dir.glob("#{dir}/**/*").each { |file| files << file if File.file?(file) }
-  files
+  allowed_extensions = ['.c', '.cpp', '.cc', '.cxx', '.h', '.hpp', '.hxx', '.m', '.mm']
+  Dir.glob("#{dir}/**/*").select do |file|
+    File.file?(file) && allowed_extensions.include?(File.extname(file))
+  end
 end
 
 def update_project(project_name)
@@ -114,7 +115,8 @@ def update_project(project_name)
 
   source_files = glob_files_in_dir(File.join(project_folder_relative_path, 'src'))
   header_files = glob_files_in_dir(File.join(project_folder_relative_path, 'include'))
-  project_files = source_files + header_files
+  vendor_files = glob_files_in_dir(File.join(project_folder_relative_path, 'vendor'))
+  project_files = source_files + header_files + vendor_files
 
   project_files_relative = project_files.map do |project_file|
     project_file.delete_prefix(project_folder_relative_path)
