@@ -153,4 +153,7 @@
   <ItemGroup>
     <CustomBuild Include="vcpkg.json" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
 </Project>

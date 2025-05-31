@@ -381,6 +381,9 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <Message Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">Skipping vcpkg script for static library build</Message>
     </CustomBuild>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
