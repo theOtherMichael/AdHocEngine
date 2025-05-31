@@ -94,7 +94,7 @@ ReloadOption EditorMain(int argc, char* argv[])
 
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     GLFWwindow* mainWindowPtr = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
-    Assert_Ne(fmt::ptr(mainWindowPtr), nullptr);
+    Assert_NotNull(mainWindowPtr);
     Engine::SetNativeWindowHandle(mainWindowPtr);
 
     auto graphicsApiLifetime = Engine::Graphics::ApiLifetime{};
