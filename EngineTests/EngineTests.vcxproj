@@ -83,7 +83,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -105,7 +105,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin\ $(Outpu
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -127,7 +127,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\static\x64-windows-static-md-adhoc\debug\bin
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -150,7 +150,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath)
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -174,7 +174,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\static\x64-windows-static-md-adhoc\bin\ $(Ou
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -197,7 +197,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath)
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\static\x64-windows-static-md-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

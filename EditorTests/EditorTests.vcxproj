@@ -56,7 +56,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -80,7 +80,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin\ $(Outpu
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -106,7 +106,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath)
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Editor\vendor\imgui_copied_headers;$(SolutionDir)Editor\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>

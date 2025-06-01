@@ -82,7 +82,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -98,20 +98,8 @@
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>IF NOT EXIST "$(ProjectDir)vendor\imgui" git submodule update --init --recursive
-RMDIR /S /Q "$(ProjectDir)vendor\imgui_copied_headers"
-
-MKDIR "$(ProjectDir)vendor\imgui_copied_headers" 2&gt;nul
-XCOPY "$(ProjectDir)vendor\imgui\*.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-
-XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_dx11.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_glfw.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Copying Dear ImGui headers...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -121,7 +109,7 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -139,20 +127,8 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>IF NOT EXIST "$(ProjectDir)vendor\imgui" git submodule update --init --recursive
-RMDIR /S /Q "$(ProjectDir)vendor\imgui_copied_headers"
-
-MKDIR "$(ProjectDir)vendor\imgui_copied_headers" 2&gt;nul
-XCOPY "$(ProjectDir)vendor\imgui\*.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-
-XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_dx11.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_glfw.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Copying Dear ImGui headers...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">
     <ClCompile>
@@ -162,7 +138,7 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;$(ProjectDir)src;$(ProjectDir)vendor\imgui_copied_headers;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -180,20 +156,8 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
 </Command>
       <Message>Copying vcpkg dependencies...</Message>
     </PostBuildEvent>
-    <PreBuildEvent>
-      <Command>IF NOT EXIST "$(ProjectDir)vendor\imgui" git submodule update --init --recursive
-RMDIR /S /Q "$(ProjectDir)vendor\imgui_copied_headers"
-
-MKDIR "$(ProjectDir)vendor\imgui_copied_headers" 2&gt;nul
-XCOPY "$(ProjectDir)vendor\imgui\*.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-
-XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_dx11.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-XCOPY "$(ProjectDir)vendor\imgui\backends\imgui_impl_glfw.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y
-XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\imgui_copied_headers" /C /I /F /R /K /Y</Command>
-    </PreBuildEvent>
-    <PreBuildEvent>
-      <Message>Copying Dear ImGui headers...</Message>
-    </PreBuildEvent>
+    <PreBuildEvent />
+    <PreBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\EditorConfigurationMode.cpp" />
@@ -204,11 +168,13 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
     <ClCompile Include="vendor\imgui\backends\imgui_impl_dx11.cpp" />
     <ClCompile Include="vendor\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="vendor\imgui\backends\imgui_impl_win32.cpp" />
     <ClCompile Include="vendor\imgui\imgui.cpp" />
     <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
     <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
     <ClCompile Include="vendor\imgui\imgui_tables.cpp" />
     <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="vendor\imgui\misc\cpp\imgui_stdlib.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Engine\Engine.vcxproj">
@@ -224,12 +190,24 @@ XCOPY "$(ProjectDir)vendor\imgui\misc\cpp\imgui_stdlib.h" "$(ProjectDir)vendor\i
     <ClInclude Include="src\Views\ConsoleView.h" />
     <ClInclude Include="vendor\imgui\backends\imgui_impl_dx11.h" />
     <ClInclude Include="vendor\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\backends\imgui_impl_win32.h" />
     <ClInclude Include="vendor\imgui\imconfig.h" />
     <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui\backends\imgui_impl_dx11.h" />
+    <ClInclude Include="vendor\imgui\imgui\backends\imgui_impl_dx12.h" />
+    <ClInclude Include="vendor\imgui\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="vendor\imgui\imgui\backends\imgui_impl_win32.h" />
+    <ClInclude Include="vendor\imgui\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\imgui\imstb_rectpack.h" />
+    <ClInclude Include="vendor\imgui\imgui\imstb_textedit.h" />
+    <ClInclude Include="vendor\imgui\imgui\imstb_truetype.h" />
     <ClInclude Include="vendor\imgui\imgui_internal.h" />
     <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
     <ClInclude Include="vendor\imgui\imstb_textedit.h" />
     <ClInclude Include="vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="vendor\imgui\misc\cpp\imgui_stdlib.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">

@@ -4,7 +4,7 @@
 #include <Engine/Core/Console.h>
 
 #include <imgui.h>
-#include <imgui_stdlib.h>
+#include <misc/cpp/imgui_stdlib.h>
 
 #include <string>
 #include <utility>
