@@ -98,14 +98,13 @@
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD152CFC33DC002F900C /* LauncherDev */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherDev; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9743222D4581E800C7D0F7 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9743242D4581E900C7D0F7 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = Dev/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE97432E2D45852500C7D0F7 /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = Debug/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9743302D45852500C7D0F7 /* libEngineD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9743222D4581E800C7D0F7 /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9743242D4581E900C7D0F7 /* libEngine.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = Dev/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineDev.dylib; path = Dev/libEngineDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE97432E2D45852500C7D0F7 /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = Debug/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9743302D45852500C7D0F7 /* libEngineD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEngineD.dylib; path = Debug/libEngineD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStatic.dylib; path = Release/libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE9743362D4589C200C7D0F7 /* libEngineStaticDev.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticDev.dylib; path = Dev/libEngineStaticDev.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; name = libEngineStaticD.dylib; path = Debug/libEngineStaticD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad Hoc Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -225,7 +224,6 @@
 				CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */,
 				CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */,
 				CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */,
-				CE9743362D4589C200C7D0F7 /* libEngineStaticDev.dylib */,
 				CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */,
 				CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */,
 				CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */,
@@ -429,6 +427,13 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -445,6 +450,13 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LLVM_LTO = YES;
@@ -466,6 +478,13 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,6 +505,13 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,6 +529,13 @@
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -519,6 +552,13 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LLVM_LTO = YES_THIN;
@@ -614,6 +654,13 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -713,6 +760,13 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

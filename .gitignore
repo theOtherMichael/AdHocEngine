@@ -3,8 +3,6 @@
 /build-int.noindex/
 vcpkg_installed/
 
-/Editor/vendor/imgui_copied_headers/
-
 # Visual Studio =================================
 
 ## User-specific files

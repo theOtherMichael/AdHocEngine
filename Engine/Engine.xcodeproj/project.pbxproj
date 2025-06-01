@@ -1688,8 +1688,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED3D6822B12D3C800C5FB04 /* Build configuration list for PBXNativeTarget "EngineD" */;
 			buildPhases = (
-				CED3D67A2B12D3C800C5FB04 /* Sources */,
 				CEEE43762DEBB86A0002EBAC /* Copy vcpkg Dependencies */,
+				CED3D67A2B12D3C800C5FB04 /* Sources */,
 				CED3D6802B12D3C800C5FB04 /* Frameworks */,
 			);
 			buildRules = (

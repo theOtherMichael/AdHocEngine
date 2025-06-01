@@ -31,6 +31,9 @@
 		CEC4855E2DEBE34A004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC4855B2DEBE34A004068E1 /* libfmt.11.0.2.dylib */; };
 		CEC4855F2DEBE34A004068E1 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC4855C2DEBE34A004068E1 /* libmimalloc.2.2.dylib */; };
 		CEC485602DEBE34A004068E1 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC4855D2DEBE34A004068E1 /* libglfw.3.4.dylib */; };
+		CEC4857E2DEC107C004068E1 /* libmimalloc-debug.2.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEC485512DEBE2BA004068E1 /* libmimalloc-debug.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC4857F2DEC108E004068E1 /* libmimalloc.2.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEC485562DEBE315004068E1 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC485802DEC109A004068E1 /* libmimalloc.2.2.dylib in Copy gtest */ = {isa = PBXBuildFile; fileRef = CEC4855C2DEBE34A004068E1 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CEC485802DEC109A004068E1 /* libmimalloc.2.2.dylib in Copy gtest */,
 				CEBA0C292D23512A006346FC /* libgtest.1.16.0.dylib in Copy gtest */,
 			);
 			name = "Copy gtest";
@@ -51,6 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CEC4857E2DEC107C004068E1 /* libmimalloc-debug.2.2.dylib in Copy gtest */,
 				CEBA0C2B2D23513D006346FC /* libgtest.1.16.0.dylib in Copy gtest */,
 			);
 			name = "Copy gtest";
@@ -62,6 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				CEC4857F2DEC108E004068E1 /* libmimalloc.2.2.dylib in Copy gtest */,
 				CEBA0C2D2D23515A006346FC /* libgtest.1.16.0.dylib in Copy gtest */,
 			);
 			name = "Copy gtest";
@@ -71,9 +77,9 @@
 
 /* Begin PBXFileReference section */
 		19AA86E739F48986C938A777 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
-		CE3D18F52D2391AE00F47CDF /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3D18F72D2391B400F47CDF /* libEditorD.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../Debug/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3D18F92D2391B900F47CDF /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../Dev/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D18F52D2391AE00F47CDF /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D18F72D2391B400F47CDF /* libEditorD.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorD.dylib; path = ../Debug/libEditorD.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE3D18F92D2391B900F47CDF /* libEditorDev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = ../Dev/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBA0BB32D234397006346FC /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CEBA0BBA2D234397006346FC /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = GTMGoogleTestRunner.mm; path = src/_platform/Mac/GTMGoogleTestRunner.mm; sourceTree = SOURCE_ROOT; };
 		CEBA0BD82D2344A0006346FC /* EditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -542,6 +548,14 @@
 					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
@@ -573,6 +587,14 @@
 					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
@@ -601,6 +623,14 @@
 					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
@@ -630,6 +660,14 @@
 					"ADHOC_RELEASE=0",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/../Editor/include",
+					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
