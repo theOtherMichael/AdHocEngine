@@ -13,21 +13,7 @@
 		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
-		CE46BD2E2CFC4523002F900C /* libfmt.11.0.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD2F2CFC4523002F900C /* libglfw.3.4.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD322CFC454B002F900C /* libfmtd.11.0.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE46BD332CFC454B002F900C /* libglfw.3.4.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE9743032D457A0800C7D0F7 /* LauncherD in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE0684C02CF064F200031F0A /* LauncherD */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE9743082D457B8E00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; };
-		CE97430A2D457B8E00C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE97430B2D457C0200C7D0F7 /* libmimalloc.2.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE97430D2D457C3800C7D0F7 /* libmimalloc-debug.2.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CE9743122D457CE400C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; };
-		CE9743132D457CE400C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE9743182D457D2D00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */; };
-		CE9743192D457D2D00C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743092D457B8E00C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE9743202D457E9E00C7D0F7 /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.2.dylib */; };
-		CE9743212D45818000C7D0F7 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */; };
 		CE9743232D4581E800C7D0F7 /* libEditor.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743222D4581E800C7D0F7 /* libEditor.dylib */; };
 		CE9743252D4581E900C7D0F7 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743242D4581E900C7D0F7 /* libEngine.dylib */; };
 		CE9743262D4581F000C7D0F7 /* libEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743242D4581E900C7D0F7 /* libEngine.dylib */; };
@@ -43,6 +29,16 @@
 		CE97433A2D4589DB00C7D0F7 /* libEngineStaticD.dylib in Copy Developer Binaries */ = {isa = PBXBuildFile; fileRef = CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE97433B2D4589E400C7D0F7 /* libEngineStatic.dylib in Copy Developer Binaries */ = {isa = PBXBuildFile; fileRef = CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
+		CEC4853B2DEBDC1D004068E1 /* libglfw.3.4.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CEC485382DEBDC1D004068E1 /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC4853C2DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CEC485392DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC4853D2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC485412DEBDC37004068E1 /* libglfw.3.4.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CEC4853E2DEBDC36004068E1 /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC485422DEBDC37004068E1 /* libmimalloc.2.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CEC4853F2DEBDC37004068E1 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC485432DEBDC37004068E1 /* libfmt.11.0.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CEC485442DEBDD8C004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */; };
+		CEC485452DEBDD9B004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */; };
+		CEC485462DEBDDC9004068E1 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */; };
+		CEC485482DEBDDF3004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
 		CED4DDC72D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
@@ -58,9 +54,9 @@
 			dstPath = debug;
 			dstSubfolderSpec = 10;
 			files = (
-				CE97430D2D457C3800C7D0F7 /* libmimalloc-debug.2.2.dylib in Copy Debug Binaries */,
-				CE46BD322CFC454B002F900C /* libfmtd.11.0.2.dylib in Copy Debug Binaries */,
-				CE46BD332CFC454B002F900C /* libglfw.3.4.dylib in Copy Debug Binaries */,
+				CEC4853C2DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib in Copy Debug Binaries */,
+				CEC4853D2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib in Copy Debug Binaries */,
+				CEC4853B2DEBDC1D004068E1 /* libglfw.3.4.dylib in Copy Debug Binaries */,
 				CE9743332D45854800C7D0F7 /* libEngineD.dylib in Copy Debug Binaries */,
 				CE9743322D45854800C7D0F7 /* libEditorD.dylib in Copy Debug Binaries */,
 				CE9743032D457A0800C7D0F7 /* LauncherD in Copy Debug Binaries */,
@@ -74,11 +70,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CE97430B2D457C0200C7D0F7 /* libmimalloc.2.2.dylib in Copy Release Binaries */,
-				CE46BD2E2CFC4523002F900C /* libfmt.11.0.2.dylib in Copy Release Binaries */,
-				CE46BD2F2CFC4523002F900C /* libglfw.3.4.dylib in Copy Release Binaries */,
-				CE9743282D45840100C7D0F7 /* libEditor.dylib in Copy Release Binaries */,
+				CEC485422DEBDC37004068E1 /* libmimalloc.2.2.dylib in Copy Release Binaries */,
+				CEC485432DEBDC37004068E1 /* libfmt.11.0.2.dylib in Copy Release Binaries */,
+				CEC485412DEBDC37004068E1 /* libglfw.3.4.dylib in Copy Release Binaries */,
 				CE9743292D45840100C7D0F7 /* libEngine.dylib in Copy Release Binaries */,
+				CE9743282D45840100C7D0F7 /* libEditor.dylib in Copy Release Binaries */,
 			);
 			name = "Copy Release Binaries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,12 +98,6 @@
 		CE0684982CEF1CB800031F0A /* Launcher */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Launcher; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE0684C02CF064F200031F0A /* LauncherD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherD; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE46BD152CFC33DC002F900C /* LauncherDev */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LauncherDev; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libfmt.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libglfw.3.4.dylib"; sourceTree = SOURCE_ROOT; };
-		CE9743092D457B8E00C7D0F7 /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CE9743222D4581E800C7D0F7 /* libEditor.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9743242D4581E900C7D0F7 /* libEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEngine.dylib; path = Release/libEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libEditorDev.dylib; path = Dev/libEditorDev.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +110,13 @@
 		CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad Hoc Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
+		CEC485382DEBDC1D004068E1 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Debug/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC485392DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "Debug/libmimalloc-debug.2.2.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = Debug/libfmtd.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC4853E2DEBDC36004068E1 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Release/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC4853F2DEBDC37004068E1 /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = Release/libmimalloc.2.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Release/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Dev/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -129,11 +126,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9743132D457CE400C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
-				CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */,
-				CE9743122D457CE400C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */,
+				CEC485452DEBDD9B004068E1 /* libfmt.11.0.2.dylib in Frameworks */,
 				CE9743252D4581E900C7D0F7 /* libEngine.dylib in Frameworks */,
 				CE9743232D4581E800C7D0F7 /* libEditor.dylib in Frameworks */,
+				CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,11 +137,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9743202D457E9E00C7D0F7 /* libmimalloc-debug.2.2.dylib in Frameworks */,
-				CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */,
-				CE9743212D45818000C7D0F7 /* libfmtd.11.0.2.dylib in Frameworks */,
+				CEC485462DEBDDC9004068E1 /* libfmtd.11.0.2.dylib in Frameworks */,
 				CE9743312D45852500C7D0F7 /* libEngineD.dylib in Frameworks */,
 				CE97432F2D45852500C7D0F7 /* libEditorD.dylib in Frameworks */,
+				CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,11 +148,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9743192D457D2D00C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
-				CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */,
-				CE9743182D457D2D00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */,
+				CEC485482DEBDDF3004068E1 /* libfmt.11.0.2.dylib in Frameworks */,
 				CE97432D2D45850100C7D0F7 /* libEngineDev.dylib in Frameworks */,
 				CE97432B2D45850100C7D0F7 /* libEditorDev.dylib in Frameworks */,
+				CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,11 +159,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE97430A2D457B8E00C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
-				CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */,
-				CE9743082D457B8E00C7D0F7 /* libfmt.11.0.2.dylib in Frameworks */,
+				CEC485442DEBDD8C004068E1 /* libfmt.11.0.2.dylib in Frameworks */,
 				CE9743262D4581F000C7D0F7 /* libEngine.dylib in Frameworks */,
 				CE9743272D4581F300C7D0F7 /* libEditor.dylib in Frameworks */,
+				CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,21 +217,22 @@
 		CE4C6EE62B01AE310015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */,
-				CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */,
-				CE9743362D4589C200C7D0F7 /* libEngineStaticDev.dylib */,
 				CE9743222D4581E800C7D0F7 /* libEditor.dylib */,
 				CE97432E2D45852500C7D0F7 /* libEditorD.dylib */,
 				CE97432A2D45850100C7D0F7 /* libEditorDev.dylib */,
 				CE9743242D4581E900C7D0F7 /* libEngine.dylib */,
 				CE9743302D45852500C7D0F7 /* libEngineD.dylib */,
 				CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */,
-				CE46BD2C2CFC4523002F900C /* libfmt.11.0.2.dylib */,
-				CE46BD302CFC454A002F900C /* libfmtd.11.0.2.dylib */,
-				CE46BD2D2CFC4523002F900C /* libglfw.3.4.dylib */,
-				CE46BD312CFC454A002F900C /* libglfw.3.4.dylib */,
-				CE97430C2D457C3800C7D0F7 /* libmimalloc-debug.2.2.dylib */,
-				CE9743092D457B8E00C7D0F7 /* libmimalloc.2.2.dylib */,
+				CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */,
+				CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */,
+				CE9743362D4589C200C7D0F7 /* libEngineStaticDev.dylib */,
+				CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */,
+				CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */,
+				CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */,
+				CEC485382DEBDC1D004068E1 /* libglfw.3.4.dylib */,
+				CEC4853E2DEBDC36004068E1 /* libglfw.3.4.dylib */,
+				CEC485392DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib */,
+				CEC4853F2DEBDC37004068E1 /* libmimalloc.2.2.dylib */,
 				CECE76422B110ACD0098AAEB /* AppKit.framework */,
 			);
 			name = Frameworks;

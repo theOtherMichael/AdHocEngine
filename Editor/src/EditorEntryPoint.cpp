@@ -21,6 +21,9 @@
 #if ADHOC_WINDOWS
     #include <imgui_impl_dx11.h>
 #endif
+#if ADHOC_MACOS
+    #include <imgui_impl_metal.h>
+#endif
 #include <imgui_impl_glfw.h>
 
 namespace Console = Engine::Console;

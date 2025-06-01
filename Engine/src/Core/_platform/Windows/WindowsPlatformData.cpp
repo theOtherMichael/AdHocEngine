@@ -18,25 +18,6 @@ ASSERT_PLATFORM_WINDOWS;
 namespace Engine
 {
 
-WindowsPlatformData& GetMutablePlatformData()
-{
-    static WindowsPlatformData instance;
-    return instance;
-}
-
-void InitializeProcessInfo()
-{
-    auto& data = GetMutablePlatformData();
-
-    Console::Log("Acquiring application process handle...");
-
-    auto process = GetCurrentProcess();
-    if (!DuplicateHandle(process, process, process, &data.processHandle, 0, FALSE, DUPLICATE_SAME_ACCESS))
-    {
-        Console::LogError("Could not obtain application process handle! {}", Windows::GetLastErrorMessage());
-    }
-}
-
 const WindowsPlatformData& WindowsPlatformData::GetInstance()
 {
     return GetMutablePlatformData();
@@ -55,6 +36,25 @@ WindowsPlatformData::~WindowsPlatformData()
     }
 
     processHandle = NULL;
+}
+
+void InitializeProcessInfo()
+{
+    auto& data = GetMutablePlatformData();
+
+    Console::Log("Acquiring application process handle...");
+
+    auto process = GetCurrentProcess();
+    if (!DuplicateHandle(process, process, process, &data.processHandle, 0, FALSE, DUPLICATE_SAME_ACCESS))
+    {
+        Console::LogError("Could not obtain application process handle! {}", Windows::GetLastErrorMessage());
+    }
+}
+
+WindowsPlatformData& GetMutablePlatformData()
+{
+    static WindowsPlatformData instance;
+    return instance;
 }
 
 } // namespace Engine

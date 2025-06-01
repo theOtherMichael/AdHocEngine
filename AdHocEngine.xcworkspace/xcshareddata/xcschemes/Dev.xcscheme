@@ -29,20 +29,6 @@
                ReferencedContainer = "container:Launcher/Launcher.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE46BCE22CFC3373002F900C"
-               BuildableName = "libEngineStaticDev.a"
-               BlueprintName = "EngineStaticDev"
-               ReferencedContainer = "container:Engine/Engine.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

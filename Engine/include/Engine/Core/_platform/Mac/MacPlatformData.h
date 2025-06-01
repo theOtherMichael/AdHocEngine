@@ -1,16 +1,27 @@
 #pragma once
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdocumentation"
-#include <GLFW/glfw3.h>
-#pragma clang diagnostic pop
+#include <Engine/Core/SymbolExportMacros.h>
 
 namespace Engine
 {
 
+struct ENGINE_API MacPlatformData
+{
+public:
+    static const MacPlatformData& GetInstance();
+
+    MacPlatformData() = default;
+    ~MacPlatformData();
+
+    MacPlatformData(const MacPlatformData&)            = delete;
+    MacPlatformData& operator=(const MacPlatformData&) = delete;
+};
+
 #if ADHOC_INTERNAL
-void InitializeProcessInfo() {};
-void SetNativeWindowHandle(GLFWwindow* window);
+ENGINE_API void InitializeProcessInfo();
+ENGINE_API MacPlatformData& GetMutablePlatformData();
 #endif
+
+typedef MacPlatformData PlatformData;
 
 } // namespace Engine

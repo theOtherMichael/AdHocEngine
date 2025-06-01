@@ -601,8 +601,6 @@
 		CE0D0E072D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
 		CE0D0E082D325C1200BC9EB1 /* Console.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE0D0DFC2D325C1200BC9EB1 /* Console.cpp */; };
 		CE3B7BE01BA8DA39C456BC28 /* NSObjCRuntime.hpp in Sources */ = {isa = PBXBuildFile; fileRef = A1D71886EBF8338A2E4F3055 /* NSObjCRuntime.hpp */; };
-		CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
-		CE46BCDD2CFC336A002F900C /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
 		CE46BCF22CFC3373002F900C /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37982CFC16CA00FC593F /* libfmt.a */; };
 		CE46BCF32CFC3373002F900C /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37992CFC16CA00FC593F /* libglfw3.a */; };
 		CE499955D66DFC2210FEA4C8 /* MTLBlitPass.hpp in Sources */ = {isa = PBXBuildFile; fileRef = FEE24B9FD5D070B7D65A47DA /* MTLBlitPass.hpp */; };
@@ -625,25 +623,6 @@
 		CE6FCE5D2DEAD1AD006C4B6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE4B2DEAD140006C4B6D /* Foundation.framework */; };
 		CE6FCE5E2DEAD1AD006C4B6D /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE4D2DEAD14A006C4B6D /* Metal.framework */; };
 		CE6FCE5F2DEAD1AD006C4B6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE6FCE4F2DEAD15B006C4B6D /* QuartzCore.framework */; };
-		CE6FCE602DEAD1D4006C4B6D /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.2.dylib */; };
-		CE6FCE612DEAD1EC006C4B6D /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE6FCE622DEAD1F7006C4B6D /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE9743582D45ED0000C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE97435A2D45ED1700C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; };
-		CE9743672D45F23300C7D0F7 /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.2.dylib */; };
-		CE9743682D45F23900C7D0F7 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */; };
-		CE9743692D45F23D00C7D0F7 /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */; };
-		CEB8040A2D46054700BD6E47 /* libmimalloc-debug.2.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB8040B2D46054D00BD6E47 /* libfmtd.11.0.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB8040C2D46055500BD6E47 /* libglfw.3.4.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB8040F2D46057700BD6E47 /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB804102D46057B00BD6E47 /* libglfw.3.4.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB804112D46057E00BD6E47 /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB804132D46059F00BD6E47 /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB804142D4605A200BD6E47 /* libglfw.3.4.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEB804152D4605A700BD6E47 /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
-		CEDB37932CFC166C00FC593F /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
 		CEDB379A2CFC16CA00FC593F /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37982CFC16CA00FC593F /* libfmt.a */; };
 		CEDB379B2CFC16CA00FC593F /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB37992CFC16CA00FC593F /* libglfw3.a */; };
 		CEDB379E2CFC16E600FC593F /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDB379C2CFC16E600FC593F /* libglfw3.a */; };
@@ -672,6 +651,27 @@
 		CEDDB0FB2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
 		CEDDB0FC2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
 		CEDDB0FD2D1FCE0D00EADB67 /* WindowsPlatformData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */; };
+		CEEE43772DEBB8A20002EBAC /* libmimalloc-debug.2.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.2.dylib */; };
+		CEEE43782DEBB8A70002EBAC /* libfmtd.11.0.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */; };
+		CEEE43792DEBB8AC0002EBAC /* libglfw.3.4.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */; };
+		CEEE437B2DEBB8CD0002EBAC /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
+		CEEE437C2DEBB8D40002EBAC /* libglfw.3.4.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
+		CEEE437D2DEBB8D70002EBAC /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; };
+		CEEE437F2DEBB8FA0002EBAC /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */; };
+		CEEE43802DEBB8FF0002EBAC /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */; };
+		CEEE43812DEBB9020002EBAC /* libglfw.3.4.dylib in Copy vcpkg Dependencies */ = {isa = PBXBuildFile; fileRef = CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */; };
+		CEEE43FB2DEBD6C70002EBAC /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43F82DEBD6C70002EBAC /* libmimalloc-debug.2.2.dylib */; };
+		CEEE43FC2DEBD6C70002EBAC /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43F92DEBD6C70002EBAC /* libglfw.3.4.dylib */; };
+		CEEE43FD2DEBD6C80002EBAC /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43FA2DEBD6C70002EBAC /* libfmtd.11.0.2.dylib */; };
+		CEEE44012DEBD6F30002EBAC /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43FE2DEBD6F30002EBAC /* libfmt.11.0.2.dylib */; };
+		CEEE44022DEBD6F30002EBAC /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43FF2DEBD6F30002EBAC /* libmimalloc.2.2.dylib */; };
+		CEEE44032DEBD6F40002EBAC /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE44002DEBD6F30002EBAC /* libglfw.3.4.dylib */; };
+		CEEE44072DEBD70B0002EBAC /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE44042DEBD70B0002EBAC /* libglfw.3.4.dylib */; };
+		CEEE44082DEBD70B0002EBAC /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE44052DEBD70B0002EBAC /* libmimalloc.2.2.dylib */; };
+		CEEE44092DEBD70B0002EBAC /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE44062DEBD70B0002EBAC /* libfmt.11.0.2.dylib */; };
+		CEEE440A2DEBD7700002EBAC /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43F82DEBD6C70002EBAC /* libmimalloc-debug.2.2.dylib */; };
+		CEEE440B2DEBD7760002EBAC /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43FF2DEBD6F30002EBAC /* libmimalloc.2.2.dylib */; };
+		CEEE440C2DEBD77D0002EBAC /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE44052DEBD70B0002EBAC /* libmimalloc.2.2.dylib */; };
 		CF820376D70187128ADAB754 /* MTLIOCommandBuffer.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 6538318D9406B1C1D7B9C913 /* MTLIOCommandBuffer.hpp */; };
 		CF86CA69327FBA8718868591 /* DynamicLibrary.h in Sources */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
 		CF95FC874EE11708AC50C324 /* NSLock.hpp in Sources */ = {isa = PBXBuildFile; fileRef = B992DC56491BB2910C5C542A /* NSLock.hpp */; };
@@ -817,41 +817,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		CEB804092D46051600BD6E47 /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				CEB8040A2D46054700BD6E47 /* libmimalloc-debug.2.2.dylib in Copy vcpkg Dependencies */,
-				CEB8040B2D46054D00BD6E47 /* libfmtd.11.0.2.dylib in Copy vcpkg Dependencies */,
-				CEB8040C2D46055500BD6E47 /* libglfw.3.4.dylib in Copy vcpkg Dependencies */,
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEB8040D2D46055D00BD6E47 /* Copy vcpkg Dependencies */ = {
+		CEEE43762DEBB86A0002EBAC /* Copy vcpkg Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				CEB804112D46057E00BD6E47 /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */,
-				CEB8040F2D46057700BD6E47 /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */,
-				CEB804102D46057B00BD6E47 /* libglfw.3.4.dylib in Copy vcpkg Dependencies */,
+				CEEE43772DEBB8A20002EBAC /* libmimalloc-debug.2.2.dylib in Copy vcpkg Dependencies */,
+				CEEE43782DEBB8A70002EBAC /* libfmtd.11.0.2.dylib in Copy vcpkg Dependencies */,
+				CEEE43792DEBB8AC0002EBAC /* libglfw.3.4.dylib in Copy vcpkg Dependencies */,
 			);
 			name = "Copy vcpkg Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CEB804122D46058600BD6E47 /* Copy vcpkg Dependencies */ = {
+		CEEE437A2DEBB8B50002EBAC /* Copy vcpkg Dependencies */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				CEB804152D4605A700BD6E47 /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */,
-				CEB804132D46059F00BD6E47 /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */,
-				CEB804142D4605A200BD6E47 /* libglfw.3.4.dylib in Copy vcpkg Dependencies */,
+				CEEE437D2DEBB8D70002EBAC /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */,
+				CEEE437B2DEBB8CD0002EBAC /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */,
+				CEEE437C2DEBB8D40002EBAC /* libglfw.3.4.dylib in Copy vcpkg Dependencies */,
+			);
+			name = "Copy vcpkg Dependencies";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEEE437E2DEBB8E60002EBAC /* Copy vcpkg Dependencies */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				CEEE437F2DEBB8FA0002EBAC /* libmimalloc.2.2.dylib in Copy vcpkg Dependencies */,
+				CEEE43802DEBB8FF0002EBAC /* libfmt.11.0.2.dylib in Copy vcpkg Dependencies */,
+				CEEE43812DEBB9020002EBAC /* libglfw.3.4.dylib in Copy vcpkg Dependencies */,
 			);
 			name = "Copy vcpkg Dependencies";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -998,6 +998,15 @@
 		CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsMisc.cpp; path = src/Core/_platform/Windows/WindowsMisc.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E52D1FCE0D00EADB67 /* WindowsPlatformData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformData.cpp; path = src/Core/_platform/Windows/WindowsPlatformData.cpp; sourceTree = SOURCE_ROOT; };
+		CEEE43F82DEBD6C70002EBAC /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "Debug/libmimalloc-debug.2.2.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE43F92DEBD6C70002EBAC /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Debug/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE43FA2DEBD6C70002EBAC /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = Debug/libfmtd.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE43FE2DEBD6F30002EBAC /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Dev/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE43FF2DEBD6F30002EBAC /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = Dev/libmimalloc.2.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE44002DEBD6F30002EBAC /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Dev/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE44042DEBD70B0002EBAC /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Release/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE44052DEBD70B0002EBAC /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = Release/libmimalloc.2.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEEE44062DEBD70B0002EBAC /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Release/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFEDA1EF1814B77E716B69E5 /* MTLEvent.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLEvent.hpp; path = "vendor/metal-cpp/include/Metal/MTLEvent.hpp"; sourceTree = SOURCE_ROOT; };
 		D127A09EC2350155B1D03622 /* NSPrivate.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSPrivate.hpp; path = "vendor/metal-cpp/include/Foundation/NSPrivate.hpp"; sourceTree = SOURCE_ROOT; };
 		D2516071367DE42F073F77CD /* MTLResidencySet.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLResidencySet.hpp; path = "vendor/metal-cpp/include/Metal/MTLResidencySet.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1027,12 +1036,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE97435A2D45ED1700C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
+				CEEE44082DEBD70B0002EBAC /* libmimalloc.2.2.dylib in Frameworks */,
+				CEEE44092DEBD70B0002EBAC /* libfmt.11.0.2.dylib in Frameworks */,
+				CEEE44072DEBD70B0002EBAC /* libglfw.3.4.dylib in Frameworks */,
 				CE6FCE542DEAD1A0006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE552DEAD1A0006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE562DEAD1A0006C4B6D /* QuartzCore.framework in Frameworks */,
-				CEDB37932CFC166C00FC593F /* libfmt.11.0.2.dylib in Frameworks */,
-				CEDB37922CFC166C00FC593F /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1040,12 +1049,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6FCE622DEAD1F7006C4B6D /* libmimalloc.2.2.dylib in Frameworks */,
+				CEEE440C2DEBD77D0002EBAC /* libmimalloc.2.2.dylib in Frameworks */,
+				CEDB379A2CFC16CA00FC593F /* libfmt.a in Frameworks */,
+				CEDB379B2CFC16CA00FC593F /* libglfw3.a in Frameworks */,
 				CE6FCE5D2DEAD1AD006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE5E2DEAD1AD006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE5F2DEAD1AD006C4B6D /* QuartzCore.framework in Frameworks */,
-				CEDB379A2CFC16CA00FC593F /* libfmt.a in Frameworks */,
-				CEDB379B2CFC16CA00FC593F /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1053,12 +1062,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6FCE602DEAD1D4006C4B6D /* libmimalloc-debug.2.2.dylib in Frameworks */,
+				CEEE440A2DEBD7700002EBAC /* libmimalloc-debug.2.2.dylib in Frameworks */,
+				CEDB379F2CFC16E600FC593F /* libfmtd.a in Frameworks */,
+				CEDB379E2CFC16E600FC593F /* libglfw3.a in Frameworks */,
 				CE6FCE572DEAD1A5006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE582DEAD1A5006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE592DEAD1A5006C4B6D /* QuartzCore.framework in Frameworks */,
-				CEDB379F2CFC16E600FC593F /* libfmtd.a in Frameworks */,
-				CEDB379E2CFC16E600FC593F /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,12 +1075,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9743582D45ED0000C7D0F7 /* libmimalloc.2.2.dylib in Frameworks */,
+				CEEE44022DEBD6F30002EBAC /* libmimalloc.2.2.dylib in Frameworks */,
+				CEEE44012DEBD6F30002EBAC /* libfmt.11.0.2.dylib in Frameworks */,
+				CEEE44032DEBD6F40002EBAC /* libglfw.3.4.dylib in Frameworks */,
 				CE6FCE532DEAD188006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE522DEAD188006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE512DEAD188006C4B6D /* QuartzCore.framework in Frameworks */,
-				CE46BCDD2CFC336A002F900C /* libfmt.11.0.2.dylib in Frameworks */,
-				CE46BCDC2CFC336A002F900C /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1079,12 +1088,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6FCE612DEAD1EC006C4B6D /* libmimalloc.2.2.dylib in Frameworks */,
+				CEEE440B2DEBD7760002EBAC /* libmimalloc.2.2.dylib in Frameworks */,
+				CE46BCF22CFC3373002F900C /* libfmt.a in Frameworks */,
+				CE46BCF32CFC3373002F900C /* libglfw3.a in Frameworks */,
 				CE6FCE5A2DEAD1A9006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE5B2DEAD1A9006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE5C2DEAD1A9006C4B6D /* QuartzCore.framework in Frameworks */,
-				CE46BCF22CFC3373002F900C /* libfmt.a in Frameworks */,
-				CE46BCF32CFC3373002F900C /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1092,12 +1101,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE9743672D45F23300C7D0F7 /* libmimalloc-debug.2.2.dylib in Frameworks */,
+				CEEE43FB2DEBD6C70002EBAC /* libmimalloc-debug.2.2.dylib in Frameworks */,
+				CEEE43FD2DEBD6C80002EBAC /* libfmtd.11.0.2.dylib in Frameworks */,
+				CEEE43FC2DEBD6C70002EBAC /* libglfw.3.4.dylib in Frameworks */,
 				CE6FCE4C2DEAD140006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE4E2DEAD14A006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE502DEAD15B006C4B6D /* QuartzCore.framework in Frameworks */,
-				CE9743682D45F23900C7D0F7 /* libfmtd.11.0.2.dylib in Frameworks */,
-				CE9743692D45F23D00C7D0F7 /* libglfw.3.4.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1499,19 +1508,28 @@
 		CE4C6EDC2B01A9870015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEDB379D2CFC16E600FC593F /* libfmtd.a */,
+				CEDB37982CFC16CA00FC593F /* libfmt.a */,
+				CEDB379C2CFC16E600FC593F /* libglfw3.a */,
+				CEDB37992CFC16CA00FC593F /* libglfw3.a */,
+				CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */,
+				CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */,
+				CEEE43FA2DEBD6C70002EBAC /* libfmtd.11.0.2.dylib */,
+				CEEE43FE2DEBD6F30002EBAC /* libfmt.11.0.2.dylib */,
+				CEEE44062DEBD70B0002EBAC /* libfmt.11.0.2.dylib */,
+				CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */,
+				CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */,
+				CEEE43F92DEBD6C70002EBAC /* libglfw.3.4.dylib */,
+				CEEE44002DEBD6F30002EBAC /* libglfw.3.4.dylib */,
+				CEEE44042DEBD70B0002EBAC /* libglfw.3.4.dylib */,
+				CEEE44052DEBD70B0002EBAC /* libmimalloc.2.2.dylib */,
+				CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.2.dylib */,
+				CEEE43F82DEBD6C70002EBAC /* libmimalloc-debug.2.2.dylib */,
+				CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */,
+				CEEE43FF2DEBD6F30002EBAC /* libmimalloc.2.2.dylib */,
 				CE6FCE4B2DEAD140006C4B6D /* Foundation.framework */,
 				CE6FCE4D2DEAD14A006C4B6D /* Metal.framework */,
 				CE6FCE4F2DEAD15B006C4B6D /* QuartzCore.framework */,
-				CEDB37982CFC16CA00FC593F /* libfmt.a */,
-				CEDB379D2CFC16E600FC593F /* libfmtd.a */,
-				CEDB37992CFC16CA00FC593F /* libglfw3.a */,
-				CEDB379C2CFC16E600FC593F /* libglfw3.a */,
-				CEDB37912CFC166C00FC593F /* libfmt.11.0.2.dylib */,
-				CEDB37942CFC169B00FC593F /* libfmtd.11.0.2.dylib */,
-				CEDB37902CFC166C00FC593F /* libglfw.3.4.dylib */,
-				CEDB37952CFC169B00FC593F /* libglfw.3.4.dylib */,
-				CE9743542D45ECAA00C7D0F7 /* libmimalloc-debug.2.2.dylib */,
-				CE9743572D45ED0000C7D0F7 /* libmimalloc.2.2.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = SOURCE_ROOT;
@@ -1588,9 +1606,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2B9A492B018B8100DE24E0 /* Build configuration list for PBXNativeTarget "Engine" */;
 			buildPhases = (
+				CEEE437E2DEBB8E60002EBAC /* Copy vcpkg Dependencies */,
 				CE2B9A422B018B8100DE24E0 /* Sources */,
 				CE2B9A432B018B8100DE24E0 /* Frameworks */,
-				CEB804122D46058600BD6E47 /* Copy vcpkg Dependencies */,
 			);
 			buildRules = (
 			);
@@ -1637,9 +1655,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE46BCDE2CFC336A002F900C /* Build configuration list for PBXNativeTarget "EngineDev" */;
 			buildPhases = (
+				CEEE437A2DEBB8B50002EBAC /* Copy vcpkg Dependencies */,
 				CE46BCD52CFC336A002F900C /* Sources */,
 				CE46BCDB2CFC336A002F900C /* Frameworks */,
-				CEB8040D2D46055D00BD6E47 /* Copy vcpkg Dependencies */,
 			);
 			buildRules = (
 			);
@@ -1671,8 +1689,8 @@
 			buildConfigurationList = CED3D6822B12D3C800C5FB04 /* Build configuration list for PBXNativeTarget "EngineD" */;
 			buildPhases = (
 				CED3D67A2B12D3C800C5FB04 /* Sources */,
+				CEEE43762DEBB86A0002EBAC /* Copy vcpkg Dependencies */,
 				CED3D6802B12D3C800C5FB04 /* Frameworks */,
-				CEB804092D46051600BD6E47 /* Copy vcpkg Dependencies */,
 			);
 			buildRules = (
 			);
@@ -2631,10 +2649,7 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib";
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2654,10 +2669,7 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib";
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2679,10 +2691,7 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2704,10 +2713,7 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2765,10 +2771,7 @@
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -2788,10 +2791,7 @@
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib";
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
