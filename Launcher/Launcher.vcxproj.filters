@@ -28,7 +28,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\Win\AdHocEngine.ico">
+    <Image Include="resources\Win\AdHocEditor.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -155,7 +155,7 @@
     <ClInclude Include="resources\Win\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\Win\AdHocEngine.ico" />
+    <Image Include="resources\Win\AdHocEditor.ico" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="resources\Win\AdHocEngine.rc" />
