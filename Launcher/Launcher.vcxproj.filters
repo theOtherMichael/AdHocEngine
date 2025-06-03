@@ -23,17 +23,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resources\Win\resource.h">
+    <ClInclude Include="resources\Windows\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="resources\Win\AdHocEditor.ico">
+    <Image Include="resources\Windows\AdHocEditor.ico">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="resources\Win\AdHocEngine.rc">
+    <ResourceCompile Include="resources\Windows\AdHocEngine.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

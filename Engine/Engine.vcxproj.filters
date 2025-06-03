@@ -108,6 +108,15 @@
     <ClInclude Include="include\Engine\Window\WindowData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\Engine\Window\WindowIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Window\_platform\Windows\WindowsWindowIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Window\_platform\Mac\MacWindowIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp">
@@ -153,6 +162,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Window\WindowData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window\_platform\Windows\WindowsWindowIcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

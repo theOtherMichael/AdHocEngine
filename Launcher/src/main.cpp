@@ -8,6 +8,11 @@
 
 #include <string>
 
+#if ADHOC_WINDOWS
+#include <resource.h>
+static_assert(IDI_ICON1 == 101, "Engine and Editor layers assume IDI_ICON is 101!");
+#endif
+
 namespace Console = Engine::Console;
 using Console::LogLevel;
 

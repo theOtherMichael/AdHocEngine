@@ -324,6 +324,9 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClInclude Include="include\Engine\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.h" />
     <ClInclude Include="include\Engine\Window\Internal\GlfwLifetime.h" />
     <ClInclude Include="include\Engine\Window\WindowData.h" />
+    <ClInclude Include="include\Engine\Window\WindowIcon.h" />
+    <ClInclude Include="include\Engine\Window\_platform\Mac\MacWindowIcon.h" />
+    <ClInclude Include="include\Engine\Window\_platform\Windows\WindowsWindowIcon.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\_platform\Mac\MacPlatformData.cpp">
@@ -360,6 +363,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClCompile Include="src\Graphics\GraphicsContext.cpp" />
     <ClCompile Include="src\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.cpp" />
     <ClCompile Include="src\Window\WindowData.cpp" />
+    <ClCompile Include="src\Window\_platform\Windows\WindowsWindowIcon.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>

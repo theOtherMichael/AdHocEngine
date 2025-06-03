@@ -3,6 +3,6 @@
 namespace Engine::Mac
 {
 
-// Unused
+// Intentionally blank
 
 }

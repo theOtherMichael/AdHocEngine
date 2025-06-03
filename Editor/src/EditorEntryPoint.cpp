@@ -5,10 +5,12 @@
 #include <Engine/Core/Console.h>
 #include <Engine/Core/Misc.h>
 #include <Engine/Core/PlatformData.h>
+#include <Engine/Core/PlatformHelpers.h>
 #include <Engine/Graphics/D3D11GraphicsContext.h>
 #include <Engine/Graphics/GraphicsContext.h>
 #include <Engine/Window/Internal/GlfwLifetime.h>
 #include <Engine/Window/WindowData.h>
+#include <Engine/Window/WindowIcon.h>
 
 #include <Views/ConsoleView.h>
 
@@ -104,6 +106,10 @@ ReloadOption EditorMain(int argc, char* argv[])
 
     auto graphicsApiLifetime = Engine::Graphics::ApiLifetime{};
 
+#if ADHOC_WINDOWS
+    Engine::Window::Windows::SetWindowIconWithEmbeddedIconResource(mainWindowHandle, Windows::Resources::IDI_ICON1);
+#endif
+
     // TODO: Get current mode from persistent data, then from heuristic
 #if ADHOC_WINDOWS
     Engine::Graphics::SetApiMode(ApiMode::D3D11);
@@ -154,6 +160,6 @@ ReloadOption EditorMain(int argc, char* argv[])
     ImGui::DestroyContext();
 
     return ReloadOption{.isReloadRequested = false};
-} // namespace Editor
+}
 
 } // namespace Editor
