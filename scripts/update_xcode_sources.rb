@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This script can be used to manually update the /src and /include groups in the Xcode projects.
-# Use it habitually before commiting changes that involve adding, removing, or moving files and folders.
+# Use it habitually before committing changes that involve adding, removing, or moving files and folders.
 
 require 'xcodeproj'
 require 'fileutils'
