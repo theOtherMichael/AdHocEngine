@@ -1,4 +1,4 @@
-#include <Editor/Core/Internal/EditorEntryPoint.h>
+#include <Editor/Core/Internal/EditorMain.h>
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/BacktraceSymbolHandler.h>

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\EditorEntryPoint.cpp">
+    <ClCompile Include="src\EditorMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\EditorState.cpp">
@@ -71,7 +71,7 @@
     <ClInclude Include="include\Editor\Core\EditorState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h">
+    <ClInclude Include="include\Editor\Core\Internal\EditorMain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Views\ConsoleView.h">

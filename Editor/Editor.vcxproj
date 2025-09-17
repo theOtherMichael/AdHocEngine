@@ -162,7 +162,7 @@
   <ItemGroup>
     <ClCompile Include="src\Core\EditorConfigurationMode.cpp" />
     <ClCompile Include="src\Core\EditorState.cpp" />
-    <ClCompile Include="src\EditorEntryPoint.cpp" />
+    <ClCompile Include="src\EditorMain.cpp" />
     <ClCompile Include="src\Views\ConsoleView.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
@@ -184,7 +184,7 @@
   <ItemGroup>
     <ClInclude Include="include\Editor\Core\EditorConfigurationMode.h" />
     <ClInclude Include="include\Editor\Core\EditorState.h" />
-    <ClInclude Include="include\Editor\Core\Internal\EditorEntryPoint.h" />
+    <ClInclude Include="include\Editor\Core\Internal\EditorMain.h" />
     <ClInclude Include="include\Editor\Core\SymbolExportMacros.h" />
     <ClInclude Include="include\imuserconfig.h" />
     <ClInclude Include="src\Views\ConsoleView.h" />

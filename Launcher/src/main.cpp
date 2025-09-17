@@ -1,6 +1,6 @@
 #include <Editor/Core/EditorConfigurationMode.h>
 #include <Editor/Core/EditorState.h>
-#include <Editor/Core/Internal/EditorEntryPoint.h>
+#include <Editor/Core/Internal/EditorMain.h>
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 
