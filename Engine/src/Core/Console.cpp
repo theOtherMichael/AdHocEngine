@@ -67,12 +67,23 @@ std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel)
 {
     switch (logLevel)
     {
-    case LogLevel::Fatal: os << "Fatal"; break;
-    case LogLevel::Error: os << "Error"; break;
-    case LogLevel::Warning: os << "Warning"; break;
-    case LogLevel::Log: os << "Log"; break;
-    case LogLevel::Trace: os << "Trace"; break;
-    default: Assert_NoEntry();
+    case LogLevel::Fatal:
+        os << "Fatal";
+        break;
+    case LogLevel::Error:
+        os << "Error";
+        break;
+    case LogLevel::Warning:
+        os << "Warning";
+        break;
+    case LogLevel::Log:
+        os << "Log";
+        break;
+    case LogLevel::Trace:
+        os << "Trace";
+        break;
+    default:
+        Assert_NoEntry();
     }
 
     return os;
@@ -87,12 +98,24 @@ auto fmt::formatter<::Engine::Console::LogLevel>::format(::Engine::Console::LogL
 
     switch (logLevel)
     {
-    case ::Engine::Console::LogLevel::Fatal: name = "Fatal"; break;
-    case ::Engine::Console::LogLevel::Error: name = "Error"; break;
-    case ::Engine::Console::LogLevel::Warning: name = "Warning"; break;
-    case ::Engine::Console::LogLevel::Log: name = "Log"; break;
-    case ::Engine::Console::LogLevel::Trace: name = "Trace"; break;
-    default: Assert_NoEntry(); break;
+    case ::Engine::Console::LogLevel::Fatal:
+        name = "Fatal";
+        break;
+    case ::Engine::Console::LogLevel::Error:
+        name = "Error";
+        break;
+    case ::Engine::Console::LogLevel::Warning:
+        name = "Warning";
+        break;
+    case ::Engine::Console::LogLevel::Log:
+        name = "Log";
+        break;
+    case ::Engine::Console::LogLevel::Trace:
+        name = "Trace";
+        break;
+    default:
+        Assert_NoEntry();
+        break;
     }
 
     return formatter<string_view>::format(name, ctx);

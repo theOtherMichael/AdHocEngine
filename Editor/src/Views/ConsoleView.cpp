@@ -21,6 +21,7 @@ struct ConsoleEntry
     LogLevel logLevel;
 
     ConsoleEntry() = default;
+
     explicit ConsoleEntry(std::string&& message, const LogLevel logLevel) : message(message), logLevel(logLevel) {}
 };
 
@@ -38,10 +39,18 @@ static ImVec4 ColorOfLogLevel(LogLevel logLevel)
 
     switch (logLevel)
     {
-    case Engine::Console::LogLevel::Fatal: return {1.0f, 0.4f, 0.4f, 1.0f}; break;
-    case Engine::Console::LogLevel::Error: return {1.0f, 0.4f, 0.4f, 1.0f}; break;
-    case Engine::Console::LogLevel::Warning: return {1.0f, 1.0f, 0.4f, 1.0f}; break;
-    case Engine::Console::LogLevel::Log: return defaultTextColor; break;
+    case Engine::Console::LogLevel::Fatal:
+        return {1.0f, 0.4f, 0.4f, 1.0f};
+        break;
+    case Engine::Console::LogLevel::Error:
+        return {1.0f, 0.4f, 0.4f, 1.0f};
+        break;
+    case Engine::Console::LogLevel::Warning:
+        return {1.0f, 1.0f, 0.4f, 1.0f};
+        break;
+    case Engine::Console::LogLevel::Log:
+        return defaultTextColor;
+        break;
     case Engine::Console::LogLevel::Trace:
         Assert_NoEntry();
         return {};

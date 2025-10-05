@@ -7,6 +7,7 @@
 // clang-format on
 
 #define STRINGIFY_IMPLEMENTATION(macro) #macro
+
 #define STRINGIFY(macro) STRINGIFY_IMPLEMENTATION(macro)
 
 /// Create a bit field with the nth bit set

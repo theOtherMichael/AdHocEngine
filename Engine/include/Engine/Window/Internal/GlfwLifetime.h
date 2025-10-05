@@ -14,9 +14,11 @@ class GlfwLifetime
 {
 public:
     GlfwLifetime() { AssertEval_Eq(glfwInit(), GLFW_TRUE); }
+
     GlfwLifetime(const GlfwLifetime&)            = delete;
     GlfwLifetime& operator=(const GlfwLifetime&) = delete;
+
     ~GlfwLifetime() { glfwTerminate(); }
 };
 
-} // namespace Engine::Window
+} // namespace Engine::Window::Internal

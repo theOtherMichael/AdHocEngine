@@ -17,6 +17,7 @@ namespace Engine::Window::Windows
 // Windows helper types
 
 #pragma pack(push, 1)
+
 struct ICONDIR
 {
     WORD idReserved;
@@ -35,6 +36,7 @@ struct ICONDIRENTRY
     DWORD dwBytesInRes;
     DWORD dwImageOffset;
 };
+
 #pragma pack(pop)
 
 // RAII helper types

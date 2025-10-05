@@ -12,9 +12,11 @@ const MacPlatformData& MacPlatformData::GetInstance()
     return GetMutablePlatformData();
 }
 
-MacPlatformData::~MacPlatformData() {}
+MacPlatformData::~MacPlatformData()
+{}
 
-void InitializeProcessInfo() {}
+void InitializeProcessInfo()
+{}
 
 MacPlatformData& GetMutablePlatformData()
 {

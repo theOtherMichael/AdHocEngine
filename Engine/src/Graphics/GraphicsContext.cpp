@@ -2,8 +2,8 @@
 
 #include <Engine/Common/ThreadSafeViews.h>
 #include <Engine/Core/Assertions.h>
-#include <Engine/Graphics/_platform/Base/BaseGraphicsContext.h>
 #include <Engine/Graphics/D3D11GraphicsContext.h>
+#include <Engine/Graphics/_platform/Base/BaseGraphicsContext.h>
 
 #include <memory>
 #include <shared_mutex>
@@ -22,8 +22,12 @@ bool SetApiMode(ApiMode apiMode)
     case Engine::Graphics::ApiMode::None:
         Console::LogError("Setting API mode to \"None\" is not allowed!");
         return false;
-    case Engine::Graphics::ApiMode::OpenGl: Console::LogError("Not yet implemented!"); return false;
-    case Engine::Graphics::ApiMode::Vulkan: Console::LogError("Not yet implemented!"); return false;
+    case Engine::Graphics::ApiMode::OpenGl:
+        Console::LogError("Not yet implemented!");
+        return false;
+    case Engine::Graphics::ApiMode::Vulkan:
+        Console::LogError("Not yet implemented!");
+        return false;
     case Engine::Graphics::ApiMode::D3D11:
     {
 #if ADHOC_WINDOWS
@@ -44,8 +48,12 @@ bool SetApiMode(ApiMode apiMode)
         return false;
 #endif
 
-    case Engine::Graphics::ApiMode::Metal: Console::LogError("Not yet implemented!"); return false;
-    default: Assert_NoEntry(); break;
+    case Engine::Graphics::ApiMode::Metal:
+        Console::LogError("Not yet implemented!");
+        return false;
+    default:
+        Assert_NoEntry();
+        break;
     }
 
     currentApiMode = apiMode;

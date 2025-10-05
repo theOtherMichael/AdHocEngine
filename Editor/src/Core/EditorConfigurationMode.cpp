@@ -13,10 +13,17 @@ std::ostream& operator<<(std::ostream& os, const ConfigurationMode& configMode)
 {
     switch (configMode)
     {
-    case ConfigurationMode::Debug: os << "Debug"; break;
-    case ConfigurationMode::Dev: os << "Dev"; break;
-    case ConfigurationMode::Release: os << "Release"; break;
-    default: Assert_NoEntry();
+    case ConfigurationMode::Debug:
+        os << "Debug";
+        break;
+    case ConfigurationMode::Dev:
+        os << "Dev";
+        break;
+    case ConfigurationMode::Release:
+        os << "Release";
+        break;
+    default:
+        Assert_NoEntry();
     }
 
     return os;
@@ -31,10 +38,17 @@ auto fmt::formatter<::Editor::ConfigurationMode>::format(::Editor::Configuration
 
     switch (configMode)
     {
-    case ::Editor::ConfigurationMode::Debug: name = "Debug"; break;
-    case ::Editor::ConfigurationMode::Dev: name = "Dev"; break;
-    case ::Editor::ConfigurationMode::Release: name = "Release"; break;
-    default: Assert_NoEntry();
+    case ::Editor::ConfigurationMode::Debug:
+        name = "Debug";
+        break;
+    case ::Editor::ConfigurationMode::Dev:
+        name = "Dev";
+        break;
+    case ::Editor::ConfigurationMode::Release:
+        name = "Release";
+        break;
+    default:
+        Assert_NoEntry();
     }
 
     return formatter<string_view>::format(name, ctx);

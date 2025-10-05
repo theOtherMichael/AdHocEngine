@@ -132,7 +132,7 @@ ReloadOption EditorMain(int argc, char* argv[])
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
-    io.IniFilename = imguiIniFilePathAsStr.c_str();
+    io.IniFilename  = imguiIniFilePathAsStr.c_str();
 
     {
 // TODO: Handle other backends

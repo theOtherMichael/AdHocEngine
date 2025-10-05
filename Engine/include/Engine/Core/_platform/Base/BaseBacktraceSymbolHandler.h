@@ -13,7 +13,7 @@ public:
     BaseBacktraceSymbolHandler(const BaseBacktraceSymbolHandler& other)            = delete;
     BaseBacktraceSymbolHandler& operator=(const BaseBacktraceSymbolHandler& other) = delete;
 
-    virtual ~BaseBacktraceSymbolHandler(){};
+    virtual ~BaseBacktraceSymbolHandler() {};
 };
 
 } // namespace Engine

@@ -22,17 +22,17 @@
 #endif
 
 #if ADHOC_DEBUG
-    #define ADHOC_ASSERTIONS_ON 1
+    #define ADHOC_ASSERTIONS_ON      1
     #define ADHOC_SLOW_ASSERTIONS_ON 1
 #endif
 
 #if ADHOC_DEV
-    #define ADHOC_ASSERTIONS_ON 1
+    #define ADHOC_ASSERTIONS_ON      1
     #define ADHOC_SLOW_ASSERTIONS_ON 0
 #endif
 
 #if ADHOC_RELEASE
-    #define ADHOC_ASSERTIONS_ON 0
+    #define ADHOC_ASSERTIONS_ON      0
     #define ADHOC_SLOW_ASSERTIONS_ON 0
 #endif
 
@@ -154,28 +154,28 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 // Non-fmt versions
 
-    #define Assert_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define Assert_Null(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
     #define Assert_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
 
-    #define Expect_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define Expect_Null(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
     #define Expect_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
 
-    #define AssertEval_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define AssertEval_Null(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
     #define AssertEval_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
 
-    #define ExpectEval_Null(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define ExpectEval_Null(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
     #define ExpectEval_NotNull(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
 
-    #define Assert_True(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
+    #define Assert_True(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
     #define Assert_False(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, "")
 
-    #define Expect_True(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
+    #define Expect_True(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
     #define Expect_False(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, "")
 
-    #define AssertEval_True(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
+    #define AssertEval_True(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
     #define AssertEval_False(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, "")
 
-    #define ExpectEval_True(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
+    #define ExpectEval_True(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
     #define ExpectEval_False(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, "")
 
     #define Assert_Eq(lhs, rhs) ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, ==, "")
@@ -218,10 +218,10 @@ ENGINE_API void TriggerFatalErrorResponse();
     #define ExpectEval_Ge(lhs_evaluated, rhs_discarded)                                                                \
         ADHOC_ASSERT_IMPLEMENTATION_BINARY(false, lhs_evaluated, rhs_discarded, >=, "")
 
-    #define Assert_NoEntry() ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(true, "Call to Assert_NoEntry()", "")
+    #define Assert_NoEntry()   ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(true, "Call to Assert_NoEntry()", "")
     #define Assert_NoReentry() ADHOC_ASSERT_IMPLEMENTATION_NO_REENTRY(true, "Call to Assert_NoReentry()", "")
 
-    #define Expect_NoEntry() ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(false, "Call to Assert_NoEntry()", "")
+    #define Expect_NoEntry()   ADHOC_ASSERT_IMPLEMENTATION_NO_ENTRY(false, "Call to Assert_NoEntry()", "")
     #define Expect_NoReentry() ADHOC_ASSERT_IMPLEMENTATION_NO_REENTRY(false, "Call to Assert_NoReentry()", "")
 
 // Fmt versions
@@ -469,28 +469,28 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 // Non-fmt versions
 
-    #define Assert_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define Assert_Null_Slow(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
     #define Assert_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
 
-    #define Expect_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define Expect_Null_Slow(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
     #define Expect_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
 
-    #define AssertEval_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
+    #define AssertEval_Null_Slow(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, true, "")
     #define AssertEval_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(true, pointer, false, "")
 
-    #define ExpectEval_Null_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
+    #define ExpectEval_Null_Slow(pointer)    ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, true, "")
     #define ExpectEval_NotNull_Slow(pointer) ADHOC_ASSERT_IMPLEMENTATION_NULL(false, pointer, false, "")
 
-    #define Assert_True_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
+    #define Assert_True_Slow(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
     #define Assert_False_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, "")
 
-    #define Expect_True_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
+    #define Expect_True_Slow(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
     #define Expect_False_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, "")
 
-    #define AssertEval_True_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
+    #define AssertEval_True_Slow(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, true, "")
     #define AssertEval_False_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(true, expression, false, "")
 
-    #define ExpectEval_True_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
+    #define ExpectEval_True_Slow(expression)  ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, true, "")
     #define ExpectEval_False_Slow(expression) ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(false, expression, false, "")
 
     #define Assert_Eq_Slow(lhs, rhs) ADHOC_ASSERT_IMPLEMENTATION_BINARY(true, lhs, rhs, ==, "")

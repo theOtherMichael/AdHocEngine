@@ -28,6 +28,7 @@ class LogStream
 {
 public:
     LogStream(LogEventCallback callback) : LogStream(LogLevel::Log, callback) {}
+
     ENGINE_API LogStream(LogLevel verbosity, LogEventCallback callback);
 
     LogStream(const LogStream&)            = delete;

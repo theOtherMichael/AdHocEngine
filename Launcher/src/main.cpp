@@ -9,7 +9,7 @@
 #include <string>
 
 #if ADHOC_WINDOWS
-#include <resource.h>
+    #include <resource.h>
 static_assert(IDI_ICON1 == 101, "Engine and Editor layers assume IDI_ICON is 101!");
 #endif
 
@@ -20,12 +20,21 @@ static void OnEngineLogEvent(const LogLevel logLevel, const std::string& message
 {
     switch (logLevel)
     {
-    case LogLevel::Fatal: [[fallthrough]];
-    case LogLevel::Error: [[fallthrough]];
-    case LogLevel::Warning: fmt::println(stderr, "[{}] {}", logLevel, message); break;
-    case LogLevel::Log: [[fallthrough]];
-    case LogLevel::Trace: fmt::println("[{}] {}", logLevel, message); break;
-    default: Assert_NoEntry(); break;
+    case LogLevel::Fatal:
+        [[fallthrough]];
+    case LogLevel::Error:
+        [[fallthrough]];
+    case LogLevel::Warning:
+        fmt::println(stderr, "[{}] {}", logLevel, message);
+        break;
+    case LogLevel::Log:
+        [[fallthrough]];
+    case LogLevel::Trace:
+        fmt::println("[{}] {}", logLevel, message);
+        break;
+    default:
+        Assert_NoEntry();
+        break;
     }
 }
 

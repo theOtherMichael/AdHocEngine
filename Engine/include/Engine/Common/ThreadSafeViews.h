@@ -18,6 +18,7 @@ public:
     explicit ThreadSafeSharedView(std::shared_mutex& mutex, const T& value) : lock(mutex), value(value) {}
 
     const T& operator*() const { return value; }
+
     const T* operator->() const { return &value; }
 
 private:
@@ -33,6 +34,7 @@ public:
     explicit ThreadSafeExclusiveView(std::shared_mutex& mutex, T& value) : lock(mutex), value(value) {}
 
     T& operator*() const { return value; }
+
     T* operator->() const { return &value; }
 
 private:
@@ -66,6 +68,7 @@ public:
         EnsureLocked();
         return value;
     }
+
     const T* operator->() const
     {
         EnsureLocked();
@@ -114,6 +117,7 @@ public:
         EnsureLocked();
         return value;
     }
+
     T* operator->()
     {
         EnsureLocked();
