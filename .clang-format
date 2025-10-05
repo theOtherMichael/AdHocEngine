@@ -1,34 +1,54 @@
 ---
 BasedOnStyle: Microsoft
 AccessModifierOffset: -4
-AlignConsecutiveAssignments: Consecutive
-AllowShortEnumsOnASingleLine: true
+AlignArrayOfStructures: Left
+AlignConsecutiveAssignments:
+  Enabled: true
+  AlignCompound: true
+AlignConsecutiveBitFields:
+  Enabled: true
+AlignConsecutiveMacros:
+  Enabled: true
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AlignCaseArrows: true
 AllowShortBlocksOnASingleLine: Always
-AllowShortCaseLabelsOnASingleLine: true
-AllowShortFunctionsOnASingleLine: Inline
-AlwaysBreakBeforeMultilineStrings: true
-AlwaysBreakTemplateDeclarations: Yes
+AllowShortFunctionsOnASingleLine: InlineOnly
 BinPackArguments: false
 BinPackParameters: false
 BraceWrapping:
   AfterCaseLabel: true
+  AfterClass: true
+  AfterControlStatement: Always
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: true
   AfterObjCDeclaration: true
+  AfterStruct: true
   AfterUnion: true
+  AfterExternBlock: true
+  BeforeCatch: true
+  BeforeElse: true
   BeforeLambdaBody: true
+  BeforeWhile: false
+  IndentBraces: false
   SplitEmptyFunction: false
   SplitEmptyRecord: false
-ColumnLimit: 120
-EmptyLineBeforeAccessModifier: Always
-PackConstructorInitializers: NextLine
-IncludeBlocks: Preserve
+  SplitEmptyNamespace: false
+BreakTemplateDeclarations: Yes
+IndentGotoLabels: false
 IndentPPDirectives: BeforeHash
-KeepEmptyLinesAtTheStartOfBlocks: false
-ObjCBlockIndentWidth: 4
+InsertNewlineAtEOF: true
+KeepEmptyLines:
+  AtStartOfBlock: false
 ObjCBinPackProtocolList: Never
+ObjCBlockIndentWidth: 4
+PackConstructorInitializers: NextLine
 PenaltyBreakBeforeFirstCallParameter: 0
 PenaltyExcessCharacter: 200
 PenaltyReturnTypeOnItsOwnLine: 1000000
 PointerAlignment: Left
-SortIncludes: CaseInsensitive
-SortUsingDeclarations: false
+SeparateDefinitionBlocks: Always
 Standard: c++20
+AlwaysBreakTemplateDeclarations: Yes
+KeepEmptyLinesAtTheStartOfBlocks: false
