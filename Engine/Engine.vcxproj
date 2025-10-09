@@ -139,7 +139,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=1;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -167,7 +167,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\b
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=0;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=0;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -189,7 +189,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\b
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -221,7 +221,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -245,7 +245,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -277,7 +277,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MACOS=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

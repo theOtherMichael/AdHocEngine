@@ -15,7 +15,7 @@
     #define ASSERT_PLATFORM_WINDOWS static_assert(false, "This file can only be compiled on Windows! " __FILE__)
 #endif
 
-#if ADHOC_MACOS
+#if ADHOC_MAC
     #define ASSERT_PLATFORM_MACOS static_assert(true, "This file can only be compiled on macOS, and it is!")
 #else
     #define ASSERT_PLATFORM_MACOS static_assert(false, "This file can only be compiled on macOS! " __FILE__)

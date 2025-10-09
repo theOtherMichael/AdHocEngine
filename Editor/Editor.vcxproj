@@ -83,7 +83,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -110,7 +110,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,7 +139,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MACOS=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

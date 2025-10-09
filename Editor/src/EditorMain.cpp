@@ -23,7 +23,7 @@
 #if ADHOC_WINDOWS
     #include <backends/imgui_impl_dx11.h>
 #endif
-#if ADHOC_MACOS
+#if ADHOC_MAC
     #include <backends/imgui_impl_metal.h>
 #endif
 #include <backends/imgui_impl_glfw.h>
@@ -113,7 +113,7 @@ ReloadOption EditorMain(int argc, char* argv[])
     // TODO: Get current mode from persistent data, then from heuristic
 #if ADHOC_WINDOWS
     Engine::Graphics::SetApiMode(ApiMode::D3D11);
-#elif ADHOC_MACOS
+#elif ADHOC_MAC
     Engine::Graphics::SetApiMode(ApiMode::Metal);
 #else
     Assert_NoEntry();
@@ -136,7 +136,7 @@ ReloadOption EditorMain(int argc, char* argv[])
 
     {
 // TODO: Handle other backends
-#if ADHOC_MACOS
+#if ADHOC_MAC
         // Metal goes here (for now)
 #elif ADHOC_WINDOWS
         auto dx11Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3D11GraphicsContext>();
