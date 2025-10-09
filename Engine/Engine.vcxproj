@@ -301,7 +301,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClInclude Include="include\Engine\Core\Misc.h" />
     <ClInclude Include="include\Engine\Core\MiscMacros.h" />
     <ClInclude Include="include\Engine\Core\PlatformAbstraction.h" />
-    <ClInclude Include="include\Engine\Core\PlatformData.h" />
+    <ClInclude Include="include\Engine\Core\RuntimeState.h" />
     <ClInclude Include="include\Engine\Core\PlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\_platform\Base\BaseBacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\_platform\Base\BaseDynamicLibrary.h" />
@@ -309,12 +309,12 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacBacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacDynamicLibrary.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformData.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Mac\MacRuntimeState.h" />
     <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsBacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsDynamicLibrary.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsMisc.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformData.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsRuntimeState.h" />
     <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\SymbolExportMacros.h" />
     <ClInclude Include="include\Engine\Graphics\D3D11GraphicsContext.h" />
@@ -323,13 +323,13 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClInclude Include="include\Engine\Graphics\_platform\Mac\MacD3D11GraphicsContext.h" />
     <ClInclude Include="include\Engine\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.h" />
     <ClInclude Include="include\Engine\Window\Internal\GlfwLifetime.h" />
-    <ClInclude Include="include\Engine\Window\WindowData.h" />
+    <ClInclude Include="include\Engine\Window\WindowState.h" />
     <ClInclude Include="include\Engine\Window\WindowIcon.h" />
     <ClInclude Include="include\Engine\Window\_platform\Mac\MacWindowIcon.h" />
     <ClInclude Include="include\Engine\Window\_platform\Windows\WindowsWindowIcon.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\_platform\Mac\MacPlatformData.cpp">
+    <ClCompile Include="src\Core\_platform\Mac\MacRuntimeState.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">true</ExcludedFromBuild>
@@ -358,11 +358,11 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     </ClCompile>
     <ClCompile Include="src\Core\_platform\Windows\WindowsDynamicLibrary.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsMisc.cpp" />
-    <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformData.cpp" />
+    <ClCompile Include="src\Core\_platform\Windows\WindowsRuntimeState.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />
     <ClCompile Include="src\Graphics\GraphicsContext.cpp" />
     <ClCompile Include="src\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.cpp" />
-    <ClCompile Include="src\Window\WindowData.cpp" />
+    <ClCompile Include="src\Window\WindowState.cpp" />
     <ClCompile Include="src\Window\_platform\Windows\WindowsWindowIcon.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />

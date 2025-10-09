@@ -10,22 +10,22 @@
 namespace Engine::Window
 {
 
-struct ENGINE_API WindowData
+struct ENGINE_API WindowState
 {
 public:
     GLFWwindow* mainWindowHandle;
 
-    static const WindowData& GetInstance();
+    static const WindowState& GetInstance();
 
-    WindowData() = default;
-    ~WindowData();
+    WindowState() = default;
+    ~WindowState();
 
-    WindowData(const WindowData&)            = delete;
-    WindowData& operator=(const WindowData&) = delete;
+    WindowState(const WindowState&)            = delete;
+    WindowState& operator=(const WindowState&) = delete;
 };
 
 #if ADHOC_INTERNAL
-ENGINE_API WindowData& GetMutableWindowData();
+ENGINE_API WindowState& GetMutableWindowState();
 #endif
 
 } // namespace Engine::Window

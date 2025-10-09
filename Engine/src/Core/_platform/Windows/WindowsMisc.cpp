@@ -2,7 +2,7 @@
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
-#include <Engine/Core/PlatformData.h>
+#include <Engine/Core/RuntimeState.h>
 #include <Engine/Core/PlatformHelpers.h>
 
 #include <fmt/format.h>
@@ -41,7 +41,7 @@ std::string GetBacktrace()
     symbol->MaxNameLen   = 255;
     symbol->SizeOfStruct = sizeof(SYMBOL_INFO);
 
-    const auto& platformData = PlatformData::GetInstance();
+    const auto& platformData = RuntimeState::GetInstance();
 
     auto output = std::ostringstream{};
     for (auto i = 0; i < frames; ++i)

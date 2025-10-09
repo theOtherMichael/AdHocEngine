@@ -2,7 +2,7 @@
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
-#include <Engine/Core/PlatformData.h>
+#include <Engine/Core/RuntimeState.h>
 #include <Engine/Core/PlatformHelpers.h>
 
 #include <DbgHelp.h>
@@ -21,7 +21,7 @@ namespace Engine
 
 WindowsBacktraceSymbolHandler::WindowsBacktraceSymbolHandler()
 {
-    const auto& platformData = Engine::PlatformData::GetInstance();
+    const auto& platformData = Engine::RuntimeState::GetInstance();
 
     Console::Log("Initializing symbol handler...");
 
@@ -36,7 +36,7 @@ WindowsBacktraceSymbolHandler::WindowsBacktraceSymbolHandler()
 
 WindowsBacktraceSymbolHandler::~WindowsBacktraceSymbolHandler()
 {
-    const auto& platformData = Engine::PlatformData::GetInstance();
+    const auto& platformData = Engine::RuntimeState::GetInstance();
 
     Console::Log("Cleaning up symbol handler...");
 

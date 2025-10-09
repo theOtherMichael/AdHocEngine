@@ -4,12 +4,12 @@
 #include <Engine/Core/BacktraceSymbolHandler.h>
 #include <Engine/Core/Console.h>
 #include <Engine/Core/Misc.h>
-#include <Engine/Core/PlatformData.h>
+#include <Engine/Core/RuntimeState.h>
 #include <Engine/Core/PlatformHelpers.h>
 #include <Engine/Graphics/D3D11GraphicsContext.h>
 #include <Engine/Graphics/GraphicsContext.h>
 #include <Engine/Window/Internal/GlfwLifetime.h>
-#include <Engine/Window/WindowData.h>
+#include <Engine/Window/WindowState.h>
 #include <Engine/Window/WindowIcon.h>
 
 #include <Views/ConsoleView.h>
@@ -102,7 +102,7 @@ ReloadOption EditorMain(int argc, char* argv[])
     glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
     GLFWwindow* mainWindowHandle = glfwCreateWindow(1024, 768, "Window Title", nullptr, nullptr);
     Assert_NotNull(mainWindowHandle);
-    Engine::Window::GetMutableWindowData().mainWindowHandle = mainWindowHandle;
+    Engine::Window::GetMutableWindowState().mainWindowHandle = mainWindowHandle;
 
     auto graphicsApiLifetime = Engine::Graphics::ApiLifetime{};
 

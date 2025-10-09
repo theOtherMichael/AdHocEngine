@@ -1,4 +1,4 @@
 #pragma once
 
 #include <Engine/Core/PlatformAbstraction.h>
-#include PLATFORM_HEADER(PlatformData.h)
+#include PLATFORM_HEADER(RuntimeState.h)

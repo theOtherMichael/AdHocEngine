@@ -2,8 +2,8 @@
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
-#include <Engine/Core/PlatformData.h>
-#include <Engine/Window/WindowData.h>
+#include <Engine/Core/RuntimeState.h>
+#include <Engine/Window/WindowState.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
@@ -38,7 +38,7 @@ void WindowsD3D11GraphicsContext::Present() const
 
 WindowsD3D11GraphicsContext::WindowsD3D11GraphicsContext()
 {
-    auto nativeWindowHandle = glfwGetWin32Window(Window::WindowData::GetInstance().mainWindowHandle);
+    auto nativeWindowHandle = glfwGetWin32Window(Window::WindowState::GetInstance().mainWindowHandle);
 
     DXGI_SWAP_CHAIN_DESC sd{};
     sd.BufferCount                        = 2;

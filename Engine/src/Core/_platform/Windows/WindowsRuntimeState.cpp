@@ -1,4 +1,4 @@
-#include <Engine/Core/_platform/Windows/WindowsPlatformData.h>
+#include <Engine/Core/_platform/Windows/WindowsRuntimeState.h>
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
@@ -18,12 +18,12 @@ ASSERT_PLATFORM_WINDOWS;
 namespace Engine
 {
 
-const WindowsPlatformData& WindowsPlatformData::GetInstance()
+const WindowsRuntimeState& WindowsRuntimeState::GetInstance()
 {
-    return GetMutablePlatformData();
+    return GetMutableRuntimeState();
 }
 
-WindowsPlatformData::~WindowsPlatformData()
+WindowsRuntimeState::~WindowsRuntimeState()
 {
     if (processHandle == NULL)
         return;
@@ -40,7 +40,7 @@ WindowsPlatformData::~WindowsPlatformData()
 
 void InitializeProcessInfo()
 {
-    auto& data = GetMutablePlatformData();
+    auto& data = GetMutableRuntimeState();
 
     Console::Log("Acquiring application process handle...");
 
@@ -51,9 +51,9 @@ void InitializeProcessInfo()
     }
 }
 
-WindowsPlatformData& GetMutablePlatformData()
+WindowsRuntimeState& GetMutableRuntimeState()
 {
-    static WindowsPlatformData instance;
+    static WindowsRuntimeState instance;
     return instance;
 }
 
