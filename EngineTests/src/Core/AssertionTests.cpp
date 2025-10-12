@@ -133,7 +133,7 @@ TEST(AssertionDeathTest, FailingAssertsTriggerCrash)
 
 TEST(AssertionTest, PassingExpectsDontLog)
 {
-    auto lastErrorLog = std::string();
+    auto lastErrorLog = std::string{};
     auto errorStream  = Console::LogStream(Console::LogLevel::Error,
                                           [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
                                           { lastErrorLog = message; });
@@ -206,7 +206,7 @@ TEST(AssertionTest, PassingExpectsDontLog)
 #if ADHOC_ASSERTIONS_ON
 TEST(AssertionTest, FailingExpectsLogErrors)
 {
-    auto lastErrorLog = std::string();
+    auto lastErrorLog = std::string{};
     auto errorStream  = Console::LogStream(Console::LogLevel::Error,
                                           [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
                                           { lastErrorLog = message; });

@@ -72,7 +72,7 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 #define ADHOC_ASSERT_IMPLEMENTATION_NULL(isFatal, expression, expectedNull, fmtMessage)                                \
     {                                                                                                                  \
-        decltype(expression) expressionResult = expression;                                                            \
+        auto expressionResult = expression;                                                                            \
         if (expectedNull && expressionResult != nullptr || !expectedNull && expressionResult == nullptr)               \
         {                                                                                                              \
             ::Engine::Internal::LogNullAssertionFailure(                                                               \
@@ -87,7 +87,7 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 #define ADHOC_ASSERT_IMPLEMENTATION_BOOLEAN(isFatal, expression, expected, fmtMessage)                                 \
     {                                                                                                                  \
-        decltype(expression) expressionResult = expression;                                                            \
+        auto expressionResult = expression;                                                                            \
         if (expressionResult != expected)                                                                              \
         {                                                                                                              \
             ::Engine::Internal::LogBooleanAssertionFailure(isFatal,                                                    \
@@ -106,8 +106,8 @@ ENGINE_API void TriggerFatalErrorResponse();
 
 #define ADHOC_ASSERT_IMPLEMENTATION_BINARY(isFatal, leftExpression, rightExpression, operation, fmtMessage)            \
     {                                                                                                                  \
-        decltype(leftExpression) leftExpressionResult   = leftExpression;                                              \
-        decltype(rightExpression) rightExpressionResult = rightExpression;                                             \
+        auto leftExpressionResult  = leftExpression;                                                                   \
+        auto rightExpressionResult = rightExpression;                                                                  \
                                                                                                                        \
         auto leftExpressionResultString  = fmt::format("{}", leftExpressionResult);                                    \
         auto rightExpressionResultString = fmt::format("{}", rightExpressionResult);                                   \
