@@ -1,4 +1,4 @@
-#include <Engine/Core/_platform/Mac/MacMisc.h>
+#include "MacMisc.h"
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
@@ -13,35 +13,19 @@
 #include <sstream>
 #include <string>
 
-ASSERT_PLATFORM_MACOS;
+static_assert(ADHOC_MAC);
 
 namespace fs = std::filesystem;
 
-namespace Engine
+namespace Engine::Platform
 {
 
-fs::path GetExecutablePath()
+void* StackAllocImpl(size_t size)
 {
-    constexpr auto maxPathBufferSize = PATH_MAX + 1;
-    char rawPathToExecutable[maxPathBufferSize];
-
-    uint32_t pathBufferLength = maxPathBufferSize;
-    if (_NSGetExecutablePath(rawPathToExecutable, &pathBufferLength) != 0)
-    {
-        Console::LogError("Failed to get path to launcher!");
-        return fs::path();
-    }
-
-    char realRawPathToExecutable[maxPathBufferSize];
-    if (realpath(rawPathToExecutable, realRawPathToExecutable) == NULL)
-    {
-        Console::LogError("Failed to resolve real path to launcher!");
-        return fs::path();
-    }
-    return realRawPathToExecutable;
+    return alloca(size);
 }
 
-std::string GetBacktrace()
+std::string GetBacktraceImpl()
 {
     const int maxFrames = 64;
     void* callstack[maxFrames];
@@ -66,4 +50,25 @@ std::string GetBacktrace()
     return output.str();
 }
 
-} // namespace Engine
+fs::path GetExecutablePath()
+{
+    constexpr auto maxPathBufferSize = PATH_MAX + 1;
+    char rawPathToExecutable[maxPathBufferSize];
+
+    uint32_t pathBufferLength = maxPathBufferSize;
+    if (_NSGetExecutablePath(rawPathToExecutable, &pathBufferLength) != 0)
+    {
+        Console::LogError("Failed to get path to launcher!");
+        return fs::path();
+    }
+
+    char realRawPathToExecutable[maxPathBufferSize];
+    if (realpath(rawPathToExecutable, realRawPathToExecutable) == NULL)
+    {
+        Console::LogError("Failed to resolve real path to launcher!");
+        return fs::path();
+    }
+    return realRawPathToExecutable;
+}
+
+} // namespace Engine::Platform

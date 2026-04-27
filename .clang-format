@@ -37,7 +37,6 @@ BraceWrapping:
   SplitEmptyNamespace: false
 BreakTemplateDeclarations: Yes
 IndentGotoLabels: false
-IndentPPDirectives: BeforeHash
 InsertNewlineAtEOF: true
 KeepEmptyLines:
   AtStartOfBlock: false
@@ -49,6 +48,7 @@ PenaltyExcessCharacter: 200
 PenaltyReturnTypeOnItsOwnLine: 1000000
 PointerAlignment: Left
 SeparateDefinitionBlocks: Always
+SortIncludes: CaseInsensitive
 Standard: c++20
 AlwaysBreakTemplateDeclarations: Yes
 KeepEmptyLinesAtTheStartOfBlocks: false

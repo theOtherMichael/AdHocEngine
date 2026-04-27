@@ -28,42 +28,46 @@ protected:
     LogLevel basicStreamReceivedLogLevel;
     LogLevel traceStreamReceivedLogLevel;
 
-    Console::LogStream defaultLogStream = {[this](LogLevel logLevel, std::string logMessage)
-                                           {
-                                               defaultStreamReceivedLogLevel = logLevel;
-                                               defaultStreamReceivedMessage  = logMessage;
-                                           }};
+    Console::Logger defaultLogStream = {[this](LogLevel logLevel, std::string logMessage)
+                                        {
+                                            defaultStreamReceivedLogLevel = logLevel;
+                                            defaultStreamReceivedMessage  = logMessage;
+                                        }};
 
-    Console::LogStream fatalLogStream   = {LogLevel::Fatal,
-                                           [this](LogLevel logLevel, std::string logMessage)
-                                           {
-                                             fatalStreamReceivedLogLevel = logLevel;
-                                             fatalStreamReceivedMessage  = logMessage;
-                                         }};
-    Console::LogStream errorLogStream   = {LogLevel::Error,
-                                           [this](LogLevel logLevel, std::string logMessage)
-                                           {
-                                             errorStreamReceivedLogLevel = logLevel;
-                                             errorStreamReceivedMessage  = logMessage;
-                                         }};
-    Console::LogStream warningLogStream = {LogLevel::Warning,
-                                           [this](LogLevel logLevel, std::string logMessage)
-                                           {
-                                               warningStreamReceivedLogLevel = logLevel;
-                                               warningStreamReceivedMessage  = logMessage;
-                                           }};
-    Console::LogStream messageLogStream = {LogLevel::Log,
-                                           [this](LogLevel logLevel, std::string logMessage)
-                                           {
-                                               basicStreamReceivedLogLevel = logLevel;
-                                               basicStreamReceivedMessage  = logMessage;
-                                           }};
-    Console::LogStream traceLogStream   = {LogLevel::Trace,
-                                           [this](LogLevel logLevel, std::string logMessage)
-                                           {
-                                             traceStreamReceivedLogLevel = logLevel;
-                                             traceStreamReceivedMessage  = logMessage;
-                                         }};
+    Console::Logger fatalLogStream = {LogLevel::Fatal,
+                                      [this](LogLevel logLevel, std::string logMessage)
+                                      {
+                                          fatalStreamReceivedLogLevel = logLevel;
+                                          fatalStreamReceivedMessage  = logMessage;
+                                      }};
+
+    Console::Logger errorLogStream = {LogLevel::Error,
+                                      [this](LogLevel logLevel, std::string logMessage)
+                                      {
+                                          errorStreamReceivedLogLevel = logLevel;
+                                          errorStreamReceivedMessage  = logMessage;
+                                      }};
+
+    Console::Logger warningLogStream = {LogLevel::Warning,
+                                        [this](LogLevel logLevel, std::string logMessage)
+                                        {
+                                            warningStreamReceivedLogLevel = logLevel;
+                                            warningStreamReceivedMessage  = logMessage;
+                                        }};
+
+    Console::Logger messageLogStream = {LogLevel::Log,
+                                        [this](LogLevel logLevel, std::string logMessage)
+                                        {
+                                            basicStreamReceivedLogLevel = logLevel;
+                                            basicStreamReceivedMessage  = logMessage;
+                                        }};
+
+    Console::Logger traceLogStream = {LogLevel::Trace,
+                                      [this](LogLevel logLevel, std::string logMessage)
+                                      {
+                                          traceStreamReceivedLogLevel = logLevel;
+                                          traceStreamReceivedMessage  = logMessage;
+                                      }};
 };
 
 TEST_F(ConsoleTest, LogStreamsReceiveFatalLogsCorrectly)

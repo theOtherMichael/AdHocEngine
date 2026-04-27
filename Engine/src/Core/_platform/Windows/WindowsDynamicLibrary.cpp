@@ -1,47 +1,53 @@
-#include <Engine/Core/_platform/Windows/WindowsDynamicLibrary.h>
+#include "WindowsDynamicLibrary.h"
 
+#include <Engine/Common/PlatformHelpers.h>
 #include <Engine/Core/Assertions.h>
-#include <Engine/Core/PlatformHelpers.h>
+#include <Engine/Core/Console.h>
 
 #include <windows.h>
 
 #include <filesystem>
-#include <iostream>
+#include <type_traits>
 
-ASSERT_PLATFORM_WINDOWS;
+static_assert(ADHOC_WINDOWS);
 
 namespace fs = std::filesystem;
 
-void WindowsDynamicLibrary::Load(const fs::path& libraryPath)
+namespace Engine::Platform
 {
+
+void DynamicLibraryImplementation::Load(const fs::path& libraryPath)
+{
+    static_assert(std::is_same_v<fs::path::value_type, wchar_t>);
+
     libraryHandle = LoadLibraryEx(libraryPath.wstring().c_str(), NULL, LOAD_WITH_ALTERED_SEARCH_PATH);
 
-    if (libraryHandle == NULL)
-        std::cerr << "Failed to load library " << libraryPath << "! " << Windows::GetLastErrorMessage() << "\n";
-    else
-        this->libraryPath = libraryPath;
+    if (!IsValidImpl())
+        Console::LogError("Library \"{}\" could not be loaded. {}", libraryPath.string(), GetLastErrorMessage());
 }
 
-void WindowsDynamicLibrary::Unload()
+void DynamicLibraryImplementation::Unload()
 {
-    if (libraryHandle != NULL)
-        FreeLibrary(libraryHandle);
-
-    libraryPath.clear();
-    libraryHandle = NULL;
-}
-
-void* WindowsDynamicLibrary::GetRawFunctionPtr(const std::string& functionName)
-{
-    if (libraryHandle == NULL)
+    if (IsValidImpl())
     {
-        std::cerr << "Attempted to load symbol " << functionName + " on an invalid DynamicLibrary!\n";
+        FreeLibrary(libraryHandle);
+        libraryHandle = NULL;
+    }
+}
+
+void* DynamicLibraryImplementation::GetRawFunctionPtr(const std::string& functionName) const
+{
+    if (!IsValidImpl())
+    {
+        Console::LogError("Symbol \"{}\" cannot be loaded; the library handle is invalid.", functionName);
         return nullptr;
     }
 
     auto functionPtr = GetProcAddress(libraryHandle, functionName.c_str());
     if (functionPtr == NULL)
-        std::cerr << "Failed to get symbol " << functionName + "! " << Windows::GetLastErrorMessage() << "\n";
+        Console::LogError("Symbol \"{}\" could not be retrieved. {}", functionName, GetLastErrorMessage());
 
     return reinterpret_cast<void*>(functionPtr);
 }
+
+} // namespace Engine::Platform

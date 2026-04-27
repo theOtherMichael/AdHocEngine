@@ -19,12 +19,22 @@ directories = [
 extensions = (".h", ".cpp", ".mm")
 
 
+excluded_paths = {
+    "Launcher/src/_platform/Windows/resource.h",
+    "Engine/src/_platform/Windows/resource.h",
+    "Editor/src/_platform/Windows/resource.h",
+}
+
+
 def get_source_files():
     root = pathlib.Path(__file__).parent.parent
     for directory in directories:
         for path in (root / directory).rglob("*"):
             if path.suffix in extensions:
-                yield path
+                # Get path relative to project root
+                project_relative_path = path.relative_to(root).as_posix()
+                if project_relative_path not in excluded_paths:
+                    yield path
 
 
 def format_files(files):

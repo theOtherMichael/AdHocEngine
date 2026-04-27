@@ -18,8 +18,8 @@ struct TestData
 
 TEST(ThreadSafeViewsTest, ViewAccessorsWork)
 {
-    std::shared_mutex mutex;
-    TestData data{42};
+    auto mutex = std::shared_mutex{};
+    auto data  = TestData{42};
 
     {
         auto sharedView = Engine::ThreadSafeSharedViewAsync(mutex, data);
@@ -36,26 +36,26 @@ TEST(ThreadSafeViewsTest, ViewAccessorsWork)
 
 TEST(ThreadSafeViewsTest, SharedViewAccessorsDontBlock)
 {
-    std::shared_mutex mutex;
-    TestData data{42};
+    auto mutex = std::shared_mutex{};
+    auto data  = TestData{42};
 
-    auto startTime = std::chrono::system_clock::now();
+    const auto startTime = std::chrono::system_clock::now();
 
-    std::thread reader1(
+    const auto reader1 = std::jthread(
         [&]()
         {
             auto sharedView = Engine::ThreadSafeSharedViewAsync(mutex, data);
             EXPECT_EQ(sharedView->value, 42);
             std::this_thread::sleep_for(100ms);
         });
-    std::thread reader2(
+    const auto reader2 = std::jthread(
         [&]()
         {
             auto sharedView = Engine::ThreadSafeSharedViewAsync(mutex, data);
             EXPECT_EQ(sharedView->value, 42);
             std::this_thread::sleep_for(100ms);
         });
-    std::thread reader3(
+    const auto reader3 = std::jthread(
         [&]()
         {
             auto sharedView = Engine::ThreadSafeSharedViewAsync(mutex, data);
@@ -63,22 +63,19 @@ TEST(ThreadSafeViewsTest, SharedViewAccessorsDontBlock)
             std::this_thread::sleep_for(100ms);
         });
 
-    reader1.join();
-    reader2.join();
-    reader3.join();
-    auto endTime = std::chrono::system_clock::now();
+    const auto endTime = std::chrono::system_clock::now();
 
     ASSERT_LT(endTime - startTime, 300ms);
 }
 
 TEST(ThreadSafeViewsTest, ExclusiveViewsBlockEachOther)
 {
-    std::shared_mutex mutex;
-    TestData data{42};
+    auto mutex = std::shared_mutex{};
+    auto data  = TestData{42};
 
-    auto startTime = std::chrono::system_clock::now();
+    const auto startTime = std::chrono::system_clock::now();
 
-    std::thread writer1(
+    auto writer1 = std::thread(
         [&]()
         {
             auto exclusiveView   = Engine::ThreadSafeExclusiveViewAsync(mutex, data);
@@ -86,7 +83,7 @@ TEST(ThreadSafeViewsTest, ExclusiveViewsBlockEachOther)
             EXPECT_EQ(exclusiveView->value, 100);
             std::this_thread::sleep_for(100ms);
         });
-    std::thread writer2(
+    auto writer2 = std::thread(
         [&]()
         {
             auto exclusiveView   = Engine::ThreadSafeExclusiveViewAsync(mutex, data);
@@ -94,7 +91,7 @@ TEST(ThreadSafeViewsTest, ExclusiveViewsBlockEachOther)
             EXPECT_EQ(exclusiveView->value, 200);
             std::this_thread::sleep_for(100ms);
         });
-    std::thread writer3(
+    auto writer3 = std::thread(
         [&]()
         {
             auto exclusiveView   = Engine::ThreadSafeExclusiveViewAsync(mutex, data);
@@ -106,17 +103,18 @@ TEST(ThreadSafeViewsTest, ExclusiveViewsBlockEachOther)
     writer1.join();
     writer2.join();
     writer3.join();
-    auto endTime = std::chrono::system_clock::now();
+
+    const auto endTime = std::chrono::system_clock::now();
 
     ASSERT_GT(endTime - startTime, 300ms);
 }
 
 TEST(ThreadSafeViewsTest, ExclusiveViewsBlockSharedViews)
 {
-    std::shared_mutex mutex;
-    TestData data{42};
+    auto mutex = std::shared_mutex{};
+    auto data  = TestData{42};
 
-    std::thread writer(
+    const auto writer = std::jthread(
         [&]()
         {
             auto exclusiveView   = Engine::ThreadSafeExclusiveViewAsync(mutex, data);
@@ -126,25 +124,22 @@ TEST(ThreadSafeViewsTest, ExclusiveViewsBlockSharedViews)
 
     std::this_thread::sleep_for(10ms); // Ensure writer starts first
 
-    std::thread reader(
+    const auto reader = std::jthread(
         [&]()
         {
             auto sharedView = Engine::ThreadSafeSharedViewAsync(mutex, data);
             EXPECT_EQ(sharedView->value, 100);
         });
-
-    writer.join();
-    reader.join();
 }
 
 TEST(ThreadSafeViewsTest, SharedViewsLockAsynchronously)
 {
-    std::shared_mutex mutex;
-    TestData data{42};
+    auto mutex = std::shared_mutex{};
+    auto data  = TestData{42};
 
-    auto startTime = std::chrono::system_clock::now();
+    const auto startTime = std::chrono::system_clock::now();
 
-    std::thread writer(
+    const auto writer = std::jthread(
         [&]()
         {
             auto exclusiveView   = Engine::ThreadSafeExclusiveViewAsync(mutex, data);
@@ -157,40 +152,38 @@ TEST(ThreadSafeViewsTest, SharedViewsLockAsynchronously)
     auto sharedView = Engine::ThreadSafeSharedViewAsync(mutex, data);
     EXPECT_FALSE(sharedView.IsReady());
 
-    auto endTime = std::chrono::system_clock::now();
-    EXPECT_LT(endTime - startTime, 300ms);
+    const auto firstEndTime = std::chrono::system_clock::now();
+    EXPECT_LT(firstEndTime - startTime, 300ms);
 
     EXPECT_EQ(sharedView->value, 100);
-    endTime = std::chrono::system_clock::now();
-    EXPECT_GT(endTime - startTime, 300ms);
+    const auto secondEndTime = std::chrono::system_clock::now();
+    EXPECT_GT(secondEndTime - startTime, 300ms);
 
     EXPECT_TRUE(sharedView.IsReady());
-
-    writer.join();
 }
 
 TEST(ThreadSafeViewsTest, ExclusiveViewsLockAsynchronously)
 {
-    std::shared_mutex mutex;
-    TestData data{42};
+    auto mutex = std::shared_mutex{};
+    auto data  = TestData{42};
 
-    auto startTime = std::chrono::system_clock::now();
+    const auto startTime = std::chrono::system_clock::now();
 
-    std::thread reader1(
+    const auto reader1 = std::jthread(
         [&]()
         {
             Engine::ThreadSafeSharedViewAsync<TestData> sharedView(mutex, data);
             EXPECT_EQ(sharedView->value, 42);
             std::this_thread::sleep_for(300ms);
         });
-    std::thread reader2(
+    const auto reader2 = std::jthread(
         [&]()
         {
             Engine::ThreadSafeSharedViewAsync<TestData> sharedView(mutex, data);
             EXPECT_EQ(sharedView->value, 42);
             std::this_thread::sleep_for(300ms);
         });
-    std::thread reader3(
+    const auto reader3 = std::jthread(
         [&]()
         {
             Engine::ThreadSafeSharedViewAsync<TestData> sharedView(mutex, data);
@@ -203,18 +196,14 @@ TEST(ThreadSafeViewsTest, ExclusiveViewsLockAsynchronously)
     auto exclusiveView = Engine::ThreadSafeExclusiveViewAsync(mutex, data);
     EXPECT_FALSE(exclusiveView.IsReady());
 
-    auto endTime = std::chrono::system_clock::now();
-    EXPECT_LT(endTime - startTime, 300ms);
+    const auto firstEndTime = std::chrono::system_clock::now();
+    EXPECT_LT(firstEndTime - startTime, 300ms);
 
     EXPECT_EQ(exclusiveView->value, 42);
-    endTime = std::chrono::system_clock::now();
-    EXPECT_GT(endTime - startTime, 300ms);
+    const auto secondEndTime = std::chrono::system_clock::now();
+    EXPECT_GT(secondEndTime - startTime, 300ms);
 
     EXPECT_TRUE(exclusiveView.IsReady());
-
-    reader1.join();
-    reader2.join();
-    reader3.join();
 }
 
 } // namespace Common

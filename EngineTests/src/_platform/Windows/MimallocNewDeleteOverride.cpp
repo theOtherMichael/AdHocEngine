@@ -1,5 +1,5 @@
 #if ADHOC_EDITOR
-    #include <mimalloc-new-delete.h>
+#include <mimalloc-new-delete.h>
 #endif
 
 // On Windows, we override new/delete in addition to malloc/free for performance reasons.

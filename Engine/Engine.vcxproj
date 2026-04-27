@@ -37,39 +37,39 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dev|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>ClangCL</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -137,9 +137,10 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=1;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -165,9 +166,10 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\b
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=0;_DEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -187,9 +189,10 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\b
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -219,9 +222,10 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -243,9 +247,10 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=1;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -275,9 +280,10 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard>stdcpp23</LanguageStandard>
       <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vcpkg_installed\static\x64-windows-static-md-adhoc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_EDITOR=0;NDEBUG;ADHOC_INTERNAL=1;ADHOC_ENGINE_PROJECT=1;ADHOC_EDITOR=0;ADHOC_WINDOWS=1;ADHOC_MAC=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -293,51 +299,45 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="include\asl\casts.h" />
+    <ClInclude Include="include\asl\concepts.h" />
+    <ClInclude Include="include\asl\finally.h" />
+    <ClInclude Include="include\Engine\Common\BorrowHandle.h" />
+    <ClInclude Include="include\Engine\Common\Singleton.h" />
     <ClInclude Include="include\Engine\Common\ThreadSafeViews.h" />
-    <ClInclude Include="include\Engine\Core\BacktraceSymbolHandler.h" />
     <ClInclude Include="include\Engine\Core\Console.h" />
     <ClInclude Include="include\Engine\Core\Assertions.h" />
+    <ClInclude Include="include\Engine\Core\Debugging.h" />
     <ClInclude Include="include\Engine\Core\DynamicLibrary.h" />
+    <ClInclude Include="include\Engine\Core\Formatters\EnumFormatter.h" />
     <ClInclude Include="include\Engine\Core\Misc.h" />
-    <ClInclude Include="include\Engine\Core\MiscMacros.h" />
     <ClInclude Include="include\Engine\Core\PlatformAbstraction.h" />
-    <ClInclude Include="include\Engine\Core\RuntimeState.h" />
-    <ClInclude Include="include\Engine\Core\PlatformHelpers.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Base\BaseBacktraceSymbolHandler.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Base\BaseDynamicLibrary.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Base\BaseMisc.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacBacktraceSymbolHandler.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacDynamicLibrary.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacRuntimeState.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformHelpers.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsBacktraceSymbolHandler.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsDynamicLibrary.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsMisc.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsRuntimeState.h" />
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\RuntimeInfo.h" />
+    <ClInclude Include="include\Engine\Common\PlatformHelpers.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsDebugging.h" />
+    <ClInclude Include="include\Engine\Graphics\ApiMode.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\BaseGraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\D3d12GraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\MetalGraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\OpenGlGraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\VulkanGraphicsContext.h" />
+    <ClInclude Include="include\Engine\Window\Internal\WindowSetup.h" />
+    <ClInclude Include="src\Core\_platform\Windows\WindowsDynamicLibrary.h" />
+    <ClInclude Include="src\Core\_platform\Windows\WindowsMisc.h" />
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsRuntimeInfo.h" />
+    <ClInclude Include="include\Engine\Common\_platform\Windows\WindowsPlatformHelpers.h" />
     <ClInclude Include="include\Engine\Core\SymbolExportMacros.h" />
-    <ClInclude Include="include\Engine\Graphics\D3D11GraphicsContext.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\D3d11GraphicsContext.h" />
     <ClInclude Include="include\Engine\Graphics\GraphicsContext.h" />
-    <ClInclude Include="include\Engine\Graphics\_platform\Base\BaseGraphicsContext.h" />
-    <ClInclude Include="include\Engine\Graphics\_platform\Mac\MacD3D11GraphicsContext.h" />
-    <ClInclude Include="include\Engine\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.h" />
-    <ClInclude Include="include\Engine\Window\Internal\GlfwLifetime.h" />
+    <ClInclude Include="include\Engine\Graphics\Contexts\_platform\Windows\WindowsD3D11GraphicsContext.h" />
     <ClInclude Include="include\Engine\Window\WindowState.h" />
-    <ClInclude Include="include\Engine\Window\WindowIcon.h" />
-    <ClInclude Include="include\Engine\Window\_platform\Mac\MacWindowIcon.h" />
-    <ClInclude Include="include\Engine\Window\_platform\Windows\WindowsWindowIcon.h" />
+    <ClInclude Include="src\Window\Internal\SetMainWindowIcon.h" />
+    <ClInclude Include="src\Window\Internal\_platform\Windows\WindowsSetMainWindowIcon.h" />
+    <ClInclude Include="src\_platform\Windows\resource.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Core\_platform\Mac\MacRuntimeState.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Dev|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDev|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticDebug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='StaticRelease|x64'">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="src\Core\_platform\Windows\WindowsBacktraceSymbolHandler.cpp" />
+    <ClCompile Include="src\Core\DynamicLibrary.cpp" />
+    <ClCompile Include="src\Core\Misc.cpp" />
     <ClCompile Include="src\Core\Console.cpp" />
     <ClCompile Include="src\Core\Assertions.cpp" />
     <ClCompile Include="src\Core\_platform\Mac\MacDynamicLibrary.cpp">
@@ -358,12 +358,13 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     </ClCompile>
     <ClCompile Include="src\Core\_platform\Windows\WindowsDynamicLibrary.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsMisc.cpp" />
-    <ClCompile Include="src\Core\_platform\Windows\WindowsRuntimeState.cpp" />
+    <ClCompile Include="src\Core\_platform\Windows\WindowsRuntimeInfo.cpp" />
     <ClCompile Include="src\Core\_platform\Windows\WindowsPlatformHelpers.cpp" />
+    <ClCompile Include="src\Graphics\ApiMode.cpp" />
     <ClCompile Include="src\Graphics\GraphicsContext.cpp" />
-    <ClCompile Include="src\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.cpp" />
-    <ClCompile Include="src\Window\WindowState.cpp" />
-    <ClCompile Include="src\Window\_platform\Windows\WindowsWindowIcon.cpp" />
+    <ClCompile Include="src\Graphics\Contexts\_platform\Windows\WindowsD3D11GraphicsContext.cpp" />
+    <ClCompile Include="src\Window\Internal\WindowSetup.cpp" />
+    <ClCompile Include="src\Window\Internal\_platform\Windows\WindowsSetMainWindowIcon.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>
@@ -389,6 +390,12 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\Windows\Engine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\Windows\AdHocEditor.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

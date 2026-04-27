@@ -1,0 +1,249 @@
+#include <Editor/Core/Internal/ImGuiSetup.h>
+
+#include <Engine/Core/Assertions.h>
+#include <Engine/Core/Console.h>
+#include <Engine/Graphics/Contexts/D3d11GraphicsContext.h>
+#include <Engine/Graphics/Contexts/D3d12GraphicsContext.h>
+#include <Engine/Graphics/Contexts/MetalGraphicsContext.h>
+#include <Engine/Graphics/Contexts/OpenGlGraphicsContext.h>
+#include <Engine/Graphics/Contexts/VulkanGraphicsContext.h>
+#include <Engine/Graphics/GraphicsContext.h>
+#include <Engine/Window/WindowState.h>
+
+#include <imgui.h>
+#if PLATFORM_SUPPORTS_D3D11
+#include <backends/imgui_impl_dx11.h>
+#endif
+#if PLATFORM_SUPPORTS_METAL
+#include <backends/imgui_impl_metal.h>
+#endif
+#include <backends/imgui_impl_glfw.h>
+
+namespace Console = Engine::Console;
+using Engine::Graphics::ApiMode;
+
+namespace Editor::Internal
+{
+
+static void LogImGuiContextCreatedSuccessfully(const ApiMode apiMode)
+{
+    Console::Log("ImGui initialized successfully. API: {}", apiMode);
+}
+
+static void LogImGuiContextShutdownSuccessfully(const ApiMode apiMode)
+{
+    Console::Log("ImGui shutdown successfully. API: {}", apiMode);
+}
+
+void InitializeImGui()
+{
+    IMGUI_CHECKVERSION();
+
+    ImGui::CreateContext();
+
+    const auto imguiIniFilePath      = Engine::GetExecutablePath().parent_path() / "imgui.ini";
+    const auto imguiIniFilePathAsStr = imguiIniFilePath.string();
+
+    auto& io        = ImGui::GetIO();
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+    io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
+    io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
+    io.IniFilename  = imguiIniFilePathAsStr.c_str();
+
+    const auto& windowState  = Engine::Window::WindowState::Instance();
+    auto* const windowHandle = windowState.mainWindowHandle;
+
+    const auto currentApi = Engine::Graphics::GetActiveApiMode();
+    switch (currentApi)
+    {
+    case ApiMode::OpenGl:
+#if PLATFORM_SUPPORTS_OPENGL
+    {
+        // TODO: Implement ImGui + OpenGL
+        const auto openGlContext = Engine::Graphics::GetContextAs<Engine::Graphics::OpenGlGraphicsContext>();
+        break;
+    }
+#else
+        Console::LogError("OpenGL is not yet implemented.");
+        // TODO: Throw exception
+        break;
+#endif
+    case ApiMode::Vulkan:
+#if PLATFORM_SUPPORTS_VULKAN
+    {
+        // TODO: Implement ImGui + Vulkan
+        const auto vulkanContext = Engine::Graphics::GetContextAs<Engine::Graphics::VulkanGraphicsContext>();
+        break;
+    }
+#else
+        Console::LogError("Vulkan is not yet implemented.");
+        // TODO: Throw exception
+        break;
+#endif
+    case ApiMode::D3d11:
+#if PLATFORM_SUPPORTS_D3D11
+    {
+        const auto d3d11Context = Engine::Graphics::GetD3d11Context();
+        ImGui_ImplGlfw_InitForOther(windowHandle, true);
+        ImGui_ImplDX11_Init(d3d11Context->pd3dDevice, d3d11Context->pd3dDeviceContext);
+        LogImGuiContextCreatedSuccessfully(currentApi);
+        break;
+    }
+#else
+        Console::LogError("D3D11 is not yet implemented.");
+        // TODO: Throw exception
+        break;
+#endif
+    case ApiMode::D3d12:
+#if PLATFORM_SUPPORTS_D3D12
+    {
+        // TODO: Implement ImGui + Vulkan
+        const auto d3d12Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3d12GraphicsContext>();
+        break;
+    }
+#else
+        Console::LogError("D3D12 is not yet implemented.");
+        // TODO: Throw exception
+        break;
+#endif
+    case ApiMode::Metal:
+#if PLATFORM_SUPPORTS_METAL
+    {
+        // TODO: Implement ImGui + Metal
+        const auto metalContext = Engine::Graphics::GetContextAs<Engine::Graphics::MetalGraphicsContext>();
+        break;
+    }
+#else
+        Console::LogError("Metal is not yet implemented.");
+        // TODO: Throw exception
+        break;
+#endif
+    case ApiMode::Uninitialized:
+        [[fallthrough]];
+    default:
+        Assert_NoEntry();
+    }
+}
+
+void ShutdownImGui()
+{
+    const auto currentApi = Engine::Graphics::GetActiveApiMode();
+    switch (currentApi)
+    {
+    case ApiMode::OpenGl:
+        Assert_True(PLATFORM_SUPPORTS_OPENGL);
+        // TODO: Implement ImGui + OpenGL
+        Console::LogError("OpenGL is not yet implemented");
+        break;
+    case ApiMode::Vulkan:
+        // TODO: Implement ImGui + Vulkan
+        Assert_True(PLATFORM_SUPPORTS_VULKAN);
+        Console::LogError("Vulkan is not yet implemented");
+        break;
+    case ApiMode::D3d11:
+        Assert_True(PLATFORM_SUPPORTS_D3D11);
+        ImGui_ImplDX11_Shutdown();
+        LogImGuiContextShutdownSuccessfully(currentApi);
+        break;
+    case ApiMode::D3d12:
+        // TODO: Implement ImGui + D3D12
+        Assert_True(PLATFORM_SUPPORTS_D3D12);
+        Console::LogError("D3D12 is not yet implemented");
+        break;
+    case ApiMode::Metal:
+        // TODO: Implement ImGui + Metal
+        Assert_True(PLATFORM_SUPPORTS_METAL);
+        Console::LogError("Metal is not yet implemented");
+        break;
+    case ApiMode::Uninitialized:
+        [[fallthrough]];
+    default:
+        Assert_NoEntry();
+    }
+
+    ImGui_ImplGlfw_Shutdown();
+    ImGui::DestroyContext();
+}
+
+void StartImGuiFrame()
+{
+    const auto currentApi = Engine::Graphics::GetActiveApiMode();
+    switch (currentApi)
+    {
+    case ApiMode::OpenGl:
+        Console::LogError("OpenGL is not yet implemented");
+        break;
+    case ApiMode::Vulkan:
+        Console::LogError("Vulkan is not yet implemented");
+        break;
+    case ApiMode::D3d11:
+    {
+        ImGui_ImplDX11_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+        break;
+    }
+    case ApiMode::D3d12:
+        Console::LogError("D3D12 is not yet implemented");
+        break;
+    case ApiMode::Metal:
+        Console::LogError("Metal is not yet implemented");
+        break;
+    case ApiMode::Uninitialized:
+        [[fallthrough]];
+    default:
+        Assert_NoEntry();
+    }
+}
+
+void EndImGuiFrame()
+{
+    ImGui::Render();
+
+    const auto currentApi = Engine::Graphics::GetActiveApiMode();
+    switch (currentApi)
+    {
+    case ApiMode::OpenGl:
+        Console::LogError("OpenGL is not yet implemented");
+        break;
+    case ApiMode::Vulkan:
+        Console::LogError("Vulkan is not yet implemented");
+        break;
+    case ApiMode::D3d11:
+    {
+        auto d3d11Context = Engine::Graphics::GetD3d11Context();
+
+        const auto clearColor = std::array{0.1f, 0.1f, 0.1f, 1.0f};
+        d3d11Context->pd3dDeviceContext->OMSetRenderTargets(1, &d3d11Context->mainRenderTargetView, nullptr);
+        d3d11Context->pd3dDeviceContext->ClearRenderTargetView(d3d11Context->mainRenderTargetView, clearColor.data());
+        ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
+
+        PumpImGuiPlatformWindows();
+
+        d3d11Context->Present();
+        break;
+    }
+    case ApiMode::D3d12:
+        Console::LogError("D3D12 is not yet implemented");
+        break;
+    case ApiMode::Metal:
+        Console::LogError("Metal is not yet implemented");
+        break;
+    case ApiMode::Uninitialized:
+        [[fallthrough]];
+    default:
+        Assert_NoEntry();
+    }
+}
+
+void PumpImGuiPlatformWindows()
+{
+    auto& io = ImGui::GetIO();
+    if (io.ConfigFlags & ImGuiConfigFlags_ViewportsEnable)
+    {
+        ImGui::UpdatePlatformWindows();
+        ImGui::RenderPlatformWindowsDefault();
+    }
+}
+
+} // namespace Editor::Internal

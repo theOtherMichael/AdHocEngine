@@ -1,12 +1,16 @@
-#include <Engine/Core/_platform/Windows/WindowsPlatformHelpers.h>
+#include <Engine/Common/_platform/Windows/WindowsPlatformHelpers.h>
 
+#include <asl/casts.h>
+#include <asl/finally.h>
 #include <Engine/Core/Assertions.h>
+
+#include <fmt/format.h>
 
 #include <windows.h>
 
-ASSERT_PLATFORM_WINDOWS;
+static_assert(ADHOC_WINDOWS);
 
-namespace Windows
+namespace Engine::Platform
 {
 
 std::string WcharToUtf8(const WCHAR* wideString, size_t length)
@@ -15,12 +19,15 @@ std::string WcharToUtf8(const WCHAR* wideString, size_t length)
         length = wcslen(wideString);
 
     if (length == 0)
-        return std::string();
+        return std::string{};
 
-    std::string convertedString(WideCharToMultiByte(CP_UTF8, 0, wideString, (int)length, NULL, 0, NULL, NULL), 0);
+    const auto convertedStringSize =
+        WideCharToMultiByte(CP_UTF8, 0, wideString, asl::narrow<int>(length), NULL, 0, NULL, NULL);
+
+    auto convertedString = std::string(convertedStringSize, 0);
 
     WideCharToMultiByte(
-        CP_UTF8, 0, wideString, (int)length, &convertedString[0], (int)convertedString.size(), NULL, NULL);
+        CP_UTF8, 0, wideString, asl::narrow<int>(length), convertedString.data(), convertedStringSize, NULL, NULL);
 
     return convertedString;
 }
@@ -28,33 +35,36 @@ std::string WcharToUtf8(const WCHAR* wideString, size_t length)
 std::wstring Utf8ToWchar(const std::string_view narrowString)
 {
     if (narrowString.length() == 0)
-        return std::wstring();
+        return std::wstring{};
 
-    std::wstring convertedString(MultiByteToWideChar(CP_UTF8, 0, narrowString.data(), -1, NULL, 0), 0);
+    const auto convertedStringSize =
+        MultiByteToWideChar(CP_UTF8, 0, narrowString.data(), narrowString.length(), NULL, 0);
 
-    MultiByteToWideChar(CP_UTF8, 0, narrowString.data(), -1, convertedString.data(), (int)convertedString.size());
+    auto convertedString = std::wstring(convertedStringSize, 0);
+
+    MultiByteToWideChar(
+        CP_UTF8, 0, narrowString.data(), narrowString.length(), convertedString.data(), convertedStringSize);
 
     return convertedString;
 }
 
 std::string GetLastErrorMessage()
 {
-    DWORD errorCode = GetLastError();
+    const auto errorCode = GetLastError();
 
-    LPVOID messageBuffer = nullptr;
+    auto messageBuffer = LPTSTR{nullptr};
+
     FormatMessage(FORMAT_MESSAGE_ALLOCATE_BUFFER | FORMAT_MESSAGE_FROM_SYSTEM | FORMAT_MESSAGE_IGNORE_INSERTS,
                   NULL,
                   errorCode,
-                  MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT),
-                  (LPTSTR)&messageBuffer,
+                  0,
+                  reinterpret_cast<LPTSTR>(&messageBuffer), // Looks weird, but it's correct
                   0,
                   NULL);
 
-    std::string formattedMessage = std::to_string(errorCode) + ", " + WcharToUtf8((LPTSTR)messageBuffer);
+    const auto freeMessageBufferAction = asl::finally([messageBuffer]() { LocalFree(messageBuffer); });
 
-    LocalFree(messageBuffer);
-
-    return formattedMessage;
+    return fmt::format("{}, {}", std::to_string(errorCode), WcharToUtf8(messageBuffer));
 }
 
-} // namespace Windows
+} // namespace Engine::Platform

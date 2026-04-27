@@ -105,7 +105,7 @@ TEST(AssertionDeathTest, FailingAssertsTriggerCrash)
     EXPECT_DEATH(AssertEval_Gt(1, 2), "");
     EXPECT_DEATH(AssertEval_Ge(1, 2), "");
 
-    #if ADHOC_SLOW_ASSERTIONS_ON
+#if ADHOC_SLOW_ASSERTIONS_ON
     EXPECT_DEATH(Assert_Null_Slow(&someVariable), "");
     EXPECT_DEATH(Assert_NotNull_Slow(nullptr), "");
     EXPECT_DEATH(Assert_True_Slow(false), "");
@@ -127,16 +127,16 @@ TEST(AssertionDeathTest, FailingAssertsTriggerCrash)
     EXPECT_DEATH(AssertEval_Le_Slow(2, 1), "");
     EXPECT_DEATH(AssertEval_Gt_Slow(1, 2), "");
     EXPECT_DEATH(AssertEval_Ge_Slow(1, 2), "");
-    #endif // ADHOC_SLOW_ASSERTIONS_ON
+#endif // ADHOC_SLOW_ASSERTIONS_ON
 }
 #endif // ADHOC_ASSERTIONS_ON
 
 TEST(AssertionTest, PassingExpectsDontLog)
 {
     auto lastErrorLog = std::string{};
-    auto errorStream  = Console::LogStream(Console::LogLevel::Error,
-                                          [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
-                                          { lastErrorLog = message; });
+    auto errorStream  = Console::Logger(Console::LogLevel::Error,
+                                       [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
+                                       { lastErrorLog = message; });
 
 #define PASSING_EXPECTS_DONT_LOG_CASE(assertion)                                                                       \
     {                                                                                                                  \
@@ -207,16 +207,16 @@ TEST(AssertionTest, PassingExpectsDontLog)
 TEST(AssertionTest, FailingExpectsLogErrors)
 {
     auto lastErrorLog = std::string{};
-    auto errorStream  = Console::LogStream(Console::LogLevel::Error,
-                                          [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
-                                          { lastErrorLog = message; });
+    auto errorStream  = Console::Logger(Console::LogLevel::Error,
+                                       [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
+                                       { lastErrorLog = message; });
 
-    #define FAILING_EXPECTS_LOG_ERRORS_CASE(assertion)                                                                 \
-        {                                                                                                              \
-            assertion;                                                                                                 \
-            EXPECT_NE(lastErrorLog, "");                                                                               \
-            lastErrorLog.clear();                                                                                      \
-        }
+#define FAILING_EXPECTS_LOG_ERRORS_CASE(assertion)                                                                     \
+    {                                                                                                                  \
+        assertion;                                                                                                     \
+        EXPECT_NE(lastErrorLog, "");                                                                                   \
+        lastErrorLog.clear();                                                                                          \
+    }
 
     auto someVariable = 5;
 
@@ -245,7 +245,7 @@ TEST(AssertionTest, FailingExpectsLogErrors)
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Gt(1, 2));
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Ge(1, 2));
 
-    #if ADHOC_SLOW_ASSERTIONS_ON
+#if ADHOC_SLOW_ASSERTIONS_ON
     FAILING_EXPECTS_LOG_ERRORS_CASE(Expect_Null_Slow(&someVariable));
     FAILING_EXPECTS_LOG_ERRORS_CASE(Expect_NotNull_Slow(nullptr));
     FAILING_EXPECTS_LOG_ERRORS_CASE(Expect_True_Slow(false));
@@ -267,9 +267,9 @@ TEST(AssertionTest, FailingExpectsLogErrors)
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Le_Slow(2, 1));
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Gt_Slow(1, 2));
     FAILING_EXPECTS_LOG_ERRORS_CASE(ExpectEval_Ge_Slow(1, 2));
-    #endif // ADHOC_SLOW_ASSERTIONS_ON
+#endif // ADHOC_SLOW_ASSERTIONS_ON
 
-    #undef FAILING_EXPECTS_LOG_ERRORS_CASE
+#undef FAILING_EXPECTS_LOG_ERRORS_CASE
 }
 #endif // ADHOC_ASSERTIONS_ON
 
@@ -278,12 +278,12 @@ TEST(AssertionTest, ExpressionsEvaluateOnlyOnce)
 {
     auto evaluationCount = 0;
 
-    #define EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(assertion)                                                             \
-        {                                                                                                              \
-            {assertion};                                                                                               \
-            EXPECT_EQ(evaluationCount, 1);                                                                             \
-            evaluationCount = 0;                                                                                       \
-        }
+#define EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(assertion)                                                                 \
+    {                                                                                                                  \
+        {assertion};                                                                                                   \
+        EXPECT_EQ(evaluationCount, 1);                                                                                 \
+        evaluationCount = 0;                                                                                           \
+    }
 
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(Expect_Null((++evaluationCount, nullptr)));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(Expect_NotNull((++evaluationCount, &evaluationCount)));
@@ -311,7 +311,7 @@ TEST(AssertionTest, ExpressionsEvaluateOnlyOnce)
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Gt(++evaluationCount, 0));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Ge(++evaluationCount, 1));
 
-    #if ADHOC_SLOW_ASSERTIONS_ON
+#if ADHOC_SLOW_ASSERTIONS_ON
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(Expect_Null_Slow((++evaluationCount, nullptr)));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(Expect_NotNull_Slow((++evaluationCount, &evaluationCount)));
 
@@ -337,9 +337,9 @@ TEST(AssertionTest, ExpressionsEvaluateOnlyOnce)
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Le_Slow(++evaluationCount, 1));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Gt_Slow(++evaluationCount, 0));
     EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE(ExpectEval_Ge_Slow(++evaluationCount, 1));
-    #endif
+#endif
 
-    #undef EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE
+#undef EXPRESSIONS_EVALUATE_ONLY_ONCE_CASE
 }
 #endif // ADHOC_ASSERTIONS_ON
 
@@ -348,12 +348,12 @@ TEST(AssertionTest, NonEvalAssertionsDontEvalWhenOff)
 {
     auto someVariable = 0;
 
-    #define NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(assertion)                                                          \
-        assertion;                                                                                                     \
-        EXPECT_EQ(someVariable, 0);                                                                                    \
-        someVariable = 0;
+#define NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(assertion)                                                              \
+    assertion;                                                                                                         \
+    EXPECT_EQ(someVariable, 0);                                                                                        \
+    someVariable = 0;
 
-    #if !ADHOC_ASSERTIONS_ON
+#if !ADHOC_ASSERTIONS_ON
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_Null((++someVariable, nullptr)));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_NotNull((++someVariable, &someVariable)));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_True(++someVariable == 1));
@@ -375,7 +375,7 @@ TEST(AssertionTest, NonEvalAssertionsDontEvalWhenOff)
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Expect_Le(++someVariable, 2));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Expect_Gt(++someVariable, 0));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Expect_Ge(++someVariable, 0));
-    #endif // !ADHOC_ASSERTIONS_ON
+#endif // !ADHOC_ASSERTIONS_ON
 
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_Null_Slow((++someVariable, nullptr)));
     NON_EVAL_ASSERTIONS_DONT_EVAL_WHEN_OFF(Assert_NotNull_Slow((++someVariable, &someVariable)));
@@ -406,12 +406,12 @@ TEST(AssertionTest, EvalAssertionExpressionsEvaluateWhenOff)
 {
     auto someVariable = 0;
 
-    #define EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(assertion)                                               \
-        assertion;                                                                                                     \
-        EXPECT_EQ(someVariable, 1);                                                                                    \
-        someVariable = 0;
+#define EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(assertion)                                                   \
+    assertion;                                                                                                         \
+    EXPECT_EQ(someVariable, 1);                                                                                        \
+    someVariable = 0;
 
-    #if !ADHOC_ASSERTIONS_ON
+#if !ADHOC_ASSERTIONS_ON
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_Null((++someVariable, nullptr)));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_NotNull((++someVariable, &someVariable)));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_True(++someVariable == 1));
@@ -433,7 +433,7 @@ TEST(AssertionTest, EvalAssertionExpressionsEvaluateWhenOff)
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(ExpectEval_Le(++someVariable, 2));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(ExpectEval_Gt(++someVariable, 0));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(ExpectEval_Ge(++someVariable, 0));
-    #endif // !ADHOC_ASSERTIONS_ON
+#endif // !ADHOC_ASSERTIONS_ON
 
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_Null_Slow((++someVariable, nullptr)));
     EVAL_ASSERTION_EXPRESSIONS_EVALUATE_WHEN_OFF_CASE(AssertEval_NotNull_Slow((++someVariable, &someVariable)));

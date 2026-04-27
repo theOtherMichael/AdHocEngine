@@ -27,31 +27,19 @@
     <ClInclude Include="include\Engine\Core\PlatformAbstraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsPlatformHelpers.h">
+    <ClInclude Include="include\Engine\Common\_platform\Windows\WindowsPlatformHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacPlatformHelpers.h">
+    <ClInclude Include="include\Engine\Common\PlatformHelpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\PlatformHelpers.h">
+    <ClInclude Include="src\Core\_platform\Windows\WindowsMisc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsMisc.h">
+    <ClInclude Include="include\Engine\Core\RuntimeInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacMisc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\MiscMacros.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\RuntimeState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacRuntimeState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsRuntimeState.h">
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsRuntimeInfo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Engine\Core\Console.h">
@@ -60,37 +48,13 @@
     <ClInclude Include="include\Engine\Core\DynamicLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsDynamicLibrary.h">
+    <ClInclude Include="src\Core\_platform\Windows\WindowsDynamicLibrary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacDynamicLibrary.h">
+    <ClInclude Include="include\Engine\Graphics\Contexts\D3d11GraphicsContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Base\BaseDynamicLibrary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\BacktraceSymbolHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Base\BaseBacktraceSymbolHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Mac\MacBacktraceSymbolHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsBacktraceSymbolHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Graphics\_platform\Base\BaseGraphicsContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Graphics\D3D11GraphicsContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Graphics\_platform\Mac\MacD3D11GraphicsContext.h">
+    <ClInclude Include="include\Engine\Graphics\Contexts\_platform\Windows\WindowsD3D11GraphicsContext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Engine\Graphics\GraphicsContext.h">
@@ -99,22 +63,61 @@
     <ClInclude Include="include\Engine\Common\ThreadSafeViews.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Window\Internal\GlfwLifetime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Engine\Core\_platform\Base\BaseMisc.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Engine\Window\WindowState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Window\WindowIcon.h">
+    <ClInclude Include="include\Engine\Common\Singleton.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Window\_platform\Windows\WindowsWindowIcon.h">
+    <ClInclude Include="src\_platform\Windows\resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Engine\Window\_platform\Mac\MacWindowIcon.h">
+    <ClInclude Include="include\asl\casts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\asl\concepts.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\asl\finally.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Core\Debugging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Core\_platform\Windows\WindowsDebugging.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Core\Formatters\EnumFormatter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Window\Internal\WindowSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Graphics\ApiMode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\Internal\_platform\Windows\WindowsSetMainWindowIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Window\Internal\SetMainWindowIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Graphics\Contexts\BaseGraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Graphics\Contexts\D3d12GraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Graphics\Contexts\OpenGlGraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Graphics\Contexts\VulkanGraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Graphics\Contexts\MetalGraphicsContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Engine\Common\BorrowHandle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,7 +131,7 @@
     <ClCompile Include="src\Core\_platform\Mac\MacMisc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\_platform\Windows\WindowsRuntimeState.cpp">
+    <ClCompile Include="src\Core\_platform\Windows\WindowsRuntimeInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Core\Console.cpp">
@@ -143,28 +146,31 @@
     <ClCompile Include="src\Core\_platform\Mac\MacDynamicLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\_platform\Windows\WindowsBacktraceSymbolHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\_platform\Windows\DllMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Graphics\_platform\Windows\WindowsD3D11GraphicsContext.cpp">
+    <ClCompile Include="src\Graphics\Contexts\_platform\Windows\WindowsD3D11GraphicsContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Graphics\GraphicsContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Core\_platform\Mac\MacRuntimeState.cpp">
+    <ClCompile Include="src\Core\Misc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Window\WindowState.cpp">
+    <ClCompile Include="src\Core\DynamicLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Window\_platform\Windows\WindowsWindowIcon.cpp">
+    <ClCompile Include="src\Window\Internal\WindowSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Graphics\ApiMode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Window\Internal\_platform\Windows\WindowsSetMainWindowIcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -173,5 +179,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resources\Windows\Engine.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\Windows\AdHocEditor.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

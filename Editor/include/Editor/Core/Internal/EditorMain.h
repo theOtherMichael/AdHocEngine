@@ -1,17 +1,31 @@
 #pragma once
 
-#include <Editor/Core/EditorConfigurationMode.h>
 #include <Editor/Core/SymbolExportMacros.h>
 
-namespace Editor
+#include <string_view>
+#include <variant>
+
+namespace Editor::Internal
 {
 
-struct ReloadOption
+struct EDITOR_API EditorExitResult
 {
-    ConfigurationMode configToLoad = ConfigurationMode::Release;
-    bool isReloadRequested         = false;
+    int ExitCode;
 };
 
-EDITOR_API ReloadOption EditorMain(int argc, char* argv[]);
+enum class EditorReloadMode
+{
+    Debug,
+    Release,
+};
 
-} // namespace Editor
+struct EDITOR_API EditorReloadResult
+{
+    EditorReloadMode Mode;
+};
+
+using EditorMainResult = std::variant<EditorExitResult, EditorReloadResult>;
+
+EDITOR_API EditorMainResult EditorMain(int argc, char* argv[]);
+
+} // namespace Editor::Internal

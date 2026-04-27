@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Engine/Common/Singleton.h>
 #include <Engine/Core/SymbolExportMacros.h>
 
 #pragma clang diagnostic push
@@ -10,22 +11,10 @@
 namespace Engine::Window
 {
 
-struct ENGINE_API WindowState
+class ENGINE_API WindowState : public ImmutableSingleton<WindowState>
 {
 public:
     GLFWwindow* mainWindowHandle;
-
-    static const WindowState& GetInstance();
-
-    WindowState() = default;
-    ~WindowState();
-
-    WindowState(const WindowState&)            = delete;
-    WindowState& operator=(const WindowState&) = delete;
 };
-
-#if ADHOC_INTERNAL
-ENGINE_API WindowState& GetMutableWindowState();
-#endif
 
 } // namespace Engine::Window

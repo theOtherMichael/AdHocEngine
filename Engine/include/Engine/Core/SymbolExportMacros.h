@@ -1,15 +1,23 @@
 #pragma once
 
 #if ADHOC_WINDOWS
-    #if ADHOC_EDITOR
-        #if ADHOC_ENGINE_PROJECT
-            #define ENGINE_API __declspec(dllexport)
-        #else
-            #define ENGINE_API __declspec(dllimport)
-        #endif
-    #else
-        #define ENGINE_API
-    #endif
+
+#if ADHOC_EDITOR
+
+#if ADHOC_ENGINE_PROJECT
+#define ENGINE_API __declspec(dllexport)
 #else
-    #define ENGINE_API
+#define ENGINE_API __declspec(dllimport)
 #endif
+
+#else
+
+#define ENGINE_API
+
+#endif // ADHOC_EDITOR
+
+#else
+
+#define ENGINE_API
+
+#endif // ADHOC_WINDOWS

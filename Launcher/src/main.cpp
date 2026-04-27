@@ -1,22 +1,30 @@
-#include <Editor/Core/EditorConfigurationMode.h>
-#include <Editor/Core/EditorState.h>
 #include <Editor/Core/Internal/EditorMain.h>
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
+#include <Engine/Core/Formatters/EnumFormatter.h>
+#include <Engine/Core/RuntimeInfo.h>
 
 #include <fmt/format.h>
 
-#include <string>
-
-#if ADHOC_WINDOWS
-    #include <resource.h>
-static_assert(IDI_ICON1 == 101, "Engine and Editor layers assume IDI_ICON is 101!");
-#endif
+#include <string_view>
+#include <variant>
 
 namespace Console = Engine::Console;
 using Console::LogLevel;
 
-static void OnEngineLogEvent(const LogLevel logLevel, const std::string& message)
+using Editor::Internal::EditorExitResult;
+using Editor::Internal::EditorReloadResult;
+
+INJECT_ENUM_FORMATTER
+
+enum class ConfigurationMode
+{
+    Debug,
+    Dev,
+    Release,
+};
+
+static void LogToStdOut(const LogLevel logLevel, const std::string_view message)
 {
     switch (logLevel)
     {
@@ -40,49 +48,52 @@ static void OnEngineLogEvent(const LogLevel logLevel, const std::string& message
 
 int main(int argc, char* argv[])
 {
-    // TODO: Reload if mi-malloc isn't injected (Mac)
+    auto mainLogger = Console::Logger(LogLevel::Trace, LogToStdOut);
 
-    auto mainLogStream = Console::LogStream(LogLevel::Trace, OnEngineLogEvent);
+    // TODO: Reload if mi-malloc isn't injected (Mac)
 
     Console::Log("Starting Ad Hoc Launcher...");
 
-    bool isDeveloperMode = false;
-
-    // clang-format off
 #if ADHOC_DEBUG
-    const auto compiledConfigMode = Editor::ConfigurationMode::Debug;
+    const auto compiledConfigMode = ConfigurationMode::Debug;
 #elif ADHOC_DEV
-    const auto compiledConfigMode = Editor::ConfigurationMode::Dev;
+    const auto compiledConfigMode = ConfigurationMode::Dev;
 #elif ADHOC_RELEASE
-    const auto compiledConfigMode = Editor::ConfigurationMode::Release;
+    const auto compiledConfigMode = ConfigurationMode::Release;
 #else
     Assert_NoEntry();
 #endif
-    // clang-format on
 
     auto selectedConfigMode = compiledConfigMode;
+    auto isDeveloperMode    = false;
 
     Console::Log("Command line arguments:");
     for (int i = 1; i < argc; i++)
     {
         Console::Log("  {}", argv[i]);
 
-        if (strcmp(argv[i], "--developer") == 0)
-            isDeveloperMode = true;
-        else if (strcmp(argv[i], "--debug") == 0)
-            selectedConfigMode = Editor::ConfigurationMode::Debug;
+        if (strcmp(argv[i], "--debug") == 0)
+            selectedConfigMode = ConfigurationMode::Debug;
         else if (strcmp(argv[i], "--dev") == 0)
-            selectedConfigMode = Editor::ConfigurationMode::Dev;
+            selectedConfigMode = ConfigurationMode::Dev;
         else if (strcmp(argv[i], "--release") == 0)
-            selectedConfigMode = Editor::ConfigurationMode::Release;
+            selectedConfigMode = ConfigurationMode::Release;
+
+        else if (strcmp(argv[i], "--developer") == 0)
+            isDeveloperMode = true;
     }
 
-    if (compiledConfigMode != selectedConfigMode)
+    Console::Log("Configuration: {}", selectedConfigMode);
+    Console::Log("Developer Mode: {}", isDeveloperMode);
+
+    if (selectedConfigMode != compiledConfigMode)
     {
         if (isDeveloperMode)
         {
-            Console::LogWarning("{} mode override was specified alongside --developer! The override will be ignored.",
-                                selectedConfigMode);
+            Console::LogWarning("--{0} was specified alongside --developer! "
+                                "--{0} will be ignored, launch will continue in {1}",
+                                selectedConfigMode,
+                                compiledConfigMode);
         }
         else
         {
@@ -90,20 +101,22 @@ int main(int argc, char* argv[])
         }
     }
 
-    auto& editorState = Editor::GetMutableEditorState();
+    auto& mutableRuntimeInfo           = Engine::RuntimeInfo::MutableInstance();
+    mutableRuntimeInfo.IsDeveloperMode = isDeveloperMode;
 
-    Console::Log("Configuration: {}", compiledConfigMode);
-    Console::Log("Developer Mode: {}", isDeveloperMode);
+    auto editorMainResult = Editor::Internal::EditorMain(argc, argv);
 
-    editorState.currentConfigMode = compiledConfigMode;
-    editorState.isDeveloperMode   = isDeveloperMode;
+    if (std::holds_alternative<EditorExitResult>(editorMainResult))
+    {
+        return std::get<EditorExitResult>(editorMainResult).ExitCode;
+    }
+    else if (std::holds_alternative<EditorReloadResult>(editorMainResult))
+    {
+        // TODO: Trigger reload
+        Console::LogError("Reloading is not yet implemented");
+        return EXIT_SUCCESS;
+    }
 
-    auto reloadFlags = Editor::EditorMain(argc, argv);
-
-    // TODO: Handle reload scenarios:
-    // - User mode switching
-    // - Developer mode reloading
-    // - Fatal Error handling
-
-    return EXIT_SUCCESS;
+    Assert_NoEntry();
+    return EXIT_FAILURE;
 }

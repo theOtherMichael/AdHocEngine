@@ -1,10 +1,10 @@
 #pragma once
 
+#include <Engine/Core/Formatters/EnumFormatter.h>
 #include <Engine/Core/SymbolExportMacros.h>
 
 #include <fmt/format.h>
 
-#include <cstdlib>
 #include <functional>
 #include <ostream>
 #include <string>
@@ -12,6 +12,8 @@
 
 namespace Engine::Console
 {
+
+INJECT_ENUM_FORMATTER
 
 enum class LogLevel
 {
@@ -22,19 +24,19 @@ enum class LogLevel
     Trace,
 };
 
-typedef std::function<void(const LogLevel logLevel, const std::string& message)> LogEventCallback;
+using LogEventCallback = std::function<void(const LogLevel logLevel, const std::string& message)>;
 
-class LogStream
+class Logger
 {
 public:
-    LogStream(LogEventCallback callback) : LogStream(LogLevel::Log, callback) {}
+    ENGINE_API Logger(LogEventCallback callback) : Logger(LogLevel::Log, callback) {}
 
-    ENGINE_API LogStream(LogLevel verbosity, LogEventCallback callback);
+    ENGINE_API Logger(LogLevel verbosity, LogEventCallback callback);
 
-    LogStream(const LogStream&)            = delete;
-    LogStream& operator=(const LogStream&) = delete;
+    Logger(const Logger&)            = delete;
+    Logger& operator=(const Logger&) = delete;
 
-    ENGINE_API ~LogStream();
+    ENGINE_API ~Logger();
 
 private:
     LogEventCallback callback;
@@ -53,7 +55,6 @@ void LogFatal(fmt::format_string<T...> message, T&&... fmtArgs)
 {
     const auto& formattedMessage = fmt::format(message, std::forward<T&&>(fmtArgs)...);
     Internal::LogImplementation(LogLevel::Fatal, formattedMessage);
-    std::abort();
 }
 
 template <typename... T>
@@ -84,12 +85,4 @@ void LogTrace(fmt::format_string<T...> message, T&&... fmtArgs)
     Internal::LogImplementation(LogLevel::Trace, formattedMessage);
 }
 
-ENGINE_API std::ostream& operator<<(std::ostream& os, const LogLevel& logLevel);
-
 } // namespace Engine::Console
-
-template <>
-struct fmt::formatter<::Engine::Console::LogLevel> : formatter<string_view>
-{
-    ENGINE_API auto format(::Engine::Console::LogLevel logLevel, format_context& ctx) const -> format_context::iterator;
-};

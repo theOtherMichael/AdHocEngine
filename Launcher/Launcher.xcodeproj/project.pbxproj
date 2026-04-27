@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DEF2A3818093C5F33E02553 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = FD36E1725AA36EFEC3E67A7D /* resource.h */; };
+		303A4CE6450E2CA0BDBCD26B /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = FD36E1725AA36EFEC3E67A7D /* resource.h */; };
 		30BF7C1635D5EE394C6F3A57 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 		38F742AD55168D4F59E564D4 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 		46C309C8038E309170FDF5B6 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
+		A74F6689082EB676D5F18299 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = FD36E1725AA36EFEC3E67A7D /* resource.h */; };
 		CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
@@ -44,6 +47,7 @@
 		CED4DDC72D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
 		CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
 		CED4DDD12D1020D400BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
+		E4FB7F5F3A6DBEF03F514D36 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = FD36E1725AA36EFEC3E67A7D /* resource.h */; };
 		E50EA45F27CD2F678F73C0DF /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +122,7 @@
 		CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Dev/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		FD36E1725AA36EFEC3E67A7D /* resource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = resource.h; path = src/_platform/Windows/resource.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				CC798D53FC7DBE142DF8993F /* MimallocNewDeleteOverride.cpp */,
+				FD36E1725AA36EFEC3E67A7D /* resource.h */,
 			);
 			name = Windows;
 			path = src/_platform/Windows;
@@ -383,6 +389,7 @@
 			files = (
 				CED4DDD12D1020D400BAE96F /* main.cpp in Sources */,
 				E50EA45F27CD2F678F73C0DF /* MimallocNewDeleteOverride.cpp in Sources */,
+				1DEF2A3818093C5F33E02553 /* resource.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +399,7 @@
 			files = (
 				CED4DDC72D1020D300BAE96F /* main.cpp in Sources */,
 				46C309C8038E309170FDF5B6 /* MimallocNewDeleteOverride.cpp in Sources */,
+				E4FB7F5F3A6DBEF03F514D36 /* resource.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +409,7 @@
 			files = (
 				CED4DDCC2D1020D300BAE96F /* main.cpp in Sources */,
 				30BF7C1635D5EE394C6F3A57 /* MimallocNewDeleteOverride.cpp in Sources */,
+				303A4CE6450E2CA0BDBCD26B /* resource.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +419,7 @@
 			files = (
 				CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */,
 				38F742AD55168D4F59E564D4 /* MimallocNewDeleteOverride.cpp in Sources */,
+				A74F6689082EB676D5F18299 /* resource.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
