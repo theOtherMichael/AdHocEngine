@@ -85,6 +85,11 @@ xcuserdata/
 ## Built Visual Studio Code Extensions
 *.vsix
 
+# Tools
+
+## Claude Code
+.claude/
+
 # Windows =======================================
 
 ## Windows thumbnail cache files
