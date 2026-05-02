@@ -3,7 +3,18 @@
 # This script can be used to manually update the /src and /include groups in the Xcode projects.
 # Use it habitually before committing changes that involve adding, removing, or moving files and folders.
 
-require 'xcodeproj'
+begin
+  require 'xcodeproj'
+rescue LoadError
+  abort <<~MSG
+    Error: the 'xcodeproj' gem is not installed.
+
+    Install it by running:
+      gem install xcodeproj
+
+    Then re-run this script.
+  MSG
+end
 require 'fileutils'
 
 def audit_file_groups(project)
