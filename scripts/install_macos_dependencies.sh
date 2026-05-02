@@ -22,9 +22,18 @@ is_editor_dependency_install_required=false
 is_engine_tests_dependency_install_required=false
 is_editor_tests_dependency_install_required=false
 
+host_arch=$(uname -m)
+case "$host_arch" in
+    arm64)  vcpkg_arch="arm64" ;;
+    *)
+        echo "Unsupported host architecture: $host_arch"
+        exit 1
+        ;;
+esac
+
 check_manifests_for_changes() {
     if [ ! -f "$engine_manifest_path" ]; then
-        echo "Unable to locate engine manifest at \"$engine_manifest_path\"!"
+        echo "Unable to locate engine manifest at \"$engine_manifest_path\""
         return 1
     else
         echo "Checking \"$engine_manifest_path\" for changes..."
@@ -46,7 +55,7 @@ check_manifests_for_changes() {
     fi
 
     if [ ! -f "$editor_manifest_path" ]; then
-        echo "Unable to locate editor manifest at \"$editor_manifest_path\"!"
+        echo "Unable to locate editor manifest at \"$editor_manifest_path\""
         return 1
     else
         echo "Checking Editor/vcpkg.json for changes..."
@@ -68,7 +77,7 @@ check_manifests_for_changes() {
     fi
 
     if [ ! -f "$engine_tests_manifest_path" ]; then
-        echo "Unable to locate engine tests manifest at \"$engine_tests_manifest_path\"!"
+        echo "Unable to locate engine tests manifest at \"$engine_tests_manifest_path\""
         return 1
     else
         echo "Checking EngineTests/vcpkg.json for changes..."
@@ -90,7 +99,7 @@ check_manifests_for_changes() {
     fi
 
     if [ ! -f "$editor_tests_manifest_path" ]; then
-        echo "Unable to locate editor tests manifest at \"$editor_tests_manifest_path\"!"
+        echo "Unable to locate editor tests manifest at \"$editor_tests_manifest_path\""
         return 1
     else
         echo "Checking EditorTests/vcpkg.json for changes..."
@@ -112,105 +121,23 @@ check_manifests_for_changes() {
     fi
 }
 
-lipo_directory_recursive() {
-    local source_dir="$1"
-    local target_dir="$2"
-    local output_dir="$3"
-
-    echo "Searching \"$source_dir\" for binaries to merge..."
-
-    local failure_detected=false
-
-    for source_entry in "$source_dir"/*; do
-        if [ -d "$source_entry" ]; then
-            subdirectory_name=$(basename "$source_entry")
-            if ! lipo_directory_recursive "$source_entry" "$target_dir/$subdirectory_name" "$output_dir/$subdirectory_name"; then
-                echo "Failure merging binaries in \"$source_entry\"!"
-                failure_detected=true
-            fi
-
-        elif [ -f "$source_entry" ]; then
-            source_file_relative_path="${source_entry#$source_dir}"
-            target_entry="$target_dir$source_file_relative_path"
-
-            if [ -f "$target_entry" ]; then
-                file_name=$(basename "$source_entry")
-                file_extension="${file_name##*.}"
-
-                mkdir -p "$output_dir"
-                output_file="$output_dir/$(basename "$source_entry")"
-
-                if [ "$file_extension" = "a" ] || [ "$file_extension" = "dylib" ]; then
-                    if [ -L "$target_entry" ]; then
-                        symlink_origin=$(readlink "$target_entry")
-                        if ! ln -s "$symlink_origin" "$output_file"; then
-                            echo "Failed to symlink \"$output_file\"!"
-                            failure_detected=true
-                        else
-                            echo "Created symlink \"$symlink_origin\" to \"$output_file\""
-                        fi
-                    else
-                        if ! lipo -create "$source_entry" "$target_entry" -output "$output_file"; then
-                            echo "Failed to merge $file_name!"
-                            failure_detected=true
-                        else
-                            echo "Merged \"$source_entry\" and \"$target_entry\" into universal file \"$output_file\""
-                        fi
-                    fi
-                else
-                    if ! cp "$source_entry" "$output_file"; then
-                        echo "Failed to copy \"$file_name\"!"
-                        failure_detected=true
-                    else
-                        echo "Copied non-binary file \"$source_entry\""
-                    fi
-                fi
-            fi
-        fi
-    done
-
-    if [ "$failure_detected" == true ]; then
-        echo "One or more errors occurred during lipo step"
-        return 1
-    fi
-}
-
 install_dependencies_for_project_and_linkage() {
     local project_dir=$1
     local linkage_flag=$2
 
-    echo "Installing dependencies for $project_dir ($linkage_flag linkage)..."
+    local triplet="${vcpkg_arch}-osx-${linkage_flag}-adhoc"
+
+    echo "Installing dependencies for $project_dir ($triplet)..."
 
     vcpkg="./vcpkg/vcpkg"
 
-    echo "Installing for x64..."
     if ! "$vcpkg" install \
         --no-print-usage \
         --overlay-triplets="./triplets" \
-        --triplet=x64-osx-$linkage_flag-adhoc \
+        --triplet="$triplet" \
         --x-manifest-root="$project_dir" \
-        --x-install-root="$project_dir/vcpkg_installed/x64-$linkage_flag-adhoc"; then
-        echo "Error running vcpkg on triplet x64-osx-$linkage_flag-adhoc!"
-        return 1
-    fi
-
-    echo "Installing for arm64..."
-    if ! "$vcpkg" install \
-        --no-print-usage \
-        --overlay-triplets="./triplets" \
-        --triplet=arm64-osx-$linkage_flag-adhoc \
-        --x-manifest-root="$project_dir" \
-        --x-install-root="$project_dir/vcpkg_installed/arm64-$linkage_flag-adhoc"; then
-        echo "Error running vcpkg on triplet arm64-osx-$linkage_flag-adhoc!"
-        return 1
-    fi
-
-    echo "Merging into universal binaries using lipo tool..."
-    if ! lipo_directory_recursive \
-        "$project_dir/vcpkg_installed/x64-$linkage_flag-adhoc/x64-osx-$linkage_flag-adhoc" \
-        "$project_dir/vcpkg_installed/arm64-$linkage_flag-adhoc/arm64-osx-$linkage_flag-adhoc" \
-        "$project_dir/vcpkg_installed/universal-$linkage_flag-adhoc"; then
-        echo "Error during dependency merging!"
+        --x-install-root="$project_dir/vcpkg_installed/${linkage_flag}"; then
+        echo "Error running vcpkg on triplet $triplet. Aborting install"
         return 1
     fi
 }
@@ -220,7 +147,7 @@ install_dependencies_for_project_and_linkage() {
 echo "Running vcpkg install step..."
 
 if [ ! -f ./vcpkg/bootstrap-vcpkg.sh ]; then
-    echo "bootstrap-vcpkg.sh not found! Initializing Git submodules..."
+    echo "bootstrap-vcpkg.sh not found. Initializing Git submodules..."
     if ! git submodule update --init --recursive; then
         echo "Failure during git submodule update!"
         exit 1
@@ -228,7 +155,7 @@ if [ ! -f ./vcpkg/bootstrap-vcpkg.sh ]; then
 fi
 
 if [ ! -f ./vcpkg/vcpkg ]; then
-    echo "vcpkg not found! Bootstrapping vcpkg..."
+    echo "vcpkg not found. Bootstrapping vcpkg..."
     chmod +x ./vcpkg/bootstrap-vcpkg.sh
     if ! sh ./vcpkg/bootstrap-vcpkg.sh; then
         echo "vcpkg bootstrapping failed!"
@@ -237,7 +164,7 @@ if [ ! -f ./vcpkg/vcpkg ]; then
 fi
 
 if ! check_manifests_for_changes; then
-    echo "Failure while checking vcpkg manifest checksums!"
+    echo "Failure while checking vcpkg manifest checksums. Aborting install"
     exit 1
 fi
 
@@ -292,27 +219,27 @@ echo "$engine_manifest_checksum" >"$engine_checksum_path"
 engineChecksumFileContents=$(cat $engine_checksum_path)
 if [ "$engineChecksumFileContents" = "$engine_checksum_path" ]; then
     echo
-    echo Failed to write engine manifest checksum to disk! Next build may redundantly reinstall dependencies
+    echo Failed to write engine manifest checksum to disk. Next build may redundantly reinstall dependencies
 fi
 
 echo "$editor_manifest_checksum" >"$editor_checksum_path"
 editorChecksumFileContents=$(cat $editor_checksum_path)
 if [ "$editorChecksumFileContents" = "$editor_checksum_path" ]; then
-    echo Failed to write editor manifest checksum to disk! Next build may redundantly reinstall dependencies
+    echo Failed to write editor manifest checksum to disk. Next build may redundantly reinstall dependencies
 fi
 
 echo "$engine_tests_manifest_checksum" >"$engine_tests_checksum_path"
 engineTestsChecksumFileContents=$(cat $engine_tests_checksum_path)
 if [ "$engineTestsChecksumFileContents" = "$engine_tests_checksum_path" ]; then
     echo
-    echo Failed to write engine tests manifest checksum to disk! Next build may redundantly reinstall dependencies
+    echo Failed to write engine tests manifest checksum to disk. Next build may redundantly reinstall dependencies
 fi
 
 echo "$editor_tests_manifest_checksum" >"$editor_tests_checksum_path"
 editorTestsChecksumFileContents=$(cat $editor_tests_checksum_path)
 if [ "$editorTestsChecksumFileContents" = "$editor_tests_checksum_path" ]; then
-    echo Failed to write editor tests manifest checksum to disk! Next build may redundantly reinstall dependencies
+    echo Failed to write editor tests manifest checksum to disk. Next build may redundantly reinstall dependencies
 fi
 
-echo "Successfully completed vcpkg install step!"
+echo "Successfully completed vcpkg install step"
 exit 0

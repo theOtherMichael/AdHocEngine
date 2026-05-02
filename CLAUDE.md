@@ -71,7 +71,7 @@ When abstracting an entire class to the platform layer, use a `using` alias or p
 **Dependencies:**
 - vcpkg (`vcpkg.json` per project) — preferred for all new dependencies. After adding a package, link its output from `vcpkg_installed/` manually in the project settings.
 - `vendor/` — git submodules or source drops when vcpkg isn't viable. Keep the dependency's license in its folder.
-- On macOS, always link universal binaries from `vcpkg_installed/`, not the arch-specific intermediate folders.
+- On macOS, link from the `arm64-osx-{dynamic|static}-adhoc` triplet folders inside `vcpkg_installed/`.
 
 ## Naming & Style
 

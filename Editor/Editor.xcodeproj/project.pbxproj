@@ -692,9 +692,9 @@
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
@@ -723,11 +723,11 @@
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				LLVM_LTO = YES;
@@ -751,11 +751,11 @@
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				LLVM_LTO = YES_THIN;
@@ -780,11 +780,11 @@
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				LLVM_LTO = YES_THIN;
@@ -853,9 +853,9 @@
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
@@ -885,11 +885,11 @@
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				LLVM_LTO = YES;
@@ -917,11 +917,11 @@
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -950,11 +950,11 @@
 					"$(PROJECT_DIR)/include",
 					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;

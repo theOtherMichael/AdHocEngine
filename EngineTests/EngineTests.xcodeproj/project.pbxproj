@@ -172,11 +172,11 @@
 		CE4293792D2286260020748F /* vcpkg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = vcpkg.json; sourceTree = SOURCE_ROOT; };
 		CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB948622D231FA8009C272B /* EngineTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBA0C1D2D234EE1006346FC /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/universal-dynamic-adhoc/lib/libgtest.1.16.0.dylib"; sourceTree = SOURCE_ROOT; };
-		CEBA0C202D234EFE006346FC /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/universal-dynamic-adhoc/debug/lib/libgtest.1.16.0.dylib"; sourceTree = SOURCE_ROOT; };
+		CEBA0C1D2D234EE1006346FC /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libgtest.1.16.0.dylib"; sourceTree = SOURCE_ROOT; };
+		CEBA0C202D234EFE006346FC /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgtest.1.16.0.dylib"; sourceTree = SOURCE_ROOT; };
 		CEC485732DEC0923004068E1 /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC485752DEC0ACC004068E1 /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = SOURCE_ROOT; };
-		CEC485782DEC0AF8004068E1 /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "../Engine/vcpkg_installed/universal-dynamic-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEC485752DEC0ACC004068E1 /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = SOURCE_ROOT; };
+		CEC485782DEC0AF8004068E1 /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = SOURCE_ROOT; };
 		CEEE43AC2DEBC1660002EBAC /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = ../Debug/libfmtd.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEE43AD2DEBC1670002EBAC /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "../Debug/libmimalloc-debug.2.2.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEEE43B22DEBC4A10002EBAC /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = ../Dev/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -595,8 +595,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -623,8 +623,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -653,8 +653,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -683,8 +683,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/debug/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -711,8 +711,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
@@ -739,8 +739,8 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-static-adhoc/lib",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-static-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
@@ -807,9 +807,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -875,9 +875,9 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/universal-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 11.5;
@@ -908,7 +908,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -939,7 +939,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -972,7 +972,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -1005,7 +1005,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -1036,7 +1036,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
@@ -1067,7 +1067,7 @@
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/universal-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;
