@@ -18,3 +18,6 @@ public:
 };
 
 } // namespace Engine::Window
+
+extern template class Engine::SingletonBase<Engine::Window::WindowState>;
+extern template class Engine::ImmutableSingleton<Engine::Window::WindowState>;
