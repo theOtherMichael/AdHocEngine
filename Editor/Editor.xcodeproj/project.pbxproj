@@ -99,6 +99,9 @@
 		F4EFD7CC752D11388CFADF2E /* imgui_impl_glfw.h in Headers */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
 		F63BBD52C0D17A6030BE01E5 /* ImGuiSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FF7190481D87DB58857D06 /* ImGuiSetup.cpp */; };
 		F68DE008E57A5E33EC3C5ECC /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
+		F848A3EB2FA7F37F00B07ECB /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F848A3EA2FA7F37F00B07ECB /* libmimalloc.2.2.dylib */; };
+		F848A3EC2FA7F37F00B07ECB /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F848A3EA2FA7F37F00B07ECB /* libmimalloc.2.2.dylib */; };
+		F848A3EE2FA7F39600B07ECB /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F848A3ED2FA7F39600B07ECB /* libmimalloc-debug.2.2.dylib */; };
 		F86D12E0053EFCCC6AFE7FD4 /* ImGuiSetup.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
 		F9277C5B50BE822D8A035997 /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
 		FBB88B31BC9AB75142E587D8 /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
@@ -107,39 +110,6 @@
 		FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
 		FFAD93909B7EAD81316AACCD /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CEEE43C02DEBC8020002EBAC /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE43C12DEBC8650002EBAC /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE43C32DEBC87F0002EBAC /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
@@ -182,6 +152,8 @@
 		CED4DDBA2D101EB000BAE96F /* SymbolExportMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SymbolExportMacros.h; path = include/Editor/Core/SymbolExportMacros.h; sourceTree = SOURCE_ROOT; };
 		D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = imgui_impl_glfw.h; path = vendor/imgui/backends/imgui_impl_glfw.h; sourceTree = SOURCE_ROOT; };
 		E42AC8B1934894389B33942E /* imgui_widgets.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = imgui_widgets.cpp; path = vendor/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
+		F848A3EA2FA7F37F00B07ECB /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = "<group>"; };
+		F848A3ED2FA7F39600B07ECB /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +166,7 @@
 				CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */,
 				CE6FCE7B2DEAD44A006C4B6D /* GameController.framework in Frameworks */,
 				CE6FCE7C2DEAD44A006C4B6D /* Metal.framework in Frameworks */,
+				F848A3EC2FA7F37F00B07ECB /* libmimalloc.2.2.dylib in Frameworks */,
 				CE6FCE7D2DEAD44A006C4B6D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +180,7 @@
 				CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */,
 				CE6FCE772DEAD444006C4B6D /* GameController.framework in Frameworks */,
 				CE6FCE782DEAD444006C4B6D /* Metal.framework in Frameworks */,
+				F848A3EB2FA7F37F00B07ECB /* libmimalloc.2.2.dylib in Frameworks */,
 				CE6FCE792DEAD444006C4B6D /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F848A3EE2FA7F39600B07ECB /* libmimalloc-debug.2.2.dylib in Frameworks */,
 				CE46BD1B2CFC3F5D002F900C /* libEngineD.dylib in Frameworks */,
 				CE6FCE6F2DEAD3B1006C4B6D /* AppKit.framework in Frameworks */,
 				CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */,
@@ -352,6 +327,8 @@
 		CE4C6EE12B01AA500015E51A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F848A3ED2FA7F39600B07ECB /* libmimalloc-debug.2.2.dylib */,
+				F848A3EA2FA7F37F00B07ECB /* libmimalloc.2.2.dylib */,
 				CE46BD162CFC3F45002F900C /* libEngine.dylib */,
 				CE46BD1A2CFC3F5D002F900C /* libEngineD.dylib */,
 				CE46BD182CFC3F53002F900C /* libEngineDev.dylib */,
@@ -476,7 +453,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2B9A392B01853C00DE24E0 /* Build configuration list for PBXNativeTarget "Editor" */;
 			buildPhases = (
-				CEEE43C32DEBC87F0002EBAC /* Copy vcpkg Dependencies */,
 				CE2B9A322B01853C00DE24E0 /* Sources */,
 				CE2B9A332B01853C00DE24E0 /* Frameworks */,
 				A38D12D295FF860CA3D39408 /* Headers */,
@@ -494,7 +470,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE46BD052CFC33CD002F900C /* Build configuration list for PBXNativeTarget "EditorDev" */;
 			buildPhases = (
-				CEEE43C12DEBC8650002EBAC /* Copy vcpkg Dependencies */,
 				CE46BCFC2CFC33CD002F900C /* Sources */,
 				CE46BD002CFC33CD002F900C /* Frameworks */,
 				D0EF3B5C87CFE5EB549DFD42 /* Headers */,
@@ -512,7 +487,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED3D6942B12D3D700C5FB04 /* Build configuration list for PBXNativeTarget "EditorD" */;
 			buildPhases = (
-				CEEE43C02DEBC8020002EBAC /* Copy vcpkg Dependencies */,
 				CED3D68C2B12D3D700C5FB04 /* Sources */,
 				CED3D6902B12D3D700C5FB04 /* Frameworks */,
 				A96E0A5BF82B90998C11606E /* Headers */,
@@ -637,9 +611,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -744,9 +718,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -777,9 +751,9 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/vendor/imgui",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (

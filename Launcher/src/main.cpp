@@ -2,12 +2,20 @@
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 #include <Engine/Core/Formatters/EnumFormatter.h>
+#include <Engine/Core/PlatformAbstraction.h>
 #include <Engine/Core/RuntimeInfo.h>
 
 #include <fmt/format.h>
 
 #include <string_view>
 #include <variant>
+
+#if PLATFORM_HEADER_EXISTS(MimallocInjectionImpl.h)
+#include PLATFORM_HEADER(MimallocInjectionImpl.h)
+#define PLATFORM_SUPPORTS_MIMALLOC_INJECTION 1
+#else
+#define PLATFORM_SUPPORTS_MIMALLOC_INJECTION 0
+#endif
 
 namespace Console = Engine::Console;
 using Console::LogLevel;
@@ -50,9 +58,11 @@ int main(int argc, char* argv[])
 {
     auto mainLogger = Console::Logger(LogLevel::Trace, LogToStdOut);
 
-    // TODO: Reload if mi-malloc isn't injected (Mac)
-
     Console::Log("Starting Ad Hoc Launcher...");
+
+#if PLATFORM_SUPPORTS_MIMALLOC_INJECTION
+    Platform::EnsureMimallocInjected(argc, argv);
+#endif
 
 #if ADHOC_DEBUG
     const auto compiledConfigMode = ConfigurationMode::Debug;

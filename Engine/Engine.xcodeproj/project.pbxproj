@@ -19,6 +19,7 @@
 		02FC5C35D9650750D5C98DC2 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 848625C6A7FD271F7CAABAF1 /* resource.h */; };
 		03A558289B688944F905DFD6 /* MTLDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 604EA0C204033846F9DA32C0 /* MTLDevice.hpp */; };
 		03CE4123449EBBB7DFA83284 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
+		043C859EB00ACBD6E33C0AC3 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		04537595B49FBDC8BF40678D /* MTLBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 165A9AC1D6C35D0B4A17CBAE /* MTLBuffer.hpp */; };
 		0458F51CE272C799A4AAD492 /* MTLTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7E56ADE0A3F8A517046EF339 /* MTLTypes.hpp */; };
 		0483450418BC6B1495D85598 /* WindowsRuntimeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6885E202C812329E3287C85A /* WindowsRuntimeInfo.h */; };
@@ -241,6 +242,7 @@
 		405A296A20A4EEBC754B509D /* MTLIOCompressor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 632BEB5374176451BBB89BE4 /* MTLIOCompressor.hpp */; };
 		4111E2A23487FD6E2D4B2540 /* NSSharedPtr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9903875FADCEB6D3C9DA5B7C /* NSSharedPtr.hpp */; };
 		424357EDFA303B524BA4068A /* MTLArgument.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A25FCEB2312729791358087 /* MTLArgument.hpp */; };
+		426AB4F17EAAFBA5CB9A68C1 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		4312CADE834B7E35FE3625EA /* QuartzCore.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 83F5A9B64A2B5E0FE31665B6 /* QuartzCore.hpp */; };
 		431C1AF6173CFF38C73E827E /* NSEnumerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 59563588555EE52CF41BED6B /* NSEnumerator.hpp */; };
 		434699AF00C7E5CEEBA8BF58 /* NSPrivate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = D127A09EC2350155B1D03622 /* NSPrivate.hpp */; };
@@ -543,6 +545,7 @@
 		9CD73DACA64E0DDA2630089E /* MTLPixelFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 898BD20CFDF71515E8C6334E /* MTLPixelFormat.hpp */; };
 		9D5B38F97EDCA53D4011CB82 /* GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7D6304D08A18521CC818C76D /* GraphicsContext.cpp */; };
 		9E561D4D90F8FBA16727A6A3 /* MTLTexture.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 500F279F4ECBEBFA258645EC /* MTLTexture.hpp */; };
+		9EAB14E4FA11D38976669E46 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		9EBA4270BB881715BAEF5168 /* CAMetalLayer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADA88B7ED4447B3305E83780 /* CAMetalLayer.hpp */; };
 		9EC1D45ACC99ADE791838920 /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7EBCE64A6B3436933DF887F /* WindowsD3D11GraphicsContext.cpp */; };
 		9EF92DE560B12F1287707705 /* OpenGlGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D12FD7E80D0F9ABB4B23A0 /* OpenGlGraphicsContext.h */; };
@@ -552,6 +555,7 @@
 		A08516542B7D582036020933 /* MTLArgumentEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1E8EE85DEF223E7F8B65C6D7 /* MTLArgumentEncoder.hpp */; };
 		A0B4948C64967192D3146609 /* MTLTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7E56ADE0A3F8A517046EF339 /* MTLTypes.hpp */; };
 		A0CD11DDC1985877E87A2E0D /* NSData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B69FCE930BD6002CFCE6CED /* NSData.hpp */; };
+		A0E96CC75EFCE2CA6CF002C9 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		A11F360D885B050FAC40006B /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 848625C6A7FD271F7CAABAF1 /* resource.h */; };
 		A15959181ABF6AEB94C4693F /* VulkanGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1629D1266A9EB0E8637DE9AA /* VulkanGraphicsContext.h */; };
 		A1A468AF951ED1CE175DCFED /* MTLPipeline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4AB853336900718E5AF436D /* MTLPipeline.hpp */; };
@@ -701,6 +705,7 @@
 		C91FA11DC59E93E0F6676675 /* MTLFence.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FF6ADCD8D698BE6C64B8EF57 /* MTLFence.hpp */; };
 		C9DDACF2867479E9DF2E707D /* SetMainWindowIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A6BA4640FD967F1DDD1C5BD /* SetMainWindowIcon.h */; };
 		C9FBBFF3EEFC9D1E75633FA2 /* MTLAccelerationStructureCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 243FDD0CA59A2D84FCE41AEC /* MTLAccelerationStructureCommandEncoder.hpp */; };
+		CA0D391F0DA5A46AC6705899 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		CB0BBAC6959C303B72D56634 /* MTLFXTemporalScaler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8EBA63F86919A07C04BC9E41 /* MTLFXTemporalScaler.hpp */; };
 		CB1666B492443796973A0BB5 /* NSSharedPtr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9903875FADCEB6D3C9DA5B7C /* NSSharedPtr.hpp */; };
 		CB5488C4BB265368EA107EA7 /* MTLIOCommandQueue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 375D2B7159DFECDDAE844EF8 /* MTLIOCommandQueue.hpp */; };
@@ -878,21 +883,15 @@
 		F7C550B9F046CAB566271997 /* WindowsRuntimeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8849301A6F11590631875F0B /* WindowsRuntimeInfo.cpp */; };
 		F822796D2FA6E168008C7F4E /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796B2FA6E168008C7F4E /* libglfw.3.4.dylib */; };
 		F822796E2FA6E168008C7F4E /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796A2FA6E168008C7F4E /* libfmtd.11.0.2.dylib */; };
-		F822796F2FA6E168008C7F4E /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796C2FA6E168008C7F4E /* libmimalloc-debug.2.2.dylib */; };
 		F822797C2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */; };
 		F822797D2FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */; };
-		F822797E2FA6E203008C7F4E /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797B2FA6E203008C7F4E /* libmimalloc.2.2.dylib */; };
 		F822797F2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */; };
 		F82279802FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */; };
-		F82279812FA6E203008C7F4E /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797B2FA6E203008C7F4E /* libmimalloc.2.2.dylib */; };
 		F82279852FA6E246008C7F4E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279832FA6E246008C7F4E /* libglfw3.a */; };
-		F82279862FA6E246008C7F4E /* libmimalloc-debug.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279842FA6E246008C7F4E /* libmimalloc-debug.2.2.dylib */; };
 		F82279872FA6E246008C7F4E /* libfmtd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279822FA6E246008C7F4E /* libfmtd.a */; };
 		F822798B2FA6E260008C7F4E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279892FA6E260008C7F4E /* libglfw3.a */; };
-		F822798C2FA6E260008C7F4E /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822798A2FA6E260008C7F4E /* libmimalloc.2.2.dylib */; };
 		F822798D2FA6E260008C7F4E /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279882FA6E260008C7F4E /* libfmt.a */; };
 		F822798E2FA6E260008C7F4E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279892FA6E260008C7F4E /* libglfw3.a */; };
-		F822798F2FA6E260008C7F4E /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822798A2FA6E260008C7F4E /* libmimalloc.2.2.dylib */; };
 		F82279902FA6E260008C7F4E /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279882FA6E260008C7F4E /* libfmt.a */; };
 		F8A15BC919B27349AB468774 /* MTLCaptureManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BC61058742CCA16FD70E250F /* MTLCaptureManager.hpp */; };
 		F8FDEC15F76B1743BAAEF225 /* MTLSampler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CC4F4D4198E730B4EC694347 /* MTLSampler.hpp */; };
@@ -901,6 +900,7 @@
 		FABE7CE21952FCBAC17ADB3B /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 95AB97F01341C4A7F15382A1 /* WindowsPlatformHelpers.h */; };
 		FB010844C8A70B2ECFAAFFE6 /* WindowsRuntimeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6885E202C812329E3287C85A /* WindowsRuntimeInfo.h */; };
 		FB0282F8870A97AE56DE84DD /* MTLCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2C67F401B9EB23231A7D1207 /* MTLCommandEncoder.hpp */; };
+		FB48FB3BFDB4C05A5BD51234 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		FB4A508FF64CEADC735628C4 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 95AB97F01341C4A7F15382A1 /* WindowsPlatformHelpers.h */; };
 		FB6762D4A3B4231C776C9202 /* MTLFXSpatialScaler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FAA57D3294A5003AEC9FE649 /* MTLFXSpatialScaler.hpp */; };
 		FB8847BDDBEFE1A4B23DE775 /* MTLIOCommandQueue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 375D2B7159DFECDDAE844EF8 /* MTLIOCommandQueue.hpp */; };
@@ -914,39 +914,6 @@
 		FF54DCC9E297681F2DF70944 /* WindowsRuntimeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6885E202C812329E3287C85A /* WindowsRuntimeInfo.h */; };
 		FF6AFBD3E59F25E7717BFFD1 /* MTLArgumentEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1E8EE85DEF223E7F8B65C6D7 /* MTLArgumentEncoder.hpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CEEE43762DEBB86A0002EBAC /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE437A2DEBB8B50002EBAC /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE437E2DEBB8E60002EBAC /* Copy vcpkg Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			name = "Copy vcpkg Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0033E64D69B7298D45A4D63A /* D3d12GraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = D3d12GraphicsContext.h; path = include/Engine/Graphics/Contexts/D3d12GraphicsContext.h; sourceTree = SOURCE_ROOT; };
@@ -971,6 +938,7 @@
 		1A59C9BBA976E731D8FB4DC0 /* MTLLibrary.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLLibrary.hpp; path = "vendor/metal-cpp/include/Metal/MTLLibrary.hpp"; sourceTree = SOURCE_ROOT; };
 		1A91BD17210D5795B1ABD2CC /* MTLResourceStateCommandEncoder.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLResourceStateCommandEncoder.hpp; path = "vendor/metal-cpp/include/Metal/MTLResourceStateCommandEncoder.hpp"; sourceTree = SOURCE_ROOT; };
 		1CDA540E1708742CE2A4B8EE /* MTLPrivate.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLPrivate.hpp; path = "vendor/metal-cpp/include/Metal/MTLPrivate.hpp"; sourceTree = SOURCE_ROOT; };
+		1DD328D11E105A9709EE3F5B /* WindowState.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowState.cpp; path = src/Window/WindowState.cpp; sourceTree = SOURCE_ROOT; };
 		1E3D8D25332C5EDE9ED5A793 /* DynamicLibrary.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = DynamicLibrary.cpp; path = src/Core/DynamicLibrary.cpp; sourceTree = SOURCE_ROOT; };
 		1E8EE85DEF223E7F8B65C6D7 /* MTLArgumentEncoder.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLArgumentEncoder.hpp; path = "vendor/metal-cpp/include/Metal/MTLArgumentEncoder.hpp"; sourceTree = SOURCE_ROOT; };
 		21D06D19B398C5979C43614F /* NSString.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSString.hpp; path = "vendor/metal-cpp/include/Foundation/NSString.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1106,16 +1074,12 @@
 		F7EBCE64A6B3436933DF887F /* WindowsD3D11GraphicsContext.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsD3D11GraphicsContext.cpp; path = src/Graphics/Contexts/_platform/Windows/WindowsD3D11GraphicsContext.cpp; sourceTree = SOURCE_ROOT; };
 		F822796A2FA6E168008C7F4E /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = "<group>"; };
 		F822796B2FA6E168008C7F4E /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libglfw.3.4.dylib"; sourceTree = "<group>"; };
-		F822796C2FA6E168008C7F4E /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = "<group>"; };
 		F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libfmt.11.0.2.dylib"; sourceTree = "<group>"; };
 		F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libglfw.3.4.dylib"; sourceTree = "<group>"; };
-		F822797B2FA6E203008C7F4E /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = "<group>"; };
 		F82279822FA6E246008C7F4E /* libfmtd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmtd.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libfmtd.a"; sourceTree = "<group>"; };
 		F82279832FA6E246008C7F4E /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libglfw3.a"; sourceTree = "<group>"; };
-		F82279842FA6E246008C7F4E /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"; sourceTree = "<group>"; };
 		F82279882FA6E260008C7F4E /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libfmt.a"; sourceTree = "<group>"; };
 		F82279892FA6E260008C7F4E /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libglfw3.a"; sourceTree = "<group>"; };
-		F822798A2FA6E260008C7F4E /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libmimalloc.2.2.dylib"; sourceTree = "<group>"; };
 		FAA57D3294A5003AEC9FE649 /* MTLFXSpatialScaler.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLFXSpatialScaler.hpp; path = "vendor/metal-cpp/include/MetalFX/MTLFXSpatialScaler.hpp"; sourceTree = SOURCE_ROOT; };
 		FDDEA4ED7617F9174F4140E2 /* NSError.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSError.hpp; path = "vendor/metal-cpp/include/Foundation/NSError.hpp"; sourceTree = SOURCE_ROOT; };
 		FEE24B9FD5D070B7D65A47DA /* MTLBlitPass.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLBlitPass.hpp; path = "vendor/metal-cpp/include/Metal/MTLBlitPass.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1128,7 +1092,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279812FA6E203008C7F4E /* libmimalloc.2.2.dylib in Frameworks */,
 				F822797F2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */,
 				F82279802FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */,
 				CE6FCE542DEAD1A0006C4B6D /* Foundation.framework in Frameworks */,
@@ -1141,7 +1104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822798C2FA6E260008C7F4E /* libmimalloc.2.2.dylib in Frameworks */,
 				F822798D2FA6E260008C7F4E /* libfmt.a in Frameworks */,
 				F822798B2FA6E260008C7F4E /* libglfw3.a in Frameworks */,
 				CE6FCE5D2DEAD1AD006C4B6D /* Foundation.framework in Frameworks */,
@@ -1154,7 +1116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279862FA6E246008C7F4E /* libmimalloc-debug.2.2.dylib in Frameworks */,
 				F82279872FA6E246008C7F4E /* libfmtd.a in Frameworks */,
 				F82279852FA6E246008C7F4E /* libglfw3.a in Frameworks */,
 				CE6FCE572DEAD1A5006C4B6D /* Foundation.framework in Frameworks */,
@@ -1167,7 +1128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822797E2FA6E203008C7F4E /* libmimalloc.2.2.dylib in Frameworks */,
 				F822797C2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */,
 				F822797D2FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */,
 				CE6FCE532DEAD188006C4B6D /* Foundation.framework in Frameworks */,
@@ -1180,7 +1140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822798F2FA6E260008C7F4E /* libmimalloc.2.2.dylib in Frameworks */,
 				F82279902FA6E260008C7F4E /* libfmt.a in Frameworks */,
 				F822798E2FA6E260008C7F4E /* libglfw3.a in Frameworks */,
 				CE6FCE5A2DEAD1A9006C4B6D /* Foundation.framework in Frameworks */,
@@ -1193,7 +1152,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822796F2FA6E168008C7F4E /* libmimalloc-debug.2.2.dylib in Frameworks */,
 				F822796E2FA6E168008C7F4E /* libfmtd.11.0.2.dylib in Frameworks */,
 				F822796D2FA6E168008C7F4E /* libglfw.3.4.dylib in Frameworks */,
 				CE6FCE4C2DEAD140006C4B6D /* Foundation.framework in Frameworks */,
@@ -1500,6 +1458,7 @@
 			isa = PBXGroup;
 			children = (
 				A94E2A1521983C7AFEBC208A /* Internal */,
+				1DD328D11E105A9709EE3F5B /* WindowState.cpp */,
 			);
 			name = Window;
 			path = src/Window;
@@ -1681,16 +1640,12 @@
 			children = (
 				F82279882FA6E260008C7F4E /* libfmt.a */,
 				F82279892FA6E260008C7F4E /* libglfw3.a */,
-				F822798A2FA6E260008C7F4E /* libmimalloc.2.2.dylib */,
 				F82279822FA6E246008C7F4E /* libfmtd.a */,
 				F82279832FA6E246008C7F4E /* libglfw3.a */,
-				F82279842FA6E246008C7F4E /* libmimalloc-debug.2.2.dylib */,
 				F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */,
 				F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */,
-				F822797B2FA6E203008C7F4E /* libmimalloc.2.2.dylib */,
 				F822796A2FA6E168008C7F4E /* libfmtd.11.0.2.dylib */,
 				F822796B2FA6E168008C7F4E /* libglfw.3.4.dylib */,
-				F822796C2FA6E168008C7F4E /* libmimalloc-debug.2.2.dylib */,
 				CE6FCE4B2DEAD140006C4B6D /* Foundation.framework */,
 				CE6FCE4D2DEAD14A006C4B6D /* Metal.framework */,
 				CE6FCE4F2DEAD15B006C4B6D /* QuartzCore.framework */,
@@ -2567,7 +2522,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2B9A492B018B8100DE24E0 /* Build configuration list for PBXNativeTarget "Engine" */;
 			buildPhases = (
-				CEEE437E2DEBB8E60002EBAC /* Copy vcpkg Dependencies */,
 				CE2B9A422B018B8100DE24E0 /* Sources */,
 				CE2B9A432B018B8100DE24E0 /* Frameworks */,
 				D6A69A9E019238FC0DDA0560 /* Headers */,
@@ -2619,7 +2573,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE46BCDE2CFC336A002F900C /* Build configuration list for PBXNativeTarget "EngineDev" */;
 			buildPhases = (
-				CEEE437A2DEBB8B50002EBAC /* Copy vcpkg Dependencies */,
 				CE46BCD52CFC336A002F900C /* Sources */,
 				CE46BCDB2CFC336A002F900C /* Frameworks */,
 				6F6360556E2601138CD4DEDC /* Headers */,
@@ -2654,7 +2607,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CED3D6822B12D3C800C5FB04 /* Build configuration list for PBXNativeTarget "EngineD" */;
 			buildPhases = (
-				CEEE43762DEBB86A0002EBAC /* Copy vcpkg Dependencies */,
 				CED3D67A2B12D3C800C5FB04 /* Sources */,
 				CED3D6802B12D3C800C5FB04 /* Frameworks */,
 				F157258B5607883440629D1E /* Headers */,
@@ -2729,6 +2681,7 @@
 				227F7F72F2850A33BB8F16BA /* WindowsD3D11GraphicsContext.cpp in Sources */,
 				ED9E312E3F14252A3137801E /* WindowSetup.cpp in Sources */,
 				A1CCB33992D4F7A1CF149CE7 /* WindowsSetMainWindowIcon.cpp in Sources */,
+				043C859EB00ACBD6E33C0AC3 /* WindowState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2753,6 +2706,7 @@
 				945AE2936C2636D4209EB3BB /* WindowsD3D11GraphicsContext.cpp in Sources */,
 				47B2411462F9EDDE29E38589 /* WindowSetup.cpp in Sources */,
 				F4A6BB9A6C9075FA7E091DD4 /* WindowsSetMainWindowIcon.cpp in Sources */,
+				A0E96CC75EFCE2CA6CF002C9 /* WindowState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2777,6 +2731,7 @@
 				9EC1D45ACC99ADE791838920 /* WindowsD3D11GraphicsContext.cpp in Sources */,
 				1A386EDDFC4736B6868F540C /* WindowSetup.cpp in Sources */,
 				884D4A2B79058A7ADA88D139 /* WindowsSetMainWindowIcon.cpp in Sources */,
+				426AB4F17EAAFBA5CB9A68C1 /* WindowState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2801,6 +2756,7 @@
 				63B84436B8252F1E1FD12748 /* WindowsD3D11GraphicsContext.cpp in Sources */,
 				DD80F59A31BBC8FA3CF82832 /* WindowSetup.cpp in Sources */,
 				6266061E248316B6812B03A9 /* WindowsSetMainWindowIcon.cpp in Sources */,
+				FB48FB3BFDB4C05A5BD51234 /* WindowState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2825,6 +2781,7 @@
 				0DEF078AC5B9B2068D051B9C /* WindowsD3D11GraphicsContext.cpp in Sources */,
 				29CA515562BB964C991608FC /* WindowSetup.cpp in Sources */,
 				5DEA9B6B302CFCF84A7F5991 /* WindowsSetMainWindowIcon.cpp in Sources */,
+				CA0D391F0DA5A46AC6705899 /* WindowState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2849,6 +2806,7 @@
 				18718317748D4566FC225A7B /* WindowsD3D11GraphicsContext.cpp in Sources */,
 				3CA295A13181A7A0EEC3C9F9 /* WindowSetup.cpp in Sources */,
 				6B4F7A2C11593AF5BBAFCAA9 /* WindowsSetMainWindowIcon.cpp in Sources */,
+				9EAB14E4FA11D38976669E46 /* WindowState.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

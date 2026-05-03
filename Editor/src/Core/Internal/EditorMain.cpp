@@ -45,7 +45,11 @@ EditorMainResult EditorMain(int argc, char* argv[])
         const auto shutDownWindowAction = asl::finally(Engine::Window::Internal::DestroyMainWindow);
 
         // TODO: Get initial API mode from preferences
+#if ADHOC_WINDOWS
         Engine::Graphics::SetApiMode(Engine::Graphics::ApiMode::D3d11);
+#elif ADHOC_MAC
+        Engine::Graphics::SetApiMode(Engine::Graphics::ApiMode::Metal);
+#endif
         const auto shutdownGraphicsContextAction = asl::finally(Engine::Graphics::Internal::DestroyContext);
 
         InitializeImGui();
@@ -54,11 +58,12 @@ EditorMainResult EditorMain(int argc, char* argv[])
         // TODO: Should this logger really live here?
         auto consoleViewLogger = Console::Logger(Console::LogLevel::Log, Views::HandleConsoleViewLogs);
 
-        auto* const windowState = Engine::Window::WindowState::Instance().mainWindowHandle;
+        const auto& windowState  = Engine::Window::WindowState::MutableInstance();
+        auto* const windowHandle = windowState.mainWindowHandle;
 
         // TODO: Should I roll the following into an editor-wide state machine?
 
-        while (!glfwWindowShouldClose(windowState))
+        while (!glfwWindowShouldClose(windowHandle))
         {
             glfwPollEvents();
             Update();

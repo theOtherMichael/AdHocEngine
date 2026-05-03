@@ -89,7 +89,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "DYLD_INSERT_LIBRARIES"
-            value = "libmimalloc.2.2.dylib"
+            value = "$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libmimalloc.2.2.dylib"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable

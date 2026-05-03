@@ -89,11 +89,16 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "DYLD_INSERT_LIBRARIES"
-            value = "libmimalloc-debug.2.2.dylib"
+            value = "$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libmimalloc-debug.2.2.dylib"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "MIMALLOC_VERBOSE"
+            value = "1"
+            isEnabled = "NO">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "MIMALLOC_SHOW_STATS"
             value = "1"
             isEnabled = "NO">
          </EnvironmentVariable>
