@@ -5,6 +5,7 @@ import pathlib
 import sys
 import difflib
 import os
+import shutil
 
 directories = [
     "Engine/src",
@@ -95,6 +96,12 @@ def main():
         help="if specified, formatting changes are saved to file",
     )
     args = parser.parse_args()
+
+    if shutil.which("clang-format") is None:
+        print("❌ clang-format is not installed or not on PATH.")
+        print("   macOS:   brew install clang-format")
+        print("   Windows: install LLVM from https://llvm.org/releases/download.html")
+        sys.exit(1)
 
     files = list(get_source_files())
     if not files:
