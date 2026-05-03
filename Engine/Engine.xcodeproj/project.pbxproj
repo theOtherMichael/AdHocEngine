@@ -2855,126 +2855,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CE2B9A482B018B8100DE24E0 /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXCLUDED_SOURCE_FILE_NAMES = "*/_platform/Windows/*.cpp";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = fast;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"ADHOC_INTERNAL=1",
-					"ADHOC_ENGINE_PROJECT=1",
-					"ADHOC_MAC=1",
-					"ADHOC_WINODWS=0",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
-				INSTALL_PATH = "@rpath";
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
-		};
-		CE2B9A4B2B018B8100DE24E0 /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_EDITOR=1",
-					"ADHOC_DEBUG=0",
-					"ADHOC_DEV=0",
-					"ADHOC_RELEASE=1",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
-				);
-				LLVM_LTO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REEXPORTED_LIBRARY_NAMES = "fmt glfw";
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
-		};
-		CE3833D32CF0E6380004C108 /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Release";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_EDITOR=0",
-					"ADHOC_DEBUG=0",
-					"ADHOC_DEV=0",
-					"ADHOC_RELEASE=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
-				);
-				LLVM_LTO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
-		};
 		CE3833D42CF0E6380004C108 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3003,36 +2883,6 @@
 			};
 			name = ActiveArch;
 		};
-		CE3833DD2CF2FC250004C108 /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
-				ENABLE_NS_ASSERTIONS = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_EDITOR=0",
-					"DEBUG=1",
-					"ADHOC_DEBUG=1",
-					"ADHOC_DEV=0",
-					"ADHOC_RELEASE=0",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
-		};
 		CE3833DE2CF2FC250004C108 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3051,7 +2901,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
@@ -3062,29 +2912,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;
-		};
-		CE46BCDF2CFC336A002F900C /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_EDITOR=1",
-					"ADHOC_DEBUG=0",
-					"ADHOC_DEV=1",
-					"ADHOC_RELEASE=0",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
-				);
-				LLVM_LTO = YES_THIN;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REEXPORTED_LIBRARY_NAMES = "fmt glfw";
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
 		};
 		CE46BCE02CFC336A002F900C /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
@@ -3108,34 +2935,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;
-		};
-		CE46BCF52CFC3373002F900C /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Dev";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_EDITOR=0",
-					"ADHOC_DEBUG=0",
-					"ADHOC_DEV=1",
-					"ADHOC_RELEASE=0",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
-				);
-				LLVM_LTO = YES_THIN;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
 		};
 		CE46BCF62CFC3373002F900C /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
@@ -3169,6 +2968,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
@@ -3258,32 +3058,6 @@
 			};
 			name = ActiveArch;
 		};
-		CED3D6842B12D3C800C5FB04 /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Debug";
-				ENABLE_NS_ASSERTIONS = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_EDITOR=1",
-					"DEBUG=1",
-					"ADHOC_DEBUG=1",
-					"ADHOC_DEV=0",
-					"ADHOC_RELEASE=0",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(BUILT_PRODUCTS_DIR)",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
-				);
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REEXPORTED_LIBRARY_NAMES = "fmtd glfw";
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
-		};
 		CED3D6852B12D3C800C5FB04 /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3316,65 +3090,58 @@
 		CE2B9A402B018B8100DE24E0 /* Build configuration list for PBXProject "Engine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE2B9A482B018B8100DE24E0 /* Universal */,
 				CED3D66E2B12D3BC00C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CE2B9A492B018B8100DE24E0 /* Build configuration list for PBXNativeTarget "Engine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE2B9A4B2B018B8100DE24E0 /* Universal */,
 				CED3D66F2B12D3BC00C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CE3833D52CF0E6380004C108 /* Build configuration list for PBXNativeTarget "EngineStatic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE3833D32CF0E6380004C108 /* Universal */,
 				CE3833D42CF0E6380004C108 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CE3833DC2CF2FC250004C108 /* Build configuration list for PBXNativeTarget "EngineStaticD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE3833DD2CF2FC250004C108 /* Universal */,
 				CE3833DE2CF2FC250004C108 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CE46BCDE2CFC336A002F900C /* Build configuration list for PBXNativeTarget "EngineDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE46BCDF2CFC336A002F900C /* Universal */,
 				CE46BCE02CFC336A002F900C /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CE46BCF42CFC3373002F900C /* Build configuration list for PBXNativeTarget "EngineStaticDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE46BCF52CFC3373002F900C /* Universal */,
 				CE46BCF62CFC3373002F900C /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CED3D6822B12D3C800C5FB04 /* Build configuration list for PBXNativeTarget "EngineD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CED3D6842B12D3C800C5FB04 /* Universal */,
 				CED3D6852B12D3C800C5FB04 /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 /* End XCConfigurationList section */
 	};

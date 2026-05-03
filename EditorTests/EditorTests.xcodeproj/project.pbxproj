@@ -279,81 +279,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		CEBA0BAE2D234324006346FC /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)/Tests";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = fast;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"ADHOC_INTERNAL=1",
-					"ADHOC_MAC=1",
-					"ADHOC_WINDOWS=0",
-					"ADHOC_EDITOR=1",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.5;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Universal;
-		};
 		CEBA0BAF2D234324006346FC /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
@@ -420,35 +350,6 @@
 			};
 			name = ActiveArch;
 		};
-		CEBA0BDD2D2344A0006346FC /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_DEBUG=0",
-					"ADHOC_DEV=0",
-					"ADHOC_RELEASE=1",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)/../Release",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
-					"$(BUILT_PRODUCTS_DIR)/../Release",
-				);
-				LLVM_LTO = YES;
-				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EditorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-			};
-			name = Universal;
-		};
 		CEBA0BDE2D2344A0006346FC /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,45 +378,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 			};
 			name = ActiveArch;
-		};
-		CEBA0BE52D2348E5006346FC /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_NS_ASSERTIONS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"DEBUG=1",
-					"ADHOC_DEBUG=1",
-					"ADHOC_DEV=0",
-					"ADHOC_RELEASE=0",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)/../Debug",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
-					"$(BUILT_PRODUCTS_DIR)/../Debug",
-				);
-				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EditorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-			};
-			name = Universal;
 		};
 		CEBA0BE62D2348E5006346FC /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
@@ -555,43 +417,6 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 			};
 			name = ActiveArch;
-		};
-		CEBA0BEE2D234A0C006346FC /* Universal */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"ADHOC_DEBUG=0",
-					"ADHOC_DEV=1",
-					"ADHOC_RELEASE=0",
-				);
-				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(BUILT_PRODUCTS_DIR)/../Dev",
-				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
-					"$(BUILT_PRODUCTS_DIR)/../Dev",
-				);
-				LLVM_LTO = YES_THIN;
-				MARKETING_VERSION = 1.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = dev.AdHocEngine.EditorTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-			};
-			name = Universal;
 		};
 		CEBA0BEF2D234A0C006346FC /* ActiveArch */ = {
 			isa = XCBuildConfiguration;
@@ -636,38 +461,34 @@
 		CEBA0BA42D234324006346FC /* Build configuration list for PBXProject "EditorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEBA0BAE2D234324006346FC /* Universal */,
 				CEBA0BAF2D234324006346FC /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CEBA0BDC2D2344A0006346FC /* Build configuration list for PBXNativeTarget "EditorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEBA0BDD2D2344A0006346FC /* Universal */,
 				CEBA0BDE2D2344A0006346FC /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CEBA0BE42D2348E5006346FC /* Build configuration list for PBXNativeTarget "EditorTestsD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEBA0BE52D2348E5006346FC /* Universal */,
 				CEBA0BE62D2348E5006346FC /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 		CEBA0BED2D234A0C006346FC /* Build configuration list for PBXNativeTarget "EditorTestsDev" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CEBA0BEE2D234A0C006346FC /* Universal */,
 				CEBA0BEF2D234A0C006346FC /* ActiveArch */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Universal;
+			defaultConfigurationName = ActiveArch;
 		};
 /* End XCConfigurationList section */
 	};
