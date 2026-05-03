@@ -31,16 +31,6 @@
 		CE97433A2D4589DB00C7D0F7 /* libEngineStaticD.dylib in Copy Developer Binaries */ = {isa = PBXBuildFile; fileRef = CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CE97433B2D4589E400C7D0F7 /* libEngineStatic.dylib in Copy Developer Binaries */ = {isa = PBXBuildFile; fileRef = CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		CEA1AE152B01670A005AC6CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA1AE142B01670A005AC6CE /* Assets.xcassets */; };
-		CEC4853B2DEBDC1D004068E1 /* libglfw.3.4.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CEC485382DEBDC1D004068E1 /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEC4853C2DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CEC485392DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEC4853D2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib in Copy Debug Binaries */ = {isa = PBXBuildFile; fileRef = CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEC485412DEBDC37004068E1 /* libglfw.3.4.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CEC4853E2DEBDC36004068E1 /* libglfw.3.4.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEC485422DEBDC37004068E1 /* libmimalloc.2.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CEC4853F2DEBDC37004068E1 /* libmimalloc.2.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEC485432DEBDC37004068E1 /* libfmt.11.0.2.dylib in Copy Release Binaries */ = {isa = PBXBuildFile; fileRef = CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		CEC485442DEBDD8C004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */; };
-		CEC485452DEBDD9B004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */; };
-		CEC485462DEBDDC9004068E1 /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */; };
-		CEC485482DEBDDF3004068E1 /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */; };
 		CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECE76422B110ACD0098AAEB /* AppKit.framework */; };
 		CED4DDB12D101DFC00BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
 		CED4DDC72D1020D300BAE96F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CED4DDAB2D101DFB00BAE96F /* main.cpp */; };
@@ -58,9 +48,6 @@
 			dstPath = debug;
 			dstSubfolderSpec = 10;
 			files = (
-				CEC4853C2DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib in Copy Debug Binaries */,
-				CEC4853D2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib in Copy Debug Binaries */,
-				CEC4853B2DEBDC1D004068E1 /* libglfw.3.4.dylib in Copy Debug Binaries */,
 				CE9743332D45854800C7D0F7 /* libEngineD.dylib in Copy Debug Binaries */,
 				CE9743322D45854800C7D0F7 /* libEditorD.dylib in Copy Debug Binaries */,
 				CE9743032D457A0800C7D0F7 /* LauncherD in Copy Debug Binaries */,
@@ -74,9 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CEC485422DEBDC37004068E1 /* libmimalloc.2.2.dylib in Copy Release Binaries */,
-				CEC485432DEBDC37004068E1 /* libfmt.11.0.2.dylib in Copy Release Binaries */,
-				CEC485412DEBDC37004068E1 /* libglfw.3.4.dylib in Copy Release Binaries */,
 				CE9743292D45840100C7D0F7 /* libEngine.dylib in Copy Release Binaries */,
 				CE9743282D45840100C7D0F7 /* libEditor.dylib in Copy Release Binaries */,
 			);
@@ -113,13 +97,6 @@
 		CEA1AE0E2B016708005AC6CE /* Ad Hoc Editor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ad Hoc Editor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA1AE142B01670A005AC6CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = resources/Mac/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		CEA1AE1B2B01670A005AC6CE /* AdHocEngine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdHocEngine.entitlements; path = resources/Mac/AdHocEngine.entitlements; sourceTree = SOURCE_ROOT; };
-		CEC485382DEBDC1D004068E1 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Debug/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC485392DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libmimalloc-debug.2.2.dylib"; path = "Debug/libmimalloc-debug.2.2.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = Debug/libfmtd.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC4853E2DEBDC36004068E1 /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = Release/libglfw.3.4.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC4853F2DEBDC37004068E1 /* libmimalloc.2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libmimalloc.2.2.dylib; path = Release/libmimalloc.2.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Release/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = Dev/libfmt.11.0.2.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECE76422B110ACD0098AAEB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CED4DDAB2D101DFB00BAE96F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
 		FD36E1725AA36EFEC3E67A7D /* resource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = resource.h; path = src/_platform/Windows/resource.h; sourceTree = SOURCE_ROOT; };
@@ -130,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC485452DEBDD9B004068E1 /* libfmt.11.0.2.dylib in Frameworks */,
 				CE9743252D4581E900C7D0F7 /* libEngine.dylib in Frameworks */,
 				CE9743232D4581E800C7D0F7 /* libEditor.dylib in Frameworks */,
 				CE0684A32CEF1D1600031F0A /* AppKit.framework in Frameworks */,
@@ -141,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC485462DEBDDC9004068E1 /* libfmtd.11.0.2.dylib in Frameworks */,
 				CE9743312D45852500C7D0F7 /* libEngineD.dylib in Frameworks */,
 				CE97432F2D45852500C7D0F7 /* libEditorD.dylib in Frameworks */,
 				CE0684B62CF064F200031F0A /* AppKit.framework in Frameworks */,
@@ -152,7 +127,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC485482DEBDDF3004068E1 /* libfmt.11.0.2.dylib in Frameworks */,
 				CE97432D2D45850100C7D0F7 /* libEngineDev.dylib in Frameworks */,
 				CE97432B2D45850100C7D0F7 /* libEditorDev.dylib in Frameworks */,
 				CE46BD102CFC33DC002F900C /* AppKit.framework in Frameworks */,
@@ -163,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC485442DEBDD8C004068E1 /* libfmt.11.0.2.dylib in Frameworks */,
 				CE9743262D4581F000C7D0F7 /* libEngine.dylib in Frameworks */,
 				CE9743272D4581F300C7D0F7 /* libEditor.dylib in Frameworks */,
 				CECE76432B110ACE0098AAEB /* AppKit.framework in Frameworks */,
@@ -230,13 +203,6 @@
 				CE97432C2D45850100C7D0F7 /* libEngineDev.dylib */,
 				CE9743342D4589B500C7D0F7 /* libEngineStatic.dylib */,
 				CE9743382D4589CB00C7D0F7 /* libEngineStaticD.dylib */,
-				CEC4853A2DEBDC1D004068E1 /* libfmtd.11.0.2.dylib */,
-				CEC485472DEBDDF3004068E1 /* libfmt.11.0.2.dylib */,
-				CEC485402DEBDC37004068E1 /* libfmt.11.0.2.dylib */,
-				CEC485382DEBDC1D004068E1 /* libglfw.3.4.dylib */,
-				CEC4853E2DEBDC36004068E1 /* libglfw.3.4.dylib */,
-				CEC485392DEBDC1D004068E1 /* libmimalloc-debug.2.2.dylib */,
-				CEC4853F2DEBDC37004068E1 /* libmimalloc.2.2.dylib */,
 				CECE76422B110ACD0098AAEB /* AppKit.framework */,
 			);
 			name = Frameworks;
@@ -480,6 +446,10 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -504,6 +474,10 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -531,6 +505,10 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -558,6 +536,10 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -582,6 +564,10 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -606,6 +592,10 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -710,7 +700,10 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/Release";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/Release",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
@@ -816,7 +809,10 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
-				LIBRARY_SEARCH_PATHS = "$(BUILT_PRODUCTS_DIR)/Release";
+				LIBRARY_SEARCH_PATHS = (
+					"$(BUILT_PRODUCTS_DIR)/Release",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = NO;
