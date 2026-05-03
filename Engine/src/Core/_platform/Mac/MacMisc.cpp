@@ -35,7 +35,7 @@ std::string GetBacktraceImpl()
 
     if (!symbols)
     {
-        Console::LogError("Failed to retrieve stack trace symbols.");
+        Console::LogError("Stack trace symbols are unavailable.");
         return std::string();
     }
 
@@ -50,7 +50,7 @@ std::string GetBacktraceImpl()
     return output.str();
 }
 
-fs::path GetExecutablePath()
+fs::path GetExecutablePathImpl()
 {
     constexpr auto maxPathBufferSize = PATH_MAX + 1;
     char rawPathToExecutable[maxPathBufferSize];
@@ -58,14 +58,14 @@ fs::path GetExecutablePath()
     uint32_t pathBufferLength = maxPathBufferSize;
     if (_NSGetExecutablePath(rawPathToExecutable, &pathBufferLength) != 0)
     {
-        Console::LogError("Failed to get path to launcher!");
+        Console::LogError("Executable path is unavailable.");
         return fs::path();
     }
 
     char realRawPathToExecutable[maxPathBufferSize];
     if (realpath(rawPathToExecutable, realRawPathToExecutable) == NULL)
     {
-        Console::LogError("Failed to resolve real path to launcher!");
+        Console::LogError("Executable path could not be canonicalized.");
         return fs::path();
     }
     return realRawPathToExecutable;

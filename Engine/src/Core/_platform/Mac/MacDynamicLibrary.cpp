@@ -1,4 +1,4 @@
-#include <Engine/Core/_platform/Mac/MacDynamicLibrary.h>
+#include "MacDynamicLibrary.h"
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
@@ -7,31 +7,31 @@
 
 static_assert(ADHOC_MAC);
 
-namespace Console = Engine::Console;
-namespace fs      = std::filesystem;
+namespace fs = std::filesystem;
 
-void MacDynamicLibrary::Load(const std::filesystem::path& libraryPath)
+namespace Engine::Platform
+{
+
+void DynamicLibraryImplementation::Load(const fs::path& libraryPath)
 {
     libraryHandle = dlopen(libraryPath.c_str(), RTLD_LAZY | RTLD_LOCAL | RTLD_FIRST);
 
-    if (!libraryHandle)
+    if (!IsValidImpl())
         Console::LogError("Library \"{}\" could not be loaded. {}", libraryPath.string(), dlerror());
-    else
-        this->libraryPath = libraryPath;
 }
 
-void MacDynamicLibrary::Unload()
+void DynamicLibraryImplementation::Unload()
 {
-    if (libraryHandle)
+    if (IsValidImpl())
+    {
         dlclose(libraryHandle);
-
-    libraryPath.clear();
-    libraryHandle = nullptr;
+        libraryHandle = nullptr;
+    }
 }
 
-void* MacDynamicLibrary::GetRawFunctionPtr(const std::string& functionName)
+void* DynamicLibraryImplementation::GetRawFunctionPtr(const std::string& functionName) const
 {
-    if (!libraryHandle)
+    if (!IsValidImpl())
     {
         Console::LogError("Symbol \"{}\" cannot be loaded; the library handle is invalid.", functionName);
         return nullptr;
@@ -43,3 +43,5 @@ void* MacDynamicLibrary::GetRawFunctionPtr(const std::string& functionName)
 
     return functionPtr;
 }
+
+} // namespace Engine::Platform
