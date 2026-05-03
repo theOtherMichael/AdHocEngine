@@ -2929,6 +2929,10 @@
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_NAMES = "fmt glfw";
@@ -3051,6 +3055,10 @@
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REEXPORTED_LIBRARY_NAMES = "fmt glfw";
@@ -3075,6 +3083,10 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+				);
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;

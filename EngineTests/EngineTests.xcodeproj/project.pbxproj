@@ -562,9 +562,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",
@@ -599,9 +599,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib",
@@ -634,9 +634,9 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-static-adhoc/include",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/lib",

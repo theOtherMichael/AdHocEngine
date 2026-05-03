@@ -327,6 +327,8 @@
 				CE4C6EF22B01AFF30015E51A /* Copy Release Binaries */,
 				CE3370252B131E170020E817 /* Copy Debug Binaries */,
 				CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Binaries */,
+				F8A279702FA6E200008C7F4E /* Strip Build Machine RPaths */,
+				F88301792FA7B825008C9081 /* Copy vcpkg Binaries */,
 				CEA1AE0C2B016708005AC6CE /* Resources */,
 				235BF2600DCED147741AF430 /* Headers */,
 			);
@@ -386,6 +388,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F88301792FA7B825008C9081 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/debug\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/debug\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F8A279702FA6E200008C7F4E /* Strip Build Machine RPaths */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Strip Build Machine RPaths";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\n# This step is necessary because in developer mode builds,\n# absolute paths are added to rpath to find vcpkg dependencies.\n\nFRAMEWORKS=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/Contents/Frameworks\"\n[ -d \"$FRAMEWORKS\" ] || exit 0\n\nfind \"$FRAMEWORKS\" -name \"*.dylib\" | while IFS= read -r dylib; do\n    rpaths=$(otool -l \"$dylib\" 2>/dev/null \\\n        | awk '/LC_RPATH/{f=1;next} f && /path /{print $2;f=0}' \\\n        | grep -v \"^@\" || true)\n    \n    if [ -n \"$rpaths\" ]; then\n        echo \"$rpaths\" | while IFS= read -r rpath; do\n            install_name_tool -delete_rpath \"$rpath\" \"$dylib\"\n        done\n        codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n            --preserve-metadata=identifier,entitlements,flags \\\n            \"$dylib\"\n    fi\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE0684942CEF1CB800031F0A /* Sources */ = {
@@ -596,7 +637,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
@@ -620,6 +665,7 @@
 				);
 				LLVM_LTO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
 			};
 			name = ActiveArch;
