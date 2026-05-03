@@ -64,7 +64,7 @@ void InitializeImGui()
         break;
     }
 #else
-        Console::LogError("OpenGL is not yet implemented.");
+        Console::LogError("OpenGL is not supported.");
         // TODO: Throw exception
         break;
 #endif
@@ -76,7 +76,7 @@ void InitializeImGui()
         break;
     }
 #else
-        Console::LogError("Vulkan is not yet implemented.");
+        Console::LogError("Vulkan is not supported.");
         // TODO: Throw exception
         break;
 #endif
@@ -90,19 +90,19 @@ void InitializeImGui()
         break;
     }
 #else
-        Console::LogError("D3D11 is not yet implemented.");
+        Console::LogError("D3D11 is not supported.");
         // TODO: Throw exception
         break;
 #endif
     case ApiMode::D3d12:
 #if PLATFORM_SUPPORTS_D3D12
     {
-        // TODO: Implement ImGui + Vulkan
+        // TODO: Implement ImGui + D3D12
         const auto d3d12Context = Engine::Graphics::GetContextAs<Engine::Graphics::D3d12GraphicsContext>();
         break;
     }
 #else
-        Console::LogError("D3D12 is not yet implemented.");
+        Console::LogError("D3D12 is not supported.");
         // TODO: Throw exception
         break;
 #endif
@@ -114,7 +114,7 @@ void InitializeImGui()
         break;
     }
 #else
-        Console::LogError("Metal is not yet implemented.");
+        Console::LogError("Metal is not supported.");
         // TODO: Throw exception
         break;
 #endif
@@ -131,29 +131,44 @@ void ShutdownImGui()
     switch (currentApi)
     {
     case ApiMode::OpenGl:
-        Assert_True(PLATFORM_SUPPORTS_OPENGL);
+#if PLATFORM_SUPPORTS_OPENGL
         // TODO: Implement ImGui + OpenGL
-        Console::LogError("OpenGL is not yet implemented");
+        Console::LogError("OpenGL is not implemented.");
+#else
+        Console::LogError("OpenGL is not supported.");
+#endif
         break;
     case ApiMode::Vulkan:
+#if PLATFORM_SUPPORTS_VULKAN
         // TODO: Implement ImGui + Vulkan
-        Assert_True(PLATFORM_SUPPORTS_VULKAN);
-        Console::LogError("Vulkan is not yet implemented");
+        Console::LogError("Vulkan is not implemented.");
+#else
+        Console::LogError("Vulkan is not supported.");
+#endif
         break;
     case ApiMode::D3d11:
-        Assert_True(PLATFORM_SUPPORTS_D3D11);
+#if PLATFORM_SUPPORTS_D3D11
         ImGui_ImplDX11_Shutdown();
         LogImGuiContextShutdownSuccessfully(currentApi);
+#else
+        Console::LogError("D3D11 is not supported.");
+#endif
         break;
     case ApiMode::D3d12:
+#if PLATFORM_SUPPORTS_D3D12
         // TODO: Implement ImGui + D3D12
-        Assert_True(PLATFORM_SUPPORTS_D3D12);
-        Console::LogError("D3D12 is not yet implemented");
+        Console::LogError("D3D12 is not implemented.");
+#else
+        Console::LogError("D3D12 is not supported.");
+#endif
         break;
     case ApiMode::Metal:
+#if PLATFORM_SUPPORTS_METAL
         // TODO: Implement ImGui + Metal
-        Assert_True(PLATFORM_SUPPORTS_METAL);
-        Console::LogError("Metal is not yet implemented");
+        Console::LogError("Metal is not implemented.");
+#else
+        Console::LogError("Metal is not supported.");
+#endif
         break;
     case ApiMode::Uninitialized:
         [[fallthrough]];
@@ -171,23 +186,44 @@ void StartImGuiFrame()
     switch (currentApi)
     {
     case ApiMode::OpenGl:
-        Console::LogError("OpenGL is not yet implemented");
+#if PLATFORM_SUPPORTS_OPENGL
+        Console::LogError("OpenGL is not implemented.");
+#else
+        Console::LogError("OpenGL is not supported.");
+#endif
         break;
     case ApiMode::Vulkan:
-        Console::LogError("Vulkan is not yet implemented");
+#if PLATFORM_SUPPORTS_VULKAN
+        Console::LogError("Vulkan is not implemented.");
+#else
+        Console::LogError("Vulkan is not supported.");
+#endif
         break;
     case ApiMode::D3d11:
+#if PLATFORM_SUPPORTS_D3D11
     {
         ImGui_ImplDX11_NewFrame();
         ImGui_ImplGlfw_NewFrame();
         ImGui::NewFrame();
         break;
     }
+#else
+        Console::LogError("D3D11 is not supported.");
+        break;
+#endif
     case ApiMode::D3d12:
-        Console::LogError("D3D12 is not yet implemented");
+#if PLATFORM_SUPPORTS_D3D12
+        Console::LogError("D3D12 is not implemented.");
+#else
+        Console::LogError("D3D12 is not supported.");
+#endif
         break;
     case ApiMode::Metal:
-        Console::LogError("Metal is not yet implemented");
+#if PLATFORM_SUPPORTS_METAL
+        Console::LogError("Metal is not implemented.");
+#else
+        Console::LogError("Metal is not supported.");
+#endif
         break;
     case ApiMode::Uninitialized:
         [[fallthrough]];
@@ -204,12 +240,21 @@ void EndImGuiFrame()
     switch (currentApi)
     {
     case ApiMode::OpenGl:
-        Console::LogError("OpenGL is not yet implemented");
+#if PLATFORM_SUPPORTS_OPENGL
+        Console::LogError("OpenGL is not implemented.");
+#else
+        Console::LogError("OpenGL is not supported.");
+#endif
         break;
     case ApiMode::Vulkan:
-        Console::LogError("Vulkan is not yet implemented");
+#if PLATFORM_SUPPORTS_VULKAN
+        Console::LogError("Vulkan is not implemented.");
+#else
+        Console::LogError("Vulkan is not supported.");
+#endif
         break;
     case ApiMode::D3d11:
+#if PLATFORM_SUPPORTS_D3D11
     {
         auto d3d11Context = Engine::Graphics::GetD3d11Context();
 
@@ -223,11 +268,23 @@ void EndImGuiFrame()
         d3d11Context->Present();
         break;
     }
+#else
+        Console::LogError("D3D11 is not supported.");
+        break;
+#endif
     case ApiMode::D3d12:
-        Console::LogError("D3D12 is not yet implemented");
+#if PLATFORM_SUPPORTS_D3D12
+        Console::LogError("D3D12 is not implemented.");
+#else
+        Console::LogError("D3D12 is not supported.");
+#endif
         break;
     case ApiMode::Metal:
-        Console::LogError("Metal is not yet implemented");
+#if PLATFORM_SUPPORTS_METAL
+        Console::LogError("Metal is not implemented.");
+#else
+        Console::LogError("Metal is not supported.");
+#endif
         break;
     case ApiMode::Uninitialized:
         [[fallthrough]];
