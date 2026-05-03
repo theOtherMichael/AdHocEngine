@@ -343,9 +343,10 @@
 				CECE76412B110A8A0098AAEB /* Frameworks */,
 				CE4C6EF22B01AFF30015E51A /* Copy Release Binaries */,
 				CE3370252B131E170020E817 /* Copy Debug Binaries */,
-				CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Binaries */,
-				F8A279702FA6E200008C7F4E /* Strip Build Machine RPaths */,
+				F8A279702FA6E200008C7F4E /* Strip Build Machine rpaths */,
 				F88301792FA7B825008C9081 /* Copy vcpkg Binaries */,
+				CE9B3CAD2CF6F85F0079DD67 /* Copy Developer Binaries */,
+				CEFA00002FA7B826CAFE0001 /* Copy Developer Headers */,
 				CEA1AE0C2B016708005AC6CE /* Resources */,
 				235BF2600DCED147741AF430 /* Headers */,
 			);
@@ -407,6 +408,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		CEFA00002FA7B826CAFE0001 /* Copy Developer Headers */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Developer Headers";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nRESOURCES=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/Contents/Resources\"\nINCLUDE_DST=\"${RESOURCES}/developer/include\"\n\ncopy_headers() {\n    local src=\"$1\"\n    local dst=\"$2\"\n    if [ ! -d \"$src\" ]; then\n        echo \"Skipping $src (not found)\"\n        return\n    fi\n    mkdir -p \"$dst\"\n    rsync -a \"$src/\" \"$dst/\"\n}\n\ncopy_headers \"${PROJECT_DIR}/../Engine/include/Engine\" \"${INCLUDE_DST}/Engine\"\ncopy_headers \"${PROJECT_DIR}/../Engine/include/asl\"    \"${INCLUDE_DST}/asl\"\ncopy_headers \"${PROJECT_DIR}/../Editor/include/Engine\"  \"${INCLUDE_DST}/Engine\"\n";
+		};
 		F88301792FA7B825008C9081 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -425,7 +444,7 @@
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/debug\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/debug\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
 		};
-		F8A279702FA6E200008C7F4E /* Strip Build Machine RPaths */ = {
+		F8A279702FA6E200008C7F4E /* Strip Build Machine rpaths */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -434,7 +453,7 @@
 			);
 			inputPaths = (
 			);
-			name = "Strip Build Machine RPaths";
+			name = "Strip Build Machine rpaths";
 			outputFileListPaths = (
 			);
 			outputPaths = (
