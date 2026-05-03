@@ -7,70 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1612B3A57124BD8F712A8578 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
-		16A3FD8680EE492D1A8A3F11 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
+		0BB146B2F079E087578B8E8C /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
+		13FD05DE6B25F00AC08D4E23 /* ImGuiSetup.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
+		144A296198FD5BD0FE4D90E3 /* imuserconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
 		1B8B0C340EEF41C8EB5041C8 /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
 		1F7FAF8130C18A76966C46EC /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
 		2200013895A3D17897964F97 /* EditorMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACE790CFB0FD73F33904 /* EditorMain.cpp */; };
 		2311AC816C6711593318D752 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
-		28E65BC19303D7DE83DB53AC /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
-		2CF5765C3B4528B7BA22DE93 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
+		23B465BC4BE5E92A67B85210 /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
 		2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
-		2F1A1EBB055CB949E5721359 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
 		35CBF7114FD4B78F4A2DA3FE /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
-		36B3437AC109A67CD6706F8C /* ImGuiSetup.h in Sources */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
-		3A19AF58181FA29898A37264 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
-		3A4541678E0CFE7B35FAA834 /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
+		372F646A0ED95AC021CD3B2A /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
+		3CC0563FBE6535978F08EBBF /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
 		3E7ECCBAF0882943CDE5C7E7 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
+		3FB9D8698E271E912BF5A699 /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
 		40C0845091C2DA3F2759F234 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation"; }; };
-		42304BE9681285E4D7882000 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
+		43A63B16CE96B5CF4BA2C33A /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
 		443DD2D82AD98474ABFF5703 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
 		445858AB43A6B56F303EDDC8 /* EditorMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACE790CFB0FD73F33904 /* EditorMain.cpp */; };
 		447FC7AFB17FF96A05BD221D /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
+		45596AE1F07A94CF6425E40C /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
+		485463DE79E4050EA76C8E90 /* imuserconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
+		4BCBFC89CE0E3F50FF9C19F7 /* ConsoleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
 		52658E697343CA8B864CDE6F /* imgui_impl_osx.mm in Sources */ = {isa = PBXBuildFile; fileRef = B66898F2FC9DC335E3E47E51 /* imgui_impl_osx.mm */; };
 		527EFE0085F5DAF3E36E14D8 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
-		5EB6F00C3747507FFFC0ABFC /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
+		5499CB2F089D82674650B692 /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
+		54B35FDE243D51B66BC69607 /* EditorMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
+		59B541F764DCBA80ED91FDBD /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
+		5AFDDED7EC17061AD59A8F09 /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
 		60B275B9D2AD6E31C321BAC3 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
-		60FD840BA182CC5160C36846 /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
 		613E709CBE4B7AEA1E3C8B95 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
-		637074F57FC3A3677401C117 /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
-		653EF44F1F3D06C900D272F8 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
 		654F3A5E2F79F1AE4BF323A5 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
-		66AE9598B876B90565677D11 /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
-		749C1734FD82D005E66EBC05 /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
-		7DEAC539DBA6CCA0AC8434B7 /* EditorMain.h in Sources */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
+		67215B2F30A946D53CE0BA3A /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
+		678C3E9D042BB72528B08135 /* ImGuiSetup.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
+		6B754F0C9B6AB774FAD5612A /* imuserconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
+		6EF149EB3C704A51B9AC3B53 /* imgui_impl_glfw.h in Headers */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
+		763F22D7CF0258CA0B241894 /* imgui_impl_glfw.h in Headers */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
 		7EC3BDFF0D7F1D4ACE27DB6A /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
-		843AA1C6DB4A45727DE02C57 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
 		844CD25CCAEBEF870BD3437D /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
-		88E054F2A5EC804BACE05201 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
-		8BB32F4D99EEC0EC6E85C470 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
-		8D892D3F2D1C977A16835616 /* imstb_textedit.h in Sources */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
+		855D42679A136671AF0AA1D7 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
+		8665B0C3FCF3342A67051D8A /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
 		8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
-		92854E6365E3D4041ACEBFC9 /* imgui_impl_osx.h in Sources */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
-		92FAD969C29EBAE4EFBF86F8 /* ImGuiSetup.h in Sources */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
 		95D2EA3AE4B0DFE29A88D2D4 /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation"; }; };
 		96371A6771C7AE55CD7A2C3F /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		96627F791322407DC2FF60BE /* ImGuiSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FF7190481D87DB58857D06 /* ImGuiSetup.cpp */; };
 		96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
 		9B604853321B6CE0CB55716E /* imgui_impl_glfw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D4276CBB8BF0E1D67FD2631 /* imgui_impl_glfw.cpp */; settings = {COMPILER_FLAGS = "-Wno-documentation"; }; };
-		9BF7787454419099A7E27B51 /* imstb_rectpack.h in Sources */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
-		9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = 289131C67943EE01B31D399A /* imuserconfig.h */; };
-		9F9D69905DDEAE7A08B89EAA /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
-		AA7439FC317F552681E6FE4F /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
-		B1C826344FA1AFF2C5BEAD5F /* EditorMain.h in Sources */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
-		B35FA429874BAE5D0AA21D94 /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
+		9E2A15299F1AE558169ABD14 /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
+		A5983B37C74FD8D8F28E6E94 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
+		A86F38D7ACBCA429F428A33A /* EditorMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
+		B083506AF480128CF2371E2E /* EditorMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
+		B470D9F7BF8668BFC2DE2CF0 /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
 		B7506E7533547FC67DA52DE9 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		B7555F34C2E451B5655B89ED /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
-		B83A8AEEE521DF1AA3F0CCF3 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
-		B92BC6D67EF8802689BBDCE9 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
 		B981D7646BBFE6DDFF11AC22 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
 		BBACD102982258B501D9D593 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
-		BE865F9808BFCB2F743ED0F2 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
 		BFDE491CA62D21F6B72F1874 /* ImGuiSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FF7190481D87DB58857D06 /* ImGuiSetup.cpp */; };
 		C2AA1DD70AE5EE5A3AD5964C /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
-		C36A9DFC736547950FB74FA7 /* imgui_impl_metal.h in Sources */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
-		C4410B06D34280D80034D310 /* imgui_internal.h in Sources */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
-		C83DBD3F715290B9AC8A0796 /* imconfig.h in Sources */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
+		C2AEB068CD654679734EE511 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
+		C94BCE6614AE2CDFA1B6EFBE /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
+		C9C15A4FBBA36E4844F1B7B3 /* ConsoleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
 		CE327B0F2B1593400067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE327B102B15934A0067EF26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
 		CE46BD042CFC33CD002F900C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE327B0E2B1593400067EF26 /* Foundation.framework */; };
@@ -98,23 +94,27 @@
 		CEEE43CF2DEBCA810002EBAC /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43CC2DEBCA800002EBAC /* libmimalloc.2.2.dylib */; };
 		CEEE43D32DEBCAAD0002EBAC /* libmimalloc.2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43D02DEBCAAC0002EBAC /* libmimalloc.2.2.dylib */; };
 		CEEE43D42DEBCAAD0002EBAC /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEE43D12DEBCAAC0002EBAC /* libglfw.3.4.dylib */; };
-		D0964E59F0C29E5AC1630010 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
-		D1A35E8D3C62478465C2B226 /* resource.h in Sources */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
-		D48466AD3BF68607DBC3B8BC /* EditorMain.h in Sources */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
+		D030EA6F15A0A06657AE935D /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
 		D846746CFF0A42105CB3D234 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
-		D97409EDB7163B2196CE7F88 /* imgui_impl_glfw.h in Sources */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
-		DB5912B59D6216A7DA534351 /* imstb_truetype.h in Sources */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
+		DDE515E8746153B670994DC4 /* ConsoleView.h in Headers */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
+		DE11EDA680EAFC5B6A9B55FE /* imstb_rectpack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B039FC7602243EA9991CDE2 /* imstb_rectpack.h */; };
 		DF4390B90BB7AE79467DF845 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 091BB705E5A35F0113A0A005 /* MimallocNewDeleteOverride.cpp */; };
 		E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
 		E1410A0BEEA1971144D8FD89 /* imgui_draw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2227573260E64F539DCAD /* imgui_draw.cpp */; };
 		E6C327F7AB949C15F0F3CC3D /* EditorMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2DFAACE790CFB0FD73F33904 /* EditorMain.cpp */; };
-		E78BB3583E31106A5151C392 /* ConsoleView.h in Sources */ = {isa = PBXBuildFile; fileRef = 507F622CA44AA1C3DD7CBAF6 /* ConsoleView.h */; };
-		EC17ED729B02172A41E0A4A3 /* ImGuiSetup.h in Sources */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
 		EDDE8849890B7E377FABA808 /* ConsoleView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCDEDEA8DC9FFC9AC3E22AE /* ConsoleView.cpp */; };
 		F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
-		F24A4683DDA53A54054AA8FB /* imgui.h in Sources */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
+		F3CC46BDECD3B315D6F0B217 /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
+		F4EFD7CC752D11388CFADF2E /* imgui_impl_glfw.h in Headers */ = {isa = PBXBuildFile; fileRef = D9BC8876E989661EA045EDA5 /* imgui_impl_glfw.h */; };
 		F63BBD52C0D17A6030BE01E5 /* ImGuiSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FF7190481D87DB58857D06 /* ImGuiSetup.cpp */; };
+		F68DE008E57A5E33EC3C5ECC /* imstb_textedit.h in Headers */ = {isa = PBXBuildFile; fileRef = C61ED2DFC8299631067EED02 /* imstb_textedit.h */; };
+		F86D12E0053EFCCC6AFE7FD4 /* ImGuiSetup.h in Headers */ = {isa = PBXBuildFile; fileRef = 89A2B5E4044C38FCC26B1079 /* ImGuiSetup.h */; };
+		F9277C5B50BE822D8A035997 /* imstb_truetype.h in Headers */ = {isa = PBXBuildFile; fileRef = 41ED785FD8BD39060931E2EA /* imstb_truetype.h */; };
+		FBB88B31BC9AB75142E587D8 /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
+		FC032D1F01AA9C38F68E7145 /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
+		FC04C0B66B9776D3DCFEF08B /* imconfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B07611032F76969968DFE5 /* imconfig.h */; };
 		FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 961F49B2A1FB826F2103F49F /* DllMain.cpp */; };
+		FFAD93909B7EAD81316AACCD /* imgui.h in Headers */ = {isa = PBXBuildFile; fileRef = 166D4FFA99E174F68310686E /* imgui.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -441,6 +441,72 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A38D12D295FF860CA3D39408 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCBFC89CE0E3F50FF9C19F7 /* ConsoleView.h in Headers */,
+				144A296198FD5BD0FE4D90E3 /* imuserconfig.h in Headers */,
+				F4EFD7CC752D11388CFADF2E /* imgui_impl_glfw.h in Headers */,
+				3FB9D8698E271E912BF5A699 /* imgui_impl_metal.h in Headers */,
+				67215B2F30A946D53CE0BA3A /* imgui_impl_osx.h in Headers */,
+				FBB88B31BC9AB75142E587D8 /* imconfig.h in Headers */,
+				FFAD93909B7EAD81316AACCD /* imgui.h in Headers */,
+				5AFDDED7EC17061AD59A8F09 /* imgui_internal.h in Headers */,
+				9E2A15299F1AE558169ABD14 /* imstb_rectpack.h in Headers */,
+				F68DE008E57A5E33EC3C5ECC /* imstb_textedit.h in Headers */,
+				45596AE1F07A94CF6425E40C /* imstb_truetype.h in Headers */,
+				B083506AF480128CF2371E2E /* EditorMain.h in Headers */,
+				C2AEB068CD654679734EE511 /* resource.h in Headers */,
+				678C3E9D042BB72528B08135 /* ImGuiSetup.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A96E0A5BF82B90998C11606E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9C15A4FBBA36E4844F1B7B3 /* ConsoleView.h in Headers */,
+				485463DE79E4050EA76C8E90 /* imuserconfig.h in Headers */,
+				6EF149EB3C704A51B9AC3B53 /* imgui_impl_glfw.h in Headers */,
+				59B541F764DCBA80ED91FDBD /* imgui_impl_metal.h in Headers */,
+				3CC0563FBE6535978F08EBBF /* imgui_impl_osx.h in Headers */,
+				FC04C0B66B9776D3DCFEF08B /* imconfig.h in Headers */,
+				5499CB2F089D82674650B692 /* imgui.h in Headers */,
+				FC032D1F01AA9C38F68E7145 /* imgui_internal.h in Headers */,
+				8665B0C3FCF3342A67051D8A /* imstb_rectpack.h in Headers */,
+				0BB146B2F079E087578B8E8C /* imstb_textedit.h in Headers */,
+				F9277C5B50BE822D8A035997 /* imstb_truetype.h in Headers */,
+				54B35FDE243D51B66BC69607 /* EditorMain.h in Headers */,
+				A5983B37C74FD8D8F28E6E94 /* resource.h in Headers */,
+				13FD05DE6B25F00AC08D4E23 /* ImGuiSetup.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0EF3B5C87CFE5EB549DFD42 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDE515E8746153B670994DC4 /* ConsoleView.h in Headers */,
+				6B754F0C9B6AB774FAD5612A /* imuserconfig.h in Headers */,
+				763F22D7CF0258CA0B241894 /* imgui_impl_glfw.h in Headers */,
+				B470D9F7BF8668BFC2DE2CF0 /* imgui_impl_metal.h in Headers */,
+				F3CC46BDECD3B315D6F0B217 /* imgui_impl_osx.h in Headers */,
+				372F646A0ED95AC021CD3B2A /* imconfig.h in Headers */,
+				43A63B16CE96B5CF4BA2C33A /* imgui.h in Headers */,
+				D030EA6F15A0A06657AE935D /* imgui_internal.h in Headers */,
+				DE11EDA680EAFC5B6A9B55FE /* imstb_rectpack.h in Headers */,
+				C94BCE6614AE2CDFA1B6EFBE /* imstb_textedit.h in Headers */,
+				23B465BC4BE5E92A67B85210 /* imstb_truetype.h in Headers */,
+				A86F38D7ACBCA429F428A33A /* EditorMain.h in Headers */,
+				855D42679A136671AF0AA1D7 /* resource.h in Headers */,
+				F86D12E0053EFCCC6AFE7FD4 /* ImGuiSetup.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		CE2B9A342B01853C00DE24E0 /* Editor */ = {
 			isa = PBXNativeTarget;
@@ -449,6 +515,7 @@
 				CEEE43C32DEBC87F0002EBAC /* Copy vcpkg Dependencies */,
 				CE2B9A322B01853C00DE24E0 /* Sources */,
 				CE2B9A332B01853C00DE24E0 /* Frameworks */,
+				A38D12D295FF860CA3D39408 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -466,6 +533,7 @@
 				CEEE43C12DEBC8650002EBAC /* Copy vcpkg Dependencies */,
 				CE46BCFC2CFC33CD002F900C /* Sources */,
 				CE46BD002CFC33CD002F900C /* Frameworks */,
+				D0EF3B5C87CFE5EB549DFD42 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -483,6 +551,7 @@
 				CEEE43C02DEBC8020002EBAC /* Copy vcpkg Dependencies */,
 				CED3D68C2B12D3D700C5FB04 /* Sources */,
 				CED3D6902B12D3D700C5FB04 /* Frameworks */,
+				A96E0A5BF82B90998C11606E /* Headers */,
 			);
 			buildRules = (
 			);
@@ -534,30 +603,16 @@
 				FC1FFF83015F9EFFFABFD5BD /* DllMain.cpp in Sources */,
 				96D404A3000A08C04384E928 /* MimallocNewDeleteOverride.cpp in Sources */,
 				2311AC816C6711593318D752 /* ConsoleView.cpp in Sources */,
-				88E054F2A5EC804BACE05201 /* ConsoleView.h in Sources */,
-				749C1734FD82D005E66EBC05 /* imuserconfig.h in Sources */,
 				95D2EA3AE4B0DFE29A88D2D4 /* imgui_impl_glfw.cpp in Sources */,
-				3A19AF58181FA29898A37264 /* imgui_impl_glfw.h in Sources */,
-				9F9D69905DDEAE7A08B89EAA /* imgui_impl_metal.h in Sources */,
 				60B275B9D2AD6E31C321BAC3 /* imgui_impl_metal.mm in Sources */,
-				92854E6365E3D4041ACEBFC9 /* imgui_impl_osx.h in Sources */,
 				1B8B0C340EEF41C8EB5041C8 /* imgui_impl_osx.mm in Sources */,
-				B83A8AEEE521DF1AA3F0CCF3 /* imconfig.h in Sources */,
 				844CD25CCAEBEF870BD3437D /* imgui.cpp in Sources */,
-				B35FA429874BAE5D0AA21D94 /* imgui.h in Sources */,
 				96371A6771C7AE55CD7A2C3F /* imgui_demo.cpp in Sources */,
 				E1410A0BEEA1971144D8FD89 /* imgui_draw.cpp in Sources */,
-				C4410B06D34280D80034D310 /* imgui_internal.h in Sources */,
 				D846746CFF0A42105CB3D234 /* imgui_tables.cpp in Sources */,
 				443DD2D82AD98474ABFF5703 /* imgui_widgets.cpp in Sources */,
-				3A4541678E0CFE7B35FAA834 /* imstb_rectpack.h in Sources */,
-				8D892D3F2D1C977A16835616 /* imstb_textedit.h in Sources */,
-				DB5912B59D6216A7DA534351 /* imstb_truetype.h in Sources */,
-				7DEAC539DBA6CCA0AC8434B7 /* EditorMain.h in Sources */,
 				445858AB43A6B56F303EDDC8 /* EditorMain.cpp in Sources */,
 				96627F791322407DC2FF60BE /* ImGuiSetup.cpp in Sources */,
-				843AA1C6DB4A45727DE02C57 /* resource.h in Sources */,
-				EC17ED729B02172A41E0A4A3 /* ImGuiSetup.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,30 +623,16 @@
 				F017B5A779C91F01CD8A94A5 /* DllMain.cpp in Sources */,
 				DF4390B90BB7AE79467DF845 /* MimallocNewDeleteOverride.cpp in Sources */,
 				8F49CD5507A6B4644D11FB77 /* ConsoleView.cpp in Sources */,
-				16A3FD8680EE492D1A8A3F11 /* ConsoleView.h in Sources */,
-				637074F57FC3A3677401C117 /* imuserconfig.h in Sources */,
 				9B604853321B6CE0CB55716E /* imgui_impl_glfw.cpp in Sources */,
-				42304BE9681285E4D7882000 /* imgui_impl_glfw.h in Sources */,
-				BE865F9808BFCB2F743ED0F2 /* imgui_impl_metal.h in Sources */,
 				BBACD102982258B501D9D593 /* imgui_impl_metal.mm in Sources */,
-				66AE9598B876B90565677D11 /* imgui_impl_osx.h in Sources */,
 				52658E697343CA8B864CDE6F /* imgui_impl_osx.mm in Sources */,
-				1612B3A57124BD8F712A8578 /* imconfig.h in Sources */,
 				7EC3BDFF0D7F1D4ACE27DB6A /* imgui.cpp in Sources */,
-				8BB32F4D99EEC0EC6E85C470 /* imgui.h in Sources */,
 				B7506E7533547FC67DA52DE9 /* imgui_demo.cpp in Sources */,
 				3E7ECCBAF0882943CDE5C7E7 /* imgui_draw.cpp in Sources */,
-				AA7439FC317F552681E6FE4F /* imgui_internal.h in Sources */,
 				654F3A5E2F79F1AE4BF323A5 /* imgui_tables.cpp in Sources */,
 				613E709CBE4B7AEA1E3C8B95 /* imgui_widgets.cpp in Sources */,
-				9BF7787454419099A7E27B51 /* imstb_rectpack.h in Sources */,
-				2F1A1EBB055CB949E5721359 /* imstb_textedit.h in Sources */,
-				653EF44F1F3D06C900D272F8 /* imstb_truetype.h in Sources */,
-				B1C826344FA1AFF2C5BEAD5F /* EditorMain.h in Sources */,
 				2200013895A3D17897964F97 /* EditorMain.cpp in Sources */,
 				F63BBD52C0D17A6030BE01E5 /* ImGuiSetup.cpp in Sources */,
-				D0964E59F0C29E5AC1630010 /* resource.h in Sources */,
-				92FAD969C29EBAE4EFBF86F8 /* ImGuiSetup.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,30 +643,16 @@
 				E081865C0B665757BF9687C9 /* DllMain.cpp in Sources */,
 				2D27E32425B860E174415651 /* MimallocNewDeleteOverride.cpp in Sources */,
 				EDDE8849890B7E377FABA808 /* ConsoleView.cpp in Sources */,
-				E78BB3583E31106A5151C392 /* ConsoleView.h in Sources */,
-				9F956B13D5E192E8FAD49E9B /* imuserconfig.h in Sources */,
 				40C0845091C2DA3F2759F234 /* imgui_impl_glfw.cpp in Sources */,
-				D97409EDB7163B2196CE7F88 /* imgui_impl_glfw.h in Sources */,
-				C36A9DFC736547950FB74FA7 /* imgui_impl_metal.h in Sources */,
 				B981D7646BBFE6DDFF11AC22 /* imgui_impl_metal.mm in Sources */,
-				5EB6F00C3747507FFFC0ABFC /* imgui_impl_osx.h in Sources */,
 				447FC7AFB17FF96A05BD221D /* imgui_impl_osx.mm in Sources */,
-				C83DBD3F715290B9AC8A0796 /* imconfig.h in Sources */,
 				C2AA1DD70AE5EE5A3AD5964C /* imgui.cpp in Sources */,
-				F24A4683DDA53A54054AA8FB /* imgui.h in Sources */,
 				B7555F34C2E451B5655B89ED /* imgui_demo.cpp in Sources */,
 				527EFE0085F5DAF3E36E14D8 /* imgui_draw.cpp in Sources */,
-				60FD840BA182CC5160C36846 /* imgui_internal.h in Sources */,
 				1F7FAF8130C18A76966C46EC /* imgui_tables.cpp in Sources */,
 				35CBF7114FD4B78F4A2DA3FE /* imgui_widgets.cpp in Sources */,
-				28E65BC19303D7DE83DB53AC /* imstb_rectpack.h in Sources */,
-				2CF5765C3B4528B7BA22DE93 /* imstb_textedit.h in Sources */,
-				B92BC6D67EF8802689BBDCE9 /* imstb_truetype.h in Sources */,
-				D48466AD3BF68607DBC3B8BC /* EditorMain.h in Sources */,
 				E6C327F7AB949C15F0F3CC3D /* EditorMain.cpp in Sources */,
 				BFDE491CA62D21F6B72F1874 /* ImGuiSetup.cpp in Sources */,
-				D1A35E8D3C62478465C2B226 /* resource.h in Sources */,
-				36B3437AC109A67CD6706F8C /* ImGuiSetup.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
