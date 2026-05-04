@@ -58,6 +58,12 @@ VENDOR_PACKAGES = {
       },
     },
   ],
+  'EngineTests' => [
+    { root: 'vendor/google-toolbox-for-mac', files: ['GTMGoogleTestRunner.mm'] },
+  ],
+  'EditorTests' => [
+    { root: 'vendor/google-toolbox-for-mac', files: ['GTMGoogleTestRunner.mm'] },
+  ],
 }.freeze
 
 PROJECTS_TO_UPDATE = %w[Engine EngineTests Editor EditorTests Launcher].freeze
