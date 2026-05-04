@@ -623,6 +623,7 @@
 				);
 				LLVM_LTO = YES_THIN;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_NAMES = mimalloc;
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;
@@ -729,6 +730,7 @@
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 				);
 				LLVM_LTO = YES;
+				REEXPORTED_LIBRARY_NAMES = mimalloc;
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;
@@ -763,6 +765,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REEXPORTED_LIBRARY_NAMES = "mimalloc-debug";
 				SKIP_INSTALL = YES;
 			};
 			name = ActiveArch;

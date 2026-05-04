@@ -63,69 +63,6 @@
 		F82279AE2FA6E570008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A92FA6E570008C7F4E /* libgmock.1.16.0.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		CEBA0C222D235090006346FC /* Copy Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBA0C242D2350C2006346FC /* Copy Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBA0C262D2350DD006346FC /* Copy Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE436D2DEBAC490002EBAC /* Copy Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE436F2DEBAC620002EBAC /* Copy Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEEE43712DEBAC710002EBAC /* Copy Dependencies */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy Dependencies";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		005E0ED5AFDE3C326B330B8B /* FinallyTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FinallyTests.cpp; path = src/asl/FinallyTests.cpp; sourceTree = SOURCE_ROOT; };
 		8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/Core/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
@@ -329,9 +266,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE3D19182D23A07A00F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTests" */;
 			buildPhases = (
-				CEEE43712DEBAC710002EBAC /* Copy Dependencies */,
 				CE3D19102D23A07A00F47CDF /* Sources */,
 				CEE4330D2D23B4E20095A215 /* Frameworks */,
+				F859E9F52FA827390009B5A2 /* Copy vcpkg Dependencies */,
 			);
 			buildRules = (
 			);
@@ -346,9 +283,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE3D19252D23A0DB00F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTestsD" */;
 			buildPhases = (
-				CEEE436D2DEBAC490002EBAC /* Copy Dependencies */,
 				CE3D191D2D23A0DB00F47CDF /* Sources */,
 				CEE433092D23B4AE0095A215 /* Frameworks */,
+				F859E9F32FA827110009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -363,9 +300,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE3D19322D23A0E600F47CDF /* Build configuration list for PBXNativeTarget "EngineStaticTestsDev" */;
 			buildPhases = (
-				CEEE436F2DEBAC620002EBAC /* Copy Dependencies */,
 				CE3D192A2D23A0E600F47CDF /* Sources */,
 				CEE4330B2D23B4D80095A215 /* Frameworks */,
+				F859E9F42FA8272B0009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -380,9 +317,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE4293752D2283040020748F /* Build configuration list for PBXNativeTarget "EngineTests" */;
 			buildPhases = (
-				CEBA0C222D235090006346FC /* Copy Dependencies */,
 				CE42936D2D2283040020748F /* Sources */,
 				CE42936E2D2283040020748F /* Frameworks */,
+				F859E9F22FA821110009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -397,9 +334,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEB948492D2315BA009C272B /* Build configuration list for PBXNativeTarget "EngineTestsD" */;
 			buildPhases = (
-				CEBA0C242D2350C2006346FC /* Copy Dependencies */,
 				CEB948382D2315BA009C272B /* Sources */,
 				CEB948462D2315BA009C272B /* Frameworks */,
+				F859E9F02FA820230009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -414,9 +351,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEB9485F2D231FA8009C272B /* Build configuration list for PBXNativeTarget "EngineTestsDev" */;
 			buildPhases = (
-				CEBA0C262D2350DD006346FC /* Copy Dependencies */,
 				CEB9484E2D231FA8009C272B /* Sources */,
 				CEB9485C2D231FA8009C272B /* Frameworks */,
+				F859E9F12FA820EA0009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -463,6 +400,117 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F859E9F02FA820230009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9F12FA820EA0009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9F22FA821110009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9F32FA827110009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"static/arm64-osx-static-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9F42FA8272B0009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"static/arm64-osx-static-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9F52FA827390009B5A2 /* Copy vcpkg Dependencies */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Dependencies";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"static/arm64-osx-static-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE3D19102D23A07A00F47CDF /* Sources */ = {
@@ -742,6 +790,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LLVM_LTO = YES;
@@ -775,6 +824,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LLVM_LTO = YES_THIN;
@@ -806,6 +856,7 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LLVM_LTO = YES_THIN;

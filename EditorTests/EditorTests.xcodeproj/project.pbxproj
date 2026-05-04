@@ -21,39 +21,6 @@
 		F82279B82FA6E6AE008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279B32FA6E6AE008C7F4E /* libgmock.1.16.0.dylib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		CEBA0C282D23510E006346FC /* Copy gtest */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy gtest";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBA0C2A2D235131006346FC /* Copy gtest */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy gtest";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CEBA0C2C2D235144006346FC /* Copy gtest */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Copy gtest";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		19AA86E739F48986C938A777 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		CE3D18F52D2391AE00F47CDF /* libEditor.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libEditor.dylib; path = ../Release/libEditor.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,9 +137,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEBA0BDC2D2344A0006346FC /* Build configuration list for PBXNativeTarget "EditorTests" */;
 			buildPhases = (
-				CEBA0C282D23510E006346FC /* Copy gtest */,
 				CEBA0BD42D2344A0006346FC /* Sources */,
 				CEBA0BD52D2344A0006346FC /* Frameworks */,
+				F859E9EF2FA81F980009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -187,9 +154,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEBA0BE42D2348E5006346FC /* Build configuration list for PBXNativeTarget "EditorTestsD" */;
 			buildPhases = (
-				CEBA0C2A2D235131006346FC /* Copy gtest */,
 				CEBA0BE02D2348E5006346FC /* Sources */,
 				CEBA0BE22D2348E5006346FC /* Frameworks */,
+				F859E9ED2FA81EBD0009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -204,9 +171,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEBA0BED2D234A0C006346FC /* Build configuration list for PBXNativeTarget "EditorTestsDev" */;
 			buildPhases = (
-				CEBA0C2C2D235144006346FC /* Copy gtest */,
 				CEBA0BE92D234A0C006346FC /* Sources */,
 				CEBA0BEB2D234A0C006346FC /* Frameworks */,
+				F859E9EE2FA81F5C0009B5A2 /* Copy vcpkg Binaries */,
 			);
 			buildRules = (
 			);
@@ -250,6 +217,63 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F859E9ED2FA81EBD0009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/debug/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9EE2FA81F5C0009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+		F859E9EF2FA81F980009B5A2 /* Copy vcpkg Binaries */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy vcpkg Binaries";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nset -euo pipefail\n\nTRIPLET_DIR=\"dynamic/arm64-osx-dynamic-adhoc\"\n\nCOPY_JOBS=(\n    \"${PROJECT_DIR}/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Engine/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n    \"${PROJECT_DIR}/../Editor/vcpkg_installed/${TRIPLET_DIR}/lib:${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n)\n\nfor job in \"${COPY_JOBS[@]}\"; do\n    src=\"${job%%:*}\"\n    dst=\"${job##*:}\"\n\n    if [ ! -d \"${src}\" ]; then\n        echo \"Skipping ${src} (not found)\"\n        continue\n    fi\n\n    mkdir -p \"${dst}\"\n\n    find \"${src}\" -name \"*.dylib\" | while read -r dylib; do\n        if [ -L \"$dylib\" ]; then\n            continue\n        fi\n\n        lib_name=$(basename \"$dylib\")\n        lib_dst=\"${dst}/${lib_name}\"\n\n        echo \"Copying ${lib_name} -> ${dst}\"\n        cp -f \"$dylib\" \"$lib_dst\"\n        chmod +w \"$lib_dst\"\n\n        install_name_tool -id \"@executable_path/../Frameworks/${lib_name}\" \"$lib_dst\"\n\n        if [ \"${CODE_SIGNING_ALLOWED}\" = \"YES\" ]; then\n            codesign --force --sign \"${EXPANDED_CODE_SIGN_IDENTITY}\" \\\n                ${OTHER_CODE_SIGN_FLAGS:-} \\\n                \"${lib_dst}\"\n        fi\n    done\ndone\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEBA0BD42D2344A0006346FC /* Sources */ = {
@@ -367,8 +391,11 @@
 					"$(BUILT_PRODUCTS_DIR)/../Release",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(BUILT_PRODUCTS_DIR)",
 					"$(BUILT_PRODUCTS_DIR)/../Release",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 				);
 				LLVM_LTO = YES;
 				MARKETING_VERSION = 1.0;
@@ -407,8 +434,11 @@
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+					"$(BUILT_PRODUCTS_DIR)",
 					"$(BUILT_PRODUCTS_DIR)/../Debug",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib",
 				);
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -443,8 +473,11 @@
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(BUILT_PRODUCTS_DIR)",
 					"$(BUILT_PRODUCTS_DIR)/../Dev",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
+					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
 				);
 				LLVM_LTO = YES_THIN;
 				MARKETING_VERSION = 1.0;
