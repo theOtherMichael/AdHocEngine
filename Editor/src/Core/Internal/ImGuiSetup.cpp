@@ -26,14 +26,10 @@ namespace Editor::Internal
 {
 
 static void LogImGuiContextCreatedSuccessfully(const ApiMode apiMode)
-{
-    Console::Log("ImGui initialized successfully. API: {}", apiMode);
-}
+{ Console::Log("ImGui initialized successfully. API: {}", apiMode); }
 
 static void LogImGuiContextShutdownSuccessfully(const ApiMode apiMode)
-{
-    Console::Log("ImGui shutdown successfully. API: {}", apiMode);
-}
+{ Console::Log("ImGui shutdown successfully. API: {}", apiMode); }
 
 void InitializeImGui()
 {
@@ -109,13 +105,14 @@ void InitializeImGui()
     case ApiMode::Metal:
 #if PLATFORM_SUPPORTS_METAL
     {
-        // TODO: Implement ImGui + Metal
-        const auto metalContext = Engine::Graphics::GetContextAs<Engine::Graphics::MetalGraphicsContext>();
+        const auto metalContext = Engine::Graphics::GetMetalContext();
+        ImGui_ImplGlfw_InitForOther(windowHandle, true);
+        ImGui_ImplMetal_Init(metalContext->device);
+        LogImGuiContextCreatedSuccessfully(currentApi);
         break;
     }
 #else
         Console::LogError("Metal is not supported.");
-        // TODO: Throw exception
         break;
 #endif
     case ApiMode::Uninitialized:
@@ -164,8 +161,8 @@ void ShutdownImGui()
         break;
     case ApiMode::Metal:
 #if PLATFORM_SUPPORTS_METAL
-        // TODO: Implement ImGui + Metal
-        Console::LogError("Metal is not implemented.");
+        ImGui_ImplMetal_Shutdown();
+        LogImGuiContextShutdownSuccessfully(currentApi);
 #else
         Console::LogError("Metal is not supported.");
 #endif
@@ -220,11 +217,38 @@ void StartImGuiFrame()
         break;
     case ApiMode::Metal:
 #if PLATFORM_SUPPORTS_METAL
-        Console::LogError("Metal is not implemented.");
+    {
+        const auto metalContext = Engine::Graphics::GetMetalContext();
+
+        metalContext->currentAutoreleasePool = NS::AutoreleasePool::alloc()->init();
+
+        auto* drawable = metalContext->metalLayer->nextDrawable();
+        drawable->retain();
+        metalContext->currentDrawable = drawable;
+
+        auto* commandBuffer = metalContext->commandQueue->commandBuffer();
+        commandBuffer->retain();
+        metalContext->currentCommandBuffer = commandBuffer;
+
+        auto* rpd = MTL::RenderPassDescriptor::renderPassDescriptor();
+        rpd->retain();
+        metalContext->currentRenderPassDescriptor = rpd;
+
+        auto* colorAttachment = rpd->colorAttachments()->object(0);
+        colorAttachment->setTexture(drawable->texture());
+        colorAttachment->setLoadAction(MTL::LoadActionClear);
+        colorAttachment->setClearColor(MTL::ClearColor::Make(0.1, 0.1, 0.1, 1.0));
+        colorAttachment->setStoreAction(MTL::StoreActionStore);
+
+        ImGui_ImplMetal_NewFrame(rpd);
+        ImGui_ImplGlfw_NewFrame();
+        ImGui::NewFrame();
+        break;
+    }
 #else
         Console::LogError("Metal is not supported.");
-#endif
         break;
+#endif
     case ApiMode::Uninitialized:
         [[fallthrough]];
     default:
@@ -281,11 +305,22 @@ void EndImGuiFrame()
         break;
     case ApiMode::Metal:
 #if PLATFORM_SUPPORTS_METAL
-        Console::LogError("Metal is not implemented.");
+    {
+        const auto metalContext = Engine::Graphics::GetMetalContext();
+        auto* encoder =
+            metalContext->currentCommandBuffer->renderCommandEncoder(metalContext->currentRenderPassDescriptor);
+        ImGui_ImplMetal_RenderDrawData(ImGui::GetDrawData(), metalContext->currentCommandBuffer, encoder);
+        encoder->endEncoding();
+
+        PumpImGuiPlatformWindows();
+
+        metalContext->Present();
+        break;
+    }
 #else
         Console::LogError("Metal is not supported.");
-#endif
         break;
+#endif
     case ApiMode::Uninitialized:
         [[fallthrough]];
     default:

@@ -21,7 +21,13 @@ template <typename T>
 concept IsMetalGraphicsContext = requires(T t, int w, int h) {
     requires std::derived_from<T, BaseGraphicsContext>;
 
-    // TODO: Other req's
+    { t.device }       -> std::convertible_to<MTL::Device*>;
+    { t.commandQueue } -> std::convertible_to<MTL::CommandQueue*>;
+    { t.metalLayer }   -> std::convertible_to<CA::MetalLayer*>;
+
+    { t.currentDrawable }             -> std::convertible_to<CA::MetalDrawable*>;
+    { t.currentCommandBuffer }        -> std::convertible_to<MTL::CommandBuffer*>;
+    { t.currentRenderPassDescriptor } -> std::convertible_to<MTL::RenderPassDescriptor*>;
 };
 
 static_assert(IsMetalGraphicsContext<Platform::MetalGraphicsContext>);

@@ -54,7 +54,8 @@ VENDOR_PACKAGES = {
         'backends/imgui_impl_{glfw,metal,osx}.{h,cpp,mm}',
       ],
       compiler_flags: {
-        'backends/imgui_impl_glfw.cpp' => '-Wno-documentation',
+        'backends/imgui_impl_glfw.cpp'  => '-Wno-documentation',
+        'backends/imgui_impl_metal.mm' => '-fno-objc-arc',
       },
     },
   ],

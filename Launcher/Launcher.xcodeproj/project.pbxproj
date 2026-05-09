@@ -519,13 +519,6 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
@@ -550,13 +543,6 @@
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
@@ -577,13 +563,6 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
@@ -688,13 +667,6 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/../Editor/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Editor/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;

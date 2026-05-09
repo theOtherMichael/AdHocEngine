@@ -35,7 +35,7 @@
 		54B35FDE243D51B66BC69607 /* EditorMain.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AE33C432784A4BF1C4B0001 /* EditorMain.h */; };
 		59B541F764DCBA80ED91FDBD /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
 		5AFDDED7EC17061AD59A8F09 /* imgui_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C725434163B85C63A62E5FB3 /* imgui_internal.h */; };
-		60B275B9D2AD6E31C321BAC3 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
+		60B275B9D2AD6E31C321BAC3 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		613E709CBE4B7AEA1E3C8B95 /* imgui_widgets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42AC8B1934894389B33942E /* imgui_widgets.cpp */; };
 		654F3A5E2F79F1AE4BF323A5 /* imgui_tables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB4A0DC93B7D8055A13654C /* imgui_tables.cpp */; };
 		67215B2F30A946D53CE0BA3A /* imgui_impl_osx.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F90C726643AD46B89F6E16A /* imgui_impl_osx.h */; };
@@ -60,8 +60,8 @@
 		B470D9F7BF8668BFC2DE2CF0 /* imgui_impl_metal.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CDC2B8174C4F2779261421 /* imgui_impl_metal.h */; };
 		B7506E7533547FC67DA52DE9 /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
 		B7555F34C2E451B5655B89ED /* imgui_demo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A51E8BB9DE0A3383553FABB0 /* imgui_demo.cpp */; };
-		B981D7646BBFE6DDFF11AC22 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
-		BBACD102982258B501D9D593 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; };
+		B981D7646BBFE6DDFF11AC22 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BBACD102982258B501D9D593 /* imgui_impl_metal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9F0B76D65044CB65FF9D11CC /* imgui_impl_metal.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		BFDE491CA62D21F6B72F1874 /* ImGuiSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82FF7190481D87DB58857D06 /* ImGuiSetup.cpp */; };
 		C2AA1DD70AE5EE5A3AD5964C /* imgui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6CB46BD5DADB263C192AA /* imgui.cpp */; };
 		C2AEB068CD654679734EE511 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 17814588198FE79F526BF1A0 /* resource.h */; };
@@ -608,14 +608,6 @@
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
 				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib",
@@ -678,6 +670,7 @@
 					"ADHOC_MAC=1",
 					"ADHOC_WINDOWS=0",
 					"ADHOC_EDITOR=1",
+					"IMGUI_USER_CONFIG=<imuserconfig.h>",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -691,6 +684,7 @@
 					"$(PROJECT_DIR)/vendor/imgui",
 					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 					"$(PROJECT_DIR)/../Engine/include",
+					"$(PROJECT_DIR)/../Engine/vendor/metal-cpp/include",
 					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				INSTALL_PATH = "@rpath";
@@ -715,14 +709,6 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",
@@ -749,14 +735,6 @@
 					"ADHOC_DEBUG=1",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vendor/imgui",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
-					"$(PROJECT_DIR)/../Engine/include",
-					"$(PROJECT_DIR)/../Engine/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(BUILT_PRODUCTS_DIR)",

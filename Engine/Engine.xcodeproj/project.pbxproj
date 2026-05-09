@@ -18,7 +18,6 @@
 		02B39CC1BE8152F08A460035 /* NSSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 04C98DB57B38B663C02C6F61 /* NSSet.hpp */; };
 		02FC5C35D9650750D5C98DC2 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 848625C6A7FD271F7CAABAF1 /* resource.h */; };
 		03A558289B688944F905DFD6 /* MTLDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 604EA0C204033846F9DA32C0 /* MTLDevice.hpp */; };
-		03CE4123449EBBB7DFA83284 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		043C859EB00ACBD6E33C0AC3 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		04537595B49FBDC8BF40678D /* MTLBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 165A9AC1D6C35D0B4A17CBAE /* MTLBuffer.hpp */; };
 		0458F51CE272C799A4AAD492 /* MTLTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7E56ADE0A3F8A517046EF339 /* MTLTypes.hpp */; };
@@ -90,16 +89,17 @@
 		18718317748D4566FC225A7B /* WindowsD3D11GraphicsContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7EBCE64A6B3436933DF887F /* WindowsD3D11GraphicsContext.cpp */; };
 		18E67F74352D69B45FA0DD71 /* MTLSampler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CC4F4D4198E730B4EC694347 /* MTLSampler.hpp */; };
 		1974E6249B9C20FF2948F15D /* MTLComputePass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BC1D6D0977FA945487EAA576 /* MTLComputePass.hpp */; };
+		19AFE97542E35F685BD62896 /* MetalCppImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */; };
 		19CD49DB987586B4DB2D2015 /* Misc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61A7734CC258F30E2C5A6C5D /* Misc.cpp */; };
 		19DCB4E4C58B137B11DED035 /* WindowsPlatformHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 95AB97F01341C4A7F15382A1 /* WindowsPlatformHelpers.h */; };
 		19E8CDC3953CD046AE8B20DC /* MTLCommandQueue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B0C9DA84D719F6BF7AA6A2D /* MTLCommandQueue.hpp */; };
 		1A36310B60BB4CA4D6248B7C /* MTLFunctionLog.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3FAC9ADB75C5825107BD1AF1 /* MTLFunctionLog.hpp */; };
 		1A386EDDFC4736B6868F540C /* WindowSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 693F1371DE788E8037AD5FBF /* WindowSetup.cpp */; };
+		1A3D816221030F89040F3669 /* MacMetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */; };
 		1A6209ED053C0D064605B4B7 /* MTLFunctionLog.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3FAC9ADB75C5825107BD1AF1 /* MTLFunctionLog.hpp */; };
 		1AB8381FCE399E6612A2E286 /* MTLResourceStatePass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27D287F326D17F75E4892F2A /* MTLResourceStatePass.hpp */; };
 		1AD8817B1FFB2369F9F48E73 /* MTLResourceStateCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1A91BD17210D5795B1ABD2CC /* MTLResourceStateCommandEncoder.hpp */; };
 		1B0A80F7CB487044D91D1EFF /* MTLRenderPipeline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DAADE052514287D084608F8E /* MTLRenderPipeline.hpp */; };
-		1B1F86B6B34CEDEEF641F557 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		1CF8D34FFE5A1C63A4B61FEB /* MacMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = C32835AA15196C9408C23524 /* MacMisc.h */; };
 		1D3A9916F61A99D61E4B3CB3 /* MetalFX.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3A812EDBA25EA55E5EEF7DCC /* MetalFX.hpp */; };
 		1DDE6B4F30661EE50FC02A21 /* MTLBinaryArchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 459631026889FABFEAE1F17C /* MTLBinaryArchive.hpp */; };
@@ -113,6 +113,7 @@
 		1FD58FA8E5BFC76AEFEDC713 /* DynamicLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = B461EBCC16E4DF7323256211 /* DynamicLibrary.h */; };
 		204947560249B0DD5620290F /* NSURL.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F1597D93563ACB85D234DB26 /* NSURL.hpp */; };
 		207DF8C0A17D2379A2B80113 /* MTLAllocation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9618C7E742D8D6EFE1DAC035 /* MTLAllocation.hpp */; };
+		2089683DDE0601F7D121C57D /* MacMetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */; };
 		2090E8D89FA0842573E4A598 /* MTLComputePipeline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0D631B65181CFA3C5E3FEAB5 /* MTLComputePipeline.hpp */; };
 		215AEFA9CD836AAFDDA882EB /* MacDynamicLibrary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96AEDB0C11B8CFE151A75BEE /* MacDynamicLibrary.cpp */; };
 		217F8E50DC8902D4D1224681 /* MTLBlitCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 66F32A40E5BF0B6B43C62DCC /* MTLBlitCommandEncoder.hpp */; };
@@ -187,6 +188,7 @@
 		337F3D6F325F4EC60AE02510 /* MTLCounters.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3E9A9C3888CE95E41F92D247 /* MTLCounters.hpp */; };
 		33A7E98F44E9B99D6317FE00 /* MTLCommandBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 16DA0BF98B9B39A9E12D9229 /* MTLCommandBuffer.hpp */; };
 		33B0F60E8CF36D43CDB66A61 /* BorrowHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B47C1D9A2F52BC448171B2ED /* BorrowHandle.h */; };
+		33DB01B103063F2E4FFE6211 /* MetalCppImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */; };
 		342881058B40459BFF47E240 /* concepts.h in Headers */ = {isa = PBXBuildFile; fileRef = 108616FC69145B39F4798557 /* concepts.h */; };
 		342D4493123311A4FBA16F9A /* MTLSampler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CC4F4D4198E730B4EC694347 /* MTLSampler.hpp */; };
 		342EA6C33C5B557E95E1A527 /* MTLIOCommandBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6538318D9406B1C1D7B9C913 /* MTLIOCommandBuffer.hpp */; };
@@ -210,6 +212,7 @@
 		39F4990AFDC15351B54D5F11 /* NSProcessInfo.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 41B5279A8F6B0BDBA72A54FC /* NSProcessInfo.hpp */; };
 		39FD26E497C11AB97359EA11 /* MTLComputeCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 532B127BEA90DFAE0F6A252E /* MTLComputeCommandEncoder.hpp */; };
 		3A124DA3C9CAF0B7DC58299E /* BorrowHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = B47C1D9A2F52BC448171B2ED /* BorrowHandle.h */; };
+		3A1FB7E41BE51DFF75A1A6D9 /* MacMetalGraphicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */; };
 		3A9EDFCEB396E257A132AF2C /* MTLResourceStatePass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27D287F326D17F75E4892F2A /* MTLResourceStatePass.hpp */; };
 		3B3FAA2724B099980DAD4F4F /* MTLParallelRenderCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A10F4D735050AE747B82CA20 /* MTLParallelRenderCommandEncoder.hpp */; };
 		3B44D783F66236B6C79E25EE /* MTLRenderPass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 113A3E71F59F3B80724D37A2 /* MTLRenderPass.hpp */; };
@@ -242,6 +245,7 @@
 		405A296A20A4EEBC754B509D /* MTLIOCompressor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 632BEB5374176451BBB89BE4 /* MTLIOCompressor.hpp */; };
 		4111E2A23487FD6E2D4B2540 /* NSSharedPtr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9903875FADCEB6D3C9DA5B7C /* NSSharedPtr.hpp */; };
 		424357EDFA303B524BA4068A /* MTLArgument.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8A25FCEB2312729791358087 /* MTLArgument.hpp */; };
+		42504543A75CA48A73D2790F /* MacMetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */; };
 		426AB4F17EAAFBA5CB9A68C1 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		4312CADE834B7E35FE3625EA /* QuartzCore.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 83F5A9B64A2B5E0FE31665B6 /* QuartzCore.hpp */; };
 		431C1AF6173CFF38C73E827E /* NSEnumerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 59563588555EE52CF41BED6B /* NSEnumerator.hpp */; };
@@ -254,6 +258,7 @@
 		45F7FA5EA0D99A4025EAB8E8 /* CAMetalDrawable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B5001D44B364207C3A306994 /* CAMetalDrawable.hpp */; };
 		472A6E9ACA59FEF92CE7C37F /* MTLRenderCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CB781E33BAEA2E1FD80A19B /* MTLRenderCommandEncoder.hpp */; };
 		4744B57277E123280F84DE6C /* MTLFunctionStitching.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79C57CA51624671724F70478 /* MTLFunctionStitching.hpp */; };
+		475119919491A590B687AD92 /* MetalCppImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */; };
 		47B2411462F9EDDE29E38589 /* WindowSetup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 693F1371DE788E8037AD5FBF /* WindowSetup.cpp */; };
 		492D4D24DFE1B68752D736C8 /* WindowsRuntimeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8849301A6F11590631875F0B /* WindowsRuntimeInfo.cpp */; };
 		494EF72F4A8559CDE136F693 /* MTLFXDefines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0DD285BAC1EF9CEA42DE8A6B /* MTLFXDefines.hpp */; };
@@ -261,6 +266,7 @@
 		498F7DDFB7A21D7BBCD4FFE7 /* MTLAccelerationStructureCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 243FDD0CA59A2D84FCE41AEC /* MTLAccelerationStructureCommandEncoder.hpp */; };
 		4997CB24C5AECA2F5188EE27 /* MacDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 234E230413FFF3A2AE6AAFD2 /* MacDebugging.h */; };
 		49DB6979FF2B3647C7255829 /* MTLDepthStencil.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5CFD1F76D1F561CF5D681E0C /* MTLDepthStencil.hpp */; };
+		4A2677BE1A6689BCC743A14B /* MacMetalGraphicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */; };
 		4A67E6B3BEA8CCA014211428 /* MTLAccelerationStructureTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C23EE8447651FAA5F0F913DA /* MTLAccelerationStructureTypes.hpp */; };
 		4A773EEC055D4B3E7F3294E0 /* MTLCaptureScope.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C64E6AF7D72000349C262599 /* MTLCaptureScope.hpp */; };
 		4A86C388828CB92A4A05E893 /* MTLFunctionDescriptor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9828B4092D430EE07552C021 /* MTLFunctionDescriptor.hpp */; };
@@ -275,6 +281,7 @@
 		4C294B5AC8296846B22E7E79 /* MTLVertexDescriptor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 473DE09065AA70F280806ABC /* MTLVertexDescriptor.hpp */; };
 		4C496B3FD91A0BC0039123BC /* MTLDevice.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 604EA0C204033846F9DA32C0 /* MTLDevice.hpp */; };
 		4D3B047CE8A14C2ECC1DA4EB /* MTLLogState.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6383FCEB96641C4944962C88 /* MTLLogState.hpp */; };
+		4D5052CB9C3A3E609437A3B6 /* MacMetalGraphicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */; };
 		4DFBC667EDFCD07E4838960A /* MTLDynamicLibrary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B8C78DD67D790D7F1F3056B0 /* MTLDynamicLibrary.hpp */; };
 		4DFC08A39854F4B240EF2980 /* ApiMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 360B2432644A8E6BF65C93CF /* ApiMode.h */; };
 		4E2953C9D704206239F2EC08 /* WindowsDynamicLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D44D86B7420D546A18672CE /* WindowsDynamicLibrary.h */; };
@@ -311,7 +318,6 @@
 		588C346378AC23EA2D267033 /* WindowsSetMainWindowIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E87E25EB03348E1730E198 /* WindowsSetMainWindowIcon.h */; };
 		58C0CA44E737818782741DF9 /* WindowsSetMainWindowIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E87E25EB03348E1730E198 /* WindowsSetMainWindowIcon.h */; };
 		592B83CFB7CBDBC350F08B45 /* MTLFunctionHandle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48A6BFD828460A8382D34F44 /* MTLFunctionHandle.hpp */; };
-		595130EF3F3CED072C272E28 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		598CFEA44AB7C3E7183C3241 /* OpenGlGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = F6D12FD7E80D0F9ABB4B23A0 /* OpenGlGraphicsContext.h */; };
 		5A7F029C9BA108BC14ED3947 /* WindowsD3D11GraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = E07D761746840F8A0F64DAE1 /* WindowsD3D11GraphicsContext.h */; };
 		5AE493496C2AFDD59410D205 /* MTLTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7E56ADE0A3F8A517046EF339 /* MTLTypes.hpp */; };
@@ -347,6 +353,7 @@
 		63DF714889B444D82F06E427 /* RuntimeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D0A3A91CD3DB19D67AC56E /* RuntimeInfo.h */; };
 		63FDB7510F345F36D0ADE976 /* NSObjCRuntime.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A1D71886EBF8338A2E4F3055 /* NSObjCRuntime.hpp */; };
 		646BC485BA11FA41C783ABC7 /* NSAutoreleasePool.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3444B79CD4367F2B315223F7 /* NSAutoreleasePool.hpp */; };
+		649386D0D2BB977384BC11F1 /* MetalCppImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */; };
 		64DCE8656266E71C7AD29447 /* CAPrivate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 0E8B5CB852EA9C9D9BCFC1A0 /* CAPrivate.hpp */; };
 		651A303EC35D65FA8F1CDE4E /* NSObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4C3F5615B4DCCB9066BB18CA /* NSObject.hpp */; };
 		651CCB7688E40EC8E9115DB0 /* MTLCommandQueue.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6B0C9DA84D719F6BF7AA6A2D /* MTLCommandQueue.hpp */; };
@@ -397,6 +404,7 @@
 		71A3FCB7E37585771525CDD6 /* NSData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B69FCE930BD6002CFCE6CED /* NSData.hpp */; };
 		71B77D735B503A94278468A6 /* MTLVersion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1673C9CCB018D2B021E3611D /* MTLVersion.hpp */; };
 		728D24DC7DF3FE0B4F8B6642 /* MTLDefines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A860F2EC1AAF48FDBF166451 /* MTLDefines.hpp */; };
+		72BCD568C036A51A1C107D4C /* MacMetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */; };
 		73AE9FA108C5D2353EB37B00 /* MTLLinkedFunctions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CC069DC042C84FA596B30B5F /* MTLLinkedFunctions.hpp */; };
 		743BD2BBF46D767B4EDE0D16 /* BaseGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D64DF7B98A95D0BC71699C3 /* BaseGraphicsContext.h */; };
 		7458A231A4A06FA334A0B12A /* NSSharedPtr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9903875FADCEB6D3C9DA5B7C /* NSSharedPtr.hpp */; };
@@ -463,7 +471,6 @@
 		8557FEAD8012D9132E1E1494 /* MTLFunctionHandle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 48A6BFD828460A8382D34F44 /* MTLFunctionHandle.hpp */; };
 		856CAF9E7287642F1E9EFA74 /* MTLCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 2C67F401B9EB23231A7D1207 /* MTLCommandEncoder.hpp */; };
 		8663B65A79A71C6857E52D18 /* MTLRenderPipeline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = DAADE052514287D084608F8E /* MTLRenderPipeline.hpp */; };
-		8667A166B91929C4EA2EE413 /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		86B1BC4DF0EFEB0294120C29 /* MTLLibrary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1A59C9BBA976E731D8FB4DC0 /* MTLLibrary.hpp */; };
 		86B9F10F1589562ADE3AC0A6 /* MTLBuffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 165A9AC1D6C35D0B4A17CBAE /* MTLBuffer.hpp */; };
 		86EA7DF5660D90C9CD5268F7 /* MTLFXTemporalScaler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8EBA63F86919A07C04BC9E41 /* MTLFXTemporalScaler.hpp */; };
@@ -498,6 +505,7 @@
 		8E026C2D6AB0C363E409F562 /* WindowsD3D11GraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = E07D761746840F8A0F64DAE1 /* WindowsD3D11GraphicsContext.h */; };
 		8E06D4A16D884A6613AA6C46 /* WindowsRuntimeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8849301A6F11590631875F0B /* WindowsRuntimeInfo.cpp */; };
 		8E103E28EE9ECBC014E0F976 /* ApiMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 360B2432644A8E6BF65C93CF /* ApiMode.h */; };
+		8E661526724CB32AB1568CB8 /* MacMetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */; };
 		8EC42FC22867EC34E1DF641F /* MTLAccelerationStructureCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 243FDD0CA59A2D84FCE41AEC /* MTLAccelerationStructureCommandEncoder.hpp */; };
 		8FC20E30BEC80137FB55674D /* MTLDefines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A860F2EC1AAF48FDBF166451 /* MTLDefines.hpp */; };
 		8FD7BAA8C26CE090CBD76720 /* ApiMode.h in Headers */ = {isa = PBXBuildFile; fileRef = 360B2432644A8E6BF65C93CF /* ApiMode.h */; };
@@ -518,6 +526,7 @@
 		94EBF5E0FDD58AD7333A4C87 /* MTLDefines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = A860F2EC1AAF48FDBF166451 /* MTLDefines.hpp */; };
 		94F18005A8A0AED7C0394F66 /* MTLStageInputOutputDescriptor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C7872935BEC28C29C4CFCD6D /* MTLStageInputOutputDescriptor.hpp */; };
 		951C74350DF3C49130DFA79B /* casts.h in Headers */ = {isa = PBXBuildFile; fileRef = ACDCD65B397B939C5D371AF6 /* casts.h */; };
+		95EA2CAAA4694992D1AB0D36 /* MetalCppImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */; };
 		96101372B3D896C314E51A32 /* MTLTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7E56ADE0A3F8A517046EF339 /* MTLTypes.hpp */; };
 		966789E0703A8832A59A346D /* WindowSetup.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C294C205CE0870C3B04169 /* WindowSetup.h */; };
 		966D773F576612F80F9FA395 /* RuntimeInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E6D0A3A91CD3DB19D67AC56E /* RuntimeInfo.h */; };
@@ -557,6 +566,7 @@
 		A0CD11DDC1985877E87A2E0D /* NSData.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 4B69FCE930BD6002CFCE6CED /* NSData.hpp */; };
 		A0E96CC75EFCE2CA6CF002C9 /* WindowState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DD328D11E105A9709EE3F5B /* WindowState.cpp */; };
 		A11F360D885B050FAC40006B /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 848625C6A7FD271F7CAABAF1 /* resource.h */; };
+		A14F0DEE428EC74786FE0E72 /* MetalCppImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */; };
 		A15959181ABF6AEB94C4693F /* VulkanGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 1629D1266A9EB0E8637DE9AA /* VulkanGraphicsContext.h */; };
 		A1A468AF951ED1CE175DCFED /* MTLPipeline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4AB853336900718E5AF436D /* MTLPipeline.hpp */; };
 		A1CCB33992D4F7A1CF149CE7 /* WindowsSetMainWindowIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF9D2E093FE8D8651CF4B0B /* WindowsSetMainWindowIcon.cpp */; };
@@ -640,6 +650,7 @@
 		B4E3DBFE018E46CB3EC9432D /* concepts.h in Headers */ = {isa = PBXBuildFile; fileRef = 108616FC69145B39F4798557 /* concepts.h */; };
 		B4E831BBF407FADED7D6DB5C /* MTLLinkedFunctions.hpp in Headers */ = {isa = PBXBuildFile; fileRef = CC069DC042C84FA596B30B5F /* MTLLinkedFunctions.hpp */; };
 		B51DC7D2C10D2C6FE463BCAC /* Metal.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9C96A1982B230E44B7B32ACB /* Metal.hpp */; };
+		B527CC924B5C1A10AC2A55E7 /* MacMetalGraphicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */; };
 		B52CF1809CE8BA7B25D08361 /* NSRange.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 155CA4D9B9700E2C1749AF63 /* NSRange.hpp */; };
 		B59CF7EF6F643C30DC454A61 /* NSDefines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6E424FD7CE3E78ED5F4847A3 /* NSDefines.hpp */; };
 		B61DFFDA452A91491BF397C1 /* D3d12GraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 0033E64D69B7298D45A4D63A /* D3d12GraphicsContext.h */; };
@@ -649,7 +660,6 @@
 		B7F7F961CC8A4D6A826B4BCF /* MTLCounters.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3E9A9C3888CE95E41F92D247 /* MTLCounters.hpp */; };
 		B80C4666E0C0618B508EEEFC /* CAMetalDrawable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B5001D44B364207C3A306994 /* CAMetalDrawable.hpp */; };
 		B82CA6C209A460C3417F4CEA /* MTLDrawable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7003127EAD7CCFD8B25AC018 /* MTLDrawable.hpp */; };
-		B84295B2045294664262925F /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		B8F3A3441CB80DE7BD0DE1D9 /* MetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 259B768936D5A35534FF6407 /* MetalGraphicsContext.h */; };
 		B918965CC5AC03E38C7CD92B /* NSLock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B992DC56491BB2910C5C542A /* NSLock.hpp */; };
 		B96B2D75184624A3CB6009FB /* MTLAllocation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9618C7E742D8D6EFE1DAC035 /* MTLAllocation.hpp */; };
@@ -659,6 +669,7 @@
 		BA6614FC65A7E61BAE329677 /* MTLResource.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 27E6A7B79D52C6FD8EA4BD66 /* MTLResource.hpp */; };
 		BAAB56812594021D62ED4FC9 /* Foundation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C3FE1C2E8CA19B56F86D18F2 /* Foundation.hpp */; };
 		BAF53A1658B51790FEDB18F7 /* EnumFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = EEBB2236165E9142B4470402 /* EnumFormatter.h */; };
+		BB019946498A07D6F64A8B1A /* MacMetalGraphicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */; };
 		BB1D38D504CE12C33AB1AB09 /* Debugging.h in Headers */ = {isa = PBXBuildFile; fileRef = F1C3667F9CCF7777E55E81F3 /* Debugging.h */; };
 		BB2040733CAE9888A4792769 /* WindowsSetMainWindowIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 81E87E25EB03348E1730E198 /* WindowsSetMainWindowIcon.h */; };
 		BB29130C2FD78E9881440BC3 /* NSNotification.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 79953F4E5A4713B6D7F1EA3A /* NSNotification.hpp */; };
@@ -673,8 +684,8 @@
 		BE8BA540245E0CEF13A4456E /* MTLResourceStateCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1A91BD17210D5795B1ABD2CC /* MTLResourceStateCommandEncoder.hpp */; };
 		BEEE748DC67E593E29BE9971 /* resource.h in Headers */ = {isa = PBXBuildFile; fileRef = 848625C6A7FD271F7CAABAF1 /* resource.h */; };
 		BEFFC24B9F9962586EFF8881 /* MacDebugging.h in Headers */ = {isa = PBXBuildFile; fileRef = 234E230413FFF3A2AE6AAFD2 /* MacDebugging.h */; };
+		BF221C1A0671BFB95484FA1F /* MacMetalGraphicsContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */; };
 		BFA23DDF3CE3AC8BD93F04E5 /* MTLPipeline.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4AB853336900718E5AF436D /* MTLPipeline.hpp */; };
-		BFC40F0EC72A137504EC13FD /* MimallocNewDeleteOverride.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */; };
 		C058AC194D5BAB0F007D4403 /* MTLPixelFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 898BD20CFDF71515E8C6334E /* MTLPixelFormat.hpp */; };
 		C0CF41F6C3F6E4D4DDAAAE30 /* WindowsMisc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FF0501517155686DE56A81F /* WindowsMisc.h */; };
 		C0E4742A2976F218A681AFE1 /* MTLComputePass.hpp in Headers */ = {isa = PBXBuildFile; fileRef = BC1D6D0977FA945487EAA576 /* MTLComputePass.hpp */; };
@@ -876,6 +887,7 @@
 		F441A87B494C7DE0869F5F5B /* MTLPixelFormat.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 898BD20CFDF71515E8C6334E /* MTLPixelFormat.hpp */; };
 		F4A6AA96F010B1C282D279FB /* MTLFence.hpp in Headers */ = {isa = PBXBuildFile; fileRef = FF6ADCD8D698BE6C64B8EF57 /* MTLFence.hpp */; };
 		F4A6BB9A6C9075FA7E091DD4 /* WindowsSetMainWindowIcon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DCF9D2E093FE8D8651CF4B0B /* WindowsSetMainWindowIcon.cpp */; };
+		F5400AD7621F523EFDBE41C4 /* MacMetalGraphicsContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */; };
 		F5B4371C8CE3D2440D0033BB /* MTLArgumentEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 1E8EE85DEF223E7F8B65C6D7 /* MTLArgumentEncoder.hpp */; };
 		F5F7B67BDF8BCA2151436CCE /* MTLBlitCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 66F32A40E5BF0B6B43C62DCC /* MTLBlitCommandEncoder.hpp */; };
 		F6188F26755655D37DBA3FA3 /* NSDefines.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 6E424FD7CE3E78ED5F4847A3 /* NSDefines.hpp */; };
@@ -953,7 +965,6 @@
 		3444B79CD4367F2B315223F7 /* NSAutoreleasePool.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSAutoreleasePool.hpp; path = "vendor/metal-cpp/include/Foundation/NSAutoreleasePool.hpp"; sourceTree = SOURCE_ROOT; };
 		360B2432644A8E6BF65C93CF /* ApiMode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApiMode.h; path = include/Engine/Graphics/ApiMode.h; sourceTree = SOURCE_ROOT; };
 		375D2B7159DFECDDAE844EF8 /* MTLIOCommandQueue.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLIOCommandQueue.hpp; path = "vendor/metal-cpp/include/Metal/MTLIOCommandQueue.hpp"; sourceTree = SOURCE_ROOT; };
-		3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MimallocNewDeleteOverride.cpp; path = src/_platform/Windows/MimallocNewDeleteOverride.cpp; sourceTree = SOURCE_ROOT; };
 		3A812EDBA25EA55E5EEF7DCC /* MetalFX.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MetalFX.hpp; path = "vendor/metal-cpp/include/MetalFX/MetalFX.hpp"; sourceTree = SOURCE_ROOT; };
 		3E9A9C3888CE95E41F92D247 /* MTLCounters.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLCounters.hpp; path = "vendor/metal-cpp/include/Metal/MTLCounters.hpp"; sourceTree = SOURCE_ROOT; };
 		3FAC9ADB75C5825107BD1AF1 /* MTLFunctionLog.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLFunctionLog.hpp; path = "vendor/metal-cpp/include/Metal/MTLFunctionLog.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1009,6 +1020,7 @@
 		A1646B4ED35E4AE0E203B560 /* MTLHeap.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLHeap.hpp; path = "vendor/metal-cpp/include/Metal/MTLHeap.hpp"; sourceTree = SOURCE_ROOT; };
 		A1D71886EBF8338A2E4F3055 /* NSObjCRuntime.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSObjCRuntime.hpp; path = "vendor/metal-cpp/include/Foundation/NSObjCRuntime.hpp"; sourceTree = SOURCE_ROOT; };
 		A46C9899B68E748097ABE749 /* MTLIndirectCommandEncoder.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLIndirectCommandEncoder.hpp; path = "vendor/metal-cpp/include/Metal/MTLIndirectCommandEncoder.hpp"; sourceTree = SOURCE_ROOT; };
+		A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = MetalCppImpl.cpp; path = src/_platform/Mac/MetalCppImpl.cpp; sourceTree = SOURCE_ROOT; };
 		A860F2EC1AAF48FDBF166451 /* MTLDefines.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLDefines.hpp; path = "vendor/metal-cpp/include/Metal/MTLDefines.hpp"; sourceTree = SOURCE_ROOT; };
 		ACDCD65B397B939C5D371AF6 /* casts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = casts.h; path = include/asl/casts.h; sourceTree = SOURCE_ROOT; };
 		ADA88B7ED4447B3305E83780 /* CAMetalLayer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = CAMetalLayer.hpp; path = "vendor/metal-cpp/include/QuartzCore/CAMetalLayer.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1025,6 +1037,7 @@
 		C3FE1C2E8CA19B56F86D18F2 /* Foundation.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = Foundation.hpp; path = "vendor/metal-cpp/include/Foundation/Foundation.hpp"; sourceTree = SOURCE_ROOT; };
 		C64E6AF7D72000349C262599 /* MTLCaptureScope.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLCaptureScope.hpp; path = "vendor/metal-cpp/include/Metal/MTLCaptureScope.hpp"; sourceTree = SOURCE_ROOT; };
 		C7872935BEC28C29C4CFCD6D /* MTLStageInputOutputDescriptor.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLStageInputOutputDescriptor.hpp; path = "vendor/metal-cpp/include/Metal/MTLStageInputOutputDescriptor.hpp"; sourceTree = SOURCE_ROOT; };
+		C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = MacMetalGraphicsContext.mm; path = src/Graphics/Contexts/_platform/Mac/MacMetalGraphicsContext.mm; sourceTree = SOURCE_ROOT; };
 		CA4CC23F3EE244CF7DD10AB5 /* MTLHeaderBridge.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLHeaderBridge.hpp; path = "vendor/metal-cpp/include/Metal/MTLHeaderBridge.hpp"; sourceTree = SOURCE_ROOT; };
 		CAB2C0C3EAC82BFC7EFCD1EF /* NSNumber.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSNumber.hpp; path = "vendor/metal-cpp/include/Foundation/NSNumber.hpp"; sourceTree = SOURCE_ROOT; };
 		CC069DC042C84FA596B30B5F /* MTLLinkedFunctions.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLLinkedFunctions.hpp; path = "vendor/metal-cpp/include/Metal/MTLLinkedFunctions.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1050,6 +1063,7 @@
 		CEDDB0E12D1FCE0D00EADB67 /* MacMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MacMisc.cpp; path = src/Core/_platform/Mac/MacMisc.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E32D1FCE0D00EADB67 /* WindowsPlatformHelpers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsPlatformHelpers.cpp; path = src/Core/_platform/Windows/WindowsPlatformHelpers.cpp; sourceTree = SOURCE_ROOT; };
 		CEDDB0E42D1FCE0D00EADB67 /* WindowsMisc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsMisc.cpp; path = src/Core/_platform/Windows/WindowsMisc.cpp; sourceTree = SOURCE_ROOT; };
+		CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MacMetalGraphicsContext.h; path = include/Engine/Graphics/Contexts/_platform/Mac/MacMetalGraphicsContext.h; sourceTree = SOURCE_ROOT; };
 		CFEDA1EF1814B77E716B69E5 /* MTLEvent.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLEvent.hpp; path = "vendor/metal-cpp/include/Metal/MTLEvent.hpp"; sourceTree = SOURCE_ROOT; };
 		D127A09EC2350155B1D03622 /* NSPrivate.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = NSPrivate.hpp; path = "vendor/metal-cpp/include/Foundation/NSPrivate.hpp"; sourceTree = SOURCE_ROOT; };
 		D2516071367DE42F073F77CD /* MTLResidencySet.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTLResidencySet.hpp; path = "vendor/metal-cpp/include/Metal/MTLResidencySet.hpp"; sourceTree = SOURCE_ROOT; };
@@ -1184,6 +1198,7 @@
 		16DE91B1BB4AEE8D26FE3DCC /* _platform */ = {
 			isa = PBXGroup;
 			children = (
+				268CB41DB241979F0C6C5331 /* Mac */,
 				39C7ECB9F137EFD013FFEC1E /* Windows */,
 			);
 			name = _platform;
@@ -1278,9 +1293,28 @@
 			path = "vendor/metal-cpp/include/Metal";
 			sourceTree = SOURCE_ROOT;
 		};
+		268CB41DB241979F0C6C5331 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				C884B8635ED5AAA22F74A9AF /* MacMetalGraphicsContext.mm */,
+			);
+			name = Mac;
+			path = src/Graphics/Contexts/_platform/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
+		27A24CF9B93A38ADC15941DB /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				CF1578DAB210BBE7581B0CA2 /* MacMetalGraphicsContext.h */,
+			);
+			name = Mac;
+			path = include/Engine/Graphics/Contexts/_platform/Mac;
+			sourceTree = SOURCE_ROOT;
+		};
 		34B8943EB0C0E2DD6C4462B9 /* _platform */ = {
 			isa = PBXGroup;
 			children = (
+				7AE527D456B9F99E5CE28936 /* Mac */,
 				771FBDA37E3571BD419B7B52 /* Windows */,
 			);
 			name = _platform;
@@ -1438,7 +1472,6 @@
 			isa = PBXGroup;
 			children = (
 				7E6CB9BA45A15B3F889B68A0 /* DllMain.cpp */,
-				3A59F756AEC59EE0C077E296 /* MimallocNewDeleteOverride.cpp */,
 				848625C6A7FD271F7CAABAF1 /* resource.h */,
 			);
 			name = Windows;
@@ -1452,6 +1485,15 @@
 			);
 			name = Windows;
 			path = include/Engine/Common/_platform/Windows;
+			sourceTree = SOURCE_ROOT;
+		};
+		7AE527D456B9F99E5CE28936 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				A6723E6E7F6FBD41EC085885 /* MetalCppImpl.cpp */,
+			);
+			name = Mac;
+			path = src/_platform/Mac;
 			sourceTree = SOURCE_ROOT;
 		};
 		7BE588BAA98C2AABE9B94B57 /* Window */ = {
@@ -1503,6 +1545,7 @@
 		BA68D9DB466385C0013D4781 /* _platform */ = {
 			isa = PBXGroup;
 			children = (
+				27A24CF9B93A38ADC15941DB /* Mac */,
 				CC88DECEF755C7DCD0ADADD9 /* Windows */,
 			);
 			name = _platform;
@@ -1837,6 +1880,7 @@
 				AC5ECE68DDFF4A4C36FBBAD9 /* casts.h in Headers */,
 				21F598F507DF0FE9DDB11BEF /* concepts.h in Headers */,
 				C3470FB359F6CCECBC087B5C /* finally.h in Headers */,
+				BF221C1A0671BFB95484FA1F /* MacMetalGraphicsContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1972,6 +2016,7 @@
 				D7CDCD55289968FF17DCF55F /* casts.h in Headers */,
 				523A6C6333D543E292D0AFB0 /* concepts.h in Headers */,
 				79FF360F02EDCCEC3C4A609F /* finally.h in Headers */,
+				1A3D816221030F89040F3669 /* MacMetalGraphicsContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2107,6 +2152,7 @@
 				6676B1B78E387BC7E903E2A5 /* casts.h in Headers */,
 				342881058B40459BFF47E240 /* concepts.h in Headers */,
 				904B7BA22E8B167007500496 /* finally.h in Headers */,
+				8E661526724CB32AB1568CB8 /* MacMetalGraphicsContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2242,6 +2288,7 @@
 				66869FC138C9F212DF6B12D4 /* casts.h in Headers */,
 				AB3B3FB97585DFC9A604005F /* concepts.h in Headers */,
 				003EC5F3BE684BC0A9C394E3 /* finally.h in Headers */,
+				42504543A75CA48A73D2790F /* MacMetalGraphicsContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2377,6 +2424,7 @@
 				951C74350DF3C49130DFA79B /* casts.h in Headers */,
 				703DDB3FF72158B756AC62EA /* concepts.h in Headers */,
 				BA1F545239B58BD58125D7FA /* finally.h in Headers */,
+				72BCD568C036A51A1C107D4C /* MacMetalGraphicsContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2512,6 +2560,7 @@
 				A56517B63774A5C497A9EC8D /* casts.h in Headers */,
 				B4E3DBFE018E46CB3EC9432D /* concepts.h in Headers */,
 				D87D4753F85DD63FAAE8D7AB /* finally.h in Headers */,
+				2089683DDE0601F7D121C57D /* MacMetalGraphicsContext.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2672,7 +2721,6 @@
 				215AEFA9CD836AAFDDA882EB /* MacDynamicLibrary.cpp in Sources */,
 				8B7822D87243517F6C48929A /* WindowsDynamicLibrary.cpp in Sources */,
 				751208F6FA169F6BE8691FB8 /* DllMain.cpp in Sources */,
-				03CE4123449EBBB7DFA83284 /* MimallocNewDeleteOverride.cpp in Sources */,
 				3183CC5554175B131BA5D06E /* GraphicsContext.cpp in Sources */,
 				CC21260E76C4D012BCFEE439 /* Misc.cpp in Sources */,
 				C8D999885216B584754EE92E /* DynamicLibrary.cpp in Sources */,
@@ -2682,6 +2730,8 @@
 				ED9E312E3F14252A3137801E /* WindowSetup.cpp in Sources */,
 				A1CCB33992D4F7A1CF149CE7 /* WindowsSetMainWindowIcon.cpp in Sources */,
 				043C859EB00ACBD6E33C0AC3 /* WindowState.cpp in Sources */,
+				3A1FB7E41BE51DFF75A1A6D9 /* MacMetalGraphicsContext.mm in Sources */,
+				A14F0DEE428EC74786FE0E72 /* MetalCppImpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2697,7 +2747,6 @@
 				62DD6C6F9524DC0E1D9B88F6 /* MacDynamicLibrary.cpp in Sources */,
 				682DC67AC40F128D35650C5E /* WindowsDynamicLibrary.cpp in Sources */,
 				4E341695022C2E5D426E5D2B /* DllMain.cpp in Sources */,
-				BFC40F0EC72A137504EC13FD /* MimallocNewDeleteOverride.cpp in Sources */,
 				8AB608618B120FCF945D7D61 /* GraphicsContext.cpp in Sources */,
 				7E7225FC229827D1362B341C /* Misc.cpp in Sources */,
 				3C49EA102E8E982D03DF622F /* DynamicLibrary.cpp in Sources */,
@@ -2707,6 +2756,8 @@
 				47B2411462F9EDDE29E38589 /* WindowSetup.cpp in Sources */,
 				F4A6BB9A6C9075FA7E091DD4 /* WindowsSetMainWindowIcon.cpp in Sources */,
 				A0E96CC75EFCE2CA6CF002C9 /* WindowState.cpp in Sources */,
+				BB019946498A07D6F64A8B1A /* MacMetalGraphicsContext.mm in Sources */,
+				649386D0D2BB977384BC11F1 /* MetalCppImpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2722,7 +2773,6 @@
 				9700433BFECD91BC05B5245F /* MacDynamicLibrary.cpp in Sources */,
 				C438BB27CEC80889370F3F65 /* WindowsDynamicLibrary.cpp in Sources */,
 				2998B6917801A6DB3D9B8700 /* DllMain.cpp in Sources */,
-				1B1F86B6B34CEDEEF641F557 /* MimallocNewDeleteOverride.cpp in Sources */,
 				A96C40DC8C4288284ECCE1F5 /* GraphicsContext.cpp in Sources */,
 				F3BAF7123B1A7BE3460709BA /* Misc.cpp in Sources */,
 				2851BAE6A781FACFBA8A579A /* DynamicLibrary.cpp in Sources */,
@@ -2732,6 +2782,8 @@
 				1A386EDDFC4736B6868F540C /* WindowSetup.cpp in Sources */,
 				884D4A2B79058A7ADA88D139 /* WindowsSetMainWindowIcon.cpp in Sources */,
 				426AB4F17EAAFBA5CB9A68C1 /* WindowState.cpp in Sources */,
+				4A2677BE1A6689BCC743A14B /* MacMetalGraphicsContext.mm in Sources */,
+				19AFE97542E35F685BD62896 /* MetalCppImpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2747,7 +2799,6 @@
 				68616A035E5081D0EE21F5FE /* MacDynamicLibrary.cpp in Sources */,
 				8D93BB5A26DE6A408882DBA4 /* WindowsDynamicLibrary.cpp in Sources */,
 				DF70935DBA79CC17A5CAB47C /* DllMain.cpp in Sources */,
-				B84295B2045294664262925F /* MimallocNewDeleteOverride.cpp in Sources */,
 				EAE1DACF23540588542D2369 /* GraphicsContext.cpp in Sources */,
 				782BD7D3D0788CD21ACBF23B /* Misc.cpp in Sources */,
 				3059F3574E0A54FFAE2D3824 /* DynamicLibrary.cpp in Sources */,
@@ -2757,6 +2808,8 @@
 				DD80F59A31BBC8FA3CF82832 /* WindowSetup.cpp in Sources */,
 				6266061E248316B6812B03A9 /* WindowsSetMainWindowIcon.cpp in Sources */,
 				FB48FB3BFDB4C05A5BD51234 /* WindowState.cpp in Sources */,
+				F5400AD7621F523EFDBE41C4 /* MacMetalGraphicsContext.mm in Sources */,
+				475119919491A590B687AD92 /* MetalCppImpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2772,7 +2825,6 @@
 				BBC50569065B4D8FFE666EE3 /* MacDynamicLibrary.cpp in Sources */,
 				EE2E7632ED37C5D1173F90AF /* WindowsDynamicLibrary.cpp in Sources */,
 				4E6CD616F18F8B8859BC3202 /* DllMain.cpp in Sources */,
-				595130EF3F3CED072C272E28 /* MimallocNewDeleteOverride.cpp in Sources */,
 				9D5B38F97EDCA53D4011CB82 /* GraphicsContext.cpp in Sources */,
 				F2FBA7A255E10DF7E047B709 /* Misc.cpp in Sources */,
 				D54636078907385B3F5C8772 /* DynamicLibrary.cpp in Sources */,
@@ -2782,6 +2834,8 @@
 				29CA515562BB964C991608FC /* WindowSetup.cpp in Sources */,
 				5DEA9B6B302CFCF84A7F5991 /* WindowsSetMainWindowIcon.cpp in Sources */,
 				CA0D391F0DA5A46AC6705899 /* WindowState.cpp in Sources */,
+				4D5052CB9C3A3E609437A3B6 /* MacMetalGraphicsContext.mm in Sources */,
+				33DB01B103063F2E4FFE6211 /* MetalCppImpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2797,7 +2851,6 @@
 				706EAFB5805BDF80FD5F3037 /* MacDynamicLibrary.cpp in Sources */,
 				7461AF79B89FA9B9799F940D /* WindowsDynamicLibrary.cpp in Sources */,
 				4F06889024D53B1F7F8A26E3 /* DllMain.cpp in Sources */,
-				8667A166B91929C4EA2EE413 /* MimallocNewDeleteOverride.cpp in Sources */,
 				7968945EB6D3B1A087678804 /* GraphicsContext.cpp in Sources */,
 				19CD49DB987586B4DB2D2015 /* Misc.cpp in Sources */,
 				A71795F12B60856EDDF97B72 /* DynamicLibrary.cpp in Sources */,
@@ -2807,6 +2860,8 @@
 				3CA295A13181A7A0EEC3C9F9 /* WindowSetup.cpp in Sources */,
 				6B4F7A2C11593AF5BBAFCAA9 /* WindowsSetMainWindowIcon.cpp in Sources */,
 				9EAB14E4FA11D38976669E46 /* WindowState.cpp in Sources */,
+				B527CC924B5C1A10AC2A55E7 /* MacMetalGraphicsContext.mm in Sources */,
+				95EA2CAAA4694992D1AB0D36 /* MetalCppImpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2827,8 +2882,7 @@
 					"ADHOC_RELEASE=1",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -2857,8 +2911,7 @@
 					"ADHOC_RELEASE=0",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -2882,6 +2935,13 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=1",
 					"ADHOC_RELEASE=0",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vendor/metal-cpp/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path",
@@ -2912,8 +2972,7 @@
 					"ADHOC_RELEASE=0",
 				);
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/src",
-					"$(PROJECT_DIR)/include",
+					"$(inherited)",
 					"$(PROJECT_DIR)/vcpkg_installed/static/arm64-osx-static-adhoc/include",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -2985,7 +3044,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(PROJECT_DIR)/include",
-					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
+					"$(PROJECT_DIR)/vendor/metal-cpp/include",
 				);
 				INSTALL_PATH = "@rpath";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -3008,6 +3067,13 @@
 					"ADHOC_DEBUG=0",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vendor/metal-cpp/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path",
@@ -3038,6 +3104,13 @@
 					"ADHOC_DEBUG=1",
 					"ADHOC_DEV=0",
 					"ADHOC_RELEASE=0",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/src",
+					"$(PROJECT_DIR)/include",
+					"$(PROJECT_DIR)/vendor/metal-cpp/include",
+					"$(PROJECT_DIR)/vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/include",
 				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@loader_path",
