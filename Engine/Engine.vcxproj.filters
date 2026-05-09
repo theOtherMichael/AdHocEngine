@@ -149,9 +149,6 @@
     <ClCompile Include="src\_platform\Windows\DllMain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Graphics\Contexts\_platform\Windows\WindowsD3D11GraphicsContext.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

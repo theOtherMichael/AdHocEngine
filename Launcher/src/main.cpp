@@ -100,8 +100,9 @@ int main(int argc, char* argv[])
     {
         if (isDeveloperMode)
         {
-            Console::LogWarning("--{0} was specified alongside --developer! "
-                                "--{0} will be ignored, launch will continue in {1}",
+            Console::LogWarning("--{0} was specified alongside --developer. "
+                                "Developer mode is not compatible with configuration overrides. "
+                                "Launch will continue in {1} configuration",
                                 selectedConfigMode,
                                 compiledConfigMode);
         }

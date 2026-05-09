@@ -56,13 +56,13 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EditorD.lib;$(SolutionDir)build\Debug\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Debug\EditorD.lib;$(SolutionDir)build\Debug\EngineD.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
@@ -81,7 +81,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin\ $(Outpu
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -89,7 +89,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\debug\bin\ $(Outpu
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Editor.lib;$(SolutionDir)build\Release\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Release\Editor.lib;$(SolutionDir)build\Release\Engine.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>
@@ -108,7 +108,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath)
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)Editor\include;$(SolutionDir)Engine\include;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Editor\include;$(SolutionDir)Editor\vendor\imgui;$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -116,7 +116,7 @@ XCOPY $(ProjectDir)\vcpkg_installed\dynamic\x64-windows-adhoc\bin\ $(OutputPath)
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <AdditionalDependencies>$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EditorDev.lib;$(SolutionDir)build\Dev\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(SolutionDir)Editor\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gtest.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\gmock.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gtest_main.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\manual-link\gmock_main.lib;$(SolutionDir)build\Dev\EditorDev.lib;$(SolutionDir)build\Dev\EngineDev.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PostBuildEvent>

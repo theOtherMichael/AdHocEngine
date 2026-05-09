@@ -82,13 +82,13 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;_DEBUG;BX_CONFIG_DEBUG=1;ADHOC_DEBUG=1;ADHOC_DEV=0;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>D3d11.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\glfw3dll.lib;$(SolutionDir)build\Debug\EngineD.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;$(SolutionDir)build\Debug\EngineD.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\glfw3dll.lib;DbgHelp.lib;D3d11.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -110,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=0;ADHOC_RELEASE=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -118,7 +118,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(SolutionDir)build\Release\Engine.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(SolutionDir)build\Release\Engine.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;DbgHelp.lib;D3d11.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
@@ -140,7 +140,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp23</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(SolutionDir)Engine\include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src;$(ProjectDir)include;$(ProjectDir)vendor\imgui;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\include;$(SolutionDir)Engine\include;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\include</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NOMINMAX;WIN32_LEAN_AND_MEAN;IMGUI_USER_CONFIG="imuserconfig.h";ADHOC_INTERNAL=1;ADHOC_EDITOR_PROJECT=1;ADHOC_EDITOR=1;ADHOC_WINDOWS=1;ADHOC_MAC=0;NDEBUG;BX_CONFIG_DEBUG=0;ADHOC_DEBUG=0;ADHOC_DEV=1;ADHOC_RELEASE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalOptions>/utf-8 %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -148,7 +148,7 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;$(SolutionDir)build\Dev\EngineDev.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;DbgHelp.lib;D3d11.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
       <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>

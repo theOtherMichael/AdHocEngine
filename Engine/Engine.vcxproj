@@ -144,9 +144,8 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\mimalloc-debug.dll.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\fmtd.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\debug\lib\glfw3dll.lib;DbgHelp.lib;D3d11.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
-      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -198,9 +197,8 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\debug\b
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;DbgHelp.lib;D3d11.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
-      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -256,9 +254,8 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>D3d11.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\mimalloc.dll.lib;DbgHelp.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\fmt.lib;$(ProjectDir)vcpkg_installed\dynamic\x64-windows-adhoc\lib\glfw3dll.lib;DbgHelp.lib;D3d11.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/PDBALTPATH:%_PDB% %(AdditionalOptions)</AdditionalOptions>
-      <ForceSymbolReferences>mi_version</ForceSymbolReferences>
     </Link>
     <PreBuildEvent>
       <Command>
@@ -366,7 +363,6 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClCompile Include="src\Window\Internal\WindowSetup.cpp" />
     <ClCompile Include="src\Window\Internal\_platform\Windows\WindowsSetMainWindowIcon.cpp" />
     <ClCompile Include="src\_platform\Windows\DllMain.cpp" />
-    <ClCompile Include="src\_platform\Windows\MimallocNewDeleteOverride.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json">
