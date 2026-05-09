@@ -19,13 +19,13 @@ public:
     void OnFramebufferResize(int width, int height) override;
     void Present() const override;
 
-    MTL::Device*       device       = nullptr;
+    MTL::Device* device             = nullptr;
     MTL::CommandQueue* commandQueue = nullptr;
-    CA::MetalLayer*    metalLayer   = nullptr;
+    CA::MetalLayer* metalLayer      = nullptr;
 
-    mutable NS::AutoreleasePool*       currentAutoreleasePool      = nullptr;
-    mutable CA::MetalDrawable*         currentDrawable             = nullptr;
-    mutable MTL::CommandBuffer*        currentCommandBuffer        = nullptr;
+    mutable NS::AutoreleasePool* currentAutoreleasePool            = nullptr;
+    mutable CA::MetalDrawable* currentDrawable                     = nullptr;
+    mutable MTL::CommandBuffer* currentCommandBuffer               = nullptr;
     mutable MTL::RenderPassDescriptor* currentRenderPassDescriptor = nullptr;
 };
 

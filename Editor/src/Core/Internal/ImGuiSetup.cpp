@@ -26,10 +26,14 @@ namespace Editor::Internal
 {
 
 static void LogImGuiContextCreatedSuccessfully(const ApiMode apiMode)
-{ Console::Log("ImGui initialized successfully. API: {}", apiMode); }
+{
+    Console::Log("ImGui initialized successfully. API: {}", apiMode);
+}
 
 static void LogImGuiContextShutdownSuccessfully(const ApiMode apiMode)
-{ Console::Log("ImGui shutdown successfully. API: {}", apiMode); }
+{
+    Console::Log("ImGui shutdown successfully. API: {}", apiMode);
+}
 
 void InitializeImGui()
 {
