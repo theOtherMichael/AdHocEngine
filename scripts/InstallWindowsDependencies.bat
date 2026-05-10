@@ -111,7 +111,7 @@ if not exist !MANIFEST_PATH! (
 )
 
 echo Checking vcpkg.json for changes...
-for /f "delims=" %%A in ('certutil -hashfile !MANIFEST_PATH! SHA1 ^| find /v ":"') do set "MANIFEST_CHECKSUM=%%A"
+for /f "delims=" %%A in ('certutil -hashfile !MANIFEST_PATH! SHA1 ^| %SystemRoot%\System32\find.exe /v ":"') do set "MANIFEST_CHECKSUM=%%A"
 echo Manifest checksum: !MANIFEST_CHECKSUM!
 
 if exist !CHECKSUM_PATH! (
