@@ -3,7 +3,7 @@
 
 # Ad Hoc Engine
 
-Ad Hoc Engine is a lightweight, "hypermodular" C++20 game engine focussed on extensibility, flexibility, and agility. It only *directly* includes a few core features:
+Ad Hoc Engine is a lightweight, "hypermodular" C++23 game engine focused on extensibility, flexibility, and agility. It only *directly* includes a few core features:
 
 * An extensible editor application, **Ad Hoc Editor**
 * An extensible build system
@@ -13,7 +13,7 @@ Ad Hoc Engine is a lightweight, "hypermodular" C++20 game engine focussed on ext
 
 All other major features (rendering, input, UI, etc.) are provided as first-party packages that are *themselves* built with Ad Hoc Engine. This lets you easily remove features you don’t use, fork and customize features you do use, and even replace features wholesale with third-party or in-house solutions.
 
-At least, that's the design -- I just have to finish building it.
+At least, that's the design — I just have to finish building it.
 
 Follow development on Twitch:
 
@@ -30,7 +30,7 @@ Open `AdHocEngine.sln`.
 * Use the **`Debug`**, **`Dev`**, and **`Release`** configurations to build and run the editor in developer mode.
 * Use the **`StaticDebug`**, **`StaticDev`**, and **`StaticRelease`** configurations to build and run tests on the static engine library.
 
-### Xcode (macOS)
+### Xcode (macOS, Apple Silicon)
 
 Open `AdHocEngine.xcworkspace`.
 
@@ -48,18 +48,20 @@ The Visual Studio solution is organized as you’d expect, with a few exceptions
 The Xcode workspace, on the other hand, is set up somewhat unconventionally, since Xcode doesn’t allow cross-configuration dependencies:
 
 * The `Debug`, `Dev`, and `Release` "configurations" are implemented as separate build targets. `Debug` targets have a **"D"** suffix, `Dev` targets have a **"Dev"** suffix, and `Release` targets have **no suffix**.
-* The Xcode config switch is repurposed as an **`ONLY_ACTIVE_ARCH`** switch. The `Debug`, `Dev`, and `Release` schemes use the **`ActiveArch`** config, while the `Bundle` scheme (used for shipping) uses the **`Universal`** config.
+* A vcpkg install script runs as a pre-build action in each scheme.
 
 ## Libraries Used
 
 ### Engine
 
-* mimalloc: <https://github.com/microsoft/mimalloc>
 * {fmt}: <https://github.com/fmtlib/fmt>
+* magic-enum: <https://github.com/Neargye/magic_enum>
 * GLFW: <https://github.com/glfw/glfw>
+* metal-cpp *(macOS)*: <https://github.com/apple/metal-cpp>
 
 ### Editor
 
+* mimalloc: <https://github.com/microsoft/mimalloc>
 * Dear ImGui: <https://github.com/ocornut/imgui>
 
 ## Other Resources Used
