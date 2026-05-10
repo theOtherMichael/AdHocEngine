@@ -155,7 +155,7 @@ if [ ! -f ./vcpkg/bootstrap-vcpkg.sh ]; then
 fi
 
 vcpkg_commit=$(git rev-parse HEAD:./vcpkg 2>/dev/null)
-bootstrap_commit_path="./vcpkg/bootstrap_commit.txt"
+bootstrap_commit_path="./vcpkg_bootstrapped_commit.txt"
 
 needs_bootstrap=false
 if [ ! -f ./vcpkg/vcpkg ]; then

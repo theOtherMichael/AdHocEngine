@@ -5,7 +5,7 @@ rem This script is used as a custom build tool for vcpkg.json files in Visual St
 rem The working directory is the current project folder.
 
 set VCPKG="..\vcpkg\vcpkg.exe"
-set BOOTSTRAP_COMMIT_PATH="vcpkg_installed\bootstrap_commit.txt"
+set BOOTSTRAP_COMMIT_PATH="..\vcpkg_bootstrapped_commit.txt"
 set VCPKG_COMMIT=
 
 set LOCK_FILE="..\DO_NOT_SAVE.lock"
@@ -98,7 +98,6 @@ if "!NEEDS_BOOTSTRAP!"=="true" (
         exit /b 1
     )
     if not "!VCPKG_COMMIT!"=="" (
-        if not exist "vcpkg_installed" mkdir "vcpkg_installed"
         echo !VCPKG_COMMIT!>!BOOTSTRAP_COMMIT_PATH!
     )
     echo vcpkg bootstrapped successfully
