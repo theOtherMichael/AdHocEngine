@@ -33,7 +33,7 @@ esac
 
 check_manifests_for_changes() {
     if [ ! -f "$engine_manifest_path" ]; then
-        echo "Unable to locate engine manifest at \"$engine_manifest_path\""
+        echo "Engine manifest not found at \"$engine_manifest_path\""
         return 1
     else
         echo "Checking \"$engine_manifest_path\" for changes..."
@@ -55,7 +55,7 @@ check_manifests_for_changes() {
     fi
 
     if [ ! -f "$editor_manifest_path" ]; then
-        echo "Unable to locate editor manifest at \"$editor_manifest_path\""
+        echo "Editor manifest not found at \"$editor_manifest_path\""
         return 1
     else
         echo "Checking Editor/vcpkg.json for changes..."
@@ -77,7 +77,7 @@ check_manifests_for_changes() {
     fi
 
     if [ ! -f "$engine_tests_manifest_path" ]; then
-        echo "Unable to locate engine tests manifest at \"$engine_tests_manifest_path\""
+        echo "EngineTests manifest not found at \"$engine_tests_manifest_path\""
         return 1
     else
         echo "Checking EngineTests/vcpkg.json for changes..."
@@ -99,7 +99,7 @@ check_manifests_for_changes() {
     fi
 
     if [ ! -f "$editor_tests_manifest_path" ]; then
-        echo "Unable to locate editor tests manifest at \"$editor_tests_manifest_path\""
+        echo "EditorTests manifest not found at \"$editor_tests_manifest_path\""
         return 1
     else
         echo "Checking EditorTests/vcpkg.json for changes..."
@@ -137,7 +137,7 @@ install_dependencies_for_project_and_linkage() {
         --triplet="$triplet" \
         --x-manifest-root="$project_dir" \
         --x-install-root="$project_dir/vcpkg_installed/${linkage_flag}"; then
-        echo "Error running vcpkg on triplet $triplet. Aborting install"
+        echo "vcpkg returned an error on triplet $triplet"
         return 1
     fi
 }
@@ -149,22 +149,44 @@ echo "Running vcpkg install step..."
 if [ ! -f ./vcpkg/bootstrap-vcpkg.sh ]; then
     echo "bootstrap-vcpkg.sh not found. Initializing Git submodules..."
     if ! git submodule update --init --recursive; then
-        echo "Failure during git submodule update!"
+        echo "Git submodule update returned an error."
         exit 1
     fi
 fi
 
+vcpkg_commit=$(git rev-parse HEAD:./vcpkg 2>/dev/null)
+bootstrap_commit_path="./vcpkg/bootstrap_commit.txt"
+
+needs_bootstrap=false
 if [ ! -f ./vcpkg/vcpkg ]; then
-    echo "vcpkg not found. Bootstrapping vcpkg..."
+    needs_bootstrap=true
+elif [ -n "$vcpkg_commit" ]; then
+    if [ ! -f "$bootstrap_commit_path" ]; then
+        needs_bootstrap=true
+    else
+        bootstrapped_commit=$(cat "$bootstrap_commit_path")
+        if [ "$vcpkg_commit" != "$bootstrapped_commit" ]; then
+            echo "vcpkg submodule has changed since last bootstrap. Re-bootstrapping..."
+            needs_bootstrap=true
+        fi
+    fi
+fi
+
+if [ "$needs_bootstrap" == true ]; then
+    echo "Bootstrapping vcpkg..."
     chmod +x ./vcpkg/bootstrap-vcpkg.sh
     if ! sh ./vcpkg/bootstrap-vcpkg.sh; then
-        echo "vcpkg bootstrapping failed!"
+        echo "vcpkg bootstrapping returned an error."
         exit 1
     fi
+    if [ -n "$vcpkg_commit" ]; then
+        echo "$vcpkg_commit" > "$bootstrap_commit_path"
+    fi
+    echo "vcpkg bootstrapped successfully"
 fi
 
 if ! check_manifests_for_changes; then
-    echo "Failure while checking vcpkg manifest checksums. Aborting install"
+    echo "vcpkg manifest checksums could not be verified."
     exit 1
 fi
 
@@ -209,7 +231,7 @@ else
 fi
 
 if [ "$install_failed" == true ]; then
-    echo "One or more vcpkg install steps failed"
+    echo "One or more vcpkg install steps failed."
     exit 1
 fi
 
@@ -219,26 +241,26 @@ echo "$engine_manifest_checksum" >"$engine_checksum_path"
 engineChecksumFileContents=$(cat $engine_checksum_path)
 if [ "$engineChecksumFileContents" = "$engine_checksum_path" ]; then
     echo
-    echo Failed to write engine manifest checksum to disk. Next build may redundantly reinstall dependencies
+    echo "Engine manifest checksum could not be written to disk. Next build may redundantly reinstall dependencies."
 fi
 
 echo "$editor_manifest_checksum" >"$editor_checksum_path"
 editorChecksumFileContents=$(cat $editor_checksum_path)
 if [ "$editorChecksumFileContents" = "$editor_checksum_path" ]; then
-    echo Failed to write editor manifest checksum to disk. Next build may redundantly reinstall dependencies
+    echo "Editor manifest checksum could not be written to disk. Next build may redundantly reinstall dependencies."
 fi
 
 echo "$engine_tests_manifest_checksum" >"$engine_tests_checksum_path"
 engineTestsChecksumFileContents=$(cat $engine_tests_checksum_path)
 if [ "$engineTestsChecksumFileContents" = "$engine_tests_checksum_path" ]; then
     echo
-    echo Failed to write engine tests manifest checksum to disk. Next build may redundantly reinstall dependencies
+    echo "EngineTests manifest checksum could not be written to disk. Next build may redundantly reinstall dependencies."
 fi
 
 echo "$editor_tests_manifest_checksum" >"$editor_tests_checksum_path"
 editorTestsChecksumFileContents=$(cat $editor_tests_checksum_path)
 if [ "$editorTestsChecksumFileContents" = "$editor_tests_checksum_path" ]; then
-    echo Failed to write editor tests manifest checksum to disk. Next build may redundantly reinstall dependencies
+    echo "EditorTests manifest checksum could not be written to disk. Next build may redundantly reinstall dependencies."
 fi
 
 echo "Successfully completed vcpkg install step"
