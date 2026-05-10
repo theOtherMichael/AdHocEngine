@@ -410,6 +410,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		CEFA00002FA7B826CAFE0001 /* Copy Developer Headers */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -428,6 +429,7 @@
 		};
 		F88301792FA7B825008C9081 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -446,6 +448,7 @@
 		};
 		F8A279702FA6E200008C7F4E /* Strip Build Machine rpaths */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

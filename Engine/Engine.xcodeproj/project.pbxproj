@@ -1126,12 +1126,12 @@
 		F792253001DDE6BA9E4DB4AC /* MTL4ComputeCommandEncoder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 81F4720DC059D63EBE99B1F4 /* MTL4ComputeCommandEncoder.hpp */; };
 		F7C2798846E875715CB66E40 /* MTL4LibraryDescriptor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = B79FA868732412BB41940A9E /* MTL4LibraryDescriptor.hpp */; };
 		F7C550B9F046CAB566271997 /* WindowsRuntimeInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8849301A6F11590631875F0B /* WindowsRuntimeInfo.cpp */; };
-		F822796D2FA6E168008C7F4E /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796B2FA6E168008C7F4E /* libglfw.3.4.dylib */; };
-		F822796E2FA6E168008C7F4E /* libfmtd.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796A2FA6E168008C7F4E /* libfmtd.11.0.2.dylib */; };
-		F822797C2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */; };
-		F822797D2FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */; };
-		F822797F2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */; };
-		F82279802FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */; };
+		F822796D2FA6E168008C7F4E /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796B2FA6E168008C7F4E /* libglfw.dylib */; };
+		F822796E2FA6E168008C7F4E /* libfmtd.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822796A2FA6E168008C7F4E /* libfmtd.dylib */; };
+		F822797C2FA6E203008C7F4E /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279792FA6E203008C7F4E /* libfmt.dylib */; };
+		F822797D2FA6E203008C7F4E /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797A2FA6E203008C7F4E /* libglfw.dylib */; };
+		F822797F2FA6E203008C7F4E /* libfmt.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279792FA6E203008C7F4E /* libfmt.dylib */; };
+		F82279802FA6E203008C7F4E /* libglfw.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822797A2FA6E203008C7F4E /* libglfw.dylib */; };
 		F82279852FA6E246008C7F4E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279832FA6E246008C7F4E /* libglfw3.a */; };
 		F82279872FA6E246008C7F4E /* libfmtd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279822FA6E246008C7F4E /* libfmtd.a */; };
 		F822798B2FA6E260008C7F4E /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279892FA6E260008C7F4E /* libglfw3.a */; };
@@ -1373,10 +1373,10 @@
 		F6D12FD7E80D0F9ABB4B23A0 /* OpenGlGraphicsContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OpenGlGraphicsContext.h; path = include/Engine/Graphics/Contexts/OpenGlGraphicsContext.h; sourceTree = SOURCE_ROOT; };
 		F7A5271691B1ECB272EEBC47 /* MTL4PipelineDataSetSerializer.hpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.h; name = MTL4PipelineDataSetSerializer.hpp; path = "vendor/metal-cpp/include/Metal/MTL4PipelineDataSetSerializer.hpp"; sourceTree = SOURCE_ROOT; };
 		F7EBCE64A6B3436933DF887F /* WindowsD3D11GraphicsContext.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = WindowsD3D11GraphicsContext.cpp; path = src/Graphics/Contexts/_platform/Windows/WindowsD3D11GraphicsContext.cpp; sourceTree = SOURCE_ROOT; };
-		F822796A2FA6E168008C7F4E /* libfmtd.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.11.0.2.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libfmtd.11.0.2.dylib"; sourceTree = "<group>"; };
-		F822796B2FA6E168008C7F4E /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libglfw.3.4.dylib"; sourceTree = "<group>"; };
-		F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.11.0.2.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libfmt.11.0.2.dylib"; sourceTree = "<group>"; };
-		F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.4.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libglfw.3.4.dylib"; sourceTree = "<group>"; };
+		F822796A2FA6E168008C7F4E /* libfmtd.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmtd.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libfmtd.dylib"; sourceTree = "<group>"; };
+		F822796B2FA6E168008C7F4E /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libglfw.dylib"; sourceTree = "<group>"; };
+		F82279792FA6E203008C7F4E /* libfmt.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libfmt.dylib"; sourceTree = "<group>"; };
+		F822797A2FA6E203008C7F4E /* libglfw.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libglfw.dylib"; sourceTree = "<group>"; };
 		F82279822FA6E246008C7F4E /* libfmtd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmtd.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libfmtd.a"; sourceTree = "<group>"; };
 		F82279832FA6E246008C7F4E /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libglfw3.a"; sourceTree = "<group>"; };
 		F82279882FA6E260008C7F4E /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libfmt.a"; sourceTree = "<group>"; };
@@ -1393,8 +1393,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822797F2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */,
-				F82279802FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */,
+				F822797F2FA6E203008C7F4E /* libfmt.dylib in Frameworks */,
+				F82279802FA6E203008C7F4E /* libglfw.dylib in Frameworks */,
 				CE6FCE542DEAD1A0006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE552DEAD1A0006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE562DEAD1A0006C4B6D /* QuartzCore.framework in Frameworks */,
@@ -1429,8 +1429,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822797C2FA6E203008C7F4E /* libfmt.11.0.2.dylib in Frameworks */,
-				F822797D2FA6E203008C7F4E /* libglfw.3.4.dylib in Frameworks */,
+				F822797C2FA6E203008C7F4E /* libfmt.dylib in Frameworks */,
+				F822797D2FA6E203008C7F4E /* libglfw.dylib in Frameworks */,
 				CE6FCE532DEAD188006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE522DEAD188006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE512DEAD188006C4B6D /* QuartzCore.framework in Frameworks */,
@@ -1453,8 +1453,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822796E2FA6E168008C7F4E /* libfmtd.11.0.2.dylib in Frameworks */,
-				F822796D2FA6E168008C7F4E /* libglfw.3.4.dylib in Frameworks */,
+				F822796E2FA6E168008C7F4E /* libfmtd.dylib in Frameworks */,
+				F822796D2FA6E168008C7F4E /* libglfw.dylib in Frameworks */,
 				CE6FCE4C2DEAD140006C4B6D /* Foundation.framework in Frameworks */,
 				CE6FCE4E2DEAD14A006C4B6D /* Metal.framework in Frameworks */,
 				CE6FCE502DEAD15B006C4B6D /* QuartzCore.framework in Frameworks */,
@@ -2013,10 +2013,10 @@
 				F82279892FA6E260008C7F4E /* libglfw3.a */,
 				F82279822FA6E246008C7F4E /* libfmtd.a */,
 				F82279832FA6E246008C7F4E /* libglfw3.a */,
-				F82279792FA6E203008C7F4E /* libfmt.11.0.2.dylib */,
-				F822797A2FA6E203008C7F4E /* libglfw.3.4.dylib */,
-				F822796A2FA6E168008C7F4E /* libfmtd.11.0.2.dylib */,
-				F822796B2FA6E168008C7F4E /* libglfw.3.4.dylib */,
+				F82279792FA6E203008C7F4E /* libfmt.dylib */,
+				F822797A2FA6E203008C7F4E /* libglfw.dylib */,
+				F822796A2FA6E168008C7F4E /* libfmtd.dylib */,
+				F822796B2FA6E168008C7F4E /* libglfw.dylib */,
 				CE6FCE4B2DEAD140006C4B6D /* Foundation.framework */,
 				CE6FCE4D2DEAD14A006C4B6D /* Metal.framework */,
 				CE6FCE4F2DEAD15B006C4B6D /* QuartzCore.framework */,

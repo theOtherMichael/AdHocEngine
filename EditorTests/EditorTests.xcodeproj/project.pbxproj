@@ -33,7 +33,7 @@
 		CEBA0BD82D2344A0006346FC /* EditorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBA0BE72D2348E5006346FC /* EditorTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBA0BF02D234A0C006346FC /* EditorTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditorTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED69E6998025E009EAEC78E9 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GTMGoogleTestRunner.mm; path = "vendor/google-toolbox-for-mac/GTMGoogleTestRunner.mm"; sourceTree = SOURCE_ROOT; };
+		ED69E6998025E009EAEC78E9 /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GTMGoogleTestRunner.mm; path = "vendor/google-toolbox-for-mac/GTMGoogleTestRunner.mm"; sourceTree = SOURCE_ROOT; };
 		F82279AF2FA6E688008C7F4E /* libgmock.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgmock.dylib"; sourceTree = "<group>"; };
 		F82279B02FA6E688008C7F4E /* libgtest.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgtest.dylib"; sourceTree = "<group>"; };
 		F82279B32FA6E6AE008C7F4E /* libgmock.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libgmock.dylib"; sourceTree = "<group>"; };
@@ -79,7 +79,6 @@
 			children = (
 				449651D30D7251D8E1DF0C8A /* google-toolbox-for-mac */,
 			);
-			name = vendor;
 			path = vendor;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -244,6 +243,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		F859E9ED2FA81EBD0009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -262,6 +262,7 @@
 		};
 		F859E9EE2FA81F5C0009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -280,6 +281,7 @@
 		};
 		F859E9EF2FA81F980009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

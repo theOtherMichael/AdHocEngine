@@ -65,7 +65,7 @@
 
 /* Begin PBXFileReference section */
 		005E0ED5AFDE3C326B330B8B /* FinallyTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = FinallyTests.cpp; path = src/asl/FinallyTests.cpp; sourceTree = SOURCE_ROOT; };
-		80DAA597D6C5E220CD9FEB7C /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; name = GTMGoogleTestRunner.mm; path = "vendor/google-toolbox-for-mac/GTMGoogleTestRunner.mm"; sourceTree = SOURCE_ROOT; };
+		80DAA597D6C5E220CD9FEB7C /* GTMGoogleTestRunner.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = GTMGoogleTestRunner.mm; path = "vendor/google-toolbox-for-mac/GTMGoogleTestRunner.mm"; sourceTree = SOURCE_ROOT; };
 		8F956FF81A257CC979DE9FE9 /* ConsoleTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ConsoleTests.cpp; path = src/Core/ConsoleTests.cpp; sourceTree = SOURCE_ROOT; };
 		997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = ThreadSafeViewsTests.cpp; path = src/Common/ThreadSafeViewsTests.cpp; sourceTree = SOURCE_ROOT; };
 		A57D62DB335B15BC4A154EBF /* CastTests.cpp */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.cpp; name = CastTests.cpp; path = src/asl/CastTests.cpp; sourceTree = SOURCE_ROOT; };
@@ -162,7 +162,6 @@
 			children = (
 				E4E2C17BCF9695B1BB2DFA71 /* google-toolbox-for-mac */,
 			);
-			name = vendor;
 			path = vendor;
 			sourceTree = SOURCE_ROOT;
 		};
@@ -404,6 +403,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		F859E9F02FA820230009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -422,6 +422,7 @@
 		};
 		F859E9F12FA820EA0009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -440,6 +441,7 @@
 		};
 		F859E9F22FA821110009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -458,6 +460,7 @@
 		};
 		F859E9F32FA827110009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -476,6 +479,7 @@
 		};
 		F859E9F42FA8272B0009B5A2 /* Copy vcpkg Binaries */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -494,6 +498,7 @@
 		};
 		F859E9F52FA827390009B5A2 /* Copy vcpkg Dependencies */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
