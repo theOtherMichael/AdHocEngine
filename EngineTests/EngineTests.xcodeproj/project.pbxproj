@@ -49,18 +49,18 @@
 		DD79452DC702DA0269DCF2BF /* CastTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57D62DB335B15BC4A154EBF /* CastTests.cpp */; };
 		DDB15EC58FC7C7A307DC5113 /* ThreadSafeViewsTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 997B3997320CBE1C2A75B9D3 /* ThreadSafeViewsTests.cpp */; };
 		F28E0EEC4F6D98D3F9255952 /* CastTests.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57D62DB335B15BC4A154EBF /* CastTests.cpp */; };
-		F82279932FA6E445008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279912FA6E445008C7F4E /* libgmock.1.16.0.dylib */; };
-		F82279942FA6E445008C7F4E /* libgtest.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279922FA6E445008C7F4E /* libgtest.1.16.0.dylib */; };
-		F82279972FA6E468008C7F4E /* libgtest.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279962FA6E468008C7F4E /* libgtest.1.16.0.dylib */; };
-		F82279982FA6E468008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279952FA6E468008C7F4E /* libgmock.1.16.0.dylib */; };
-		F82279992FA6E468008C7F4E /* libgtest.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279962FA6E468008C7F4E /* libgtest.1.16.0.dylib */; };
-		F822799A2FA6E468008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279952FA6E468008C7F4E /* libgmock.1.16.0.dylib */; };
-		F82279A12FA6E4F0008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822799F2FA6E4F0008C7F4E /* libgmock.1.16.0.dylib */; };
-		F82279A22FA6E4F0008C7F4E /* libgtest.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A02FA6E4F0008C7F4E /* libgtest.1.16.0.dylib */; };
-		F82279AB2FA6E570008C7F4E /* libgtest.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279AA2FA6E570008C7F4E /* libgtest.1.16.0.dylib */; };
-		F82279AC2FA6E570008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A92FA6E570008C7F4E /* libgmock.1.16.0.dylib */; };
-		F82279AD2FA6E570008C7F4E /* libgtest.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279AA2FA6E570008C7F4E /* libgtest.1.16.0.dylib */; };
-		F82279AE2FA6E570008C7F4E /* libgmock.1.16.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A92FA6E570008C7F4E /* libgmock.1.16.0.dylib */; };
+		F82279932FA6E445008C7F4E /* libgmock.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279912FA6E445008C7F4E /* libgmock.dylib */; };
+		F82279942FA6E445008C7F4E /* libgtest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279922FA6E445008C7F4E /* libgtest.dylib */; };
+		F82279972FA6E468008C7F4E /* libgtest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279962FA6E468008C7F4E /* libgtest.dylib */; };
+		F82279982FA6E468008C7F4E /* libgmock.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279952FA6E468008C7F4E /* libgmock.dylib */; };
+		F82279992FA6E468008C7F4E /* libgtest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279962FA6E468008C7F4E /* libgtest.dylib */; };
+		F822799A2FA6E468008C7F4E /* libgmock.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279952FA6E468008C7F4E /* libgmock.dylib */; };
+		F82279A12FA6E4F0008C7F4E /* libgmock.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F822799F2FA6E4F0008C7F4E /* libgmock.dylib */; };
+		F82279A22FA6E4F0008C7F4E /* libgtest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A02FA6E4F0008C7F4E /* libgtest.dylib */; };
+		F82279AB2FA6E570008C7F4E /* libgtest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279AA2FA6E570008C7F4E /* libgtest.dylib */; };
+		F82279AC2FA6E570008C7F4E /* libgmock.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A92FA6E570008C7F4E /* libgmock.dylib */; };
+		F82279AD2FA6E570008C7F4E /* libgtest.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279AA2FA6E570008C7F4E /* libgtest.dylib */; };
+		F82279AE2FA6E570008C7F4E /* libgmock.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F82279A92FA6E570008C7F4E /* libgmock.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,14 +83,14 @@
 		CEB9484C2D2315BA009C272B /* EngineTestsD.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsD.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB948622D231FA8009C272B /* EngineTestsDev.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EngineTestsDev.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC485732DEC0923004068E1 /* libEngineStatic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libEngineStatic.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F82279912FA6E445008C7F4E /* libgmock.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.1.16.0.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgmock.1.16.0.dylib"; sourceTree = "<group>"; };
-		F82279922FA6E445008C7F4E /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgtest.1.16.0.dylib"; sourceTree = "<group>"; };
-		F82279952FA6E468008C7F4E /* libgmock.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.1.16.0.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libgmock.1.16.0.dylib"; sourceTree = "<group>"; };
-		F82279962FA6E468008C7F4E /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libgtest.1.16.0.dylib"; sourceTree = "<group>"; };
-		F822799F2FA6E4F0008C7F4E /* libgmock.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.1.16.0.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libgmock.1.16.0.dylib"; sourceTree = "<group>"; };
-		F82279A02FA6E4F0008C7F4E /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libgtest.1.16.0.dylib"; sourceTree = "<group>"; };
-		F82279A92FA6E570008C7F4E /* libgmock.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.1.16.0.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libgmock.1.16.0.dylib"; sourceTree = "<group>"; };
-		F82279AA2FA6E570008C7F4E /* libgtest.1.16.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.1.16.0.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libgtest.1.16.0.dylib"; sourceTree = "<group>"; };
+		F82279912FA6E445008C7F4E /* libgmock.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgmock.dylib"; sourceTree = "<group>"; };
+		F82279922FA6E445008C7F4E /* libgtest.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/debug/lib/libgtest.dylib"; sourceTree = "<group>"; };
+		F82279952FA6E468008C7F4E /* libgmock.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libgmock.dylib"; sourceTree = "<group>"; };
+		F82279962FA6E468008C7F4E /* libgtest.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.dylib; path = "vcpkg_installed/dynamic/arm64-osx-dynamic-adhoc/lib/libgtest.dylib"; sourceTree = "<group>"; };
+		F822799F2FA6E4F0008C7F4E /* libgmock.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libgmock.dylib"; sourceTree = "<group>"; };
+		F82279A02FA6E4F0008C7F4E /* libgtest.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/debug/lib/libgtest.dylib"; sourceTree = "<group>"; };
+		F82279A92FA6E570008C7F4E /* libgmock.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgmock.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libgmock.dylib"; sourceTree = "<group>"; };
+		F82279AA2FA6E570008C7F4E /* libgtest.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libgtest.dylib; path = "vcpkg_installed/static/arm64-osx-static-adhoc/lib/libgtest.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279982FA6E468008C7F4E /* libgmock.1.16.0.dylib in Frameworks */,
-				F82279972FA6E468008C7F4E /* libgtest.1.16.0.dylib in Frameworks */,
+				F82279982FA6E468008C7F4E /* libgmock.dylib in Frameworks */,
+				F82279972FA6E468008C7F4E /* libgtest.dylib in Frameworks */,
 				CE3D18F02D23914700F47CDF /* libEngine.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,8 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279932FA6E445008C7F4E /* libgmock.1.16.0.dylib in Frameworks */,
-				F82279942FA6E445008C7F4E /* libgtest.1.16.0.dylib in Frameworks */,
+				F82279932FA6E445008C7F4E /* libgmock.dylib in Frameworks */,
+				F82279942FA6E445008C7F4E /* libgtest.dylib in Frameworks */,
 				CE3D18F22D23915300F47CDF /* libEngineD.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -118,8 +118,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F822799A2FA6E468008C7F4E /* libgmock.1.16.0.dylib in Frameworks */,
-				F82279992FA6E468008C7F4E /* libgtest.1.16.0.dylib in Frameworks */,
+				F822799A2FA6E468008C7F4E /* libgmock.dylib in Frameworks */,
+				F82279992FA6E468008C7F4E /* libgtest.dylib in Frameworks */,
 				CE3D18F42D23915B00F47CDF /* libEngineDev.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,8 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279A12FA6E4F0008C7F4E /* libgmock.1.16.0.dylib in Frameworks */,
-				F82279A22FA6E4F0008C7F4E /* libgtest.1.16.0.dylib in Frameworks */,
+				F82279A12FA6E4F0008C7F4E /* libgmock.dylib in Frameworks */,
+				F82279A22FA6E4F0008C7F4E /* libgtest.dylib in Frameworks */,
 				CEC485722DEC08EC004068E1 /* libEngineStaticD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,8 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279AE2FA6E570008C7F4E /* libgmock.1.16.0.dylib in Frameworks */,
-				F82279AD2FA6E570008C7F4E /* libgtest.1.16.0.dylib in Frameworks */,
+				F82279AE2FA6E570008C7F4E /* libgmock.dylib in Frameworks */,
+				F82279AD2FA6E570008C7F4E /* libgtest.dylib in Frameworks */,
 				CEE433102D23B6130095A215 /* libEngineStaticDev.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,8 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82279AC2FA6E570008C7F4E /* libgmock.1.16.0.dylib in Frameworks */,
-				F82279AB2FA6E570008C7F4E /* libgtest.1.16.0.dylib in Frameworks */,
+				F82279AC2FA6E570008C7F4E /* libgmock.dylib in Frameworks */,
+				F82279AB2FA6E570008C7F4E /* libgtest.dylib in Frameworks */,
 				CEC485742DEC0923004068E1 /* libEngineStatic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,14 +232,14 @@
 		CE42937F2D228A860020748F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F82279A92FA6E570008C7F4E /* libgmock.1.16.0.dylib */,
-				F82279AA2FA6E570008C7F4E /* libgtest.1.16.0.dylib */,
-				F822799F2FA6E4F0008C7F4E /* libgmock.1.16.0.dylib */,
-				F82279A02FA6E4F0008C7F4E /* libgtest.1.16.0.dylib */,
-				F82279912FA6E445008C7F4E /* libgmock.1.16.0.dylib */,
-				F82279922FA6E445008C7F4E /* libgtest.1.16.0.dylib */,
-				F82279952FA6E468008C7F4E /* libgmock.1.16.0.dylib */,
-				F82279962FA6E468008C7F4E /* libgtest.1.16.0.dylib */,
+				F82279A92FA6E570008C7F4E /* libgmock.dylib */,
+				F82279AA2FA6E570008C7F4E /* libgtest.dylib */,
+				F822799F2FA6E4F0008C7F4E /* libgmock.dylib */,
+				F82279A02FA6E4F0008C7F4E /* libgtest.dylib */,
+				F82279912FA6E445008C7F4E /* libgmock.dylib */,
+				F82279922FA6E445008C7F4E /* libgtest.dylib */,
+				F82279952FA6E468008C7F4E /* libgmock.dylib */,
+				F82279962FA6E468008C7F4E /* libgtest.dylib */,
 				CE3D18EF2D23914700F47CDF /* libEngine.dylib */,
 				CE3D18F12D23915300F47CDF /* libEngineD.dylib */,
 				CE3D18F32D23915B00F47CDF /* libEngineDev.dylib */,
