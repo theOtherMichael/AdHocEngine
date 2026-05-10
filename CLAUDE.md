@@ -14,7 +14,7 @@ Dynamic configs also trigger their corresponding Static build as a post-build st
 
 ## Tests
 
-Tests use Google Test. To run a specific test, use gtest's `--gtest_filter` flag on the built executable.
+Tests use Google Test. To run a specific test, use gtest's `--gtest_filter` flag on the built executable. Use `python scripts/run_tests.py` to run suites from the command line.
 
 - **EngineTests** — build and run in any configuration.
 - **EditorTests** — build and run in `Debug` / `Dev` / `Release` only. The editor is only ever built as a DLL, so EditorTests do not exist in the `Static*` configurations.
@@ -45,7 +45,23 @@ The engine is split into four Visual Studio/Xcode projects:
 | `Launcher` | Standalone game launcher executable |
 | `EngineTests` / `EditorTests` | Google Test suites (link against static engine) |
 
-**Ad Hoc Support Library (ASL)** lives in `Engine/include/asl/`. It has no engine dependencies and uses `snake_case` to mirror the standard library (e.g., `asl::finally`, `asl::finally`). Use it for general-purpose C++ utilities; put engine-specific reusables in `Engine/Common/` instead.
+**Engine subsystems** (under `Engine/include/Engine/` and `Engine/src/`):
+
+| Folder | Contents |
+|---|---|
+| `Core/` | Assertions, Console, Debugging, DynamicLibrary, Misc, PlatformAbstraction, RuntimeInfo, SymbolExportMacros |
+| `Core/Formatters/` | `EnumFormatter.h` — `INJECT_ENUM_FORMATTER` macro; adds `fmt` + `magic_enum` formatting for enums in a namespace |
+| `Common/` | `BorrowHandle<T>` (non-owning pointer with assert), `ThreadSafeViews` (`ThreadSafeSharedView`, `ThreadSafeExclusiveView`, async variants), `Singleton<T>`, `PlatformHelpers` |
+| `Window/` | `WindowState.h` (public), `Window/Internal/WindowSetup.h` (internal setup) |
+| `Graphics/` | Graphics context abstraction and per-API implementations |
+
+**Ad Hoc Support Library (ASL)** lives in `Engine/include/asl/`. It has no engine dependencies and uses `snake_case` to mirror the standard library. Use it for general-purpose C++ utilities; put engine-specific reusables in `Engine/Common/` instead.
+
+| Header | Contents |
+|---|---|
+| `asl/finally.h` | `asl::finally` — RAII scope-exit guard |
+| `asl/casts.h` | `asl::narrow_cast<T>` (unchecked), `asl::narrow<T>` (throws `asl::narrowing_error` on truncation) |
+| `asl/concepts.h` | `asl::arithmetic`, `asl::non_arithmetic` concepts |
 
 **Platform Abstraction Layer (PAL):** All platform-specific code lives in `_platform/` subfolders. Generic code pulls in platform implementations via two macros from `<Engine/Core/PlatformAbstraction.h>`:
 
@@ -69,7 +85,7 @@ When abstracting an entire class to the platform layer, use a `using` alias or p
 **Graphics:** `BaseGraphicsContext` interface with per-API subclasses (D3D11, D3D12, Metal, OpenGL, Vulkan). Use concept-based type checking (e.g., `IsD3d11GraphicsContext`) rather than dynamic dispatch where possible.
 
 **Dependencies:**
-- vcpkg (`vcpkg.json` per project) — preferred for all new dependencies. After adding a package, link its output from `vcpkg_installed/` manually in the project settings.
+- vcpkg (`vcpkg.json` per project) — preferred for all new dependencies. After adding a package, link its output from `vcpkg_installed/` manually in the project settings. Engine uses `fmt`, `magic-enum`, and `glfw3`.
 - `vendor/` — git submodules or source drops when vcpkg isn't viable. Keep the dependency's license in its folder.
 - On macOS, link from the `arm64-osx-{dynamic|static}-adhoc` triplet folders inside `vcpkg_installed/`.
 
