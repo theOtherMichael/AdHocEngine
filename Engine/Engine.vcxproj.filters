@@ -170,6 +170,9 @@
     <ClCompile Include="src\Window\Internal\_platform\Windows\WindowsSetMainWindowIcon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Window\WindowState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="vcpkg.json" />
