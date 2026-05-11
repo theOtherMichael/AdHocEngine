@@ -8,14 +8,14 @@
 namespace Engine::Graphics::Platform
 {
 
-class ENGINE_API D3d11GraphicsContext : public BaseGraphicsContext
+class D3d11GraphicsContext : public BaseGraphicsContext
 {
 public:
-    D3d11GraphicsContext();
-    ~D3d11GraphicsContext();
+    ENGINE_API D3d11GraphicsContext();
+    ENGINE_API ~D3d11GraphicsContext();
 
-    void OnFramebufferResize(int width, int height) override;
-    void Present() const override;
+    ENGINE_API void OnFramebufferResize(int width, int height) override;
+    ENGINE_API void Present() const override;
 
     ID3D11Device* pd3dDevice                     = nullptr;
     ID3D11DeviceContext* pd3dDeviceContext       = nullptr;

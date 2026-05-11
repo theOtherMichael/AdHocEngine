@@ -301,6 +301,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
     <ClInclude Include="include\asl\finally.h" />
     <ClInclude Include="include\Engine\Common\BorrowHandle.h" />
     <ClInclude Include="include\Engine\Common\Singleton.h" />
+    <ClInclude Include="include\Engine\Common\SingletonImpl.h" />
     <ClInclude Include="include\Engine\Common\ThreadSafeViews.h" />
     <ClInclude Include="include\Engine\Core\Console.h" />
     <ClInclude Include="include\Engine\Core\Assertions.h" />
@@ -334,6 +335,7 @@ IF EXIST "$(SolutionDir)Engine\vcpkg_installed\dynamic\x64-windows-adhoc\bin" XC
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Core\DynamicLibrary.cpp" />
+    <ClCompile Include="src\Core\RuntimeInfo.cpp" />
     <ClCompile Include="src\Core\Misc.cpp" />
     <ClCompile Include="src\Core\Console.cpp" />
     <ClCompile Include="src\Core\Assertions.cpp" />

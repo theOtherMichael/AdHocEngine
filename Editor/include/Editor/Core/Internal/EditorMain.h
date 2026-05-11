@@ -8,7 +8,7 @@
 namespace Editor::Internal
 {
 
-struct EDITOR_API EditorExitResult
+struct EditorExitResult
 {
     int ExitCode;
 };
@@ -19,7 +19,7 @@ enum class EditorReloadMode
     Release,
 };
 
-struct EDITOR_API EditorReloadResult
+struct EditorReloadResult
 {
     EditorReloadMode Mode;
 };

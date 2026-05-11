@@ -1,7 +1,6 @@
 #pragma once
 
 #include <Engine/Common/Singleton.h>
-#include <Engine/Core/SymbolExportMacros.h>
 
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdocumentation"
@@ -11,13 +10,10 @@
 namespace Engine::Window
 {
 
-class ENGINE_API WindowState : public ImmutableSingleton<WindowState>
+class WindowState : public ImmutableSingleton<WindowState>
 {
 public:
     GLFWwindow* mainWindowHandle;
 };
 
 } // namespace Engine::Window
-
-extern template class Engine::SingletonBase<Engine::Window::WindowState>;
-extern template class Engine::ImmutableSingleton<Engine::Window::WindowState>;

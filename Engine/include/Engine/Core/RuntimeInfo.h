@@ -10,7 +10,6 @@
 #endif
 
 #include <Engine/Common/Singleton.h>
-#include <Engine/Core/SymbolExportMacros.h>
 
 #if PLATFORM_HAS_RUNTIME_INFO
 #include <memory>
@@ -19,7 +18,7 @@
 namespace Engine
 {
 
-class ENGINE_API RuntimeInfo : public ImmutableSingleton<RuntimeInfo>
+class RuntimeInfo : public ImmutableSingleton<RuntimeInfo>
 {
 public:
     RuntimeInfo()

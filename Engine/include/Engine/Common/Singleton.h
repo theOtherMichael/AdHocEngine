@@ -13,11 +13,15 @@ public:
     SingletonBase& operator=(SingletonBase&&)      = delete;
 
 protected:
+#if ADHOC_EDITOR
+    static Derived& InternalInstance();
+#else
     static Derived& InternalInstance()
     {
         static auto instance = Derived{};
         return instance;
     }
+#endif
 
     SingletonBase()  = default;
     ~SingletonBase() = default;

@@ -10,14 +10,14 @@
 namespace Engine::Graphics::Platform
 {
 
-class ENGINE_API MetalGraphicsContext : public BaseGraphicsContext
+class MetalGraphicsContext : public BaseGraphicsContext
 {
 public:
-    MetalGraphicsContext();
-    ~MetalGraphicsContext();
+    ENGINE_API MetalGraphicsContext();
+    ENGINE_API ~MetalGraphicsContext();
 
-    void OnFramebufferResize(int width, int height) override;
-    void Present() const override;
+    ENGINE_API void OnFramebufferResize(int width, int height) override;
+    ENGINE_API void Present() const override;
 
     MTL::Device* device             = nullptr;
     MTL::CommandQueue* commandQueue = nullptr;

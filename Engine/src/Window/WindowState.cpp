@@ -1,4 +1,4 @@
 #include <Engine/Window/WindowState.h>
+#include <Engine/Common/SingletonImpl.h>
 
-template class ENGINE_API Engine::SingletonBase<Engine::Window::WindowState>;
-template class ENGINE_API Engine::ImmutableSingleton<Engine::Window::WindowState>;
+ADHOC_IMPLEMENT_SINGLETON(Engine::Window::WindowState);

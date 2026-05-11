@@ -7,11 +7,11 @@
 namespace Engine::Platform
 {
 
-class ENGINE_API PlatformRuntimeInfo
+class PlatformRuntimeInfo
 {
 public:
-    PlatformRuntimeInfo();
-    ~PlatformRuntimeInfo();
+    ENGINE_API PlatformRuntimeInfo();
+    ENGINE_API ~PlatformRuntimeInfo();
 
     HANDLE processHandle = NULL;
 };
