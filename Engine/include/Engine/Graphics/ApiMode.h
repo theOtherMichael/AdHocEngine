@@ -3,6 +3,8 @@
 #include <Engine/Core/Formatters/EnumFormatter.h>
 #include <Engine/Core/SymbolExportMacros.h>
 
+#include <vector>
+
 namespace Engine::Graphics
 {
 
@@ -17,6 +19,10 @@ enum class ApiMode
     D3d12,
     Metal,
 };
+
+ENGINE_API std::vector<ApiMode> GetSupportedApiModes();
+
+ENGINE_API ApiMode GetDefaultApiMode();
 
 ENGINE_API ApiMode GetActiveApiMode();
 

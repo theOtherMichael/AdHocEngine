@@ -44,12 +44,9 @@ EditorMainResult EditorMain(int argc, char* argv[])
         Engine::Window::Internal::CreateMainWindow();
         const auto shutDownWindowAction = asl::finally(Engine::Window::Internal::DestroyMainWindow);
 
-        // TODO: Get initial API mode from preferences
-#if ADHOC_WINDOWS
-        Engine::Graphics::SetApiMode(Engine::Graphics::ApiMode::D3d11);
-#elif ADHOC_MAC
-        Engine::Graphics::SetApiMode(Engine::Graphics::ApiMode::Metal);
-#endif
+        const auto initialApiMode = Engine::Graphics::GetDefaultApiMode();
+        Engine::Graphics::SetApiMode(initialApiMode);
+
         const auto shutdownGraphicsContextAction = asl::finally(Engine::Graphics::Internal::DestroyContext);
 
         InitializeImGui();
