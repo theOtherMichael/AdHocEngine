@@ -1,0 +1,8 @@
+{
+  // Extensions the source-mode IDE flow depends on (see docs/SourceMode.md).
+  "recommendations": [
+    "ms-vscode.cmake-tools", // provides ${command:cmake.buildDirectory} / launchTargetFilename
+    "vadimcn.vscode-lldb", // CodeLLDB -- the debugger for both macOS and Windows
+    "ms-vscode.cpptools" // C/C++ IntelliSense
+  ]
+}

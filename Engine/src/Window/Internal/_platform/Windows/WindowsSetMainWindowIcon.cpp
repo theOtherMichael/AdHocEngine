@@ -150,13 +150,7 @@ static std::vector<OwnedGlfwImage> GetGlfwIconsFromEmbeddedResource(HINSTANCE hI
 
 void SetMainWindowIconImplementation()
 {
-#if ADHOC_DEBUG
-    auto hInstance = GetModuleHandle(L"EngineD");
-#elif ADHOC_DEV
-    auto hInstance = GetModuleHandle(L"EngineDev");
-#else // ADHOC_RELEASE
-    auto hInstance = GetModuleHandle(L"Engine");
-#endif
+    auto hInstance = GetModuleHandle(NULL); // load icon from the host executable
 
     auto glfwIcons = GetGlfwIconsFromEmbeddedResource(hInstance, IDI_ICON1);
     if (glfwIcons.empty())

@@ -1,0 +1,27 @@
+<!--
+  CLion equivalent of the VS Code default-build Run/Reload (Cmd/Ctrl+Shift+B):
+  build -> reload a running editor, else stage + cold-launch slot A (no debugger).
+  Runs scripts/run_source_mode.py. Use this for forward-compat reload parity; the
+  "Editor (source mode)" CMake Application config is functionally equivalent today
+  (cold-start-only until the editor binds the IPC endpoint -- see docs/SourceMode.md).
+
+  Best-effort starting point; CLion may rewrite on first edit. Switch --build-dir
+  for other configs.
+-->
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Editor - Run/Reload (script)" type="ShConfigurationType">
+    <option name="SCRIPT_TEXT" value="python3 scripts/run_source_mode.py --build-dir build/host-mac-debug --slot-root out/source" />
+    <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+    <option name="SCRIPT_PATH" value="" />
+    <option name="SCRIPT_OPTIONS" value="" />
+    <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+    <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+    <option name="INTERPRETER_PATH" value="/bin/zsh" />
+    <option name="INTERPRETER_OPTIONS" value="" />
+    <option name="EXECUTE_IN_TERMINAL" value="true" />
+    <option name="EXECUTE_SCRIPT_FILE" value="false" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

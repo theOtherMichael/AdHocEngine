@@ -1,0 +1,33 @@
+// Generated from cmake/templates/AppResource.rc.in — do not edit directly.
+#include <windows.h>
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    @ADHOC_VERSION_COMMA@
+ PRODUCTVERSION @ADHOC_VERSION_COMMA@
+ FILEFLAGSMASK  0x3fL
+ FILEFLAGS      0x0L
+ FILEOS         VOS__WINDOWS32
+ FILETYPE       @ADHOC_RC_FILETYPE@
+ FILESUBTYPE    0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName",      "Ad Hoc"
+            VALUE "FileDescription",  "@ADHOC_RC_DESCRIPTION@"
+            VALUE "FileVersion",      "@PROJECT_VERSION@"
+            VALUE "InternalName",     "@ADHOC_RC_FILENAME@"
+            VALUE "LegalCopyright",   "Copyright (c) Ad Hoc"
+            VALUE "OriginalFilename", "@ADHOC_RC_FILENAME@"
+            VALUE "ProductName",      "Ad Hoc Editor"
+            VALUE "ProductVersion",   "@PROJECT_VERSION@"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+@ADHOC_RC_ICON_ENTRY@

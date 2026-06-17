@@ -33,7 +33,7 @@ template <size_t maxNameLength = 256>
 class SymbolInfo
 {
 public:
-    SymbolInfo() noexcept : rawSymbolInfo(new (buffer) SYMBOL_INFO{})
+    SymbolInfo() noexcept : rawSymbolInfo(new(buffer) SYMBOL_INFO{})
     {
         static_assert(maxNameLength > 0);
 

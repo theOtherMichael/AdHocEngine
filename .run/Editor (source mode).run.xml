@@ -1,0 +1,27 @@
+<!--
+  CLion source-mode launch config (committed). One CMake Application config
+  serves both buttons: Run > = everyday no-debugger run (#3); Debug (bug) =
+  debug from main() (#1). Before-launch builds the `source-mode` custom target,
+  which stages slot A (out/source/a/).
+
+  This is a best-effort starting point. CLion's .run schema is version-specific
+  and CLion rewrites these files on first edit. If it does not load cleanly,
+  recreate it from the step-by-step in docs/SourceMode.md > CLion -- that doc is
+  authoritative. Defaults below target the host-mac-debug profile / Debug binary
+  (AdHocEditorD); switch RUN_PATH, WORKING_DIR and --build-tree for other configs
+  (suffix: Debug=D, Dev=Dev, Release=none; see docs/BuildLayout.md).
+-->
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Editor (source mode)" type="CMakeRunConfiguration"
+                factoryName="Application"
+                PROGRAM_PARAMS="--source-mode --build-tree $PROJECT_DIR$/build/host-mac-debug --slot-root $PROJECT_DIR$/out/source"
+                WORKING_DIR="$PROJECT_DIR$/out/source/a"
+                PASS_PARENT_ENVS_2="true"
+                TARGET_NAME="source-mode"
+                RUN_TARGET_NAME="source-mode"
+                RUN_PATH="$PROJECT_DIR$/out/source/a/Ad Hoc Editor.app/Contents/MacOS/AdHocEditorD">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>

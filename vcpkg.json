@@ -1,0 +1,25 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "dependencies": [
+    "fmt",
+    "magic-enum"
+  ],
+  "features": {
+    "editor": {
+      "description": "Host-only dependencies for building the editor and launcher.",
+      "dependencies": [
+        "glfw3",
+        {
+          "name": "mimalloc",
+          "features": ["override"]
+        }
+      ]
+    },
+    "tests": {
+      "description": "Google Test for EngineTests and EditorTests.",
+      "dependencies": [
+        "gtest"
+      ]
+    }
+  }
+}

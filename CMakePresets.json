@@ -1,0 +1,280 @@
+{
+  "version": 6,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 28,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "base",
+      "hidden": true,
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}"
+    },
+    {
+      "name": "host-mac",
+      "hidden": true,
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "cacheVariables": {
+        "ADHOC_PLATFORM_DESKTOP": "ON",
+        "VCPKG_TARGET_TRIPLET": "arm64-osx-dynamic-adhoc",
+        "VCPKG_MANIFEST_FEATURES": "editor;tests"
+      }
+    },
+    {
+      "name": "host-mac-debug",
+      "displayName": "Mac host — Debug",
+      "inherits": "host-mac",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "host-mac-dev",
+      "displayName": "Mac host — Dev",
+      "inherits": "host-mac",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Dev"
+      }
+    },
+    {
+      "name": "host-mac-release",
+      "displayName": "Mac host — Release",
+      "inherits": "host-mac",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "host-windows",
+      "hidden": true,
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      },
+      "cacheVariables": {
+        "ADHOC_PLATFORM_DESKTOP": "ON",
+        "VCPKG_TARGET_TRIPLET": "x64-windows-adhoc",
+        "VCPKG_MANIFEST_FEATURES": "editor;tests"
+      }
+    },
+    {
+      "name": "host-windows-debug",
+      "displayName": "Windows host — Debug",
+      "inherits": "host-windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "host-windows-dev",
+      "displayName": "Windows host — Dev",
+      "inherits": "host-windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Dev"
+      }
+    },
+    {
+      "name": "host-windows-release",
+      "displayName": "Windows host — Release",
+      "inherits": "host-windows",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "cross-linux-x64",
+      "hidden": true,
+      "inherits": "base",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-linux-static-adhoc",
+        "VCPKG_MANIFEST_FEATURES": ""
+      }
+    },
+    {
+      "name": "cross-linux-x64-debug",
+      "displayName": "Cross: Linux x64 — Debug",
+      "inherits": "cross-linux-x64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "cross-linux-x64-dev",
+      "displayName": "Cross: Linux x64 — Dev",
+      "inherits": "cross-linux-x64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Dev"
+      }
+    },
+    {
+      "name": "cross-linux-x64-release",
+      "displayName": "Cross: Linux x64 — Release",
+      "inherits": "cross-linux-x64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "cross-ios-arm64",
+      "hidden": true,
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "toolchainFile": "${sourceDir}/triplets/toolchains/ios-arm64.cmake",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "arm64-ios-static-adhoc",
+        "VCPKG_MANIFEST_FEATURES": ""
+      }
+    },
+    {
+      "name": "cross-ios-arm64-debug",
+      "displayName": "Cross: iOS arm64 — Debug",
+      "inherits": "cross-ios-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "cross-ios-arm64-dev",
+      "displayName": "Cross: iOS arm64 — Dev",
+      "inherits": "cross-ios-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Dev"
+      }
+    },
+    {
+      "name": "cross-ios-arm64-release",
+      "displayName": "Cross: iOS arm64 — Release",
+      "inherits": "cross-ios-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "cross-ios-simulator-arm64",
+      "hidden": true,
+      "inherits": "base",
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Darwin"
+      },
+      "toolchainFile": "${sourceDir}/triplets/toolchains/ios-simulator-arm64.cmake",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "arm64-ios-simulator-static-adhoc",
+        "VCPKG_MANIFEST_FEATURES": ""
+      }
+    },
+    {
+      "name": "cross-ios-simulator-arm64-debug",
+      "displayName": "Cross: iOS Simulator arm64 — Debug",
+      "inherits": "cross-ios-simulator-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "cross-ios-simulator-arm64-dev",
+      "displayName": "Cross: iOS Simulator arm64 — Dev",
+      "inherits": "cross-ios-simulator-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Dev"
+      }
+    },
+    {
+      "name": "cross-ios-simulator-arm64-release",
+      "displayName": "Cross: iOS Simulator arm64 — Release",
+      "inherits": "cross-ios-simulator-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "cross-android-arm64",
+      "hidden": true,
+      "inherits": "base",
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "arm64-android-static-adhoc",
+        "VCPKG_MANIFEST_FEATURES": ""
+      }
+    },
+    {
+      "name": "cross-android-arm64-debug",
+      "displayName": "Cross: Android arm64 — Debug",
+      "inherits": "cross-android-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "cross-android-arm64-dev",
+      "displayName": "Cross: Android arm64 — Dev",
+      "inherits": "cross-android-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Dev"
+      }
+    },
+    {
+      "name": "cross-android-arm64-release",
+      "displayName": "Cross: Android arm64 — Release",
+      "inherits": "cross-android-arm64",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "host-mac-debug",
+      "configurePreset": "host-mac-debug"
+    },
+    {
+      "name": "host-mac-dev",
+      "configurePreset": "host-mac-dev"
+    },
+    {
+      "name": "host-mac-release",
+      "configurePreset": "host-mac-release"
+    },
+    {
+      "name": "host-windows-debug",
+      "configurePreset": "host-windows-debug"
+    },
+    {
+      "name": "host-windows-dev",
+      "configurePreset": "host-windows-dev"
+    },
+    {
+      "name": "host-windows-release",
+      "configurePreset": "host-windows-release"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "host-mac-release",
+      "configurePreset": "host-mac-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "host-windows-release",
+      "configurePreset": "host-windows-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

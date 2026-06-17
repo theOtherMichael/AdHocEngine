@@ -75,7 +75,7 @@ int main(int argc, char* argv[])
 #endif
 
     auto selectedConfigMode = compiledConfigMode;
-    auto isDeveloperMode    = false;
+    auto isSourceMode       = false;
 
     Console::Log("Command line arguments:");
     for (int i = 1; i < argc; i++)
@@ -89,19 +89,19 @@ int main(int argc, char* argv[])
         else if (strcmp(argv[i], "--release") == 0)
             selectedConfigMode = ConfigurationMode::Release;
 
-        else if (strcmp(argv[i], "--developer") == 0)
-            isDeveloperMode = true;
+        else if (strcmp(argv[i], "--source-mode") == 0)
+            isSourceMode = true;
     }
 
     Console::Log("Configuration: {}", selectedConfigMode);
-    Console::Log("Developer Mode: {}", isDeveloperMode);
+    Console::Log("Source mode: {}", isSourceMode);
 
     if (selectedConfigMode != compiledConfigMode)
     {
-        if (isDeveloperMode)
+        if (isSourceMode)
         {
-            Console::LogWarning("--{0} was specified alongside --developer. "
-                                "Developer mode is not compatible with configuration overrides. "
+            Console::LogWarning("--{0} was specified alongside --source-mode. "
+                                "Source mode is not compatible with configuration overrides. "
                                 "Launch will continue in {1} configuration",
                                 selectedConfigMode,
                                 compiledConfigMode);
@@ -112,8 +112,8 @@ int main(int argc, char* argv[])
         }
     }
 
-    auto& mutableRuntimeInfo           = Engine::RuntimeInfo::MutableInstance();
-    mutableRuntimeInfo.IsDeveloperMode = isDeveloperMode;
+    auto& mutableRuntimeInfo        = Engine::RuntimeInfo::MutableInstance();
+    mutableRuntimeInfo.IsSourceMode = isSourceMode;
 
     auto editorMainResult = Editor::Internal::EditorMain(argc, argv);
 

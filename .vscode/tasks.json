@@ -1,0 +1,48 @@
+{
+  // Source-mode inner loop. See docs/SourceMode.md > IDE wiring.
+  //   Cmd/Ctrl+Shift+B  -> "Source mode: run/reload" (default build task)
+  //   F7                -> CMake Tools pure build (no stage/launch)
+  //   F5                -> launch.json (debug from main / attach)
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // The everyday workhorse, bound to the default-build hotkey
+      // (Cmd/Ctrl+Shift+B) with no manual keybinding. Builds, then connect-probes
+      // the running editor: a live editor is signaled to reload; otherwise it
+      // stages slot A and cold-launches it detached, no debugger. Staging happens
+      // only on the cold-start branch, so a running editor's slot is never
+      // clobbered (the editor stages the free slot itself on reload).
+      "label": "Source mode: run/reload",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/scripts/run_source_mode.py",
+        "--build-dir", "${command:cmake.buildDirectory}",
+        "--slot-root", "${workspaceFolder}/out/source"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "Build, then reload a running editor or stage + cold-launch slot A (no debugger)."
+    },
+    {
+      // Pre-launch step for "Editor - debug from main" (launch.json). Builds +
+      // stages slot A and stops; the debugger launches the staged binary. On
+      // Windows it also refreshes the out/source/a-bin junction. Deliberately not
+      // in the build group, so it never hijacks Cmd/Ctrl+Shift+B.
+      "label": "Source mode: stage",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/scripts/run_source_mode.py",
+        "--stage-only",
+        "--build-dir", "${command:cmake.buildDirectory}",
+        "--slot-root", "${workspaceFolder}/out/source"
+      ],
+      "problemMatcher": ["$gcc"],
+      "detail": "Build + stage the active preset into out/source/a/ for debug-from-main."
+    }
+  ]
+}

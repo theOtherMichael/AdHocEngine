@@ -1,12 +1,16 @@
 {
-    "material-icon-theme.folders.associations": {
-        "build-int": "Other",
-        "build-int.noindex": "Other",
-        "AdHocEngine.xcworkspace": "Project",
-        "Engine.xcodeproj": "Project",
-        "EngineTests.xcodeproj": "Project",
-        "Editor.xcodeproj": "Project",
-        "EditorTests.xcodeproj": "Project",
-        "Launcher.xcodeproj": "Project"
-    }
+  // Prevent CMake Tools from auto-generating a launch config that points into
+  // the build tree — the actual launch configs are in launch.json.
+  "cmake.debugConfig": {
+    "stopAtEntry": false
+  },
+  // Reconfigure automatically when a CMakeLists.txt / *.cmake file is saved, so a
+  // newly added source gets IntelliSense flags from the CMake Tools provider
+  // without a manual "CMake: Configure". (These are CMake Tools defaults; pinned
+  // here so the IntelliSense-after-adding-a-file workflow can't be broken by a
+  // global override. Out-of-IDE edits still need a manual configure — the running
+  // extension isn't notified of CLI/agent changes.)
+  "cmake.configureOnEdit": true,
+  "cmake.configureOnOpen": true,
+  "C_Cpp.clang_format_path": "${workspaceFolder}/tools/llvm/current/bin/clang-format"
 }

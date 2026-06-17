@@ -7,3 +7,10 @@
 /// Portably trigger a breakpoint in the debugger.
 #define DEBUG_BREAK()
 #endif
+
+namespace Engine::Platform
+{
+
+bool IsBeingDebuggedImpl();
+
+} // namespace Engine::Platform

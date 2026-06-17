@@ -22,14 +22,14 @@ class RuntimeInfo : public ImmutableSingleton<RuntimeInfo>
 {
 public:
     RuntimeInfo()
-        : IsDeveloperMode(false)
+        : IsSourceMode(false)
 #if PLATFORM_HAS_RUNTIME_INFO
           ,
           platformInfo(std::make_unique<Platform::PlatformRuntimeInfo>())
 #endif
     {}
 
-    bool IsDeveloperMode;
+    bool IsSourceMode;
 
 #if PLATFORM_HAS_RUNTIME_INFO
     const std::unique_ptr<Platform::PlatformRuntimeInfo> platformInfo;

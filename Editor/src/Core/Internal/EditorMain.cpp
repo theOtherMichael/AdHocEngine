@@ -28,7 +28,8 @@ static void Update()
     Internal::StartImGuiFrame();
     const auto endImGuiFrameAction = asl::finally(Internal::EndImGuiFrame);
 
-    // TODO: Handle developer mode recompile watch thread
+    // TODO: Service the source-mode reload IPC endpoint (prompt + serialize/
+    // relaunch on a `reload` signal from the run task). See docs/SourceMode.md.
     // TODO: Editor state machine?
 
     ImGui::ShowDemoWindow();
@@ -39,7 +40,8 @@ EditorMainResult EditorMain(int argc, char* argv[])
 {
     try
     {
-        // TODO: Start the developer mode recompile watch thread here
+        // TODO: Acquire the single-instance lock and bind the source-mode
+        // reload IPC endpoint here. See docs/SourceMode.md.
 
         Engine::Window::Internal::CreateMainWindow();
         const auto shutDownWindowAction = asl::finally(Engine::Window::Internal::DestroyMainWindow);

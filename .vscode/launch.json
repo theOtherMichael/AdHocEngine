@@ -1,0 +1,67 @@
+{
+  // Two source-mode debug entries, both CodeLLDB (vadimcn.vscode-lldb) so a
+  // single config spans macOS and Windows -- VS Code cannot vary the debugger
+  // `type` per-OS, only `program`/`env`/`cwd`/`args`. The top level holds the
+  // macOS values; the `windows` block overrides the paths. See
+  // docs/SourceMode.md > IDE wiring.
+  //
+  // Everyday work does NOT use these -- press Cmd/Ctrl+Shift+B (the default build
+  // task) for the no-debugger Run/Reload. Use F5 here only to break in startup,
+  // or "Editor - attach" to debug an already-running editor without killing it.
+  //
+  // One-time setup: select `Launcher` as the CMake Tools launch target so
+  // ${command:cmake.launchTargetFilename} resolves to the active config's inner
+  // binary name (AdHocEditor / AdHocEditorD / AdHocEditorDev).
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // Debug from main(). The "Source mode: stage" task builds + stages the
+      // active preset into out/source/a/; CodeLLDB then launches that slot-A copy
+      // and breaks at main(). Running from a copy keeps the build tree free to
+      // rebuild (the Windows DLL-lock problem); see docs/SourceMode.md.
+      //
+      // macOS: DYLD_INSERT_LIBRARIES preloads mimalloc so the allocator matches a
+      // normal run. The Launcher otherwise self-injects by re-exec'ing itself, but
+      // re-exec under a debugger crashes dyld on macOS 26 -- preloading here means
+      // it sees mimalloc already loaded and skips the re-exec. The path is a
+      // stable, config-agnostic symlink the stage step refreshes each launch.
+      // (The var is inert on Windows, where the `windows` block overrides paths;
+      // out/source/a-bin is a junction the stage step points at the config's
+      // binary dir, giving one config-uniform path.)
+      "name": "Editor - debug from main",
+      "type": "lldb",
+      "request": "launch",
+      "preLaunchTask": "Source mode: stage",
+      "args": [
+        "--source-mode",
+        "--build-tree", "${command:cmake.buildDirectory}",
+        "--slot-root", "${workspaceFolder}/out/source"
+      ],
+      "program": "${workspaceFolder}/out/source/a/Ad Hoc Editor.app/Contents/MacOS/${command:cmake.launchTargetFilename}",
+      "cwd": "${workspaceFolder}/out/source/a",
+      "env": {
+        "DYLD_INSERT_LIBRARIES": "${workspaceFolder}/out/source/libmimalloc-adhoc.dylib",
+        "MIMALLOC_VERBOSE": "1"
+      },
+      "windows": {
+        "program": "${workspaceFolder}/out/source/a-bin/${command:cmake.launchTargetFilename}",
+        "cwd": "${workspaceFolder}/out/source/a-bin"
+      }
+    },
+    {
+      // Attach to a running editor without killing it. Pick the editor process
+      // (AdHocEditor / AdHocEditorD / AdHocEditorDev). Slot-independent, so it
+      // also catches a reloaded successor running from slot B. Press Stop to
+      // DETACH -- the editor keeps running. This is the way to debug an editor
+      // that is already up (F5 on "debug from main" cold-starts a new process).
+      //
+      // Alternative for auto-reattach after a reload: drop `pid` and use
+      //   "program": "<slot-A binary>", "waitFor": true
+      // to wait for the next matching process to launch.
+      "name": "Editor - attach",
+      "type": "lldb",
+      "request": "attach",
+      "pid": "${command:pickMyProcess}"
+    }
+  ]
+}
