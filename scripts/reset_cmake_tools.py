@@ -84,7 +84,10 @@ def reset_workspace_cmake_state() -> None:
         )
         return
 
+    # VS Code lowercases the drive letter in stored field names on Windows
     prefix = str(REPO_ROOT)
+    if len(prefix) >= 2 and prefix[1] == ":":
+        prefix = prefix[0].lower() + prefix[1:]
     con = sqlite3.connect(db_path)
     try:
         cur = con.execute("SELECT value FROM ItemTable WHERE key = 'ms-vscode.cmake-tools'")
