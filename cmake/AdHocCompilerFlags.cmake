@@ -20,7 +20,6 @@ function(adhoc_apply_compiler_flags target)
             /EHsc
             /GR           # RTTI on
             /Zc:__cplusplus
-            /Zc:preprocessor
         )
     endif()
 endfunction()
