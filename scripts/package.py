@@ -26,7 +26,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from cmake_utils import find_cmake
+from cmake_utils import ToolNotFoundError, find_cmake
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -84,7 +84,10 @@ def is_cross_preset(preset: str) -> bool:
 def build_one(preset: str) -> tuple[str, bool, str]:
     """Configure + build one preset. Returns (preset, ok, captured_output)."""
     build_dir = REPO_ROOT / "build" / preset
-    cmake = find_cmake(build_dir)
+    try:
+        cmake = find_cmake(build_dir)
+    except ToolNotFoundError as e:
+        return preset, False, f"[{preset}] ERROR: {e}\n"
     captured = []
     for cmd in [
         [cmake, "--preset", preset],
@@ -110,7 +113,11 @@ def stage_preset(preset: str, staging_root: Path) -> Path:
     if staging_dir.exists():
         shutil.rmtree(staging_dir)
     staging_dir.mkdir(parents=True)
-    cmake = find_cmake(build_dir)
+    try:
+        cmake = find_cmake(build_dir)
+    except ToolNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        sys.exit(1)
     run([
         cmake, "--install", str(build_dir),
         "--component", "SourceMode",

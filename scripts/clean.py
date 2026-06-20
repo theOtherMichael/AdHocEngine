@@ -81,7 +81,9 @@ def main() -> None:
 
     # Always removed -------------------------------------------------
     _remove(REPO_ROOT / "build",   "CMake build trees")
-    _remove(REPO_ROOT / "out",     "out/ (dev slots + dist)")
+    _remove(REPO_ROOT / "out",     "Build output folder")
+    _remove(REPO_ROOT / ".cache",  "clangd cache")
+    _remove(REPO_ROOT / "Engine" / "include" / "Engine" / "Core" / "Version.h",  "Generated header")
 
     # vcpkg package cache (buildtrees / packages / downloads are re-fetchable)
     for subdir in ("buildtrees", "packages", "downloads"):

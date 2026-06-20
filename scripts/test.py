@@ -56,11 +56,21 @@ def configure_preset(preset: str, build_dir: Path) -> int:
 
 
 def build_tree(build_dir: Path) -> int:
-    return subprocess.run([find_cmake(build_dir), "--build", str(build_dir)]).returncode
+    try:
+        cmake = find_cmake(build_dir)
+    except ToolNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+    return subprocess.run([cmake, "--build", str(build_dir)]).returncode
 
 
 def run_ctest(build_dir: Path, filter_pattern: str | None, verbose: bool) -> int:
-    cmd = [find_ctest(build_dir), "--test-dir", str(build_dir), "--output-on-failure"]
+    try:
+        ctest = find_ctest(build_dir)
+    except ToolNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+    cmd = [ctest, "--test-dir", str(build_dir), "--output-on-failure"]
     if filter_pattern:
         cmd += ["-R", filter_pattern]
     if verbose:

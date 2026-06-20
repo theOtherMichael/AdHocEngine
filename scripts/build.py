@@ -20,7 +20,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from cmake_utils import find_cmake
+from cmake_utils import ToolNotFoundError, find_cmake
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -42,13 +42,19 @@ def configure_preset(preset: str, force: bool) -> tuple[bool, str]:
     build_dir = REPO_ROOT / "build" / preset
     if (build_dir / "CMakeCache.txt").exists() and not force:
         return True, f"[{preset}] Already configured — skipping.\n"
-    cmake = find_cmake(build_dir)
+    try:
+        cmake = find_cmake(build_dir)
+    except ToolNotFoundError as e:
+        return False, f"[{preset}] ERROR: {e}\n"
     return _run_captured([cmake, "--preset", preset], preset)
 
 
 def build_preset(preset: str) -> tuple[bool, str]:
     build_dir = REPO_ROOT / "build" / preset
-    cmake = find_cmake(build_dir)
+    try:
+        cmake = find_cmake(build_dir)
+    except ToolNotFoundError as e:
+        return False, f"[{preset}] ERROR: {e}\n"
     return _run_captured([cmake, "--build", str(build_dir)], preset)
 
 
