@@ -43,25 +43,37 @@ cmake --preset host-windows-debug
 * **host-windows-\<config\>**: Build the Windows editor in a specific config.
 * **host-mac-\<config\>**: Build the macOS editor in a specific config.
 
-Always use the CMake presets found in `CMakePresets.json` to configure. Ad Hoc uses these to To switch to another build config (debug, dev, or release), reconfigure using the corresponding preset.
+Always use the presets found in `CMakePresets.json` to configure. Ad Hoc uses these to control the compilation process, which is foundational to the standalone game build system. To switch to another build config (debug, dev, or release), reconfigure using the corresponding preset.
 
 During configuration, CMake will auto-install the following:
 
-* **LLVM/Clang**: Used by the editor and to build the editor. Installed at `tools/llvm/`.
-* **vcpkg**: Dependency manager. Installed as submodule at `tools/vcpkg/`.
+* **LLVM/Clang**: Used to build and debug the editor. Also used by the editor to build standalone games. Installed at `tools/llvm/`.
+* **vcpkg**: Dependency manager. Installed as a submodule at `tools/vcpkg/`.
 * **vcpkg dependencies**: The packages specified in `vcpkg.json`. These install in your build tree.
 
-These downloads are large (particularly LLVM), so your first configuration will take several minutes to finish. Subsequent configures will go much faster.
+These downloads are large (particularly LLVM), so your first configuration will take several minutes. Subsequent configures will go much faster.
 
 Once configured, use the following scripts to take common actions:
 
-- **Build** — `python scripts/build.py`. Builds the editor for one config.
-- **Test** — `python scripts/test.py`. Runs all tests for a config.
-- **Package** — `python scripts/package.py`. Packages the editor for distribution.
+- **Build** — `python scripts/build.py`. Builds all targets in one or more CMake presets.
+- **Test** — `python scripts/test.py`. Builds and runs tests for one or more configs.
+- **Package** — `python scripts/package.py`. Packages the shipping editor for distribution.
+
+## Configurations
+
+In addition to Debug and Release configurations, Ad Hoc supports an "in-between" configuration called Dev. It is optimized, but has more guardrails than Release.
+
+| Config | Opt. Lvl | Symbols? | Assertions |
+| --- | --- | --- | --- |
+| Debug | -O0 | Yes | All assertions enabled |
+| Dev | -O2 | Yes | Slow assertions stripped |
+| Release | -O3 | No | No assertions enabled |
+
+Only Debug and Release configs actually ship with the editor. While working on the engine, use Debug when adding new features or debugging, and Dev to work at representative speeds.
 
 ## Visual Studio Code + CMake Tools
 
-While you can certainly work from the command line, this repository is really meant to be used with CMake Tools and VS Code.
+While you *can* work from the command line, this repository is really meant to be used with CMake Tools in VS Code.
 
 Follow these steps to get started:
 
@@ -69,9 +81,9 @@ Follow these steps to get started:
 2. Accept the prompt to install the **C/C++**, **CMake Tools**, **CodeLLDB**, and **clangd** extensions.
 3. Select a **host build preset** from the CMake Tools status bar (e.g. *Windows host — Debug*).
 
-As mentioned in the previous section, configuration will take several minutes the first time, as it downloads LLVM and other dependencies. If you didn't configure before launching, you may also see some spurious warnings/errors from VS Code extensions until the build tree exists at `build/`.
+You may see some spurious warnings/errors from VS Code extensions until your first configure is complete. As mentioned earlier, that will take several minutes, as CMake has to download LLVM and other dependencies.
 
-Here are the default hotkeys:
+These are the default hotkeys:
 
 | Key | Action |
 |---|---|
@@ -80,7 +92,7 @@ Here are the default hotkeys:
 | **F5 → "Editor - debug from main"** | Build and debug from source mode slot A |
 | **F5 → "Editor - attach"** | Attach the debugger to a running editor process. |
 
-The first time you launch, VS Code will ask you to pick a launch target. Choose **"Launcher"**.
+The first time you launch, VS Code will ask you to pick a launch target. Choose **"LauncherConsole"** on Windows, or **"Launcher"** for other platforms.
 
 ## Dependencies
 
