@@ -40,6 +40,17 @@ def host_prefix() -> str:
         sys.exit(1)
 
 
+def is_configured(build_dir: Path) -> bool:
+    return (build_dir / "CMakeCache.txt").exists()
+
+
+def configure_preset(preset: str, build_dir: Path) -> int:
+    # find_cmake falls back to PATH's cmake here since the cache doesn't exist yet.
+    print(f"Configuring preset '{preset}' (build tree not present)...", flush=True)
+    return subprocess.run([find_cmake(build_dir), "--preset", preset],
+                          cwd=REPO_ROOT).returncode
+
+
 def build_tree(build_dir: Path) -> int:
     return subprocess.run([find_cmake(build_dir), "--build", str(build_dir)]).returncode
 
@@ -79,7 +90,8 @@ def main() -> None:
             print("ERROR: --build-dir cannot be combined with configs or --all.",
                   file=sys.stderr)
             sys.exit(1)
-        targets = [("(explicit)", Path(args.build_dir))]
+        # An explicit build dir has no preset to infer, so it can't be configured.
+        targets = [("(explicit)", None, Path(args.build_dir))]
     else:
         configs = list(CONFIGS) if args.all else args.configs
         if args.all and args.configs:
@@ -92,20 +104,24 @@ def main() -> None:
                   f"Valid configs: {', '.join(CONFIGS)}.", file=sys.stderr)
             sys.exit(1)
         prefix = host_prefix()
-        targets = [(f"{prefix}-{config}", REPO_ROOT / "build" / f"{prefix}-{config}")
-                   for config in configs]
+        targets = [(preset, preset, REPO_ROOT / "build" / preset)
+                   for preset in (f"{prefix}-{config}" for config in configs)]
 
     results: list[tuple[str, str]] = []
     multiple = len(targets) > 1
-    for label, build_dir in targets:
+    for label, preset, build_dir in targets:
         if multiple:
             print(f"\n{'=' * 70}\nTesting {label}  ({build_dir})\n{'=' * 70}",
                   flush=True)
-        if not build_dir.exists():
-            print(f"ERROR: Build directory not found: {build_dir}", file=sys.stderr)
-            print("Run cmake --preset <preset> and build first.", file=sys.stderr)
-            results.append((label, "MISSING"))
-            continue
+        if not is_configured(build_dir):
+            if preset is None:
+                print(f"ERROR: Build directory not configured: {build_dir}", file=sys.stderr)
+                print("Run cmake --preset <preset> and build first.", file=sys.stderr)
+                results.append((label, "MISSING"))
+                continue
+            if configure_preset(preset, build_dir) != 0:
+                results.append((label, "CONFIGURE FAILED"))
+                continue
         if not args.no_build:
             code = build_tree(build_dir)
             if code != 0:
