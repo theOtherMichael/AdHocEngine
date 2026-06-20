@@ -1,4 +1,4 @@
-#include <Engine/Graphics/Contexts/_platform/Windows/WindowsD3D11GraphicsContext.h>
+#include <Engine/Graphics/Contexts/_platform/Windows/WindowsD3d11GraphicsContext.h>
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>

@@ -34,7 +34,7 @@ set(ENGINE_SOURCES_WINDOWS
     src/Core/_platform/Windows/WindowsMisc.cpp
     src/Core/_platform/Windows/WindowsPlatformHelpers.cpp
     src/Core/_platform/Windows/WindowsRuntimeInfo.cpp
-    src/Graphics/Contexts/_platform/Windows/WindowsD3D11GraphicsContext.cpp
+    src/Graphics/Contexts/_platform/Windows/WindowsD3d11GraphicsContext.cpp
     src/Window/Internal/_platform/Windows/WindowsSetMainWindowIcon.cpp
 )
 
