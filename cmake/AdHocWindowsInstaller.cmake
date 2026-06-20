@@ -19,7 +19,9 @@ function(adhoc_configure_windows_install)
         set(_dest ".")
     endif()
 
-    install(TARGETS Launcher Editor Engine
+    # LauncherConsole is the console-subsystem "terminal build" twin of Launcher
+    # (Windows only — see Launcher/CMakeLists.txt). It stages beside the GUI exe.
+    install(TARGETS Launcher LauncherConsole Editor Engine
         RUNTIME DESTINATION "${_dest}" COMPONENT SourceMode
         LIBRARY DESTINATION "${_dest}" COMPONENT SourceMode
         ARCHIVE DESTINATION "${_dest}/lib" COMPONENT SourceMode
@@ -53,6 +55,7 @@ function(adhoc_configure_windows_install)
     install(
         FILES
             $<TARGET_PDB_FILE:Launcher>
+            $<TARGET_PDB_FILE:LauncherConsole>
             $<TARGET_PDB_FILE:Editor>
             $<TARGET_PDB_FILE:Engine>
         DESTINATION "${_dest}"
@@ -71,7 +74,7 @@ function(adhoc_configure_windows_install)
             --install "${CMAKE_BINARY_DIR}"
             --component SourceMode
             --prefix   "${CMAKE_SOURCE_DIR}/out/source/a"
-        DEPENDS Launcher Engine Editor
+        DEPENDS Launcher LauncherConsole Engine Editor
         USES_TERMINAL
         COMMENT "Installing SourceMode layout to out/source/a/"
     )

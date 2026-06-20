@@ -24,8 +24,18 @@ First-party build products carry a per-config suffix, identical across platforms
 | Product | Windows | macOS |
 |---|---|---|
 | Launcher (the editor entry point) | `AdHocEditor<suffix>.exe` | Mach-O `AdHocEditor<suffix>` inside `Ad Hoc Editor.app` |
+| Launcher — console "terminal build" | `AdHocEditorConsole<suffix>.exe` | *(none — single binary already blocks)* |
 | Engine | `Engine<suffix>.dll` | `libEngine<suffix>.dylib` |
 | Editor | `Editor<suffix>.dll` | `libEditor<suffix>.dylib` |
+
+The **console "terminal build"** (`AdHocEditorConsole.exe`) is a Windows-only twin
+of the Launcher built from the identical sources but with `/SUBSYSTEM:CONSOLE`
+instead of `/SUBSYSTEM:WINDOWS`. It blocks until exit and routes stdout/stderr to
+the caller's console or pipe — the natural fit for CI, automation, and any
+non-interactive (headless) invocation. It stages beside the GUI exe in the same
+config-dependent directory and ships in the installer, so a pipeline can stage the
+slot (`--target source-mode`) and run it directly. macOS/Linux need no twin: the
+single editor binary already behaves this way.
 
 The macOS **app bundle directory** is always `Ad Hoc Editor.app` — config-independent
 — so one bundle can hold every config's Mach-O. Only the inner executable name and
@@ -82,21 +92,21 @@ A slot holds exactly one config. Top level vs `debug/` is chosen by that config.
 # Debug slot
 <slot>/
   debug/
-    AdHocEditorD.exe
+    AdHocEditorD.exe  AdHocEditorConsoleD.exe   # GUI + console twin
     EngineD.dll  EditorD.dll
     fmt.dll  glfw3.dll  mimalloc.dll        # debug vcpkg deps (names as emitted)
     *.pdb                                    # debug symbols, beside their binaries
 
 # Dev slot
 <slot>/
-  AdHocEditorDev.exe
+  AdHocEditorDev.exe  AdHocEditorConsoleDev.exe
   EngineDev.dll  EditorDev.dll
   fmt.dll  glfw3.dll  mimalloc.dll          # release vcpkg deps (Dev maps to Release)
   *.pdb
 
 # Release slot
 <slot>/
-  AdHocEditor.exe
+  AdHocEditor.exe  AdHocEditorConsole.exe
   Engine.dll  Editor.dll
   fmt.dll  glfw3.dll  mimalloc.dll          # release vcpkg deps
 ```
@@ -111,12 +121,12 @@ the top level — colocation is what makes the load succeed.
 
 ```
 <install>/
-  AdHocEditor.exe                           # release — installer entry point
+  AdHocEditor.exe  AdHocEditorConsole.exe    # release — GUI entry point + console twin
   Engine.dll  Editor.dll
   fmt.dll  glfw3.dll  mimalloc.dll          # release vcpkg deps
   *.pdb                                      # release symbols
   debug/
-    AdHocEditorD.exe
+    AdHocEditorD.exe  AdHocEditorConsoleD.exe
     EngineD.dll  EditorD.dll
     fmt.dll  glfw3.dll  mimalloc.dll        # debug vcpkg deps (like-named, isolated)
     *.pdb                                    # debug symbols
