@@ -22,6 +22,8 @@ function(adhoc_apply_platform_defines target)
             NOMINMAX
             WIN32_LEAN_AND_MEAN
             _CRT_SECURE_NO_WARNINGS
+            UNICODE
+            _UNICODE
         )
     endif()
 endfunction()

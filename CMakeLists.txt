@@ -103,7 +103,30 @@ message(STATUS "Clang OK — ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSI
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 # ---------------------------------------------------------------------------
-# 6. Single-source version propagation.
+# 6. IDE tooling — clangd compile_commands.json symlink.
+# ---------------------------------------------------------------------------
+# Symlink compile_commands.json from the source root → active build tree so
+# clangd always finds the current preset's flags without any manual settings
+# update. The symlink is recreated on every configure, so switching presets is
+# transparent. On Windows this requires Developer Mode (or admin rights).
+if(CMAKE_EXPORT_COMPILE_COMMANDS)
+    file(REMOVE "${CMAKE_SOURCE_DIR}/compile_commands.json")
+    file(CREATE_LINK
+        "${CMAKE_BINARY_DIR}/compile_commands.json"
+        "${CMAKE_SOURCE_DIR}/compile_commands.json"
+        SYMBOLIC
+        RESULT _link_result)
+    if(NOT _link_result EQUAL 0)
+        message(WARNING
+            "Could not symlink compile_commands.json to source root "
+            "(${_link_result}). On Windows, enable Developer Mode to allow "
+            "symlink creation without elevation.")
+    endif()
+    unset(_link_result)
+endif()
+
+# ---------------------------------------------------------------------------
+# 7. Single-source version propagation.
 # ---------------------------------------------------------------------------
 configure_file(
     cmake/templates/Version.h.in
@@ -117,7 +140,7 @@ if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
 endif()
 
 # ---------------------------------------------------------------------------
-# 7. CMake modules.
+# 8. CMake modules.
 # ---------------------------------------------------------------------------
 # Dev is not a standard CMake config, so imported targets from vcpkg would
 # otherwise fall back to their Debug variant. Map it to Release so Dev builds
@@ -134,7 +157,7 @@ include(cmake/AdHocBlockCPack.cmake)
 adhoc_block_cpack()
 
 # ---------------------------------------------------------------------------
-# 8. Projects.
+# 9. Projects.
 # ---------------------------------------------------------------------------
 # Short-circuit for cross-compile preset: only build the static engine.
 if(NOT ADHOC_PLATFORM_DESKTOP)
@@ -151,7 +174,7 @@ add_subdirectory(EngineTests)
 add_subdirectory(EditorTests)
 
 # ---------------------------------------------------------------------------
-# 9. Platform-specific packaging / install rules.
+# 10. Platform-specific packaging / install rules.
 # ---------------------------------------------------------------------------
 if(CMAKE_SYSTEM_NAME STREQUAL "Darwin")
     include(cmake/AdHocMacBundle.cmake)

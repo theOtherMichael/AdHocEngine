@@ -29,11 +29,7 @@ SOURCE_DIRS = [
 
 SOURCE_EXTENSIONS = (".h", ".cpp", ".mm")
 
-EXCLUDED_PATHS = {
-    "Engine/src/_platform/Windows/resource.h",
-    "Editor/src/_platform/Windows/resource.h",
-    "Launcher/src/_platform/Windows/resource.h",
-}
+EXCLUDED_PATHS: set[str] = set()
 
 
 def find_clang_format() -> str | None:

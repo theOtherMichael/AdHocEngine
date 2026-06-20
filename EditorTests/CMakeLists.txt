@@ -1,4 +1,5 @@
-find_package(GTest CONFIG REQUIRED)
+find_package(GTest     CONFIG REQUIRED)
+find_package(mimalloc CONFIG REQUIRED)
 include(GoogleTest)
 
 # EditorTests only exists for the shared (Editor DLL) build.
@@ -31,15 +32,24 @@ add_executable(EditorTests
 target_include_directories(EditorTests PRIVATE
     "${CMAKE_SOURCE_DIR}/Engine/include"
     "${CMAKE_SOURCE_DIR}/Editor/include"
-    "${CMAKE_BINARY_DIR}/generated"
 )
 target_link_libraries(EditorTests PRIVATE
     Editor
     Engine
     GTest::gtest_main
+    mimalloc
 )
 
 adhoc_apply_target_defaults(EditorTests)
+
+if(WIN32)
+    add_custom_command(TARGET EditorTests POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_RUNTIME_DLLS:EditorTests>
+            $<TARGET_FILE_DIR:EditorTests>
+        COMMAND_EXPAND_LISTS
+    )
+endif()
 
 gtest_discover_tests(EditorTests
     DISCOVERY_TIMEOUT 30

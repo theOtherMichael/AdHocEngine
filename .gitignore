@@ -13,12 +13,17 @@ Engine/include/Engine/Core/Version.h
 
 CMakeLists.txt.user
 CMakeUserPresets.json
+/compile_commands.json
 
 # Python =========================================
 
 __pycache__/
 *.py[cod]
 .venv/
+
+# clangd =========================================
+
+/.cache/
 
 # VS Code ========================================
 

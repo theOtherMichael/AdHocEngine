@@ -12,5 +12,21 @@
   // extension isn't notified of CLI/agent changes.)
   "cmake.configureOnEdit": true,
   "cmake.configureOnOpen": true,
-  "C_Cpp.clang_format_path": "${workspaceFolder}/tools/llvm/current/bin/clang-format"
+  // Disable cpptools IntelliSense — clangd takes over diagnostics, completions, and go-to-definition.
+  // Keep cpptools installed for its debugger integration.
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "clangd.path": "${workspaceFolder}/tools/llvm/current/bin/clangd",
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  // CMake symmlinks compile_commands.json from the source root → active build
+  // tree on every configure (CMakeLists.txt section 6), so clangd always sees
+  // the current preset's flags without any manual update.
+  "clangd.arguments": [
+    "--compile-commands-dir=${workspaceFolder}",
+    "--header-insertion=never"
+  ]
 }

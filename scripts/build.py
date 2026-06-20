@@ -20,6 +20,8 @@ import subprocess
 import sys
 from pathlib import Path
 
+from cmake_utils import find_cmake
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 
@@ -37,15 +39,17 @@ def _run_captured(cmd: list[str], label: str) -> tuple[bool, str]:
 
 
 def configure_preset(preset: str, force: bool) -> tuple[bool, str]:
-    cache_file = REPO_ROOT / "build" / preset / "CMakeCache.txt"
-    if cache_file.exists() and not force:
+    build_dir = REPO_ROOT / "build" / preset
+    if (build_dir / "CMakeCache.txt").exists() and not force:
         return True, f"[{preset}] Already configured — skipping.\n"
-    return _run_captured(["cmake", "--preset", preset], preset)
+    cmake = find_cmake(build_dir)
+    return _run_captured([cmake, "--preset", preset], preset)
 
 
 def build_preset(preset: str) -> tuple[bool, str]:
     build_dir = REPO_ROOT / "build" / preset
-    return _run_captured(["cmake", "--build", str(build_dir)], preset)
+    cmake = find_cmake(build_dir)
+    return _run_captured([cmake, "--build", str(build_dir)], preset)
 
 
 def default_preset() -> str:

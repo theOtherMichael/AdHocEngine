@@ -73,11 +73,15 @@ if(APPLE)
         "-framework QuartzCore"
         "-framework AppKit"
     )
+elseif(WIN32)
+    list(APPEND _engine_private_libs
+        dbghelp
+        d3d11
+    )
 endif()
 
 set(_engine_public_includes
     "${CMAKE_SOURCE_DIR}/Engine/include"
-    "${CMAKE_BINARY_DIR}/generated"
     "${CMAKE_SOURCE_DIR}/Engine/vendor/metal-cpp/include"
 )
 set(_engine_private_includes

@@ -43,7 +43,7 @@ cmake --preset host-windows-debug
 * **host-windows-\<config\>**: Build the Windows editor in a specific config.
 * **host-mac-\<config\>**: Build the macOS editor in a specific config.
 
-Ad Hoc Engine builds itself and its game projects using a pinned version of clang. For this reason, always use the CMake presets found in `CMakePresets.json` to configure. To switch to another build config (debug, dev, or release), just reconfigure using the corresponding preset.
+Always use the CMake presets found in `CMakePresets.json` to configure. Ad Hoc uses these to To switch to another build config (debug, dev, or release), reconfigure using the corresponding preset.
 
 During configuration, CMake will auto-install the following:
 
@@ -61,13 +61,17 @@ Once configured, use the following scripts to take common actions:
 
 ## Visual Studio Code + CMake Tools
 
-While you can certainly work from the command line, this repository is really meant to be used with CMake Tools and VS Code. Follow these steps to get started:
+While you can certainly work from the command line, this repository is really meant to be used with CMake Tools and VS Code.
+
+Follow these steps to get started:
 
 1. Open the repository in vscode.
-2. Accept the prompt to install the **CMake Tools**, **CodeLLDB**, and **C/C++**.
-3. Select a **build preset** from the CMake Tools status bar (e.g. *Windows host — Debug*).
+2. Accept the prompt to install the **C/C++**, **CMake Tools**, **CodeLLDB**, and **clangd** extensions.
+3. Select a **host build preset** from the CMake Tools status bar (e.g. *Windows host — Debug*).
 
-Then you're set. Here are the things you can do:
+As mentioned in the previous section, configuration will take several minutes the first time, as it downloads LLVM and other dependencies. If you didn't configure before launching, you may also see some spurious warnings/errors from VS Code extensions until the build tree exists at `build/`.
+
+Here are the default hotkeys:
 
 | Key | Action |
 |---|---|
@@ -76,7 +80,7 @@ Then you're set. Here are the things you can do:
 | **F5 → "Editor - debug from main"** | Build and debug from source mode slot A |
 | **F5 → "Editor - attach"** | Attach the debugger to a running editor process. |
 
-The first time you launch, VS Code will ask you to pick a launch target. Choose **`Launcher`**.
+The first time you launch, VS Code will ask you to pick a launch target. Choose **"Launcher"**.
 
 ## Dependencies
 

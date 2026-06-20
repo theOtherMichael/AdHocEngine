@@ -13,7 +13,7 @@
       // only on the cold-start branch, so a running editor's slot is never
       // clobbered (the editor stages the free slot itself on reload).
       "label": "Source mode: run/reload",
-      "type": "shell",
+      "type": "process",
       "command": "python3",
       "args": [
         "${workspaceFolder}/scripts/run_source_mode.py",
@@ -33,7 +33,7 @@
       // Windows it also refreshes the out/source/a-bin junction. Deliberately not
       // in the build group, so it never hijacks Cmd/Ctrl+Shift+B.
       "label": "Source mode: stage",
-      "type": "shell",
+      "type": "process",
       "command": "python3",
       "args": [
         "${workspaceFolder}/scripts/run_source_mode.py",

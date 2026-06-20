@@ -12,11 +12,12 @@ set(_imgui_sources_common
 )
 
 set(_imgui_sources_mac
-    "${_imgui_dir}/backends/imgui_impl_osx.mm"
     "${_imgui_dir}/backends/imgui_impl_metal.mm"
 )
 
-set(_imgui_sources_win)  # imgui_impl_win32.cpp not needed; using GLFW backend
+set(_imgui_sources_win
+    "${_imgui_dir}/backends/imgui_impl_dx11.cpp"
+)
 
 if(APPLE)
     set(_imgui_sources_platform ${_imgui_sources_mac})
@@ -40,7 +41,6 @@ target_compile_definitions(imgui_obj PRIVATE
 # Mac ObjC backends: no ARC, suppress Apple docs warnings.
 if(APPLE)
     set_source_files_properties(
-        "${_imgui_dir}/backends/imgui_impl_osx.mm"
         "${_imgui_dir}/backends/imgui_impl_metal.mm"
         PROPERTIES COMPILE_OPTIONS "-fno-objc-arc;-Wno-documentation"
     )

@@ -1,6 +1,5 @@
 #include "WindowsSetMainWindowIcon.h"
 
-#include "_platform/Windows/resource.h"
 #include <asl/casts.h>
 #include <Engine/Core/Assertions.h>
 #include <Engine/Window/WindowState.h>
@@ -12,7 +11,6 @@
 #include <algorithm>
 #include <bit>
 #include <memory>
-#include <ranges>
 #include <utility>
 #include <vector>
 
@@ -20,6 +18,9 @@ static_assert(ADHOC_WINDOWS);
 
 namespace Engine::Window::Internal::Platform
 {
+
+// Matches the resource ID in ADHOC_RC_ICON_ENTRY in Launcher/CMakeLists.txt.
+constexpr int WindowIconResourceId = 101;
 
 #pragma pack(push, 1)
 
@@ -152,7 +153,7 @@ void SetMainWindowIconImplementation()
 {
     auto hInstance = GetModuleHandle(NULL); // load icon from the host executable
 
-    auto glfwIcons = GetGlfwIconsFromEmbeddedResource(hInstance, IDI_ICON1);
+    auto glfwIcons = GetGlfwIconsFromEmbeddedResource(hInstance, WindowIconResourceId);
     if (glfwIcons.empty())
         return;
 

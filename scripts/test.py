@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-"""Thin wrapper around ctest for running AdHocEngine test suites.
+"""Wrapper for running AdHocEngine test suites with ctest.
 
-Each build tree is single-config (Debug, Dev, or Release), so ctest no longer
-needs `-C <config>`. Pass one or more config names (debug, dev, release) to pick
-which trees to test against; each is expanded to the `host-<platform>-<config>`
-preset for the current platform. Use `--all` to run every host config in one go
-— handy as a pre-release gate. Invoked with no arguments, this prints usage.
+Ad Hoc's configs are expressed as single-config build trees (a separate tree for
+Debug, Dev, and Release), and there are multiple gtest projects to run, so this
+script helps you run tests for each config, or multiple configs, in one go.
 
 Examples:
   python scripts/test.py debug
@@ -13,6 +11,7 @@ Examples:
   python scripts/test.py debug release
   python scripts/test.py --all
   python scripts/test.py dev --filter Assertion
+  python scripts/test.py debug --no-build
 """
 from __future__ import annotations
 
@@ -21,6 +20,8 @@ import platform
 import subprocess
 import sys
 from pathlib import Path
+
+from cmake_utils import find_cmake, find_ctest
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -39,8 +40,12 @@ def host_prefix() -> str:
         sys.exit(1)
 
 
+def build_tree(build_dir: Path) -> int:
+    return subprocess.run([find_cmake(build_dir), "--build", str(build_dir)]).returncode
+
+
 def run_ctest(build_dir: Path, filter_pattern: str | None, verbose: bool) -> int:
-    cmd = ["ctest", "--test-dir", str(build_dir), "--output-on-failure"]
+    cmd = [find_ctest(build_dir), "--test-dir", str(build_dir), "--output-on-failure"]
     if filter_pattern:
         cmd += ["-R", filter_pattern]
     if verbose:
@@ -59,6 +64,8 @@ def main() -> None:
     p.add_argument("--build-dir", default=None,
                    help="Explicit build directory (overrides configs).")
     p.add_argument("--filter", default=None, help="ctest -R pattern.")
+    p.add_argument("--no-build", action="store_true",
+                   help="Skip building before running tests (assumes binaries are up to date).")
     p.add_argument("--verbose", action="store_true")
     args = p.parse_args()
 
@@ -99,6 +106,11 @@ def main() -> None:
             print("Run cmake --preset <preset> and build first.", file=sys.stderr)
             results.append((label, "MISSING"))
             continue
+        if not args.no_build:
+            code = build_tree(build_dir)
+            if code != 0:
+                results.append((label, "BUILD FAILED"))
+                continue
         code = run_ctest(build_dir, args.filter, args.verbose)
         results.append((label, "PASSED" if code == 0 else "FAILED"))
 

@@ -8,6 +8,7 @@
 # scripts/package.py.
 #
 function(adhoc_configure_windows_install)
+    cmake_policy(SET CMP0177 NEW)
     # Debug isolates exe + DLLs + PDBs under a "debug/" subfolder so like-named
     # debug/release vcpkg DLLs coexist in the merged shipping tree, and so the
     # debug exe sits beside its own DLLs (Windows resolves DLLs from the loading
@@ -19,15 +20,28 @@ function(adhoc_configure_windows_install)
     endif()
 
     install(TARGETS Launcher Editor Engine
-        RUNTIME DESTINATION "${_dest}"
-        LIBRARY DESTINATION "${_dest}"
-        ARCHIVE DESTINATION "${_dest}/lib"
-        COMPONENT SourceMode
+        RUNTIME DESTINATION "${_dest}" COMPONENT SourceMode
+        LIBRARY DESTINATION "${_dest}" COMPONENT SourceMode
+        ARCHIVE DESTINATION "${_dest}/lib" COMPONENT SourceMode
     )
 
     # vcpkg-installed runtime DLLs.
     install(
         FILES $<TARGET_RUNTIME_DLLS:Launcher>
+        DESTINATION "${_dest}"
+        COMPONENT SourceMode
+    )
+
+    # mimalloc-redirect.dll is a peer companion that mimalloc.dll loads to intercept
+    # allocations across DLL boundaries. It is not a CMake link target, so
+    # TARGET_RUNTIME_DLLS misses it; install it explicitly from the vcpkg bin dir.
+    if(ADHOC_DEBUG_SUBDIR)
+        set(_vcpkg_bin "${CMAKE_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/debug/bin")
+    else()
+        set(_vcpkg_bin "${CMAKE_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/bin")
+    endif()
+    install(
+        FILES "${_vcpkg_bin}/mimalloc-redirect.dll"
         DESTINATION "${_dest}"
         COMPONENT SourceMode
     )

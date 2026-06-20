@@ -84,28 +84,29 @@ def _extract_tar(archive_path: Path, dest: Path) -> None:
                 f.chmod(f.stat().st_mode | stat.S_IXUSR | stat.S_IXGRP | stat.S_IXOTH)
 
 
-def _ensure_clang_format_alias(versioned_dir: Path) -> None:
-    """Windows only: hard-link 'clang-format' -> 'clang-format.exe' in the bin dir.
+def _ensure_tool_aliases(versioned_dir: Path) -> None:
+    """Windows only: hard-link '<tool>' -> '<tool>.exe' for each VS Code-facing tool.
 
     Hard links need no elevation on NTFS. CreateProcess executes PE binaries by full
     path regardless of extension, so VS Code can use the same extension-free path on
-    all platforms.
+    all platforms (e.g. clangd.path / clang_format_path in settings.json).
     """
     if sys.platform != "win32":
         return
     bin_dir = versioned_dir / "bin"
-    src = bin_dir / "clang-format.exe"
-    dst = bin_dir / "clang-format"
-    if dst.exists():
-        return
-    if not src.exists():
-        print(f"WARNING: {src} not found — skipping clang-format alias", file=sys.stderr)
-        return
-    try:
-        os.link(src, dst)
-        print(f"Hard link: {dst.name} -> {src.name}")
-    except OSError as e:
-        print(f"WARNING: Could not create hard link {dst}: {e}", file=sys.stderr)
+    for name in ("clang-format", "clangd"):
+        src = bin_dir / f"{name}.exe"
+        dst = bin_dir / name
+        if dst.exists():
+            continue
+        if not src.exists():
+            print(f"WARNING: {src} not found — skipping {name} alias", file=sys.stderr)
+            continue
+        try:
+            os.link(src, dst)
+            print(f"Hard link: {dst.name} -> {src.name}")
+        except OSError as e:
+            print(f"WARNING: Could not create hard link {dst}: {e}", file=sys.stderr)
 
 
 def _ensure_current_symlink(versioned_dir: Path) -> None:
@@ -185,7 +186,7 @@ def main() -> int:
 
     if clang_bin.exists():
         print(f"LLVM {args.version} already present at {out}")
-        _ensure_clang_format_alias(out)
+        _ensure_tool_aliases(out)
         _ensure_current_symlink(out)
         return 0
 
@@ -210,7 +211,7 @@ def main() -> int:
 
     archive.unlink(missing_ok=True)
     print(f"LLVM {args.version} installed at {out}")
-    _ensure_clang_format_alias(out)
+    _ensure_tool_aliases(out)
     _ensure_current_symlink(out)
     return 0
 

@@ -32,7 +32,7 @@ target_include_directories(Editor
         "${CMAKE_SOURCE_DIR}/Editor/include"
     PRIVATE
         "${CMAKE_SOURCE_DIR}/Editor/src")
-target_link_libraries(Editor PRIVATE imgui_obj Engine mimalloc)
+target_link_libraries(Editor PRIVATE mimalloc imgui_obj Engine)
 if(APPLE)
     target_link_libraries(Editor PRIVATE
         "-framework AppKit"

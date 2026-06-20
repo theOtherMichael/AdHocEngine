@@ -3,6 +3,7 @@
   "recommendations": [
     "ms-vscode.cmake-tools", // provides ${command:cmake.buildDirectory} / launchTargetFilename
     "vadimcn.vscode-lldb", // CodeLLDB -- the debugger for both macOS and Windows
-    "ms-vscode.cpptools" // C/C++ IntelliSense
+    "ms-vscode.cpptools", // C/C++ debugger (IntelliSense disabled — clangd used instead)
+    "llvm-vs-code-extensions.vscode-clangd" // clangd language server
   ]
 }

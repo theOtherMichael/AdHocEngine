@@ -19,8 +19,7 @@ import stat
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
-from reset_cmake_tools import reset_workspace_cmake_state  # noqa: E402
+from reset_cmake_tools import reset_workspace_cmake_state
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 

@@ -45,7 +45,7 @@ set_target_properties(Launcher PROPERTIES
 target_include_directories(Launcher PRIVATE
     "${CMAKE_SOURCE_DIR}/Launcher/src"
     "${CMAKE_SOURCE_DIR}/Engine/include")
-target_link_libraries(Launcher PRIVATE Editor Engine mimalloc)
+target_link_libraries(Launcher PRIVATE mimalloc Editor Engine)
 adhoc_apply_target_defaults(Launcher)
 
 # Windows: generate per-target .rc from template.
@@ -55,7 +55,7 @@ if(WIN32)
     set(ADHOC_RC_DESCRIPTION "Ad Hoc Editor")
     set(ADHOC_RC_FILETYPE    "VFT_APP")
     set(ADHOC_RC_ICON_ENTRY
-        "IDI_ICON1 ICON \"${CMAKE_SOURCE_DIR}/Launcher/resources/Windows/AdHocEditor.ico\"")
+        "101 ICON \"${CMAKE_SOURCE_DIR}/Launcher/resources/Windows/AdHocEditor.ico\"")
     configure_file(
         "${CMAKE_SOURCE_DIR}/cmake/templates/AppResource.rc.in"
         "${CMAKE_BINARY_DIR}/generated/Launcher.rc"

@@ -32,10 +32,13 @@ Examples:
 from __future__ import annotations
 
 import argparse
+import os
 import socket
 import subprocess
 import sys
 from pathlib import Path
+
+from cmake_utils import read_cache_value, read_cmake_command
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -52,16 +55,13 @@ WINDOWS_PIPE = r"\\.\pipe\AdHocEditor"
 CONFIG_SUFFIX = {"Debug": "D", "Dev": "Dev"}
 
 
+
 def read_build_type(build_dir: Path) -> str:
     """Read CMAKE_BUILD_TYPE from the build tree's CMakeCache.txt."""
+    build_type = read_cache_value(build_dir, "CMAKE_BUILD_TYPE")
+    if build_type:
+        return build_type
     cache = build_dir / "CMakeCache.txt"
-    try:
-        for line in cache.read_text().splitlines():
-            # Cache entries look like: CMAKE_BUILD_TYPE:STRING=Dev
-            if line.startswith("CMAKE_BUILD_TYPE:"):
-                return line.split("=", 1)[1].strip()
-    except OSError:
-        pass
     print(f"\nERROR: could not read CMAKE_BUILD_TYPE from {cache}. "
           f"Configure the preset first.", file=sys.stderr)
     sys.exit(1)
@@ -79,10 +79,10 @@ def editor_binary_name(build_dir: Path) -> str:
     return f"{name}.exe" if IS_WINDOWS else name
 
 
-def build(build_dir: Path) -> None:
+def build(build_dir: Path, cmake: str) -> None:
     """Build the editor binaries only -- no staging. Touches build/ alone, so it
     is safe even while an editor runs from a slot (it maps the staged copies)."""
-    cmd = ["cmake", "--build", str(build_dir), "--target", "Launcher", "Engine", "Editor"]
+    cmd = [cmake, "--build", str(build_dir), "--target", "Launcher", "Engine", "Editor"]
     print(f"==> Building editor: {' '.join(cmd)}", flush=True)
     result = subprocess.run(cmd, cwd=REPO_ROOT)
     if result.returncode != 0:
@@ -90,13 +90,13 @@ def build(build_dir: Path) -> None:
         sys.exit(result.returncode)
 
 
-def stage_slot_a(build_dir: Path) -> None:
+def stage_slot_a(build_dir: Path, cmake: str) -> None:
     """Stage the freshly-built binaries into slot A (the `source-mode` target).
 
     Cold-start branch ONLY -- never call this when an editor is live; on reload
     the editor stages the free slot itself.
     """
-    cmd = ["cmake", "--build", str(build_dir), "--target", "source-mode"]
+    cmd = [cmake, "--build", str(build_dir), "--target", "source-mode"]
     print(f"==> Staging slot A: {' '.join(cmd)}", flush=True)
     result = subprocess.run(cmd, cwd=REPO_ROOT)
     if result.returncode != 0:
@@ -162,9 +162,10 @@ def refresh_windows_launch_junction(slot_root: Path, build_dir: Path) -> None:
     """
     target_dir = resolve_slot_a_binary(slot_root, editor_binary_name(build_dir)).parent
     junction = slot_root / "a-bin"
-    if junction.exists() or junction.is_symlink():
-        # rmdir removes the junction (reparse point), never the target's contents.
-        subprocess.run(["cmd", "/c", "rmdir", str(junction)], check=False)
+    # os.path.lexists returns True even for dangling junctions (unlike Path.exists).
+    if os.path.lexists(junction):
+        # os.rmdir removes the junction reparse point, never the target's contents.
+        os.rmdir(junction)
     print(f"==> Refreshing launch junction: {junction} -> {target_dir}", flush=True)
     subprocess.run(["cmd", "/c", "mklink", "/J", str(junction), str(target_dir)], check=True)
 
@@ -238,12 +239,13 @@ def main() -> None:
     build_dir = (REPO_ROOT / args.build_dir).resolve()
     slot_root = (REPO_ROOT / args.slot_root).resolve()
 
-    build(build_dir)
+    cmake = read_cmake_command(build_dir)
+    build(build_dir, cmake)
 
     if args.stage_only:
         # Debug-from-main pre-launch: (re)stage slot A and stop; the debugger
         # launches the staged binary itself.
-        stage_slot_a(build_dir)
+        stage_slot_a(build_dir, cmake)
         if IS_WINDOWS:
             refresh_windows_launch_junction(slot_root, build_dir)
         print("==> Staged slot A (no launch).", flush=True)
@@ -255,7 +257,7 @@ def main() -> None:
         return
 
     # Cold start: nothing is running, so slot A is free to (re)stage.
-    stage_slot_a(build_dir)
+    stage_slot_a(build_dir, cmake)
     launch_cold(resolve_slot_a_binary(slot_root, editor_binary_name(build_dir)),
                 build_dir, slot_root)
 

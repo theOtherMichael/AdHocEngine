@@ -39,5 +39,26 @@ function(adhoc_bootstrap_llvm)
         set(CMAKE_LINKER       "${ADHOC_LLVM_ROOT}/bin/lld-link.exe" CACHE FILEPATH "Linker"       FORCE)
     endif()
 
+    # Windows: hard-link extension-free aliases for IDE-facing tools so VS Code
+    # settings can use the same path on all platforms (e.g. clangd, clang-format).
+    # Hard links need no elevation on NTFS. Runs every configure so existing
+    # installs get the alias even if bootstrap ran before this was added.
+    if(WIN32)
+        foreach(_tool IN ITEMS clangd clang-format)
+            set(_src "${ADHOC_LLVM_ROOT}/bin/${_tool}.exe")
+            set(_dst "${ADHOC_LLVM_ROOT}/bin/${_tool}")
+            if(EXISTS "${_src}" AND NOT EXISTS "${_dst}")
+                file(CREATE_LINK "${_src}" "${_dst}" RESULT _link_result)
+                if(NOT _link_result EQUAL 0)
+                    message(WARNING "Could not create hard link for ${_tool} (${_link_result})")
+                endif()
+            endif()
+        endforeach()
+        unset(_tool)
+        unset(_src)
+        unset(_dst)
+        unset(_link_result)
+    endif()
+
     message(STATUS "LLVM toolchain: ${ADHOC_LLVM_ROOT}")
 endfunction()
