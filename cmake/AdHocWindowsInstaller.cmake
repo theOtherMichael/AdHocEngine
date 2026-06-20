@@ -36,9 +36,9 @@ function(adhoc_configure_windows_install)
     # allocations across DLL boundaries. It is not a CMake link target, so
     # TARGET_RUNTIME_DLLS misses it; install it explicitly from the vcpkg bin dir.
     if(ADHOC_DEBUG_SUBDIR)
-        set(_vcpkg_bin "${CMAKE_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/debug/bin")
+        set(_vcpkg_bin "${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/debug/bin")
     else()
-        set(_vcpkg_bin "${CMAKE_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/bin")
+        set(_vcpkg_bin "${VCPKG_INSTALLED_DIR}/${VCPKG_TARGET_TRIPLET}/bin")
     endif()
     install(
         FILES "${_vcpkg_bin}/mimalloc-redirect.dll"

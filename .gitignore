@@ -6,6 +6,7 @@ Engine/include/Engine/Core/Version.h
 
 /build/
 /out/
+/vcpkg_installed/
 
 .claude/
 
