@@ -7,7 +7,6 @@ function(adhoc_apply_compiler_flags target)
         target_compile_options(${target} PRIVATE
             -Wall
             -Wextra
-            -Wno-unused-parameter
             -fexceptions
             -frtti
         )
@@ -15,11 +14,8 @@ function(adhoc_apply_compiler_flags target)
         target_compile_options(${target} PRIVATE
             /utf-8
             /W4
-            /wd4100       # unreferenced formal parameter (matches -Wno-unused-parameter)
-            /permissive-
-            /EHsc
-            /GR           # RTTI on
-            /Zc:__cplusplus
+            /EHsc   # Exceptions
+            /GR     # RTTI on
         )
     endif()
 endfunction()
