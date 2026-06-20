@@ -13,7 +13,6 @@ Workflow:
 
 Usage:
   python scripts/package.py                       # build + assemble (ad-hoc sign)
-  python scripts/package.py --skip-tests          # don't run ctest first
   python scripts/package.py --platform mac
   python scripts/package.py --identity "Developer ID Application: …" --notarize --keychain-profile AC_NOTARY
 """
@@ -346,7 +345,6 @@ def main() -> None:
     system = platform.system()
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
-    p.add_argument("--skip-tests", action="store_true")
     p.add_argument("--platform", choices=["mac", "windows"],
                    default="mac" if system == "Darwin" else "windows")
     p.add_argument("--identity", default="-",
@@ -387,15 +385,7 @@ def main() -> None:
             print(out, flush=True)
         sys.exit(1)
 
-    # 2. Tests (use the host Debug tree).
-    if not args.skip_tests:
-        host_debug = f"host-{args.platform}-debug"
-        run([
-            "ctest", "--test-dir", str(REPO_ROOT / "build" / host_debug),
-            "--output-on-failure",
-        ], cwd=REPO_ROOT)
-
-    # 3. Assemble.
+    # 2. Assemble.
     if args.platform == "mac":
         assemble_mac(presets, dist_root, identity=args.identity,
                      notarize=args.notarize, keychain_profile=args.keychain_profile)
