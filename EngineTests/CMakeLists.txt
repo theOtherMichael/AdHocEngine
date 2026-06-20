@@ -26,7 +26,9 @@ foreach(_kind IN ITEMS "" "Static")
 
     # EngineTests (shared) needs EngineD.dll and its transitive DLL dependencies
     # beside the exe so that gtest_discover_tests can run it immediately after linking.
-    if(_kind STREQUAL "")
+    # Only on DLL platforms: elsewhere TARGET_RUNTIME_DLLS is empty (mac uses rpath),
+    # which would collapse copy_if_different to a destination-only, no-source command.
+    if(WIN32 AND _kind STREQUAL "")
         add_custom_command(TARGET ${_target} POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different
                 $<TARGET_RUNTIME_DLLS:${_target}>
