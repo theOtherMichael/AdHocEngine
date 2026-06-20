@@ -175,14 +175,6 @@ def launch_cold(binary: Path, build_dir: Path, slot_root: Path) -> None:
 
     No DYLD preload: an un-traced Launcher self-injects mimalloc via its normal
     re-exec (the production path). See docs/SourceMode.md > Debugging.
-
-    Stdio is redirected to <slot-root>/editor.log, NOT inherited. This script (and
-    the VS Code task running it) exits the instant this Popen returns, which closes
-    the task terminal's pipe; an editor still writing to that inherited pipe would
-    get EPIPE on its next log line, and the logger's fmt::println throws on a short
-    write -- an uncaught exception that aborts the editor ("quit unexpectedly").
-    Pointing the editor's stdout/stderr at a file decouples it from the launching
-    terminal's lifecycle entirely.
     """
     if not binary.exists():
         print(f"\nERROR: staged slot-A binary not found: {binary}", file=sys.stderr)
@@ -194,14 +186,11 @@ def launch_cold(binary: Path, build_dir: Path, slot_root: Path) -> None:
         "--build-tree", str((REPO_ROOT / build_dir).resolve()),
         "--slot-root", str((REPO_ROOT / slot_root).resolve()),
     ]
-    log_path = slot_root / "editor.log"
     print(f"==> Cold start (no debugger): {binary}", flush=True)
-    print(f"    editor stdout/stderr -> {log_path}", flush=True)
 
     kwargs: dict = {
         "cwd": str(binary.parent),
         "stdin": subprocess.DEVNULL,
-        "stderr": subprocess.STDOUT,
     }
     # Direct sys.platform check (not IS_WINDOWS) so the type checker narrows to
     # win32 and recognizes the Windows-only subprocess flags below; an aliased
@@ -213,10 +202,7 @@ def launch_cold(binary: Path, build_dir: Path, slot_root: Path) -> None:
     else:
         kwargs["start_new_session"] = True
 
-    # The child dups this fd, so closing our copy after Popen is correct (and the
-    # parent exits immediately anyway). "w" truncates: one fresh log per cold start.
-    with open(log_path, "w") as log_file:
-        subprocess.Popen(args, stdout=log_file, **kwargs)
+    subprocess.Popen(args, **kwargs)
 
 
 def main() -> None:
