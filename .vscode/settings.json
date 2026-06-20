@@ -22,11 +22,11 @@
   "[c]": {
     "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
   },
-  // CMake symmlinks compile_commands.json from the source root → active build
-  // tree on every configure (CMakeLists.txt section 6), so clangd always sees
-  // the current preset's flags without any manual update.
+  // CMake symlinks compile_commands.json into build/ → active build tree on
+  // every configure (CMakeLists.txt section 6), so clangd always sees the
+  // current preset's flags without any manual update.
   "clangd.arguments": [
-    "--compile-commands-dir=${workspaceFolder}",
+    "--compile-commands-dir=${workspaceFolder}/build",
     "--header-insertion=never"
   ]
 }

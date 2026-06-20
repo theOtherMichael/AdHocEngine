@@ -49,7 +49,7 @@ function(adhoc_bootstrap_vcpkg)
         endif()
     endif()
 
-    set(_stamp_file "${CMAKE_SOURCE_DIR}/vcpkg_bootstrapped_commit.txt")
+    set(_stamp_file "${CMAKE_SOURCE_DIR}/tools/vcpkg_bootstrapped_commit.txt")
 
     # Step 3: decide whether bootstrap is needed.
     set(_needs_bootstrap FALSE)

@@ -105,20 +105,21 @@ message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 # ---------------------------------------------------------------------------
 # 6. IDE tooling — clangd compile_commands.json symlink.
 # ---------------------------------------------------------------------------
-# Symlink compile_commands.json from the source root → active build tree so
-# clangd always finds the current preset's flags without any manual settings
-# update. The symlink is recreated on every configure, so switching presets is
-# transparent. On Windows this requires Developer Mode (or admin rights).
+# Symlink compile_commands.json into build/ (the shared parent of the per-preset
+# trees) → active build tree so clangd always finds the current preset's flags
+# without any manual settings update. The symlink is recreated on every
+# configure, so switching presets is transparent. On Windows this requires
+# Developer Mode (or admin rights).
 if(CMAKE_EXPORT_COMPILE_COMMANDS)
-    file(REMOVE "${CMAKE_SOURCE_DIR}/compile_commands.json")
+    file(REMOVE "${CMAKE_SOURCE_DIR}/build/compile_commands.json")
     file(CREATE_LINK
         "${CMAKE_BINARY_DIR}/compile_commands.json"
-        "${CMAKE_SOURCE_DIR}/compile_commands.json"
+        "${CMAKE_SOURCE_DIR}/build/compile_commands.json"
         SYMBOLIC
         RESULT _link_result)
     if(NOT _link_result EQUAL 0)
         message(WARNING
-            "Could not symlink compile_commands.json to source root "
+            "Could not symlink compile_commands.json into build/ "
             "(${_link_result}). On Windows, enable Developer Mode to allow "
             "symlink creation without elevation.")
     endif()

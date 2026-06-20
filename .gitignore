@@ -1,12 +1,12 @@
 # Project ========================================
 
 /tools/llvm/
-vcpkg_bootstrapped_commit.txt
+/tools/vcpkg_installed/
+/tools/vcpkg_bootstrapped_commit.txt
 Engine/include/Engine/Core/Version.h
 
 /build/
 /out/
-/vcpkg_installed/
 
 .claude/
 
@@ -14,7 +14,6 @@ Engine/include/Engine/Core/Version.h
 
 CMakeLists.txt.user
 CMakeUserPresets.json
-/compile_commands.json
 
 # Python =========================================
 

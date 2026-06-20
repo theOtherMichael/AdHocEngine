@@ -96,7 +96,7 @@ def main() -> None:
         # Remove the bootstrapped vcpkg binary and its marker so bootstrap reruns
         vcpkg_bin = "vcpkg.exe" if sys.platform == "win32" else "vcpkg"
         _remove(REPO_ROOT / "tools" / "vcpkg" / vcpkg_bin,    "vcpkg binary")
-        _remove(REPO_ROOT / "vcpkg_bootstrapped_commit.txt",   "vcpkg bootstrap marker")
+        _remove(REPO_ROOT / "tools" / "vcpkg_bootstrapped_commit.txt",   "vcpkg bootstrap marker")
     else:
         print("\nLLVM toolchain and vcpkg binary preserved. Pass --all to remove them too.")
 
