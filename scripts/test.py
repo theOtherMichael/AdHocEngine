@@ -21,7 +21,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from cmake_utils import find_cmake, find_ctest
+from cmake_utils import ToolNotFoundError, find_cmake, find_ctest
 
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -47,8 +47,12 @@ def is_configured(build_dir: Path) -> bool:
 def configure_preset(preset: str, build_dir: Path) -> int:
     # find_cmake falls back to PATH's cmake here since the cache doesn't exist yet.
     print(f"Configuring preset '{preset}' (build tree not present)...", flush=True)
-    return subprocess.run([find_cmake(build_dir), "--preset", preset],
-                          cwd=REPO_ROOT).returncode
+    try:
+        cmake = find_cmake(build_dir)
+    except ToolNotFoundError as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+    return subprocess.run([cmake, "--preset", preset], cwd=REPO_ROOT).returncode
 
 
 def build_tree(build_dir: Path) -> int:

@@ -1,8 +1,32 @@
 """Shared CMake utilities for build scripts."""
 from __future__ import annotations
 
+import shutil
 import sys
 from pathlib import Path
+
+
+class ToolNotFoundError(RuntimeError):
+    """Raised when a required CLI tool cannot be resolved on PATH."""
+
+
+def _resolve_on_path(name: str) -> str:
+    """Resolve a bare executable name against PATH, returning a full path.
+
+    On Windows a bare name like "cmake" handed to subprocess goes through
+    CreateProcess, which doesn't honor PATH/PATHEXT lookup the way a shell does
+    and raises a cryptic WinError 2 when the name isn't a literal .exe on PATH.
+    shutil.which performs that lookup (including PATHEXT shims) so the resolved
+    full path works on every platform. Raises ToolNotFoundError with an
+    actionable message when nothing is found, so callers can decide whether to
+    abort or carry on.
+    """
+    resolved = shutil.which(name)
+    if resolved:
+        return resolved
+    raise ToolNotFoundError(
+        f"'{name}' was not found on PATH. Install it (or open a shell where "
+        f"'{name}' is available) before configuring a missing build tree.")
 
 
 def read_cache_value(build_dir: Path, key: str) -> str | None:
@@ -49,7 +73,7 @@ def find_cmake(build_dir: Path | None = None) -> str:
         cmake = read_cache_value(build_dir, "CMAKE_COMMAND")
         if cmake:
             return cmake
-    return "cmake"
+    return _resolve_on_path("cmake")
 
 
 def find_ctest(build_dir: Path | None = None) -> str:
@@ -62,4 +86,4 @@ def find_ctest(build_dir: Path | None = None) -> str:
         cmake = read_cache_value(build_dir, "CMAKE_COMMAND")
         if cmake:
             return str(Path(cmake).with_name("ctest"))
-    return "ctest"
+    return _resolve_on_path("ctest")
