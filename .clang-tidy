@@ -1,0 +1,10 @@
+Checks: >
+  -*,
+  clang-diagnostic-*,
+  clang-analyzer-*
+
+WarningsAsErrors: ""
+
+HeaderFilterRegex: "(Engine|Editor|Launcher|EngineTests|EditorTests)/.*"
+
+CheckOptions: []

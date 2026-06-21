@@ -43,6 +43,29 @@
       ],
       "problemMatcher": ["$gcc"],
       "detail": "Build + stage the active preset into out/source/a/ for debug-from-main."
+    },
+    {
+      "label": "clang-tidy: run on active preset",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/scripts/tidy.py",
+        "${command:cmake.buildDirectory}"
+      ],
+      "problemMatcher": ["$gcc"],
+      "detail": "Run clang-tidy across all first-party sources using the active CMake preset."
+    },
+    {
+      "label": "clang-tidy: fix on active preset",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "${workspaceFolder}/scripts/tidy.py",
+        "${command:cmake.buildDirectory}",
+        "--fix"
+      ],
+      "problemMatcher": ["$gcc"],
+      "detail": "Apply clang-tidy --fix across all first-party sources using the active CMake preset."
     }
   ]
 }
