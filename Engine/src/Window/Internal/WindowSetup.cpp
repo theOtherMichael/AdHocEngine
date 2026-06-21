@@ -21,7 +21,9 @@ static void OnGlfwFramebufferResize(GLFWwindow*, int width, int height)
     context->OnFramebufferResize(width, height);
 }
 
-static void OnGlfwWindowResize(GLFWwindow* window, int width, int height)
+static void OnGlfwWindowResize([[maybe_unused]] GLFWwindow* window,
+                               [[maybe_unused]] int width,
+                               [[maybe_unused]] int height)
 {
     // Update();
     //  TODO: How do we drive Update() from here? Should we even bother?

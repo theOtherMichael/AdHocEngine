@@ -36,7 +36,7 @@ static void Update()
     Views::DrawConsoleView();
 }
 
-EditorMainResult EditorMain(int argc, char* argv[])
+EditorMainResult EditorMain([[maybe_unused]] int argc, [[maybe_unused]] char* argv[])
 {
     try
     {

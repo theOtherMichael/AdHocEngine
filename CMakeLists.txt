@@ -103,6 +103,29 @@ message(STATUS "Clang OK — ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSI
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 
 # ---------------------------------------------------------------------------
+# 5b. Link-time optimization (Release only).
+# ---------------------------------------------------------------------------
+# Validated once here; applied per-target by adhoc_apply_variant_flags via the
+# INTERPROCEDURAL_OPTIMIZATION property so CMake drives the matching compile,
+# archive, and link flags for each toolchain (ThinLTO on upstream Clang). The
+# archive step matters: EngineStatic's bitcode objects need an LTO-aware
+# archiver, which CMake's IPO rules provide. This validation fails the configure
+# early if a toolchain ever can't do IPO, so the per-target property set in
+# Release is always safe. LTO is intentionally off in Dev to keep link times and
+# debuggability reasonable.
+if(CMAKE_BUILD_TYPE STREQUAL "Release")
+    include(CheckIPOSupported)
+    check_ipo_supported(RESULT _ipo_ok OUTPUT _ipo_err LANGUAGES CXX)
+    if(NOT _ipo_ok)
+        message(FATAL_ERROR
+            "Link-time optimization is required for Release but is unsupported: ${_ipo_err}")
+    endif()
+    message(STATUS "LTO: enabled (ThinLTO)")
+    unset(_ipo_ok)
+    unset(_ipo_err)
+endif()
+
+# ---------------------------------------------------------------------------
 # 6. IDE tooling — clangd compile_commands.json symlink.
 # ---------------------------------------------------------------------------
 # Symlink compile_commands.json into build/ (the shared parent of the per-preset

@@ -135,8 +135,8 @@ TEST(AssertionTest, PassingExpectsDontLog)
 {
     auto lastErrorLog = std::string{};
     auto errorStream  = Console::Logger(Console::LogLevel::Error,
-                                       [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
-                                       { lastErrorLog = message; });
+                                       [&lastErrorLog]([[maybe_unused]] const Console::LogLevel logLevel,
+                                                       const std::string& message) { lastErrorLog = message; });
 
 #define PASSING_EXPECTS_DONT_LOG_CASE(assertion)                                                                       \
     {                                                                                                                  \
@@ -208,8 +208,8 @@ TEST(AssertionTest, FailingExpectsLogErrors)
 {
     auto lastErrorLog = std::string{};
     auto errorStream  = Console::Logger(Console::LogLevel::Error,
-                                       [&lastErrorLog](const Console::LogLevel logLevel, const std::string& message)
-                                       { lastErrorLog = message; });
+                                       [&lastErrorLog]([[maybe_unused]] const Console::LogLevel logLevel,
+                                                       const std::string& message) { lastErrorLog = message; });
 
 #define FAILING_EXPECTS_LOG_ERRORS_CASE(assertion)                                                                     \
     {                                                                                                                  \

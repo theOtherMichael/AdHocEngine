@@ -111,12 +111,18 @@ static std::vector<OwnedGlfwImage> GetGlfwIconsFromEmbeddedResource(HINSTANCE hI
         auto screenMemoryDeviceContext = CreateCompatibleDC(screenDeviceContextHandle);
 
         auto bitmapInfo = BITMAPINFO{
-            .bmiHeader = {.biSize        = sizeof(BITMAPINFOHEADER),
-                          .biWidth       = iconWidth,
-                          .biHeight      = -iconHeight, // top-down
-                          .biPlanes      = 1,
-                          .biBitCount    = 32,
-                          .biCompression = BI_RGB}
+            .bmiHeader = {.biSize          = sizeof(BITMAPINFOHEADER),
+                          .biWidth         = iconWidth,
+                          .biHeight        = -iconHeight, // top-down
+                          .biPlanes        = 1,
+                          .biBitCount      = 32,
+                          .biCompression   = BI_RGB,
+                          .biSizeImage     = 0,
+                          .biXPelsPerMeter = 0,
+                          .biYPelsPerMeter = 0,
+                          .biClrUsed       = 0,
+                          .biClrImportant  = 0},
+            .bmiColors = {}
         };
 
         auto pixels = std::vector<unsigned char>(iconWidth * iconHeight * 4);

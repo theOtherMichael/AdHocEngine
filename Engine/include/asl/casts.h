@@ -3,7 +3,6 @@
 #include "concepts.h"
 
 #include <exception>
-#include <stdexcept>
 #include <utility>
 
 namespace asl

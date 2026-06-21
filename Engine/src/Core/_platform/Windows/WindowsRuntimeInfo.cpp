@@ -15,7 +15,7 @@ PlatformRuntimeInfo::PlatformRuntimeInfo()
 {
     const auto pseudoHandle = GetCurrentProcess();
 
-    const auto acquireRealHandleResult =
+    [[maybe_unused]] const auto acquireRealHandleResult =
         DuplicateHandle(pseudoHandle, pseudoHandle, pseudoHandle, &processHandle, 0, FALSE, DUPLICATE_SAME_ACCESS);
 
     Assert_Ne_Fmt(acquireRealHandleResult, 0, "Could not acquire process handle! {}", GetLastErrorMessage());
@@ -27,7 +27,7 @@ PlatformRuntimeInfo::~PlatformRuntimeInfo()
 
     Console::Log("Closing application pseudoHandle handle...");
 
-    const auto closeHandleResult = CloseHandle(processHandle);
+    [[maybe_unused]] const auto closeHandleResult = CloseHandle(processHandle);
 
     Assert_Ne_Fmt(closeHandleResult, 0, "Could not close process handle! {}", GetLastErrorMessage());
 

@@ -63,11 +63,11 @@ Once configured, use the following scripts to take common actions:
 
 In addition to Debug and Release configurations, Ad Hoc supports an "in-between" configuration called Dev. It is optimized, but has more guardrails than Release.
 
-| Config | Opt. Lvl | Symbols? | Assertions |
-| --- | --- | --- | --- |
-| Debug | -O0 | Yes | All assertions enabled |
-| Dev | -O2 | Yes | Slow assertions stripped |
-| Release | -O3 | No | No assertions enabled |
+| Config | Opt. Lvl | LTO | Symbols? | Assertions |
+| --- | --- | --- | --- | --- |
+| Debug | -O0 | No | Yes | All assertions enabled |
+| Dev | -O2 | No | Yes | Slow assertions stripped |
+| Release | -O3 | ThinLTO | No | No assertions enabled |
 
 Only Debug and Release configs actually ship with the editor. While working on the engine, use Debug when adding new features or debugging, and Dev to work at representative speeds.
 
