@@ -14,6 +14,7 @@
 #include <filesystem>
 #include <sstream>
 #include <string>
+#include <system_error>
 
 #include <malloc.h>
 
@@ -106,7 +107,18 @@ fs::path GetExecutablePathImpl()
         Console::LogError("Executable path is unavailable. Error: {}", GetLastErrorMessage());
         return fs::path{};
     }
-    return fs::path{rawPath.data()};
+    const auto verbatimPath = fs::path{rawPath.data()};
+
+    auto canonicalizationError = std::error_code{};
+    auto canonicalPath         = fs::canonical(verbatimPath, canonicalizationError);
+
+    if (canonicalizationError)
+    {
+        Console::LogError("Executable path could not be canonicalized. Error: {}", canonicalizationError.message());
+        return verbatimPath;
+    }
+
+    return canonicalPath;
 }
 
 } // namespace Engine::Platform

@@ -19,6 +19,8 @@
 #endif
 #include <backends/imgui_impl_glfw.h>
 
+#include <string>
+
 namespace Console = Engine::Console;
 using Engine::Graphics::ApiMode;
 
@@ -41,14 +43,13 @@ void InitializeImGui()
 
     ImGui::CreateContext();
 
-    const auto imguiIniFilePath      = Engine::GetExecutablePath().parent_path() / "imgui.ini";
-    const auto imguiIniFilePathAsStr = imguiIniFilePath.string();
+    static const auto imguiIniFilePath = (Engine::GetExecutablePath().parent_path() / "imgui.ini").string();
 
     auto& io        = ImGui::GetIO();
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
-    io.IniFilename  = imguiIniFilePathAsStr.c_str();
+    io.IniFilename  = imguiIniFilePath.c_str();
 
     const auto& windowState  = Engine::Window::WindowState::Instance();
     auto* const windowHandle = windowState.mainWindowHandle;
