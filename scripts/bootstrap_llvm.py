@@ -14,8 +14,33 @@ import stat
 import subprocess
 import sys
 import tarfile
+import time
 import urllib.request
 from pathlib import Path
+
+class _Progress:
+    """Emits a fresh progress line on a steady time cadence so the job never looks stuck.
+    """
+
+    def __init__(self, interval: float = 1.0) -> None:
+        self._interval = interval
+        self.start = time.monotonic()
+        self._last = 0.0
+
+    def update(self, detail: str, *, force: bool = False) -> None:
+        now = time.monotonic()
+        if not force and (now - self._last) < self._interval:
+            return
+        self._last = now
+        print(f"  {detail}", flush=True)
+
+    def done(self, detail: str) -> None:
+        print(f"  {detail}", flush=True)
+
+
+def _rate(downloaded: int, start: float) -> str:
+    elapsed = max(time.monotonic() - start, 1e-6)
+    return f"{(downloaded / 1024 / 1024) / elapsed:5.1f} MB/s"
 
 
 def _sha256(path: Path) -> str:
@@ -28,10 +53,11 @@ def _sha256(path: Path) -> str:
 
 def _download(url: str, dest: Path) -> None:
     print(f"Downloading {url}", flush=True)
+    progress = _Progress(3.0)
     with urllib.request.urlopen(url) as response:
         total = int(response.headers.get("Content-Length", 0))
+        mb_total = total // 1024 // 1024
         downloaded = 0
-        last_reported_pct = -1
         with open(dest, "wb") as f:
             while True:
                 chunk = response.read(1 << 20)
@@ -39,15 +65,13 @@ def _download(url: str, dest: Path) -> None:
                     break
                 f.write(chunk)
                 downloaded += len(chunk)
+                mb_done = downloaded // 1024 // 1024
                 if total:
                     pct = downloaded * 100 // total
-                    # Print a new line every 10% so progress is visible in IDEs and CMake output.
-                    if pct // 10 > last_reported_pct // 10:
-                        mb_done = downloaded // 1024 // 1024
-                        mb_total = total // 1024 // 1024
-                        print(f"  [{pct:3d}%]  {mb_done} / {mb_total} MB", flush=True)
-                        last_reported_pct = pct
-    print(f"  Download complete.", flush=True)
+                    progress.update(f"[{pct:3d}%]  {mb_done} / {mb_total} MB   {_rate(downloaded, progress.start)}")
+                else:
+                    progress.update(f"{mb_done} MB   {_rate(downloaded, progress.start)}")
+    progress.done(f"Download complete ({downloaded // 1024 // 1024} MB in {time.monotonic() - progress.start:.0f}s).")
 
 
 def _extract_tar(archive_path: Path, dest: Path) -> None:
@@ -64,7 +88,7 @@ def _extract_tar(archive_path: Path, dest: Path) -> None:
             if all(m.name.startswith(top + "/") or m.name == top for m in members):
                 prefix = top + "/"
         total = len(members)
-        last_reported_pct = -1
+        progress = _Progress()
         for i, m in enumerate(members):
             if prefix and m.name.startswith(prefix):
                 m.name = m.name[len(prefix):]
@@ -73,9 +97,8 @@ def _extract_tar(archive_path: Path, dest: Path) -> None:
             tf.extract(m, dest)
             if total:
                 pct = (i + 1) * 100 // total
-                if pct // 10 > last_reported_pct // 10:
-                    print(f"  [{pct:3d}%]  Extracting... ({i + 1}/{total} files)", flush=True)
-                    last_reported_pct = pct
+                progress.update(f"[{pct:3d}%]  Extracting... ({i + 1}/{total} files)")
+        progress.done(f"Extracted {total} files.")
     # Ensure binaries are executable.
     bin_dir = dest / "bin"
     if bin_dir.is_dir():
@@ -205,7 +228,7 @@ def main() -> int:
     else:
         print("WARNING: No expected SHA256 provided — skipping verification.", file=sys.stderr)
 
-    print(f"Extracting to {out}...")
+    print(f"Extracting to {out}...", flush=True)
     if system == "Darwin" or system == "Windows":
         _extract_tar(archive, out)
 
