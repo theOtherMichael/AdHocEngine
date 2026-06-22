@@ -1,17 +1,10 @@
-#include "MacMisc.h"
+#include "MacSystemPaths.h"
 
-#include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
 
-#include <fmt/format.h>
-
-#include <dlfcn.h>
-#include <execinfo.h>
 #include <mach-o/dyld.h>
 
 #include <filesystem>
-#include <sstream>
-#include <string>
 
 static_assert(ADHOC_MAC);
 
@@ -19,36 +12,6 @@ namespace fs = std::filesystem;
 
 namespace Engine::Platform
 {
-
-void* StackAllocImpl(size_t size)
-{
-    return alloca(size);
-}
-
-std::string GetBacktraceImpl()
-{
-    const int maxFrames = 64;
-    void* callstack[maxFrames];
-
-    auto frames  = backtrace(callstack, maxFrames);
-    auto symbols = backtrace_symbols(callstack, frames);
-
-    if (!symbols)
-    {
-        Console::LogError("Stack trace symbols are unavailable.");
-        return std::string();
-    }
-
-    auto output = std::ostringstream();
-    for (int i = 0; i < frames; ++i)
-    {
-        output << fmt::format("{}\n", symbols[i]);
-    }
-
-    free(symbols);
-
-    return output.str();
-}
 
 fs::path GetExecutablePathImpl()
 {

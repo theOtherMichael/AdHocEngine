@@ -461,7 +461,7 @@ TEST(AssertionTest, EvalAssertionExpressionsEvaluateWhenOff)
 
 TEST(AssertionTest, AssertCodeBlocksWork)
 {
-    auto codeBlockHasRun = false;
+    [[maybe_unused]] auto codeBlockHasRun = false;
 
     Assert_Code(codeBlockHasRun = true;);
 

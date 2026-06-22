@@ -12,8 +12,8 @@ set(ENGINE_SOURCES_COMMON
     src/Core/Console.cpp
     src/Core/Debugging.cpp
     src/Core/DynamicLibrary.cpp
-    src/Core/Misc.cpp
     src/Core/RuntimeInfo.cpp
+    src/File/SystemPaths.cpp
     src/Graphics/ApiMode.cpp
     src/Graphics/GraphicsContext.cpp
     src/Window/Internal/WindowSetup.cpp
@@ -23,7 +23,7 @@ set(ENGINE_SOURCES_COMMON
 set(ENGINE_SOURCES_MAC
     src/Core/_platform/Mac/MacDebugging.cpp
     src/Core/_platform/Mac/MacDynamicLibrary.cpp
-    src/Core/_platform/Mac/MacMisc.cpp
+    src/File/_platform/Mac/MacSystemPaths.cpp
     src/Graphics/Contexts/_platform/Mac/MacMetalGraphicsContext.mm
     src/_platform/Mac/MetalCppImpl.cpp
 )
@@ -31,9 +31,9 @@ set(ENGINE_SOURCES_MAC
 set(ENGINE_SOURCES_WINDOWS
     src/Core/_platform/Windows/WindowsDebugging.cpp
     src/Core/_platform/Windows/WindowsDynamicLibrary.cpp
-    src/Core/_platform/Windows/WindowsMisc.cpp
     src/Core/_platform/Windows/WindowsPlatformHelpers.cpp
     src/Core/_platform/Windows/WindowsRuntimeInfo.cpp
+    src/File/_platform/Windows/WindowsSystemPaths.cpp
     src/Graphics/Contexts/_platform/Windows/WindowsD3d11GraphicsContext.cpp
     src/Window/Internal/_platform/Windows/WindowsSetMainWindowIcon.cpp
 )

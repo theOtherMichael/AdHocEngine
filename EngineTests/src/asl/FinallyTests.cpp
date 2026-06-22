@@ -47,7 +47,7 @@ TEST(FinallyTests, FinallyLambdaMove)
         }
         EXPECT_TRUE(i == 1);
         {
-            auto _2 = std::move(_1);
+            auto _2 = std::move(_1); // NOLINT(bugprone-use-after-move,clang-analyzer-cplusplus.Move) -- intentional: verifies move-from-moved is a no-op
             EXPECT_TRUE(i == 1);
         }
         EXPECT_TRUE(i == 1);

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <Engine/Core/Misc.h>
+#include <Engine/Common/Preprocessor.h>
 
 // clang-format off
 

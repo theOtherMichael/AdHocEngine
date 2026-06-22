@@ -2,6 +2,7 @@
 
 #include <Engine/Core/Assertions.h>
 #include <Engine/Core/Console.h>
+#include <Engine/File/SystemPaths.h>
 #include <Engine/Graphics/Contexts/D3d11GraphicsContext.h>
 #include <Engine/Graphics/Contexts/D3d12GraphicsContext.h>
 #include <Engine/Graphics/Contexts/MetalGraphicsContext.h>

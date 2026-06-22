@@ -8,9 +8,13 @@
 #define DEBUG_BREAK()
 #endif
 
+#include <string>
+
 namespace Engine::Platform
 {
 
 bool IsBeingDebuggedImpl();
+
+std::string GetBacktraceImpl();
 
 } // namespace Engine::Platform
