@@ -138,9 +138,12 @@ def merge_into_mac_bundle(staging: Path, preset: str, dist_bundle: Path) -> None
     if not src.exists():
         raise RuntimeError(f"{src} not found — SourceMode install for {preset} failed.")
 
+    def _skip_symlinks(src: str, names: list[str]) -> set[str]:
+        return {n for n in names if (Path(src) / n).is_symlink()}
+
     # First preset seeds the bundle (Info.plist, Resources/, MacOS/, Frameworks/).
     if not dist_bundle.exists():
-        shutil.copytree(src, dist_bundle, symlinks=True)
+        shutil.copytree(src, dist_bundle, ignore=_skip_symlinks)
         return
 
     def merge_dir(src_dir: Path, dst_dir: Path) -> None:
@@ -152,8 +155,8 @@ def merge_into_mac_bundle(staging: Path, preset: str, dist_bundle: Path) -> None
             target = dst_dir / f.name
             if f.is_dir() and not f.is_symlink():
                 merge_dir(f, target)
-            elif not target.exists():
-                shutil.copy2(f, target, follow_symlinks=False)
+            elif not target.exists() and not f.is_symlink():
+                shutil.copy2(f, target)
 
     # Merge Frameworks (incl. the Frameworks/debug subtree) and MacOS binaries.
     merge_dir(src / "Contents" / "Frameworks", dist_bundle / "Contents" / "Frameworks")
@@ -299,6 +302,7 @@ def assemble_mac(presets: list[str], dist_root: Path, identity: str = "-",
     sign_bundle_inside_out(bundle, identity)
     print(f"\n==> Bundle assembled at: {bundle}")
     if notarize:
+        assert keychain_profile is not None
         notarize_and_staple(bundle, keychain_profile)
 
 
